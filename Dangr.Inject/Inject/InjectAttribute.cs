@@ -1,0 +1,19 @@
+﻿// -----------------------------------------------------------------------
+//  <copyright file="InjectAttribute.cs" company="DangerDan9631">
+//      Copyright (c) 2017 Dan Garvey. All rights reserved.
+//      Licensed under the MIT License. 
+//      See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
+//  </copyright>
+//  <dateCreated>2017-04-24</dateCreated>
+//  <dateModified>2017-06-20</dateModified>
+//  <lastModifiedBy>Dan Garvey</lastModifiedBy>
+// -----------------------------------------------------------------------
+
+namespace Dangr.Inject
+{
+    using System;
+
+    [AttributeUsage(AttributeTargets.Class | AttributeTargets.Constructor, Inherited = false)]
+    public sealed class InjectAttribute : Attribute
+    { }
+}

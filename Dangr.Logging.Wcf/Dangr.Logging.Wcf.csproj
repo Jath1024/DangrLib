@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{E3EE3BAC-B444-4798-877F-9D67470E3D61}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Dangr.Logging.Wcf</AssemblyName>
+    <NugetDeploy>true</NugetDeploy>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\Tools\Build\Dangr.targets" />
+  <ItemGroup>
+    <Reference Include="JetBrains.Annotations, Version=10.4.0.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <HintPath>..\packages\JetBrains.Annotations.10.4.0\lib\net\JetBrains.Annotations.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Reactive.Core, Version=3.0.1000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.Core.3.1.1\lib\net45\System.Reactive.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces, Version=3.0.1000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Reactive.Interfaces.3.1.1\lib\net45\System.Reactive.Interfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.Linq, Version=3.0.1000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.Linq.3.1.1\lib\net45\System.Reactive.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.PlatformServices, Version=3.0.1000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.PlatformServices.3.1.1\lib\net45\System.Reactive.PlatformServices.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.Windows.Threading, Version=3.0.1000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.Windows.Threading.3.1.1\lib\net45\System.Reactive.Windows.Threading.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Logging\Loggers\WcfLogger.cs" />
+    <Compile Include="NamespaceDoc.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Logging\Wcf\DefaultWcfEndpoints.cs" />
+    <Compile Include="Logging\Wcf\IWcfLogService.cs" />
+    <Compile Include="Logging\Wcf\WcfLogClient.cs" />
+    <Compile Include="Logging\Wcf\WcfLoggerConfigView.cs" />
+    <Compile Include="Logging\Wcf\WcfLogService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dangr.Configuration\Dangr.Configuration.csproj">
+      <Project>{71DDB9F9-9430-42BB-8661-81369796F71F}</Project>
+      <Name>Dangr.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dangr.Diagnostics\Dangr.Diagnostics.csproj">
+      <Project>{ec89ca12-e5a4-4738-b0ad-bbb39cbd886d}</Project>
+      <Name>Dangr.Diagnostics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dangr.Logging\Dangr.Logging.csproj">
+      <Project>{03b94d6d-8989-41ac-b90f-bebd4129d65d}</Project>
+      <Name>Dangr.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dangr.Util\Dangr.Util.csproj">
+      <Project>{272587f0-bd2b-48e5-a63f-252ca280b14f}</Project>
+      <Name>Dangr.Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dangr.Logging.Wcf.nuspec" />
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>

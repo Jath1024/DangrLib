@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{372D1F3E-E890-4FAE-981B-75E8C671DC58}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Dangr.Async</AssemblyName>
+    <NugetDeploy>true</NugetDeploy>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\Tools\Build\Dangr.targets" />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Async\MultiThreadedTaskScheduler.cs" />
+    <Compile Include="NamespaceDoc.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dangr.Async.nuspec" />
+  </ItemGroup>
+</Project>

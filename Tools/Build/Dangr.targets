@@ -1,0 +1,83 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" 
+        Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+
+  <!-- 
+    Default Configuration.
+  -->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dangr</RootNamespace>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+
+  <!-- 
+    Debug Configuration
+  -->
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>..\DangrLib.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <DocumentationFile>bin\Debug\$(AssemblyName).XML</DocumentationFile>
+  </PropertyGroup>
+  
+  <!-- 
+    Release Configuration
+  -->
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\$(AssemblyName).XML</DocumentationFile>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>..\DangrLib.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  
+  <!-- 
+    Nuget Deploy Configuration
+  -->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'NugetDeploy|AnyCPU'">
+    <OutputPath>bin\NugetDeploy\</OutputPath>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+
+<!--
+  Common .cs files.
+-->
+  <ItemGroup>
+    <Compile Include="$(SolutionDir)\Tools\CommonSource\**">
+      <Link>Properties\%(Filename)%(Extension)</Link>
+    </Compile>
+  </ItemGroup>
+
+  <!-- 
+    C# Targets
+  -->
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+
+  <!--
+    Nuget Publish Targets
+  -->
+  <Import Project="$(SolutionDir)\Tools\Build\Nuget.Publish.targets" />
+  <Target Name="AfterBuild">
+    <CallTarget Targets="NugetPackage" />
+    <CallTarget Targets="NugetPush" />
+  </Target>
+</Project>

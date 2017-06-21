@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{BD771D69-4232-4BC3-BEC1-14B2B34CD5E1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Dangr.Configuration.Test</AssemblyName>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\Tools\Build\Dangr.targets" />
+  <Import Project="$(SolutionDir)\Tools\Build\Dangr.Test.targets" />
+  
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConfigNames.cs" />
+    <Compile Include="ConfigTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dangr.Configuration\Dangr.Configuration.csproj">
+      <Project>{71ddb9f9-9430-42bb-8661-81369796f71f}</Project>
+      <Name>Dangr.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dangr.Diagnostics\Dangr.Diagnostics.csproj">
+      <Project>{ec89ca12-e5a4-4738-b0ad-bbb39cbd886d}</Project>
+      <Name>Dangr.Diagnostics</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+</Project>

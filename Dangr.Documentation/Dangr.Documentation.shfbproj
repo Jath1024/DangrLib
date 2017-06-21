@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <!-- The configuration and platform will be used to determine which assemblies to include from solution and
+				 project documentation sources -->
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>b9809920-9247-4dff-9f67-126d38f65257</ProjectGuid>
+    <SHFBSchemaVersion>2015.6.5.0</SHFBSchemaVersion>
+    <!-- AssemblyName, Name, and RootNamespace are not used by SHFB but Visual Studio adds them anyway -->
+    <AssemblyName>Dangr.Documentation</AssemblyName>
+    <RootNamespace>Dangr.Documentation</RootNamespace>
+    <Name>Dangr.Documentation</Name>
+    <!-- SHFB properties -->
+    <FrameworkVersion>.NET Framework 4.5.2</FrameworkVersion>
+    <OutputPath>.\Help\</OutputPath>
+    <HtmlHelpName>Dangr.Documentation</HtmlHelpName>
+    <Language>en-US</Language>
+    <TransformComponentArguments>
+      <Argument Key="logoFile" Value="" />
+      <Argument Key="logoHeight" Value="" />
+      <Argument Key="logoWidth" Value="" />
+      <Argument Key="logoAltText" Value="" />
+      <Argument Key="logoPlacement" Value="left" />
+      <Argument Key="logoAlignment" Value="left" />
+      <Argument Key="maxVersionParts" Value="" />
+      <Argument Key="defaultLanguage" Value="cs" />
+      <Argument Key="includeEnumValues" Value="true" />
+      <Argument Key="baseSourceCodeUrl" Value="" />
+      <Argument Key="requestExampleUrl" Value="" />
+    </TransformComponentArguments>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <DocumentationSources>
+      <DocumentationSource sourceFile="..\Dangr.Annotation\Dangr.Annotation.csproj" />
+      <DocumentationSource sourceFile="..\Dangr.Async\Dangr.Async.csproj" />
+      <DocumentationSource sourceFile="..\Dangr.Command\Dangr.Command.csproj" />
+      <DocumentationSource sourceFile="..\Dangr.Configuration\Dangr.Configuration.csproj" />
+      <DocumentationSource sourceFile="..\Dangr.Diagnostics\Dangr.Diagnostics.csproj" />
+      <DocumentationSource sourceFile="..\Dangr.Entity\Dangr.Entity.csproj" />
+      <DocumentationSource sourceFile="..\Dangr.Event\Dangr.Event.csproj" />
+      <DocumentationSource sourceFile="..\Dangr.Inject\Dangr.Inject.csproj" />
+      <DocumentationSource sourceFile="..\Dangr.Logging.Loggers\Dangr.Logging.Loggers.csproj" />
+      <DocumentationSource sourceFile="..\Dangr.Logging.Wcf\Dangr.Logging.Wcf.csproj" />
+      <DocumentationSource sourceFile="..\Dangr.Logging\Dangr.Logging.csproj" />
+      <DocumentationSource sourceFile="..\Dangr.Math\Dangr.Math.csproj" />
+      <DocumentationSource sourceFile="..\Dangr.ObjectPool\Dangr.ObjectPool.csproj" />
+      <DocumentationSource sourceFile="..\Dangr.Registry\Dangr.Registry.csproj" />
+      <DocumentationSource sourceFile="..\Dangr.Simulation\Dangr.Simulation.csproj" />
+      <DocumentationSource sourceFile="..\Dangr.Test\Dangr.Test.csproj" />
+      <DocumentationSource sourceFile="..\Dangr.Util\Dangr.Util.csproj" />
+    </DocumentationSources>
+    <SaveComponentCacheCapacity>100</SaveComponentCacheCapacity>
+    <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>
+    <HelpFileFormat>Website</HelpFileFormat>
+    <IndentHtml>False</IndentHtml>
+    <KeepLogFile>True</KeepLogFile>
+    <DisableCodeBlockComponent>False</DisableCodeBlockComponent>
+    <CleanIntermediates>True</CleanIntermediates>
+    <HelpFileVersion>1.0</HelpFileVersion>
+    <MaximumGroupParts>2</MaximumGroupParts>
+    <NamespaceGrouping>False</NamespaceGrouping>
+    <SyntaxFilters>C#, Visual Basic, Managed C++</SyntaxFilters>
+    <SdkLinkTarget>Blank</SdkLinkTarget>
+    <RootNamespaceContainer>False</RootNamespaceContainer>
+    <PresentationStyle>VS2013</PresentationStyle>
+    <Preliminary>False</Preliminary>
+    <NamingMethod>MemberName</NamingMethod>
+    <HelpTitle>DangrLib Documentation</HelpTitle>
+    <ContentPlacement>AboveNamespaces</ContentPlacement>
+    <WebsiteSdkLinkType>Msdn</WebsiteSdkLinkType>
+    <HtmlSdkLinkType>Msdn</HtmlSdkLinkType>
+    <IncludeFavorites>True</IncludeFavorites>
+    <BinaryTOC>True</BinaryTOC>
+    <VisibleItems>Attributes, ExplicitInterfaceImplementations, InheritedMembers, InheritedFrameworkMembers, Privates, PrivateFields, Protected</VisibleItems>
+    <MissingTags>Summary, Parameter, Returns, AutoDocumentCtors, Namespace, TypeParameter, AutoDocumentDispose</MissingTags>
+    <RootNamespaceTitle>
+    </RootNamespaceTitle>
+    <CopyrightText>Copyright &amp;#169%3b  2017</CopyrightText>
+  </PropertyGroup>
+  <!-- There are no properties for these groups.  AnyCPU needs to appear in order for Visual Studio to perform
+			 the build.  The others are optional common platform types that may appear. -->
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'NugetDeploy|AnyCPU'">
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Content" />
+    <Folder Include="Content\VersionHistory" />
+    <Folder Include="icons" />
+    <Folder Include="media" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\VersionHistory\v1.0.aml" />
+    <None Include="Content\VersionHistory\VersionHistory.aml" />
+    <None Include="Content\Welcome.aml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ContentLayout Include="ContentLayout.content" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icons\Help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dangr.Annotation\Dangr.Annotation.csproj">
+      <Name>Dangr.Annotation</Name>
+      <Project>{7eec0f15-6175-4035-9205-6ff793fe4303}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Dangr.Async\Dangr.Async.csproj">
+      <Name>Dangr.Async</Name>
+      <Project>{372d1f3e-e890-4fae-981b-75e8c671dc58}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Dangr.Command\Dangr.Command.csproj">
+      <Name>Dangr.Command</Name>
+      <Project>{5ffcc11a-3387-466e-872c-8eaa6e31fa01}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Dangr.Configuration\Dangr.Configuration.csproj">
+      <Name>Dangr.Configuration</Name>
+      <Project>{71ddb9f9-9430-42bb-8661-81369796f71f}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Dangr.Diagnostics\Dangr.Diagnostics.csproj">
+      <Name>Dangr.Diagnostics</Name>
+      <Project>{ec89ca12-e5a4-4738-b0ad-bbb39cbd886d}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Dangr.Entity\Dangr.Entity.csproj">
+      <Name>Dangr.Entity</Name>
+      <Project>{ec435168-cca0-4b43-9f33-fc450bf55962}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Dangr.Event\Dangr.Event.csproj">
+      <Name>Dangr.Event</Name>
+      <Project>{b4e2ebbc-35e4-418a-879e-15f333ba1c45}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Dangr.Inject\Dangr.Inject.csproj">
+      <Name>Dangr.Inject</Name>
+      <Project>{77bd8c58-58d5-491b-862a-67c6b09aca54}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Dangr.Logging.Loggers\Dangr.Logging.Loggers.csproj">
+      <Name>Dangr.Logging.Loggers</Name>
+      <Project>{bc835590-135a-4d60-9e01-82538fda6390}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Dangr.Logging\Dangr.Logging.csproj">
+      <Name>Dangr.Logging</Name>
+      <Project>{03b94d6d-8989-41ac-b90f-bebd4129d65d}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Dangr.Math\Dangr.Math.csproj">
+      <Name>Dangr.Math</Name>
+      <Project>{5cb06ab2-0287-47af-be50-155a6a351347}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Dangr.ObjectPool\Dangr.ObjectPool.csproj">
+      <Name>Dangr.ObjectPool</Name>
+      <Project>{9cf2f5dd-97f9-490d-a0e7-701a41a9e06f}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Dangr.Registry\Dangr.Registry.csproj">
+      <Name>Dangr.Registry</Name>
+      <Project>{04dbe29e-0a3b-4007-ab69-031b8855e1d1}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Dangr.Simulation\Dangr.Simulation.csproj">
+      <Name>Dangr.Simulation</Name>
+      <Project>{4f441674-8d10-434a-b0c7-e302fab8a00d}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Dangr.Test\Dangr.Test.csproj">
+      <Name>Dangr.Test</Name>
+      <Project>{c4312ee9-6917-4a6c-869e-9f8be26e8724}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Dangr.Util\Dangr.Util.csproj">
+      <Name>Dangr.Util</Name>
+      <Project>{272587f0-bd2b-48e5-a63f-252ca280b14f}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <!-- Import the SHFB build targets -->
+  <Import Project="$(SHFBROOT)\SandcastleHelpFileBuilder.targets" />
+  <!-- The pre-build and post-build event properties must appear *after* the targets file import in order to be
+			 evaluated correctly. -->
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+  </PropertyGroup>
+</Project>

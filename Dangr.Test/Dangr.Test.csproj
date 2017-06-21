@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{C4312EE9-6917-4A6C-869E-9F8BE26E8724}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Dangr.Test</AssemblyName>
+    <NugetDeploy>true</NugetDeploy>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\Tools\Build\Dangr.targets" />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NamespaceDoc.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Test\TestUtils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dangr.Diagnostics\Dangr.Diagnostics.csproj">
+      <Project>{ec89ca12-e5a4-4738-b0ad-bbb39cbd886d}</Project>
+      <Name>Dangr.Diagnostics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dangr.Logging\Dangr.Logging.csproj">
+      <Project>{03b94d6d-8989-41ac-b90f-bebd4129d65d}</Project>
+      <Name>Dangr.Logging</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dangr.Test.nuspec">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+</Project>

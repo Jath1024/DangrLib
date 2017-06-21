@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{5CB06AB2-0287-47AF-BE50-155A6A351347}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Dangr.Math</AssemblyName>
+    <NugetDeploy>true</NugetDeploy>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\Tools\Build\Dangr.targets" />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Math\Animator.cs" />
+    <Compile Include="Math\CosAnimator.cs" />
+    <Compile Include="Math\InverseQuadraticAnimator.cs" />
+    <Compile Include="Math\LinearAnimator.cs" />
+    <Compile Include="Math\MathHelper.cs" />
+    <Compile Include="NamespaceDoc.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Math\QuadraticAnimator.cs" />
+    <Compile Include="Math\SinAnimator.cs" />
+    <Compile Include="Math\SmoothTrigAnimator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dangr.Math.nuspec" />
+  </ItemGroup>
+</Project>

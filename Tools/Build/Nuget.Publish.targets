@@ -1,0 +1,34 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <NugetExe>$(SolutionDir)Tools\Nuget\Nuget.exe</NugetExe>
+    <NugetOutputDir>bin\Release\nuget</NugetOutputDir>
+  </PropertyGroup>
+
+  <Target Name="NugetPackage" 
+          DependsOnTargets="NugetClean"
+          Condition="'$(Configuration)|$(NugetDeploy)' == 'Release|true'">
+    <ItemGroup>
+      <NugetProperties Include="configuration=&quot;Release&quot;"/>
+      <NugetProperties Include="SolutionDir=$(SolutionDir)"/>
+    </ItemGroup>
+    
+    <Message Text="Creating Nuget package." Importance="high" />
+    <Message Text="Properties: @(NugetProperties)" Importance="high" />
+
+    <Exec Command="$(NugetExe) pack $(ProjectDir)$(AssemblyName).csproj -prop @(NugetProperties) -OutputDirectory $(NugetOutputDir)" />
+  </Target>
+
+  <Target Name="NugetPush"
+          Condition="'$(Configuration)|$(NugetDeploy)' == 'NugetDeploy|true'">
+    <ItemGroup>
+      <NugetFiles Include="$(NugetOutputDir)\*" />
+    </ItemGroup>
+    <Message Text="Pushing Nuget file: '@(NugetFiles)'" Importance="high" />
+    <Exec Command="$(NugetExe) push @(NugetFiles) -Source https://www.nuget.org/api/v2/package" />
+  </Target>
+
+  <Target Name="NugetClean">
+    <Message Text="Cleaning Nuget packages." Importance="high" />
+    <RemoveDir Directories="$(NugetOutputDir)" ContinueOnError="true" />
+  </Target>
+</Project>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0"?>
+
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <description>$description$</description>
+    <authors>$author$</authors>
+    <copyright>$copyright$</copyright>
+    <iconUrl>https://raw.githubusercontent.com/dangerdan9631/Images/master/SkullLogo/skull%20logo.png</iconUrl>
+    <licenseUrl>https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <tags>annotation attribute dangrlib documentation VisibleForTesting Task</tags>
+  </metadata>
+  <files>
+    <file src="../LICENSE" target="LICENSE" />
+  </files>
+</package>

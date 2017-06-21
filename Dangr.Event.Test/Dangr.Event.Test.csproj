@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{8B586053-37F7-4903-B82F-009CF3E05E93}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Dangr.Event.Test</AssemblyName>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\Tools\Build\Dangr.targets" />
+  <Import Project="$(SolutionDir)\Tools\Build\Dangr.Test.targets" />
+
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EventTests.cs" />
+    <Compile Include="InvalidTestEventListenerPrivateMethod.cs" />
+    <Compile Include="InvalidTestEventListenerTooFewParameters.cs" />
+    <Compile Include="InvalidTestEventListenerTooManyParameters.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestEvent.cs" />
+    <Compile Include="TestEventListener.cs" />
+    <Compile Include="TestResetEvent.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dangr.Event\Dangr.Event.csproj">
+      <Project>{b4e2ebbc-35e4-418a-879e-15f333ba1c45}</Project>
+      <Name>Dangr.Event</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dangr.Test\Dangr.Test.csproj">
+      <Project>{c4312ee9-6917-4a6c-869e-9f8be26e8724}</Project>
+      <Name>Dangr.Test</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

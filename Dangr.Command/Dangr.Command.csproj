@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{5FFCC11A-3387-466E-872C-8EAA6E31FA01}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Dangr.Command</AssemblyName>
+    <NugetDeploy>true</NugetDeploy>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\Tools\Build\Dangr.targets" />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Command\AliasAttribute.cs" />
+    <None Include="Command\Commands\DangrCommandHelp.cs" />
+    <None Include="Command\CommandContext.cs" />
+    <None Include="Command\CommandErrorCode.cs" />
+    <None Include="Command\CommandException.cs" />
+    <None Include="Command\CommandLine.cs" />
+    <None Include="Dangr.Command.nuspec" />
+    <None Include="Command\DangrCommand.cs" />
+    <None Include="Command\DangrCommandAttribute.cs" />
+    <None Include="Command\DangrCommandFactory.T.cs" />
+    <None Include="Command\ICommandContext.cs" />
+    <None Include="Command\IDangrCommandFactory.cs" />
+    <None Include="Command\ParameterAttribute.cs" />
+    <Compile Include="NamespaceDoc.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+</Project>

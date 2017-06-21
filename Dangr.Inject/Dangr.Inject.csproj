@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{77BD8C58-58D5-491B-862A-67C6B09ACA54}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Dangr.Inject</AssemblyName>
+    <NugetDeploy>true</NugetDeploy>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\Tools\Build\Dangr.targets" />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Inject\InjectionModuleAttribute.cs" />
+    <Compile Include="Inject\InjectAttribute.cs" />
+    <Compile Include="Inject\InjectionCore.cs" />
+    <Compile Include="Inject\InjectionProvider.cs" />
+    <Compile Include="Inject\NamedAttribute.cs" />
+    <Compile Include="Inject\PrototypeAttribute.cs" />
+    <Compile Include="Inject\ProvidesAttribute.cs" />
+    <Compile Include="Inject\ProvidesSetAttribute.cs" />
+    <Compile Include="Inject\SetInjectionProvider.cs" />
+    <Compile Include="Inject\SingletonAttribute.cs" />
+    <Compile Include="Inject\SingletonInjectionProvider.cs" />
+    <Compile Include="NamespaceDoc.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dangr.Inject.nuspec" />
+  </ItemGroup>
+</Project>
