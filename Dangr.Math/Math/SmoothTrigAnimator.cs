@@ -4,9 +4,6 @@
 //      Licensed under the MIT License. 
 //      See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
 //  </copyright>
-//  <dateCreated>2017-04-24</dateCreated>
-//  <dateModified>2017-06-20</dateModified>
-//  <lastModifiedBy>Dan Garvey</lastModifiedBy>
 // -----------------------------------------------------------------------
 
 namespace Dangr.Math
@@ -17,11 +14,25 @@ namespace Dangr.Math
     /// <para><see cref="Animator" /> that animates using the equation: V = (1 -
     /// Cos(Pi</para>
     /// <list type="bullet">
+    /// <item><description></description></item>
+    /// <item><description></description></item>
+    /// <item><description></description></item>
+    /// <item><description></description></item>
+    /// <item><description></description></item>
+    /// <item><description></description></item>
+    /// <item><description></description></item>
     /// <item>
     /// <description>
     /// T)) / 2 Starts out slow, speeds up in the middle, ends slow.
     /// </description>
     /// </item>
+    /// <item><description></description></item>
+    /// <item><description></description></item>
+    /// <item><description></description></item>
+    /// <item><description></description></item>
+    /// <item><description></description></item>
+    /// <item><description></description></item>
+    /// <item><description></description></item>
     /// </list>
     /// </summary>
     public class SmoothTrigAnimator : Animator

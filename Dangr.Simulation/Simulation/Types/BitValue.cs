@@ -4,9 +4,6 @@
 //      Licensed under the MIT License. 
 //      See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
 //  </copyright>
-//  <dateCreated>2017-06-14</dateCreated>
-//  <dateModified>2017-06-20</dateModified>
-//  <lastModifiedBy>Dan Garvey</lastModifiedBy>
 // -----------------------------------------------------------------------
 
 namespace Dangr.Simulation.Types
@@ -27,7 +24,7 @@ namespace Dangr.Simulation.Types
     }
 
     /// <summary>
-    /// Provides extension methods for the <see cref="BitValue" /> <see langword="enum" /> and <see cref="BitValue" /> arrays.
+    /// Provides extension methods for the <see cref="BitValue" /> <c>enum</c> and <see cref="BitValue" /> arrays.
     /// </summary>
     public static class BitValueExtensions
     {

@@ -4,16 +4,13 @@
 //      Licensed under the MIT License. 
 //      See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
 //  </copyright>
-//  <dateCreated>2017-06-15</dateCreated>
-//  <dateModified>2017-06-20</dateModified>
-//  <lastModifiedBy>Dan Garvey</lastModifiedBy>
 // -----------------------------------------------------------------------
 
 namespace Dangr.Util
 {
     /// <summary>
-    /// The Dangr.Util <see langword="namespace" /> provides miscellaneous
-    /// utilities for use with DangrLib.
+    /// The Dangr.Util namespace provides miscellaneous utilities for use with
+    /// DangrLib.
     /// </summary>
     internal static class NamespaceDoc
     { }
@@ -22,7 +19,7 @@ namespace Dangr.Util
 namespace Dangr.Collections
 {
     /// <summary>
-    /// The Dangr.Collections <see langword="namespace" /> provides extenstion methods for <see cref="System.Collections" /> classes.
+    /// The Dangr.Collections namespace provides extenstion methods for <see cref="System.Collections" /> classes.
     /// </summary>
     internal static class NamespaceDoc
     { }

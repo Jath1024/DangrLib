@@ -4,9 +4,6 @@
 //      Licensed under the MIT License. 
 //      See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
 //  </copyright>
-//  <dateCreated>2017-04-24</dateCreated>
-//  <dateModified>2017-06-20</dateModified>
-//  <lastModifiedBy>Dan Garvey</lastModifiedBy>
 // -----------------------------------------------------------------------
 
 namespace Dangr.Util
@@ -85,7 +82,7 @@ namespace Dangr.Util
         }
 
         /// <summary>
-        /// Escapes the <see langword="double" /> quotes within a string, replacing all " characters with \".
+        /// Escapes the double quotes within a string, replacing all " characters with \".
         /// </summary>
         /// <param name="quoteString">The string to escape.</param>
         /// <returns>The escaped string.</returns>

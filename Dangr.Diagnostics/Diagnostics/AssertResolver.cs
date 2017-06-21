@@ -4,9 +4,6 @@
 //      Licensed under the MIT License. 
 //      See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
 //  </copyright>
-//  <dateCreated>2017-04-24</dateCreated>
-//  <dateModified>2017-06-20</dateModified>
-//  <lastModifiedBy>Dan Garvey</lastModifiedBy>
 // -----------------------------------------------------------------------
 
 namespace Dangr.Diagnostics
@@ -264,7 +261,7 @@ namespace Dangr.Diagnostics
         }
 
         /// <summary>
-        /// Show a <paramref name="message" /> if the specified string is <see langword="null" /> or empty.
+        /// Show a <paramref name="message" /> if the specified string is <c>null</c> or empty.
         /// </summary>
         /// <param name="logSource">
         /// The <see cref="Dangr.Logging.ILogSource" /> used to log messages on failure.
@@ -300,7 +297,7 @@ namespace Dangr.Diagnostics
         }
 
         /// <summary>
-        /// Show a <paramref name="message" /> if the specified string is not <see langword="null" /> or white space.
+        /// Show a <paramref name="message" /> if the specified string is not <c>null</c> or white space.
         /// </summary>
         /// <param name="logSource">
         /// The <see cref="Dangr.Logging.ILogSource" /> used to log messages on failure.
@@ -336,7 +333,7 @@ namespace Dangr.Diagnostics
         }
 
         /// <summary>
-        /// Show a <paramref name="message" /> if the specified string is <see langword="null" /> or white space.
+        /// Show a <paramref name="message" /> if the specified string is <c>null</c> or white space.
         /// </summary>
         /// <param name="logSource">
         /// The <see cref="Dangr.Logging.ILogSource" /> used to log messages on failure.
@@ -372,7 +369,7 @@ namespace Dangr.Diagnostics
         }
 
         /// <summary>
-        /// Show a <paramref name="message" /> if the specified string is not <see langword="null" /> or empty.
+        /// Show a <paramref name="message" /> if the specified string is not <c>null</c> or empty.
         /// </summary>
         /// <param name="logSource">
         /// The <see cref="Dangr.Logging.ILogSource" /> used to log messages on failure.

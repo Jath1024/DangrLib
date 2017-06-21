@@ -4,16 +4,13 @@
 //      Licensed under the MIT License. 
 //      See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
 //  </copyright>
-//  <dateCreated>2017-06-15</dateCreated>
-//  <dateModified>2017-06-20</dateModified>
-//  <lastModifiedBy>Dan Garvey</lastModifiedBy>
 // -----------------------------------------------------------------------
 
 namespace Dangr.Inject
 {
     /// <summary>
-    /// The Dangr.Inject <see langword="namespace" /> provides dependency
-    /// injection utilities for use with DangrLib.
+    /// The Dangr.Inject namespace provides dependency injection utilities for
+    /// use with DangrLib.
     /// </summary>
     internal static class NamespaceDoc
     { }

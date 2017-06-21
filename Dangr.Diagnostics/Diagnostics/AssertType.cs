@@ -4,9 +4,6 @@
 //      Licensed under the MIT License. 
 //      See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
 //  </copyright>
-//  <dateCreated>2017-04-24</dateCreated>
-//  <dateModified>2017-06-20</dateModified>
-//  <lastModifiedBy>Dan Garvey</lastModifiedBy>
 // -----------------------------------------------------------------------
 
 namespace Dangr.Diagnostics
@@ -48,22 +45,22 @@ namespace Dangr.Diagnostics
         IsNull,
 
         /// <summary>
-        /// The is <see langword="null" /> or empty assert type.
+        /// The is <c>null</c> or empty assert type.
         /// </summary>
         IsNullOrEmpty,
 
         /// <summary>
-        /// The is not <see langword="null" /> or empty assert type.
+        /// The is not <c>null</c> or empty assert type.
         /// </summary>
         IsNotNullOrEmpty,
 
         /// <summary>
-        /// The is <see langword="null" /> or whitespace assert type.
+        /// The is <c>null</c> or whitespace assert type.
         /// </summary>
         IsNullOrWhiteSpace,
 
         /// <summary>
-        /// The is not <see langword="null" /> or whitespace assert type.
+        /// The is not <c>null</c> or whitespace assert type.
         /// </summary>
         IsNotNullOrWhiteSpace,
 

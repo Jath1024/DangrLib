@@ -4,9 +4,6 @@
 //      Licensed under the MIT License. 
 //      See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
 //  </copyright>
-//  <dateCreated>2017-04-25</dateCreated>
-//  <dateModified>2017-06-20</dateModified>
-//  <lastModifiedBy>Dan Garvey</lastModifiedBy>
 // -----------------------------------------------------------------------
 
 namespace Dangr.Async
@@ -115,7 +112,7 @@ namespace Dangr.Async
         /// </summary>
         /// <param name="task">The task to remove.</param>
         /// <returns>
-        /// <see langword="true" /> if the <paramref name="task" /> was removed.
+        /// <c>true</c> if the <paramref name="task" /> was removed.
         /// </returns>
         protected sealed override bool TryDequeue(Task task)
         {

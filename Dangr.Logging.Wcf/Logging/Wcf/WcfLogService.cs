@@ -4,9 +4,6 @@
 //      Licensed under the MIT License. 
 //      See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
 //  </copyright>
-//  <dateCreated>2017-04-24</dateCreated>
-//  <dateModified>2017-06-20</dateModified>
-//  <lastModifiedBy>Dan Garvey</lastModifiedBy>
 // -----------------------------------------------------------------------
 
 namespace Dangr.Logging.Wcf
@@ -24,8 +21,11 @@ namespace Dangr.Logging.Wcf
     /// <summary>
     /// <para>A service that listens for connections from 
     /// <see cref="WcfLogClient" /></para>
+    /// <para>
     /// <para>s and logs the messages to a designated <see cref="LogService" />
-    /// .</para>
+    /// </para>
+    /// <para>.</para>
+    /// </para>
     /// </summary>
     public class WcfLogService : IWcfLogService
     {
