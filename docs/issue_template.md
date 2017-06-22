@@ -36,5 +36,8 @@ Use this section to create a Feature, and remove the Bug section above.
 ## Detailed Description
 <!--- Provide a detailed description of the change or addition you are proposing -->
 
+## Acceptance Criteria
+<!-- What criteria define the feature as being complete -->
+
 ## Possible Implementation
 <!--- Not obligatory, but suggest an idea for implementing addition or change -->
