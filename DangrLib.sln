@@ -97,6 +97,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nuget", "Nuget", "{8F608ED7
 		Tools\Nuget\nuget.md = Tools\Nuget\nuget.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{E157665C-C6CB-4CBD-8EDC-FD8B0031F445}"
+	ProjectSection(SolutionItems) = preProject
+		.github\CONTRIBUTING.md = .github\CONTRIBUTING.md
+		.github\issue_template.md = .github\issue_template.md
+		.github\pull_request_template.md = .github\pull_request_template.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -270,5 +277,6 @@ Global
 		{38E56344-BE98-48CF-B040-A0BB23E790A2} = {275681EC-C8CA-46D8-8FD1-893C4BF6FC9D}
 		{2C6CECF3-3221-42CD-B681-A64BC2C1CE99} = {275681EC-C8CA-46D8-8FD1-893C4BF6FC9D}
 		{8F608ED7-819B-4FBF-87D4-BCD71F6CF58B} = {275681EC-C8CA-46D8-8FD1-893C4BF6FC9D}
+		{E157665C-C6CB-4CBD-8EDC-FD8B0031F445} = {665EF4AE-2CF3-4E66-910F-2F3B5F8E17CB}
 	EndGlobalSection
 EndGlobal

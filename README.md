@@ -56,7 +56,7 @@ Coding style should follow the guidelines in the Visual Studio and Resharper cod
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://github.com/Dangerdan9631/DangrLib/blob/master/CONTRIBUTING.md) for details on the code of conduct, and the process for submitting pull requests.
+Please read [CONTRIBUTING.md](https://github.com/Dangerdan9631/DangrLib/blob/master/.github/CONTRIBUTING.md) for details on the code of conduct, and the process for submitting pull requests.
 
 ## Versioning
 
