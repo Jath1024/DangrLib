@@ -1,5 +1,7 @@
 # DangrLib ![DangrLib][logo] 
 [![GitHub release][GithubReleaseShield]][GithubRelease] 
+[![Build Status][BuildStatusShield]][AppVeyorProject]
+[![Better Code Hub][BetterCodeHubShield]][BetterCodeHub]
 
 ---
 
@@ -116,6 +118,8 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
     Shields
 -->
 [GithubReleaseShield]: https://img.shields.io/badge/release-v1.0-2D64F5.svg
+[BuildStatusShield]: https://ci.appveyor.com/api/projects/status/43vxfn09qxuvdih5?svg=true
+[BetterCodeHubShield]: https://bettercodehub.com/edge/badge/Dangerdan9631/DangrLib?branch=master
 [NugetV1.0Shield]: https://img.shields.io/badge/nuget-v1.0-2D64F5.svg
 
 <!--
@@ -126,6 +130,8 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 [Resharper]: https://www.jetbrains.com/resharper/
 [GhostDoc]: http://submain.com/products/ghostdoc.aspx
 [SHFB]: https://github.com/EWSoftware/SHFB
+[BetterCodeHub]: https://bettercodehub.com/
+[AppVeyorProject]: https://ci.appveyor.com/project/Dangerdan9631/dangrlib
 
 [Dangr.Annotation]: https://www.nuget.org/packages/Dangr.Annotation/ "DangrLib"
 [Dangr.Async]: https://www.nuget.org/packages/Dangr.Async/ "DangrLib"
