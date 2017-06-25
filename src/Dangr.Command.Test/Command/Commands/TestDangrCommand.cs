@@ -3,10 +3,10 @@
     using Dangr.Command;
 
     /// <summary>
-    /// A test <see cref="DangrCommand"/>.
+    /// A test <see cref="IDangrCommand"/>.
     /// </summary>
     [DangrCommand(summary: "A test command.")]
-    public class DangrCommandTest : DangrCommand
+    public class DangrCommandTest : IDangrCommand
     {
         /// <summary>
         /// Gets or sets the positional parameter0.
@@ -31,9 +31,9 @@
         /// <summary>
         /// Executes the command.
         /// </summary>
-        protected override void ExecuteCommand()
+        public void Execute(ICommandContext executionContext)
         {
-            this.Output($"P0: {this.Parameter0} P1: {this.Parameter1} Named0: {this.Named0}");
+            executionContext.Output($"P0: {this.Parameter0} P1: {this.Parameter1} Named0: {this.Named0}");
         }
     }
 }

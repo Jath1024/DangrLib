@@ -29,9 +29,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodeAnalysisRuleSet>..\DangrLib.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>$(SolutionDir)\DangrLib.ruleset</CodeAnalysisRuleSet>
     <RunCodeAnalysis>true</RunCodeAnalysis>
-    <DocumentationFile>bin\Debug\$(AssemblyName).XML</DocumentationFile>
   </PropertyGroup>
   
   <!-- 
@@ -44,7 +43,6 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Release\$(AssemblyName).XML</DocumentationFile>
     <RunCodeAnalysis>true</RunCodeAnalysis>
     <CodeAnalysisRuleSet>$(SolutionDir)\DangrLib.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
@@ -58,9 +56,18 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
 
-<!--
-  Common .cs files.
--->
+  <!-- Generate Documentation if needed. -->
+  <PropertyGroup Condition=" '$(GenerateDocumentation)' == 'true' ">
+    <DocumentationFile>$(OutputPath)\$(AssemblyName).XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(GenerateDocumentation)' != 'true' ">
+    <DocumentationFile />
+    <NoWarn>1591</NoWarn>
+  </PropertyGroup>
+
+  <!--
+    Common .cs files.
+  -->
   <ItemGroup>
     <Compile Include="$(SolutionDir)\Tools\CommonSource\**">
       <Link>Properties\%(Filename)%(Extension)</Link>

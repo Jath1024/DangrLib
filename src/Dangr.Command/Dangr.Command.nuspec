@@ -13,6 +13,9 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <tags>dangrlib command commandline arguments execution</tags>
   </metadata>
+  <dependencies>
+    <dependency id="Dangr.Util" version="1.0" />
+  </dependencies>
   <files>
     <file src="../../LICENSE" target="LICENSE" />
   </files>

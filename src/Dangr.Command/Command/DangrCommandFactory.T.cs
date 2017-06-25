@@ -4,13 +4,14 @@
     using System.Collections.Generic;
     using System.Reflection;
     using System.Text;
+    using Dangr.Command.Commands;
 
     /// <summary>
-    /// Object used to create new <see cref="DangrCommand"/>s of type <see cref="T:T"/>.
+    /// Object used to create new <see cref="IDangrCommand"/>s of type <see cref="T:T"/>.
     /// </summary>
-    /// <typeparam name="T">The type of <see cref="DangrCommand"/> to create.</typeparam>
+    /// <typeparam name="T">The type of <see cref="IDangrCommand"/> to create.</typeparam>
     public class DangrCommandFactory<T> : IDangrCommandFactory
-        where T : DangrCommand, new()
+        where T : IDangrCommand, new()
     {
         private string commandSummary;
         private readonly List<CommandParameter> parameterList;
@@ -35,13 +36,13 @@
         }
 
         /// <summary>
-        /// Creates a new instance of the specified <see cref="DangrCommand" /> using the given command line.
+        /// Creates a new instance of the specified <see cref="IDangrCommand" /> using the given command line.
         /// </summary>
         /// <param name="commandLine">The command line.</param>
         /// <returns>
-        /// A new <see cref="DangrCommand" /> instance with parameters set from the given command line.
+        /// A new <see cref="IDangrCommand" /> instance with parameters set from the given command line.
         /// </returns>
-        public DangrCommand Create(CommandLine commandLine)
+        public IDangrCommand Create(CommandLine commandLine)
         {
             T command = new T();
 

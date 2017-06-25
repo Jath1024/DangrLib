@@ -7,13 +7,17 @@
   </PropertyGroup>
   <Import Project="$(SolutionDir)\Tools\Build\Dangr.targets" />
   <Import Project="$(SolutionDir)\Tools\Build\Dangr.Test.targets" />
-
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable, Version=1.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Collections.Immutable.1.3.1\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Commands\DangrCommandTest.cs" />
-    <None Include="CommandTest.cs" />
+    <Compile Include="Command\CommandLineTest.cs" />
+    <None Include="Command\Commands\TestDangrCommand.cs" />
+    <None Include="Command\CommandTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -25,5 +29,16 @@
       <Project>{ec89ca12-e5a4-4738-b0ad-bbb39cbd886d}</Project>
       <Name>Dangr.Diagnostics</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Dangr.Logging\Dangr.Logging.csproj">
+      <Project>{03B94D6D-8989-41AC-B90F-BEBD4129D65D}</Project>
+      <Name>Dangr.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dangr.Test\Dangr.Test.csproj">
+      <Project>{c4312ee9-6917-4a6c-869e-9f8be26e8724}</Project>
+      <Name>Dangr.Test</Name>
+    </ProjectReference>
   </ItemGroup>
-  </Project>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>

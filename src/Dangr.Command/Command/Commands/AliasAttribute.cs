@@ -1,11 +1,11 @@
-﻿namespace Dangr.Command
+﻿namespace Dangr.Command.Commands
 {
     using System;
 
     /// <summary>
-    /// Defines an alias that can be used to access a named parameter of a <see cref="DangrCommand"/>.
+    /// Defines an alias that can be used to access a named parameter of a <see cref="IDangrCommand"/>.
     /// </summary>
-    [AttributeUsage(AttributeTargets.Property, Inherited = false, AllowMultiple = true)]
+    [AttributeUsage(AttributeTargets.Property, AllowMultiple = true)]
     public sealed class AliasAttribute : Attribute
     {
         /// <summary>

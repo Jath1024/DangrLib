@@ -286,4 +286,6 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
-/Dangr.Documentation/Help
+
+# Documentation Output
+/src/Dangr.Documentation/Help

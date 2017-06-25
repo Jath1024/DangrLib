@@ -1,11 +1,11 @@
-﻿namespace Dangr.Command
+﻿namespace Dangr.Command.Commands
 {
     using System;
 
     /// <summary>
-    /// Attribute used to mark a parameter of a <see cref="DangrCommand"/>.
+    /// Attribute used to mark a parameter of a <see cref="IDangrCommand"/>.
     /// </summary>
-    [AttributeUsage(AttributeTargets.Property, Inherited = false, AllowMultiple = false)]
+    [AttributeUsage(AttributeTargets.Property)]
     public sealed class ParameterAttribute : Attribute
     {
         /// <summary>

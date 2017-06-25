@@ -7,7 +7,6 @@
   </PropertyGroup>
   <Import Project="$(SolutionDir)\Tools\Build\Dangr.targets" />
   <Import Project="$(SolutionDir)\Tools\Build\Dangr.Test.targets" />
-  
   <ItemGroup>
     <Reference Include="System" />
   </ItemGroup>

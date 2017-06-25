@@ -1,5 +1,6 @@
 ﻿namespace Dangr.Command
 {
+    using Dangr.Command.Commands;
     using Dangr.Error;
 
     /// <summary>
@@ -48,7 +49,7 @@
             "Invalid command parameter.");
 
         /// <summary>
-        /// <see cref="CommandErrorCode"/> that is used when a <see cref="DangrCommand"/> is defined in an invalid way.
+        /// <see cref="CommandErrorCode"/> that is used when a <see cref="IDangrCommand"/> is defined in an invalid way.
         /// </summary>
         public static readonly CommandErrorCode InvalidCommandDefinition = new CommandErrorCode(
             nameof(Command) + ".006",
@@ -56,7 +57,7 @@
             "Invalid command definition.");
 
         /// <summary>
-        /// <see cref="CommandErrorCode"/> that is used when trying to execute a <see cref="DangrCommand"/>
+        /// <see cref="CommandErrorCode"/> that is used when trying to execute a <see cref="IDangrCommand"/>
         /// that does not exist in a given <see cref="CommandContext"/>.
         /// </summary>
         public static readonly CommandErrorCode CommandDoesNotExist = new CommandErrorCode(
@@ -65,7 +66,7 @@
             "The command does not exist.");
 
         /// <summary>
-        /// <see cref="CommandErrorCode"/> that is used when trying to add a <see cref="DangrCommand"/> that
+        /// <see cref="CommandErrorCode"/> that is used when trying to add a <see cref="IDangrCommand"/> that
         /// already exists in a given <see cref="CommandContext"/>.
         /// </summary>
         public static readonly CommandErrorCode CommandAlreadyExists = new CommandErrorCode(

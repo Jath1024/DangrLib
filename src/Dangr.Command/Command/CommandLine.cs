@@ -1,41 +1,206 @@
-﻿namespace Dangr.Command
+﻿// -----------------------------------------------------------------------
+//  <copyright file="CommandLine.cs" company="DangerDan9631">
+//      Copyright (c) 2017 Dan Garvey. All rights reserved.
+//      Licensed under the MIT License. 
+//      See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
+//  </copyright>
+// -----------------------------------------------------------------------
+
+namespace Dangr.Command
 {
+    using System;
     using System.Collections.Generic;
-    using System.Text;
+    using System.Collections.Immutable;
+    using System.Text.RegularExpressions;
+    using Dangr.Annotation;
 
     /// <summary>
-    /// Parses a command string and provides access to the command name and individual arguments.
+    /// Represents a command that can be executed, and the arguments to use
+    /// when executing.
     /// </summary>
+    /// <remarks>
+    /// <para>
+    /// <see cref="CommandLine"/> is an object that will parse a given command
+    /// line string, and break it down into its components which can be
+    /// accessed as needed.
+    /// </para>
+    /// <para>
+    /// The Command Name is the first element of the command line string, and 
+    /// represents the command that should be run.
+    /// </para>
+    /// <para>
+    /// The arguments are parsed from the portion of the command line after 
+    /// the name. Arguments are seperated by whitespace and can be specified 
+    /// in one of three different ways.
+    /// <list type="bullet">
+    ///   <item>
+    ///     <term>Flags</term>
+    ///     <description>
+    ///       Arguments that begin with '-' and that are not followed by a 
+    ///       value, are stored as flags. Flags are used to represent the 
+    ///       boolean value <c>true</c> when present, and <c>false</c>
+    ///       otherwise.</description>
+    ///   </item>
+    ///   <item>
+    ///     <term>Named arguments</term>
+    ///     <description>
+    ///       Arguments that begin with '-' and that are followed by a value,
+    ///       are stored as named arguments. Named arguments can be accessed as
+    ///       name/value pairs.
+    ///     </description>
+    ///   </item>
+    ///   <item>
+    ///     <term>Positional arguments</term>
+    ///     <description>
+    ///       Values that do not begin with '-' and that are not preceded by an 
+    ///       argument that does, are positional arguments. Positional
+    ///       arguments are stored as a list in the order they are specified.
+    ///     </description>
+    ///   </item>
+    /// </list>
+    /// </para>
+    /// <para>
+    /// Command and argument names can be any string of characters that do not
+    /// contain one of the following values: 
+    /// <c>`~!@#$%^&amp;*()=+[]{}|\;:"',&lt;&gt;/?</c>.
+    /// They also cannot start with the '-' character. When reading flag or 
+    /// argument names, the '-' prefix will be removed from the name.
+    /// Command names will always be converted to lowercase. Argument names
+    /// are case sensitive.
+    /// </para>
+    /// <para>
+    /// Value arguments may be contained in single (') or double (") quotes, 
+    /// which can be escaped using a backslash (\) character. They cannot start
+    /// with the '-' character, and any whitespace must be contained in quotes.
+    /// Otherwise there are no restrictions on the characters in a value 
+    /// argument. When reading values, surrounding quote characters will be
+    /// removed, and escaped quote characters will be replaced with their
+    /// unescaped values.
+    /// </para>
+    /// </remarks>
+    /// 
+    /// 
+    /// <example>
+    /// <c>Example 1</c><br/>
+    /// The following example will create a <see cref="CommandLine"/> that 
+    /// executes 'TestCommand' using named arguments:
+    /// <code>
+    /// CommandLine commandLine = new CommandLine(
+    ///     "TestCommand -Named1 argument1 -Named2 \"argument \\\"2\\\"\"");
+    /// Console.WriteLine($"CommandName: {commandLine.CommandName}");
+    /// Console.WriteLine($"Named1: {commandLine.NamedArguments["Named1"]}");
+    /// Console.WriteLine($"Named2: {commandLine.NamedArguments["Named2"]}");
+    /// </code>
+    /// Will output:
+    /// <code>
+    /// CommandName: TestCommand
+    /// Named1: argument1
+    /// Named2: argument "2"
+    /// </code>
+    /// </example>
+    /// 
+    /// 
+    /// <example>
+    /// <c>Example 2</c><br/>
+    /// The following example will create a <see cref="CommandLine"/> that 
+    /// executes 'TestCommand' using flags:
+    /// <code>
+    /// CommandLine commandLine = new CommandLine(
+    ///     "TestCommand -Flag1 -Flag2 -Named1 arg");
+    /// Console.WriteLine($"CommandName: {commandLine.CommandName}");
+    /// Console.WriteLine($"Flag1: {commandLine.Flags.Contains("Flag1")}");
+    /// Console.WriteLine($"Flag2: {commandLine.Flags.Contains("Flag2")}");
+    /// Console.WriteLine($"Flag3: {commandLine.Flags.Contains("Flag3")}");
+    /// Console.WriteLine($"Named1: {commandLine.NamedArguments["Named1"]}");
+    /// </code>
+    /// Will output:
+    /// <code>
+    /// CommandName: TestCommand
+    /// Flag1: true
+    /// Flag2: true
+    /// Flag3: false
+    /// Named1: arg
+    /// </code>
+    /// </example>
+    /// 
+    /// 
+    /// <example>
+    /// <c>Example 3</c><br/>
+    /// The following example will create a <see cref="CommandLine"/> that 
+    /// executes 'TestCommand' using positional arguments:
+    /// <code>
+    /// CommandLine commandLine = new CommandLine(
+    ///     "TestCommand positional0 \"positional arg 1\" -Named1 named positional2 -Flag1");
+    /// Console.WriteLine($"CommandName: {commandLine.CommandName}");
+    /// Console.WriteLine($"Named1: {commandLine.NamedArguments["Named1"]}");
+    /// Console.WriteLine($"Flag1: {commandLine.Flags.Contains("Flag1")}");
+    /// for(int i = 0; i &lt; this.PositionalArguments.Count; i++)
+    /// {
+    ///     Console.WriteLine($"Positional {i}: {this.PositionalArguments[i]}");
+    /// }
+    /// </code>
+    /// Will output:
+    /// <code>
+    /// CommandName: TestCommand
+    /// Named1: named
+    /// Flag1: true
+    /// Positional 0: positional0
+    /// Positional 1: positional arg 1
+    /// Positional 2: positional2
+    /// </code>
+    /// </example>
     public class CommandLine
     {
-        private readonly char[] InvalidCommandNameChars = "`~!@#$%^&*()=+[]{}|\\;:\"',<>/?".ToCharArray();
-        
-        private List<string> argumentList;
+        private static readonly char[] IllegalNameChars = "`~!@#$%^&*()=+[]{}|\\;:\"',<>/?".ToCharArray();
+        private const string ArgumentToken = "-";
+
+        [Task("https://github.com/Dangerdan9631/DangrLib/issues/5", Description = "Create a Regex Builder Library.")]
+        private const string SplitOnWhitespaceRegexString = "\\s";
+        private const string DoubleQuotedRegexString = "\" ((?: \\\\\" | [^\"] )*) \"";
+        private const string SingleQuotedRegexString = "' ((?: \\\\' | [^'] )*) '";
+        private const string WordRegexString = "([\\S-[\"']]+)";
+
+        private static readonly string ArgumentMatchRegexString =
+            $"(?> {CommandLine.WordRegexString} | {CommandLine.DoubleQuotedRegexString} | {CommandLine.SingleQuotedRegexString} )";
+
+        private static readonly RegexOptions RegexOptions = RegexOptions.Compiled | RegexOptions.IgnorePatternWhitespace;
+        private static readonly Regex ArgumentMatchRegex = new Regex(
+            CommandLine.ArgumentMatchRegexString,
+            CommandLine.RegexOptions);
+
+        private static readonly Regex SplitOnWhitespaceRegex = new Regex(
+            CommandLine.SplitOnWhitespaceRegexString,
+            CommandLine.RegexOptions);
+
+        /// <summary>
+        /// Gets the raw command line string that was parsed..
+        /// </summary>
+        public string RawCommandLine { get; }
 
         /// <summary>
         /// Gets the name of the command.
         /// </summary>
-        public string CommandName { get; private set; }
+        public string CommandName { get; }
 
         /// <summary>
-        /// Gets the list of parsed argument.
+        /// Gets the raw portion of the string used to parse the command arguments.
         /// </summary>
-        public IReadOnlyList<string> ArgumentList { get { return this.argumentList; } }
+        public string RawArguments { get; }
 
         /// <summary>
-        /// Gets the flags specified in this command line.
+        /// Gets a dictionary of named arguments and the values parsed from the command line.
         /// </summary>
-        public HashSet<string> Flags { get; private set; }
+        public ImmutableDictionary<string, string> NamedArguments { get; }
 
         /// <summary>
-        /// Gets the raw command line string.
+        /// Gets an ordered list of positional arguments parsed from the command line.
         /// </summary>
-        public string RawCommandLine { get; private set; }
+        public ImmutableList<string> PositionalArguments { get; }
 
         /// <summary>
-        /// Gets the argument portion of the command line as a string.
+        /// Gets the set of flags parsed from the command line.
         /// </summary>
-        public string RawArguments { get; private set; }
+        public ImmutableHashSet<string> Flags { get; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CommandLine"/> class.
@@ -43,162 +208,124 @@
         /// <param name="commandLine">The command line to parse.</param>
         public CommandLine(string commandLine)
         {
-            this.ParseCommandLine(commandLine);
-        }
-
-        private void ParseCommandLine(string commandLine)
-        {
             this.RawCommandLine = commandLine.Trim();
-            this.CommandName = string.Empty;
-            this.RawArguments = string.Empty;
-            this.argumentList = new List<string>();
-            this.Flags = new HashSet<string>();
-
-            this.ParseCommandName();
-            this.ParseArguments();
-        }
-
-        private void ParseCommandName()
-        {
-            int endIndex = -1;
-            for(int i = 0; i < this.RawCommandLine.Length; i++)
-            {
-                if (char.IsWhiteSpace(this.RawCommandLine[i]))
-                {
-                    endIndex = i;
-                    break;
-                }
-            }
-
-            if (endIndex == -1)
-            {
-                this.CommandName = this.RawCommandLine.ToLower();
-            }
-            else
-            {
-                this.CommandName = this.RawCommandLine.Substring(0, endIndex).ToLower();
-
-                if (endIndex < this.RawCommandLine.Length + 1)
-                {
-                    this.RawArguments = this.RawCommandLine.Substring(endIndex + 1).TrimStart();
-                }
-            }
-
-            int invalidChar = this.CommandName.IndexOfAny(this.InvalidCommandNameChars);
-            if (invalidChar >= 0)
-            {
-                throw new CommandException(CommandErrorCode.InvalidCommandName, $"The command name cannot containt the character {this.CommandName[invalidChar]}")
-                    .AddCommandParseInfo(this.RawCommandLine, 0);
-            }
-
-            if (string.IsNullOrWhiteSpace(this.CommandName))
-            {
-                throw new CommandException(CommandErrorCode.InvalidCommandName, "The command name cannot be empty.")
-                    .AddCommandParseInfo(this.RawCommandLine, 0);
-            }
-        }
-
-        private void ParseArguments()
-        {
-            StringBuilder argumentBuilder = new StringBuilder();
-            bool inSingleQuotes = false;
-            bool inDoubleQuotes = false;
-            bool isEscapedCharacter = false;
-            for (int i = 0; i < this.RawArguments.Length; i++)
-            {
-                char ch = this.RawArguments[i];
-                if (isEscapedCharacter)
-                {
-                    isEscapedCharacter = false;
-                    argumentBuilder.Append(ch);
-                    continue;
-                }
-
-                if (char.IsWhiteSpace(ch))
-                {
-                    if (!inSingleQuotes && !inDoubleQuotes)
-                    {
-                        string arg = argumentBuilder.ToString();
-                        if (arg.Length > 0)
-                        {
-                            if (arg[0] == '-')
-                            {
-                                if (arg.Length == 1)
-                                {
-                                    throw new CommandException(CommandErrorCode.InvalidCommandArgument, "Missing flag after - in argument.")
-                                        .AddCommandParseInfo(this.RawArguments, this.RawArguments.Length);
-                                }
-
-                                this.Flags.Add(arg.Substring(1));
-                            }
-                            else
-                            {
-                                this.argumentList.Add(arg);
-                            }
-                        }
-                        
-                        argumentBuilder.Clear();
-                        continue;
-                    }
-                }
-                else if (ch.Equals('"'))
-                {
-                    if (!inSingleQuotes)
-                    {
-                        inDoubleQuotes = !inDoubleQuotes;
-                    }
-                }
-                else if (ch.Equals('\''))
-                {
-                    if (!inDoubleQuotes)
-                    {
-                        inSingleQuotes = !inSingleQuotes;
-                    }
-                }
-
-                if (ch.Equals('\\'))
-                {
-                    isEscapedCharacter = true;
-                }
-                else
-                {
-                    argumentBuilder.Append(ch);
-                }
-            }
             
-            if (inSingleQuotes)
+            string commandName;
+            string rawArguments;
+            CommandLine.ParseCommandNameAndArguments(this.RawCommandLine, out commandName, out rawArguments);
+            this.CommandName = commandName;
+            this.RawArguments = rawArguments;
+
+            Dictionary<string, string> namedArguments;
+            List<string> positionalArguments;
+            HashSet<string> flags;
+            CommandLine.ParseArguments(rawArguments, out namedArguments, out positionalArguments, out flags);
+            this.NamedArguments = namedArguments.ToImmutableDictionary();
+            this.PositionalArguments = positionalArguments.ToImmutableList();
+            this.Flags = flags.ToImmutableHashSet();
+        }
+
+        private static void ParseCommandNameAndArguments(
+            string commandLine, 
+            out string commandName,
+            out string rawArguments)
+        {
+            if (string.IsNullOrEmpty(commandLine))
             {
-                throw new CommandException(CommandErrorCode.InvalidCommandArgument, "Missing closing ' in argument.")
-                    .AddCommandParseInfo(this.RawArguments, this.RawArguments.Length);
+                throw new ArgumentException($"Cannot parse empty command line.");
             }
 
-            if (inDoubleQuotes)
-            {
-                throw new CommandException(CommandErrorCode.InvalidCommandArgument, "Missing closing \" in argument.")
-                    .AddCommandParseInfo(this.RawArguments, this.RawArguments.Length);
-            }
+            string[] parts = CommandLine.SplitOnWhitespaceRegex.Split(commandLine, 2);
+            commandName = parts[0];
+            rawArguments = parts.Length > 1
+                ? parts[1].TrimStart()
+                : string.Empty;
 
-            // Add the rest of the string as the final argument.
-            string finalArg = argumentBuilder.ToString();
-            if (finalArg.Length > 0)
+            CommandLine.ValidateName(commandName);
+        }
+
+        private static void ParseArguments(
+            string rawArguments,
+            out Dictionary<string, string> namedArguments,
+            out List<string> positionalArguments,
+            out HashSet<string> flags)
+        {
+            namedArguments = new Dictionary<string, string>();
+            positionalArguments = new List<string>();
+            flags = new HashSet<string>();
+
+            string argumentName = null;
+            MatchCollection matches = CommandLine.ArgumentMatchRegex.Matches(rawArguments);
+            foreach (Match match in matches)
             {
-                if (finalArg[0] == '-')
+                if (match.Value.StartsWith(CommandLine.ArgumentToken))
                 {
-                    if (finalArg.Length == 1)
+                    string value = match.Value.Substring(1);
+                    CommandLine.ValidateName(value);
+
+                    if (argumentName != null)
                     {
-                        throw new CommandException(CommandErrorCode.InvalidCommandArgument, "Missing flag after - in argument.")
-                            .AddCommandParseInfo(this.RawArguments, this.RawArguments.Length);
+                        flags.Add(argumentName);
                     }
 
-                    this.Flags.Add(finalArg.Substring(1));
+                    argumentName = value;
                 }
                 else
                 {
-                    this.argumentList.Add(finalArg);
+                    for (int i = 1; i < match.Groups.Count; i++)
+                    {
+                        Group group = match.Groups[i];
+                        if (!group.Success)
+                        {
+                            continue;
+                        }
+
+                        string value = CommandLine.UnescapeCharacters(group.Value);
+                        if (argumentName == null)
+                        {
+                            positionalArguments.Add(value);
+                        }
+                        else
+                        {
+                            namedArguments.Add(argumentName, value);
+                            argumentName = null;
+                        }
+                    }
                 }
             }
 
-            this.argumentList.RemoveAll(str => string.IsNullOrWhiteSpace(str));
+            if (argumentName != null)
+            {
+                flags.Add(argumentName);
+            }
+        }
+
+        private static void ValidateName(string name)
+        {
+            if (string.IsNullOrEmpty(name))
+            {
+                throw new ArgumentException($"Name cannot be empty.");
+            }
+
+            int invalidCharIndex = name.IndexOfAny(CommandLine.IllegalNameChars);
+            if (invalidCharIndex >= 0)
+            {
+                throw new ArgumentException(
+                    $"Name '{name}' contains illegal character '{name[invalidCharIndex]}'.");
+            }
+
+            if (name.StartsWith(CommandLine.ArgumentToken))
+            {
+                throw new ArgumentException(
+                    $"Name '{name}' cannot start with character '{CommandLine.ArgumentToken}'.");
+            }
+        }
+
+        private static string UnescapeCharacters(string escaped)
+        {
+            return escaped
+                .Replace("\\\"", "\"")
+                .Replace("\\'", "'");
         }
     }
 }

@@ -1,17 +1,18 @@
 ﻿namespace Dangr.Command.Commands
 {
     /// <summary>
-    /// <see cref="DangrCommand"/> that provides help for DangrCommands within the current command context.
+    /// <see cref="IDangrCommand"/> that provides help for DangrCommands within the current command context.
     /// </summary>
     [DangrCommand(summary: "Provides help for DangrCommands within the current command context.")]
-    public class DangrCommandHelp : DangrCommand
+    public class DangrCommandHelp : IDangrCommand
     {
         /// <summary>
-        /// Executes the command.
+        /// Executes this <see cref="IDangrCommand" />.
         /// </summary>
-        protected override void ExecuteCommand()
+        /// <param name="executionContext"></param>
+        public void Execute(ICommandContext executionContext)
         {
-            this.Output(this.ExecutionContext.ToString());
+            executionContext.Output(executionContext.ToString());
         }
     }
 }

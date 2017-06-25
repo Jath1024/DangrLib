@@ -7,9 +7,9 @@
     using Dangr.Util;
 
     /// <summary>
-    /// The context that defines what <see cref="DangrCommand"/>s exist and can be executed.
+    /// The context that defines what <see cref="IDangrCommand"/>s exist and can be executed.
     /// </summary>
-    public class CommandContext : ICommandContext, INamedObject
+    public class CommandContext : ICommandContext
     {
         private readonly TextWriter outputWriter;
         private readonly TextWriter errorWriter;
@@ -59,11 +59,11 @@
         }
 
         /// <summary>
-        /// Adds a <see cref="DangrCommand"/> to this <see cref="CommandContext"/>.
+        /// Adds a <see cref="IDangrCommand"/> to this <see cref="CommandContext"/>.
         /// </summary>
-        /// <typeparam name="T">The type of <see cref="DangrCommand"/> to add.</typeparam>
+        /// <typeparam name="T">The type of <see cref="IDangrCommand"/> to add.</typeparam>
         /// <exception cref="CommandException"> Thrown if the command already exists in the command context.</exception>
-        public void AddCommand<T>() where T : DangrCommand, new()
+        public void AddCommand<T>() where T : IDangrCommand, new()
         {
             var commandFactory = new DangrCommandFactory<T>();
             string commandName = commandFactory.CommandName;
@@ -101,7 +101,7 @@
                 this.parentContext.ExecuteInternal(commandLine, executionContext);
             }
 
-            DangrCommand command = commandFactory.Create(commandLine);
+            IDangrCommand command = commandFactory.Create(commandLine);
             command.Execute(executionContext);
         }
 

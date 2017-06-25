@@ -1,11 +1,11 @@
-﻿namespace Dangr.Command
+﻿namespace Dangr.Command.Commands
 {
     using System;
 
     /// <summary>
-    /// Defines an object as a <see cref="DangrCommand"/>.
+    /// Defines an object as an <see cref="IDangrCommand"/>.
     /// </summary>
-    [AttributeUsage(AttributeTargets.Class, Inherited = false, AllowMultiple = false)]
+    [AttributeUsage(AttributeTargets.Class, Inherited = false)]
     public sealed class DangrCommandAttribute : Attribute
     {
         /// <summary>

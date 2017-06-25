@@ -5,6 +5,7 @@
     <OutputType>Library</OutputType>
     <AssemblyName>Dangr.Entity</AssemblyName>
     <NugetDeploy>true</NugetDeploy>
+    <GenerateDocumentation>true</GenerateDocumentation>
   </PropertyGroup>
   <Import Project="$(SolutionDir)\Tools\Build\Dangr.targets" />
   <ItemGroup>

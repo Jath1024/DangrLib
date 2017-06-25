@@ -1,9 +1,10 @@
 ﻿namespace Dangr.Command
 {
+    using Dangr.Command.Commands;
     using Dangr.Util;
 
     /// <summary>
-    /// Interface for the context within which a <see cref="DangrCommand"/> will run.
+    /// Interface for the context within which a <see cref="IDangrCommand"/> will run.
     /// </summary>
     public interface ICommandContext : INamedObject
     {

@@ -5,27 +5,47 @@
     <OutputType>Library</OutputType>
     <AssemblyName>Dangr.Command</AssemblyName>
     <NugetDeploy>true</NugetDeploy>
+    <GenerateDocumentation>true</GenerateDocumentation>
   </PropertyGroup>
   <Import Project="$(SolutionDir)\Tools\Build\Dangr.targets" />
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable, Version=1.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Collections.Immutable.1.3.1\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Command\AliasAttribute.cs" />
+    <None Include="Command\Commands\AliasAttribute.cs" />
     <None Include="Command\Commands\DangrCommandHelp.cs" />
     <None Include="Command\CommandContext.cs" />
     <None Include="Command\CommandErrorCode.cs" />
     <None Include="Command\CommandException.cs" />
-    <None Include="Command\CommandLine.cs" />
+    <Compile Include="Command\CommandLine.cs" />
     <None Include="Dangr.Command.nuspec" />
-    <None Include="Command\DangrCommand.cs" />
-    <None Include="Command\DangrCommandAttribute.cs" />
+    <None Include="Command\Commands\IDangrCommand.cs" />
+    <None Include="Command\Commands\DangrCommandAttribute.cs" />
     <None Include="Command\DangrCommandFactory.T.cs" />
     <None Include="Command\ICommandContext.cs" />
     <None Include="Command\IDangrCommandFactory.cs" />
-    <None Include="Command\ParameterAttribute.cs" />
+    <None Include="Command\Commands\ParameterAttribute.cs" />
     <Compile Include="NamespaceDoc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dangr.Annotation\Dangr.Annotation.csproj">
+      <Project>{7eec0f15-6175-4035-9205-6ff793fe4303}</Project>
+      <Name>Dangr.Annotation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dangr.Logging\Dangr.Logging.csproj">
+      <Project>{03b94d6d-8989-41ac-b90f-bebd4129d65d}</Project>
+      <Name>Dangr.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dangr.Util\Dangr.Util.csproj">
+      <Project>{272587f0-bd2b-48e5-a63f-252ca280b14f}</Project>
+      <Name>Dangr.Util</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>
