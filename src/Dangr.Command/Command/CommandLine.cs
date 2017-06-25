@@ -173,7 +173,7 @@ namespace Dangr.Command
             CommandLine.RegexOptions);
 
         /// <summary>
-        /// Gets the raw command line string that was parsed..
+        /// Gets the raw command line string that was parsed.
         /// </summary>
         public string RawCommandLine { get; }
 

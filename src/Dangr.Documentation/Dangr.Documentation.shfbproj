@@ -44,7 +44,6 @@
       <DocumentationSource sourceFile="..\Dangr.Event\Dangr.Event.csproj" />
       <DocumentationSource sourceFile="..\Dangr.Inject\Dangr.Inject.csproj" />
       <DocumentationSource sourceFile="..\Dangr.Logging.Loggers\Dangr.Logging.Loggers.csproj" />
-      <DocumentationSource sourceFile="..\Dangr.Logging.Wcf\Dangr.Logging.Wcf.csproj" />
       <DocumentationSource sourceFile="..\Dangr.Logging\Dangr.Logging.csproj" />
       <DocumentationSource sourceFile="..\Dangr.Math\Dangr.Math.csproj" />
       <DocumentationSource sourceFile="..\Dangr.ObjectPool\Dangr.ObjectPool.csproj" />
@@ -57,13 +56,13 @@
     <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>
     <HelpFileFormat>Markdown</HelpFileFormat>
     <IndentHtml>False</IndentHtml>
-    <KeepLogFile>True</KeepLogFile>
+    <KeepLogFile>False</KeepLogFile>
     <DisableCodeBlockComponent>False</DisableCodeBlockComponent>
     <CleanIntermediates>True</CleanIntermediates>
     <HelpFileVersion>1.0</HelpFileVersion>
     <MaximumGroupParts>2</MaximumGroupParts>
     <NamespaceGrouping>False</NamespaceGrouping>
-    <SyntaxFilters>C#, Visual Basic, Managed C++</SyntaxFilters>
+    <SyntaxFilters>C#</SyntaxFilters>
     <SdkLinkTarget>Blank</SdkLinkTarget>
     <RootNamespaceContainer>False</RootNamespaceContainer>
     <PresentationStyle>Markdown</PresentationStyle>
@@ -75,11 +74,13 @@
     <HtmlSdkLinkType>Msdn</HtmlSdkLinkType>
     <IncludeFavorites>True</IncludeFavorites>
     <BinaryTOC>True</BinaryTOC>
-    <VisibleItems>Attributes, ExplicitInterfaceImplementations, InheritedMembers, InheritedFrameworkMembers, Privates, PrivateFields, Protected</VisibleItems>
+    <VisibleItems>Attributes, ExplicitInterfaceImplementations, InheritedMembers, InheritedFrameworkMembers, Protected</VisibleItems>
     <MissingTags>Summary, Parameter, Returns, AutoDocumentCtors, Namespace, TypeParameter, AutoDocumentDispose</MissingTags>
     <RootNamespaceTitle>
     </RootNamespaceTitle>
     <CopyrightText>Copyright &amp;#169%3b  2017 Dan Garvey</CopyrightText>
+    <ComponentConfigurations>
+    </ComponentConfigurations>
   </PropertyGroup>
   <!-- There are no properties for these groups.  AnyCPU needs to appear in order for Visual Studio to perform
 			 the build.  The others are optional common platform types that may appear. -->
