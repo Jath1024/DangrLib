@@ -8,7 +8,6 @@
 
 namespace Dangr.Command
 {
-    using System;
     using System.Collections.Generic;
     using System.Collections.Immutable;
     using System.Text.RegularExpressions;
@@ -155,7 +154,6 @@ namespace Dangr.Command
         private const string ArgumentToken = "-";
 
         [Task("https://github.com/Dangerdan9631/DangrLib/issues/5", Description = "Create a Regex Builder Library.")]
-        private const string SplitOnWhitespaceRegexString = "\\s";
         private const string DoubleQuotedRegexString = "\" ((?: \\\\\" | [^\"] )*) \"";
         private const string SingleQuotedRegexString = "' ((?: \\\\' | [^'] )*) '";
         private const string WordRegexString = "([\\S-[\"']]+)";
@@ -166,10 +164,6 @@ namespace Dangr.Command
         private static readonly RegexOptions RegexOptions = RegexOptions.Compiled | RegexOptions.IgnorePatternWhitespace;
         private static readonly Regex ArgumentMatchRegex = new Regex(
             CommandLine.ArgumentMatchRegexString,
-            CommandLine.RegexOptions);
-
-        private static readonly Regex SplitOnWhitespaceRegex = new Regex(
-            CommandLine.SplitOnWhitespaceRegexString,
             CommandLine.RegexOptions);
 
         /// <summary>
@@ -201,51 +195,63 @@ namespace Dangr.Command
         /// Gets the set of flags parsed from the command line.
         /// </summary>
         public ImmutableHashSet<string> Flags { get; }
-
+        
         /// <summary>
         /// Initializes a new instance of the <see cref="CommandLine"/> class.
         /// </summary>
         /// <param name="commandLine">The command line to parse.</param>
         public CommandLine(string commandLine)
         {
-            this.RawCommandLine = commandLine.Trim();
-            
-            string commandName;
-            string rawArguments;
-            CommandLine.ParseCommandNameAndArguments(this.RawCommandLine, out commandName, out rawArguments);
-            this.CommandName = commandName;
-            this.RawArguments = rawArguments;
+            this.RawCommandLine = commandLine;
 
+            string commandName;
+            int currentIndex;
+            CommandLine.ParseCommandName(this.RawCommandLine, out commandName, out currentIndex);
+            this.CommandName = commandName;
+            this.RawArguments = currentIndex < this.RawCommandLine.Length 
+                ? this.RawCommandLine.Substring(currentIndex).TrimEnd()
+                : string.Empty;
+            
             Dictionary<string, string> namedArguments;
             List<string> positionalArguments;
             HashSet<string> flags;
-            CommandLine.ParseArguments(rawArguments, out namedArguments, out positionalArguments, out flags);
+            CommandLine.ParseArguments(currentIndex, this.RawCommandLine, out namedArguments, out positionalArguments, out flags);
             this.NamedArguments = namedArguments.ToImmutableDictionary();
             this.PositionalArguments = positionalArguments.ToImmutableList();
             this.Flags = flags.ToImmutableHashSet();
         }
 
-        private static void ParseCommandNameAndArguments(
-            string commandLine, 
-            out string commandName,
-            out string rawArguments)
+        private static void ParseCommandName(string rawCommandLine, out string commandName, out int endIndex)
         {
-            if (string.IsNullOrEmpty(commandLine))
+            if (string.IsNullOrWhiteSpace(rawCommandLine))
             {
-                throw new ArgumentException($"Cannot parse empty command line.");
+                throw new CommandLineParseException(0, rawCommandLine, $"Cannot parse empty command line.");
             }
 
-            string[] parts = CommandLine.SplitOnWhitespaceRegex.Split(commandLine, 2);
-            commandName = parts[0];
-            rawArguments = parts.Length > 1
-                ? parts[1].TrimStart()
-                : string.Empty;
+            int startIndex = 0;
+            while(startIndex < rawCommandLine.Length && char.IsWhiteSpace(rawCommandLine[startIndex]))
+            {
+                startIndex++;
+            }
 
-            CommandLine.ValidateName(commandName);
+            endIndex = startIndex + 1;
+            while(endIndex < rawCommandLine.Length && !char.IsWhiteSpace(rawCommandLine[endIndex]))
+            {
+                endIndex++;
+            }
+
+            commandName = rawCommandLine.Substring(startIndex, endIndex - startIndex);
+            CommandLine.ValidateName(commandName, startIndex, rawCommandLine);
+
+            while (endIndex < rawCommandLine.Length && char.IsWhiteSpace(rawCommandLine[endIndex]))
+            {
+                endIndex++;
+            }
         }
-
+        
         private static void ParseArguments(
-            string rawArguments,
+            int startIndex,
+            string rawCommandLine,
             out Dictionary<string, string> namedArguments,
             out List<string> positionalArguments,
             out HashSet<string> flags)
@@ -255,20 +261,22 @@ namespace Dangr.Command
             flags = new HashSet<string>();
 
             string argumentName = null;
-            MatchCollection matches = CommandLine.ArgumentMatchRegex.Matches(rawArguments);
+            int argumentNameIndex = -1;
+            MatchCollection matches = CommandLine.ArgumentMatchRegex.Matches(rawCommandLine, startIndex);
             foreach (Match match in matches)
             {
                 if (match.Value.StartsWith(CommandLine.ArgumentToken))
                 {
                     string value = match.Value.Substring(1);
-                    CommandLine.ValidateName(value);
+                    CommandLine.ValidateName(value, match.Index + 1, rawCommandLine);
 
                     if (argumentName != null)
                     {
-                        flags.Add(argumentName);
+                        CommandLine.AddFlag(argumentName, flags, argumentNameIndex, rawCommandLine);
                     }
 
                     argumentName = value;
+                    argumentNameIndex = match.Index + 1;
                 }
                 else
                 {
@@ -283,12 +291,18 @@ namespace Dangr.Command
                         string value = CommandLine.UnescapeCharacters(group.Value);
                         if (argumentName == null)
                         {
-                            positionalArguments.Add(value);
+                            CommandLine.AddPositionalArgument(value, positionalArguments, group.Index, rawCommandLine);
                         }
                         else
                         {
-                            namedArguments.Add(argumentName, value);
+                            CommandLine.AddNamedArgument(
+                                argumentName, 
+                                value, 
+                                namedArguments, 
+                                argumentNameIndex,
+                                rawCommandLine);
                             argumentName = null;
+                            argumentNameIndex = -1;
                         }
                     }
                 }
@@ -296,29 +310,67 @@ namespace Dangr.Command
 
             if (argumentName != null)
             {
-                flags.Add(argumentName);
+                CommandLine.AddFlag(argumentName, flags, argumentNameIndex, rawCommandLine);
             }
         }
 
-        private static void ValidateName(string name)
+        private static void ValidateName(string name, int index, string rawCommandLine)
         {
             if (string.IsNullOrEmpty(name))
             {
-                throw new ArgumentException($"Name cannot be empty.");
+                throw new CommandLineParseException(
+                    index, 
+                    rawCommandLine, 
+                    $"Name cannot be empty.");
             }
 
             int invalidCharIndex = name.IndexOfAny(CommandLine.IllegalNameChars);
             if (invalidCharIndex >= 0)
             {
-                throw new ArgumentException(
+                throw new CommandLineParseException(
+                    index + invalidCharIndex,
+                    rawCommandLine,
                     $"Name '{name}' contains illegal character '{name[invalidCharIndex]}'.");
             }
 
             if (name.StartsWith(CommandLine.ArgumentToken))
             {
-                throw new ArgumentException(
+                throw new CommandLineParseException(
+                    index,
+                    rawCommandLine,
                     $"Name '{name}' cannot start with character '{CommandLine.ArgumentToken}'.");
             }
+        }
+
+        private static void AddFlag(string flagName, HashSet<string> flags, int index, string rawCommandLine)
+        {
+            if(flags.Contains(flagName))
+            {
+                throw new CommandLineParseException(
+                    index, 
+                    rawCommandLine,
+                    $"Command Line already contains flag '{flagName}'.");
+            }
+
+            flags.Add(flagName);
+        }
+
+        private static void AddNamedArgument(string argumentName, string argumentValue, Dictionary<string, string> namedArguments, int index, string rawCommandLine)
+        {
+            if (namedArguments.ContainsKey(argumentName))
+            {
+                throw new CommandLineParseException(
+                    index,
+                    rawCommandLine,
+                    $"Command Line already contains named argument '{argumentName}'.");
+            }
+
+            namedArguments.Add(argumentName, argumentValue);
+        }
+
+        private static void AddPositionalArgument(string value, List<string> positionalArguments, int index, string rawCommandLine)
+        {
+            positionalArguments.Add(value);
         }
 
         private static string UnescapeCharacters(string escaped)

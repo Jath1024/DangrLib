@@ -24,23 +24,23 @@ namespace Dangr.Test
         /// <param name="message">
         /// The error message to display if the error is not caught.
         /// </param>
-        public static void TestForError<T>(Action test, string message) where T : Exception
+        public static T TestForError<T>(Action test, string message) where T : Exception
         {
-            var caughtException = false;
+            T caughtException = null;
             try
             {
                 test();
             }
             catch (T e)
             {
-                caughtException = true;
+                caughtException = e;
                 Console.WriteLine($"Caught expected error: {e}");
             }
             catch (Exception e)
             {
                 if (e.InnerException is T)
                 {
-                    caughtException = true;
+                    caughtException = (T)e;
                     Console.WriteLine($"Caught expected error: {e}");
                 }
                 else
@@ -50,7 +50,8 @@ namespace Dangr.Test
                 }
             }
 
-            Assert.Validate.IsTrue(caughtException, $"Did not catch expected exception {typeof(T).Name}. {message}");
+            Assert.Validate.IsNotNull(caughtException, $"Did not catch expected exception {typeof(T).Name}. {message}");
+            return caughtException;
         }
     }
 }

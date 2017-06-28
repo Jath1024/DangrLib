@@ -23,7 +23,7 @@ namespace Dangr.Command
 
             new CommandLineTester()
                 .ExpectCommandName(commandName)
-                .ExpectRawArguments("")
+                .ExpectRawArguments(string.Empty)
                 .ExpectRawCommandLine(commandName)
                 .ExpectNoNamedArguments()
                 .ExpectNoPositionalArguments()
@@ -61,6 +61,18 @@ namespace Dangr.Command
                 .ExpectNoPositionalArguments()
                 .ExpectNoFlags()
                 .TestCommandLine(rawCommandLine);
+        }
+        
+        [TestMethod]
+        public void ParseDuplicateNamedArguments()
+        {
+            const string rawCommandLine = "hello -named1 value1 -named1 value2";
+
+            CommandLineParseException exception = TestUtils.TestForError<CommandLineParseException>(
+                () => new CommandLineTester().TestCommandLine(rawCommandLine),
+                "Did not catch expected error.");
+
+            Assert.Validate.AreEqual(exception.Position, 22, "Error not found at correct index.");
         }
 
         [TestMethod]
@@ -126,7 +138,19 @@ namespace Dangr.Command
                 .ExpectFlag("flag3")
                 .TestCommandLine(rawCommandLine);
         }
-        
+
+        [TestMethod]
+        public void ParseDuplicateFlags()
+        {
+            const string rawCommandLine = "hello -flag1 -flag1";
+
+            CommandLineParseException exception = TestUtils.TestForError<CommandLineParseException>(
+                () => new CommandLineTester().TestCommandLine(rawCommandLine),
+                "Did not catch expected error.");
+
+            Assert.Validate.AreEqual(exception.Position, 14, "Error not found at correct index.");
+        }
+
         [TestMethod]
         public void ParseSingleMixedArguments()
         {
@@ -168,9 +192,11 @@ namespace Dangr.Command
         {
             const string rawCommandLine = "hello - nextArgument";
 
-            TestUtils.TestForError<ArgumentException>(
+            CommandLineParseException exception = TestUtils.TestForError<CommandLineParseException>(
                 () => new CommandLineTester().TestCommandLine(rawCommandLine),
                 "Did not catch expected error.");
+
+            Assert.Validate.AreEqual(exception.Position, 7, "Error not found at correct index.");
         }
 
         [TestMethod]
@@ -178,9 +204,11 @@ namespace Dangr.Command
         {
             const string rawCommandLine = "hello -argument$";
 
-            TestUtils.TestForError<ArgumentException>(
+            CommandLineParseException exception = TestUtils.TestForError<CommandLineParseException>(
                 () => new CommandLineTester().TestCommandLine(rawCommandLine),
                 "Did not catch expected error.");
+
+            Assert.Validate.AreEqual(exception.Position, 15, "Error not found at correct index.");
         }
 
         [TestMethod]
@@ -188,17 +216,31 @@ namespace Dangr.Command
         {
             const string rawCommandLine = "hello --argument";
 
-            TestUtils.TestForError<ArgumentException>(
+            CommandLineParseException exception = TestUtils.TestForError<CommandLineParseException>(
                 () => new CommandLineTester().TestCommandLine(rawCommandLine),
                 "Did not catch expected error.");
+
+            Assert.Validate.AreEqual(exception.Position, 7, "Error not found at correct index.");
         }
 
         [TestMethod]
         public void EmptyCommandLine()
         {
-            TestUtils.TestForError<ArgumentException>(
+            CommandLineParseException exception = TestUtils.TestForError<CommandLineParseException>(
                 () => new CommandLineTester().TestCommandLine(string.Empty),
                 "Did not catch expected error.");
+            Assert.Validate.AreEqual(exception.Position, 0, "Error not found at correct index.");
+        }
+        
+        [TestMethod]
+        public void WhitespaceCommandLine()
+        {
+            const string rawCommandLine = "  \t  ";
+
+            CommandLineParseException exception = TestUtils.TestForError<CommandLineParseException>(
+                () => new CommandLineTester().TestCommandLine(rawCommandLine),
+                "Did not catch expected error.");
+            Assert.Validate.AreEqual(exception.Position, 0, "Error not found at correct index.");
         }
 
         [TestMethod]
@@ -206,9 +248,11 @@ namespace Dangr.Command
         {
             const string rawCommandLine = "hello% -argument";
 
-            TestUtils.TestForError<ArgumentException>(
+            CommandLineParseException exception = TestUtils.TestForError<CommandLineParseException>(
                 () => new CommandLineTester().TestCommandLine(rawCommandLine),
                 "Did not catch expected error.");
+
+            Assert.Validate.AreEqual(exception.Position, 5, "Error not found at correct index.");
         }
 
         [TestMethod]
@@ -216,17 +260,35 @@ namespace Dangr.Command
         {
             const string rawCommandLine = "-hello -argument";
 
-            TestUtils.TestForError<ArgumentException>(
+            CommandLineParseException exception = TestUtils.TestForError<CommandLineParseException>(
                 () => new CommandLineTester().TestCommandLine(rawCommandLine),
                 "Did not catch expected error.");
+
+            Assert.Validate.AreEqual(exception.Position, 0, "Error not found at correct index.");
         }
 
         [TestMethod]
-        public void TrimWhitespace()
+        public void TrimWhitespaceNoArgs()
+        {
+            const string commandName = "hello";
+            string rawCommandLine = $"\t    {commandName} \t    ";
+
+            new CommandLineTester()
+                .ExpectCommandName(commandName)
+                .ExpectRawArguments(string.Empty)
+                .ExpectRawCommandLine(rawCommandLine)
+                .ExpectNoNamedArguments()
+                .ExpectNoPositionalArguments()
+                .ExpectNoFlags()
+                .TestCommandLine(rawCommandLine);
+        }
+
+        [TestMethod]
+        public void TrimWhitespaceWithArgs()
         {
             const string commandName = "hello";
             const string rawArguments = "there";
-            string rawCommandLine = $"{commandName} \t    {rawArguments}";
+            string rawCommandLine = $"\t    {commandName} \t    {rawArguments}  \t  ";
 
             new CommandLineTester()
                 .ExpectCommandName(commandName)
@@ -235,7 +297,7 @@ namespace Dangr.Command
                 .ExpectNoNamedArguments()
                 .ExpectPositionalArgument("there")
                 .ExpectNoFlags()
-                .TestCommandLine($"\t    {rawCommandLine}  \t  ");
+                .TestCommandLine(rawCommandLine);
         }
         
         [TestMethod]

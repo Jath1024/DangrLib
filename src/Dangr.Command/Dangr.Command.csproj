@@ -30,6 +30,7 @@
     <None Include="Command\ICommandContext.cs" />
     <None Include="Command\IDangrCommandFactory.cs" />
     <None Include="Command\Commands\ParameterAttribute.cs" />
+    <Compile Include="Command\CommandLineParseException.cs" />
     <Compile Include="NamespaceDoc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
