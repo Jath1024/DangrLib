@@ -1,10 +1,21 @@
-﻿namespace Dangr.Command
+﻿// -----------------------------------------------------------------------
+//  <copyright file="DangrCommandFactory.T.cs" company="DangerDan9631">
+//      Copyright (c) 2017 Dan Garvey. All rights reserved.
+//      Licensed under the MIT License. 
+//      See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
+//  </copyright>
+// -----------------------------------------------------------------------
+
+namespace Dangr.Command
 {
     using System;
     using System.Collections.Generic;
+    using System.Collections.Immutable;
     using System.Reflection;
     using System.Text;
-    using Dangr.Command.Commands;
+    using Dangr.Annotation;
+    using Dangr.Command.Annotation;
+    using Dangr.Command.Exceptions;
 
     /// <summary>
     /// Object used to create new <see cref="IDangrCommand"/>s of type <see cref="T:T"/>.
@@ -13,26 +24,49 @@
     public class DangrCommandFactory<T> : IDangrCommandFactory
         where T : IDangrCommand, new()
     {
-        private string commandSummary;
-        private readonly List<CommandParameter> parameterList;
-        private readonly Dictionary<string, CommandParameter> parameterNameMap;
-        private readonly Dictionary<int, CommandParameter> parameterPositionMap;
+        private readonly Lazy<string> commandHelp;
 
         /// <summary>
         /// Gets the name of the command.
         /// </summary>
-        public string CommandName { get; private set; }
-        
+        public string CommandName { get; }
+
+        /// <summary>
+        /// Gets the summary of the command created by this <see cref="IDangrCommandFactory"/>.
+        /// </summary>
+        public string CommandSummary { get; }
+
+        /// <summary>
+        /// /// Gets the help documentation for the command created by this <see cref="IDangrCommandFactory"/>.
+        /// </summary>
+        public string CommandHelp => this.commandHelp.Value;
+
+        private ImmutableDictionary<string, CommandParameter> ParameterNameMap { get; }
+
+        private ImmutableDictionary<int, CommandParameter> ParameterPositionMap { get; }
+
+        private ImmutableList<CommandParameter> ParameterList { get; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="DangrCommandFactory{T}"/> class.
         /// </summary>
         public DangrCommandFactory()
         {
-            this.parameterList = new List<CommandParameter>();
-            this.parameterNameMap = new Dictionary<string, CommandParameter>();
-            this.parameterPositionMap = new Dictionary<int, CommandParameter>();
+            this.commandHelp = new Lazy<string>(this.GenerateCommandHelp);
 
-            this.InitializeType();
+            string commandName;
+            string commandSummary;
+            Dictionary<string, CommandParameter> parameterNameMap;
+            Dictionary<int, CommandParameter> parameterPositionMap;
+            List<CommandParameter> parameterList;
+            this.InitializeType(out commandName, out commandSummary, out parameterNameMap, out parameterPositionMap,
+                out parameterList);
+
+            this.CommandName = commandName;
+            this.CommandSummary = commandSummary;
+            this.ParameterNameMap = parameterNameMap.ToImmutableDictionary();
+            this.ParameterPositionMap = parameterPositionMap.ToImmutableDictionary();
+            this.ParameterList = parameterList.ToImmutableList();
         }
 
         /// <summary>
@@ -42,158 +76,157 @@
         /// <returns>
         /// A new <see cref="IDangrCommand" /> instance with parameters set from the given command line.
         /// </returns>
+        [Task("https://github.com/Dangerdan9631/DangrLib/issues/10", Description = "Convert command parameters to required types.")]
         public IDangrCommand Create(CommandLine commandLine)
         {
             T command = new T();
 
-            Dictionary<PropertyInfo, string> boundParameters = new Dictionary<PropertyInfo, string>();
+            var boundParameters = new Dictionary<PropertyInfo, string>();
 
-            // Map all named and positional arguments.
-            var arguments = commandLine.ArgumentList;
-            for (int i = 0; i < arguments.Count; i++)
+            foreach (KeyValuePair<string, string> entry in commandLine.NamedArguments)
             {
-                string argument = arguments[i];
-                CommandParameter commandParameter;
-                string value;
-                var parts = argument.Split(':');
-                if (parts.Length > 1)
+                string argumentName = entry.Key;
+                string argumentValue = entry.Value;
+                CommandParameter parameter;
+                if (!this.ParameterNameMap.TryGetValue(argumentName, out parameter))
                 {
-                    string name = parts[0];
-                    if (!this.parameterNameMap.TryGetValue(name, out commandParameter))
-                    {
-                        throw new CommandException(CommandErrorCode.UnknownCommandArgument, $"Unknown parameter '{name}'")
-                            .AddCommandParseInfo(commandLine.RawCommandLine, -1);
-                    }
-
-                    value = argument.Substring(name.Length+1).Trim('"');
-                }
-                else
-                {
-                    if (!this.parameterPositionMap.TryGetValue(i, out commandParameter))
-                    {
-                        throw new CommandException(CommandErrorCode.UnknownCommandArgument, $"No known positional parameter for position '{i}'")
-                            .AddCommandParseInfo(commandLine.RawCommandLine, -1);
-                    }
-
-                    value = argument;
+                    throw new UnknownCommandArgumentException(argumentName, $"Unknown parameter '{argumentName}'");
                 }
 
-                boundParameters.Add(commandParameter.PropertyInfo, value);
+                boundParameters.Add(parameter.PropertyInfo, argumentValue);
             }
 
-            // Map all flags.
+            for (int i = 0; i < commandLine.PositionalArguments.Count; i++)
+            {
+                string argumentValue = commandLine.PositionalArguments[i];
+                CommandParameter parameter;
+                if (!this.ParameterPositionMap.TryGetValue(i, out parameter))
+                {
+                    throw new UnknownCommandArgumentException($"Positional parameter {i}",
+                        $"Unknown positional parameter at position '{i}'.");
+                }
+
+                boundParameters.Add(parameter.PropertyInfo, argumentValue);
+            }
+
             foreach (string flag in commandLine.Flags)
             {
-                CommandParameter commandParameter;
-                if (!this.parameterNameMap.TryGetValue(flag, out commandParameter))
+                CommandParameter parameter;
+                if (!this.ParameterNameMap.TryGetValue(flag, out parameter))
                 {
-                    throw new CommandException(CommandErrorCode.UnknownCommandArgument, $"Unknown flag '{flag}'")
-                        .AddCommandParseInfo(commandLine.RawCommandLine, -1);
+                    throw new UnknownCommandArgumentException(flag, $"Unknown flag parameter '{flag}'");
                 }
 
-                if (!commandParameter.PropertyInfo.PropertyType.Equals(typeof(bool)))
+                if (parameter.PropertyInfo.PropertyType != typeof(bool))
                 {
-                    throw new CommandException(CommandErrorCode.InvalidCommandArgument, $"Parameter '{flag}' was not defined as a flag ")
-                        .AddCommandParseInfo(commandLine.RawCommandLine, -1);
+                    throw new InvalidCommandArgumentException(flag, $"Flag parameter '{flag}' is not a boolean type.");
                 }
 
-                boundParameters.Add(commandParameter.PropertyInfo, Boolean.TrueString);
+                boundParameters.Add(parameter.PropertyInfo, bool.TrueString);
             }
 
-            // Check for missing mandatory parameters.
-            foreach (CommandParameter p in this.parameterList)
+            foreach (CommandParameter parameter in this.ParameterList)
             {
-                if (p.IsMandatory && !boundParameters.ContainsKey(p.PropertyInfo))
+                if (parameter.IsMandatory && !boundParameters.ContainsKey(parameter.PropertyInfo))
                 {
-                    throw new CommandException(CommandErrorCode.MissingMandatoryArgument, $"Mandatory parameter {p.PropertyInfo.Name} was not specified.")
-                        .AddCommandParseInfo(commandLine.RawCommandLine, -1);
+                    throw new MissingCommandArgumentException(
+                        parameter.PropertyInfo.Name,
+                        $"Mandatory parameter {parameter.PropertyInfo.Name} was not specified.");
                 }
             }
 
-            // Bind the arguments.
-            foreach (var kvp in boundParameters)
+            foreach (KeyValuePair<PropertyInfo, string> entry in boundParameters)
             {
-                if (kvp.Key.PropertyType.Equals(typeof(Boolean)))
+                // TODO: Convert types
+                if (entry.Key.PropertyType == typeof(bool))
                 {
-                    kvp.Key.SetValue(command, true);
+                    entry.Key.SetValue(command, true);
                 }
                 else
                 {
-                    kvp.Key.SetValue(command, kvp.Value);
+                    entry.Key.SetValue(command, entry.Value);
                 }
             }
 
             return command;
         }
 
-        /// <summary>
-        /// Gets the command help.
-        /// </summary>
-        /// <returns>The command help.</returns>
-        public string CommandHelp
+        private string GenerateCommandHelp()
         {
-            get
+            StringBuilder sb = new StringBuilder("Command: ");
+            sb.AppendLine(this.CommandName);
+            sb.AppendLine("Summary:");
+            sb.AppendLine(this.CommandSummary);
+            sb.AppendLine();
+
+            if (this.ParameterList.Count > 0)
             {
-                StringBuilder sb = new StringBuilder("Command: ");
-                sb.AppendLine(this.CommandName);
-                sb.AppendLine("Summary:");
-                sb.AppendLine(this.commandSummary);
-                sb.AppendLine();
-
-                if (this.parameterList.Count > 0)
+                sb.AppendLine("Parameters:");
+                foreach (CommandParameter parameter in this.ParameterList)
                 {
-                    sb.AppendLine("Parameters:");
-                    foreach (var parameter in this.parameterList)
-                    {
-                        sb.AppendFormat("\t{0} : {1}{2}",
-                            parameter.PropertyInfo.Name,
-                            parameter.IsMandatory ? "[Mandatory] " : string.Empty,
-                            parameter.Position >= 0 ? parameter.Position.ToString() : string.Empty);
-                        sb.AppendLine();
+                    sb.AppendFormat("\t{0} : {1}{2}",
+                        parameter.PropertyInfo.Name,
+                        parameter.IsMandatory ? "[Mandatory] " : string.Empty,
+                        parameter.Position >= 0 ? parameter.Position.ToString() : string.Empty);
+                    sb.AppendLine();
 
-                        if (parameter.Aliases.Count > 1)
+                    if (parameter.Aliases.Count > 1)
+                    {
+                        sb.Append("\tAliases : ");
+                        bool isFirstAlias = true;
+                        foreach (string alias in parameter.Aliases)
                         {
-                            sb.Append("\tAliases : ");
-                            bool isFirstAlias = true;
-                            foreach (var alias in parameter.Aliases)
+                            if (alias != parameter.PropertyInfo.Name)
                             {
-                                if (alias != parameter.PropertyInfo.Name)
+                                if (!isFirstAlias)
                                 {
-                                    if (!isFirstAlias)
-                                    {
-                                        sb.Append(", ");
-                                    }
-                                    isFirstAlias = false;
-                                    sb.Append(alias);
+                                    sb.Append(", ");
                                 }
+
+                                isFirstAlias = false;
+                                sb.Append(alias);
                             }
-                            sb.AppendLine();
                         }
 
-                        sb.AppendLine(parameter.Summary);
                         sb.AppendLine();
                     }
-                }
 
-                return sb.ToString();
+                    sb.AppendLine(parameter.Summary);
+                    sb.AppendLine();
+                }
             }
+
+            return sb.ToString();
         }
 
-        private void InitializeType()
+        private void InitializeType(
+            out string commandName,
+            out string commandSummary,
+            out Dictionary<string, CommandParameter> parameterMap,
+            out Dictionary<int, CommandParameter> parameterPositionmap,
+            out List<CommandParameter> parameterList)
         {
-            this.CommandName = typeof(T).Name.Replace("DangrCommand", string.Empty).ToLower();
+            Type commandType = typeof(T);
 
-            var dangrCommandAttribute = typeof(T).GetCustomAttribute<DangrCommandAttribute>();
-            if (dangrCommandAttribute == null)
+            DangrCommandAttribute attribute = commandType.GetCustomAttribute<DangrCommandAttribute>();
+            if (attribute == null)
             {
-                throw new CommandException(CommandErrorCode.InvalidCommandDefinition, $"Missing {nameof(DangrCommandAttribute)} on command {this.CommandName}.");
+                throw new InvalidOperationException(
+                    $"Cannot create a {nameof(DangrCommandFactory<T>)} of type {commandType.Name}."
+                    + $" No {nameof(DangrCommandAttribute)} was specified.");
             }
-            this.commandSummary = dangrCommandAttribute.Summary;
 
-            var properties = typeof(T).GetProperties(BindingFlags.Public | BindingFlags.Instance);
-            foreach (var property in properties)
+            commandName = attribute.CommandName;
+            commandSummary = attribute.Summary;
+
+            parameterMap = new Dictionary<string, CommandParameter>();
+            parameterPositionmap = new Dictionary<int, CommandParameter>();
+            parameterList = new List<CommandParameter>();
+            PropertyInfo[] properties =
+                commandType.GetProperties(BindingFlags.Public | BindingFlags.Instance);
+            foreach (PropertyInfo property in properties)
             {
-                var parameterAttribute = property.GetCustomAttribute<ParameterAttribute>();
+                ParameterAttribute parameterAttribute = property.GetCustomAttribute<ParameterAttribute>();
                 if (parameterAttribute == null)
                 {
                     continue;
@@ -201,41 +234,47 @@
 
                 if (!property.SetMethod.IsPublic)
                 {
-                    throw new CommandException(CommandErrorCode.InvalidCommandParameter, $"Parameter '{property.Name}' must have a public setter.");
+                    throw new InvalidOperationException(
+                        $"Cannot create a {nameof(DangrCommandFactory<T>)} of type {commandType.Name}."
+                        + $"Parameter '{property.Name}' must have a public setter.");
                 }
 
-                var commandParameter = new CommandParameter(property, parameterAttribute);
-                foreach (var alias in commandParameter.Aliases)
+                CommandParameter commandParameter = new CommandParameter(property, parameterAttribute);
+                foreach (string alias in commandParameter.Aliases)
                 {
-                    if (this.parameterNameMap.ContainsKey(alias))
+                    if (parameterMap.ContainsKey(alias))
                     {
-                        throw new CommandException(CommandErrorCode.InvalidCommandParameter, $"Parameter '{alias}' has already been defined.");
+                        throw new InvalidOperationException(
+                            $"Cannot create a {nameof(DangrCommandFactory<T>)} of type {commandType.Name}."
+                            + $"Parameter '{alias}' has already been defined.");
                     }
 
-                    this.parameterNameMap.Add(alias, commandParameter);
-                }
+                    parameterMap.Add(alias, commandParameter);
 
-                if (commandParameter.Position > -1)
-                {
-                    if (this.parameterPositionMap.ContainsKey(commandParameter.Position))
+                    if (commandParameter.Position > -1)
                     {
-                        throw new CommandException(CommandErrorCode.InvalidCommandParameter, $"Parameter position '{commandParameter.Position}' has already been defined.");
+                        if (parameterPositionmap.ContainsKey(commandParameter.Position))
+                        {
+                            throw new InvalidOperationException(
+                                $"Cannot create a {nameof(DangrCommandFactory<T>)} of type {commandType.Name}."
+                                + $"Parameter at position '{commandParameter.Position}' has already been defined.");
+                        }
+
+                        parameterPositionmap.Add(commandParameter.Position, commandParameter);
                     }
 
-                    this.parameterPositionMap.Add(commandParameter.Position, commandParameter);
+                    parameterList.Add(commandParameter);
                 }
-
-                this.parameterList.Add(commandParameter);
             }
         }
 
         private class CommandParameter
         {
-            public PropertyInfo PropertyInfo { get; private set; }
-            public bool IsMandatory { get; private set; }
-            public int Position { get; private set; }
-            public string Summary { get; private set; }
-            public HashSet<string> Aliases { get; private set; }
+            public PropertyInfo PropertyInfo { get; }
+            public bool IsMandatory { get; }
+            public int Position { get; }
+            public string Summary { get; }
+            public HashSet<string> Aliases { get; }
 
             public CommandParameter(PropertyInfo propertyInfo, ParameterAttribute attribute)
             {
@@ -246,8 +285,8 @@
                 this.Aliases = new HashSet<string>();
                 this.Aliases.Add(propertyInfo.Name);
 
-                var aliasAttributes = propertyInfo.GetCustomAttributes<AliasAttribute>();
-                foreach (var aliasAttribute in aliasAttributes)
+                IEnumerable<AliasAttribute> aliasAttributes = propertyInfo.GetCustomAttributes<AliasAttribute>();
+                foreach (AliasAttribute aliasAttribute in aliasAttributes)
                 {
                     this.Aliases.Add(aliasAttribute.Alias);
                 }

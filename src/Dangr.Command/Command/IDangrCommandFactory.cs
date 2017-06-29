@@ -1,7 +1,13 @@
-﻿namespace Dangr.Command
-{
-    using Dangr.Command.Commands;
+﻿// -----------------------------------------------------------------------
+//  <copyright file="IDangrCommandFactory.cs" company="DangerDan9631">
+//      Copyright (c) 2017 Dan Garvey. All rights reserved.
+//      Licensed under the MIT License. 
+//      See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
+//  </copyright>
+// -----------------------------------------------------------------------
 
+namespace Dangr.Command
+{
     /// <summary>
     /// Provides an interface for creating new <see cref="IDangrCommand"/> instances.
     /// </summary>
@@ -13,7 +19,12 @@
         string CommandName { get; }
 
         /// <summary>
-        /// Gets the command help.
+        /// Gets the summary of the command created by this <see cref="IDangrCommandFactory"/>.
+        /// </summary>
+        string CommandSummary { get; }
+
+        /// <summary>
+        /// Gets the help documentation for the command created by this <see cref="IDangrCommandFactory"/>.
         /// </summary>
         string CommandHelp { get; }
 

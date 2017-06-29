@@ -5,10 +5,11 @@
 //      See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
 //  </copyright>
 // -----------------------------------------------------------------------
+
 namespace Dangr.Command
 {
-    using System;
     using System.Collections.Generic;
+    using Dangr.Command.Exceptions;
     using Dangr.Test;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Assert = Dangr.Diagnostics.Assert;
@@ -62,7 +63,7 @@ namespace Dangr.Command
                 .ExpectNoFlags()
                 .TestCommandLine(rawCommandLine);
         }
-        
+
         [TestMethod]
         public void ParseDuplicateNamedArguments()
         {
@@ -170,7 +171,8 @@ namespace Dangr.Command
         public void ParseMultipleMixedArguments()
         {
             const string commandName = "hello";
-            const string rawArguments = "positional1 -named1 value1 -flag1 -flag2 -named2 value2 positional2 -flag3 -named3 value3 positional3";
+            const string rawArguments =
+                "positional1 -named1 value1 -flag1 -flag2 -named2 value2 positional2 -flag3 -named3 value3 positional3";
             string rawCommandLine = $"{commandName} {rawArguments}";
 
             new CommandLineTester()
@@ -186,7 +188,7 @@ namespace Dangr.Command
                 .ExpectFlag("flag3")
                 .TestCommandLine(rawCommandLine);
         }
-        
+
         [TestMethod]
         public void NullArgumentName()
         {
@@ -231,7 +233,7 @@ namespace Dangr.Command
                 "Did not catch expected error.");
             Assert.Validate.AreEqual(exception.Position, 0, "Error not found at correct index.");
         }
-        
+
         [TestMethod]
         public void WhitespaceCommandLine()
         {
@@ -299,7 +301,7 @@ namespace Dangr.Command
                 .ExpectNoFlags()
                 .TestCommandLine(rawCommandLine);
         }
-        
+
         [TestMethod]
         public void DoubleQuotedStringWithSpace()
         {
@@ -378,7 +380,7 @@ namespace Dangr.Command
         public void Example2()
         {
             string rawCommandLine = "TestCommand -Flag1 -Flag2 -Named1 arg";
-            
+
             new CommandLineTester()
                 .ExpectCommandName("TestCommand")
                 .ExpectNamedArgument("Named1", "arg")
@@ -387,7 +389,7 @@ namespace Dangr.Command
                 .ExpectFlag("Flag2")
                 .TestCommandLine(rawCommandLine);
         }
-        
+
         [TestMethod]
         public void Example3()
         {
@@ -402,7 +404,7 @@ namespace Dangr.Command
                 .ExpectFlag("Flag1")
                 .TestCommandLine(rawCommandLine);
         }
-        
+
         private class CommandLineTester
         {
             public string RawCommandLine { get; private set; }
@@ -416,34 +418,37 @@ namespace Dangr.Command
             {
                 CommandLine result = new CommandLine(commandLine);
 
-                if(this.RawCommandLine != null)
+                if (this.RawCommandLine != null)
                 {
                     Assert.Validate.AreEqual(
-                        this.RawCommandLine, 
-                        result.RawCommandLine, 
+                        this.RawCommandLine,
+                        result.RawCommandLine,
                         "Expected raw command line not found.");
                 }
 
-                if (this.CommandName != null) {
+                if (this.CommandName != null)
+                {
                     Assert.Validate.AreEqual(
                         this.CommandName,
                         result.CommandName,
                         "Expected command name not found.");
                 }
 
-                if (this.RawArguments != null) {
+                if (this.RawArguments != null)
+                {
                     Assert.Validate.AreEqual(
                         this.RawArguments,
                         result.RawArguments,
                         "Expected raw arguments not found.");
                 }
 
-                if (this.NamedArguments != null) {
+                if (this.NamedArguments != null)
+                {
                     Assert.Validate.AreEqual(
                         this.NamedArguments.Count,
                         result.NamedArguments.Count,
                         "Found incorrect number of named arguments.");
-                    foreach(KeyValuePair<string, string> entry in this.NamedArguments)
+                    foreach (KeyValuePair<string, string> entry in this.NamedArguments)
                     {
                         Assert.Validate.IsTrue(
                             result.NamedArguments.ContainsKey(entry.Key),
@@ -455,12 +460,14 @@ namespace Dangr.Command
                     }
                 }
 
-                if (this.PositionalArguments != null) {
+                if (this.PositionalArguments != null)
+                {
                     Assert.Validate.AreEqual(
                         this.PositionalArguments.Count,
                         result.PositionalArguments.Count,
                         "Found incorrect number of positional arguments.");
-                    for(int i = 0; i < this.PositionalArguments.Count; i++) {
+                    for (int i = 0; i < this.PositionalArguments.Count; i++)
+                    {
                         Assert.Validate.AreEqual(
                             this.PositionalArguments[i],
                             result.PositionalArguments[i],
@@ -468,12 +475,14 @@ namespace Dangr.Command
                     }
                 }
 
-                if (this.Flags != null) {
+                if (this.Flags != null)
+                {
                     Assert.Validate.AreEqual(
                         this.Flags.Count,
                         result.Flags.Count,
                         "Found incorrect number of flags.");
-                    foreach (string flag in this.Flags) {
+                    foreach (string flag in this.Flags)
+                    {
                         Assert.Validate.IsTrue(
                             result.Flags.Contains(flag),
                             $"Expected flag '{flag}' not found.");

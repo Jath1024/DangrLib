@@ -10,7 +10,16 @@ namespace Dangr.Command
 {
     /// <summary>
     /// The Dangr.Command namespace provides utilities for parsing and executing
-    /// commands from a command line.
+    /// <see cref="IDangrCommand"/>s from a command line.
+    /// </summary>
+    internal static class NamespaceDoc
+    { }
+}
+
+namespace Dangr.Command.Annotation
+{
+    /// <summary>
+    /// The Dangr.Command.Annotation namespace provides attributes used to define <see cref="IDangrCommand"/>s and their arguments.
     /// </summary>
     internal static class NamespaceDoc
     { }
@@ -19,7 +28,16 @@ namespace Dangr.Command
 namespace Dangr.Command.Commands
 {
     /// <summary>
-    /// The Dangr.Command.Commands namespace provides implemented command classes that can be used with the Dangr.Command executor.
+    /// The Dangr.Command.Commands namespace provides implemented <see cref="IDangrCommand"/> classes that can be used with an <see cref="ICommandContext"/>.
+    /// </summary>
+    internal static class NamespaceDoc
+    { }
+}
+
+namespace Dangr.Command.Exceptions
+{
+    /// <summary>
+    /// The Dangr.Command.Exceptions namespace provides Exceptions that may be thrown while executing and parsing <see cref="IDangrCommand"/>s.
     /// </summary>
     internal static class NamespaceDoc
     { }

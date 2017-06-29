@@ -12,6 +12,7 @@ namespace Dangr.Command
     using System.Collections.Immutable;
     using System.Text.RegularExpressions;
     using Dangr.Annotation;
+    using Dangr.Command.Exceptions;
 
     /// <summary>
     /// Represents a command that can be executed, and the arguments to use
@@ -155,6 +156,7 @@ namespace Dangr.Command
 
         [Task("https://github.com/Dangerdan9631/DangrLib/issues/5", Description = "Create a Regex Builder Library.")]
         private const string DoubleQuotedRegexString = "\" ((?: \\\\\" | [^\"] )*) \"";
+
         private const string SingleQuotedRegexString = "' ((?: \\\\' | [^'] )*) '";
         private const string WordRegexString = "([\\S-[\"']]+)";
 
@@ -162,6 +164,7 @@ namespace Dangr.Command
             $"(?> {CommandLine.WordRegexString} | {CommandLine.DoubleQuotedRegexString} | {CommandLine.SingleQuotedRegexString} )";
 
         private static readonly RegexOptions RegexOptions = RegexOptions.Compiled | RegexOptions.IgnorePatternWhitespace;
+
         private static readonly Regex ArgumentMatchRegex = new Regex(
             CommandLine.ArgumentMatchRegexString,
             CommandLine.RegexOptions);
@@ -195,7 +198,7 @@ namespace Dangr.Command
         /// Gets the set of flags parsed from the command line.
         /// </summary>
         public ImmutableHashSet<string> Flags { get; }
-        
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CommandLine"/> class.
         /// </summary>
@@ -208,14 +211,15 @@ namespace Dangr.Command
             int currentIndex;
             CommandLine.ParseCommandName(this.RawCommandLine, out commandName, out currentIndex);
             this.CommandName = commandName;
-            this.RawArguments = currentIndex < this.RawCommandLine.Length 
+            this.RawArguments = currentIndex < this.RawCommandLine.Length
                 ? this.RawCommandLine.Substring(currentIndex).TrimEnd()
                 : string.Empty;
-            
+
             Dictionary<string, string> namedArguments;
             List<string> positionalArguments;
             HashSet<string> flags;
-            CommandLine.ParseArguments(currentIndex, this.RawCommandLine, out namedArguments, out positionalArguments, out flags);
+            CommandLine.ParseArguments(currentIndex, this.RawCommandLine, out namedArguments, out positionalArguments,
+                out flags);
             this.NamedArguments = namedArguments.ToImmutableDictionary();
             this.PositionalArguments = positionalArguments.ToImmutableList();
             this.Flags = flags.ToImmutableHashSet();
@@ -229,13 +233,13 @@ namespace Dangr.Command
             }
 
             int startIndex = 0;
-            while(startIndex < rawCommandLine.Length && char.IsWhiteSpace(rawCommandLine[startIndex]))
+            while ((startIndex < rawCommandLine.Length) && char.IsWhiteSpace(rawCommandLine[startIndex]))
             {
                 startIndex++;
             }
 
             endIndex = startIndex + 1;
-            while(endIndex < rawCommandLine.Length && !char.IsWhiteSpace(rawCommandLine[endIndex]))
+            while ((endIndex < rawCommandLine.Length) && !char.IsWhiteSpace(rawCommandLine[endIndex]))
             {
                 endIndex++;
             }
@@ -243,12 +247,12 @@ namespace Dangr.Command
             commandName = rawCommandLine.Substring(startIndex, endIndex - startIndex);
             CommandLine.ValidateName(commandName, startIndex, rawCommandLine);
 
-            while (endIndex < rawCommandLine.Length && char.IsWhiteSpace(rawCommandLine[endIndex]))
+            while ((endIndex < rawCommandLine.Length) && char.IsWhiteSpace(rawCommandLine[endIndex]))
             {
                 endIndex++;
             }
         }
-        
+
         private static void ParseArguments(
             int startIndex,
             string rawCommandLine,
@@ -296,9 +300,9 @@ namespace Dangr.Command
                         else
                         {
                             CommandLine.AddNamedArgument(
-                                argumentName, 
-                                value, 
-                                namedArguments, 
+                                argumentName,
+                                value,
+                                namedArguments,
                                 argumentNameIndex,
                                 rawCommandLine);
                             argumentName = null;
@@ -319,8 +323,8 @@ namespace Dangr.Command
             if (string.IsNullOrEmpty(name))
             {
                 throw new CommandLineParseException(
-                    index, 
-                    rawCommandLine, 
+                    index,
+                    rawCommandLine,
                     $"Name cannot be empty.");
             }
 
@@ -344,10 +348,10 @@ namespace Dangr.Command
 
         private static void AddFlag(string flagName, HashSet<string> flags, int index, string rawCommandLine)
         {
-            if(flags.Contains(flagName))
+            if (flags.Contains(flagName))
             {
                 throw new CommandLineParseException(
-                    index, 
+                    index,
                     rawCommandLine,
                     $"Command Line already contains flag '{flagName}'.");
             }
@@ -355,7 +359,8 @@ namespace Dangr.Command
             flags.Add(flagName);
         }
 
-        private static void AddNamedArgument(string argumentName, string argumentValue, Dictionary<string, string> namedArguments, int index, string rawCommandLine)
+        private static void AddNamedArgument(string argumentName, string argumentValue,
+            Dictionary<string, string> namedArguments, int index, string rawCommandLine)
         {
             if (namedArguments.ContainsKey(argumentName))
             {
@@ -368,7 +373,8 @@ namespace Dangr.Command
             namedArguments.Add(argumentName, argumentValue);
         }
 
-        private static void AddPositionalArgument(string value, List<string> positionalArguments, int index, string rawCommandLine)
+        private static void AddPositionalArgument(string value, List<string> positionalArguments, int index,
+            string rawCommandLine)
         {
             positionalArguments.Add(value);
         }

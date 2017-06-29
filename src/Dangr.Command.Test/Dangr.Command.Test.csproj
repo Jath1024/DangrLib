@@ -15,9 +15,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Command\CommandContextTest.cs" />
     <Compile Include="Command\CommandLineTest.cs" />
-    <None Include="Command\Commands\TestDangrCommand.cs" />
-    <None Include="Command\CommandTest.cs" />
+    <Compile Include="Command\Commands\DangrCommandHelpTest.cs" />
+    <Compile Include="Command\Commands\DuplicateOutputCommand.cs" />
+    <Compile Include="Command\Commands\DuplicateParameterName.cs" />
+    <Compile Include="Command\Commands\DuplicateParameterPosition.cs" />
+    <Compile Include="Command\Commands\ErrorCommand.cs" />
+    <Compile Include="Command\Commands\NoDangrCommandAttribute.cs" />
+    <Compile Include="Command\Commands\OutputCommand.cs" />
+    <Compile Include="Command\Commands\PrivateSetterOnParameter.cs" />
+    <Compile Include="Command\Commands\ValidCommand.cs" />
+    <Compile Include="Command\DangrCommandFactoryTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -36,6 +45,10 @@
     <ProjectReference Include="..\Dangr.Test\Dangr.Test.csproj">
       <Project>{c4312ee9-6917-4a6c-869e-9f8be26e8724}</Project>
       <Name>Dangr.Test</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dangr.Util\Dangr.Util.csproj">
+      <Project>{272587f0-bd2b-48e5-a63f-252ca280b14f}</Project>
+      <Name>Dangr.Util</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

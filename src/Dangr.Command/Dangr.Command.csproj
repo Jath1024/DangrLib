@@ -17,20 +17,23 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Command\Commands\AliasAttribute.cs" />
-    <None Include="Command\Commands\DangrCommandHelp.cs" />
-    <None Include="Command\CommandContext.cs" />
-    <None Include="Command\CommandErrorCode.cs" />
-    <None Include="Command\CommandException.cs" />
+    <Compile Include="Command\Annotation\AliasAttribute.cs" />
+    <Compile Include="Command\Commands\DangrCommandHelp.cs" />
+    <Compile Include="Command\CommandContext.cs" />
+    <Compile Include="Command\Exceptions\CommandExecutionException.cs" />
     <Compile Include="Command\CommandLine.cs" />
     <None Include="Dangr.Command.nuspec" />
-    <None Include="Command\Commands\IDangrCommand.cs" />
-    <None Include="Command\Commands\DangrCommandAttribute.cs" />
-    <None Include="Command\DangrCommandFactory.T.cs" />
-    <None Include="Command\ICommandContext.cs" />
-    <None Include="Command\IDangrCommandFactory.cs" />
-    <None Include="Command\Commands\ParameterAttribute.cs" />
-    <Compile Include="Command\CommandLineParseException.cs" />
+    <Compile Include="Command\Exceptions\UnknownCommandException.cs" />
+    <Compile Include="Command\IDangrCommand.cs" />
+    <Compile Include="Command\Annotation\DangrCommandAttribute.cs" />
+    <Compile Include="Command\DangrCommandFactory.T.cs" />
+    <Compile Include="Command\ICommandContext.cs" />
+    <Compile Include="Command\IDangrCommandFactory.cs" />
+    <Compile Include="Command\Annotation\ParameterAttribute.cs" />
+    <Compile Include="Command\Exceptions\CommandLineParseException.cs" />
+    <Compile Include="Command\Exceptions\InvalidCommandArgumentException.cs" />
+    <Compile Include="Command\Exceptions\MissingCommandArgumentException.cs" />
+    <Compile Include="Command\Exceptions\UnknownCommandArgumentException.cs" />
     <Compile Include="NamespaceDoc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
