@@ -21,9 +21,11 @@ namespace Dangr.Registry
     [DataContract]
     public sealed class MemoryRegistry : IRegistry
     {
-        [DataMember] private Dictionary<string, string> values;
+        [DataMember]
+        private Dictionary<string, string> values;
 
-        [IgnoreDataMember] private object writeLock;
+        [IgnoreDataMember]
+        private object writeLock;
 
         /// <summary>
         ///     Gets the number of elements stored in this <see cref="IRegistry" />.
@@ -261,7 +263,7 @@ namespace Dangr.Registry
         /// <returns> A string that represents the current object. </returns>
         public override string ToString()
         {
-            var builder = new StringBuilder();
+            StringBuilder builder = new StringBuilder();
             lock (this.writeLock)
             {
                 foreach (KeyValuePair<string, string> kvp in this.values)

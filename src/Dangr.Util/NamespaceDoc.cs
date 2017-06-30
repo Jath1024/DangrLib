@@ -13,7 +13,8 @@ namespace Dangr.Util
     /// DangrLib.
     /// </summary>
     internal static class NamespaceDoc
-    { }
+    {
+    }
 }
 
 namespace Dangr.Collections
@@ -22,5 +23,6 @@ namespace Dangr.Collections
     /// The Dangr.Collections namespace provides extenstion methods for <see cref="System.Collections" /> classes.
     /// </summary>
     internal static class NamespaceDoc
-    { }
+    {
+    }
 }

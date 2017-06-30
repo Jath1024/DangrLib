@@ -32,9 +32,9 @@ namespace Dangr.Util
                 return capsString;
             }
 
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
 
-            var nextIsCaps = true;
+            bool nextIsCaps = true;
             foreach (char c in capsString)
             {
                 if (c == '_')

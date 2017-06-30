@@ -13,5 +13,6 @@ namespace Dangr.Event
     /// subscribing to event channels.
     /// </summary>
     internal static class NamespaceDoc
-    { }
+    {
+    }
 }

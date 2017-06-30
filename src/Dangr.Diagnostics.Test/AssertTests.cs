@@ -67,8 +67,8 @@ namespace Dangr.Diagnostics
         {
             AssertResolver assert = new ValidateResolver();
 
-            var obj1 = new TestDisposable();
-            var obj2 = new TestDisposable();
+            TestDisposable obj1 = new TestDisposable();
+            TestDisposable obj2 = new TestDisposable();
             var emptyCollection = new List<object>();
             var filledCollection = new List<object>
             {

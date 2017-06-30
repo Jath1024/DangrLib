@@ -195,7 +195,7 @@ namespace Dangr.Logging.Loggers
 
             string fileName = Path.Combine(this.LogFileDirectory, logFileName);
 
-            var counter = 1;
+            int counter = 1;
             while (File.Exists(fileName))
             {
                 string newLogFileName = $"{this.LogFilePrefix}{dateString}.{counter++}.log";

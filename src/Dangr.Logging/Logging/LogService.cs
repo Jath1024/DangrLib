@@ -206,7 +206,7 @@ namespace Dangr.Logging
         /// <param name="message"> The message. </param>
         public void Log(LogLevel level, [NotNull] object message)
         {
-            var entry = new LogEntry(level, string.Empty, message);
+            LogEntry entry = new LogEntry(level, string.Empty, message);
             this.LogEntry(entry);
         }
 
@@ -218,7 +218,7 @@ namespace Dangr.Logging
         /// <param name="message"> The message. </param>
         public void Log(LogLevel level, [NotNull] string category, [NotNull] object message)
         {
-            var entry = new LogEntry(level, category, message);
+            LogEntry entry = new LogEntry(level, category, message);
             this.LogEntry(entry);
         }
 
@@ -233,7 +233,7 @@ namespace Dangr.Logging
         {
             if (this.features.Contains(feature))
             {
-                var entry = new LogEntry(level, category, message);
+                LogEntry entry = new LogEntry(level, category, message);
                 this.LogEntry(entry);
             }
         }

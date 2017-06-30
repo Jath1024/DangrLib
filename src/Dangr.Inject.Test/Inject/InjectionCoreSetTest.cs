@@ -45,7 +45,7 @@ namespace Dangr.Inject
             this.core = new InjectionCore();
             this.core.LoadModule(typeof(TestModule));
         }
-        
+
         [Task("https://github.com/Dangerdan9631/DangrLib/issues/7", Description = "Dangr.Inject Tests are failing")]
         [Ignore]
         [TestMethod]

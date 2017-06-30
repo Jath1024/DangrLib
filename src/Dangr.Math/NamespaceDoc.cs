@@ -12,5 +12,6 @@ namespace Dangr.Math
     /// The Dangr.Math namespace provides Math utilities for use with DangrLib.
     /// </summary>
     internal static class NamespaceDoc
-    { }
+    {
+    }
 }

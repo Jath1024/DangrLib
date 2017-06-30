@@ -17,7 +17,6 @@ namespace Dangr.Log.Viewer
     using Dangr.Logging;
     using Dangr.Logging.Loggers;
     using Dangr.Logging.Wcf;
-    using JetBrains.Annotations;
 
     public class Program
     {
@@ -25,13 +24,13 @@ namespace Dangr.Log.Viewer
 
         public static void Main(string[] args)
         {
-            var configuration = new Configuration();
-            var configurationView = new WcfLoggerConfigView();
+            Configuration configuration = new Configuration();
+            WcfLoggerConfigView configurationView = new WcfLoggerConfigView();
             configuration.RegisterConfigurationView(configurationView);
             configuration.RegisterConfigurationSource(new AppSettingsConfigurationSource());
 
             Binding binding = Program.ParseBinding(configurationView.Binding);
-            var uri = new Uri(configurationView.Uri);
+            Uri uri = new Uri(configurationView.Uri);
             string serviceName = configurationView.ServiceName;
 
             var endpoints = new Dictionary<string, Binding>
@@ -39,9 +38,9 @@ namespace Dangr.Log.Viewer
                 {serviceName, binding}
             };
 
-            using (var loggerService = new LogService())
+            using (LogService loggerService = new LogService())
             {
-                var consoleLogger = new ConsoleLogger();
+                ConsoleLogger consoleLogger = new ConsoleLogger();
                 loggerService.RegisterInternalEndpoint(consoleLogger);
                 loggerService.RegisterInternalEndpoint(
                     new TextLogger(logFileDirectory: string.Empty, logFilePrefix: "Live Viewer Errors - "));

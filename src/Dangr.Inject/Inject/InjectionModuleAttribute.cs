@@ -16,5 +16,6 @@ namespace Dangr.Inject
     /// <seealso cref="System.Attribute" />
     [AttributeUsage(AttributeTargets.Class)]
     public class InjectionModuleAttribute : Attribute
-    { }
+    {
+    }
 }

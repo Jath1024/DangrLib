@@ -32,7 +32,8 @@ namespace Dangr.Logging.Wcf
         public bool IsDisposed { get; private set; }
 
         private WcfLogClient()
-        { }
+        {
+        }
 
         /// <summary>
         /// Finalizes an instance of the <see cref="WcfLogClient" /> class.
@@ -69,7 +70,8 @@ namespace Dangr.Logging.Wcf
                         this.channel.Close();
                     }
                     catch (CommunicationException)
-                    { }
+                    {
+                    }
                 }
 
                 this.proxyFactory?.Close();
@@ -94,7 +96,7 @@ namespace Dangr.Logging.Wcf
             Assert.Validate.IsNotNull(binding, nameof(binding));
             Assert.Validate.IsNotNull(endpointAddress, nameof(endpointAddress));
 
-            var client = new WcfLogClient
+            WcfLogClient client = new WcfLogClient
             {
                 proxyFactory = new ChannelFactory<IWcfLogService>(binding, endpointAddress)
             };

@@ -13,5 +13,6 @@ namespace Dangr.Annotation
     /// adding annotations and documentation to your code.
     /// </summary>
     internal static class NamespaceDoc
-    { }
+    {
+    }
 }

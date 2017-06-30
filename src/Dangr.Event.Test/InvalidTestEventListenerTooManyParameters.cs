@@ -12,6 +12,7 @@ namespace Dangr.Event
     {
         [EventHandler]
         public void OnTestEvent(TestEvent evt, string str)
-        { }
+        {
+        }
     }
 }

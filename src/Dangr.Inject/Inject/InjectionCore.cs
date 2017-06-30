@@ -49,14 +49,14 @@ namespace Dangr.Inject
             PropertyInfo[] properties = module.GetProperties();
             foreach (PropertyInfo property in properties)
             {
-                var providesAttribute = property.GetCustomAttribute<ProvidesAttribute>();
+                ProvidesAttribute providesAttribute = property.GetCustomAttribute<ProvidesAttribute>();
                 if (providesAttribute != null)
                 {
                     ConstructorInfo constructor = this.GetConstructor(property.PropertyType);
                     this.CreateProvider(constructor, providesAttribute, property.IsDefined(typeof(SingletonAttribute)));
                 }
 
-                var providesSetAttribute = property.GetCustomAttribute<ProvidesSetAttribute>();
+                ProvidesSetAttribute providesSetAttribute = property.GetCustomAttribute<ProvidesSetAttribute>();
                 if (providesSetAttribute != null)
                 {
                     ConstructorInfo constructor = this.GetConstructor(property.PropertyType);
@@ -68,13 +68,13 @@ namespace Dangr.Inject
             MethodInfo[] methods = module.GetMethods(BindingFlags.Public | BindingFlags.Static);
             foreach (MethodInfo method in methods)
             {
-                var providesAttribute = method.GetCustomAttribute<ProvidesAttribute>();
+                ProvidesAttribute providesAttribute = method.GetCustomAttribute<ProvidesAttribute>();
                 if (providesAttribute != null)
                 {
                     this.CreateProvider(method, providesAttribute, method.IsDefined(typeof(SingletonAttribute)));
                 }
 
-                var providesSetAttribute = method.GetCustomAttribute<ProvidesSetAttribute>();
+                ProvidesSetAttribute providesSetAttribute = method.GetCustomAttribute<ProvidesSetAttribute>();
                 if (providesSetAttribute != null)
                 {
                     this.CreateSetProvider(method, providesSetAttribute,

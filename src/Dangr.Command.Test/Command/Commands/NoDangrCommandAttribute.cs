@@ -11,6 +11,7 @@ namespace Dangr.Command.Commands
     public class NoDangrCommandAttribute : IDangrCommand
     {
         public void Execute(ICommandContext executionContext)
-        { }
+        {
+        }
     }
 }

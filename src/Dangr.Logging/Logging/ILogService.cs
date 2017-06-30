@@ -17,5 +17,6 @@ namespace Dangr.Logging
     /// <seealso cref="T:Dangr.Logging.ILogSource" />
     /// <seealso cref="T:Dangr.Util.ICancelable" />
     public interface ILogService : ILogger, ILogSource, ICancelable
-    { }
+    {
+    }
 }

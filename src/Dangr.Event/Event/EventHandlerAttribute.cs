@@ -16,5 +16,6 @@ namespace Dangr.Event
     /// </summary>
     [AttributeUsage(AttributeTargets.Method, Inherited = false)]
     public sealed class EventHandlerAttribute : Attribute
-    { }
+    {
+    }
 }

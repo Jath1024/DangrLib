@@ -16,5 +16,6 @@ namespace Dangr.Inject
     /// <seealso cref="System.Attribute" />
     [AttributeUsage(AttributeTargets.Constructor)]
     public sealed class InjectAttribute : Attribute
-    { }
+    {
+    }
 }

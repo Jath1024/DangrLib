@@ -16,7 +16,8 @@ namespace Dangr.Inject
 
         public SingletonInjectionProvider(MethodBase constructor)
             : base(constructor)
-        { }
+        {
+        }
 
         public override object GetInstance(InjectionCore injectionCore, ProviderContext context)
         {

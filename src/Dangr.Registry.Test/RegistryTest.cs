@@ -62,7 +62,7 @@ namespace Dangr.Registry
 
         protected void TestModify()
         {
-            var valueChangedEvent = false;
+            bool valueChangedEvent = false;
             this.testRegistry.ValueChanged += (o, str) =>
             {
                 Assert.AreEqual(str.Key, RegNames.ValBoolTrue, "Unexpected key changed");
@@ -79,7 +79,7 @@ namespace Dangr.Registry
 
         protected void TestRemove()
         {
-            var valueChangedEvent = false;
+            bool valueChangedEvent = false;
             this.testRegistry.ValueChanged += (o, str) =>
             {
                 Assert.AreEqual(str.Key, RegNames.ValBoolTrue, "Unexpected key changed");
@@ -96,7 +96,7 @@ namespace Dangr.Registry
         protected void TestClear()
         {
             int numKeys = this.testRegistry.Count;
-            var valueChangedEventCount = 0;
+            int valueChangedEventCount = 0;
             this.testRegistry.ValueChanged += (o, str) => { valueChangedEventCount++; };
 
             this.testRegistry.Edit().Clear().Apply();
@@ -109,7 +109,7 @@ namespace Dangr.Registry
 
         protected void TestAddRemove()
         {
-            var valueChangedEventCount = 0;
+            int valueChangedEventCount = 0;
             this.testRegistry.ValueChanged += (o, str) =>
             {
                 Assert.AreEqual(str.Key, RegNames.ValBoolTrue, "Unexpected key changed");
@@ -138,13 +138,13 @@ namespace Dangr.Registry
 
         protected void TestSerialize()
         {
-            using (var stream = new MemoryStream())
+            using (MemoryStream stream = new MemoryStream())
             {
-                var serializer = new DataContractJsonSerializer(typeof(MemoryRegistry));
+                DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(MemoryRegistry));
                 serializer.WriteObject(stream, (MemoryRegistry) this.testRegistry);
 
                 stream.Position = 0;
-                var reg2 = (IRegistry) serializer.ReadObject(stream);
+                IRegistry reg2 = (IRegistry) serializer.ReadObject(stream);
 
                 this.CheckValue(reg2, this.expectedValues);
             }
@@ -178,7 +178,7 @@ namespace Dangr.Registry
             editor.Lock();
 
             // Try to modify the value
-            var t = new Task(() => this.testRegistry.Edit().SetBool(RegNames.ValAsyncTrue, true).Apply());
+            Task t = new Task(() => this.testRegistry.Edit().SetBool(RegNames.ValAsyncTrue, true).Apply());
             t.Start();
 
             // Delay to guarantee race condition

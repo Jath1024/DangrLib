@@ -55,7 +55,7 @@ namespace Dangr.Configuration.Views
         /// </returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             foreach (KeyValuePair<string, string> kvp in this.Settings)
             {
                 sb.AppendFormat("{0} : {1}", kvp.Key, kvp.Value);

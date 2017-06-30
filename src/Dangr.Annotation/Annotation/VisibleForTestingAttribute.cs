@@ -17,5 +17,6 @@ namespace Dangr.Annotation
     /// <seealso cref="T:System.Attribute" />
     [AttributeUsage(AttributeTargets.All, Inherited = false)]
     public sealed class VisibleForTestingAttribute : Attribute
-    { }
+    {
+    }
 }

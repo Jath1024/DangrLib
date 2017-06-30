@@ -13,7 +13,8 @@ namespace Dangr.Logging.Loggers
     /// with DangrLib's logging framework.
     /// </summary>
     internal static class NamespaceDoc
-    { }
+    {
+    }
 }
 
 namespace Dangr.Logging.Wcf
@@ -22,5 +23,6 @@ namespace Dangr.Logging.Wcf
     /// The Dangr.Logging.Loggers namespace provides WCF based logging utilities for use with DangrLib's logging framework.
     /// </summary>
     internal static class NamespaceDoc
-    { }
+    {
+    }
 }

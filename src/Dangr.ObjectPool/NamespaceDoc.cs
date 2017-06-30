@@ -12,5 +12,6 @@ namespace Dangr.ObjectPool
     /// The Dangr.ObjectPool namespace provides generic object pool utilities.
     /// </summary>
     internal static class NamespaceDoc
-    { }
+    {
+    }
 }

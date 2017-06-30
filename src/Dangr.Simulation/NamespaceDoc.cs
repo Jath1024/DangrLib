@@ -13,7 +13,8 @@ namespace Dangr.Simulation
     /// logic circuits.
     /// </summary>
     internal static class NamespaceDoc
-    { }
+    {
+    }
 }
 
 namespace Dangr.Simulation.Components
@@ -22,7 +23,8 @@ namespace Dangr.Simulation.Components
     /// The Dangr.Simulation.Components namespace provides classes used as components in digital logic circuits.
     /// </summary>
     internal static class NamespaceDoc
-    { }
+    {
+    }
 }
 
 namespace Dangr.Simulation.Components.Arithmetic
@@ -31,7 +33,8 @@ namespace Dangr.Simulation.Components.Arithmetic
     /// The Dangr.Simulation.Components.Arithmetic namespace provides component classes used for arithmetic in digital logic circuits.
     /// </summary>
     internal static class NamespaceDoc
-    { }
+    {
+    }
 }
 
 namespace Dangr.Simulation.Components.Gates
@@ -40,7 +43,8 @@ namespace Dangr.Simulation.Components.Gates
     /// The Dangr.Simulation.Components.Gates namespace provides component classes used as logic gates in digital logic circuits.
     /// </summary>
     internal static class NamespaceDoc
-    { }
+    {
+    }
 }
 
 namespace Dangr.Simulation.Components.IO
@@ -49,7 +53,8 @@ namespace Dangr.Simulation.Components.IO
     /// The Dangr.Simulation.Components.IO namespace provides component classes used for input and output in digital logic circuits.
     /// </summary>
     internal static class NamespaceDoc
-    { }
+    {
+    }
 }
 
 namespace Dangr.Simulation.Components.Memory
@@ -58,7 +63,8 @@ namespace Dangr.Simulation.Components.Memory
     /// The Dangr.Simulation.Components.Memory namespace provides component classes used for memory in digital logic circuits.
     /// </summary>
     internal static class NamespaceDoc
-    { }
+    {
+    }
 }
 
 namespace Dangr.Simulation.Components.Plexers
@@ -67,7 +73,8 @@ namespace Dangr.Simulation.Components.Plexers
     /// The Dangr.Simulation.Components.Plexers namespace provides component classes used for (de)multiplexing in digital logic circuits.
     /// </summary>
     internal static class NamespaceDoc
-    { }
+    {
+    }
 }
 
 namespace Dangr.Simulation.Components.Wiring
@@ -76,7 +83,8 @@ namespace Dangr.Simulation.Components.Wiring
     /// The Dangr.Simulation.Components.Wiring namespace provides component classes used in conjunction with wiring in digital logic circuits.
     /// </summary>
     internal static class NamespaceDoc
-    { }
+    {
+    }
 }
 
 namespace Dangr.Simulation.Connections
@@ -85,7 +93,8 @@ namespace Dangr.Simulation.Connections
     /// The Dangr.Simulation.Connections namespace provides classes used as connections between component in digital logic circuits.
     /// </summary>
     internal static class NamespaceDoc
-    { }
+    {
+    }
 }
 
 namespace Dangr.Simulation.Types
@@ -94,5 +103,6 @@ namespace Dangr.Simulation.Types
     /// The Dangr.Simulation.Types namespace provides used by components in the Dangr.Simulation engine.
     /// </summary>
     internal static class NamespaceDoc
-    { }
+    {
+    }
 }

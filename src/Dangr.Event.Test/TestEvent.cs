@@ -9,5 +9,6 @@
 namespace Dangr.Event
 {
     public class TestEvent
-    { }
+    {
+    }
 }

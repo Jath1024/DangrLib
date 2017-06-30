@@ -218,7 +218,7 @@ namespace Dangr.Entity
 
         private string GetEntityName(TEntity entity)
         {
-            var attribute =
+            EntityAttribute attribute =
                 entity.GetType().GetTypeInfo().GetCustomAttributes(typeof(EntityAttribute), false).FirstOrDefault() as
                     EntityAttribute;
 

@@ -36,9 +36,9 @@ namespace Dangr.Inject
 
             ParameterInfo[] parameterInfoList = this.providerMethod.GetParameters();
             var parameters = new object[parameterInfoList.Length];
-            for (var i = 0; i < parameterInfoList.Length; i++)
+            for (int i = 0; i < parameterInfoList.Length; i++)
             {
-                var namedAttribute = parameterInfoList[i].GetCustomAttribute<NamedAttribute>();
+                NamedAttribute namedAttribute = parameterInfoList[i].GetCustomAttribute<NamedAttribute>();
                 if (namedAttribute == null)
                 {
                     if (context.TypedDependencies.Contains(parameterInfoList[i].ParameterType))
@@ -65,7 +65,7 @@ namespace Dangr.Inject
                 }
             }
 
-            var constructor = this.providerMethod as ConstructorInfo;
+            ConstructorInfo constructor = this.providerMethod as ConstructorInfo;
             return constructor != null
                 ? constructor.Invoke(parameters)
                 : this.providerMethod.Invoke(null, parameters);

@@ -17,7 +17,7 @@ namespace Dangr.Entity
         public void EntityTable_Test()
         {
             var table = new EntityTable<TestEntity>(new TestPartitionTable());
-            var e = new TestEntity(table);
+            TestEntity e = new TestEntity(table);
 
             Assert.AreEqual(table.Get(e.EntityInfo.EntityId), e, "Entity not added to table");
 

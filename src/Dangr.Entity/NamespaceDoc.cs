@@ -13,5 +13,6 @@ namespace Dangr.Entity
     /// entities with unique ids.
     /// </summary>
     internal static class NamespaceDoc
-    { }
+    {
+    }
 }

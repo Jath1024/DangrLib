@@ -13,7 +13,8 @@ namespace Dangr.Configuration
     /// configuration data in a scoped manner.
     /// </summary>
     internal static class NamespaceDoc
-    { }
+    {
+    }
 }
 
 namespace Dangr.Configuration.Sources
@@ -22,7 +23,8 @@ namespace Dangr.Configuration.Sources
     /// The Dangr.Configuration.Sources namespace provides pre-built <see cref="ConfigurationSource" /> classes.
     /// </summary>
     internal static class NamespaceDoc
-    { }
+    {
+    }
 }
 
 namespace Dangr.Configuration.Views
@@ -31,5 +33,6 @@ namespace Dangr.Configuration.Views
     /// The Dangr.Configuration.Views namespace provides pre-built <see cref="ConfigurationView" /> classes.
     /// </summary>
     internal static class NamespaceDoc
-    { }
+    {
+    }
 }

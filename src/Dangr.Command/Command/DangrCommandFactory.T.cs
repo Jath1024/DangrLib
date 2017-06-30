@@ -76,7 +76,8 @@ namespace Dangr.Command
         /// <returns>
         /// A new <see cref="IDangrCommand" /> instance with parameters set from the given command line.
         /// </returns>
-        [Task("https://github.com/Dangerdan9631/DangrLib/issues/10", Description = "Convert command parameters to required types.")]
+        [Task("https://github.com/Dangerdan9631/DangrLib/issues/10",
+             Description = "Convert command parameters to required types.")]
         public IDangrCommand Create(CommandLine commandLine)
         {
             T command = new T();

@@ -18,6 +18,7 @@ namespace Dangr.Command.Commands
         public string Value { get; private set; }
 
         public void Execute(ICommandContext executionContext)
-        { }
+        {
+        }
     }
 }

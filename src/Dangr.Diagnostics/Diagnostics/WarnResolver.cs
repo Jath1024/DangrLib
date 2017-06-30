@@ -23,7 +23,8 @@ namespace Dangr.Diagnostics
         /// </summary>
         internal WarnResolver()
             : base(false)
-        { }
+        {
+        }
 
         /// <summary>
         /// Shows a <paramref name="message" /> and gets an exception that should be thrown.

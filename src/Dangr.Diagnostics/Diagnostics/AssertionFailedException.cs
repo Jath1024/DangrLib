@@ -23,7 +23,8 @@ namespace Dangr.Diagnostics
         /// <param name="message">The message that describes the error.</param>
         public AssertionFailedException(string message)
             : base(message)
-        { }
+        {
+        }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AssertionFailedException" /> .
@@ -36,6 +37,7 @@ namespace Dangr.Diagnostics
         /// </param>
         protected AssertionFailedException(SerializationInfo info, StreamingContext context)
             : base(info, context)
-        { }
+        {
+        }
     }
 }

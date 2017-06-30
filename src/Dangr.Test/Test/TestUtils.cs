@@ -40,7 +40,7 @@ namespace Dangr.Test
             {
                 if (e.InnerException is T)
                 {
-                    caughtException = (T)e;
+                    caughtException = (T) e;
                     Console.WriteLine($"Caught expected error: {e}");
                 }
                 else

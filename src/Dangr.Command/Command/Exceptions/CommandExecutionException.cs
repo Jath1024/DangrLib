@@ -23,7 +23,8 @@ namespace Dangr.Command.Exceptions
         /// </summary>
         /// <param name="message">The message that describes the error.</param>
         protected CommandExecutionException(string message) : base(message)
-        { }
+        {
+        }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CommandExecutionException"/> class.
@@ -34,6 +35,7 @@ namespace Dangr.Command.Exceptions
             SerializationInfo info,
             StreamingContext context)
             : base(info, context)
-        { }
+        {
+        }
     }
 }

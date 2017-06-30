@@ -23,8 +23,8 @@ namespace Dangr.Framework.Logging
         [TestMethod]
         public void Logging_Test()
         {
-            var testEndpoint = new TestEndpoint();
-            using (var logger = new LogService())
+            TestEndpoint testEndpoint = new TestEndpoint();
+            using (LogService logger = new LogService())
             {
                 logger.RegisterEndpoint(testEndpoint);
                 logger.RegisterEndpoint(new ConsoleLogger());
@@ -33,7 +33,7 @@ namespace Dangr.Framework.Logging
                         Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "TestLogs"),
                         "TestLogs_"));
 
-                for (var i = 0; i < 1000; i++)
+                for (int i = 0; i < 1000; i++)
                 {
                     logger.LogInfo($"Test message {i}");
                 }
@@ -53,13 +53,13 @@ namespace Dangr.Framework.Logging
             var baseAddresses = new[] {DefaultWcfEndpoints.GetNetNamedPipeUri()};
 
             WcfLogService.ServiceHolder serviceHolder;
-            var internalEndpoint = new TestEndpoint();
-            var consoleLogger = new ConsoleLogger();
-            var destEndpoint = new TestEndpoint();
-            var sourceEndpoint = new TestEndpoint();
+            TestEndpoint internalEndpoint = new TestEndpoint();
+            ConsoleLogger consoleLogger = new ConsoleLogger();
+            TestEndpoint destEndpoint = new TestEndpoint();
+            TestEndpoint sourceEndpoint = new TestEndpoint();
 
-            using (var destLogger = new LogService())
-            using (var sourceLogger = new LogService())
+            using (LogService destLogger = new LogService())
+            using (LogService sourceLogger = new LogService())
             {
                 destLogger.RegisterInternalEndpoint(internalEndpoint);
                 destLogger.RegisterEndpoint(consoleLogger);
@@ -87,15 +87,16 @@ namespace Dangr.Framework.Logging
                         10,
                         TimeSpan.FromMilliseconds(250)));
 
-                var r = new Random();
-                for (var i = 0; i < numMessagesToLog; i++)
+                Random r = new Random();
+                for (int i = 0; i < numMessagesToLog; i++)
                 {
                     sourceLogger.LogInfo($"Test message {i}");
                     Thread.Sleep(r.Next(50));
                 }
 
                 while (destEndpoint.NumMessagesLogged < numMessagesToLog)
-                { }
+                {
+                }
 
                 sourceLogger.SignalShutDown(TimeSpan.FromSeconds(5));
                 destLogger.SignalShutDown(TimeSpan.FromSeconds(5));
@@ -113,10 +114,10 @@ namespace Dangr.Framework.Logging
             // This test should be manually verified by running Log Viewer
             const int numMessagesToLog = 100;
 
-            var consoleLogger = new ConsoleLogger();
-            var sourceEndpoint = new TestEndpoint();
+            ConsoleLogger consoleLogger = new ConsoleLogger();
+            TestEndpoint sourceEndpoint = new TestEndpoint();
 
-            using (var sourceLogger = new LogService())
+            using (LogService sourceLogger = new LogService())
             {
                 sourceLogger.RegisterEndpoint(sourceEndpoint);
                 sourceLogger.RegisterEndpoint(consoleLogger);
@@ -128,8 +129,8 @@ namespace Dangr.Framework.Logging
                         10,
                         TimeSpan.FromMilliseconds(250)));
 
-                var r = new Random();
-                for (var i = 0; i < numMessagesToLog; i++)
+                Random r = new Random();
+                for (int i = 0; i < numMessagesToLog; i++)
                 {
                     sourceLogger.LogInfo($"Test message {i}");
                     Thread.Sleep(r.Next(50));

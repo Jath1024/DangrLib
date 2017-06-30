@@ -25,7 +25,8 @@ namespace Dangr.Diagnostics
         /// </summary>
         internal DebugAssertResolver()
             : base(true)
-        { }
+        {
+        }
 
         /// <summary>
         /// Shows a <paramref name="message" /> and gets an exception that should be thrown.

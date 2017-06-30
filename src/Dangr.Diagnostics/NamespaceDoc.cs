@@ -13,5 +13,6 @@ namespace Dangr.Diagnostics
     /// with the DangrLib utilities.
     /// </summary>
     internal static class NamespaceDoc
-    { }
+    {
+    }
 }

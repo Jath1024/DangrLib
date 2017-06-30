@@ -13,7 +13,8 @@ namespace Dangr.Command
     /// <see cref="IDangrCommand"/>s from a command line.
     /// </summary>
     internal static class NamespaceDoc
-    { }
+    {
+    }
 }
 
 namespace Dangr.Command.Annotation
@@ -22,7 +23,8 @@ namespace Dangr.Command.Annotation
     /// The Dangr.Command.Annotation namespace provides attributes used to define <see cref="IDangrCommand"/>s and their arguments.
     /// </summary>
     internal static class NamespaceDoc
-    { }
+    {
+    }
 }
 
 namespace Dangr.Command.Commands
@@ -31,7 +33,8 @@ namespace Dangr.Command.Commands
     /// The Dangr.Command.Commands namespace provides implemented <see cref="IDangrCommand"/> classes that can be used with an <see cref="ICommandContext"/>.
     /// </summary>
     internal static class NamespaceDoc
-    { }
+    {
+    }
 }
 
 namespace Dangr.Command.Exceptions
@@ -40,5 +43,6 @@ namespace Dangr.Command.Exceptions
     /// The Dangr.Command.Exceptions namespace provides Exceptions that may be thrown while executing and parsing <see cref="IDangrCommand"/>s.
     /// </summary>
     internal static class NamespaceDoc
-    { }
+    {
+    }
 }

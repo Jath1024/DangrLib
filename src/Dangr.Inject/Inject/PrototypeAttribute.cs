@@ -17,5 +17,6 @@ namespace Dangr.Inject
     /// <seealso cref="System.Attribute" />
     [AttributeUsage(AttributeTargets.Property | AttributeTargets.Method)]
     public class PrototypeAttribute : Attribute
-    { }
+    {
+    }
 }

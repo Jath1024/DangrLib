@@ -79,7 +79,7 @@ namespace Dangr.Event
         {
             // Setup
             this.eventBus.Register(this.eventListener);
-            var listener2 = new TestEventListener();
+            TestEventListener listener2 = new TestEventListener();
             this.eventBus.Register(listener2);
 
             // Successful post.

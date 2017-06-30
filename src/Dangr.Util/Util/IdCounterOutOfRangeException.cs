@@ -32,7 +32,8 @@ namespace Dangr.Util
         /// </param>
         public IdCounterOutOfRangeException(ulong min, ulong max, ulong next)
             : base($"ID counter value '{next}' is outside of the range [{min}, {max}]")
-        { }
+        {
+        }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="IdCounterOutOfRangeException" /> class.
@@ -45,6 +46,7 @@ namespace Dangr.Util
         /// </param>
         protected IdCounterOutOfRangeException(SerializationInfo info, StreamingContext context)
             : base(info, context)
-        { }
+        {
+        }
     }
 }

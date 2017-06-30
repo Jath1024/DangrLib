@@ -14,9 +14,9 @@ namespace Dangr.Configuration
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [SuppressMessage(
-        "Microsoft.Design", 
-        "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable", 
-        Justification = "This is a test class.")]
+         "Microsoft.Design",
+         "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable",
+         Justification = "This is a test class.")]
     [TestClass]
     public class ConfigTest
     {

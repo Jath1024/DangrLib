@@ -18,8 +18,8 @@ namespace Dangr.Core.Util
         [TestMethod]
         public void TestCapsToPascalCase_EmptyString()
         {
-            var testStringAllCaps = "";
-            var testStringPascal = "";
+            string testStringAllCaps = "";
+            string testStringPascal = "";
             Assert.Validate.AreEqual(
                 testStringAllCaps.CapsToPascalCase(),
                 testStringPascal,
@@ -29,8 +29,8 @@ namespace Dangr.Core.Util
         [TestMethod]
         public void TestCapsToPascalCase_SingleWord()
         {
-            var testStringAllCaps = "HELLO";
-            var testStringPascal = "Hello";
+            string testStringAllCaps = "HELLO";
+            string testStringPascal = "Hello";
             Assert.Validate.AreEqual(
                 testStringAllCaps.CapsToPascalCase(),
                 testStringPascal,
@@ -40,8 +40,8 @@ namespace Dangr.Core.Util
         [TestMethod]
         public void TestCapsToPascalCase_TwoWord()
         {
-            var testStringAllCaps = "HELLO_THERE";
-            var testStringPascal = "HelloThere";
+            string testStringAllCaps = "HELLO_THERE";
+            string testStringPascal = "HelloThere";
             Assert.Validate.AreEqual(
                 testStringAllCaps.CapsToPascalCase(),
                 testStringPascal,
@@ -51,8 +51,8 @@ namespace Dangr.Core.Util
         [TestMethod]
         public void TestCapsToPascalCase_ThreeWord()
         {
-            var testStringAllCaps = "HELLO_THERE_YOU";
-            var testStringPascal = "HelloThereYou";
+            string testStringAllCaps = "HELLO_THERE_YOU";
+            string testStringPascal = "HelloThereYou";
             Assert.Validate.AreEqual(
                 testStringAllCaps.CapsToPascalCase(),
                 testStringPascal,
@@ -62,8 +62,8 @@ namespace Dangr.Core.Util
         [TestMethod]
         public void TestCapsToPascalCase_TwoUnderscore()
         {
-            var testStringAllCaps = "HELLO__THERE";
-            var testStringPascal = "HelloThere";
+            string testStringAllCaps = "HELLO__THERE";
+            string testStringPascal = "HelloThere";
             Assert.Validate.AreEqual(
                 testStringAllCaps.CapsToPascalCase(),
                 testStringPascal,
@@ -73,8 +73,8 @@ namespace Dangr.Core.Util
         [TestMethod]
         public void TestCapsToPascalCase_StartWithUnderscore()
         {
-            var testStringAllCaps = "_HELLO";
-            var testStringPascal = "Hello";
+            string testStringAllCaps = "_HELLO";
+            string testStringPascal = "Hello";
             Assert.Validate.AreEqual(
                 testStringAllCaps.CapsToPascalCase(),
                 testStringPascal,
@@ -84,8 +84,8 @@ namespace Dangr.Core.Util
         [TestMethod]
         public void TestCapsToPascalCase_StartWithTwoUnderscores()
         {
-            var testStringAllCaps = "__HELLO";
-            var testStringPascal = "Hello";
+            string testStringAllCaps = "__HELLO";
+            string testStringPascal = "Hello";
             Assert.Validate.AreEqual(
                 testStringAllCaps.CapsToPascalCase(),
                 testStringPascal,
@@ -95,8 +95,8 @@ namespace Dangr.Core.Util
         [TestMethod]
         public void TestCapsToPascalCase_EndWithUnderscore()
         {
-            var testStringAllCaps = "HELLO_";
-            var testStringPascal = "Hello";
+            string testStringAllCaps = "HELLO_";
+            string testStringPascal = "Hello";
             Assert.Validate.AreEqual(
                 testStringAllCaps.CapsToPascalCase(),
                 testStringPascal,
@@ -106,8 +106,8 @@ namespace Dangr.Core.Util
         [TestMethod]
         public void TestCapsToPascalCase_EndWithTwoUnderscores()
         {
-            var testStringAllCaps = "HELLO__";
-            var testStringPascal = "Hello";
+            string testStringAllCaps = "HELLO__";
+            string testStringPascal = "Hello";
             Assert.Validate.AreEqual(
                 testStringAllCaps.CapsToPascalCase(),
                 testStringPascal,
@@ -117,8 +117,8 @@ namespace Dangr.Core.Util
         [TestMethod]
         public void TestEscapeVerbatimString()
         {
-            var testStringUnescaped = "\"";
-            var testStringEscaped = "\"\"";
+            string testStringUnescaped = "\"";
+            string testStringEscaped = "\"\"";
 
             Assert.Validate.AreEqual(
                 testStringUnescaped.EscapeVerbatimString(),
@@ -129,8 +129,8 @@ namespace Dangr.Core.Util
         [TestMethod]
         public void TestEscapeQuoteString()
         {
-            var testStringUnescaped = "\"";
-            var testStringEscaped = "\\\"";
+            string testStringUnescaped = "\"";
+            string testStringEscaped = "\\\"";
 
             Assert.Validate.AreEqual(
                 testStringUnescaped.EscapeStringQuotes(),

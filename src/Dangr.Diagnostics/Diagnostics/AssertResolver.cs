@@ -1147,7 +1147,7 @@ namespace Dangr.Diagnostics
 
             if (!condition)
             {
-                var builder = new StringBuilder();
+                StringBuilder builder = new StringBuilder();
                 builder.AppendFormat(assertMessageFormat, args);
                 builder.AppendLine();
                 builder.Append("\t");

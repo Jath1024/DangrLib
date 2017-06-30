@@ -20,6 +20,7 @@ namespace Dangr.Command.Commands
         public string Value2 { get; set; }
 
         public void Execute(ICommandContext executionContext)
-        { }
+        {
+        }
     }
 }

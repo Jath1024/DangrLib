@@ -13,5 +13,6 @@ namespace Dangr.Async
     /// DangrLib.
     /// </summary>
     internal static class NamespaceDoc
-    { }
+    {
+    }
 }

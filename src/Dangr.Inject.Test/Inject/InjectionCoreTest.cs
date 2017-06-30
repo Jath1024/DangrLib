@@ -66,8 +66,8 @@ namespace Dangr.Inject
         [TestMethod]
         public void TestSingleton()
         {
-            var first = this.core.Get<TestTypes.IClass1>();
-            var second = this.core.Get<TestTypes.IClass1>();
+            TestTypes.IClass1 first = this.core.Get<TestTypes.IClass1>();
+            TestTypes.IClass1 second = this.core.Get<TestTypes.IClass1>();
 
             Assert.Validate.IsNotNull(first, "First instance is null.");
             Assert.Validate.IsNotNull(second, "First instance is null.");
@@ -78,8 +78,8 @@ namespace Dangr.Inject
         [TestMethod]
         public void TestPrototype()
         {
-            var first = this.core.Get<TestTypes.IClass2>();
-            var second = this.core.Get<TestTypes.IClass2>();
+            TestTypes.IClass2 first = this.core.Get<TestTypes.IClass2>();
+            TestTypes.IClass2 second = this.core.Get<TestTypes.IClass2>();
 
             Assert.Validate.IsNotNull(first, "First instance is null.");
             Assert.Validate.IsNotNull(second, "First instance is null.");
@@ -89,8 +89,8 @@ namespace Dangr.Inject
         [TestMethod]
         public void TestNamed()
         {
-            var first = (TestTypes.IClass1) this.core.Get("NamedClass1");
-            var second = (TestTypes.IClass1) this.core.Get("NamedClass1");
+            TestTypes.IClass1 first = (TestTypes.IClass1) this.core.Get("NamedClass1");
+            TestTypes.IClass1 second = (TestTypes.IClass1) this.core.Get("NamedClass1");
 
             Assert.Validate.IsNotNull(first, "First instance is null.");
             Assert.Validate.IsNotNull(second, "First instance is null.");
@@ -101,8 +101,8 @@ namespace Dangr.Inject
         [TestMethod]
         public void TestTypeAndNamed()
         {
-            var first = this.core.Get<TestTypes.Class3>();
-            var second = (TestTypes.Class3) this.core.Get("NamedClass3");
+            TestTypes.Class3 first = this.core.Get<TestTypes.Class3>();
+            TestTypes.Class3 second = (TestTypes.Class3) this.core.Get("NamedClass3");
 
             Assert.Validate.IsNotNull(first, "First instance is null.");
             Assert.Validate.IsNotNull(second, "First instance is null.");
@@ -113,8 +113,8 @@ namespace Dangr.Inject
         [TestMethod]
         public void TestNestedDependency()
         {
-            var container = this.core.Get<TestTypes.Class1Container>();
-            var contained = this.core.Get<TestTypes.IClass1>();
+            TestTypes.Class1Container container = this.core.Get<TestTypes.Class1Container>();
+            TestTypes.IClass1 contained = this.core.Get<TestTypes.IClass1>();
 
             Assert.Validate.IsNotNull(container, "Container instance is null.");
             Assert.Validate.IsNotNull(contained, "Contained instance is null.");
@@ -125,8 +125,9 @@ namespace Dangr.Inject
         [TestMethod]
         public void TestProviderMethod()
         {
-            var container = (TestTypes.Class1Container) this.core.Get("ConstructedClass1Container");
-            var contained = this.core.Get<TestTypes.IClass1>();
+            TestTypes.Class1Container container =
+                (TestTypes.Class1Container) this.core.Get("ConstructedClass1Container");
+            TestTypes.IClass1 contained = this.core.Get<TestTypes.IClass1>();
 
             Assert.Validate.IsNotNull(container, "Container instance is null.");
             Assert.Validate.IsNotNull(contained, "Contained instance is null.");
@@ -137,8 +138,9 @@ namespace Dangr.Inject
         [TestMethod]
         public void TestProviderMethodWithNamedDependency()
         {
-            var container = (TestTypes.Class1Container) this.core.Get("ConstructedClass1ContainerWithNamedDependency");
-            var contained = (TestTypes.Class1) this.core.Get("NamedClass1");
+            TestTypes.Class1Container container =
+                (TestTypes.Class1Container) this.core.Get("ConstructedClass1ContainerWithNamedDependency");
+            TestTypes.Class1 contained = (TestTypes.Class1) this.core.Get("NamedClass1");
 
             Assert.Validate.IsNotNull(container, "Container instance is null.");
             Assert.Validate.IsNotNull(contained, "Contained instance is null.");

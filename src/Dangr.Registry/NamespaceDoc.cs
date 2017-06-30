@@ -13,5 +13,6 @@ namespace Dangr.Registry
     /// data in a scoped manner.
     /// </summary>
     internal static class NamespaceDoc
-    { }
+    {
+    }
 }

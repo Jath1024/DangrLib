@@ -12,5 +12,6 @@ namespace Dangr.Test
     /// The Dangr.Test namespace provides test utilities for use with DangrLib.
     /// </summary>
     internal static class NamespaceDoc
-    { }
+    {
+    }
 }

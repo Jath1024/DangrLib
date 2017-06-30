@@ -13,5 +13,6 @@ namespace Dangr.Logging.Loggers
     /// with DangrLib's logging framework.
     /// </summary>
     internal static class NamespaceDoc
-    { }
+    {
+    }
 }

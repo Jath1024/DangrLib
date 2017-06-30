@@ -12,7 +12,6 @@ namespace Dangr.Logging.Loggers
     using System.Collections.Generic;
     using System.Linq;
     using System.Reactive.Concurrency;
-    using System.Reactive.Linq;
     using System.ServiceModel;
     using System.ServiceModel.Channels;
     using System.Text;
@@ -68,7 +67,8 @@ namespace Dangr.Logging.Loggers
         public WcfLogger(LogService logService, Binding binding, EndpointAddress endpointAddress)
             : this(logService, binding, endpointAddress, WcfLogger.DefaultMaxBatchSize, WcfLogger.DefaultMessageInterval
             )
-        { }
+        {
+        }
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="WcfLogger" /> class.
@@ -195,8 +195,8 @@ namespace Dangr.Logging.Loggers
                 // messages everytime something is logged.
                 if (!this.loggedEndpointNotFound)
                 {
-                    var sb = new StringBuilder("An exception occurred while logging a message.");
-                    for (var i = 0; i < batch.Count; i++)
+                    StringBuilder sb = new StringBuilder("An exception occurred while logging a message.");
+                    for (int i = 0; i < batch.Count; i++)
                     {
                         if (i > 0)
                         {
@@ -213,8 +213,8 @@ namespace Dangr.Logging.Loggers
             catch (Exception e) when (e is CommunicationException || e is InvalidOperationException)
             {
                 // Swallow the exception.
-                var sb = new StringBuilder("An exception occurred while logging a message.");
-                for (var i = 0; i < batch.Count; i++)
+                StringBuilder sb = new StringBuilder("An exception occurred while logging a message.");
+                for (int i = 0; i < batch.Count; i++)
                 {
                     if (i > 0)
                     {

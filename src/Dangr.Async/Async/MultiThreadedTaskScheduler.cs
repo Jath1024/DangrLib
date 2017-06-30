@@ -19,7 +19,8 @@ namespace Dangr.Async
     /// </summary>
     public class MultiThreadedTaskScheduler : TaskScheduler
     {
-        [ThreadStatic] private static bool currentThreadIsProcessingItems;
+        [ThreadStatic]
+        private static bool currentThreadIsProcessingItems;
 
         private readonly LinkedList<Task> tasks;
 
@@ -135,7 +136,7 @@ namespace Dangr.Async
         /// </returns>
         protected sealed override IEnumerable<Task> GetScheduledTasks()
         {
-            var lockTaken = false;
+            bool lockTaken = false;
             try
             {
                 Monitor.TryEnter(this.tasksLock, ref lockTaken);

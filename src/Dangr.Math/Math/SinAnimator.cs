@@ -23,7 +23,8 @@ namespace Dangr.Math
         /// <param name="maxValue">The maximum value.</param>
         public SinAnimator(float minValue, float maxValue)
             : base(minValue, maxValue)
-        { }
+        {
+        }
 
         /// <summary>
         /// Calculates the new value as a scale from 0 to 1.

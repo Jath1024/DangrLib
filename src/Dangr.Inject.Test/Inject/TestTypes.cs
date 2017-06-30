@@ -11,19 +11,24 @@ namespace Dangr.Inject
     public class TestTypes
     {
         public interface IClass1
-        { }
+        {
+        }
 
         public interface IClass2
-        { }
+        {
+        }
 
         public class Class1 : IClass1
-        { }
+        {
+        }
 
         public class Class2 : IClass2
-        { }
+        {
+        }
 
         public class Class3
-        { }
+        {
+        }
 
         public class Class1Container
         {
@@ -40,24 +45,29 @@ namespace Dangr.Inject
         {
             [Inject]
             public LoopedClass1(LoopedClass2 lc2)
-            { }
+            {
+            }
         }
 
         public class LoopedClass2
         {
             [Inject]
             public LoopedClass2(LoopedClass1 lc2)
-            { }
+            {
+            }
         }
 
         public interface ISetClass
-        { }
+        {
+        }
 
         public class SetClass1 : ISetClass
-        { }
+        {
+        }
 
         public class SetClass2 : ISetClass
-        { }
+        {
+        }
 
         public class SetClass3 : ISetClass
         {
