@@ -179,7 +179,7 @@ namespace Dangr.Simulation.Types
         }
 
         /// <summary>
-        /// Performs a bitwise logcial <see cref="And" /> of the specified values and stores the result in the array specified by output. Output can be equal to one of the inputs.
+        /// Performs a bitwise logcial And of the specified values and stores the result in the array specified by output. Output can be equal to one of the inputs.
         /// </summary>
         /// <param name="a">The value.</param>
         /// <param name="b">The other value.</param>
@@ -229,7 +229,7 @@ namespace Dangr.Simulation.Types
         }
 
         /// <summary>
-        /// Performs a bitwise logcial <see cref="Xor" /> of the specified values and stores the result in the array specified by output. Output can be equal to one of the inputs.
+        /// Performs a bitwise logcial Xor of the specified values and stores the result in the array specified by output. Output can be equal to one of the inputs.
         /// </summary>
         /// <param name="a">The value.</param>
         /// <param name="b">The other value.</param>

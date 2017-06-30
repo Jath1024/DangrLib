@@ -15,13 +15,13 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Simulation\Components\Gates\AndGateTests.cs" />
-    <Compile Include="Simulation\Connections\ReadConnectionTest.cs" />
-    <Compile Include="Simulation\Types\BitValueTest.cs" />
+    <None Include="Simulation\Components\Gates\AndGateTests.cs" />
+    <None Include="Simulation\Connections\ReadConnectionTest.cs" />
+    <None Include="Simulation\Types\BitValueTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Simulation\Types\DataValueTest.cs" />
-    <Compile Include="Simulation\Types\OutputTypeTest.cs" />
-    <Compile Include="Simulation\Types\RadixTypeTest.cs" />
+    <None Include="Simulation\Types\DataValueTest.cs" />
+    <None Include="Simulation\Types\OutputTypeTest.cs" />
+    <None Include="Simulation\Types\RadixTypeTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Dangr.Diagnostics\Dangr.Diagnostics.csproj">
