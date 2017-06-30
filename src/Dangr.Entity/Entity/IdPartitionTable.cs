@@ -26,7 +26,8 @@ namespace Dangr.Entity
         /// <exception cref="System.ArgumentOutOfRangeException">
         /// If an added Id overflows uint.MaxValue.
         /// </exception>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage",
+        [System.Diagnostics.CodeAnalysis.SuppressMessage(
+            "Microsoft.Usage",
              "CA2214:DoNotCallOverridableMethodsInConstructors")]
         protected IdPartitionTable()
         {

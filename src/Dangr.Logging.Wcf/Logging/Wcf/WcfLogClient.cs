@@ -89,7 +89,10 @@ namespace Dangr.Logging.Wcf
         /// Binding or <paramref name="endpointAddress" /> is null.
         /// </exception>
         /// <returns>A newly created <see cref="WcfLogClient" /></returns>
-        [SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope")]
+        [SuppressMessage(
+            "Microsoft.Reliability", 
+            "CA2000:Dispose objects before losing scope",
+            Justification = "The method constructs a new client. Disposing of it does not make sense here.")]
         [NotNull]
         public static WcfLogClient CreateClient([NotNull] Binding binding, [NotNull] EndpointAddress endpointAddress)
         {

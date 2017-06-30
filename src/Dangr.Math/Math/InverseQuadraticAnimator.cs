@@ -32,7 +32,7 @@ namespace Dangr.Math
         protected override float CalculateScale(float v)
         {
             float vMinus1 = v - 1.0f;
-            return 1.0f - vMinus1*vMinus1;
+            return 1.0f - (vMinus1 * vMinus1);
         }
     }
 }

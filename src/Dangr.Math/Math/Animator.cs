@@ -70,7 +70,7 @@ namespace Dangr.Math
         private void CalculateValue()
         {
             float scaledT = this.CalculateScale(this.T);
-            this.Value = this.range*scaledT + this.StartValue;
+            this.Value = (this.range*scaledT) + this.StartValue;
         }
     }
 }
