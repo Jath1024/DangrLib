@@ -36,7 +36,7 @@ namespace Dangr.Configuration
         /// Disposes the resources managed by this <see cref="Dangr.Util.ICancelable" /> .
         /// </summary>
         /// <param name="isDisposing">
-        /// Indicates whether the method call comes from a <see cref="Dispose"/> method (true) or from a finalizer.
+        /// Indicates whether the method call comes from a <see cref="Dispose()"/> method (true) or from a finalizer.
         /// </param>
         protected virtual void Dispose(bool isDisposing)
         {

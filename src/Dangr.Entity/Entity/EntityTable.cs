@@ -28,7 +28,7 @@ namespace Dangr.Entity
         private readonly Dictionary<string, List<TEntity>> nameTable = new Dictionary<string, List<TEntity>>();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Dangr.Entity.EntityTable`1" /> class.
+        /// Initializes a new instance of the <see cref="EntityTable{TEntity}" /> class.
         /// </summary>
         /// <param name="idPartitionTable">
         /// The identifier partition table.
@@ -40,13 +40,13 @@ namespace Dangr.Entity
         }
 
         /// <summary>
-        /// Gets a <see cref="TEntity" /> from the <see cref="Dangr.Entity.EntityTable`1" /> .
+        /// Gets a <typeparamref name="TEntity" /> from the <see cref="EntityTable{TEntity}" /> .
         /// </summary>
         /// <param name="id">
-        /// The id of the <see cref="TEntity" /> to get.
+        /// The id of the <typeparamref name="TEntity" /> to get.
         /// </param>
         /// <returns>
-        /// The <see cref="TEntity" /> with the specified Id, or null.
+        /// The <typeparamref name="TEntity" /> with the specified Id, or null.
         /// </returns>
         public TEntity Get(ulong id)
         {
@@ -55,16 +55,16 @@ namespace Dangr.Entity
         }
 
         /// <summary>
-        /// Gets an <see cref="TEntity" /> from the <see cref="Dangr.Entity.EntityTable`1" /> .
+        /// Gets an <typeparamref name="TEntity" /> from the <see cref="EntityTable{TEntity}" /> .
         /// </summary>
         /// <typeparam name="T">
-        /// The type of the <see cref="TEntity" /> to get.
+        /// The type of the <typeparamref name="TEntity" /> to get.
         /// </typeparam>
         /// <param name="id">
-        /// The id of the <see cref="TEntity" /> to get.
+        /// The id of the <typeparamref name="TEntity" /> to get.
         /// </param>
         /// <returns>
-        /// The <see cref="TEntity" /> with the specified Id, or null.
+        /// The <typeparamref name="TEntity" /> with the specified Id, or null.
         /// </returns>
         public T Get<T>(ulong id) where T : class, TEntity
         {
@@ -72,13 +72,13 @@ namespace Dangr.Entity
         }
 
         /// <summary>
-        /// Gets an <see cref="TEntity" /> from the <see cref="Dangr.Entity.EntityTable`1" /> .
+        /// Gets an <typeparamref name="TEntity" /> from the <see cref="EntityTable{TEntity}" /> .
         /// </summary>
         /// <param name="name">
-        /// The name of the <see cref="TEntity" /> to get.
+        /// The name of the <typeparamref name="TEntity" /> to get.
         /// </param>
         /// <returns>
-        /// A <see cref="TEntity" /> with the specified name, or null.
+        /// A <typeparamref name="TEntity" /> with the specified name, or null.
         /// </returns>
         public TEntity Get(string name)
         {
@@ -87,16 +87,16 @@ namespace Dangr.Entity
         }
 
         /// <summary>
-        /// Gets an <see cref="TEntity" /> from the <see cref="Dangr.Entity.EntityTable`1" /> .
+        /// Gets an <typeparamref name="TEntity" /> from the <see cref="EntityTable{TEntity}" /> .
         /// </summary>
         /// <typeparam name="T">
-        /// The type of the <see cref="TEntity" /> to get.
+        /// The type of the <typeparamref name="TEntity" /> to get.
         /// </typeparam>
         /// <param name="name">
-        /// The name of the <see cref="TEntity" /> to get.
+        /// The name of the <typeparamref name="TEntity" /> to get.
         /// </param>
         /// <returns>
-        /// A <see cref="TEntity" /> with the specified name, or null.
+        /// A <typeparamref name="TEntity" /> with the specified name, or null.
         /// </returns>
         public T Get<T>(string name) where T : class, TEntity
         {
@@ -104,13 +104,13 @@ namespace Dangr.Entity
         }
 
         /// <summary>
-        /// Gets all of the <see cref="TEntity" /> s with the specified <paramref name="name" /> from the <see cref="Dangr.Entity.EntityTable`1" /> .
+        /// Gets all of the <typeparamref name="TEntity" /> s with the specified <paramref name="name" /> from the <see cref="EntityTable{TEntity}" /> .
         /// </summary>
         /// <param name="name">
-        /// The name of the <see cref="TEntity" /> s to get.
+        /// The name of the <typeparamref name="TEntity" /> s to get.
         /// </param>
         /// <returns>
-        /// A list of the <see cref="TEntity" /> s with the specified name.
+        /// A list of the <typeparamref name="TEntity" /> s with the specified name.
         /// </returns>
         public IEnumerable<TEntity> GetAll(string name)
         {
@@ -121,16 +121,16 @@ namespace Dangr.Entity
         }
 
         /// <summary>
-        /// Gets all of the <see cref="TEntity" /> s with the specified <paramref name="name" /> from the <see cref="Dangr.Entity.EntityTable`1" /> .
+        /// Gets all of the <typeparamref name="TEntity" /> s with the specified <paramref name="name" /> from the <see cref="EntityTable{TEntity}" /> .
         /// </summary>
         /// <typeparam name="T">
-        /// The type of the <see cref="TEntity" /> s to get.
+        /// The type of the <typeparamref name="TEntity" /> s to get.
         /// </typeparam>
         /// <param name="name">
-        /// The name of the <see cref="TEntity" /> s to get.
+        /// The name of the <typeparamref name="TEntity" /> s to get.
         /// </param>
         /// <returns>
-        /// A list of the <see cref="TEntity" /> s with the specified name.
+        /// A list of the <typeparamref name="TEntity" /> s with the specified name.
         /// </returns>
         public IEnumerable<T> GetAll<T>(string name) where T : class, TEntity
         {
@@ -147,20 +147,20 @@ namespace Dangr.Entity
         }
 
         /// <summary>
-        /// Adds an <see cref="TEntity" /> to the <see cref="Dangr.Entity.EntityTable`1" /> .
+        /// Adds an <typeparamref name="TEntity" /> to the <see cref="EntityTable{TEntity}" /> .
         /// </summary>
-        /// <param name="entity">The <see cref="TEntity" /> to add.</param>
+        /// <param name="entity">The <typeparamref name="TEntity" /> to add.</param>
         /// <exception cref="System.ArgumentException">
-        /// If the <see cref="TEntity" /> was already added to this <see cref="Dangr.Entity.EntityTable`1" /> .
+        /// If the <typeparamref name="TEntity" /> was already added to this <see cref="EntityTable{TEntity}" /> .
         /// </exception>
         /// <exception cref="System.InvalidOperationException">
         /// If the specified <see cref="IEntity" /> does not have an <see cref="EntityAttribute" /> or its <paramref name="entity" /> name does not have an ID partition.
         /// </exception>
         /// <exception cref="Dangr.Util.IdCounterOutOfRangeException">
-        /// If the <paramref name="entity" /> partition for the <see cref="TEntity" /> 's <paramref name="entity" /> name runs out of bounds.
+        /// If the <paramref name="entity" /> partition for the <typeparamref name="TEntity" /> 's <paramref name="entity" /> name runs out of bounds.
         /// </exception>
         /// <returns>
-        /// The <see cref="EntityInfo" /> describing the added <see cref="TEntity" /> .
+        /// The <see cref="EntityInfo" /> describing the added <typeparamref name="TEntity" /> .
         /// </returns>
         public EntityInfo Add(TEntity entity)
         {
@@ -188,11 +188,11 @@ namespace Dangr.Entity
         }
 
         /// <summary>
-        /// Removes an <see cref="TEntity" /> from the <see cref="Dangr.Entity.EntityTable`1" /> .
+        /// Removes an <typeparamref name="TEntity" /> from the <see cref="EntityTable{TEntity}" /> .
         /// </summary>
-        /// <param name="entity">The <see cref="TEntity" /> to remove.</param>
+        /// <param name="entity">The <typeparamref name="TEntity" /> to remove.</param>
         /// <exception cref="System.ArgumentNullException">
-        /// If the specified <see cref="TEntity" /> is null.
+        /// If the specified <typeparamref name="TEntity" /> is null.
         /// </exception>
         public void Remove(TEntity entity)
         {

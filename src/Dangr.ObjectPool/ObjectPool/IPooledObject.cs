@@ -15,12 +15,12 @@ namespace Dangr.ObjectPool
     public interface IPooledObject
     {
         /// <summary>
-        /// Acquires this <see cref="IPooledObject" /> instance as it is pulled from an <see cref="Dangr.ObjectPool.ObjectPool`1" /> . Should only be called by the <see cref="Dangr.ObjectPool.ObjectPool`1" /> .
+        /// Acquires this <see cref="IPooledObject" /> instance as it is pulled from an <see cref="ObjectPool{T}" /> . Should only be called by the <see cref="ObjectPool{T}" /> .
         /// </summary>
         void Acquire();
 
         /// <summary>
-        /// Resets this <see cref="IPooledObject" /> instance as it is returned to an <see cref="Dangr.ObjectPool.ObjectPool`1" /> . Should only be called by the <see cref="Dangr.ObjectPool.ObjectPool`1" /> .
+        /// Resets this <see cref="IPooledObject" /> instance as it is returned to an <see cref="ObjectPool{T}" /> . Should only be called by the <see cref="ObjectPool{T}" /> .
         /// </summary>
         void Reset();
     }

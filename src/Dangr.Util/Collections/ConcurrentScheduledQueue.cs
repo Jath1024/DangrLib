@@ -15,13 +15,13 @@ namespace Dangr.Collections
     /// <summary>
     /// <para>Maintains a queue of items that can be scheduled to be retrieved
     /// immediately, after a delay, or after a specific time. The 
-    /// <see cref="Dangr.Collections.ConcurrentScheduledQueue`1" /></para>
+    /// <see cref="ConcurrentScheduledQueue{T}" /></para>
     /// <para>can be safely accessed and enumerated from multiple threads
     /// concurrently.</para>
     /// </summary>
     /// <typeparam name="T">
     /// The type of value stored in this 
-    /// <see cref="Dangr.Collections.ConcurrentScheduledQueue`1" /> .
+    /// <see cref="ConcurrentScheduledQueue{T}" /> .
     /// </typeparam>
     public class ConcurrentScheduledQueue<T>
     {
@@ -32,7 +32,7 @@ namespace Dangr.Collections
         private readonly object immediateQueueLock = new object();
 
         /// <summary>
-        /// Gets the number of items enqueued in this <see cref="Dangr.Collections.ConcurrentScheduledQueue`1" /> .
+        /// Gets the number of items enqueued in this <see cref="ConcurrentScheduledQueue{T}" /> .
         /// </summary>
         public int Count
         {
@@ -47,7 +47,7 @@ namespace Dangr.Collections
         }
 
         /// <summary>
-        /// <para>Gets the number of items enqueued in this <see cref="Dangr.Collections.ConcurrentScheduledQueue`1" /></para>
+        /// <para>Gets the number of items enqueued in this <see cref="ConcurrentScheduledQueue{T}" /></para>
         /// <para>that are ready to be retrieved immediately.</para>
         /// </summary>
         public int ReadyCount
@@ -64,7 +64,7 @@ namespace Dangr.Collections
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Dangr.Collections.ConcurrentScheduledQueue`1" /> class.
+        /// Initializes a new instance of the <see cref="ConcurrentScheduledQueue{T}" /> class.
         /// </summary>
         public ConcurrentScheduledQueue()
         {

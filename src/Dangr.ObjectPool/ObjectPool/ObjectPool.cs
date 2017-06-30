@@ -18,10 +18,10 @@ namespace Dangr.ObjectPool
         where T : IPooledObject, new()
     {
         /// <summary>
-        /// Gets the first available object from the <see cref="Dangr.ObjectPool.ObjectPool`1" /> .
+        /// Gets the first available object from the <see cref="ObjectPool{T}" /> .
         /// </summary>
         /// <returns>
-        /// The first available object from the <see cref="Dangr.ObjectPool.ObjectPool`1" /> .
+        /// The first available object from the <see cref="ObjectPool{T}" /> .
         /// </returns>
         public T Get()
         {
@@ -36,13 +36,13 @@ namespace Dangr.ObjectPool
         }
 
         /// <summary>
-        /// Gets the first available object from the <see cref="Dangr.ObjectPool.ObjectPool`1" /> that matches the given <see cref="System.Predicate`1" /> .
+        /// Gets the first available object from the <see cref="ObjectPool{T}" /> that matches the given <see cref="Predicate{T}" /> .
         /// </summary>
         /// <param name="condition">
-        /// The <see cref="System.Predicate`1" /> to match.
+        /// The <see cref="Predicate{T}" /> to match.
         /// </param>
         /// <returns>
-        /// The first available object from the <see cref="Dangr.ObjectPool.ObjectPool`1" /> .
+        /// The first available object from the <see cref="ObjectPool{T}" /> .
         /// </returns>
         public T Get(Predicate<T> condition)
         {
@@ -57,7 +57,7 @@ namespace Dangr.ObjectPool
         }
 
         /// <summary>
-        /// Returns the specified object to the <see cref="Dangr.ObjectPool.ObjectPool`1" /> .
+        /// Returns the specified object to the <see cref="ObjectPool{T}" /> .
         /// </summary>
         /// <param name="obj">The object to return.</param>
         public void Return(T obj)
@@ -76,34 +76,34 @@ namespace Dangr.ObjectPool
         }
 
         /// <summary>
-        /// Clears all items from the <see cref="Dangr.ObjectPool.ObjectPool`1" /> .
+        /// Clears all items from the <see cref="ObjectPool{T}" /> .
         /// </summary>
         public abstract void Clear();
 
         /// <summary>
-        /// Tries to get a reference to an object of type <see cref="T" /> .
+        /// Tries to get a reference to an object of type <typeparamref name="T"/>.
         /// </summary>
         /// <param name="obj">
-        /// The reference to the object fetched from the <see cref="Dangr.ObjectPool.ObjectPool`1" /> .
+        /// The reference to the object fetched from the <see cref="ObjectPool{T}" /> .
         /// </param>
         /// <returns><c> true </c> if a reference was fetched.</returns>
         protected abstract bool TryFetch(out T obj);
 
         /// <summary>
-        /// <para>Tries to get a reference to an object of type <see cref="T" /> that matches the given <see cref="System.Predicate`1" /></para>
+        /// <para>Tries to get a reference to an object of type <typeparamref name="T"/> that matches the given <see cref="Predicate{T}" /></para>
         /// <para>.</para>
         /// </summary>
         /// <param name="condition">
         /// The condition that the fetched object should match.
         /// </param>
         /// <param name="obj">
-        /// The reference to the object fetched from the <see cref="Dangr.ObjectPool.ObjectPool`1" /> .
+        /// The reference to the object fetched from the <see cref="ObjectPool{T}" /> .
         /// </param>
         /// <returns><c> true </c> if a reference was fetched.</returns>
         protected abstract bool TryFetch(Predicate<T> condition, out T obj);
 
         /// <summary>
-        /// Stores the given object in the <see cref="Dangr.ObjectPool.ObjectPool`1" /> .
+        /// Stores the given object in the <see cref="ObjectPool{T}" /> .
         /// </summary>
         /// <param name="obj">The object to store.</param>
         protected abstract void Store(T obj);

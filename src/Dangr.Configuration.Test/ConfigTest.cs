@@ -8,10 +8,15 @@
 
 namespace Dangr.Configuration
 {
+    using System.Diagnostics.CodeAnalysis;
     using Dangr.Configuration.Sources;
     using Dangr.Configuration.Views;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
+    [SuppressMessage(
+        "Microsoft.Design", 
+        "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable", 
+        Justification = "This is a test class.")]
     [TestClass]
     public class ConfigTest
     {

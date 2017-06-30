@@ -9,8 +9,8 @@
 namespace Dangr.Inject
 {
     using System;
+    using Dangr.Test;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
-    using Assert = Dangr.Diagnostics.Assert;
 
     [TestClass]
     public class InjectionCoreLoopTest
@@ -88,65 +88,31 @@ namespace Dangr.Inject
         [TestMethod]
         public void TestLoopedConstructor()
         {
-            var caughtException = false;
-            try
-            {
-                this.core.Get<TestTypes.LoopedClass1>();
-            }
-            catch (InvalidOperationException e)
-            {
-                caughtException = true;
-            }
-
-            Assert.Validate.IsTrue(caughtException, "Did not catch expected Exception");
+            TestUtils.TestForError<InvalidOperationException>(
+                () => this.core.Get<TestTypes.LoopedClass1>(),
+                "Did not catch expected Exception");
         }
 
         [TestMethod]
         public void TestLoopedMethod()
         {
-            var caughtException = false;
-            try
-            {
-                this.core.Get("LoopedMethod1");
-            }
-            catch (InvalidOperationException e)
-            {
-                caughtException = true;
-            }
-
-            Assert.Validate.IsTrue(caughtException, "Did not catch expected Exception");
+            TestUtils.TestForError<InvalidOperationException>(
+                () => this.core.Get("LoopedMethod1"),
+                "Did not catch expected Exception");
         }
 
         [TestMethod]
         public void TestSelfLoopedMethod()
         {
-            var caughtException = false;
-            try
-            {
-                this.core.Get("SelfLoopedMethod1");
-            }
-            catch (InvalidOperationException e)
-            {
-                caughtException = true;
-            }
-
-            Assert.Validate.IsTrue(caughtException, "Did not catch expected Exception");
+            TestUtils.TestForError<InvalidOperationException>(
+                () => this.core.Get("SelfLoopedMethod1"),
+                "Did not catch expected Exception");
         }
 
         [TestMethod]
         public void TestNotLoopedMethod()
         {
-            var caughtException = false;
-            try
-            {
-                this.core.Get("NotLoopedMethod1");
-            }
-            catch (InvalidOperationException e)
-            {
-                caughtException = true;
-            }
-
-            Assert.Validate.IsFalse(caughtException, "Caught unexpected Exception");
+            this.core.Get("NotLoopedMethod1");
         }
     }
 }

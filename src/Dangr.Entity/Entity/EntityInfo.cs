@@ -10,7 +10,7 @@ namespace Dangr.Entity
 {
     /// <summary>
     /// Stores information about an entity. Created by adding an entity to an 
-    /// <see cref="Dangr.Entity.EntityTable`1" /> .
+    /// <see cref="EntityTable{T}" /> .
     /// </summary>
     public sealed class EntityInfo
     {

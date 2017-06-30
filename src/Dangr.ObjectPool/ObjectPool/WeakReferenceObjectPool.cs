@@ -14,7 +14,7 @@ namespace Dangr.ObjectPool
 
     /// <summary>
     /// A generic implementation of an 
-    /// <see cref="Dangr.ObjectPool.ObjectPool`1" /> that uses 
+    /// <see cref="ObjectPool{T}" /> that uses 
     /// <see cref="System.WeakReference" /> s to store it's objects.
     /// </summary>
     /// <typeparam name="T">The type of objects to store.</typeparam>
@@ -25,7 +25,7 @@ namespace Dangr.ObjectPool
         private readonly object poolLock = new object();
 
         /// <summary>
-        /// Clears all items from the <see cref="Dangr.ObjectPool.ObjectPool`1" /> .
+        /// Clears all items from the <see cref="ObjectPool{T}" /> .
         /// </summary>
         public override void Clear()
         {
@@ -36,10 +36,10 @@ namespace Dangr.ObjectPool
         }
 
         /// <summary>
-        /// Tries to get a reference to an object of type <see cref="T" /> .
+        /// Tries to get a reference to an object of type <typeparamref name="T"/>.
         /// </summary>
         /// <param name="obj">
-        /// The reference to the object fetched from the <see cref="Dangr.ObjectPool.ObjectPool`1" /> .
+        /// The reference to the object fetched from the <see cref="ObjectPool{T}" /> .
         /// </param>
         /// <returns><c> true </c> if a reference was fetched.</returns>
         protected override bool TryFetch(out T obj)
@@ -62,11 +62,11 @@ namespace Dangr.ObjectPool
         }
 
         /// <summary>
-        /// Tries to get a reference to an object of type <see cref="T" /> .
+        /// Tries to get a reference to an object of type <typeparamref name="T"/>.
         /// </summary>
         /// <param name="condition"></param>
         /// <param name="obj">
-        /// The reference to the object fetched from the <see cref="Dangr.ObjectPool.ObjectPool`1" /> .
+        /// The reference to the object fetched from the <see cref="ObjectPool{T}" /> .
         /// </param>
         /// <returns><c> true </c> if a reference was fetched.</returns>
         protected override bool TryFetch(Predicate<T> condition, out T obj)
@@ -97,7 +97,7 @@ namespace Dangr.ObjectPool
         }
 
         /// <summary>
-        /// Stores the given object in the <see cref="Dangr.ObjectPool.ObjectPool`1" /> .
+        /// Stores the given object in the <see cref="ObjectPool{T}" /> .
         /// </summary>
         /// <param name="obj">The object to store.</param>
         protected override void Store(T obj)

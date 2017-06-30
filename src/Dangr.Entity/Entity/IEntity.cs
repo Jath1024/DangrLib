@@ -10,7 +10,7 @@ namespace Dangr.Entity
 {
     /// <summary>
     /// Interface that defines an entity that can be stored in an 
-    /// <see cref="Dangr.Entity.EntityTable`1" /> .
+    /// <see cref="EntityTable{TEntity}" /> .
     /// </summary>
     public interface IEntity
     {
