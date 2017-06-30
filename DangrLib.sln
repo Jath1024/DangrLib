@@ -82,6 +82,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{275681EC
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{38E56344-BE98-48CF-B040-A0BB23E790A2}"
 	ProjectSection(SolutionItems) = preProject
+		Tools\Build\CodeCoverage.ps1 = Tools\Build\CodeCoverage.ps1
 		Tools\Build\Dangr.targets = Tools\Build\Dangr.targets
 		Tools\Build\Dangr.Test.targets = Tools\Build\Dangr.Test.targets
 		Tools\Build\Nuget.Publish.targets = Tools\Build\Nuget.Publish.targets

@@ -10,6 +10,12 @@ namespace Dangr.Inject
 {
     using System;
 
+    /// <summary>
+    /// Attribute that marks an <see cref="InjectionProvider"/> property as being Prototype Scoped. 
+    /// Each time this <see cref="InjectionProvider"/> is called, it will return a new instance.
+    /// </summary>
+    /// <seealso cref="System.Attribute" />
+    [AttributeUsage(AttributeTargets.Property | AttributeTargets.Method)]
     public class PrototypeAttribute : Attribute
     { }
 }

@@ -17,16 +17,26 @@ namespace Dangr.Inject
         [InjectionModule]
         public class TestModule
         {
-            [Singleton] [Provides(typeof(TestTypes.IClass1))] public TestTypes.Class1 Class1Instance;
+            [Singleton]
+            [Provides(typeof(TestTypes.IClass1))]
+            public TestTypes.Class1 Class1Instance { get; set; }
 
-            [Prototype] [Provides(typeof(TestTypes.IClass2))] public TestTypes.Class2 Class2Instance;
+            [Prototype]
+            [Provides(typeof(TestTypes.IClass2))]
+            public TestTypes.Class2 Class2Instance { get; set; }
 
-            [Singleton] [Provides("NamedClass1")] public TestTypes.Class1 NamedClass1Instance;
+            [Singleton]
+            [Provides("NamedClass1")]
+            public TestTypes.Class1 NamedClass1Instance { get; set; }
 
-            [Singleton] [Provides(typeof(TestTypes.Class3), "NamedClass3")] public TestTypes.Class3 NamedClass3Instance;
+            [Singleton]
+            [Provides(typeof(TestTypes.Class3), "NamedClass3")]
+            public TestTypes.Class3 NamedClass3Instance { get; set; }
 
-            [Singleton] [Provides(typeof(TestTypes.Class1Container))] public TestTypes.Class1Container
-                Class1ContainerInstance;
+            [Singleton]
+            [Provides(typeof(TestTypes.Class1Container))]
+            public TestTypes.Class1Container
+                Class1ContainerInstance { get; set; }
 
             [Singleton]
             [Provides("ConstructedClass1Container")]

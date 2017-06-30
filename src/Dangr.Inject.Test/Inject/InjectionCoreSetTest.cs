@@ -20,13 +20,21 @@ namespace Dangr.Inject
         [InjectionModule]
         public class TestModule
         {
-            [Singleton] [ProvidesSet(typeof(TestTypes.ISetClass))] public TestTypes.SetClass1 SetClass1Instance;
+            [Singleton]
+            [ProvidesSet(typeof(TestTypes.ISetClass))]
+            public TestTypes.SetClass1 SetClass1Instance { get; set; }
 
-            [Singleton] [ProvidesSet(typeof(TestTypes.ISetClass))] public TestTypes.SetClass2 SetClass2Instance;
+            [Singleton]
+            [ProvidesSet(typeof(TestTypes.ISetClass))]
+            public TestTypes.SetClass2 SetClass2Instance { get; set; }
 
-            [Singleton] [ProvidesSet(typeof(TestTypes.ISetClass))] public TestTypes.SetClass3 SetClass3Instance1;
+            [Singleton]
+            [ProvidesSet(typeof(TestTypes.ISetClass))]
+            public TestTypes.SetClass3 SetClass3Instance1 { get; set; }
 
-            [Singleton] [ProvidesSet(typeof(TestTypes.ISetClass))] public TestTypes.SetClass3 SetClass3Instance2;
+            [Singleton]
+            [ProvidesSet(typeof(TestTypes.ISetClass))]
+            public TestTypes.SetClass3 SetClass3Instance2 { get; set; }
         }
 
         private InjectionCore core;

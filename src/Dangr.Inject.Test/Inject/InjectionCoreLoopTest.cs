@@ -18,9 +18,13 @@ namespace Dangr.Inject
         [InjectionModule]
         public class TestModule
         {
-            [Singleton] [Provides(typeof(TestTypes.LoopedClass1))] public TestTypes.LoopedClass1 LoopedClass1Instance;
+            [Singleton]
+            [Provides(typeof(TestTypes.LoopedClass1))]
+            public TestTypes.LoopedClass1 LoopedClass1Instance { get; set; }
 
-            [Singleton] [Provides(typeof(TestTypes.LoopedClass2))] public TestTypes.LoopedClass2 LoopedClass2Instance;
+            [Singleton]
+            [Provides(typeof(TestTypes.LoopedClass2))]
+            public TestTypes.LoopedClass2 LoopedClass2Instance { get; set; }
 
             [Singleton]
             [Provides("LoopedMethod1")]

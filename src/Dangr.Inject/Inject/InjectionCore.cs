@@ -46,22 +46,22 @@ namespace Dangr.Inject
         /// <param name="module">The module object.</param>
         public void LoadModule(Type module)
         {
-            FieldInfo[] fields = module.GetFields();
-            foreach (FieldInfo field in fields)
+            PropertyInfo[] properties = module.GetProperties();
+            foreach (PropertyInfo property in properties)
             {
-                var providesAttribute = field.GetCustomAttribute<ProvidesAttribute>();
+                var providesAttribute = property.GetCustomAttribute<ProvidesAttribute>();
                 if (providesAttribute != null)
                 {
-                    ConstructorInfo constructor = this.GetConstructor(field.FieldType);
-                    this.CreateProvider(constructor, providesAttribute, field.IsDefined(typeof(SingletonAttribute)));
+                    ConstructorInfo constructor = this.GetConstructor(property.PropertyType);
+                    this.CreateProvider(constructor, providesAttribute, property.IsDefined(typeof(SingletonAttribute)));
                 }
 
-                var providesSetAttribute = field.GetCustomAttribute<ProvidesSetAttribute>();
+                var providesSetAttribute = property.GetCustomAttribute<ProvidesSetAttribute>();
                 if (providesSetAttribute != null)
                 {
-                    ConstructorInfo constructor = this.GetConstructor(field.FieldType);
+                    ConstructorInfo constructor = this.GetConstructor(property.PropertyType);
                     this.CreateSetProvider(constructor, providesSetAttribute,
-                        field.IsDefined(typeof(SingletonAttribute)));
+                        property.IsDefined(typeof(SingletonAttribute)));
                 }
             }
 

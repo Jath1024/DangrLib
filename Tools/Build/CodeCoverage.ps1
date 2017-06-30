@@ -29,6 +29,7 @@ Get-ChildItem -Path . -Filter Dangr.*.Test.dll -Recurse `
 $filter = "+[Dangr.*]*";          # Include Dangr.* modules.
 $filter += " -[Dangr.*.Test]*";   # Exclude test modules
 $filter += " -[*]*.NamespaceDoc"; # Exclude NamespaceDoc classes
+$filter += " -[*]*Attribute";     # Exclude Attribute classes
 $filter += " -[*]*Exception";     # Exclude Exception classes
 
 # Specify the coverage results output file.

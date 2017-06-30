@@ -10,6 +10,11 @@ namespace Dangr.Inject
 {
     using System;
 
+    /// <summary>
+    /// Attribute used to mark a module class that contains <see cref="InjectionProvider"/>s.
+    /// </summary>
+    /// <seealso cref="System.Attribute" />
+    [AttributeUsage(AttributeTargets.Class)]
     public class InjectionModuleAttribute : Attribute
     { }
 }

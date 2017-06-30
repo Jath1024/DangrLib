@@ -10,7 +10,11 @@ namespace Dangr.Inject
 {
     using System;
 
-    [AttributeUsage(AttributeTargets.Class | AttributeTargets.Constructor, Inherited = false)]
+    /// <summary>
+    /// Attribute used to mark a non-default constructor as the injection constructor.
+    /// </summary>
+    /// <seealso cref="System.Attribute" />
+    [AttributeUsage(AttributeTargets.Constructor)]
     public sealed class InjectAttribute : Attribute
     { }
 }
