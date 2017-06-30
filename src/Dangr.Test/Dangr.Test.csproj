@@ -31,5 +31,6 @@
     <None Include="Dangr.Test.nuspec">
       <SubType>Designer</SubType>
     </None>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

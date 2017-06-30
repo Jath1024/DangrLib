@@ -289,3 +289,6 @@ __pycache__/
 
 # Documentation Output
 /src/Dangr.Documentation/Help
+
+# Code Coverage Results
+/DangrLib_coverage.xml
