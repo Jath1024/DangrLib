@@ -150,7 +150,6 @@ namespace Dangr.Inject
         public T Get<T>()
         {
             return this.Get<T>(null);
-            ;
         }
 
         internal T Get<T>(InjectionProvider.ProviderContext context)

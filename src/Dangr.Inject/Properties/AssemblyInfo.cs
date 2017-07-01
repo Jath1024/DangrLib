@@ -9,20 +9,11 @@
 using System.Reflection;
 using System.Runtime.InteropServices;
 
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-
 [assembly: AssemblyTitle("Dangr.Inject")]
 [assembly: AssemblyDescription("Dependency Injection utilities for use with DangrLib.")]
 [assembly: AssemblyProduct("Dangr.Inject")]
 
-// Setting ComVisible to false makes the types in this assembly not visible 
-// to COM components.  If you need to access a type in this assembly from 
-// COM, set the ComVisible attribute to true on that type.
-
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-
 [assembly: Guid("77bd8c58-58d5-491b-862a-67c6b09aca54")]

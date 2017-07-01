@@ -134,7 +134,7 @@ namespace Dangr.Logging.Wcf
 
             var dict = new Dictionary<string, Binding>
             {
-                {endpointAddress, binding}
+                { endpointAddress, binding }
             };
 
             return WcfLogService.Run(logService, baseAddresses, dict);

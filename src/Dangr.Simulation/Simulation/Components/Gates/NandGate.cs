@@ -14,7 +14,8 @@ namespace Dangr.Simulation.Components.Gates
     {
         public NandGate(SimulationEngine engine, int numberOfInputs, int bitWidth)
             : base(engine, numberOfInputs, bitWidth)
-        { }
+        {
+        }
 
         protected override void OnInputDataValueChanged(object sender, DataValueChangedEventArgs eventArgs)
         {

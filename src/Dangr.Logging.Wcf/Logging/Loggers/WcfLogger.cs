@@ -117,7 +117,7 @@ namespace Dangr.Logging.Loggers
                         LogLevel.Critical,
                         new Exception(
                             $"Exception occurred while WCF Channel on endpoint {endpointAddress} was opening.",
-                            e).ToString());
+                            e));
                     this.loggedEndpointNotFound = true;
                 }
             }
@@ -127,7 +127,7 @@ namespace Dangr.Logging.Loggers
                     LogLevel.Critical,
                     new Exception(
                         $"Exception occurred while WCF Channel on endpoint {endpointAddress} was opening.",
-                        e).ToString());
+                        e));
             }
         }
 

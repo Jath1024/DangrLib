@@ -260,9 +260,9 @@ namespace Dangr.Logging
         private void ProcessLogs()
         {
             this.OnStarted();
-            CancellationToken cToken = this.processTaskCancellationTokenSource.Token;
+            CancellationToken cancellationToken = this.processTaskCancellationTokenSource.Token;
 
-            while (!cToken.IsCancellationRequested || (this.entriesQueue.Count > 0))
+            while (!cancellationToken.IsCancellationRequested || (this.entriesQueue.Count > 0))
             {
                 LogEntry logEntry;
                 if (this.entriesQueue.TryDequeue(out logEntry))

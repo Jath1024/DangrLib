@@ -33,7 +33,7 @@ namespace Dangr.Math
         /// <returns>The new value as a scale from 0 to 1.</returns>
         protected override float CalculateScale(float v)
         {
-            return 1.0f - (float) Math.Cos(MathHelper.PiOver2*v);
+            return 1.0f - (float) Math.Cos(MathHelper.PiOver2 * v);
         }
     }
 }

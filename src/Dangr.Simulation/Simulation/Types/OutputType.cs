@@ -91,7 +91,6 @@ namespace Dangr.Simulation.Types
             {
                 case BitValue.One:
                     return BitValue.Floating;
-                    ;
                 case BitValue.Zero:
                 case BitValue.Error:
                 case BitValue.Floating:

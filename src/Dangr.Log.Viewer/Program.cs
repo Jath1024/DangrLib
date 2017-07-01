@@ -35,7 +35,7 @@ namespace Dangr.Log.Viewer
 
             var endpoints = new Dictionary<string, Binding>
             {
-                {serviceName, binding}
+                { serviceName, binding }
             };
 
             using (LogService loggerService = new LogService())
@@ -59,7 +59,7 @@ namespace Dangr.Log.Viewer
                     using (
                         WcfLogService.ServiceHolder wcfServiceHolder = WcfLogService.Run(
                             loggerService,
-                            new[] {uri},
+                            new[] { uri },
                             endpoints))
                     {
                         wcfServiceHolder.Wait(TimeSpan.FromMilliseconds(-1));

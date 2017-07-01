@@ -17,7 +17,8 @@ namespace Dangr.Simulation.Components
 
         public SimulationComponent(SimulationEngine engine)
             : base(engine)
-        { }
+        {
+        }
 
         public virtual void Update()
         {

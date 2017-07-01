@@ -11,29 +11,8 @@ namespace Dangr.Math
     using System;
 
     /// <summary>
-    /// <para><see cref="Animator" /> that animates using the equation: V = (1 -
-    /// Cos(Pi</para>
-    /// <list type="bullet">
-    /// <item><description></description></item>
-    /// <item><description></description></item>
-    /// <item><description></description></item>
-    /// <item><description></description></item>
-    /// <item><description></description></item>
-    /// <item><description></description></item>
-    /// <item><description></description></item>
-    /// <item>
-    /// <description>
-    /// T)) / 2 Starts out slow, speeds up in the middle, ends slow.
-    /// </description>
-    /// </item>
-    /// <item><description></description></item>
-    /// <item><description></description></item>
-    /// <item><description></description></item>
-    /// <item><description></description></item>
-    /// <item><description></description></item>
-    /// <item><description></description></item>
-    /// <item><description></description></item>
-    /// </list>
+    /// <see cref="Animator" /> that animates using the equation: V = (1 - Cos(Pi * T)) / 2 Starts 
+    /// out slow, speeds up in the middle, ends slow.
     /// </summary>
     public class SmoothTrigAnimator : Animator
     {
@@ -54,7 +33,7 @@ namespace Dangr.Math
         /// <returns>The new value as a scale from 0 to 1.</returns>
         protected override float CalculateScale(float v)
         {
-            return (1.0f - (float) Math.Cos(MathHelper.Pi*v))/2.0f;
+            return (1.0f - (float) Math.Cos(MathHelper.Pi * v)) / 2.0f;
         }
     }
 }

@@ -213,7 +213,7 @@ namespace Dangr.Event
                     temp = new HashSet<object>(this.listeners);
                 }
 
-                var args = new[] {argument};
+                var args = new[] { argument };
                 foreach (object obj in temp)
                 {
                     this.methodInfo.Invoke(obj, args);
