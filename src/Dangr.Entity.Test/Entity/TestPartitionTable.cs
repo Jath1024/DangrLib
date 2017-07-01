@@ -12,7 +12,7 @@ namespace Dangr.Entity
 
     public class TestPartitionTable : IdPartitionTable
     {
-        protected override void PopulateTable()
+        public TestPartitionTable()
         {
             this.AddId(TestIds.TestEntity, (uint) IdCounter.Range.OneMillion);
         }

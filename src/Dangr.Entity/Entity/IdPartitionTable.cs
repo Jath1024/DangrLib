@@ -19,29 +19,7 @@ namespace Dangr.Entity
     {
         private ulong nextId;
         private readonly Dictionary<string, IIdCounter> table = new Dictionary<string, IIdCounter>();
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="IdPartitionTable" /> class.
-        /// </summary>
-        /// <exception cref="System.ArgumentOutOfRangeException">
-        /// If an added Id overflows uint.MaxValue.
-        /// </exception>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage(
-            "Microsoft.Usage",
-             "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        protected IdPartitionTable()
-        {
-            this.PopulateTable();
-        }
-
-        /// <summary>
-        /// Populates the <see cref="IdPartitionTable" /> with values.
-        /// </summary>
-        /// <exception cref="System.ArgumentOutOfRangeException">
-        /// If an added Id overflows uint.MaxValue.
-        /// </exception>
-        protected abstract void PopulateTable();
-
+        
         /// <summary>
         /// Gets the next ID in the partition defined for the given entity name.
         /// </summary>
