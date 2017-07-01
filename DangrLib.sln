@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dangr.Annotation", "src\Dangr.Annotation\Dangr.Annotation.csproj", "{7EEC0F15-6175-4035-9205-6FF793FE4303}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dangr.Async", "src\Dangr.Async\Dangr.Async.csproj", "{372D1F3E-E890-4FAE-981B-75E8C671DC58}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dangr.Command", "src\Dangr.Command\Dangr.Command.csproj", "{5FFCC11A-3387-466E-872C-8EAA6E31FA01}"
@@ -115,12 +113,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7EEC0F15-6175-4035-9205-6FF793FE4303}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7EEC0F15-6175-4035-9205-6FF793FE4303}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7EEC0F15-6175-4035-9205-6FF793FE4303}.NugetDeploy|Any CPU.ActiveCfg = NugetDeploy|Any CPU
-		{7EEC0F15-6175-4035-9205-6FF793FE4303}.NugetDeploy|Any CPU.Build.0 = NugetDeploy|Any CPU
-		{7EEC0F15-6175-4035-9205-6FF793FE4303}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7EEC0F15-6175-4035-9205-6FF793FE4303}.Release|Any CPU.Build.0 = Release|Any CPU
 		{372D1F3E-E890-4FAE-981B-75E8C671DC58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{372D1F3E-E890-4FAE-981B-75E8C671DC58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{372D1F3E-E890-4FAE-981B-75E8C671DC58}.NugetDeploy|Any CPU.ActiveCfg = NugetDeploy|Any CPU

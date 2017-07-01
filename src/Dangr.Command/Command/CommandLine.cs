@@ -11,7 +11,6 @@ namespace Dangr.Command
     using System.Collections.Generic;
     using System.Collections.Immutable;
     using System.Text.RegularExpressions;
-    using Dangr.Annotation;
     using Dangr.Command.Exceptions;
 
     /// <summary>
@@ -154,7 +153,8 @@ namespace Dangr.Command
         private static readonly char[] IllegalNameChars = "`~!@#$%^&*()=+[]{}|\\;:\"',<>/?".ToCharArray();
         private const string ArgumentToken = "-";
 
-        [Task("https://github.com/Dangerdan9631/DangrLib/issues/5", Description = "Create a Regex Builder Library.")]
+        // Task: [5] Create a Regex Builder Library.
+        // https://github.com/Dangerdan9631/DangrLib/issues/5
         private const string DoubleQuotedRegexString = "\" ((?: \\\\\" | [^\"] )*) \"";
 
         private const string SingleQuotedRegexString = "' ((?: \\\\' | [^'] )*) '";

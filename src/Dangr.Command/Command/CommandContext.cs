@@ -12,7 +12,6 @@ namespace Dangr.Command
     using System.Collections.Generic;
     using System.IO;
     using System.Text;
-    using Dangr.Annotation;
     using Dangr.Command.Commands;
     using Dangr.Command.Exceptions;
     using Dangr.Util;
@@ -20,7 +19,8 @@ namespace Dangr.Command
     /// <summary>
     /// The context that defines what <see cref="IDangrCommand"/>s exist and can be executed.
     /// </summary>
-    [Task("https://github.com/Dangerdan9631/DangrLib/issues/11", Description = "Add example and remarks doc comments.")]
+    /// TASK: [11] Add example and remarks doc comments. 
+    /// https://github.com/Dangerdan9631/DangrLib/issues/11
     public class CommandContext : ICommandContext
     {
         private readonly TextWriter outputWriter;

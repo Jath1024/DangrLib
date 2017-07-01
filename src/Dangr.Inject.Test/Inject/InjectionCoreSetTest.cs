@@ -10,7 +10,6 @@ namespace Dangr.Inject
 {
     using System.Collections.Generic;
     using System.Linq;
-    using Dangr.Annotation;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Assert = Dangr.Diagnostics.Assert;
 
@@ -45,8 +44,9 @@ namespace Dangr.Inject
             this.core = new InjectionCore();
             this.core.LoadModule(typeof(TestModule));
         }
-
-        [Task("https://github.com/Dangerdan9631/DangrLib/issues/7", Description = "Dangr.Inject Tests are failing")]
+        
+        // TASK: [7] Dangr.Inject Tests are failing
+        // https://github.com/Dangerdan9631/DangrLib/issues/7
         [Ignore]
         [TestMethod]
         public void TestSet()

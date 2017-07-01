@@ -35,7 +35,6 @@
     <SccAuxPath>SAK</SccAuxPath>
     <SccLocalPath>SAK</SccLocalPath>
     <DocumentationSources>
-      <DocumentationSource sourceFile="..\Dangr.Annotation\Dangr.Annotation.csproj" />
       <DocumentationSource sourceFile="..\Dangr.Async\Dangr.Async.csproj" />
       <DocumentationSource sourceFile="..\Dangr.Command\Dangr.Command.csproj" />
       <DocumentationSource sourceFile="..\Dangr.Configuration\Dangr.Configuration.csproj" />
@@ -108,11 +107,6 @@
     <Content Include="icons\Help.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Dangr.Annotation\Dangr.Annotation.csproj">
-      <Name>Dangr.Annotation</Name>
-      <Project>{7eec0f15-6175-4035-9205-6ff793fe4303}</Project>
-      <Private>True</Private>
-    </ProjectReference>
     <ProjectReference Include="..\Dangr.Async\Dangr.Async.csproj">
       <Name>Dangr.Async</Name>
       <Project>{372d1f3e-e890-4fae-981b-75e8c671dc58}</Project>

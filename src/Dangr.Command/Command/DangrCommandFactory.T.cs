@@ -13,7 +13,6 @@ namespace Dangr.Command
     using System.Collections.Immutable;
     using System.Reflection;
     using System.Text;
-    using Dangr.Annotation;
     using Dangr.Command.Annotation;
     using Dangr.Command.Exceptions;
 
@@ -76,8 +75,6 @@ namespace Dangr.Command
         /// <returns>
         /// A new <see cref="IDangrCommand" /> instance with parameters set from the given command line.
         /// </returns>
-        [Task("https://github.com/Dangerdan9631/DangrLib/issues/10",
-             Description = "Convert command parameters to required types.")]
         public IDangrCommand Create(CommandLine commandLine)
         {
             T command = new T();
@@ -138,7 +135,8 @@ namespace Dangr.Command
 
             foreach (KeyValuePair<PropertyInfo, string> entry in boundParameters)
             {
-                // TODO: Convert types
+                // TASK: [10] Convert command parameters to required types.
+                // https://github.com/Dangerdan9631/DangrLib/issues/10
                 if (entry.Key.PropertyType == typeof(bool))
                 {
                     entry.Key.SetValue(command, true);

@@ -18,10 +18,6 @@
     <Compile Include="Inject\TestTypes.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Dangr.Annotation\Dangr.Annotation.csproj">
-      <Project>{7eec0f15-6175-4035-9205-6ff793fe4303}</Project>
-      <Name>Dangr.Annotation</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Dangr.Diagnostics\Dangr.Diagnostics.csproj">
       <Project>{ec89ca12-e5a4-4738-b0ad-bbb39cbd886d}</Project>
       <Name>Dangr.Diagnostics</Name>
