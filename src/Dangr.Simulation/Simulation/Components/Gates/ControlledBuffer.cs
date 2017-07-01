@@ -50,11 +50,16 @@ namespace Dangr.Simulation.Components.Gates
                     this.Out.WriteValue(DataValue.Floating(this.DataBitWidth));
                     break;
                 case BitValue.One:
-                    BitValue[] result = eventArgs.Value.CopyBitValues();
+                    BitValue[] result = getResult(eventArgs.Value);
                     this.OutputType.Convert(result, ref result);
                     this.Out.WriteValue(DataValue.FromValues(result));
                     break;
             }
+        }
+
+        protected virtual void WriteValue(DataValue value)
+        {
+            return value.CopyBitValues();
         }
     }
 }

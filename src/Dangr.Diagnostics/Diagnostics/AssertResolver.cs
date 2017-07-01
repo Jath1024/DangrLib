@@ -606,110 +606,19 @@ namespace Dangr.Diagnostics
         /// True only if the assert condition passed. Otherwise false.
         /// </returns>
         [AssertionMethod]
-        public bool IsInRange(
-            int value,
-            int min,
-            int max,
+        public bool IsInRange<T>(
+            T value,
+            T min,
+            T max,
             string message,
             ILogSource logSource = null,
             [CallerFilePath] string filePath = "",
             [CallerLineNumber] int lineNumber = 0)
+            where T : IComparable
         {
             return this.Check(
                 AssertType.IsInRange,
-                (min <= value) && (value <= max),
-                message,
-                logSource,
-                filePath,
-                lineNumber,
-                "IsInRange check failed.[{0} ({1}:{2})]",
-                value,
-                min,
-                max);
-        }
-
-        /// <summary>
-        /// Show a <paramref name="message" /> if the <paramref name="value" /> is outside of the specified range.
-        /// </summary>
-        /// <param name="logSource">
-        /// The <see cref="Dangr.Logging.ILogSource" /> used to log messages on failure.
-        /// </param>
-        /// <param name="value">The value to check.</param>
-        /// <param name="min">
-        /// The minimum <paramref name="value" /> of the range inclusive.
-        /// </param>
-        /// <param name="max">
-        /// The maximum <paramref name="value" /> of the range inclusive.
-        /// </param>
-        /// <param name="message">The message to show.</param>
-        /// <param name="filePath">
-        /// The file path of the caller. (Do not use)
-        /// </param>
-        /// <param name="lineNumber">
-        /// The line number of the caller. (Do not use)
-        /// </param>
-        /// <returns>
-        /// True only if the assert condition passed. Otherwise false.
-        /// </returns>
-        [AssertionMethod]
-        public bool IsInRange(
-            float value,
-            float min,
-            float max,
-            string message,
-            ILogSource logSource = null,
-            [CallerFilePath] string filePath = "",
-            [CallerLineNumber] int lineNumber = 0)
-        {
-            return this.Check(
-                AssertType.IsInRange,
-                (min <= value) && (value <= max),
-                message,
-                logSource,
-                filePath,
-                lineNumber,
-                "IsInRange check failed.[{0} ({1}:{2})]",
-                value,
-                min,
-                max);
-        }
-
-        /// <summary>
-        /// Show a <paramref name="message" /> if the <paramref name="value" /> is outside of the specified range.
-        /// </summary>
-        /// <param name="logSource">
-        /// The <see cref="Dangr.Logging.ILogSource" /> used to log messages on failure.
-        /// </param>
-        /// <param name="value">The value to check.</param>
-        /// <param name="min">
-        /// The minimum <paramref name="value" /> of the range inclusive.
-        /// </param>
-        /// <param name="max">
-        /// The maximum <paramref name="value" /> of the range inclusive.
-        /// </param>
-        /// <param name="message">The message to show.</param>
-        /// <param name="filePath">
-        /// The file path of the caller. (Do not use)
-        /// </param>
-        /// <param name="lineNumber">
-        /// The line number of the caller. (Do not use)
-        /// </param>
-        /// <returns>
-        /// True only if the assert condition passed. Otherwise false.
-        /// </returns>
-        [AssertionMethod]
-        public bool IsInRange(
-            double value,
-            double min,
-            double max,
-            string message,
-            ILogSource logSource = null,
-            [CallerFilePath] string filePath = "",
-            [CallerLineNumber] int lineNumber = 0)
-        {
-            return this.Check(
-                AssertType.IsInRange,
-                (min <= value) && (value <= max),
+                min.CompareTo(value) <= 0 && value.CompareTo(max) <= 0,
                 message,
                 logSource,
                 filePath,
@@ -742,180 +651,37 @@ namespace Dangr.Diagnostics
         /// True only if the assert condition passed. Otherwise false.
         /// </returns>
         [AssertionMethod]
-        public bool Compare(
-            int a,
+        public bool Compare<T>(
+            T a,
             CompareOperation operation,
-            int b,
+            T b,
             string message,
             ILogSource logSource = null,
             [CallerFilePath] string filePath = "",
             [CallerLineNumber] int lineNumber = 0)
+            where T : IComparable
         {
             bool check;
             switch (operation)
             {
                 case CompareOperation.Equal:
-                    check = a == b;
+                    check = a.CompareTo(b) == 0;
                     break;
 
                 case CompareOperation.Greater:
-                    check = a > b;
+                    check = a.CompareTo(b) > 0;
                     break;
 
                 case CompareOperation.GreaterEqual:
-                    check = a >= b;
+                    check = a.CompareTo(b) >= 0;
                     break;
 
                 case CompareOperation.Less:
-                    check = a < b;
+                    check = a.CompareTo(b) < 0;
                     break;
 
                 case CompareOperation.LessEqual:
-                    check = a <= b;
-                    break;
-
-                default:
-                    check = false;
-                    break;
-            }
-
-            return this.Check(
-                AssertType.Compare,
-                check,
-                message,
-                logSource,
-                filePath,
-                lineNumber,
-                "Compare check failed. [{0} {1} {2}]",
-                a,
-                operation.GetOperation(),
-                b);
-        }
-
-        /// <summary>
-        /// Show a <paramref name="message" /> if the specified values do not compare in the specified way.
-        /// </summary>
-        /// <param name="logSource">
-        /// The <see cref="Dangr.Logging.ILogSource" /> used to log messages on failure.
-        /// </param>
-        /// <param name="a">The first value to compare.</param>
-        /// <param name="operation">
-        /// The <see cref="CompareOperation" /> to perform.
-        /// </param>
-        /// <param name="b">The second value to compare.</param>
-        /// <param name="message">The message to show.</param>
-        /// <param name="filePath">
-        /// The file path of the caller. (Do not use)
-        /// </param>
-        /// <param name="lineNumber">
-        /// The line number of the caller. (Do not use)
-        /// </param>
-        /// <returns>
-        /// True only if the assert condition passed. Otherwise false.
-        /// </returns>
-        [AssertionMethod]
-        public bool Compare(
-            float a,
-            CompareOperation operation,
-            float b,
-            string message,
-            ILogSource logSource = null,
-            [CallerFilePath] string filePath = "",
-            [CallerLineNumber] int lineNumber = 0)
-        {
-            bool check;
-            switch (operation)
-            {
-                case CompareOperation.Equal:
-                    check = Math.Abs(a - b) < float.Epsilon;
-                    break;
-
-                case CompareOperation.Greater:
-                    check = a > b;
-                    break;
-
-                case CompareOperation.GreaterEqual:
-                    check = a >= b;
-                    break;
-
-                case CompareOperation.Less:
-                    check = a < b;
-                    break;
-
-                case CompareOperation.LessEqual:
-                    check = a <= b;
-                    break;
-
-                default:
-                    check = false;
-                    break;
-            }
-
-            return this.Check(
-                AssertType.Compare,
-                check,
-                message,
-                logSource,
-                filePath,
-                lineNumber,
-                "Compare check failed. [{0} {1} {2}]",
-                a,
-                operation.GetOperation(),
-                b);
-        }
-
-        /// <summary>
-        /// Show a <paramref name="message" /> if the specified values do not compare in the specified way.
-        /// </summary>
-        /// <param name="logSource">
-        /// The <see cref="Dangr.Logging.ILogSource" /> used to log messages on failure.
-        /// </param>
-        /// <param name="a">The first value to compare.</param>
-        /// <param name="operation">
-        /// The <see cref="CompareOperation" /> to perform.
-        /// </param>
-        /// <param name="b">The second value to compare.</param>
-        /// <param name="message">The message to show.</param>
-        /// <param name="filePath">
-        /// The file path of the caller. (Do not use)
-        /// </param>
-        /// <param name="lineNumber">
-        /// The line number of the caller. (Do not use)
-        /// </param>
-        /// <returns>
-        /// True only if the assert condition passed. Otherwise false.
-        /// </returns>
-        [AssertionMethod]
-        public bool Compare(
-            double a,
-            CompareOperation operation,
-            double b,
-            string message,
-            ILogSource logSource = null,
-            [CallerFilePath] string filePath = "",
-            [CallerLineNumber] int lineNumber = 0)
-        {
-            bool check;
-            switch (operation)
-            {
-                case CompareOperation.Equal:
-                    check = Math.Abs(a - b) < double.Epsilon;
-                    break;
-
-                case CompareOperation.Greater:
-                    check = a > b;
-                    break;
-
-                case CompareOperation.GreaterEqual:
-                    check = a >= b;
-                    break;
-
-                case CompareOperation.Less:
-                    check = a < b;
-                    break;
-
-                case CompareOperation.LessEqual:
-                    check = a <= b;
+                    check = a.CompareTo(b) <= 0;
                     break;
 
                 default:

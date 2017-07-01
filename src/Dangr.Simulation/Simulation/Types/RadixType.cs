@@ -79,27 +79,7 @@ namespace Dangr.Simulation.Types
 
         private static string ConvertToBinary(DataValue value)
         {
-            var builder = new StringBuilder();
-            for (int i = value.BitWidth - 1; i >= 0; i--)
-            {
-                switch (value[i])
-                {
-                    case BitValue.Zero:
-                        builder.Append("0");
-                        break;
-                    case BitValue.One:
-                        builder.Append("1");
-                        break;
-                    case BitValue.Floating:
-                        builder.Append("X");
-                        break;
-                    case BitValue.Error:
-                        builder.Append("*");
-                        break;
-                }
-            }
-
-            return builder.ToString();
+            return value.toString();
         }
 
         private static string ConvertToOctal(DataValue value)

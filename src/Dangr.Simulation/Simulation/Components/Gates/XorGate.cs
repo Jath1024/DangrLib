@@ -12,6 +12,9 @@ namespace Dangr.Simulation.Components.Gates
 
     public class XorGate : LogicGate
     {
+        protected virtual BitValue OutputWhenOne => BitValue.One;
+        protected virtual BitValue OutputWhenNotOne => BitValue.Zero;
+
         public XorGate(SimulationEngine engine, int numberOfInputs, int bitWidth)
             : base(engine, numberOfInputs, bitWidth)
         {
@@ -56,8 +59,8 @@ namespace Dangr.Simulation.Components.Gates
                     : floating
                         ? BitValue.Floating
                         : count == 1
-                            ? BitValue.One
-                            : BitValue.Zero;
+                            ? OutputWhenOne
+                            : OutputWhenNotOne;
             }
 
             this.OutputType.Convert(result, ref result);

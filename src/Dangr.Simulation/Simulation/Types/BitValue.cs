@@ -443,7 +443,7 @@ namespace Dangr.Simulation.Types
                         builder.Append("X");
                         break;
                     case BitValue.Error:
-                        builder.Append("E");
+                        builder.Append("*");
                         break;
                 }
             }
