@@ -75,7 +75,7 @@ namespace Dangr.Log.Viewer
             Console.ReadLine();
         }
 
-        private static Binding ParseBinding([NotNull] string binding)
+        private static Binding ParseBinding(string binding)
         {
             switch (binding.ToLowerInvariant())
             {

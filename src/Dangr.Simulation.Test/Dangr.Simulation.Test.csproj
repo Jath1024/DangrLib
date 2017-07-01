@@ -28,10 +28,6 @@
       <Project>{ec89ca12-e5a4-4738-b0ad-bbb39cbd886d}</Project>
       <Name>Dangr.Diagnostics</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Dangr.Logging\Dangr.Logging.csproj">
-      <Project>{03b94d6d-8989-41ac-b90f-bebd4129d65d}</Project>
-      <Name>Dangr.Logging</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Dangr.Simulation\Dangr.Simulation.csproj">
       <Project>{4f441674-8d10-434a-b0c7-e302fab8a00d}</Project>
       <Name>Dangr.Simulation</Name>

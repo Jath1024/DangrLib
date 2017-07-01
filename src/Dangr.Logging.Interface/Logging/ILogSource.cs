@@ -9,12 +9,12 @@
 namespace Dangr.Logging
 {
     /// <summary>
-    /// Interface for an object that can log messages.
+    /// Provides methods for logging messages that come from the object.
     /// </summary>
     public interface ILogSource
     {
         /// <summary>
-        /// Gets the logger used when logging from this source.
+        /// Gets the <see cref="ILogger"/> used when logging from this <see cref="ILogSource"/>.
         /// </summary>
         ILogger Logger { get; }
 

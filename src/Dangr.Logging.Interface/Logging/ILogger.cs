@@ -10,31 +10,31 @@ namespace Dangr.Logging
 {
     /// <summary>
     /// Provides methods for logging categorized messages at varying 
-    /// <see cref="LogLevel" /> s.
+    /// <see cref="LogLevel" />s.
     /// </summary>
     public interface ILogger
     {
         /// <summary>
-        /// Logs a <paramref name="message" /> at the specified level.
+        /// Logs a message at the specified <see cref="LogLevel" />.
         /// </summary>
-        /// <param name="level">The <see cref="LogLevel" /> .</param>
+        /// <param name="level">The <see cref="LogLevel" />.</param>
         /// <param name="message">The message.</param>
         void Log(LogLevel level, object message);
 
         /// <summary>
-        /// Logs a <paramref name="message" /> at the specified level.
+        /// Logs a message at the specified <see cref="LogLevel" />.
         /// </summary>
-        /// <param name="level">The <see cref="LogLevel" /> .</param>
+        /// <param name="level">The <see cref="LogLevel" />.</param>
         /// <param name="category">The category.</param>
         /// <param name="message">The message.</param>
         void Log(LogLevel level, string category, object message);
 
         /// <summary>
-        /// Logs a <paramref name="message" /> at the specified level.
+        /// Logs a message at the specified <see cref="LogLevel" />.
         /// </summary>
-        /// <param name="level">The <see cref="LogLevel" /> .</param>
+        /// <param name="level">The <see cref="LogLevel" />.</param>
         /// <param name="feature">
-        /// The feature gating this <paramref name="message" /> logging.
+        /// The feature gating this message logging.
         /// </param>
         /// <param name="category">The category.</param>
         /// <param name="message">The message.</param>

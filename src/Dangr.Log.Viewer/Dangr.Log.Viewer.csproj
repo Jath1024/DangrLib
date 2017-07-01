@@ -31,6 +31,10 @@
       <Project>{71ddb9f9-9430-42bb-8661-81369796f71f}</Project>
       <Name>Dangr.Configuration</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Dangr.Logging.Interface\Dangr.Logging.Interface.csproj">
+      <Project>{2ce9c4fd-3ba6-4d74-8918-226db5eef544}</Project>
+      <Name>Dangr.Logging.Interface</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Dangr.Logging.Loggers\Dangr.Logging.Loggers.csproj">
       <Project>{bc835590-135a-4d60-9e01-82538fda6390}</Project>
       <Name>Dangr.Logging.Loggers</Name>

@@ -12,10 +12,6 @@
     <licenseUrl>https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <tags>dangrlib logging</tags>
-    <dependencies>
-      <dependency id="Dangr.Util" version="1.0" />
-      <dependency id="JetBrains.Annotations" version="10.2.1" />
-    </dependencies>
   </metadata>
   <files>
     <file src="../../LICENSE" target="LICENSE" />

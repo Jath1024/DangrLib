@@ -14,37 +14,37 @@ namespace Dangr.Logging
     public enum LogLevel
     {
         /// <summary>
-        /// Logs a debug message.
+        /// A message used to display debug level information.
         /// </summary>
         Debug,
 
         /// <summary>
-        /// Logs a status change.
+        /// A message used to display a change in status.
         /// </summary>
         Status,
 
         /// <summary>
-        /// Logs a message with detailed information.
+        /// A message with detailed information.
         /// </summary>
         Verbose,
 
         /// <summary>
-        /// Logs a message with standard information.
+        /// A message with standard information.
         /// </summary>
         Info,
 
         /// <summary>
-        /// Logs a warning message.
+        /// A warning message.
         /// </summary>
         Warning,
 
         /// <summary>
-        /// Logs a non-fatal error.
+        /// A message for a non-fatal error.
         /// </summary>
         Critical,
 
         /// <summary>
-        /// Logs a fatal error.
+        /// A message for a fatal error.
         /// </summary>
         Fatal
     }

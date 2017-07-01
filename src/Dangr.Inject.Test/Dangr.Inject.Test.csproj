@@ -30,9 +30,9 @@
       <Project>{77bd8c58-58d5-491b-862a-67c6b09aca54}</Project>
       <Name>Dangr.Inject</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Dangr.Logging\Dangr.Logging.csproj">
-      <Project>{03b94d6d-8989-41ac-b90f-bebd4129d65d}</Project>
-      <Name>Dangr.Logging</Name>
+    <ProjectReference Include="..\Dangr.Logging.Interface\Dangr.Logging.Interface.csproj">
+      <Project>{2ce9c4fd-3ba6-4d74-8918-226db5eef544}</Project>
+      <Name>Dangr.Logging.Interface</Name>
     </ProjectReference>
     <ProjectReference Include="..\Dangr.Test\Dangr.Test.csproj">
       <Project>{c4312ee9-6917-4a6c-869e-9f8be26e8724}</Project>
