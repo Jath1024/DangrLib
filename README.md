@@ -2,7 +2,6 @@
 [![GitHub release][GithubReleaseShield]][GithubRelease] 
 [![Build Status][BuildStatusShield]][AppVeyorProject]
 [![Code Factor][CodeFactorShield]][CodeFactorRepository]
-[![Better Code Hub][BetterCodeHubShield]][BetterCodeHub]
 [![codecov][CodeCovShield]][CodeCovRepository]
 
 ---
@@ -122,7 +121,6 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 [GithubReleaseShield]: https://img.shields.io/badge/release-v1.0-2D64F5.svg
 [BuildStatusShield]: https://ci.appveyor.com/api/projects/status/43vxfn09qxuvdih5?svg=true
 [CodeFactorShield]: https://www.codefactor.io/repository/github/dangerdan9631/dangrlib/badge
-[BetterCodeHubShield]: https://bettercodehub.com/edge/badge/Dangerdan9631/DangrLib?branch=master
 [NugetV1.0Shield]: https://img.shields.io/badge/nuget-v1.0-2D64F5.svg
 [CodeCovShield]: https://codecov.io/gh/Dangerdan9631/DangrLib/branch/master/graph/badge.svg
 
@@ -134,7 +132,6 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 [Resharper]: https://www.jetbrains.com/resharper/
 [GhostDoc]: http://submain.com/products/ghostdoc.aspx
 [SHFB]: https://github.com/EWSoftware/SHFB
-[BetterCodeHub]: https://bettercodehub.com/
 [AppVeyorProject]: https://ci.appveyor.com/project/Dangerdan9631/dangrlib
 [CodeFactorRepository]: https://www.codefactor.io/repository/github/dangerdan9631/dangrlib
 [CodeCovRepository]: https://codecov.io/gh/Dangerdan9631/DangrLib
