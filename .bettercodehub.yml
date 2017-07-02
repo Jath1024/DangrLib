@@ -1,31 +1,5 @@
 exclude:
-- /src/Dangr.Async/Properties/AdditionalAssemblyInfo.cs
-- /src/Dangr.Command.Test/Properties/AdditionalAssemblyInfo.cs
-- /src/Dangr.Command/Properties/AdditionalAssemblyInfo.cs
-- /src/Dangr.Configuration.Test/Properties/AdditionalAssemblyInfo.cs
-- /src/Dangr.Configuration/Properties/AdditionalAssemblyInfo.cs
-- /src/Dangr.Diagnostics.Test/Properties/AdditionalAssemblyInfo.cs
-- /src/Dangr.Diagnostics/Properties/AdditionalAssemblyInfo.cs
-- /src/Dangr.Entity.Test/Properties/AdditionalAssemblyInfo.cs
-- /src/Dangr.Entity/Properties/AdditionalAssemblyInfo.cs
-- /src/Dangr.Event.Test/Properties/AdditionalAssemblyInfo.cs
-- /src/Dangr.Event/Properties/AdditionalAssemblyInfo.cs
-- /src/Dangr.Inject.Test/Properties/AdditionalAssemblyInfo.cs
-- /src/Dangr.Inject/Properties/AdditionalAssemblyInfo.cs
-- /src/Dangr.Logging.Interface/Properties/AdditionalAssemblyInfo.cs
-- /src/Dangr.Logging.Loggers/Properties/AdditionalAssemblyInfo.cs
-- /src/Dangr.Logging.Test/Properties/AdditionalAssemblyInfo.cs
-- /src/Dangr.Logging.Wcf/Properties/AdditionalAssemblyInfo.cs
-- /src/Dangr.Logging/Properties/AdditionalAssemblyInfo.cs
-- /src/Dangr.Math/Properties/AdditionalAssemblyInfo.cs
-- /src/Dangr.ObjectPool/Properties/AdditionalAssemblyInfo.cs
-- /src/Dangr.Registry.Test/Properties/AdditionalAssemblyInfo.cs
-- /src/Dangr.Registry/Properties/AdditionalAssemblyInfo.cs
-- /src/Dangr.Simulation.Test/Properties/AdditionalAssemblyInfo.cs
-- /src/Dangr.Simulation/Properties/AdditionalAssemblyInfo.cs
-- /src/Dangr.Test/Properties/AdditionalAssemblyInfo.cs
-- /src/Dangr.Util.Test/Properties/AdditionalAssemblyInfo.cs
-- /src/Dangr.Util/Properties/AdditionalAssemblyInfo.cs
+- .*/AdditionalAssemblyInfo\.cs
 component_depth: 2
 languages:
 - csharp
