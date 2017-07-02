@@ -292,7 +292,3 @@ __pycache__/
 
 # Code Coverage Results
 /DangrLib_coverage.xml
-
-# T4 Generated Files
-**/Properties/AdditionalAssemblyInfo.cs
-**/*.nuspec

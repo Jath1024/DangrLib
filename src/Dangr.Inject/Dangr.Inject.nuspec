@@ -1,0 +1,31 @@
+﻿<?xml version="1.0"?>
+
+<!--
+<copyright file="Dangr.Inject.nuspec" company="DangerDan9631">
+    Copyright (c) 2017 Dan Garvey. All rights reserved.
+    Licensed under the MIT License. 
+    See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
+</copyright>
+-->
+
+<!--
+    This file Is generated using T4 Text Templates. Do Not Modify. 
+    Make changes to T4 files directly.
+-->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <description>$description$</description>
+    <authors>$author$</authors>
+    <copyright>$copyright$</copyright>
+    <iconUrl>https://raw.githubusercontent.com/DangerDan9631/DangrLib/master/Images/Logo/skull%20logo.png</iconUrl>
+    <licenseUrl>https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <tags>dangrlib inject ioc dependency injection</tags>
+  </metadata>
+  <files>
+    <file src="../../LICENSE" target="LICENSE" />
+  </files>
+</package>

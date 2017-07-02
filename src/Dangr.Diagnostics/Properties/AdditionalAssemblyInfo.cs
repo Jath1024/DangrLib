@@ -1,13 +1,4 @@
-<#
-// -----------------------------------------------------------------------
-//  <copyright file="AssemblyConstants.t4" company="DangerDan9631">
-//      Copyright (c) 2017 Dan Garvey. All rights reserved.
-//      Licensed under the MIT License. 
-//      See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
-//  </copyright>
-// -----------------------------------------------------------------------
-#>
-// -----------------------------------------------------------------------
+ï»¿// -----------------------------------------------------------------------
 //  <copyright file="AssemblyConstants.cs" company="DangerDan9631">
 //      Copyright (c) 2017 Dan Garvey. All rights reserved.
 //      Licensed under the MIT License. 
@@ -38,7 +29,7 @@ namespace Dangr {
         /// <summary>
         /// The assembly version.
         /// </summary>
-        public const string AssemblyVersion = "<#= $"{MajorVersion[assemblyName]}.{MinorVersion[assemblyName]}.{PatchVersion[assemblyName]}" #>";
+        public const string AssemblyVersion = "1.1.0";
 
         /// <summary>
         /// The assembly company.
@@ -48,6 +39,6 @@ namespace Dangr {
         /// <summary>
         /// The assembly copyright statement.
         /// </summary>
-        public const string AssemblyCopyright = "Copyright © 2017 " + AssemblyConstants.AssemblyCompany;
+        public const string AssemblyCopyright = "Copyright ï¿½ 2017 " + AssemblyConstants.AssemblyCompany;
     }
 }

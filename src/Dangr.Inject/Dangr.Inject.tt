@@ -1,4 +1,13 @@
-﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+﻿<#
+// -----------------------------------------------------------------------
+//  <copyright file="Dangr.Inject.tt" company="DangerDan9631">
+//      Copyright (c) 2017 Dan Garvey. All rights reserved.
+//      Licensed under the MIT License. 
+//      See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
+//  </copyright>
+// -----------------------------------------------------------------------
+#>
+<#@ template debug="false" hostspecific="false" language="C#" #>
 <#@ assembly name="System.Core" #>
 <#@ import namespace="System.Collections.Generic" #>
 <#@ output extension=".nuspec" #>
@@ -7,6 +16,18 @@
 #>
 <?xml version="1.0"?>
 
+<!--
+<copyright file="Dangr.Inject.nuspec" company="DangerDan9631">
+    Copyright (c) 2017 Dan Garvey. All rights reserved.
+    Licensed under the MIT License. 
+    See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
+</copyright>
+-->
+
+<!--
+    This file Is generated using T4 Text Templates. Do Not Modify. 
+    Make changes to T4 files directly.
+-->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <#@ include file="$(SolutionDir)\Tools\CommonSource\NuspecMetadata.t4" once="true" #>
