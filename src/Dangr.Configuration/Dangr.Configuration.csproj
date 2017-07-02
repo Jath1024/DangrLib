@@ -18,6 +18,11 @@
     <Compile Include="Configuration\ConfigurationSource.cs" />
     <Compile Include="Configuration\ConfigurationView.cs" />
     <Compile Include="NamespaceDoc.cs" />
+    <Compile Include="Properties\AdditionalAssemblyInfo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdditionalAssemblyInfo.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Configuration\SettingChangedEventArgs.cs" />
     <Compile Include="Configuration\Sources\AppSettingsConfigurationSource.cs" />
@@ -39,6 +44,23 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Dangr.Configuration.nuspec" />
+    <None Include="Dangr.Configuration.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Dangr.Configuration.nuspec</LastGenOutput>
+    </None>
+    <None Include="Properties\AdditionalAssemblyInfo.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AdditionalAssemblyInfo.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dangr.Configuration.nuspec">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dangr.Configuration.tt</DependentUpon>
+    </None>
   </ItemGroup>
 </Project>

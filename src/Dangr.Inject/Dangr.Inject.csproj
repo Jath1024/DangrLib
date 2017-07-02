@@ -19,6 +19,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Properties\AdditionalAssemblyInfo.cs">
+      <DependentUpon>AdditionalAssemblyInfo.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Inject\InjectionModuleAttribute.cs" />
     <Compile Include="Inject\InjectAttribute.cs" />
     <Compile Include="Inject\InjectionCore.cs" />
@@ -34,6 +39,23 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Dangr.Inject.nuspec" />
+    <None Include="Dangr.Inject.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Dangr.Inject.nuspec</LastGenOutput>
+    </None>
+    <None Include="Properties\AdditionalAssemblyInfo.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AdditionalAssemblyInfo.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dangr.Inject.nuspec">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dangr.Inject.tt</DependentUpon>
+    </None>
   </ItemGroup>
 </Project>

@@ -13,6 +13,11 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Properties\AdditionalAssemblyInfo.cs">
+      <DependentUpon>AdditionalAssemblyInfo.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Math\Animator.cs" />
     <Compile Include="Math\CosAnimator.cs" />
     <Compile Include="Math\InverseQuadraticAnimator.cs" />
@@ -25,6 +30,23 @@
     <Compile Include="Math\SmoothTrigAnimator.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Dangr.Math.nuspec" />
+    <None Include="Dangr.Math.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Dangr.Math.nuspec</LastGenOutput>
+    </None>
+    <None Include="Properties\AdditionalAssemblyInfo.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AdditionalAssemblyInfo.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dangr.Math.nuspec">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dangr.Math.tt</DependentUpon>
+    </None>
   </ItemGroup>
 </Project>

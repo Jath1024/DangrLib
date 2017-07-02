@@ -9,15 +9,16 @@
   </PropertyGroup>
   <Import Project="$(SolutionDir)\Tools\Build\Dangr.targets" />
   <ItemGroup>
-    <Reference Include="JetBrains.Annotations, Version=10.2.1.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\JetBrains.Annotations.10.2.1\lib\net\JetBrains.Annotations.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Properties\AdditionalAssemblyInfo.cs">
+      <DependentUpon>AdditionalAssemblyInfo.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Logging\ILogEndpoint.cs" />
     <Compile Include="Logging\ILogService.cs" />
     <Compile Include="Logging\LogEntry.cs" />
@@ -36,7 +37,23 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Dangr.Logging.nuspec" />
-    <None Include="packages.config" />
+    <None Include="Dangr.Logging.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Dangr.Logging.nuspec</LastGenOutput>
+    </None>
+    <None Include="Properties\AdditionalAssemblyInfo.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AdditionalAssemblyInfo.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dangr.Logging.nuspec">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dangr.Logging.tt</DependentUpon>
+    </None>
   </ItemGroup>
 </Project>

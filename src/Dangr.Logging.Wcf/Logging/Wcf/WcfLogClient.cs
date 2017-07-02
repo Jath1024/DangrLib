@@ -94,7 +94,7 @@ namespace Dangr.Logging.Wcf
             "CA2000:Dispose objects before losing scope",
             Justification = "The method constructs a new client. Disposing of it does not make sense here.")]
         [NotNull]
-        public static WcfLogClient CreateClient([NotNull] Binding binding, [NotNull] EndpointAddress endpointAddress)
+        public static WcfLogClient CreateClient(Binding binding, EndpointAddress endpointAddress)
         {
             Assert.Validate.IsNotNull(binding, nameof(binding));
             Assert.Validate.IsNotNull(endpointAddress, nameof(endpointAddress));
@@ -115,7 +115,7 @@ namespace Dangr.Logging.Wcf
         /// <exception cref="System.InvalidOperationException">
         /// The WCF Channel is in an invalid state.
         /// </exception>
-        public void Log([NotNull] LogEntry message)
+        public void Log(LogEntry message)
         {
             Assert.Validate.NotDisposed(this, nameof(WcfLogClient));
             Assert.Validate.IsNotNull(message, nameof(message));
@@ -141,7 +141,7 @@ namespace Dangr.Logging.Wcf
         /// Sends a batch of <paramref name="messages" /> to the connected <see cref="WcfLogService" /> .
         /// </summary>
         /// <param name="messages">The messages.</param>
-        public void LogBatch([NotNull] LogEntry[] messages)
+        public void LogBatch(LogEntry[] messages)
         {
             Assert.Validate.NotDisposed(this, nameof(WcfLogClient));
             Assert.Validate.IsNotNull(messages, nameof(messages));

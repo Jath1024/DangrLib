@@ -11,6 +11,11 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Properties\AdditionalAssemblyInfo.cs">
+      <DependentUpon>AdditionalAssemblyInfo.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Inject\InjectionCoreLoopTest.cs" />
     <Compile Include="Inject\InjectionCoreSetTest.cs" />
     <Compile Include="Inject\InjectionCoreTest.cs" />
@@ -34,5 +39,14 @@
       <Project>{c4312ee9-6917-4a6c-869e-9f8be26e8724}</Project>
       <Name>Dangr.Test</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AdditionalAssemblyInfo.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AdditionalAssemblyInfo.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
 </Project>

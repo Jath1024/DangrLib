@@ -15,9 +15,31 @@
   <ItemGroup>
     <Compile Include="Async\MultiThreadedTaskScheduler.cs" />
     <Compile Include="NamespaceDoc.cs" />
+    <Compile Include="Properties\AdditionalAssemblyInfo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdditionalAssemblyInfo.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Dangr.Async.nuspec" />
+    <None Include="Dangr.Async.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Dangr.Async.nuspec</LastGenOutput>
+    </None>
+    <None Include="Properties\AdditionalAssemblyInfo.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AdditionalAssemblyInfo.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dangr.Async.nuspec">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dangr.Async.tt</DependentUpon>
+    </None>
   </ItemGroup>
 </Project>

@@ -15,7 +15,6 @@ namespace Dangr.Diagnostics
     using System.Text;
     using Dangr.Logging;
     using Dangr.Util;
-    using JetBrains.Annotations;
 
     /// <summary>
     /// Contains various checks that can be used to verify application behavior.
@@ -54,9 +53,8 @@ namespace Dangr.Diagnostics
         /// <returns>
         /// True only if the assert <paramref name="condition" /> passed. Otherwise false.
         /// </returns>
-        [AssertionMethod]
         public bool IsTrue(
-            [AssertionCondition(AssertionConditionType.IS_TRUE)] bool condition,
+            bool condition,
             string message,
             ILogSource logSource = null,
             [CallerFilePath] string filePath = "",
@@ -89,9 +87,8 @@ namespace Dangr.Diagnostics
         /// <returns>
         /// True only if the assert <paramref name="condition" /> passed. Otherwise false.
         /// </returns>
-        [AssertionMethod]
         public bool IsFalse(
-            [AssertionCondition(AssertionConditionType.IS_FALSE)] bool condition,
+            bool condition,
             string message,
             ILogSource logSource = null,
             [CallerFilePath] string filePath = "",
@@ -125,7 +122,6 @@ namespace Dangr.Diagnostics
         /// <returns>
         /// True only if the assert condition passed. Otherwise false.
         /// </returns>
-        [AssertionMethod]
         public bool AreEqual(
             object a,
             object b,
@@ -166,7 +162,6 @@ namespace Dangr.Diagnostics
         /// <returns>
         /// True only if the assert condition passed. Otherwise false.
         /// </returns>
-        [AssertionMethod]
         public bool AreNotEqual(
             object a,
             object b,
@@ -206,9 +201,8 @@ namespace Dangr.Diagnostics
         /// <returns>
         /// True only if the assert condition passed. Otherwise false.
         /// </returns>
-        [AssertionMethod]
         public bool IsNotNull(
-            [AssertionCondition(AssertionConditionType.IS_NOT_NULL)] object value,
+            object value,
             string message,
             ILogSource logSource = null,
             [CallerFilePath] string filePath = "",
@@ -241,9 +235,8 @@ namespace Dangr.Diagnostics
         /// <returns>
         /// True only if the assert condition passed. Otherwise false.
         /// </returns>
-        [AssertionMethod]
         public bool IsNull(
-            [AssertionCondition(AssertionConditionType.IS_NULL)] object value,
+            object value,
             string message,
             ILogSource logSource = null,
             [CallerFilePath] string filePath = "",
@@ -277,9 +270,8 @@ namespace Dangr.Diagnostics
         /// <returns>
         /// True only if the assert condition passed. Otherwise false.
         /// </returns>
-        [AssertionMethod]
         public bool IsNotNullOrEmpty(
-            [AssertionCondition(AssertionConditionType.IS_NOT_NULL)] string value,
+            string value,
             string message,
             ILogSource logSource = null,
             [CallerFilePath] string filePath = "",
@@ -313,7 +305,6 @@ namespace Dangr.Diagnostics
         /// <returns>
         /// True only if the assert condition passed. Otherwise false.
         /// </returns>
-        [AssertionMethod]
         public bool IsNullOrWhiteSpace(
             string value,
             string message,
@@ -349,9 +340,8 @@ namespace Dangr.Diagnostics
         /// <returns>
         /// True only if the assert condition passed. Otherwise false.
         /// </returns>
-        [AssertionMethod]
         public bool IsNotNullOrWhiteSpace(
-            [AssertionCondition(AssertionConditionType.IS_NOT_NULL)] string value,
+            string value,
             string message,
             ILogSource logSource = null,
             [CallerFilePath] string filePath = "",
@@ -385,7 +375,6 @@ namespace Dangr.Diagnostics
         /// <returns>
         /// True only if the assert condition passed. Otherwise false.
         /// </returns>
-        [AssertionMethod]
         public bool IsNullOrEmpty(
             string value,
             string message,
@@ -421,7 +410,6 @@ namespace Dangr.Diagnostics
         /// <returns>
         /// True only if the assert condition passed. Otherwise false.
         /// </returns>
-        [AssertionMethod]
         public bool IsNotEmpty(
             ICollection collection,
             string message,
@@ -457,7 +445,6 @@ namespace Dangr.Diagnostics
         /// <returns>
         /// True only if the assert condition passed. Otherwise false.
         /// </returns>
-        [AssertionMethod]
         public bool IsEmpty(
             ICollection collection,
             string message,
@@ -494,7 +481,6 @@ namespace Dangr.Diagnostics
         /// <returns>
         /// True only if the assert condition passed. Otherwise false.
         /// </returns>
-        [AssertionMethod]
         public bool IsNotZero(
             int value,
             string message,
@@ -529,7 +515,6 @@ namespace Dangr.Diagnostics
         /// <returns>
         /// True only if the assert condition passed. Otherwise false.
         /// </returns>
-        [AssertionMethod]
         public bool IsNotZero(
             float value,
             string message,
@@ -564,7 +549,6 @@ namespace Dangr.Diagnostics
         /// <returns>
         /// True only if the assert condition passed. Otherwise false.
         /// </returns>
-        [AssertionMethod]
         public bool IsNotZero(
             double value,
             string message,
@@ -605,7 +589,6 @@ namespace Dangr.Diagnostics
         /// <returns>
         /// True only if the assert condition passed. Otherwise false.
         /// </returns>
-        [AssertionMethod]
         public bool IsInRange<T>(
             T value,
             T min,
@@ -650,7 +633,6 @@ namespace Dangr.Diagnostics
         /// <returns>
         /// True only if the assert condition passed. Otherwise false.
         /// </returns>
-        [AssertionMethod]
         public bool Compare<T>(
             T a,
             CompareOperation operation,
@@ -723,7 +705,6 @@ namespace Dangr.Diagnostics
         /// <returns>
         /// True only if the assert condition passed. Otherwise false.
         /// </returns>
-        [AssertionMethod]
         public bool NotDisposed(
             ICancelable disposable,
             string name,
@@ -760,7 +741,6 @@ namespace Dangr.Diagnostics
         /// <returns>
         /// True only if the assert condition passed. Otherwise false.
         /// </returns>
-        [AssertionMethod]
         public bool NotDisposed<T>(
             T disposable,
             ILogSource logSource = null,
@@ -796,9 +776,8 @@ namespace Dangr.Diagnostics
         /// <returns>
         /// True only if the assert condition passed. Otherwise false.
         /// </returns>
-        [AssertionMethod]
         public bool IsType<T>(
-            [AssertionCondition(AssertionConditionType.IS_NOT_NULL)] object obj,
+            object obj,
             string message,
             ILogSource logSource = null,
             [CallerFilePath] string filePath = "",
@@ -834,7 +813,6 @@ namespace Dangr.Diagnostics
         /// <returns>
         /// True only if the assert condition passed. Otherwise false.
         /// </returns>
-        [AssertionMethod]
         public bool IsTypeOrNull<T>(
             object obj,
             string message,
@@ -870,7 +848,6 @@ namespace Dangr.Diagnostics
         /// <returns>
         /// True only if the assert condition passed. Otherwise false.
         /// </returns>
-        [AssertionMethod]
         public bool Fail(
             string message,
             ILogSource logSource = null,

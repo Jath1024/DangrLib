@@ -9,15 +9,16 @@
   </PropertyGroup>
   <Import Project="$(SolutionDir)\Tools\Build\Dangr.targets" />
   <ItemGroup>
-    <Reference Include="JetBrains.Annotations, Version=10.2.1.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\JetBrains.Annotations.10.2.1\lib\net\JetBrains.Annotations.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Properties\AdditionalAssemblyInfo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdditionalAssemblyInfo.tt</DependentUpon>
+    </Compile>
     <Compile Include="Diagnostics\Assert.cs" />
     <Compile Include="Diagnostics\AssertionFailedException.cs" />
     <Compile Include="Diagnostics\AssertResolver.cs" />
@@ -42,9 +43,23 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Dangr.Diagnostics.nuspec">
-      <SubType>Designer</SubType>
+    <None Include="Dangr.Diagnostics.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Dangr.Diagnostics.nuspec</LastGenOutput>
     </None>
-    <None Include="packages.config" />
+    <None Include="Properties\AdditionalAssemblyInfo.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AdditionalAssemblyInfo.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dangr.Diagnostics.nuspec">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dangr.Diagnostics.tt</DependentUpon>
+    </None>
   </ItemGroup>
 </Project>

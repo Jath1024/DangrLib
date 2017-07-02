@@ -10,7 +10,6 @@ namespace Dangr.Util
 {
     using System.Linq;
     using System.Text;
-    using JetBrains.Annotations;
 
     /// <summary>
     /// Provides string utility methods
@@ -24,8 +23,7 @@ namespace Dangr.Util
         /// <returns>
         /// The PascalCase representation of the given string.
         /// </returns>
-        [NotNull]
-        public static string CapsToPascalCase([NotNull] this string capsString)
+        public static string CapsToPascalCase(this string capsString)
         {
             if (!capsString.IsCapsCase())
             {
@@ -65,7 +63,7 @@ namespace Dangr.Util
         /// <returns>
         /// <c> true </c> if the specified string is caps case; otherwise, <c> false </c> .
         /// </returns>
-        public static bool IsCapsCase([NotNull] this string capsString)
+        public static bool IsCapsCase(this string capsString)
         {
             return capsString.All(c => !char.IsLetter(c) || !char.IsLower(c));
         }
@@ -75,8 +73,7 @@ namespace Dangr.Util
         /// </summary>
         /// <param name="verbatimString">The string to escape.</param>
         /// <returns>The escaped string.</returns>
-        [NotNull]
-        public static string EscapeVerbatimString([NotNull] this string verbatimString)
+        public static string EscapeVerbatimString(this string verbatimString)
         {
             return verbatimString.Replace("\"", "\"\"");
         }
@@ -86,8 +83,7 @@ namespace Dangr.Util
         /// </summary>
         /// <param name="quoteString">The string to escape.</param>
         /// <returns>The escaped string.</returns>
-        [NotNull]
-        public static string EscapeStringQuotes([NotNull] this string quoteString)
+        public static string EscapeStringQuotes(this string quoteString)
         {
             return quoteString.Replace("\"", "\\\"");
         }

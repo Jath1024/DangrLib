@@ -22,7 +22,6 @@
     <Compile Include="Command\CommandContext.cs" />
     <Compile Include="Command\Exceptions\CommandExecutionException.cs" />
     <Compile Include="Command\CommandLine.cs" />
-    <None Include="Dangr.Command.nuspec" />
     <Compile Include="Command\Exceptions\UnknownCommandException.cs" />
     <Compile Include="Command\IDangrCommand.cs" />
     <Compile Include="Command\Annotation\DangrCommandAttribute.cs" />
@@ -35,7 +34,17 @@
     <Compile Include="Command\Exceptions\MissingCommandArgumentException.cs" />
     <Compile Include="Command\Exceptions\UnknownCommandArgumentException.cs" />
     <Compile Include="NamespaceDoc.cs" />
+    <Compile Include="Properties\AdditionalAssemblyInfo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdditionalAssemblyInfo.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="Dangr.Command.nuspec">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dangr.Command.tt</DependentUpon>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -43,5 +52,18 @@
       <Project>{272587f0-bd2b-48e5-a63f-252ca280b14f}</Project>
       <Name>Dangr.Util</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dangr.Command.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Dangr.Command.nuspec</LastGenOutput>
+    </None>
+    <None Include="Properties\AdditionalAssemblyInfo.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AdditionalAssemblyInfo.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
 </Project>

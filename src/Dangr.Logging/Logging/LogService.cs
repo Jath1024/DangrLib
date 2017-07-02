@@ -13,7 +13,6 @@ namespace Dangr.Logging
     using System.Collections.Generic;
     using System.Threading;
     using System.Threading.Tasks;
-    using JetBrains.Annotations;
 
     /// <summary>
     ///     Service that logs messages at various levels using different logging
@@ -145,7 +144,7 @@ namespace Dangr.Logging
         /// </summary>
         /// <param name="feature"> The feature. </param>
         /// <returns> A reference to this <see cref="LogService" />. </returns>
-        public LogService AddFeature([NotNull] string feature)
+        public LogService AddFeature(string feature)
         {
             this.features.Add(feature);
             return this;
@@ -156,7 +155,7 @@ namespace Dangr.Logging
         /// </summary>
         /// <param name="feature"> The feature. </param>
         /// <returns> A reference to this <see cref="LogService" />. </returns>
-        public LogService RemoveFeature([NotNull] string feature)
+        public LogService RemoveFeature(string feature)
         {
             this.features.Remove(feature);
             return this;
@@ -166,7 +165,7 @@ namespace Dangr.Logging
         ///     Registers an <see cref="ILogEndpoint" /> to receive log events from this <see cref="LogService" />.
         /// </summary>
         /// <param name="endpoint"> The <see cref="ILogEndpoint" />. </param>
-        public void RegisterEndpoint([NotNull] ILogEndpoint endpoint)
+        public void RegisterEndpoint(ILogEndpoint endpoint)
         {
             this.LogMessage += endpoint.Log;
         }
@@ -175,7 +174,7 @@ namespace Dangr.Logging
         ///     Stops a registered <see cref="ILogEndpoint" /> from receiving log events from this <see cref="LogService" />.
         /// </summary>
         /// <param name="endpoint"> The <see cref="ILogEndpoint" />. </param>
-        public void UnregisterEndpoint([NotNull] ILogEndpoint endpoint)
+        public void UnregisterEndpoint(ILogEndpoint endpoint)
         {
             this.LogMessage -= endpoint.Log;
         }
@@ -184,7 +183,7 @@ namespace Dangr.Logging
         ///     Registers an <see cref="ILogEndpoint" /> to receive internal log events from this <see cref="LogService" />.
         /// </summary>
         /// <param name="endpoint"> The <see cref="ILogEndpoint" />. </param>
-        public void RegisterInternalEndpoint([NotNull] ILogEndpoint endpoint)
+        public void RegisterInternalEndpoint(ILogEndpoint endpoint)
         {
             this.LogInternalMessage += endpoint.Log;
         }
@@ -194,7 +193,7 @@ namespace Dangr.Logging
         ///     <see cref="LogService" />.
         /// </summary>
         /// <param name="endpoint"> The <see cref="ILogEndpoint" />. </param>
-        public void UnregisterInternalEndpoint([NotNull] ILogEndpoint endpoint)
+        public void UnregisterInternalEndpoint(ILogEndpoint endpoint)
         {
             this.LogInternalMessage -= endpoint.Log;
         }
@@ -204,7 +203,7 @@ namespace Dangr.Logging
         /// </summary>
         /// <param name="level"> The <see cref="Dangr.Logging.LogLevel" />. </param>
         /// <param name="message"> The message. </param>
-        public void Log(LogLevel level, [NotNull] object message)
+        public void Log(LogLevel level, object message)
         {
             LogEntry entry = new LogEntry(level, string.Empty, message);
             this.LogEntry(entry);
@@ -216,7 +215,7 @@ namespace Dangr.Logging
         /// <param name="level"> The <see cref="Dangr.Logging.LogLevel" />. </param>
         /// <param name="category"> The category. </param>
         /// <param name="message"> The message. </param>
-        public void Log(LogLevel level, [NotNull] string category, [NotNull] object message)
+        public void Log(LogLevel level, string category, object message)
         {
             LogEntry entry = new LogEntry(level, category, message);
             this.LogEntry(entry);
@@ -229,7 +228,7 @@ namespace Dangr.Logging
         /// <param name="feature"> The feature gating this message logging. </param>
         /// <param name="category"> The category. </param>
         /// <param name="message"> The message. </param>
-        public void Log(LogLevel level, [NotNull] string feature, [NotNull] string category, [NotNull] object message)
+        public void Log(LogLevel level, string feature, string category, object message)
         {
             if (this.features.Contains(feature))
             {
@@ -243,7 +242,7 @@ namespace Dangr.Logging
         /// </summary>
         /// <param name="level"> The <see cref="Dangr.Logging.LogLevel" />. </param>
         /// <param name="message"> The message. </param>
-        public void LogInternal(LogLevel level, [NotNull] object message)
+        public void LogInternal(LogLevel level, object message)
         {
             this.OnLogInternalMessage(new LogEntry(level, this.LogCategory, message));
         }
@@ -252,7 +251,7 @@ namespace Dangr.Logging
         ///     Logs an entry to the <see cref="LogService" />.
         /// </summary>
         /// <param name="entry"> The message. </param>
-        public void LogEntry([NotNull] LogEntry entry)
+        public void LogEntry(LogEntry entry)
         {
             this.entriesQueue.Enqueue(entry);
         }

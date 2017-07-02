@@ -1,0 +1,136 @@
+<#
+// -----------------------------------------------------------------------
+//  <copyright file="Versions.t4" company="DangerDan9631">
+//      Copyright (c) 2017 Dan Garvey. All rights reserved.
+//      Licensed under the MIT License. 
+//      See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
+//  </copyright>
+// -----------------------------------------------------------------------
+#>
+<#
+// Version Maps
+Dictionary<string, int> MajorVersion = new Dictionary<string, int>();
+Dictionary<string, int> MinorVersion = new Dictionary<string, int>();
+Dictionary<string, int> PatchVersion = new Dictionary<string, int>();
+
+// Version Identifiers
+const string ASYNC = "Dangr.Async";
+const string COMMAND = "Dangr.Command";
+const string CONFIGURATION = "Dangr.Configuration";
+const string DIAGNOSTICS = "Dangr.Diagnostics";
+const string ENTITY = "Dangr.Entity";
+const string EVENT = "Dangr.Event";
+const string INJECT = "Dangr.Inject";
+const string LOGGING = "Dangr.Logging";
+const string LOGGING_INTERFACE = "Dangr.Logging.Interface";
+const string LOGGING_LOGGERS = "Dangr.Logging.Loggers";
+const string LOGGING_WCF = "Dangr.Logging.Wcf";
+const string MATH = "Dangr.Math";
+const string OBJECT_POOL = "Dangr.ObjectPool";
+const string REGISTRY = "Dangr.Registry";
+const string SIMULATION = "Dangr.Simulation";
+const string TEST = "Dangr.Test";
+const string UTIL = "Dangr.Util";
+#>
+<# 
+// Dangr.Async Version
+MajorVersion.Add(ASYNC, 1);
+MinorVersion.Add(ASYNC, 1);
+PatchVersion.Add(ASYNC, 0);
+#>
+<# 
+// Dangr.Command Version
+MajorVersion.Add(COMMAND, 1);
+MinorVersion.Add(COMMAND, 1);
+PatchVersion.Add(COMMAND, 0);
+#>
+<# 
+// Dangr.Configuration Version
+MajorVersion.Add(CONFIGURATION, 1);
+MinorVersion.Add(CONFIGURATION, 1);
+PatchVersion.Add(CONFIGURATION, 0);
+#>
+<# 
+// Dangr.Diagnostics Version
+MajorVersion.Add(DIAGNOSTICS, 1);
+MinorVersion.Add(DIAGNOSTICS, 1);
+PatchVersion.Add(DIAGNOSTICS, 0);
+#>
+<# 
+// Dangr.Entity Version
+MajorVersion.Add(ENTITY, 1);
+MinorVersion.Add(ENTITY, 1);
+PatchVersion.Add(ENTITY, 0);
+#>
+<# 
+// Dangr.Event Version
+MajorVersion.Add(EVENT, 1);
+MinorVersion.Add(EVENT, 1);
+PatchVersion.Add(EVENT, 0);
+#>
+<# 
+// Dangr.Inject Version
+MajorVersion.Add(INJECT, 1);
+MinorVersion.Add(INJECT, 1);
+PatchVersion.Add(INJECT, 0);
+#>
+<# 
+// Dangr.Logging Version
+MajorVersion.Add(LOGGING, 1);
+MinorVersion.Add(LOGGING, 1);
+PatchVersion.Add(LOGGING, 0);
+#>
+<# 
+// Dangr.Logging.Interface Version
+MajorVersion.Add(LOGGING_INTERFACE, 1);
+MinorVersion.Add(LOGGING_INTERFACE, 1);
+PatchVersion.Add(LOGGING_INTERFACE, 0);
+#>
+<# 
+// Dangr.Logging.Loggers Version
+MajorVersion.Add(LOGGING_LOGGERS, 1);
+MinorVersion.Add(LOGGING_LOGGERS, 1);
+PatchVersion.Add(LOGGING_LOGGERS, 0);
+#>
+<# 
+// Dangr.Logging.Wcf Version
+MajorVersion.Add(LOGGING_WCF, 1);
+MinorVersion.Add(LOGGING_WCF, 1);
+PatchVersion.Add(LOGGING_WCF, 0);
+#>
+<# 
+// Dangr.Math Version
+MajorVersion.Add(MATH, 1);
+MinorVersion.Add(MATH, 1);
+PatchVersion.Add(MATH, 0);
+#>
+<# 
+// Dangr.ObjectPool Version
+MajorVersion.Add(OBJECT_POOL, 1);
+MinorVersion.Add(OBJECT_POOL, 1);
+PatchVersion.Add(OBJECT_POOL, 0);
+#>
+<# 
+// Dangr.Registry Version
+MajorVersion.Add(REGISTRY, 1);
+MinorVersion.Add(REGISTRY, 1);
+PatchVersion.Add(REGISTRY, 0);
+#>
+<# 
+// Dangr.Simulation Version
+MajorVersion.Add(SIMULATION, 1);
+MinorVersion.Add(SIMULATION, 1);
+PatchVersion.Add(SIMULATION, 0);
+#>
+<# 
+// Dangr.Test Version
+MajorVersion.Add(TEST, 1);
+MinorVersion.Add(TEST, 1);
+PatchVersion.Add(TEST, 0);
+#>
+<# 
+// Dangr.Util Version
+MajorVersion.Add(UTIL, 1);
+MinorVersion.Add(UTIL, 1);
+PatchVersion.Add(UTIL, 0);
+#>

@@ -14,6 +14,11 @@
     <Reference Include="System.Runtime.Serialization" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Properties\AdditionalAssemblyInfo.cs">
+      <DependentUpon>AdditionalAssemblyInfo.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="NamespaceDoc.cs" />
     <Compile Include="Registry\IRegistry.cs" />
     <Compile Include="Registry\IRegistryEditor.cs" />
@@ -23,6 +28,23 @@
     <Compile Include="Registry\RegistryValueChangedEventArgs.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Dangr.Registry.nuspec" />
+    <None Include="Dangr.Registry.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Dangr.Registry.nuspec</LastGenOutput>
+    </None>
+    <None Include="Properties\AdditionalAssemblyInfo.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AdditionalAssemblyInfo.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dangr.Registry.nuspec">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dangr.Registry.tt</DependentUpon>
+    </None>
   </ItemGroup>
 </Project>

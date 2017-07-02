@@ -160,7 +160,7 @@ namespace Dangr.Logging.Loggers
         ///     Logs the specified entry.
         /// </summary>
         /// <param name="entry"> The entry. </param>
-        public void Log([NotNull] LogEntry entry)
+        public void Log(LogEntry entry)
         {
             Assert.Validate.NotDisposed(this, nameof(WcfLogger));
             Assert.Validate.IsNotNull(entry, nameof(entry));
@@ -168,12 +168,12 @@ namespace Dangr.Logging.Loggers
             this.OnLogMessage(entry);
         }
 
-        private void OnLogMessage([NotNull] LogEntry entry)
+        private void OnLogMessage(LogEntry entry)
         {
             this.LogMessage?.Invoke(entry);
         }
 
-        private void ProcessMessages([NotNull] IList<LogEntry> batch)
+        private void ProcessMessages(IList<LogEntry> batch)
         {
             Assert.Validate.NotDisposed(this, nameof(WcfLogger));
 

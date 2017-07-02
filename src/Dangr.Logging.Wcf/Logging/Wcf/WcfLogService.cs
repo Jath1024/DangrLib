@@ -46,7 +46,7 @@ namespace Dangr.Logging.Wcf
             /// </summary>
             public bool IsDisposed { get; private set; }
 
-            internal ServiceHolder([NotNull] Task serviceTask)
+            internal ServiceHolder(Task serviceTask)
             {
                 Assert.Validate.IsNotNull(serviceTask, nameof(serviceTask));
                 this.serviceTask = serviceTask;
@@ -121,10 +121,10 @@ namespace Dangr.Logging.Wcf
         /// <para>if the service was already running.</para>
         /// </returns>
         public static ServiceHolder Run(
-            [NotNull] LogService logService,
-            [NotNull] Uri[] baseAddresses,
-            [NotNull] string endpointAddress,
-            [NotNull] Binding binding)
+            LogService logService,
+            Uri[] baseAddresses,
+            string endpointAddress,
+            Binding binding)
         {
             Assert.Validate.IsNotNull(logService, nameof(logService));
             Assert.Validate.IsNotNull(baseAddresses, nameof(baseAddresses));
@@ -157,9 +157,9 @@ namespace Dangr.Logging.Wcf
         /// <para>if the service was already running.</para>
         /// </returns>
         public static ServiceHolder Run(
-            [NotNull] LogService logService,
-            [NotNull] Uri[] baseAddresses,
-            [NotNull] Dictionary<string, Binding> endpoints)
+            LogService logService,
+            Uri[] baseAddresses,
+            Dictionary<string, Binding> endpoints)
         {
             Assert.Validate.IsNotNull(logService, nameof(logService));
             Assert.Validate.IsNotNull(baseAddresses, nameof(baseAddresses));
@@ -234,7 +234,7 @@ namespace Dangr.Logging.Wcf
         /// Logs the specified message.
         /// </summary>
         /// <param name="message">The message.</param>
-        public void Log([NotNull] LogEntry message)
+        public void Log(LogEntry message)
         {
             Assert.Validate.IsNotNull(message, nameof(message));
             WcfLogService.logService?.LogEntry(message);
@@ -244,7 +244,7 @@ namespace Dangr.Logging.Wcf
         /// Logs a batch of messages.
         /// </summary>
         /// <param name="messages">The messages.</param>
-        public void LogBatch([NotNull] LogEntry[] messages)
+        public void LogBatch(LogEntry[] messages)
         {
             Assert.Validate.IsNotNull(messages, nameof(messages));
 

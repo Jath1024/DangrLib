@@ -9,10 +9,6 @@
   </PropertyGroup>
   <Import Project="$(SolutionDir)\Tools\Build\Dangr.targets" />
   <ItemGroup>
-    <Reference Include="JetBrains.Annotations, Version=10.2.1.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\JetBrains.Annotations.10.2.1\lib\net\JetBrains.Annotations.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -23,7 +19,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Properties\AdditionalAssemblyInfo.cs">
+      <DependentUpon>AdditionalAssemblyInfo.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="NamespaceDoc.cs" />
+    <None Include="Dangr.Simulation.nuspec">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dangr.Simulation.tt</DependentUpon>
+    </None>
     <None Include="Simulation\Components\Gates\AndGate.cs" />
     <None Include="Simulation\Components\Gates\Buffer.cs" />
     <None Include="Simulation\Components\Gates\ControlledBuffer.cs" />
@@ -62,7 +68,16 @@
     <Folder Include="Simulation\Components\Plexers\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Dangr.Simulation.nuspec" />
-    <None Include="packages.config" />
+    <None Include="Dangr.Simulation.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Dangr.Simulation.nuspec</LastGenOutput>
+    </None>
+    <None Include="Properties\AdditionalAssemblyInfo.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AdditionalAssemblyInfo.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
 </Project>

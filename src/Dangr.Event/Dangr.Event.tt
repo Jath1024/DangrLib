@@ -1,0 +1,18 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ output extension=".nuspec" #>
+<#@ 
+    include file="$(SolutionDir)\Tools\CommonSource\Versions.t4" once="true" 
+#>
+<?xml version="1.0"?>
+
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <#@ include file="$(SolutionDir)\Tools\CommonSource\NuspecMetadata.t4" once="true" #>
+    <tags>dangrlib event subscribe publish</tags>
+  </metadata>
+  <files>
+    <#@ include file="$(SolutionDir)\Tools\CommonSource\NuspecCommonFiles.t4" once="true" #>
+  </files>
+</package>
