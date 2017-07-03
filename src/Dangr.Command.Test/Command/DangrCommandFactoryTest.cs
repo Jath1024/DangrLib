@@ -247,5 +247,102 @@ namespace Dangr.Command
             Assert.Validate.AreEqual("MandatoryArg", exception.ArgumentName,
                 "Exception thrown for wrong argument.");
         }
+
+        [TestMethod]
+        public void Parse_Decimal()
+        {
+            const decimal expected = 12.345M;
+            CommandLine commandLine = new CommandLine($"Types -Decimal {expected}");
+            IDangrCommandFactory factory = new DangrCommandFactory<TypeCommand>();
+
+            IDangrCommand command = factory.Create(commandLine);
+
+            Assert.Validate.IsType<TypeCommand>(command, "Wrong type of command created.");
+            TypeCommand typeCommand = (TypeCommand)command;
+            Assert.Validate.AreEqual(expected, typeCommand.Decimal, "Wrong value assigned arg.");
+        }
+
+        [TestMethod]
+        public void Parse_Double()
+        {
+            const double expected = 12.345;
+            CommandLine commandLine = new CommandLine($"Types -Double {expected}");
+            IDangrCommandFactory factory = new DangrCommandFactory<TypeCommand>();
+
+            IDangrCommand command = factory.Create(commandLine);
+
+            Assert.Validate.IsType<TypeCommand>(command, "Wrong type of command created.");
+            TypeCommand typeCommand = (TypeCommand)command;
+            Assert.Validate.AreEqual(expected, typeCommand.Double, "Wrong value assigned arg.");
+        }
+
+        [TestMethod]
+        public void Parse_Float()
+        {
+            const float expected = 12.345f;
+            CommandLine commandLine = new CommandLine($"Types -Float {expected}");
+            IDangrCommandFactory factory = new DangrCommandFactory<TypeCommand>();
+
+            IDangrCommand command = factory.Create(commandLine);
+
+            Assert.Validate.IsType<TypeCommand>(command, "Wrong type of command created.");
+            TypeCommand typeCommand = (TypeCommand)command;
+            Assert.Validate.AreEqual(expected, typeCommand.Float, "Wrong value assigned arg.");
+        }
+
+        [TestMethod]
+        public void Parse_Long()
+        {
+            const long expected = 12345l;
+            CommandLine commandLine = new CommandLine($"Types -Long {expected}");
+            IDangrCommandFactory factory = new DangrCommandFactory<TypeCommand>();
+
+            IDangrCommand command = factory.Create(commandLine);
+
+            Assert.Validate.IsType<TypeCommand>(command, "Wrong type of command created.");
+            TypeCommand typeCommand = (TypeCommand)command;
+            Assert.Validate.AreEqual(expected, typeCommand.Long, "Wrong value assigned arg.");
+        }
+
+        [TestMethod]
+        public void Parse_Int()
+        {
+            const int expected = 12345;
+            CommandLine commandLine = new CommandLine($"Types -Int {expected}");
+            IDangrCommandFactory factory = new DangrCommandFactory<TypeCommand>();
+
+            IDangrCommand command = factory.Create(commandLine);
+
+            Assert.Validate.IsType<TypeCommand>(command, "Wrong type of command created.");
+            TypeCommand typeCommand = (TypeCommand)command;
+            Assert.Validate.AreEqual(expected, typeCommand.Int, "Wrong value assigned arg.");
+        }
+
+        [TestMethod]
+        public void Parse_String()
+        {
+            const string expected = "1234.5";
+            CommandLine commandLine = new CommandLine($"Types -String {expected}");
+            IDangrCommandFactory factory = new DangrCommandFactory<TypeCommand>();
+
+            IDangrCommand command = factory.Create(commandLine);
+
+            Assert.Validate.IsType<TypeCommand>(command, "Wrong type of command created.");
+            TypeCommand typeCommand = (TypeCommand)command;
+            Assert.Validate.AreEqual(expected, typeCommand.String, "Wrong value assigned arg.");
+        }
+
+        [TestMethod]
+        public void Parse_Bool()
+        {
+            CommandLine commandLine = new CommandLine($"Types -Bool");
+            IDangrCommandFactory factory = new DangrCommandFactory<TypeCommand>();
+
+            IDangrCommand command = factory.Create(commandLine);
+
+            Assert.Validate.IsType<TypeCommand>(command, "Wrong type of command created.");
+            TypeCommand typeCommand = (TypeCommand)command;
+            Assert.Validate.IsTrue(typeCommand.Bool, "Wrong value assigned arg.");
+        }
     }
 }

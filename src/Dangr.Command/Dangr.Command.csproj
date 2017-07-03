@@ -19,7 +19,7 @@
   <ItemGroup>
     <Compile Include="Command\Annotation\AliasAttribute.cs" />
     <Compile Include="Command\Commands\DangrCommandHelp.cs" />
-    <Compile Include="Command\CommandContext.cs" />
+    <Compile Include="Command\CommandExecutor.cs" />
     <Compile Include="Command\Exceptions\CommandExecutionException.cs" />
     <Compile Include="Command\CommandLine.cs" />
     <Compile Include="Command\Exceptions\UnknownCommandException.cs" />

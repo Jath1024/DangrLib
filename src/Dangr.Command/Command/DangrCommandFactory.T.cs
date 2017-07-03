@@ -11,6 +11,7 @@ namespace Dangr.Command
     using System;
     using System.Collections.Generic;
     using System.Collections.Immutable;
+    using System.ComponentModel;
     using System.Reflection;
     using System.Text;
     using Dangr.Command.Annotation;
@@ -135,13 +136,32 @@ namespace Dangr.Command
 
             foreach (KeyValuePair<PropertyInfo, string> entry in boundParameters)
             {
-                // TASK: [10] Convert command parameters to required types.
-                // https://github.com/Dangerdan9631/DangrLib/issues/10
-                if (entry.Key.PropertyType == typeof(bool))
+                Type propertyType = entry.Key.PropertyType;
+                if(propertyType == typeof(bool))
                 {
                     entry.Key.SetValue(command, true);
                 }
-                else
+                else if(propertyType == typeof(decimal))
+                {
+                    entry.Key.SetValue(command, Convert.ToDecimal(entry.Value));
+                }
+                else if (propertyType == typeof(double))
+                {
+                    entry.Key.SetValue(command, Convert.ToDouble(entry.Value));
+                }
+                else if (propertyType == typeof(float))
+                {
+                    entry.Key.SetValue(command, Convert.ToSingle(entry.Value));
+                }
+                else if (propertyType == typeof(long))
+                {
+                    entry.Key.SetValue(command, Convert.ToInt64(entry.Value));
+                }
+                else if (propertyType == typeof(int))
+                {
+                    entry.Key.SetValue(command, Convert.ToInt32(entry.Value));
+                }
+                else if (propertyType == typeof(string))
                 {
                     entry.Key.SetValue(command, entry.Value);
                 }

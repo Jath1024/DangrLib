@@ -22,9 +22,9 @@ namespace Dangr.Command.Commands
             TextWriter outputStream = new StringWriter();
             TextWriter errorStream = new StringWriter();
 
-            CommandContext context = new CommandContext("TestContext", outputStream, errorStream);
-            context.AddCommand<OutputCommand>();
-            context.Execute("help help");
+            CommandExecutor executor = new CommandExecutor("TestContext", outputStream, errorStream);
+            executor.AddCommand<OutputCommand>();
+            executor.Execute("help help");
 
             Assert.Validate.IsNotNullOrWhiteSpace(outputStream.ToString(),
                 "Did not find the expected output.");
@@ -39,9 +39,9 @@ namespace Dangr.Command.Commands
             TextWriter outputStream = new StringWriter();
             TextWriter errorStream = new StringWriter();
 
-            CommandContext context = new CommandContext("TestContext", outputStream, errorStream);
-            context.AddCommand<OutputCommand>();
-            context.Execute("help");
+            CommandExecutor executor = new CommandExecutor("TestContext", outputStream, errorStream);
+            executor.AddCommand<OutputCommand>();
+            executor.Execute("help");
 
             Assert.Validate.IsNotNullOrWhiteSpace(outputStream.ToString(),
                 "Did not find the expected output.");
@@ -56,9 +56,9 @@ namespace Dangr.Command.Commands
             TextWriter outputStream = new StringWriter();
             TextWriter errorStream = new StringWriter();
 
-            CommandContext context = new CommandContext("TestContext", outputStream, errorStream);
-            context.AddCommand<OutputCommand>();
-            context.Execute("help invalid");
+            CommandExecutor executor = new CommandExecutor("TestContext", outputStream, errorStream);
+            executor.AddCommand<OutputCommand>();
+            executor.Execute("help invalid");
 
             Assert.Validate.IsNullOrWhiteSpace(outputStream.ToString(),
                 "Should not have written value to output.");

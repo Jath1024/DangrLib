@@ -1,5 +1,5 @@
 ﻿// -----------------------------------------------------------------------
-//  <copyright file="CommandContext.cs" company="DangerDan9631">
+//  <copyright file="CommandExecutor.cs" company="DangerDan9631">
 //      Copyright (c) 2017 Dan Garvey. All rights reserved.
 //      Licensed under the MIT License. 
 //      See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
@@ -17,15 +17,70 @@ namespace Dangr.Command
     using Dangr.Util;
 
     /// <summary>
-    /// The context that defines what <see cref="IDangrCommand"/>s exist and can be executed.
+    /// The executor that defines what <see cref="IDangrCommand"/>s exist and can be executed.
     /// </summary>
-    /// TASK: [11] Add example and remarks doc comments. 
-    /// https://github.com/Dangerdan9631/DangrLib/issues/11
-    public class CommandContext : ICommandContext
+    /// <remarks>
+    /// <para>
+    /// The <see cref="CommandExecutor"/> is an object that will parse a given command line and execute
+    /// it as a command. Different <see cref="IDangrCommand"/>s can be registered.
+    /// </para>
+    /// <para>
+    /// <see cref="CommandExecutor"/>s can also be nested to create a scope for specific commands. Commands
+    /// registered with the child executor can only be accessed when executed with the child executor,
+    /// but commands registered with the parent executor can be executed from the child. Names are resolved
+    /// starting with the child, so any commands registered with the same name will override commands in
+    /// the parent executor.
+    /// </para>
+    /// <para>
+    /// Command lines are parsed using a <see cref="CommandLine"/> instance and should follow those
+    /// conventions for command and argument names.
+    /// </para>
+    /// </remarks>
+    /// 
+    /// 
+    /// <example>
+    /// <c>Example 1</c><br/>
+    /// The following example will create a <see cref="CommandExecutor"/>, register a command called "Output"
+    /// and execute it.
+    /// <code>
+    /// TextWriter outputStream = new StringWriter();
+    /// TextWriter errorStream = new StringWriter();
+    /// 
+    /// CommandExecutor executor = new CommandExecutor("TestContext", outputStream, errorStream);
+    /// executor.AddCommand&lt;OutputCommand&gt;();
+    /// executor.Execute("Output 'hello world'");
+    /// </code>
+    /// Will write to the outputStream:
+    /// <code>
+    /// hello world
+    /// </code>
+    /// </example>
+    /// 
+    /// 
+    /// <example>
+    /// <c>Example 2</c><br/>
+    /// The following example will create a <see cref="CommandExecutor"/>, register a command called "Output"
+    /// and execute the command from it's child <see cref="CommandExecutor"/>.
+    /// <code>
+    /// TextWriter outputStream = new StringWriter();
+    /// TextWriter errorStream = new StringWriter();
+    /// 
+    /// CommandExecutor parentExecutor = new CommandExecutor("TestContext", outputStream, errorStream);
+    /// CommandExecutor childExecutor = new CommandExecutor("ChildContext", parentExecutor);
+    /// parentExecutor.AddCommand&lt;OutputCommand&gt;();
+    /// childExecutor.Execute("Output 'hello world'");
+    /// </code>
+    /// Will write to the outputStream:
+    /// <code>
+    /// hello world
+    /// </code>
+    /// </example>
+    /// <seealso cref="CommandLine"/>
+    public class CommandExecutor : ICommandContext
     {
         private readonly TextWriter outputWriter;
         private readonly TextWriter errorWriter;
-        private readonly CommandContext parentContext;
+        private readonly CommandExecutor parentExecutor;
         private readonly Dictionary<string, IDangrCommandFactory> commandMap;
 
         /// <summary>
@@ -34,37 +89,37 @@ namespace Dangr.Command
         public string Name { get; }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="CommandContext"/> class.
+        /// Initializes a new instance of the <see cref="CommandExecutor"/> class.
         /// </summary>
-        /// <param name="contextName">Name of the context.</param>
+        /// <param name="contextName">Name of the executor.</param>
         /// <param name="outputStream">The standard output stream.</param>
         /// <param name="errorStream">The standard error stream.</param>
-        public CommandContext(string contextName, TextWriter outputStream, TextWriter errorStream)
+        public CommandExecutor(string contextName, TextWriter outputStream, TextWriter errorStream)
         {
             this.Name = contextName;
             this.commandMap = new Dictionary<string, IDangrCommandFactory>();
             this.AddCommand<DangrCommandHelp>();
-            this.parentContext = null;
+            this.parentExecutor = null;
             this.outputWriter = outputStream;
             this.errorWriter = errorStream;
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="CommandContext"/> class.
+        /// Initializes a new instance of the <see cref="CommandExecutor"/> class.
         /// </summary>
-        /// <param name="contextName">Name of the context.</param>
-        /// <param name="parentContext">The parent context.</param>
-        public CommandContext(string contextName, CommandContext parentContext)
-            : this(contextName, parentContext.outputWriter, parentContext.errorWriter)
+        /// <param name="contextName">Name of the executor.</param>
+        /// <param name="parentExecutor">The parent executor.</param>
+        public CommandExecutor(string contextName, CommandExecutor parentExecutor)
+            : this(contextName, parentExecutor.outputWriter, parentExecutor.errorWriter)
         {
-            this.parentContext = parentContext;
+            this.parentExecutor = parentExecutor;
         }
 
         /// <summary>
-        /// Adds a <see cref="IDangrCommand"/> to this <see cref="CommandContext"/>.
+        /// Adds a <see cref="IDangrCommand"/> to this <see cref="CommandExecutor"/>.
         /// </summary>
         /// <typeparam name="T">The type of <see cref="IDangrCommand"/> to add.</typeparam>
-        /// <exception cref="ArgumentException"> Thrown if the command already exists in the command context.</exception>
+        /// <exception cref="ArgumentException"> Thrown if the command already exists in the command executor.</exception>
         public void AddCommand<T>() where T : IDangrCommand, new()
         {
             var commandFactory = new DangrCommandFactory<T>();
@@ -72,7 +127,7 @@ namespace Dangr.Command
             if (this.commandMap.ContainsKey(commandName))
             {
                 throw new ArgumentException(
-                    $"The command {commandName} already exists in command context {this.Name}.",
+                    $"The command {commandName} already exists in command executor {this.Name}.",
                     typeof(T).Name);
             }
 
@@ -95,7 +150,7 @@ namespace Dangr.Command
         /// Outputs the specified object to the <see cref="ICommandContext" /> output stream.
         /// </summary>
         /// <param name="output">The output.</param>
-        public void Output(object output)
+        void ICommandContext.Output(object output)
         {
             this.outputWriter.WriteLine(output);
         }
@@ -104,7 +159,7 @@ namespace Dangr.Command
         /// Outputs the specified object to the <see cref="ICommandContext" /> error stream.
         /// </summary>
         /// <param name="error">The error.</param>
-        public void Error(object error)
+        void ICommandContext.Error(object error)
         {
             this.errorWriter.WriteLine(error);
         }
@@ -115,7 +170,7 @@ namespace Dangr.Command
         /// <returns>
         /// The help text for all of the <see cref="IDangrCommand" />s defined in the <see cref="ICommandContext" />.
         /// </returns>
-        public string GetHelpText()
+        string ICommandContext.GetHelpText()
         {
             StringBuilder builder = new StringBuilder();
             foreach (IDangrCommandFactory commandFactory in this.commandMap.Values)
@@ -133,7 +188,7 @@ namespace Dangr.Command
         /// <returns>
         /// The help text for the specified <see cref="IDangrCommand" />s defined in the <see cref="ICommandContext" />.
         /// </returns>
-        public string GetHelpText(string commandName)
+        string ICommandContext.GetHelpText(string commandName)
         {
             IDangrCommandFactory commandFactory = this.GetCommandFactory(commandName);
             return commandFactory.CommandHelp;
@@ -147,14 +202,14 @@ namespace Dangr.Command
                 return commandFactory;
             }
 
-            if (this.parentContext != null)
+            if (this.parentExecutor != null)
             {
-                return this.parentContext.GetCommandFactory(commandName);
+                return this.parentExecutor.GetCommandFactory(commandName);
             }
 
             throw new UnknownCommandException(
                 commandName,
-                $"Command '{commandName}' does not exist in this context.");
+                $"Command '{commandName}' does not exist in this executor.");
         }
     }
 }

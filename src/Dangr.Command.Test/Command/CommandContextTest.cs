@@ -25,9 +25,9 @@ namespace Dangr.Command
             TextWriter outputStream = new StringWriter();
             TextWriter errorStream = new StringWriter();
 
-            CommandContext context = new CommandContext("TestContext", outputStream, errorStream);
-            context.AddCommand<OutputCommand>();
-            context.Execute("Output hello");
+            CommandExecutor executor = new CommandExecutor("TestContext", outputStream, errorStream);
+            executor.AddCommand<OutputCommand>();
+            executor.Execute("Output hello");
 
             Assert.Validate.AreEqual("hello" + Environment.NewLine, outputStream.ToString(),
                 "Did not find the expected output.");
@@ -39,9 +39,9 @@ namespace Dangr.Command
             TextWriter outputStream = new StringWriter();
             TextWriter errorStream = new StringWriter();
 
-            CommandContext context = new CommandContext("TestContext", outputStream, errorStream);
-            context.AddCommand<ErrorCommand>();
-            context.Execute("Error hello");
+            CommandExecutor executor = new CommandExecutor("TestContext", outputStream, errorStream);
+            executor.AddCommand<ErrorCommand>();
+            executor.Execute("Error hello");
 
             Assert.Validate.AreEqual("hello" + Environment.NewLine, errorStream.ToString(),
                 "Did not find the expected error.");
@@ -53,11 +53,11 @@ namespace Dangr.Command
             TextWriter outputStream = new StringWriter();
             TextWriter errorStream = new StringWriter();
 
-            CommandContext context = new CommandContext("TestContext", outputStream, errorStream);
-            context.AddCommand<OutputCommand>();
+            CommandExecutor executor = new CommandExecutor("TestContext", outputStream, errorStream);
+            executor.AddCommand<OutputCommand>();
 
             UnknownCommandException exception = TestUtils.TestForError<UnknownCommandException>(
-                () => context.Execute("Error hello"),
+                () => executor.Execute("Error hello"),
                 "Did not catch expected exception");
 
             Assert.Validate.AreEqual("Error", exception.CommandName,
@@ -70,10 +70,10 @@ namespace Dangr.Command
             TextWriter outputStream = new StringWriter();
             TextWriter errorStream = new StringWriter();
 
-            CommandContext parentContext = new CommandContext("TestContext", outputStream, errorStream);
-            CommandContext childContext = new CommandContext("ChildContext", parentContext);
-            parentContext.AddCommand<OutputCommand>();
-            childContext.Execute("Output hello");
+            CommandExecutor parentExecutor = new CommandExecutor("TestContext", outputStream, errorStream);
+            CommandExecutor childExecutor = new CommandExecutor("ChildContext", parentExecutor);
+            parentExecutor.AddCommand<OutputCommand>();
+            childExecutor.Execute("Output hello");
 
             Assert.Validate.AreEqual("hello" + Environment.NewLine, outputStream.ToString(),
                 "Did not find the expected output.");
@@ -85,12 +85,12 @@ namespace Dangr.Command
             TextWriter outputStream = new StringWriter();
             TextWriter errorStream = new StringWriter();
 
-            CommandContext parentContext = new CommandContext("TestContext", outputStream, errorStream);
-            CommandContext childContext = new CommandContext("ChildContext", parentContext);
-            parentContext.AddCommand<OutputCommand>();
+            CommandExecutor parentExecutor = new CommandExecutor("TestContext", outputStream, errorStream);
+            CommandExecutor childExecutor = new CommandExecutor("ChildContext", parentExecutor);
+            parentExecutor.AddCommand<OutputCommand>();
 
             UnknownCommandException exception = TestUtils.TestForError<UnknownCommandException>(
-                () => childContext.Execute("Error hello"),
+                () => childExecutor.Execute("Error hello"),
                 "Did not catch expected exception");
 
             Assert.Validate.AreEqual("Error", exception.CommandName,
@@ -103,12 +103,12 @@ namespace Dangr.Command
             TextWriter outputStream = new StringWriter();
             TextWriter errorStream = new StringWriter();
 
-            CommandContext parentContext = new CommandContext("TestContext", outputStream, errorStream);
-            CommandContext childContext = new CommandContext("ChildContext", parentContext);
-            parentContext.AddCommand<DuplicateOutputCommand>();
-            childContext.AddCommand<OutputCommand>();
+            CommandExecutor parentExecutor = new CommandExecutor("TestContext", outputStream, errorStream);
+            CommandExecutor childExecutor = new CommandExecutor("ChildContext", parentExecutor);
+            parentExecutor.AddCommand<DuplicateOutputCommand>();
+            childExecutor.AddCommand<OutputCommand>();
 
-            childContext.Execute("Output hello");
+            childExecutor.Execute("Output hello");
 
             Assert.Validate.AreEqual("hello" + Environment.NewLine, outputStream.ToString(),
                 "Did not find the expected output.");
@@ -120,13 +120,42 @@ namespace Dangr.Command
             TextWriter outputStream = new StringWriter();
             TextWriter errorStream = new StringWriter();
 
-            CommandContext context = new CommandContext("TestContext", outputStream, errorStream);
-            context.AddCommand<OutputCommand>();
+            CommandExecutor executor = new CommandExecutor("TestContext", outputStream, errorStream);
+            executor.AddCommand<OutputCommand>();
             ArgumentException exception = TestUtils.TestForError<ArgumentException>(
-                () => context.AddCommand<DuplicateOutputCommand>(),
+                () => executor.AddCommand<DuplicateOutputCommand>(),
                 "Did not catch expected exception.");
             Assert.Validate.AreEqual("DuplicateOutputCommand", exception.ParamName,
                 "Exception occurred for wrong argument.");
+        }
+
+        [TestMethod]
+        public void Example1()
+        {
+            TextWriter outputStream = new StringWriter();
+            TextWriter errorStream = new StringWriter();
+
+            CommandExecutor executor = new CommandExecutor("TestContext", outputStream, errorStream);
+            executor.AddCommand<OutputCommand>();
+            executor.Execute("Output 'hello world'");
+
+            Assert.Validate.AreEqual("hello world" + Environment.NewLine, outputStream.ToString(),
+                "Did not find the expected output.");
+        }
+
+        [TestMethod]
+        public void Example2()
+        {
+            TextWriter outputStream = new StringWriter();
+            TextWriter errorStream = new StringWriter();
+
+            CommandExecutor parentExecutor = new CommandExecutor("TestContext", outputStream, errorStream);
+            CommandExecutor childExecutor = new CommandExecutor("ChildContext", parentExecutor);
+            parentExecutor.AddCommand<OutputCommand>();
+            childExecutor.Execute("Output 'hello world'");
+
+            Assert.Validate.AreEqual("hello world" + Environment.NewLine, outputStream.ToString(),
+                "Did not find the expected output.");
         }
     }
 }
