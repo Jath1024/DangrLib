@@ -11,7 +11,6 @@ namespace Dangr.Command
     using System;
     using System.Collections.Generic;
     using System.Collections.Immutable;
-    using System.ComponentModel;
     using System.Reflection;
     using System.Text;
     using Dangr.Command.Annotation;
@@ -136,35 +135,7 @@ namespace Dangr.Command
 
             foreach (KeyValuePair<PropertyInfo, string> entry in boundParameters)
             {
-                Type propertyType = entry.Key.PropertyType;
-                if(propertyType == typeof(bool))
-                {
-                    entry.Key.SetValue(command, true);
-                }
-                else if(propertyType == typeof(decimal))
-                {
-                    entry.Key.SetValue(command, Convert.ToDecimal(entry.Value));
-                }
-                else if (propertyType == typeof(double))
-                {
-                    entry.Key.SetValue(command, Convert.ToDouble(entry.Value));
-                }
-                else if (propertyType == typeof(float))
-                {
-                    entry.Key.SetValue(command, Convert.ToSingle(entry.Value));
-                }
-                else if (propertyType == typeof(long))
-                {
-                    entry.Key.SetValue(command, Convert.ToInt64(entry.Value));
-                }
-                else if (propertyType == typeof(int))
-                {
-                    entry.Key.SetValue(command, Convert.ToInt32(entry.Value));
-                }
-                else if (propertyType == typeof(string))
-                {
-                    entry.Key.SetValue(command, entry.Value);
-                }
+                DangrCommandFactory<T>.SetValue(command, entry.Key, entry.Value);
             }
 
             return command;
@@ -284,6 +255,39 @@ namespace Dangr.Command
 
                     parameterList.Add(commandParameter);
                 }
+            }
+        }
+        
+        private static void SetValue(object instance, PropertyInfo property, string value)
+        {
+            Type propertyType = property.PropertyType;
+            if (propertyType == typeof(bool))
+            {
+                property.SetValue(instance, true);
+            }
+            else if (propertyType == typeof(decimal))
+            {
+                property.SetValue(instance, Convert.ToDecimal(value));
+            }
+            else if (propertyType == typeof(double))
+            {
+                property.SetValue(instance, Convert.ToDouble(value));
+            }
+            else if (propertyType == typeof(float))
+            {
+                property.SetValue(instance, Convert.ToSingle(value));
+            }
+            else if (propertyType == typeof(long))
+            {
+                property.SetValue(instance, Convert.ToInt64(value));
+            }
+            else if (propertyType == typeof(int))
+            {
+                property.SetValue(instance, Convert.ToInt32(value));
+            }
+            else if (propertyType == typeof(string))
+            {
+                property.SetValue(instance, value);
             }
         }
 
