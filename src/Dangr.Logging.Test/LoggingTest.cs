@@ -48,7 +48,7 @@ namespace Dangr.Framework.Logging
         [TestMethod]
         public void Wcf_Logging_Test()
         {
-            const int numMessagesToLog = 100;
+            const int numMessagesToLog = 21;
 
             var baseAddresses = new[] {DefaultWcfEndpoints.GetNetNamedPipeUri()};
 
@@ -106,7 +106,7 @@ namespace Dangr.Framework.Logging
 
             Assert.AreEqual(numMessagesToLog, destEndpoint.NumMessagesLogged);
         }
-
+        
         [Ignore]
         [TestMethod]
         public void Log_Viewer_Test()
@@ -140,6 +140,8 @@ namespace Dangr.Framework.Logging
                 {
                     Thread.Sleep(16);
                 }
+
+                Thread.Sleep(1000);
 
                 sourceLogger.SignalShutDown();
             }

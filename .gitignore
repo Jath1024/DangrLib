@@ -288,7 +288,7 @@ __pycache__/
 *.xsd.cs
 
 # Documentation Output
-/src/Dangr.Documentation/Help/**
+**/src/Dangr.Documentation/Help/**
 
 # Code Coverage Results
 /DangrLib_coverage.xml

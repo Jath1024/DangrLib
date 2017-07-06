@@ -10,13 +10,12 @@ namespace Dangr.Logging.Wcf
 {
     using System;
     using System.Collections.Generic;
-    using System.Reactive.Disposables;
     using System.ServiceModel;
     using System.ServiceModel.Channels;
     using System.Threading;
     using System.Threading.Tasks;
     using Dangr.Diagnostics;
-    using JetBrains.Annotations;
+    using Dangr.Util;
 
     /// <summary>
     /// <para>A service that listens for connections from 

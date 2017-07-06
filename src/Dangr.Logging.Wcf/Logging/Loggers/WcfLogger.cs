@@ -9,16 +9,15 @@
 namespace Dangr.Logging.Loggers
 {
     using System;
+    using System.Collections.Concurrent;
     using System.Collections.Generic;
-    using System.Linq;
-    using System.Reactive.Concurrency;
     using System.ServiceModel;
     using System.ServiceModel.Channels;
     using System.Text;
+    using System.Threading;
     using Dangr.Diagnostics;
     using Dangr.Logging.Wcf;
     using Dangr.Util;
-    using JetBrains.Annotations;
 
     /// <summary>
     ///     Logger pipeline logger that will use WCF to send logs to a 
@@ -39,24 +38,23 @@ namespace Dangr.Logging.Loggers
         private readonly LogService logService;
         private bool loggedEndpointNotFound;
         private WcfLogClient client;
-        private readonly IDisposable disposable;
+        private readonly Timer timer;
+        private readonly ConcurrentQueue<LogEntry> entriesQueue;
 
         /// <summary>
         ///     Gets or sets the maximum size of the batch.
         /// </summary>
-        public int MaxBatchSize { get; set; }
+        public int MaxBatchSize { get; }
 
         /// <summary>
         ///     Gets or sets the interval to wait before sending a batch of logs.
         /// </summary>
-        public TimeSpan MessageInterval { get; set; }
+        public TimeSpan MessageInterval { get; }
 
         /// <summary>
         ///     Gets a value indicating whether this object is disposed.
         /// </summary>
         public bool IsDisposed { get; private set; }
-
-        private event Action<LogEntry> LogMessage;
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="WcfLogger" /> class.
@@ -90,14 +88,9 @@ namespace Dangr.Logging.Loggers
 
             this.MaxBatchSize = maxBatchSize;
             this.MessageInterval = maxTimeSpan;
-
-            IScheduler scheduler = new EventLoopScheduler();
-            this.disposable =
-                Observable.FromEvent<LogEntry>(h => this.LogMessage += h, h => this.LogMessage -= h)
-                    .ObserveOn(scheduler)
-                    .Buffer(this.MessageInterval, this.MaxBatchSize, scheduler)
-                    .Where(batch => batch.Count > 0)
-                    .Subscribe(this.ProcessMessages);
+            this.entriesQueue = new ConcurrentQueue<LogEntry>();
+            this.timer = new Timer(this.ProcessMessages, null, this.MessageInterval.Milliseconds,
+                this.MessageInterval.Milliseconds);
         }
 
         private void ConnectClient(Binding binding, EndpointAddress endpointAddress)
@@ -150,7 +143,7 @@ namespace Dangr.Logging.Loggers
         {
             if (isDisposing && !this.IsDisposed)
             {
-                this.disposable.Dispose();
+                this.timer.Dispose();
                 this.client.Dispose();
                 this.IsDisposed = true;
             }
@@ -164,18 +157,23 @@ namespace Dangr.Logging.Loggers
         {
             Assert.Validate.NotDisposed(this, nameof(WcfLogger));
             Assert.Validate.IsNotNull(entry, nameof(entry));
-
-            this.OnLogMessage(entry);
+            this.entriesQueue.Enqueue(entry);
         }
 
-        private void OnLogMessage(LogEntry entry)
-        {
-            this.LogMessage?.Invoke(entry);
-        }
-
-        private void ProcessMessages(IList<LogEntry> batch)
+        private void ProcessMessages(object state)
         {
             Assert.Validate.NotDisposed(this, nameof(WcfLogger));
+
+            var batch = new List<LogEntry>();
+
+            while ((batch.Count < this.MaxBatchSize) && (this.entriesQueue.Count > 0))
+            {
+                LogEntry entry;
+                if (this.entriesQueue.TryDequeue(out entry))
+                {
+                    batch.Add(entry);
+                }
+            }
 
             try
             {

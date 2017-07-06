@@ -38,7 +38,6 @@
       <dependency id="Dangr.Logging.Interface" version="[<#= MajorVersion[LOGGING_INTERFACE] #>.0,<#= MajorVersion[LOGGING_INTERFACE] + 1 #>.0)" />
       <dependency id="Dangr.Diagnostics" version="[<#= MajorVersion[DIAGNOSTICS] #>.0,<#= MajorVersion[DIAGNOSTICS] + 1 #>.0)" />
       <dependency id="Dangr.Configuration" version="[<#= MajorVersion[CONFIGURATION] #>.0,<#= MajorVersion[CONFIGURATION] + 1 #>.0)" />
-      <dependency id="System.Reactive.Core" version="3.1.0" targetFramework="net452" />
     </dependencies>
   </metadata>
   <files>

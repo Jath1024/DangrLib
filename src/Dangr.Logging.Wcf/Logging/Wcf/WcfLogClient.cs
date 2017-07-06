@@ -14,7 +14,6 @@ namespace Dangr.Logging.Wcf
     using System.ServiceModel.Channels;
     using Dangr.Diagnostics;
     using Dangr.Util;
-    using JetBrains.Annotations;
 
     /// <summary>
     /// A WCF client for sending logs to a connected 
@@ -93,7 +92,6 @@ namespace Dangr.Logging.Wcf
             "Microsoft.Reliability", 
             "CA2000:Dispose objects before losing scope",
             Justification = "The method constructs a new client. Disposing of it does not make sense here.")]
-        [NotNull]
         public static WcfLogClient CreateClient(Binding binding, EndpointAddress endpointAddress)
         {
             Assert.Validate.IsNotNull(binding, nameof(binding));

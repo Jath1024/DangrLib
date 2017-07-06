@@ -30,7 +30,6 @@
       <dependency id="Dangr.Logging.Interface" version="[1.0,2.0)" />
       <dependency id="Dangr.Diagnostics" version="[1.0,2.0)" />
       <dependency id="Dangr.Configuration" version="[1.0,2.0)" />
-      <dependency id="System.Reactive.Core" version="3.1.0" targetFramework="net452" />
     </dependencies>
   </metadata>
   <files>
