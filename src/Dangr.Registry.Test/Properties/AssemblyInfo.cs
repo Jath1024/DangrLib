@@ -6,14 +6,11 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-using System.Reflection;
-using System.Runtime.InteropServices;
-
-[assembly: AssemblyTitle("Dangr.Registry.Test")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyProduct("Dangr.Registry.Test")]
-
-[assembly: ComVisible(false)]
-
-// The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("d4894aa8-7367-42fb-b6b1-fc825b469b57")]
+// ReSharper disable once CheckNamespace
+namespace Dangr
+{
+    internal static partial class AssemblyConstants
+    {
+        public const string AssemblyDescription = "";
+    }
+}

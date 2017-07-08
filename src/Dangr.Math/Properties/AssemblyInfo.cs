@@ -6,14 +6,12 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-using System.Reflection;
-using System.Runtime.InteropServices;
-
-[assembly: AssemblyTitle("Dangr.Math")]
-[assembly: AssemblyDescription("Math utilities for use with DangrLib.")]
-[assembly: AssemblyProduct("Dangr.Math")]
-
-[assembly: ComVisible(false)]
-
-// The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("5cb06ab2-0287-47af-be50-155a6a351347")]
+// ReSharper disable once CheckNamespace
+namespace Dangr
+{
+    internal static partial class AssemblyConstants
+    {
+        public const string AssemblyDescription =
+            "Math utilities for use with DangrLib.";
+    }
+}

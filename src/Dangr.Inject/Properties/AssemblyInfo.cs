@@ -6,14 +6,11 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-using System.Reflection;
-using System.Runtime.InteropServices;
-
-[assembly: AssemblyTitle("Dangr.Inject")]
-[assembly: AssemblyDescription("Dependency Injection utilities for use with DangrLib.")]
-[assembly: AssemblyProduct("Dangr.Inject")]
-
-[assembly: ComVisible(false)]
-
-// The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("77bd8c58-58d5-491b-862a-67c6b09aca54")]
+// ReSharper disable once CheckNamespace
+namespace Dangr
+{
+    internal static partial class AssemblyConstants
+    {
+        public const string AssemblyDescription = "Dependency Injection utilities for use with DangrLib.";
+    }
+}

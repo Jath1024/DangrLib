@@ -6,14 +6,12 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-using System.Reflection;
-using System.Runtime.InteropServices;
-
-[assembly: AssemblyTitle("Dangr.Logging.Wcf")]
-[assembly: AssemblyDescription("WCF based logging utilities for use with DangrLib's logging framework.")]
-[assembly: AssemblyProduct("Dangr.Logging.Wcf")]
-
-[assembly: ComVisible(false)]
-
-// The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("e3ee3bac-b444-4798-877f-9d67470e3d61")]
+// ReSharper disable once CheckNamespace
+namespace Dangr
+{
+    internal static partial class AssemblyConstants
+    {
+        public const string AssemblyDescription =
+            "WCF based logging utilities for use with DangrLib's logging framework.";
+    }
+}

@@ -6,14 +6,12 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-using System.Reflection;
-using System.Runtime.InteropServices;
-
-[assembly: AssemblyTitle("Dangr.ObjectPool")]
-[assembly: AssemblyDescription("Provides generic object pool utilities.")]
-[assembly: AssemblyProduct("Dangr.ObjectPool")]
-
-[assembly: ComVisible(false)]
-
-// The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("9cf2f5dd-97f9-490d-a0e7-701a41a9e06f")]
+// ReSharper disable once CheckNamespace
+namespace Dangr
+{
+    internal static partial class AssemblyConstants
+    {
+        public const string AssemblyDescription =
+            "Provides generic object pool utilities.";
+    }
+}

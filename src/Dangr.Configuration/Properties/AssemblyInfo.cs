@@ -6,14 +6,11 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-using System.Reflection;
-using System.Runtime.InteropServices;
-
-[assembly: AssemblyTitle("Dangr.Configuration")]
-[assembly: AssemblyDescription("Utilities for loading and accessing configuration data in a scoped manner.")]
-[assembly: AssemblyProduct("Dangr.Configuration")]
-
-[assembly: ComVisible(false)]
-
-// The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("71ddb9f9-9430-42bb-8661-81369796f71f")]
+// ReSharper disable once CheckNamespace
+namespace Dangr
+{
+    internal static partial class AssemblyConstants
+    {
+        public const string AssemblyDescription = "Utilities for loading and accessing configuration data in a scoped manner.";
+    }
+}

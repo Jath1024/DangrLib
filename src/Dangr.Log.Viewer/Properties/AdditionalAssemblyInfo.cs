@@ -37,7 +37,7 @@ namespace Dangr {
         /// <summary>
         /// The name of the assembly.
         /// </summary>
-        public const string AssemblyName = "Dangr.Event";
+        public const string AssemblyName = "Dangr.Log.Viewer";
 
         /// <summary>
         /// The assembly version.

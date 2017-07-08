@@ -293,7 +293,7 @@ namespace Dangr.Command
         [TestMethod]
         public void Parse_Long()
         {
-            const long expected = 12345l;
+            const long expected = 12345L;
             CommandLine commandLine = new CommandLine($"Types -Long {expected}");
             IDangrCommandFactory factory = new DangrCommandFactory<TypeCommand>();
 

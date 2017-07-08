@@ -14,7 +14,7 @@
 <#@ 
     include file="$(SolutionDir)\Tools\CommonSource\Versions.t4" once="true" 
 #>
-<#  string assemblyName = INJECT; #>
+<#  string assemblyName = LOG_VIEWER; #>
 <#  bool isTestAssembly = false; #>
 <#@ 
     include file="$(SolutionDir)\Tools\CommonSource\AssemblyConstants.t4"  once="true" 

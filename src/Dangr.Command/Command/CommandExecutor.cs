@@ -76,7 +76,7 @@ namespace Dangr.Command
     /// </code>
     /// </example>
     /// <seealso cref="CommandLine"/>
-    public class CommandExecutor : ICommandContext
+    public sealed class CommandExecutor : ICommandContext
     {
         private readonly TextWriter outputWriter;
         private readonly TextWriter errorWriter;

@@ -15,6 +15,7 @@
     include file="$(SolutionDir)\Tools\CommonSource\Versions.t4" once="true" 
 #>
 <#  string assemblyName = LOGGING_INTERFACE; #>
+<#  bool isTestAssembly = false; #>
 <#@ 
     include file="$(SolutionDir)\Tools\CommonSource\AssemblyConstants.t4"  once="true" 
 #>

@@ -6,14 +6,11 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-using System.Reflection;
-using System.Runtime.InteropServices;
-
-[assembly: AssemblyTitle("Dangr.Command")]
-[assembly: AssemblyDescription("Utilities for parsing and executing commands from a command line.")]
-[assembly: AssemblyProduct("Dangr.Command")]
-
-[assembly: ComVisible(false)]
-
-// The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("5ffcc11a-3387-466e-872c-8eaa6e31fa01")]
+// ReSharper disable once CheckNamespace
+namespace Dangr
+{
+    internal static partial class AssemblyConstants
+    {
+        public const string AssemblyDescription = "Utilities for parsing and executing commands from a command line.";
+    }
+}

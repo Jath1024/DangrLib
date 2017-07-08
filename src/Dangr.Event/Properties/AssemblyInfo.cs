@@ -6,14 +6,11 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-using System.Reflection;
-using System.Runtime.InteropServices;
-
-[assembly: AssemblyTitle("Dangr.Event")]
-[assembly: AssemblyDescription("Utilities for publishing and subscribing to event channels.")]
-[assembly: AssemblyProduct("Dangr.Event")]
-
-[assembly: ComVisible(false)]
-
-// The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("b4e2ebbc-35e4-418a-879e-15f333ba1c45")]
+// ReSharper disable once CheckNamespace
+namespace Dangr
+{
+    internal static partial class AssemblyConstants
+    {
+        public const string AssemblyDescription = "Utilities for publishing and subscribing to event channels.";
+    }
+}

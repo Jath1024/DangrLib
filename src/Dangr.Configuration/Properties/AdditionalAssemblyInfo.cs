@@ -11,8 +11,12 @@
     Make changes to "/Tools/CommonSource/AssemblyConstants.t4" directly.
 */
 using System.Reflection;
+using System.Runtime.InteropServices;
 using Dangr;
-
+    
+[assembly: AssemblyTitle(AssemblyConstants.AssemblyName)]
+[assembly: AssemblyProduct(AssemblyConstants.AssemblyName)]
+[assembly: AssemblyDescription(AssemblyConstants.AssemblyDescription)]
 [assembly: AssemblyCompany(AssemblyConstants.AssemblyCompany)]
 [assembly: AssemblyCopyright(AssemblyConstants.AssemblyCopyright)]
 [assembly: AssemblyVersion(AssemblyConstants.AssemblyVersion)]
@@ -21,11 +25,20 @@ using Dangr;
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
+[assembly: ComVisible(false)]
+
+// ReSharper disable once CheckNamespace
 namespace Dangr {    
     /// <summary>
     /// Provides constants for use in AssemblyInfo.cs.
     /// </summary>
-    internal static class AssemblyConstants {
+    internal static partial class AssemblyConstants {
+
+        /// <summary>
+        /// The name of the assembly.
+        /// </summary>
+        public const string AssemblyName = "Dangr.Configuration";
+
         /// <summary>
         /// The assembly version.
         /// </summary>

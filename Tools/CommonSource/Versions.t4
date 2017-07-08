@@ -21,6 +21,7 @@ const string DIAGNOSTICS = "Dangr.Diagnostics";
 const string ENTITY = "Dangr.Entity";
 const string EVENT = "Dangr.Event";
 const string INJECT = "Dangr.Inject";
+const string LOG_VIEWER = "Dangr.Log.Viewer";
 const string LOGGING = "Dangr.Logging";
 const string LOGGING_INTERFACE = "Dangr.Logging.Interface";
 const string LOGGING_LOGGERS = "Dangr.Logging.Loggers";
@@ -73,6 +74,12 @@ PatchVersion.Add(EVENT, 0);
 MajorVersion.Add(INJECT, 1);
 MinorVersion.Add(INJECT, 1);
 PatchVersion.Add(INJECT, 0);
+#>
+<# 
+// Dangr.Log.Viewer Version
+MajorVersion.Add(LOG_VIEWER, 1);
+MinorVersion.Add(LOG_VIEWER, 1);
+PatchVersion.Add(LOG_VIEWER, 0);
 #>
 <# 
 // Dangr.Logging Version

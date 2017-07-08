@@ -6,14 +6,11 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-using System.Reflection;
-using System.Runtime.InteropServices;
-
-[assembly: AssemblyTitle("Dangr.Async")]
-[assembly: AssemblyDescription("Asynchronous code execution utilities for use with DangrLib.")]
-[assembly: AssemblyProduct("Dangr.Async")]
-
-[assembly: ComVisible(false)]
-
-// The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("372d1f3e-e890-4fae-981b-75e8c671dc58")]
+// ReSharper disable once CheckNamespace
+namespace Dangr
+{
+    internal static partial class AssemblyConstants
+    {
+        public const string AssemblyDescription = "Asynchronous code execution utilities for use with DangrLib.";
+    }
+}

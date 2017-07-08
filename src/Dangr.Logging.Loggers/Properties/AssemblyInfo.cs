@@ -6,14 +6,12 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-using System.Reflection;
-using System.Runtime.InteropServices;
-
-[assembly: AssemblyTitle("Dangr.Logging.Loggers")]
-[assembly: AssemblyDescription("Default loggers that can be used with DangrLib's logging framework.")]
-[assembly: AssemblyProduct("Dangr.Logging.Loggers")]
-
-[assembly: ComVisible(false)]
-
-// The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("bc835590-135a-4d60-9e01-82538fda6390")]
+// ReSharper disable once CheckNamespace
+namespace Dangr
+{
+    internal static partial class AssemblyConstants
+    {
+        public const string AssemblyDescription =
+            "Default loggers that can be used with DangrLib's logging framework.";
+    }
+}
