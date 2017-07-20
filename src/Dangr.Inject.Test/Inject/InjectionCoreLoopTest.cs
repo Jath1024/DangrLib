@@ -9,6 +9,8 @@
 namespace Dangr.Inject
 {
     using System;
+    using Dangr.Inject.Core;
+    using Dangr.Inject.Core.Attributes;
     using Dangr.Test;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -19,36 +21,36 @@ namespace Dangr.Inject
         public class TestModule
         {
             [Singleton]
-            [Provides(typeof(TestTypes.LoopedClass1))]
+            [Provider(typeof(TestTypes.LoopedClass1))]
             public TestTypes.LoopedClass1 LoopedClass1Instance { get; set; }
 
             [Singleton]
-            [Provides(typeof(TestTypes.LoopedClass2))]
+            [Provider(typeof(TestTypes.LoopedClass2))]
             public TestTypes.LoopedClass2 LoopedClass2Instance { get; set; }
 
             [Singleton]
-            [Provides("LoopedMethod1")]
+            [Provider("LoopedMethod1")]
             public static object ProvideLoopedMethod1([Named("LoopedMethod2")] object obj)
             {
                 return new object();
             }
 
             [Singleton]
-            [Provides("LoopedMethod2")]
+            [Provider("LoopedMethod2")]
             public static object ProvideLoopedMethod2([Named("LoopedMethod1")] object obj)
             {
                 return new object();
             }
 
             [Singleton]
-            [Provides("SelfLoopedMethod1")]
+            [Provider("SelfLoopedMethod1")]
             public static object ProvideSelfLoopedMethod1([Named("SelfLoopedMethod1")] object obj)
             {
                 return new object();
             }
 
             [Singleton]
-            [Provides("NotLoopedMethod1")]
+            [Provider("NotLoopedMethod1")]
             public static object ProvideNotLoopedMethod1(
                 [Named("NotLoopedMethod2")] object obj1,
                 [Named("NotLoopedMethod3")] object obj2,
@@ -59,21 +61,21 @@ namespace Dangr.Inject
             }
 
             [Singleton]
-            [Provides("NotLoopedMethod2")]
+            [Provider("NotLoopedMethod2")]
             public static object ProvideNotLoopedMethod2([Named("NotLoopedMethod3")] object obj)
             {
                 return new object();
             }
 
             [Singleton]
-            [Provides("NotLoopedMethod3")]
+            [Provider("NotLoopedMethod3")]
             public static object ProvideNotLoopedMethod3()
             {
                 return new object();
             }
 
             [Singleton]
-            [Provides("NotLoopedMethod4")]
+            [Provider("NotLoopedMethod4")]
             public static object ProvideNotLoopedMethod4([Named("NotLoopedMethod3")] object obj)
             {
                 return new object();

@@ -8,6 +8,9 @@
 
 namespace Dangr.Inject
 {
+    using System.Diagnostics.Eventing.Reader;
+    using Dangr.Inject.Core;
+    using Dangr.Inject.Core.Attributes;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Assert = Dangr.Diagnostics.Assert;
 
@@ -15,38 +18,86 @@ namespace Dangr.Inject
     public class InjectionCoreTest
     {
         [InjectionModule]
-        public class TestModule
+        public class TestModule : InjectionModule
         {
+            private void Bind();
+            public void InitializeBindings()
+            {
+                Bind<TestTypes.Class1>().ToType<TestTypes.IClass1>();
+                Bind<TestTypes.Class2>().ToType<TestTypes.IClass2>().;
+            }
             [Singleton]
-            [Provides(typeof(TestTypes.IClass1))]
-            public TestTypes.Class1 Class1Instance { get; set; }
+            [BindToType(TestTypes.IClass1)]
+            private TestTypes.Class1 class1Instance;
 
             [Prototype]
-            [Provides(typeof(TestTypes.IClass2))]
-            public TestTypes.Class2 Class2Instance { get; set; }
+            [BindToType(TestTypes.IClass2)]
+            private TestTypes.Class2 class2Instance;
 
             [Singleton]
-            [Provides("NamedClass1")]
-            public TestTypes.Class1 NamedClass1Instance { get; set; }
+            [BindToName("NamedClass1")]
+            private TestTypes.Class1 namedClass1Instance;
 
             [Singleton]
-            [Provides(typeof(TestTypes.Class3), "NamedClass3")]
-            public TestTypes.Class3 NamedClass3Instance { get; set; }
+            [BindToSelf]
+            private TestTypes.Class3 namedClass3Instance;
+            
+            [BindToSelf]
+            private TestTypes.Class2 defaultScopeInstance;
 
             [Singleton]
-            [Provides(typeof(TestTypes.Class1Container))]
-            public TestTypes.Class1Container
-                Class1ContainerInstance { get; set; }
+            [BindToSelf]
+            private TestTypes.Class1Container class1ContainerInstance;
 
             [Singleton]
-            [Provides("ConstructedClass1Container")]
+            [Provider("ConstructedClass1Container")]
             public static TestTypes.Class1Container ProvideClass1Container(TestTypes.IClass1 class1)
             {
                 return new TestTypes.Class1Container(class1);
             }
 
             [Singleton]
-            [Provides("ConstructedClass1ContainerWithNamedDependency")]
+            [Provider("ConstructedClass1ContainerWithNamedDependency")]
+            public static TestTypes.Class1Container ProvideClass1ContainerWithNamedClass(
+                [Named("NamedClass1")] TestTypes.IClass1 class1)
+            {
+                return new TestTypes.Class1Container(class1);
+            }
+        }
+
+        [InjectionModule]
+        public class TestModule
+        {
+            [Singleton]
+            [Provider(typeof(TestTypes.IClass1))]
+            public TestTypes.Class1 Class1Instance { get; set; }
+
+            [Prototype]
+            [Provider(typeof(TestTypes.IClass2))]
+            public TestTypes.Class2 Class2Instance { get; set; }
+
+            [Singleton]
+            [Provider("NamedClass1")]
+            public TestTypes.Class1 NamedClass1Instance { get; set; }
+
+            [Singleton]
+            [Provider(typeof(TestTypes.Class3), "NamedClass3")]
+            public TestTypes.Class3 NamedClass3Instance { get; set; }
+
+            [Singleton]
+            [Provider(typeof(TestTypes.Class1Container))]
+            public TestTypes.Class1Container
+                Class1ContainerInstance { get; set; }
+
+            [Singleton]
+            [Provider("ConstructedClass1Container")]
+            public static TestTypes.Class1Container ProvideClass1Container(TestTypes.IClass1 class1)
+            {
+                return new TestTypes.Class1Container(class1);
+            }
+
+            [Singleton]
+            [Provider("ConstructedClass1ContainerWithNamedDependency")]
             public static TestTypes.Class1Container ProvideClass1ContainerWithNamedClass(
                 [Named("NamedClass1")] TestTypes.IClass1 class1)
             {

@@ -6,6 +6,10 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
+using System.Runtime.CompilerServices;
+
+[assembly: InternalsVisibleTo("Dangr.Logging.Test")]
+
 // ReSharper disable once CheckNamespace
 namespace Dangr
 {

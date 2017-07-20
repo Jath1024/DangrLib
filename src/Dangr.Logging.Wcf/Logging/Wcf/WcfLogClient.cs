@@ -57,6 +57,11 @@ namespace Dangr.Logging.Wcf
         /// <param name="isDisposing">
         /// <c> true </c> to release both managed and unmanaged resources; <c> false </c> to release only unmanaged resources.
         /// </param>
+        [SuppressMessage(
+            "Microsoft.Usage",
+            "CA2213:DisposableFieldsShouldBeDisposed",
+            MessageId = "proxyFactory",
+            Justification = "CA2213 does not work with null conditional operator. Known issue https://github.com/dotnet/roslyn-analyzers/issues/291")]
         protected virtual void Dispose(bool isDisposing)
         {
             if (isDisposing && !this.IsDisposed)

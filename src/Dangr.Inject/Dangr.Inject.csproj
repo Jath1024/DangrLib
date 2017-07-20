@@ -19,23 +19,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Inject\Core\Attributes\TypedAttribute.cs" />
+    <None Include="Inject\Core\IInjectionCore.cs" />
+    <None Include="Inject\Core\IInjectionProvider.cs" />
+    <None Include="Inject\Core\InjectionCoreFactory.cs" />
+    <None Include="Inject\Internal\InjectionContext.cs" />
     <Compile Include="Properties\AdditionalAssemblyInfo.cs">
       <DependentUpon>AdditionalAssemblyInfo.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Inject\InjectionModuleAttribute.cs" />
-    <Compile Include="Inject\InjectAttribute.cs" />
-    <Compile Include="Inject\InjectionCore.cs" />
-    <Compile Include="Inject\InjectionProvider.cs" />
-    <Compile Include="Inject\NamedAttribute.cs" />
-    <Compile Include="Inject\PrototypeAttribute.cs" />
-    <Compile Include="Inject\ProvidesAttribute.cs" />
-    <Compile Include="Inject\ProvidesSetAttribute.cs" />
-    <Compile Include="Inject\SetInjectionProvider.cs" />
-    <Compile Include="Inject\SingletonAttribute.cs" />
-    <Compile Include="Inject\SingletonInjectionProvider.cs" />
-    <Compile Include="NamespaceDoc.cs" />
+    <None Include="Inject\Core\Attributes\InjectionModuleAttribute.cs" />
+    <None Include="Inject\Core\Attributes\InjectAttribute.cs" />
+    <None Include="Inject\Internal\InjectionCore.cs" />
+    <None Include="Inject\Internal\InjectionProvider.cs" />
+    <None Include="Inject\Core\Attributes\NamedAttribute.cs" />
+    <None Include="Inject\Core\Attributes\PrototypeAttribute.cs" />
+    <None Include="Inject\Core\Attributes\ProviderAttribute.cs" />
+    <None Include="Inject\Core\Attributes\ProvidesSetAttribute.cs" />
+    <None Include="Inject\Internal\SetInjectionProvider.cs" />
+    <None Include="Inject\Core\Attributes\SingletonAttribute.cs" />
+    <None Include="Inject\Internal\SingletonInjectionProvider.cs" />
+    <None Include="NamespaceDoc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -6,11 +6,13 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Inject
+namespace Dangr.Inject.Internal
 {
     using System;
     using System.Collections.Generic;
     using System.Reflection;
+    using Dangr.Inject.Core;
+    using Dangr.Inject.Core.Attributes;
 
     internal class InjectionProvider
     {
@@ -26,7 +28,7 @@ namespace Dangr.Inject
         {
             this.providerMethod = providerMethod;
         }
-
+        
         public virtual object GetInstance(InjectionCore injectionCore, ProviderContext context)
         {
             if (context == null)

@@ -7,7 +7,7 @@
 // -----------------------------------------------------------------------
 
 // ReSharper disable once CheckNamespace
-namespace Dangr
+namespace Dangr.Test
 {
     internal static partial class AssemblyConstants
     {

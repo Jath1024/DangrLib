@@ -8,6 +8,8 @@
 
 namespace Dangr.Inject
 {
+    using Dangr.Inject.Core.Attributes;
+
     public class TestTypes
     {
         public interface IClass1

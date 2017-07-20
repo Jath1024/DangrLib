@@ -8,8 +8,13 @@
 
 namespace Dangr.Inject
 {
+    using System;
     using System.Collections.Generic;
+    using System.Collections.Immutable;
     using System.Linq;
+    using Dangr.Inject.Core;
+    using Dangr.Inject.Core.Attributes;
+    using Dangr.Inject.Internal;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Assert = Dangr.Diagnostics.Assert;
 
@@ -20,19 +25,50 @@ namespace Dangr.Inject
         public class TestModule
         {
             [Singleton]
-            [ProvidesSet(typeof(TestTypes.ISetClass))]
+            [BindToType(typeof(TestTypes.ISetClass))]
+            [BindAsSet]
+            private TestTypes.SetClass1 setClass1Instance;
+
+            [Singleton]
+            [BindToType(typeof(TestTypes.ISetClass))]
+            [BindAsSet]
+            private TestTypes.SetClass2 setClass2Instance;
+
+            [Singleton]
+            [BindToType(typeof(TestTypes.ISetClass))]
+            [BindAsSet]
+            private TestTypes.SetClass3 setClass3Instance1;
+
+            [Singleton]
+            [BindToType(typeof(TestTypes.ISetClass))]
+            [BindAsSet]
+            private TestTypes.SetClass3 setClass3Instance2;
+        }
+
+
+
+
+        [InjectionModule]
+        public class TestModule
+        {
+            [Singleton]
+            [Provider(typeof(TestTypes.ISetClass))]
+            [ProvidesSet]
             public TestTypes.SetClass1 SetClass1Instance { get; set; }
 
             [Singleton]
-            [ProvidesSet(typeof(TestTypes.ISetClass))]
+            [Provider(typeof(TestTypes.ISetClass))]
+            [ProvidesSet]
             public TestTypes.SetClass2 SetClass2Instance { get; set; }
 
             [Singleton]
-            [ProvidesSet(typeof(TestTypes.ISetClass))]
+            [Provider(typeof(TestTypes.ISetClass))]
+            [ProvidesSet]
             public TestTypes.SetClass3 SetClass3Instance1 { get; set; }
 
             [Singleton]
-            [ProvidesSet(typeof(TestTypes.ISetClass))]
+            [Provider(typeof(TestTypes.ISetClass))]
+            [ProvidesSet]
             public TestTypes.SetClass3 SetClass3Instance2 { get; set; }
         }
 
@@ -45,13 +81,10 @@ namespace Dangr.Inject
             this.core.LoadModule(typeof(TestModule));
         }
         
-        // TASK: [7] Dangr.Inject Tests are failing
-        // https://github.com/Dangerdan9631/DangrLib/issues/7
-        [Ignore]
         [TestMethod]
         public void TestSet()
         {
-            var set = this.core.Get<IEnumerable<TestTypes.ISetClass>>();
+            var set = this.core.Get<ISet<TestTypes.ISetClass>>();
 
             Assert.Validate.IsNotNull(set, "Set is null");
             TestTypes.ISetClass[] setArray = set.ToArray();

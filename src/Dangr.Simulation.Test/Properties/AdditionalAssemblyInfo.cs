@@ -12,7 +12,7 @@
 */
 using System.Reflection;
 using System.Runtime.InteropServices;
-using Dangr;
+using Dangr.Test;
     
 [assembly: AssemblyTitle(AssemblyConstants.AssemblyName)]
 [assembly: AssemblyProduct(AssemblyConstants.AssemblyName)]
@@ -28,7 +28,7 @@ using Dangr;
 [assembly: ComVisible(false)]
 
 // ReSharper disable once CheckNamespace
-namespace Dangr {    
+namespace Dangr.Test {    
     /// <summary>
     /// Provides constants for use in AssemblyInfo.cs.
     /// </summary>

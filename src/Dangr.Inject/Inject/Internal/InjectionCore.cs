@@ -6,28 +6,21 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Inject
+namespace Dangr.Inject.Internal
 {
     using System;
-    using System.Collections;
     using System.Collections.Generic;
     using System.Reflection;
+    using Dangr.Inject.Core;
+    using Dangr.Inject.Core.Attributes;
 
-    /// <summary>
-    /// Component that is responsible for gathering and exposing provided
-    /// dependencies.
-    /// </summary>
-    public class InjectionCore
+    internal class InjectionCore : IInjectionCore
     {
         private readonly Dictionary<Type, InjectionProvider> providerMap = new Dictionary<Type, InjectionProvider>();
 
         private readonly Dictionary<string, InjectionProvider> namedProviderMap =
             new Dictionary<string, InjectionProvider>();
-
-        /// <summary>
-        /// Scans the <paramref name="assembly" /> for all classes with the <see cref="InjectionModuleAttribute" /> and loads them into the <see cref="InjectionCore" /> .
-        /// </summary>
-        /// <param name="assembly">The assembly to scan.</param>
+        
         public void ScanAssembly(Assembly assembly)
         {
             Type[] types = assembly.GetExportedTypes();
@@ -39,90 +32,68 @@ namespace Dangr.Inject
                 }
             }
         }
-
-        /// <summary>
-        /// Loads the providers defined in the given module.
-        /// </summary>
-        /// <param name="module">The module object.</param>
+        
         public void LoadModule(Type module)
         {
             PropertyInfo[] properties = module.GetProperties();
             foreach (PropertyInfo property in properties)
             {
-                ProvidesAttribute providesAttribute = property.GetCustomAttribute<ProvidesAttribute>();
-                if (providesAttribute != null)
+                ProviderAttribute providerAttribute = property.GetCustomAttribute<ProviderAttribute>();
+                if (providerAttribute != null)
                 {
                     ConstructorInfo constructor = this.GetConstructor(property.PropertyType);
-                    this.CreateProvider(constructor, providesAttribute, property.IsDefined(typeof(SingletonAttribute)));
-                }
-
-                ProvidesSetAttribute providesSetAttribute = property.GetCustomAttribute<ProvidesSetAttribute>();
-                if (providesSetAttribute != null)
-                {
-                    ConstructorInfo constructor = this.GetConstructor(property.PropertyType);
-                    this.CreateSetProvider(constructor, providesSetAttribute,
-                        property.IsDefined(typeof(SingletonAttribute)));
+                    this.CreateProvider(property, providerAttribute, constructor);
                 }
             }
 
             MethodInfo[] methods = module.GetMethods(BindingFlags.Public | BindingFlags.Static);
             foreach (MethodInfo method in methods)
             {
-                ProvidesAttribute providesAttribute = method.GetCustomAttribute<ProvidesAttribute>();
-                if (providesAttribute != null)
+                ProviderAttribute providerAttribute = method.GetCustomAttribute<ProviderAttribute>();
+                if (providerAttribute != null)
                 {
-                    this.CreateProvider(method, providesAttribute, method.IsDefined(typeof(SingletonAttribute)));
-                }
-
-                ProvidesSetAttribute providesSetAttribute = method.GetCustomAttribute<ProvidesSetAttribute>();
-                if (providesSetAttribute != null)
-                {
-                    this.CreateSetProvider(method, providesSetAttribute,
-                        method.IsDefined(typeof(SingletonAttribute)));
+                    this.CreateProvider(method, providerAttribute, method);
                 }
             }
         }
-
-        /// <summary>
-        /// Gets an instance of the dependency defined with the specified name.
-        /// </summary>
-        /// <param name="name">The dependency name.</param>
-        /// <exception cref="System.InvalidOperationException">
-        /// If no dependency with the specified <paramref name="name" /> is defined.
-        /// </exception>
-        public object Get(string name)
+        
+        public T Get<T>()
         {
-            return this.Get(name, null);
+            return this.GetDependency<T>(typeof(T));
         }
-
-        internal object Get(string name, InjectionProvider.ProviderContext context)
+        
+        public T Get<T>(string name)
         {
-            InjectionProvider provider;
-            if (this.namedProviderMap.TryGetValue(name, out provider))
+            return this.GetDependency<T>(name);
+        }
+        
+        private T GetDependency<T>(Type type)
+        {
+            using (InjectionContext.NewContext())
             {
-                return provider.GetInstance(this, context);
+                return default(T);
             }
-
-            throw new InvalidOperationException($"No dependency with name '{name}' defined.");
         }
 
-        /// <summary>
-        /// Gets an instance of the dependency defined with the specified type.
-        /// </summary>
-        /// <param name="type">The dependency type.</param>
-        /// <exception cref="System.InvalidOperationException">
-        /// If no dependency with the specified <paramref name="type" /> is defined.
-        /// </exception>
-        public object Get(Type type)
+        private T GetDependency<T>(string name)
         {
-            return this.Get(type, null);
-        }
+            using (InjectionContext.NewContext())
+            {
+                InjectionProvider provider;
+                if (this.namedProviderMap.TryGetValue(name, out provider))
+                {
+                    return provider.GetInstance(this);
+                }
 
-        internal object Get(Type type, InjectionProvider.ProviderContext context)
+                throw new InvalidOperationException($"No dependency with name '{name}' defined.");
+            }
+        }
+        
+        private object Get(Type type, InjectionProvider.ProviderContext context)
         {
             Type dependencyType = type;
 
-            if (typeof(IEnumerable).IsAssignableFrom(type))
+            if (typeof(ISet<>).IsAssignableFrom(type))
             {
                 Type[] generics = type.GetGenericArguments();
                 if (generics.Length == 1)
@@ -140,41 +111,44 @@ namespace Dangr.Inject
             throw new InvalidOperationException($"No dependency with type '{type.Name}' defined.");
         }
 
-        /// <summary>
-        /// Gets an instance of the dependency defined with the specified type.
-        /// </summary>
-        /// <typeparam name="T">The dependency type.</typeparam>
-        /// <exception cref="System.InvalidOperationException">
-        /// If no dependency with the specified type is defined.
-        /// </exception>
-        public T Get<T>()
-        {
-            return this.Get<T>(null);
-        }
-
-        internal T Get<T>(InjectionProvider.ProviderContext context)
+        private T Get<T>(InjectionProvider.ProviderContext context)
         {
             return (T) this.Get(typeof(T), context);
         }
+        
+        private void CreateProvider(MemberInfo memberInfo, ProviderAttribute providerAttribute, MethodBase method)
+        {
+            if (memberInfo.IsDefined(typeof(ProvidesSetAttribute)))
+            {
+                this.CreateSetProvider(
+                    method,
+                    providerAttribute,
+                    memberInfo.IsDefined(typeof(SingletonAttribute)));
+            }
+            else
+            {
+                this.CreateInstanceProvider(method, providerAttribute, memberInfo.IsDefined(typeof(SingletonAttribute)));
+            }
+        }
 
-        private void CreateProvider(MethodBase method, ProvidesAttribute providesAttribute, bool isSingleton)
+        private void CreateInstanceProvider(MethodBase method, ProviderAttribute providerAttribute, bool isSingleton)
         {
             InjectionProvider provider = isSingleton
                 ? new SingletonInjectionProvider(method)
                 : new InjectionProvider(method);
 
-            if (providesAttribute.Name != null)
+            if (providerAttribute.Name != null)
             {
-                this.namedProviderMap.Add(providesAttribute.Name, provider);
+                this.namedProviderMap.Add(providerAttribute.Name, provider);
             }
 
-            if (providesAttribute.ProvidesType != null)
+            if (providerAttribute.ProvidesType != null)
             {
-                this.providerMap.Add(providesAttribute.ProvidesType, provider);
+                this.providerMap.Add(providerAttribute.ProvidesType, provider);
             }
         }
 
-        private void CreateSetProvider(MethodBase method, ProvidesSetAttribute providesSetAttribute, bool isSingleton)
+        private void CreateSetProvider(MethodBase method, ProviderAttribute providesSetAttribute, bool isSingleton)
         {
             InjectionProvider mappedProvider;
             SetInjectionProvider setProvider = null;

@@ -1,22 +1,22 @@
 ﻿// -----------------------------------------------------------------------
-//  <copyright file="SingletonAttribute.cs" company="DangerDan9631">
+//  <copyright file="InjectionModuleAttribute.cs" company="DangerDan9631">
 //      Copyright (c) 2017 Dan Garvey. All rights reserved.
 //      Licensed under the MIT License. 
 //      See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Inject
+namespace Dangr.Inject.Core.Attributes
 {
     using System;
+    using Dangr.Inject.Internal;
 
     /// <summary>
-    /// Attribute that marks an <see cref="InjectionProvider"/> property as being Singleton Scoped. 
-    /// Each time this <see cref="InjectionProvider"/> is called, it will return the same instance.
+    /// Attribute used to mark a module class that contains <see cref="InjectionProvider"/>s.
     /// </summary>
     /// <seealso cref="System.Attribute" />
-    [AttributeUsage(AttributeTargets.Property | AttributeTargets.Method)]
-    public class SingletonAttribute : Attribute
+    [AttributeUsage(AttributeTargets.Class)]
+    public sealed class InjectionModuleAttribute : Attribute
     {
     }
 }

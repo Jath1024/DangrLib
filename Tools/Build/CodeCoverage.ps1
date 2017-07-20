@@ -26,11 +26,13 @@ Get-ChildItem -Path . -Filter Dangr.*.Test.dll -Recurse `
 | %{$testBinaries = $testBinaries + ' "' + $_.FullName + '"'};
 
 # Define the code coverage filters.
-$filter = "+[Dangr.*]*";          # Include Dangr.* modules.
-$filter += " -[Dangr.*.Test]*";   # Exclude test modules
-$filter += " -[*]*.NamespaceDoc"; # Exclude NamespaceDoc classes
-$filter += " -[*]*Attribute";     # Exclude Attribute classes
-$filter += " -[*]*Exception";     # Exclude Exception classes
+$filter = "+[Dangr.*]*";            # Include Dangr.* modules.
+$filter += " -[Dangr.*.Test]*";     # Exclude test modules
+$filter += " -[*]*.NamespaceDoc";   # Exclude NamespaceDoc classes
+$filter += " -[*]*Attribute";       # Exclude Attribute classes
+$filter += " -[*]*Exception";       # Exclude Exception classes
+$filter += " -[Dangr.Inject]*";     # Exclude Dangr.Inject module
+$filter += " -[Dangr.Simulation]*"; # Exclude Dangr.Simulation module
 
 # Specify the coverage results output file.
 $outputFileName = ".\DangrLib_coverage.xml";

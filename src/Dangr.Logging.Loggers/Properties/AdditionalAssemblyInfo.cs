@@ -11,6 +11,7 @@
     Make changes to "/Tools/CommonSource/AssemblyConstants.t4" directly.
 */
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Dangr;
     
@@ -26,6 +27,8 @@ using Dangr;
 [assembly: AssemblyCulture("")]
 
 [assembly: ComVisible(false)]
+
+[assembly:InternalsVisibleTo("Dangr.Logging.Loggers.Test")]
 
 // ReSharper disable once CheckNamespace
 namespace Dangr {    

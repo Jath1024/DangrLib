@@ -9,6 +9,10 @@
   <Import Project="$(SolutionDir)\Tools\Build\Dangr.Test.targets" />
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable, Version=1.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Collections.Immutable.1.3.1\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AdditionalAssemblyInfo.cs">
@@ -16,11 +20,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Inject\InjectionCoreLoopTest.cs" />
-    <Compile Include="Inject\InjectionCoreSetTest.cs" />
-    <Compile Include="Inject\InjectionCoreTest.cs" />
+    <None Include="Inject\InjectionCoreLoopTest.cs" />
+    <None Include="Inject\InjectionCoreSetTest.cs" />
+    <None Include="Inject\InjectionCoreTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Inject\TestTypes.cs" />
+    <None Include="Inject\TestTypes.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Dangr.Diagnostics\Dangr.Diagnostics.csproj">
@@ -41,6 +45,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Properties\AdditionalAssemblyInfo.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>AdditionalAssemblyInfo.cs</LastGenOutput>

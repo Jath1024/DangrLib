@@ -6,9 +6,10 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Inject
+namespace Dangr.Inject.Internal
 {
     using System.Collections.Generic;
+    using Dangr.Inject.Core;
 
     internal class SetInjectionProvider : InjectionProvider
     {
@@ -25,12 +26,12 @@ namespace Dangr.Inject
             this.providerList.Add(provider);
         }
 
-        public override object GetInstance(InjectionCore injectionCore, ProviderContext context)
+        public override ISet<T> GetInstance<T>(InjectionCore injectionCore, ProviderContext context)
         {
-            var instanceList = new List<object>();
+            HashSet<T> instanceList = new HashSet<T>();
             foreach (InjectionProvider provider in this.providerList)
             {
-                instanceList.Add(provider.GetInstance(injectionCore, context));
+                instanceList.Add((T)provider.GetInstance(injectionCore, context));
             }
 
             return instanceList;

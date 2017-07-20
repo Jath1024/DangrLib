@@ -20,8 +20,11 @@
     Make changes to "/Tools/CommonSource/AssemblyConstants.t4" directly.
 */
 using System.Reflection;
+<# if(!isTestAssembly) { #>
+using System.Runtime.CompilerServices;
+<# } #>
 using System.Runtime.InteropServices;
-using Dangr;
+using Dangr<#= isTestAssembly ? ".Test" : string.Empty #>;
     
 [assembly: AssemblyTitle(AssemblyConstants.AssemblyName)]
 [assembly: AssemblyProduct(AssemblyConstants.AssemblyName)]
@@ -35,9 +38,13 @@ using Dangr;
 [assembly: AssemblyCulture("")]
 
 [assembly: ComVisible(false)]
+<# if(!isTestAssembly) { #>
+
+[assembly:InternalsVisibleTo("<#= assemblyName + ".Test" #>")]
+<# } #>
 
 // ReSharper disable once CheckNamespace
-namespace Dangr {    
+namespace Dangr<#= isTestAssembly ? ".Test" : string.Empty #> {    
     /// <summary>
     /// Provides constants for use in AssemblyInfo.cs.
     /// </summary>

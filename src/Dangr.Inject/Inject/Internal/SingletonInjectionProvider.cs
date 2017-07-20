@@ -6,9 +6,10 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Inject
+namespace Dangr.Inject.Internal
 {
     using System.Reflection;
+    using Dangr.Inject.Core;
 
     internal class SingletonInjectionProvider : InjectionProvider
     {

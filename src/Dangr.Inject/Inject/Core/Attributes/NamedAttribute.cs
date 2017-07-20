@@ -6,16 +6,17 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Inject
+namespace Dangr.Inject.Core.Attributes
 {
     using System;
+    using Dangr.Inject.Internal;
 
     /// <summary>
     /// Attribute used to define a name to use when searching for an <see cref="InjectionProvider"/> to use for a parameter.
     /// </summary>
     /// <seealso cref="System.Attribute" />
     [AttributeUsage(AttributeTargets.Parameter)]
-    public class NamedAttribute : Attribute
+    public sealed class NamedAttribute : Attribute
     {
         /// <summary>
         /// Gets the name of the <see cref="InjectionProvider"/> to use.

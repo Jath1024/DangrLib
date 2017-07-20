@@ -6,9 +6,10 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Inject
+namespace Dangr.Inject.Core.Attributes
 {
     using System;
+    using Dangr.Inject.Internal;
 
     /// <summary>
     /// Attribute that marks an <see cref="InjectionProvider"/> property as being Prototype Scoped. 
@@ -16,7 +17,7 @@ namespace Dangr.Inject
     /// </summary>
     /// <seealso cref="System.Attribute" />
     [AttributeUsage(AttributeTargets.Property | AttributeTargets.Method)]
-    public class PrototypeAttribute : Attribute
+    public sealed class PrototypeAttribute : Attribute
     {
     }
 }
