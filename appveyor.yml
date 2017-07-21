@@ -4,7 +4,7 @@ platform: Any CPU
 cache: packages -> **\packages.config
 
 before_build:
-- cmd: nuget restore
+- cmd: nuget restore DangrLib.sln
 
 build:
   project: DangrLib.sln

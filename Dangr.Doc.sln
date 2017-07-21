@@ -35,80 +35,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dangr.Test", "src\Dangr.Tes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dangr.Util", "src\Dangr.Util\Dangr.Util.csproj", "{272587F0-BD2B-48E5-A63F-252CA280B14F}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{665EF4AE-2CF3-4E66-910F-2F3B5F8E17CB}"
-	ProjectSection(SolutionItems) = preProject
-		.gitignore = .gitignore
-		appveyor.yml = appveyor.yml
-		codecov.yml = codecov.yml
-		CONTRIBUTING.md = CONTRIBUTING.md
-		LICENSE = LICENSE
-		README.md = README.md
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dangr.Command.Test", "src\Dangr.Command.Test\Dangr.Command.Test.csproj", "{766C3507-4E1A-4F74-A017-1D407EC89EFA}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dangr.Configuration.Test", "src\Dangr.Configuration.Test\Dangr.Configuration.Test.csproj", "{BD771D69-4232-4BC3-BEC1-14B2B34CD5E1}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dangr.Diagnostics.Test", "src\Dangr.Diagnostics.Test\Dangr.Diagnostics.Test.csproj", "{F440A468-B848-4762-8DF4-DB2F33F8CF1F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dangr.Entity.Test", "src\Dangr.Entity.Test\Dangr.Entity.Test.csproj", "{C0CF414A-90F8-49C6-85C9-C3B6674E0D93}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dangr.Event.Test", "src\Dangr.Event.Test\Dangr.Event.Test.csproj", "{8B586053-37F7-4903-B82F-009CF3E05E93}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dangr.Inject.Test", "src\Dangr.Inject.Test\Dangr.Inject.Test.csproj", "{62A09731-3A2C-477D-BE5A-F5BA969354FE}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dangr.Logging.Test", "src\Dangr.Logging.Test\Dangr.Logging.Test.csproj", "{D5C3D014-BD60-48DB-9763-AC727CD04CA2}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dangr.Registry.Test", "src\Dangr.Registry.Test\Dangr.Registry.Test.csproj", "{D4894AA8-7367-42FB-B6B1-FC825B469B57}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dangr.Util.Test", "src\Dangr.Util.Test\Dangr.Util.Test.csproj", "{F55C0BA6-9778-4798-BCF2-2D88A984EBED}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dangr.Simulation", "src\Dangr.Simulation\Dangr.Simulation.csproj", "{4F441674-8D10-434A-B0C7-E302FAB8A00D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dangr.Simulation.Test", "src\Dangr.Simulation.Test\Dangr.Simulation.Test.csproj", "{6B42BE3D-0516-4587-8862-A519F6AD2ABC}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{B8914A16-6A29-4ADF-B3A7-A2FF66789FE8}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logo", "Logo", "{491B51C9-1EEE-4628-AC28-B48FEF1F9BE3}"
-	ProjectSection(SolutionItems) = preProject
-		Images\Logo\skull logo.png = Images\Logo\skull logo.png
-		Images\Logo\skulllogo64.png = Images\Logo\skulllogo64.png
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{275681EC-C8CA-46D8-8FD1-893C4BF6FC9D}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{38E56344-BE98-48CF-B040-A0BB23E790A2}"
-	ProjectSection(SolutionItems) = preProject
-		Tools\Build\CodeCoverage.ps1 = Tools\Build\CodeCoverage.ps1
-		Tools\Build\Dangr.targets = Tools\Build\Dangr.targets
-		Tools\Build\Dangr.Test.targets = Tools\Build\Dangr.Test.targets
-		Tools\Build\Nuget.Publish.targets = Tools\Build\Nuget.Publish.targets
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nuget", "Nuget", "{8F608ED7-819B-4FBF-87D4-BCD71F6CF58B}"
-	ProjectSection(SolutionItems) = preProject
-		.nuget\NuGet.config = .nuget\NuGet.config
-		Tools\Nuget\nuget.md = Tools\Nuget\nuget.md
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{E157665C-C6CB-4CBD-8EDC-FD8B0031F445}"
-	ProjectSection(SolutionItems) = preProject
-		.github\CONTRIBUTING.md = .github\CONTRIBUTING.md
-		.github\issue_template.md = .github\issue_template.md
-		.github\pull_request_template.md = .github\pull_request_template.md
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dangr.Logging.Interface", "src\Dangr.Logging.Interface\Dangr.Logging.Interface.csproj", "{2CE9C4FD-3BA6-4D74-8918-226DB5EEF544}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CommonSource", "CommonSource", "{C93D19DC-FA2C-4D03-8BCF-471E3E38D89D}"
-	ProjectSection(SolutionItems) = preProject
-		Tools\CommonSource\AssemblyConstants.t4 = Tools\CommonSource\AssemblyConstants.t4
-		Tools\CommonSource\NuspecCommonFiles.t4 = Tools\CommonSource\NuspecCommonFiles.t4
-		Tools\CommonSource\NuspecMetadata.t4 = Tools\CommonSource\NuspecMetadata.t4
-		Tools\CommonSource\Versions.t4 = Tools\CommonSource\Versions.t4
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dangr.Doc", "src\Dangr.Doc\Dangr.Doc.csproj", "{8F352D93-EE5C-46BA-BF9B-35F46B807583}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -209,76 +138,17 @@ Global
 		{272587F0-BD2B-48E5-A63F-252CA280B14F}.NugetDeploy|Any CPU.Build.0 = NugetDeploy|Any CPU
 		{272587F0-BD2B-48E5-A63F-252CA280B14F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{272587F0-BD2B-48E5-A63F-252CA280B14F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{766C3507-4E1A-4F74-A017-1D407EC89EFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{766C3507-4E1A-4F74-A017-1D407EC89EFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{766C3507-4E1A-4F74-A017-1D407EC89EFA}.NugetDeploy|Any CPU.ActiveCfg = NugetDeploy|Any CPU
-		{766C3507-4E1A-4F74-A017-1D407EC89EFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{766C3507-4E1A-4F74-A017-1D407EC89EFA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BD771D69-4232-4BC3-BEC1-14B2B34CD5E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BD771D69-4232-4BC3-BEC1-14B2B34CD5E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BD771D69-4232-4BC3-BEC1-14B2B34CD5E1}.NugetDeploy|Any CPU.ActiveCfg = NugetDeploy|Any CPU
-		{BD771D69-4232-4BC3-BEC1-14B2B34CD5E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BD771D69-4232-4BC3-BEC1-14B2B34CD5E1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F440A468-B848-4762-8DF4-DB2F33F8CF1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F440A468-B848-4762-8DF4-DB2F33F8CF1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F440A468-B848-4762-8DF4-DB2F33F8CF1F}.NugetDeploy|Any CPU.ActiveCfg = NugetDeploy|Any CPU
-		{F440A468-B848-4762-8DF4-DB2F33F8CF1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F440A468-B848-4762-8DF4-DB2F33F8CF1F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C0CF414A-90F8-49C6-85C9-C3B6674E0D93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C0CF414A-90F8-49C6-85C9-C3B6674E0D93}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C0CF414A-90F8-49C6-85C9-C3B6674E0D93}.NugetDeploy|Any CPU.ActiveCfg = NugetDeploy|Any CPU
-		{C0CF414A-90F8-49C6-85C9-C3B6674E0D93}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C0CF414A-90F8-49C6-85C9-C3B6674E0D93}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8B586053-37F7-4903-B82F-009CF3E05E93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8B586053-37F7-4903-B82F-009CF3E05E93}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8B586053-37F7-4903-B82F-009CF3E05E93}.NugetDeploy|Any CPU.ActiveCfg = NugetDeploy|Any CPU
-		{8B586053-37F7-4903-B82F-009CF3E05E93}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8B586053-37F7-4903-B82F-009CF3E05E93}.Release|Any CPU.Build.0 = Release|Any CPU
-		{62A09731-3A2C-477D-BE5A-F5BA969354FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{62A09731-3A2C-477D-BE5A-F5BA969354FE}.NugetDeploy|Any CPU.ActiveCfg = NugetDeploy|Any CPU
-		{62A09731-3A2C-477D-BE5A-F5BA969354FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D5C3D014-BD60-48DB-9763-AC727CD04CA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D5C3D014-BD60-48DB-9763-AC727CD04CA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D5C3D014-BD60-48DB-9763-AC727CD04CA2}.NugetDeploy|Any CPU.ActiveCfg = NugetDeploy|Any CPU
-		{D5C3D014-BD60-48DB-9763-AC727CD04CA2}.NugetDeploy|Any CPU.Build.0 = NugetDeploy|Any CPU
-		{D5C3D014-BD60-48DB-9763-AC727CD04CA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D5C3D014-BD60-48DB-9763-AC727CD04CA2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D4894AA8-7367-42FB-B6B1-FC825B469B57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D4894AA8-7367-42FB-B6B1-FC825B469B57}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D4894AA8-7367-42FB-B6B1-FC825B469B57}.NugetDeploy|Any CPU.ActiveCfg = NugetDeploy|Any CPU
-		{D4894AA8-7367-42FB-B6B1-FC825B469B57}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D4894AA8-7367-42FB-B6B1-FC825B469B57}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F55C0BA6-9778-4798-BCF2-2D88A984EBED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F55C0BA6-9778-4798-BCF2-2D88A984EBED}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F55C0BA6-9778-4798-BCF2-2D88A984EBED}.NugetDeploy|Any CPU.ActiveCfg = NugetDeploy|Any CPU
-		{F55C0BA6-9778-4798-BCF2-2D88A984EBED}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F55C0BA6-9778-4798-BCF2-2D88A984EBED}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4F441674-8D10-434A-B0C7-E302FAB8A00D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4F441674-8D10-434A-B0C7-E302FAB8A00D}.NugetDeploy|Any CPU.ActiveCfg = NugetDeploy|Any CPU
 		{4F441674-8D10-434A-B0C7-E302FAB8A00D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6B42BE3D-0516-4587-8862-A519F6AD2ABC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6B42BE3D-0516-4587-8862-A519F6AD2ABC}.NugetDeploy|Any CPU.ActiveCfg = NugetDeploy|Any CPU
-		{6B42BE3D-0516-4587-8862-A519F6AD2ABC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CE9C4FD-3BA6-4D74-8918-226DB5EEF544}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2CE9C4FD-3BA6-4D74-8918-226DB5EEF544}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CE9C4FD-3BA6-4D74-8918-226DB5EEF544}.NugetDeploy|Any CPU.ActiveCfg = Release|Any CPU
 		{2CE9C4FD-3BA6-4D74-8918-226DB5EEF544}.NugetDeploy|Any CPU.Build.0 = Release|Any CPU
 		{2CE9C4FD-3BA6-4D74-8918-226DB5EEF544}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CE9C4FD-3BA6-4D74-8918-226DB5EEF544}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8F352D93-EE5C-46BA-BF9B-35F46B807583}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8F352D93-EE5C-46BA-BF9B-35F46B807583}.NugetDeploy|Any CPU.ActiveCfg = NugetDeploy|Any CPU
-		{8F352D93-EE5C-46BA-BF9B-35F46B807583}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{B8914A16-6A29-4ADF-B3A7-A2FF66789FE8} = {665EF4AE-2CF3-4E66-910F-2F3B5F8E17CB}
-		{491B51C9-1EEE-4628-AC28-B48FEF1F9BE3} = {B8914A16-6A29-4ADF-B3A7-A2FF66789FE8}
-		{275681EC-C8CA-46D8-8FD1-893C4BF6FC9D} = {665EF4AE-2CF3-4E66-910F-2F3B5F8E17CB}
-		{38E56344-BE98-48CF-B040-A0BB23E790A2} = {275681EC-C8CA-46D8-8FD1-893C4BF6FC9D}
-		{8F608ED7-819B-4FBF-87D4-BCD71F6CF58B} = {275681EC-C8CA-46D8-8FD1-893C4BF6FC9D}
-		{E157665C-C6CB-4CBD-8EDC-FD8B0031F445} = {665EF4AE-2CF3-4E66-910F-2F3B5F8E17CB}
-		{C93D19DC-FA2C-4D03-8BCF-471E3E38D89D} = {275681EC-C8CA-46D8-8FD1-893C4BF6FC9D}
 	EndGlobalSection
 EndGlobal

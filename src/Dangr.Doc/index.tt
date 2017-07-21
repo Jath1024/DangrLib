@@ -1,0 +1,8 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ output extension=".md" #>
+
+<#@ 
+    include file="$(SolutionDir)\README.md" once="true" 
+#>
