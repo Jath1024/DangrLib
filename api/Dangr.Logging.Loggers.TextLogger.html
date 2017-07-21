@@ -1,0 +1,728 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class TextLogger
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class TextLogger
+   ">
+    <meta name="generator" content="docfx 2.21.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Dangr.Logging.Loggers.TextLogger">
+  
+  
+  <h1 id="Dangr_Logging_Loggers_TextLogger" data-uid="Dangr.Logging.Loggers.TextLogger" class="text-break">Class TextLogger
+  </h1>
+  <div class="markdown level0 summary"><p>A logger pipeline logger that will log entries to a text file.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">TextLogger</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Dangr.Logging.Loggers.html">Dangr.Logging.Loggers</a></h6>
+  <h6><strong>Assembly</strong>: Dangr.Logging.Loggers.dll</h6>
+  <h5 id="Dangr_Logging_Loggers_TextLogger_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class TextLogger : ILogEndpoint, ICancelable, IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Logging_Loggers_TextLogger__ctor_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20Dangr.Logging.Loggers.TextLogger.%23ctor(System.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L102">View Source</a>
+  </span>
+  <a id="Dangr_Logging_Loggers_TextLogger__ctor_" data-uid="Dangr.Logging.Loggers.TextLogger.#ctor*"></a>
+  <h4 id="Dangr_Logging_Loggers_TextLogger__ctor_System_String_System_String_System_String_" data-uid="Dangr.Logging.Loggers.TextLogger.#ctor(System.String,System.String,System.String)">TextLogger(String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Dangr.Logging.Loggers.TextLogger.html">TextLogger</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TextLogger(string logFileDirectory = null, string logFilePrefix = null, string logFileDateFormat = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">logFileDirectory</span></td>
+        <td><p>The log file directory. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">logFilePrefix</span></td>
+        <td><p>The log file prefix. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">logFileDateFormat</span></td>
+        <td><p>The log file date format. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Logging_Loggers_TextLogger_DefaultLogFileDateFormat.md&amp;value=---%0Auid%3A%20Dangr.Logging.Loggers.TextLogger.DefaultLogFileDateFormat%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L25">View Source</a>
+  </span>
+  <h4 id="Dangr_Logging_Loggers_TextLogger_DefaultLogFileDateFormat" data-uid="Dangr.Logging.Loggers.TextLogger.DefaultLogFileDateFormat">DefaultLogFileDateFormat</h4>
+  <div class="markdown level1 summary"><p>The default log file date format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DefaultLogFileDateFormat = &quot;yyMMdd-HHmm&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Logging_Loggers_TextLogger_DefaultLogFileFlushSize.md&amp;value=---%0Auid%3A%20Dangr.Logging.Loggers.TextLogger.DefaultLogFileFlushSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L35">View Source</a>
+  </span>
+  <h4 id="Dangr_Logging_Loggers_TextLogger_DefaultLogFileFlushSize" data-uid="Dangr.Logging.Loggers.TextLogger.DefaultLogFileFlushSize">DefaultLogFileFlushSize</h4>
+  <div class="markdown level1 summary"><p>The default log file flush size in bytes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const long DefaultLogFileFlushSize = 131072L</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Logging_Loggers_TextLogger_DefaultMaxLogFileEntries.md&amp;value=---%0Auid%3A%20Dangr.Logging.Loggers.TextLogger.DefaultMaxLogFileEntries%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L40">View Source</a>
+  </span>
+  <h4 id="Dangr_Logging_Loggers_TextLogger_DefaultMaxLogFileEntries" data-uid="Dangr.Logging.Loggers.TextLogger.DefaultMaxLogFileEntries">DefaultMaxLogFileEntries</h4>
+  <div class="markdown level1 summary"><p>The default maximum log file entries.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int DefaultMaxLogFileEntries = 1000000</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Logging_Loggers_TextLogger_DefaultMaxLogFileInterval.md&amp;value=---%0Auid%3A%20Dangr.Logging.Loggers.TextLogger.DefaultMaxLogFileInterval%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L45">View Source</a>
+  </span>
+  <h4 id="Dangr_Logging_Loggers_TextLogger_DefaultMaxLogFileInterval" data-uid="Dangr.Logging.Loggers.TextLogger.DefaultMaxLogFileInterval">DefaultMaxLogFileInterval</h4>
+  <div class="markdown level1 summary"><p>The default maximum log file interval.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly TimeSpan DefaultMaxLogFileInterval</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Logging_Loggers_TextLogger_DefaultMaxLogFileSize.md&amp;value=---%0Auid%3A%20Dangr.Logging.Loggers.TextLogger.DefaultMaxLogFileSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L30">View Source</a>
+  </span>
+  <h4 id="Dangr_Logging_Loggers_TextLogger_DefaultMaxLogFileSize" data-uid="Dangr.Logging.Loggers.TextLogger.DefaultMaxLogFileSize">DefaultMaxLogFileSize</h4>
+  <div class="markdown level1 summary"><p>The default maximum log file size in bytes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const long DefaultMaxLogFileSize = 1048576L</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Logging_Loggers_TextLogger_IsDisposed.md&amp;value=---%0Auid%3A%20Dangr.Logging.Loggers.TextLogger.IsDisposed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L94">View Source</a>
+  </span>
+  <a id="Dangr_Logging_Loggers_TextLogger_IsDisposed_" data-uid="Dangr.Logging.Loggers.TextLogger.IsDisposed*"></a>
+  <h4 id="Dangr_Logging_Loggers_TextLogger_IsDisposed" data-uid="Dangr.Logging.Loggers.TextLogger.IsDisposed">IsDisposed</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this object is disposed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsDisposed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Dangr.Util.ICancelable.html#Dangr_Util_ICancelable_IsDisposed">ICancelable.IsDisposed</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Logging_Loggers_TextLogger_LogFile.md&amp;value=---%0Auid%3A%20Dangr.Logging.Loggers.TextLogger.LogFile%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L54">View Source</a>
+  </span>
+  <a id="Dangr_Logging_Loggers_TextLogger_LogFile_" data-uid="Dangr.Logging.Loggers.TextLogger.LogFile*"></a>
+  <h4 id="Dangr_Logging_Loggers_TextLogger_LogFile" data-uid="Dangr.Logging.Loggers.TextLogger.LogFile">LogFile</h4>
+  <div class="markdown level1 summary"><p>Gets the file that this <a class="xref" href="Dangr.Logging.Loggers.TextLogger.html">TextLogger</a> is logging to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FileInfo LogFile { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IO.FileInfo</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Logging_Loggers_TextLogger_LogFileDateFormat.md&amp;value=---%0Auid%3A%20Dangr.Logging.Loggers.TextLogger.LogFileDateFormat%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L69">View Source</a>
+  </span>
+  <a id="Dangr_Logging_Loggers_TextLogger_LogFileDateFormat_" data-uid="Dangr.Logging.Loggers.TextLogger.LogFileDateFormat*"></a>
+  <h4 id="Dangr_Logging_Loggers_TextLogger_LogFileDateFormat" data-uid="Dangr.Logging.Loggers.TextLogger.LogFileDateFormat">LogFileDateFormat</h4>
+  <div class="markdown level1 summary"><p>Gets the log file date format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string LogFileDateFormat { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Logging_Loggers_TextLogger_LogFileDirectory.md&amp;value=---%0Auid%3A%20Dangr.Logging.Loggers.TextLogger.LogFileDirectory%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L59">View Source</a>
+  </span>
+  <a id="Dangr_Logging_Loggers_TextLogger_LogFileDirectory_" data-uid="Dangr.Logging.Loggers.TextLogger.LogFileDirectory*"></a>
+  <h4 id="Dangr_Logging_Loggers_TextLogger_LogFileDirectory" data-uid="Dangr.Logging.Loggers.TextLogger.LogFileDirectory">LogFileDirectory</h4>
+  <div class="markdown level1 summary"><p>Gets the log file directory.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string LogFileDirectory { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Logging_Loggers_TextLogger_LogFilePrefix.md&amp;value=---%0Auid%3A%20Dangr.Logging.Loggers.TextLogger.LogFilePrefix%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L64">View Source</a>
+  </span>
+  <a id="Dangr_Logging_Loggers_TextLogger_LogFilePrefix_" data-uid="Dangr.Logging.Loggers.TextLogger.LogFilePrefix*"></a>
+  <h4 id="Dangr_Logging_Loggers_TextLogger_LogFilePrefix" data-uid="Dangr.Logging.Loggers.TextLogger.LogFilePrefix">LogFilePrefix</h4>
+  <div class="markdown level1 summary"><p>Gets the log file prefix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string LogFilePrefix { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Logging_Loggers_TextLogger_MaxLogFileEntries.md&amp;value=---%0Auid%3A%20Dangr.Logging.Loggers.TextLogger.MaxLogFileEntries%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L89">View Source</a>
+  </span>
+  <a id="Dangr_Logging_Loggers_TextLogger_MaxLogFileEntries_" data-uid="Dangr.Logging.Loggers.TextLogger.MaxLogFileEntries*"></a>
+  <h4 id="Dangr_Logging_Loggers_TextLogger_MaxLogFileEntries" data-uid="Dangr.Logging.Loggers.TextLogger.MaxLogFileEntries">MaxLogFileEntries</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the maximum number of log file entries in a single log file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MaxLogFileEntries { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Logging_Loggers_TextLogger_MaxLogFileFlushSize.md&amp;value=---%0Auid%3A%20Dangr.Logging.Loggers.TextLogger.MaxLogFileFlushSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L79">View Source</a>
+  </span>
+  <a id="Dangr_Logging_Loggers_TextLogger_MaxLogFileFlushSize_" data-uid="Dangr.Logging.Loggers.TextLogger.MaxLogFileFlushSize*"></a>
+  <h4 id="Dangr_Logging_Loggers_TextLogger_MaxLogFileFlushSize" data-uid="Dangr.Logging.Loggers.TextLogger.MaxLogFileFlushSize">MaxLogFileFlushSize</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the maximum size of the log file before changes are flushed to disk.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long MaxLogFileFlushSize { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Logging_Loggers_TextLogger_MaxLogFileInterval.md&amp;value=---%0Auid%3A%20Dangr.Logging.Loggers.TextLogger.MaxLogFileInterval%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L84">View Source</a>
+  </span>
+  <a id="Dangr_Logging_Loggers_TextLogger_MaxLogFileInterval_" data-uid="Dangr.Logging.Loggers.TextLogger.MaxLogFileInterval*"></a>
+  <h4 id="Dangr_Logging_Loggers_TextLogger_MaxLogFileInterval" data-uid="Dangr.Logging.Loggers.TextLogger.MaxLogFileInterval">MaxLogFileInterval</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the maximum interval that can pass before creating a new log file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan MaxLogFileInterval { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Logging_Loggers_TextLogger_MaxLogFileSize.md&amp;value=---%0Auid%3A%20Dangr.Logging.Loggers.TextLogger.MaxLogFileSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L74">View Source</a>
+  </span>
+  <a id="Dangr_Logging_Loggers_TextLogger_MaxLogFileSize_" data-uid="Dangr.Logging.Loggers.TextLogger.MaxLogFileSize*"></a>
+  <h4 id="Dangr_Logging_Loggers_TextLogger_MaxLogFileSize" data-uid="Dangr.Logging.Loggers.TextLogger.MaxLogFileSize">MaxLogFileSize</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the maximum size of the log file before creating a new file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long MaxLogFileSize { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Logging_Loggers_TextLogger_Dispose.md&amp;value=---%0Auid%3A%20Dangr.Logging.Loggers.TextLogger.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L139">View Source</a>
+  </span>
+  <a id="Dangr_Logging_Loggers_TextLogger_Dispose_" data-uid="Dangr.Logging.Loggers.TextLogger.Dispose*"></a>
+  <h4 id="Dangr_Logging_Loggers_TextLogger_Dispose" data-uid="Dangr.Logging.Loggers.TextLogger.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.IDisposable.Dispose()</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Logging_Loggers_TextLogger_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20Dangr.Logging.Loggers.TextLogger.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L151">View Source</a>
+  </span>
+  <a id="Dangr_Logging_Loggers_TextLogger_Dispose_" data-uid="Dangr.Logging.Loggers.TextLogger.Dispose*"></a>
+  <h4 id="Dangr_Logging_Loggers_TextLogger_Dispose_System_Boolean_" data-uid="Dangr.Logging.Loggers.TextLogger.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Releases unmanaged and - optionally - managed resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool isDisposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isDisposing</span></td>
+        <td><p><code> true </code> to release both managed and unmanaged resources; <code> false </code> to release only
+unmanaged resources.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Logging_Loggers_TextLogger_Log_Dangr_Logging_LogEntry_.md&amp;value=---%0Auid%3A%20Dangr.Logging.Loggers.TextLogger.Log(Dangr.Logging.LogEntry)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L164">View Source</a>
+  </span>
+  <a id="Dangr_Logging_Loggers_TextLogger_Log_" data-uid="Dangr.Logging.Loggers.TextLogger.Log*"></a>
+  <h4 id="Dangr_Logging_Loggers_TextLogger_Log_Dangr_Logging_LogEntry_" data-uid="Dangr.Logging.Loggers.TextLogger.Log(Dangr.Logging.LogEntry)">Log(LogEntry)</h4>
+  <div class="markdown level1 summary"><p>Logs the specified entry.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Log(LogEntry entry)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dangr.Logging.LogEntry.html">LogEntry</a></td>
+        <td><span class="parametername">entry</span></td>
+        <td><p>The entry. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Dangr.Logging.ILogEndpoint.html#Dangr_Logging_ILogEndpoint_Log_Dangr_Logging_LogEntry_">ILogEndpoint.Log(LogEntry)</a></div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Logging_Loggers_TextLogger.md&amp;value=---%0Auid%3A%20Dangr.Logging.Loggers.TextLogger%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L20" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,600 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IRegistryEditor
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IRegistryEditor
+   ">
+    <meta name="generator" content="docfx 2.21.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Dangr.Registry.IRegistryEditor">
+  
+  
+  <h1 id="Dangr_Registry_IRegistryEditor" data-uid="Dangr.Registry.IRegistryEditor" class="text-break">Interface IRegistryEditor
+  </h1>
+  <div class="markdown level0 summary"><p>Allows editing of a <a class="xref" href="Dangr.Registry.IRegistry.html">IRegistry</a> object. Changes are all
+made in a batch after <a class="xref" href="Dangr.Registry.IRegistryEditor.html#Dangr_Registry_IRegistryEditor_Apply">Apply()</a>. A lock may also be
+manually acquired, and is released on <a class="xref" href="Dangr.Registry.IRegistryEditor.html#Dangr_Registry_IRegistryEditor_Apply">Apply()</a>.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Dangr.Registry.html">Dangr.Registry</a></h6>
+  <h6><strong>Assembly</strong>: Dangr.Registry.dll</h6>
+  <h5 id="Dangr_Registry_IRegistryEditor_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IRegistryEditor</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Registry_IRegistryEditor_Apply.md&amp;value=---%0Auid%3A%20Dangr.Registry.IRegistryEditor.Apply%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Registry/Registry/IRegistryEditor.cs/#L87">View Source</a>
+  </span>
+  <a id="Dangr_Registry_IRegistryEditor_Apply_" data-uid="Dangr.Registry.IRegistryEditor.Apply*"></a>
+  <h4 id="Dangr_Registry_IRegistryEditor_Apply" data-uid="Dangr.Registry.IRegistryEditor.Apply">Apply()</h4>
+  <div class="markdown level1 summary"><p>Commit the changes that have been made in this <a class="xref" href="Dangr.Registry.IRegistryEditor.html">IRegistryEditor</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Apply()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Registry_IRegistryEditor_Clear.md&amp;value=---%0Auid%3A%20Dangr.Registry.IRegistryEditor.Clear%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Registry/Registry/IRegistryEditor.cs/#L25">View Source</a>
+  </span>
+  <a id="Dangr_Registry_IRegistryEditor_Clear_" data-uid="Dangr.Registry.IRegistryEditor.Clear*"></a>
+  <h4 id="Dangr_Registry_IRegistryEditor_Clear" data-uid="Dangr.Registry.IRegistryEditor.Clear">Clear()</h4>
+  <div class="markdown level1 summary"><p>Marks all values for deletion from the <a class="xref" href="Dangr.Registry.IRegistry.html">IRegistry</a> after <a class="xref" href="Dangr.Registry.IRegistryEditor.html#Dangr_Registry_IRegistryEditor_Apply">Apply()</a>. Will be applied before
+any
+sets
+in the same batch from this editor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IRegistryEditor Clear()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dangr.Registry.IRegistryEditor.html">IRegistryEditor</a></td>
+        <td><p>A reference to this <a class="xref" href="Dangr.Registry.IRegistryEditor.html">IRegistryEditor</a> instance that can be used to chain calls together. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Registry_IRegistryEditor_Lock.md&amp;value=---%0Auid%3A%20Dangr.Registry.IRegistryEditor.Lock%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Registry/Registry/IRegistryEditor.cs/#L93">View Source</a>
+  </span>
+  <a id="Dangr_Registry_IRegistryEditor_Lock_" data-uid="Dangr.Registry.IRegistryEditor.Lock*"></a>
+  <h4 id="Dangr_Registry_IRegistryEditor_Lock" data-uid="Dangr.Registry.IRegistryEditor.Lock">Lock()</h4>
+  <div class="markdown level1 summary"><p>Acquire a lock preventing any changes to this <a class="xref" href="Dangr.Registry.IRegistryEditor.html">IRegistryEditor</a>&apos;s <a class="xref" href="Dangr.Registry.IRegistry.html">IRegistry</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IRegistryEditor Lock()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dangr.Registry.IRegistryEditor.html">IRegistryEditor</a></td>
+        <td><p>A reference to this <a class="xref" href="Dangr.Registry.IRegistryEditor.html">IRegistryEditor</a> instance that can be used to chain calls together. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Registry_IRegistryEditor_Remove_System_String_.md&amp;value=---%0Auid%3A%20Dangr.Registry.IRegistryEditor.Remove(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Registry/Registry/IRegistryEditor.cs/#L34">View Source</a>
+  </span>
+  <a id="Dangr_Registry_IRegistryEditor_Remove_" data-uid="Dangr.Registry.IRegistryEditor.Remove*"></a>
+  <h4 id="Dangr_Registry_IRegistryEditor_Remove_System_String_" data-uid="Dangr.Registry.IRegistryEditor.Remove(System.String)">Remove(String)</h4>
+  <div class="markdown level1 summary"><p>Marks a value for deletion from the <a class="xref" href="Dangr.Registry.IRegistry.html">IRegistry</a> after <a class="xref" href="Dangr.Registry.IRegistryEditor.html#Dangr_Registry_IRegistryEditor_Apply">Apply()</a>. Will be applied before any
+sets
+in the same batch from this editor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IRegistryEditor Remove(string key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The key used to store the value in the <a class="xref" href="Dangr.Registry.IRegistry.html">IRegistry</a>. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dangr.Registry.IRegistryEditor.html">IRegistryEditor</a></td>
+        <td><p>A reference to this <a class="xref" href="Dangr.Registry.IRegistryEditor.html">IRegistryEditor</a> instance that can be used to chain calls together. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Registry_IRegistryEditor_SetBool_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20Dangr.Registry.IRegistryEditor.SetBool(System.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Registry/Registry/IRegistryEditor.cs/#L42">View Source</a>
+  </span>
+  <a id="Dangr_Registry_IRegistryEditor_SetBool_" data-uid="Dangr.Registry.IRegistryEditor.SetBool*"></a>
+  <h4 id="Dangr_Registry_IRegistryEditor_SetBool_System_String_System_Boolean_" data-uid="Dangr.Registry.IRegistryEditor.SetBool(System.String,System.Boolean)">SetBool(String, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Set a bool value to be written to the <a class="xref" href="Dangr.Registry.IRegistry.html">IRegistry</a> after <a class="xref" href="Dangr.Registry.IRegistryEditor.html#Dangr_Registry_IRegistryEditor_Apply">Apply()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IRegistryEditor SetBool(string key, bool value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The key used to store the value in the <a class="xref" href="Dangr.Registry.IRegistry.html">IRegistry</a>. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value to store in the <a class="xref" href="Dangr.Registry.IRegistry.html">IRegistry</a>. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dangr.Registry.IRegistryEditor.html">IRegistryEditor</a></td>
+        <td><p>A reference to this <a class="xref" href="Dangr.Registry.IRegistryEditor.html">IRegistryEditor</a> instance that can be used to chain calls together. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Registry_IRegistryEditor_SetDouble_System_String_System_Double_.md&amp;value=---%0Auid%3A%20Dangr.Registry.IRegistryEditor.SetDouble(System.String%2CSystem.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Registry/Registry/IRegistryEditor.cs/#L74">View Source</a>
+  </span>
+  <a id="Dangr_Registry_IRegistryEditor_SetDouble_" data-uid="Dangr.Registry.IRegistryEditor.SetDouble*"></a>
+  <h4 id="Dangr_Registry_IRegistryEditor_SetDouble_System_String_System_Double_" data-uid="Dangr.Registry.IRegistryEditor.SetDouble(System.String,System.Double)">SetDouble(String, Double)</h4>
+  <div class="markdown level1 summary"><p>Set a double value to be written to the <a class="xref" href="Dangr.Registry.IRegistry.html">IRegistry</a> after <a class="xref" href="Dangr.Registry.IRegistryEditor.html#Dangr_Registry_IRegistryEditor_Apply">Apply()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IRegistryEditor SetDouble(string key, double value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The key used to store the value in the <a class="xref" href="Dangr.Registry.IRegistry.html">IRegistry</a>. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value to store in the <a class="xref" href="Dangr.Registry.IRegistry.html">IRegistry</a>. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dangr.Registry.IRegistryEditor.html">IRegistryEditor</a></td>
+        <td><p>A reference to this <a class="xref" href="Dangr.Registry.IRegistryEditor.html">IRegistryEditor</a> instance that can be used to chain calls together. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Registry_IRegistryEditor_SetFloat_System_String_System_Single_.md&amp;value=---%0Auid%3A%20Dangr.Registry.IRegistryEditor.SetFloat(System.String%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Registry/Registry/IRegistryEditor.cs/#L66">View Source</a>
+  </span>
+  <a id="Dangr_Registry_IRegistryEditor_SetFloat_" data-uid="Dangr.Registry.IRegistryEditor.SetFloat*"></a>
+  <h4 id="Dangr_Registry_IRegistryEditor_SetFloat_System_String_System_Single_" data-uid="Dangr.Registry.IRegistryEditor.SetFloat(System.String,System.Single)">SetFloat(String, Single)</h4>
+  <div class="markdown level1 summary"><p>Set a float value to be written to the <a class="xref" href="Dangr.Registry.IRegistry.html">IRegistry</a> after <a class="xref" href="Dangr.Registry.IRegistryEditor.html#Dangr_Registry_IRegistryEditor_Apply">Apply()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IRegistryEditor SetFloat(string key, float value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The key used to store the value in the <a class="xref" href="Dangr.Registry.IRegistry.html">IRegistry</a>. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value to store in the <a class="xref" href="Dangr.Registry.IRegistry.html">IRegistry</a>. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dangr.Registry.IRegistryEditor.html">IRegistryEditor</a></td>
+        <td><p>A reference to this <a class="xref" href="Dangr.Registry.IRegistryEditor.html">IRegistryEditor</a> instance that can be used to chain calls together. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Registry_IRegistryEditor_SetInt_System_String_System_Int32_.md&amp;value=---%0Auid%3A%20Dangr.Registry.IRegistryEditor.SetInt(System.String%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Registry/Registry/IRegistryEditor.cs/#L50">View Source</a>
+  </span>
+  <a id="Dangr_Registry_IRegistryEditor_SetInt_" data-uid="Dangr.Registry.IRegistryEditor.SetInt*"></a>
+  <h4 id="Dangr_Registry_IRegistryEditor_SetInt_System_String_System_Int32_" data-uid="Dangr.Registry.IRegistryEditor.SetInt(System.String,System.Int32)">SetInt(String, Int32)</h4>
+  <div class="markdown level1 summary"><p>Set an int value to be written to the <a class="xref" href="Dangr.Registry.IRegistry.html">IRegistry</a> after <a class="xref" href="Dangr.Registry.IRegistryEditor.html#Dangr_Registry_IRegistryEditor_Apply">Apply()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IRegistryEditor SetInt(string key, int value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The key used to store the value in the <a class="xref" href="Dangr.Registry.IRegistry.html">IRegistry</a>. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value to store in the <a class="xref" href="Dangr.Registry.IRegistry.html">IRegistry</a>. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dangr.Registry.IRegistryEditor.html">IRegistryEditor</a></td>
+        <td><p>A reference to this <a class="xref" href="Dangr.Registry.IRegistryEditor.html">IRegistryEditor</a> instance that can be used to chain calls together. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Registry_IRegistryEditor_SetLong_System_String_System_Int64_.md&amp;value=---%0Auid%3A%20Dangr.Registry.IRegistryEditor.SetLong(System.String%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Registry/Registry/IRegistryEditor.cs/#L58">View Source</a>
+  </span>
+  <a id="Dangr_Registry_IRegistryEditor_SetLong_" data-uid="Dangr.Registry.IRegistryEditor.SetLong*"></a>
+  <h4 id="Dangr_Registry_IRegistryEditor_SetLong_System_String_System_Int64_" data-uid="Dangr.Registry.IRegistryEditor.SetLong(System.String,System.Int64)">SetLong(String, Int64)</h4>
+  <div class="markdown level1 summary"><p>Set a long value to be written to the <a class="xref" href="Dangr.Registry.IRegistry.html">IRegistry</a> after <a class="xref" href="Dangr.Registry.IRegistryEditor.html#Dangr_Registry_IRegistryEditor_Apply">Apply()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IRegistryEditor SetLong(string key, long value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The key used to store the value in the <a class="xref" href="Dangr.Registry.IRegistry.html">IRegistry</a>. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value to store in the <a class="xref" href="Dangr.Registry.IRegistry.html">IRegistry</a>. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dangr.Registry.IRegistryEditor.html">IRegistryEditor</a></td>
+        <td><p>A reference to this <a class="xref" href="Dangr.Registry.IRegistryEditor.html">IRegistryEditor</a> instance that can be used to chain calls together. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Registry_IRegistryEditor_SetString_System_String_System_String_.md&amp;value=---%0Auid%3A%20Dangr.Registry.IRegistryEditor.SetString(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Registry/Registry/IRegistryEditor.cs/#L82">View Source</a>
+  </span>
+  <a id="Dangr_Registry_IRegistryEditor_SetString_" data-uid="Dangr.Registry.IRegistryEditor.SetString*"></a>
+  <h4 id="Dangr_Registry_IRegistryEditor_SetString_System_String_System_String_" data-uid="Dangr.Registry.IRegistryEditor.SetString(System.String,System.String)">SetString(String, String)</h4>
+  <div class="markdown level1 summary"><p>Set a string value to be written to the <a class="xref" href="Dangr.Registry.IRegistry.html">IRegistry</a> after <a class="xref" href="Dangr.Registry.IRegistryEditor.html#Dangr_Registry_IRegistryEditor_Apply">Apply()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IRegistryEditor SetString(string key, string value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The key used to store the value in the <a class="xref" href="Dangr.Registry.IRegistry.html">IRegistry</a>. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value to store in the <a class="xref" href="Dangr.Registry.IRegistry.html">IRegistry</a>. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dangr.Registry.IRegistryEditor.html">IRegistryEditor</a></td>
+        <td><p>A reference to this <a class="xref" href="Dangr.Registry.IRegistryEditor.html">IRegistryEditor</a> instance that can be used to chain calls together. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Registry_IRegistryEditor.md&amp;value=---%0Auid%3A%20Dangr.Registry.IRegistryEditor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Registry/Registry/IRegistryEditor.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

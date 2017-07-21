@@ -1,0 +1,317 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface ICommandContext
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface ICommandContext
+   ">
+    <meta name="generator" content="docfx 2.21.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Dangr.Command.ICommandContext">
+  
+  
+  <h1 id="Dangr_Command_ICommandContext" data-uid="Dangr.Command.ICommandContext" class="text-break">Interface ICommandContext
+  </h1>
+  <div class="markdown level0 summary"><p>Defines the methods that an <a class="xref" href="Dangr.Command.IDangrCommand.html">IDangrCommand</a> can invoke within the context that it is running.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Dangr.Util.INamedObject.html#Dangr_Util_INamedObject_Name">INamedObject.Name</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Dangr.Command.html">Dangr.Command</a></h6>
+  <h6><strong>Assembly</strong>: Dangr.Command.dll</h6>
+  <h5 id="Dangr_Command_ICommandContext_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface ICommandContext : INamedObject</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Command_ICommandContext_Error_System_Object_.md&amp;value=---%0Auid%3A%20Dangr.Command.ICommandContext.Error(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Command/Command/ICommandContext.cs/#L34">View Source</a>
+  </span>
+  <a id="Dangr_Command_ICommandContext_Error_" data-uid="Dangr.Command.ICommandContext.Error*"></a>
+  <h4 id="Dangr_Command_ICommandContext_Error_System_Object_" data-uid="Dangr.Command.ICommandContext.Error(System.Object)">Error(Object)</h4>
+  <div class="markdown level1 summary"><p>Outputs the specified object to the <a class="xref" href="Dangr.Command.ICommandContext.html">ICommandContext</a> error stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Error(object error)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">error</span></td>
+        <td><p>The error.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Command_ICommandContext_Execute_System_String_.md&amp;value=---%0Auid%3A%20Dangr.Command.ICommandContext.Execute(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Command/Command/ICommandContext.cs/#L22">View Source</a>
+  </span>
+  <a id="Dangr_Command_ICommandContext_Execute_" data-uid="Dangr.Command.ICommandContext.Execute*"></a>
+  <h4 id="Dangr_Command_ICommandContext_Execute_System_String_" data-uid="Dangr.Command.ICommandContext.Execute(System.String)">Execute(String)</h4>
+  <div class="markdown level1 summary"><p>Executes the specified command line.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Execute(string commandString)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">commandString</span></td>
+        <td><p>The command line.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Command_ICommandContext_GetHelpText.md&amp;value=---%0Auid%3A%20Dangr.Command.ICommandContext.GetHelpText%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Command/Command/ICommandContext.cs/#L40">View Source</a>
+  </span>
+  <a id="Dangr_Command_ICommandContext_GetHelpText_" data-uid="Dangr.Command.ICommandContext.GetHelpText*"></a>
+  <h4 id="Dangr_Command_ICommandContext_GetHelpText" data-uid="Dangr.Command.ICommandContext.GetHelpText">GetHelpText()</h4>
+  <div class="markdown level1 summary"><p>Gets the help text for all of the <a class="xref" href="Dangr.Command.IDangrCommand.html">IDangrCommand</a>s defined in the <a class="xref" href="Dangr.Command.ICommandContext.html">ICommandContext</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GetHelpText()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The help text for all of the <a class="xref" href="Dangr.Command.IDangrCommand.html">IDangrCommand</a>s defined in the <a class="xref" href="Dangr.Command.ICommandContext.html">ICommandContext</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Command_ICommandContext_GetHelpText_System_String_.md&amp;value=---%0Auid%3A%20Dangr.Command.ICommandContext.GetHelpText(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Command/Command/ICommandContext.cs/#L47">View Source</a>
+  </span>
+  <a id="Dangr_Command_ICommandContext_GetHelpText_" data-uid="Dangr.Command.ICommandContext.GetHelpText*"></a>
+  <h4 id="Dangr_Command_ICommandContext_GetHelpText_System_String_" data-uid="Dangr.Command.ICommandContext.GetHelpText(System.String)">GetHelpText(String)</h4>
+  <div class="markdown level1 summary"><p>Gets the help text for the specified <a class="xref" href="Dangr.Command.IDangrCommand.html">IDangrCommand</a>s defined in the <a class="xref" href="Dangr.Command.ICommandContext.html">ICommandContext</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GetHelpText(string commandName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">commandName</span></td>
+        <td><p>Name of the command.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The help text for the specified <a class="xref" href="Dangr.Command.IDangrCommand.html">IDangrCommand</a>s defined in the <a class="xref" href="Dangr.Command.ICommandContext.html">ICommandContext</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Command_ICommandContext_Output_System_Object_.md&amp;value=---%0Auid%3A%20Dangr.Command.ICommandContext.Output(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Command/Command/ICommandContext.cs/#L28">View Source</a>
+  </span>
+  <a id="Dangr_Command_ICommandContext_Output_" data-uid="Dangr.Command.ICommandContext.Output*"></a>
+  <h4 id="Dangr_Command_ICommandContext_Output_System_Object_" data-uid="Dangr.Command.ICommandContext.Output(System.Object)">Output(Object)</h4>
+  <div class="markdown level1 summary"><p>Outputs the specified object to the <a class="xref" href="Dangr.Command.ICommandContext.html">ICommandContext</a> output stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Output(object output)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">output</span></td>
+        <td><p>The output.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Command_ICommandContext.md&amp;value=---%0Auid%3A%20Dangr.Command.ICommandContext%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Command/Command/ICommandContext.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

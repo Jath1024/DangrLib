@@ -1,0 +1,265 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>DangrLib  </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="DangrLib  ">
+    <meta name="generator" content="docfx 2.21.1.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="dangrlib-dangrliblogo">DangrLib <img src="https://github.com/Dangerdan9631/DangrLib/raw/master/Images/Logo/skulllogo64.png" alt="DangrLib"></h1>
+
+<p><a href="https://github.com/Dangerdan9631/DangrLib/releases/tag/v1.0"><img src="https://img.shields.io/badge/release-v1.0-2D64F5.svg" alt="GitHub release"></a> 
+<a href="https://ci.appveyor.com/project/Dangerdan9631/dangrlib"><img src="https://ci.appveyor.com/api/projects/status/43vxfn09qxuvdih5?svg=true" alt="Build Status"></a>
+<a href="https://www.codefactor.io/repository/github/dangerdan9631/dangrlib"><img src="https://www.codefactor.io/repository/github/dangerdan9631/dangrlib/badge" alt="Code Factor"></a>
+<a href="https://codecov.io/gh/Dangerdan9631/DangrLib"><img src="https://codecov.io/gh/Dangerdan9631/DangrLib/branch/master/graph/badge.svg" alt="codecov"></a></p>
+<hr>
+<p><strong>DangrLib</strong> is a collection of classes, interfaces, and values that provide useful utilities across various segments of application programming. </p>
+<p>It started as separate personal projects and libraries, that I soon realized had a lot of common code. So I began merging and refactoring the code into
+a common code base.</p>
+<h2 id="getting-started">Getting Started</h2>
+<p>To install <strong>DangrLib</strong>, clone this repository and reference the packages from your <em>.csproj</em></p>
+<pre><code>git clone https://github.com/Dangerdan9631/DangrLib.git
+</code></pre><p><em>Or</em></p>
+<p>Run the following command in the <a href="https://www.visualstudio.com/">Visual Studio</a> Package Manager Console for each of the packages you want.</p>
+<pre><code>Install-Package Dangr.Annotation
+Install-Package Dangr.Async
+Install-Package Dangr.Command
+Install-Package Dangr.Configuration
+Install-Package Dangr.Diagnostics
+Install-Package Dangr.Entity
+Install-Package Dangr.Event
+Install-Package Dangr.Inject
+Install-Package Dangr.Logging
+Install-Package Dangr.Logging.Loggers
+Install-Package Dangr.Logging.Wcf
+Install-Package Dangr.Math
+Install-Package Dangr.ObjectPool
+Install-Package Dangr.Registry
+Install-Package Dangr.Simulation
+Install-Package Dangr.Test
+Install-Package Dangr.Util
+</code></pre><h3 id="prerequisites">Prerequisites</h3>
+<p><a href="https://www.visualstudio.com/">Visual Studio</a></p>
+<h3 id="optional-tools-used">Optional tools used</h3>
+<p><a href="https://www.jetbrains.com/resharper/">Resharper</a> - Code analysis and refactoring.</p>
+<p><a href="http://submain.com/products/ghostdoc.aspx">GhostDoc</a> - Generating XML doc comments.</p>
+<p><a href="https://github.com/EWSoftware/SHFB">Sandcastle Help File Builder (SHFB)</a> - Building help files.</p>
+<h3 id="installing">Installing</h3>
+<p>The <strong>DangrLib</strong> libraries can be built out of the box using <a href="https://www.visualstudio.com/">Visual Studio</a>.</p>
+<h2 id="running-the-tests">Running the tests</h2>
+<p>Unit tests can be run using <strong>MSTest</strong> in the <a href="https://www.visualstudio.com/">Visual Studio</a> Test Explorer.</p>
+<p>Each package has it&#39;s own MSTest project.</p>
+<p>Coding style should follow the guidelines in the <a href="https://www.visualstudio.com/">Visual Studio</a> and <a href="https://www.jetbrains.com/resharper/">Resharper</a> code analysis rules included in the Solution.</p>
+<h2 id="packages">Packages</h2>
+<table>
+<thead>
+<tr>
+<th>Package</th>
+<th style="text-align:center">Version</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Dangr.Annotation</strong></td>
+<td style="text-align:center"><a href="https://www.nuget.org/packages/Dangr.Annotation/" title="DangrLib"><img src="https://img.shields.io/badge/nuget-v1.0-2D64F5.svg" alt="nuget"></a></td>
+<td>A collection of attributes useful for adding annotations and documentation to your code.</td>
+</tr>
+<tr>
+<td><strong>Dangr.Async</strong></td>
+<td style="text-align:center"><a href="https://www.nuget.org/packages/Dangr.Async/" title="DangrLib"><img src="https://img.shields.io/badge/nuget-v1.0-2D64F5.svg" alt="nuget"></a></td>
+<td>Asynchronous code execution utilities for use with DangrLib.</td>
+</tr>
+<tr>
+<td><strong>Dangr.Command</strong></td>
+<td style="text-align:center"><a href="https://www.nuget.org/packages/Dangr.Command/" title="DangrLib"><img src="https://img.shields.io/badge/nuget-v1.0-2D64F5.svg" alt="nuget"></a></td>
+<td>Utilities for parsing and executing commands from a command line.</td>
+</tr>
+<tr>
+<td><strong>Dangr.Configuration</strong></td>
+<td style="text-align:center"><a href="https://www.nuget.org/packages/Dangr.Configuration/" title="DangrLib"><img src="https://img.shields.io/badge/nuget-v1.0-2D64F5.svg" alt="nuget"></a></td>
+<td>Utilities for loading and accessing configuration data in a scoped manner.</td>
+</tr>
+<tr>
+<td><strong>Dangr.Diagnostics</strong></td>
+<td style="text-align:center"><a href="https://www.nuget.org/packages/Dangr.Diagnostics/" title="DangrLib"><img src="https://img.shields.io/badge/nuget-v1.0-2D64F5.svg" alt="nuget"></a></td>
+<td>Diagnostic utilities for use with DangrLib.</td>
+</tr>
+<tr>
+<td><strong>Dangr.Entity</strong></td>
+<td style="text-align:center"><a href="https://www.nuget.org/packages/Dangr.Entity/" title="DangrLib"><img src="https://img.shields.io/badge/nuget-v1.0-2D64F5.svg" alt="nuget"></a></td>
+<td>Utilities for creating and tracking entities with unique ids.</td>
+</tr>
+<tr>
+<td><strong>Dangr.Event</strong></td>
+<td style="text-align:center"><a href="https://www.nuget.org/packages/Dangr.Event/" title="DangrLib"><img src="https://img.shields.io/badge/nuget-v1.0-2D64F5.svg" alt="nuget"></a></td>
+<td>Utilities for publishing and subscribing to event channels.</td>
+</tr>
+<tr>
+<td><strong>Dangr.Inject</strong></td>
+<td style="text-align:center"><a href="https://www.nuget.org/packages/Dangr.Inject/" title="DangrLib"><img src="https://img.shields.io/badge/nuget-v1.0-2D64F5.svg" alt="nuget"></a></td>
+<td>Dependency Injection utilities for use with DangrLib.</td>
+</tr>
+<tr>
+<td><strong>Dangr.Logging</strong></td>
+<td style="text-align:center"><a href="https://www.nuget.org/packages/Dangr.Logging/" title="DangrLib"><img src="https://img.shields.io/badge/nuget-v1.0-2D64F5.svg" alt="nuget"></a></td>
+<td>Logging framework for use with DangrLib.</td>
+</tr>
+<tr>
+<td><strong>Dangr.Logging.Loggers</strong></td>
+<td style="text-align:center"><a href="https://www.nuget.org/packages/Dangr.Logging.Loggers/" title="DangrLib"><img src="https://img.shields.io/badge/nuget-v1.0-2D64F5.svg" alt="nuget"></a></td>
+<td>Default loggers that can be used with DangrLib&#39;s logging framework.</td>
+</tr>
+<tr>
+<td><strong>Dangr.Logging.Wcf</strong></td>
+<td style="text-align:center"><a href="https://www.nuget.org/packages/Dangr.Logging.Wcf/" title="DangrLib"><img src="https://img.shields.io/badge/nuget-v1.0-2D64F5.svg" alt="nuget"></a></td>
+<td>WCF based logging utilities for use with DangrLib&#39;s logging framework.</td>
+</tr>
+<tr>
+<td><strong>Dangr.Math</strong></td>
+<td style="text-align:center"><a href="https://www.nuget.org/packages/Dangr.Math/" title="DangrLib"><img src="https://img.shields.io/badge/nuget-v1.0-2D64F5.svg" alt="nuget"></a></td>
+<td>Math utilities for use with DangrLib.</td>
+</tr>
+<tr>
+<td><strong>Dangr.ObjectPool</strong></td>
+<td style="text-align:center"><a href="https://www.nuget.org/packages/Dangr.ObjectPool/" title="DangrLib"><img src="https://img.shields.io/badge/nuget-v1.0-2D64F5.svg" alt="nuget"></a></td>
+<td>Provides generic object pool utilities.</td>
+</tr>
+<tr>
+<td><strong>Dangr.Registry</strong></td>
+<td style="text-align:center"><a href="https://www.nuget.org/packages/Dangr.Registry/" title="DangrLib"><img src="https://img.shields.io/badge/nuget-v1.0-2D64F5.svg" alt="nuget"></a></td>
+<td>Utilities for accessing shared data in a scoped manner.</td>
+</tr>
+<tr>
+<td><strong>Dangr.Simulation</strong></td>
+<td style="text-align:center"><a href="https://www.nuget.org/packages/Dangr.Simulation/" title="DangrLib"><img src="https://img.shields.io/badge/nuget-v1.0-2D64F5.svg" alt="nuget"></a></td>
+<td>A library used to simulate digital logic circuits.</td>
+</tr>
+<tr>
+<td><strong>Dangr.Test</strong></td>
+<td style="text-align:center"><a href="https://www.nuget.org/packages/Dangr.Test/" title="DangrLib"><img src="https://img.shields.io/badge/nuget-v1.0-2D64F5.svg" alt="nuget"></a></td>
+<td>Test utilities for use with DangrLib.</td>
+</tr>
+<tr>
+<td><strong>Dangr.Util</strong></td>
+<td style="text-align:center"><a href="https://www.nuget.org/packages/Dangr.Util/" title="DangrLib"><img src="https://img.shields.io/badge/nuget-v1.0-2D64F5.svg" alt="nuget"></a></td>
+<td>Miscellaneous utilities for use with DangrLib.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="contributing">Contributing</h2>
+<p>Please read <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/.github/CONTRIBUTING.md">CONTRIBUTING.md</a> for details on the code of conduct, and the process for submitting pull requests.</p>
+<h2 id="versioning">Versioning</h2>
+<p>We use <a href="http://semver.org/">SemVer</a> for versioning. For the versions available, see the <a href="https://github.com/Dangerdan9631/DangrLib/tags">tags on this repository</a>. </p>
+<h2 id="authors">Authors</h2>
+<ul>
+<li><strong>Dan Garvey</strong> - <a href="https://github.com/Dangerdan9631">DangerDan9631</a> - <em>Initial work</em></li>
+</ul>
+<p>See also the list of <a href="https://github.com/Dangerdan9631/DangrLib/contributors">contributors</a> who participated in this project.</p>
+<h2 id="license">License</h2>
+<p>This project is licensed under the MIT License - see the <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE">LICENSE</a> file for details</p>
+<h2 id="acknowledgments">Acknowledgments</h2>
+<ul>
+<li><strong>Billie Thompson</strong> - <a href="https://github.com/PurpleBooth">PurpleBooth</a> - <em><a href="https://gist.github.com/PurpleBooth/109311bb0361f32d87a2">README.md</a> and <a href="https://gist.github.com/PurpleBooth/b24679402957c63ec426">CONTRIBUTING.md</a> templates</em></li>
+</ul>
+<!--
+    Image links
+-->
+<!--
+    Shields
+-->
+<!--
+    Links
+-->
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Doc/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>
