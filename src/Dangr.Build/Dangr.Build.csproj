@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{64C87EF6-04DD-4A6C-BFCC-1B1AA4482AC0}</ProjectGuid>
+    <FileAlignment>512</FileAlignment>
+    <AssemblyName>Dangr.Build</AssemblyName>
+    <NugetDeploy>true</NugetDeploy>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="build\Dangr.Build.targets" />
+    <Content Include="targets\Dangr.NugetPublish.targets">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Dangr.Build.nuspec" />
+    <Content Include="Dangr.Build.settings.targets" />
+    <Content Include="rules\DangrLib.ruleset" />
+    <Content Include="rules\DangrLib.DotSettings" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(SolutionDir)src\Dangr.Build\build\Dangr.Build.targets" />
+  <Target Name="Build">
+    <Copy SourceFiles="@(Content)" DestinationFiles="@(Content->'$(OutputPath)%(RelativeDir)%(Filename)%(Extension)')" />
+  </Target>
+  <Target Name="Clean">
+    <Exec Command="rd /s /q $(OutputPath)" Condition="Exists($(OutputPath))" />
+  </Target>
+  <Target Name="Rebuild" DependsOnTargets="Clean;Build">
+  </Target>
+</Project>

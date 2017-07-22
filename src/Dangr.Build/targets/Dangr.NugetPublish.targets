@@ -1,0 +1,55 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  
+  <!--
+    Get a reference to the NuGet.exe installed from NuGet.
+  -->
+  <ItemGroup>
+    <NugetExeItems Include="$(SolutionDir)\packages\NuGet.CommandLine.*\tools\NuGet.exe" />
+  </ItemGroup>
+  <PropertyGroup>
+    <NugetExe>@(NugetExeItems->'%(FullPath)')</NugetExe>
+    <NugetOutputDir>bin\nuget</NugetOutputDir>
+  </PropertyGroup>
+  
+  <!-- 
+    Cleans the existing nuget package output directory.
+  -->
+  <Target Name="NugetClean">
+    <Message Text="Cleaning NuGet Directory '$(NugetOutputDir)'." Importance="high" />
+    <RemoveDir Directories="$(NugetOutputDir)" ContinueOnError="true" />
+  </Target>
+
+  <!--
+    Creates the NuGet package from the project.
+  -->
+  <Target Name="NugetPackage"
+          DependsOnTargets="NugetClean">
+    <ItemGroup>
+      <NugetProperties Include="configuration=&quot;NugetDeploy&quot;"/>
+      <NugetProperties Include="SolutionDir=$(SolutionDir)"/>
+    </ItemGroup>
+    <Error Condition="@(NugetExeItems->Count()) != 1" 
+           Text="@(NugetExeItems->Count()) NuGet.exe packages found." />
+
+    <Message Text="Using NuGet.exe at location: '$(NugetExe)'" Importance="high" />
+    <Message Text="Creating Nuget package." Importance="high" />
+    <Message Text="Properties: @(NugetProperties)" Importance="high" />
+
+    <Exec Command="$(NugetExe) pack $(ProjectDir)$(AssemblyName).nuspec -prop @(NugetProperties) -OutputDirectory $(NugetOutputDir)"
+          WorkingDirectory="$(ProjectDir)" />
+  </Target>
+
+  <!-- 
+    Pushes the package to NuGet.
+  -->
+  <Target Name="NugetPush"
+          AfterTargets="Build"
+          DependsOnTargets="NugetPackage"
+          Condition="'$(Configuration)|$(NugetDeploy)' == 'NugetDeploy|true'">
+    <ItemGroup>
+      <NugetFiles Include="$(NugetOutputDir)\*" />
+    </ItemGroup>
+    <Message Text="Pushing Nuget file: '@(NugetFiles)'" Importance="high" />
+    <Exec Command="$(NugetExe) push @(NugetFiles) -Source https://www.nuget.org/api/v2/package" />
+  </Target>
+</Project>

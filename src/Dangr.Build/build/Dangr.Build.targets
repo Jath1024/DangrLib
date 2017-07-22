@@ -1,0 +1,23 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <!--
+    Override NuGetPackage with local Dangr.Build files if present.
+  -->
+  <PropertyGroup Condition="Exists('$(SolutionDir)src\Dangr.Build\Dangr.Build.settings.targets')" >
+    <DangrBuildSettingsTargets>$(SolutionDir)src\Dangr.Build\Dangr.Build.settings.targets</DangrBuildSettingsTargets>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(DangrBuildSettingsTargets)' == ''" >
+    <DangrBuildSettingsTargets>$(MSBuildThisFileDirectory)..\Dangr.Build.settings.targets</DangrBuildSettingsTargets>
+  </PropertyGroup>
+  
+  <!-- 
+    Import Default Configuration.
+  -->
+  <Import Project="$(DangrBuildSettingsTargets)"/>
+
+  <!--
+    Import Nuget Publish Targets
+  -->
+  <Import Project="$(DangrBuildTargetsDir)\Dangr.NugetPublish.targets" />
+</Project>
+

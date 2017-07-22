@@ -1,0 +1,34 @@
+﻿<?xml version="1.0"?>
+
+<!--
+<copyright file="Dangr.Build.nuspec" company="DangerDan9631">
+    Copyright (c) 2017 Dan Garvey. All rights reserved.
+    Licensed under the MIT License. 
+    See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
+</copyright>
+-->
+
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Dangr.Build</id>
+    <version>2.0.1</version>
+    <title>Dangr.Build</title>
+    <description>Provides build tools to use in DangrLib packages.</description>
+    <authors>DangerDan9631</authors>
+    <copyright>Copyright � 2017 DangerDan9631</copyright>
+    <iconUrl>https://raw.githubusercontent.com/DangerDan9631/DangrLib/master/Images/Logo/skull%20logo.png</iconUrl>
+    <licenseUrl>https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <tags>dangrlib build nuget</tags>
+    <dependencies>
+      <dependency id="NuGet.CommandLine" version="[4.0,5.0)" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="../../LICENSE" target="LICENSE" />
+    <file src="Dangr.Build.settings.targets" target="Dangr.Build.settings.targets" />
+    <file src="build\**" target="build" />
+    <file src="targets\**" target="targets" />
+    <file src="rules\**" target="rules" />
+  </files>
+</package>

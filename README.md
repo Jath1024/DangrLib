@@ -11,6 +11,13 @@
 It started as separate personal projects and libraries, that I soon realized had a lot of common code. So I began merging and refactoring the code into
 a common code base.
 
+## Collecting feedbacks and proposals for DocFX
+
+Let's make DangrLib better together!
+
+**Vote** for the proposals you like, and **add** yours:
+[![Feature Requests][FeatHubShield]][FeatHubPage]
+
 ## Getting Started
 
 To install **DangrLib**, clone this repository and reference the packages from your _.csproj_
@@ -123,6 +130,7 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 [CodeFactorShield]: https://www.codefactor.io/repository/github/dangerdan9631/dangrlib/badge
 [NugetV1.0Shield]: https://img.shields.io/badge/nuget-v1.0-2D64F5.svg
 [CodeCovShield]: https://codecov.io/gh/Dangerdan9631/DangrLib/branch/master/graph/badge.svg
+[FeatHubShield]: http://feathub.com/Dangerdan9631/DangrLib?format=svg
 
 <!--
     Links
@@ -135,6 +143,7 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 [AppVeyorProject]: https://ci.appveyor.com/project/Dangerdan9631/dangrlib
 [CodeFactorRepository]: https://www.codefactor.io/repository/github/dangerdan9631/dangrlib
 [CodeCovRepository]: https://codecov.io/gh/Dangerdan9631/DangrLib
+[FeatHubPage]: http://feathub.com/Dangerdan9631/DangrLib
 
 [Dangr.Annotation]: https://www.nuget.org/packages/Dangr.Annotation/ "DangrLib"
 [Dangr.Async]: https://www.nuget.org/packages/Dangr.Async/ "DangrLib"

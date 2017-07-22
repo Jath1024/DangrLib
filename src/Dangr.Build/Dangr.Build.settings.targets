@@ -1,0 +1,67 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  
+  <!-- 
+    Default Directories
+  -->
+  <PropertyGroup>
+    <DangrBuildPackageDir Condition="'$(DangrBuildPackageDir)' == ''">$(MSBuildThisFileDirectory)</DangrBuildPackageDir>
+    <DangrRulesDir Condition="'$(DangrRulesDir)' == ''">$(DangrBuildPackageDir)\rules</DangrRulesDir>
+    <DangrBuildTargetsDir Condition="'$(DangrBuildTargetsDir)' == ''">$(DangrBuildPackageDir)\targets</DangrBuildTargetsDir>
+  </PropertyGroup>
+
+  <!-- 
+    Default Configuration Values
+  -->
+  <PropertyGroup>
+    <DangrRootNamespace Condition="'$(DangrRootNamespace)' == ''">Dangr</DangrRootNamespace>
+    <DangrTargetFramework Condition="'$(DangrTargetFramework)' == ''">v4.5.2</DangrTargetFramework>
+    <DangrGenerateDocumentation Condition="'$(DangrGenerateDocumentation)' == ''">false</DangrGenerateDocumentation>
+    <NugetDeploy Condition="'$(NugetDeploy)' == ''">false</NugetDeploy>
+  </PropertyGroup>
+
+  <!-- 
+    Common Configuration.
+  -->
+  <PropertyGroup>
+    <RootNamespace>$(DangrRootNamespace)</RootNamespace>
+    <TargetFrameworkVersion>$(DangrTargetFramework)</TargetFrameworkVersion>
+  </PropertyGroup>
+
+  <!-- Generate Documentation if needed. -->
+  <PropertyGroup Condition=" '$(DangrGenerateDocumentation)' == 'true' ">
+    <DocumentationFile>$(OutputPath)\$(AssemblyName).XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(DangrGenerateDocumentation)' != 'true' ">
+    <DocumentationFile />
+    <NoWarn>1591</NoWarn>
+  </PropertyGroup>
+
+  <!-- 
+    Debug Configuration
+  -->
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>$(DangrRulesDir)\DangrLib.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+
+  <!-- 
+    Release and NuGetDeploy Configuration
+  -->
+  <PropertyGroup Condition="('$(Configuration)' == 'Release' OR '$(Configuration)' == 'NugetDeploy') AND '$(Platform)' == 'AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>$(DangrRulesDir)\DangrLib.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+</Project>
