@@ -80,9 +80,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{38E56344-BE98-48CF-B040-A0BB23E790A2}"
 	ProjectSection(SolutionItems) = preProject
 		Tools\Build\CodeCoverage.ps1 = Tools\Build\CodeCoverage.ps1
-		Tools\Build\Dangr.targets = Tools\Build\Dangr.targets
-		Tools\Build\Dangr.Test.targets = Tools\Build\Dangr.Test.targets
-		Tools\Build\Nuget.Publish.targets = Tools\Build\Nuget.Publish.targets
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nuget", "Nuget", "{8F608ED7-819B-4FBF-87D4-BCD71F6CF58B}"
@@ -242,7 +239,6 @@ Global
 		{D5C3D014-BD60-48DB-9763-AC727CD04CA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D5C3D014-BD60-48DB-9763-AC727CD04CA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5C3D014-BD60-48DB-9763-AC727CD04CA2}.NugetDeploy|Any CPU.ActiveCfg = NugetDeploy|Any CPU
-		{D5C3D014-BD60-48DB-9763-AC727CD04CA2}.NugetDeploy|Any CPU.Build.0 = NugetDeploy|Any CPU
 		{D5C3D014-BD60-48DB-9763-AC727CD04CA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5C3D014-BD60-48DB-9763-AC727CD04CA2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D4894AA8-7367-42FB-B6B1-FC825B469B57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -268,8 +264,10 @@ Global
 		{2CE9C4FD-3BA6-4D74-8918-226DB5EEF544}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CE9C4FD-3BA6-4D74-8918-226DB5EEF544}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8F352D93-EE5C-46BA-BF9B-35F46B807583}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8F352D93-EE5C-46BA-BF9B-35F46B807583}.NugetDeploy|Any CPU.ActiveCfg = NugetDeploy|Any CPU
-		{8F352D93-EE5C-46BA-BF9B-35F46B807583}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F352D93-EE5C-46BA-BF9B-35F46B807583}.NugetDeploy|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F352D93-EE5C-46BA-BF9B-35F46B807583}.NugetDeploy|Any CPU.Build.0 = Debug|Any CPU
+		{8F352D93-EE5C-46BA-BF9B-35F46B807583}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F352D93-EE5C-46BA-BF9B-35F46B807583}.Release|Any CPU.Build.0 = Debug|Any CPU
 		{64C87EF6-04DD-4A6C-BFCC-1B1AA4482AC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{64C87EF6-04DD-4A6C-BFCC-1B1AA4482AC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64C87EF6-04DD-4A6C-BFCC-1B1AA4482AC0}.NugetDeploy|Any CPU.ActiveCfg = NugetDeploy|Any CPU

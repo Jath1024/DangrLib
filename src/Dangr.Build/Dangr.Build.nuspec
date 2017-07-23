@@ -11,7 +11,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Dangr.Build</id>
-    <version>2.0.1</version>
+    <version>2.0.2</version>
     <title>Dangr.Build</title>
     <description>Provides build tools to use in DangrLib packages.</description>
     <authors>DangerDan9631</authors>

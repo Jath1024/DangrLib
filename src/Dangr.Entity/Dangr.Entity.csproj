@@ -1,13 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
   <PropertyGroup>
     <ProjectGuid>{EC435168-CCA0-4B43-9F33-FC450BF55962}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AssemblyName>Dangr.Entity</AssemblyName>
     <NugetDeploy>true</NugetDeploy>
     <GenerateDocumentation>true</GenerateDocumentation>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
-  <Import Project="$(SolutionDir)\Tools\Build\Dangr.targets" />
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -45,6 +53,7 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Dangr.Entity.nuspec</LastGenOutput>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\AdditionalAssemblyInfo.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>AdditionalAssemblyInfo.cs</LastGenOutput>
@@ -60,4 +69,12 @@
       <DependentUpon>Dangr.Entity.tt</DependentUpon>
     </None>
   </ItemGroup>
+  <Import Project="..\..\packages\Dangr.Build.2.0.1\build\Dangr.Build.targets" Condition="Exists('..\..\packages\Dangr.Build.2.0.1\build\Dangr.Build.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\Dangr.Build.2.0.1\build\Dangr.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Dangr.Build.2.0.1\build\Dangr.Build.targets'))" />
+  </Target>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

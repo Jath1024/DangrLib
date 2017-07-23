@@ -15,6 +15,7 @@ Dictionary<string, int> PatchVersion = new Dictionary<string, int>();
 
 // Version Identifiers
 const string ASYNC = "Dangr.Async";
+const string BUILD = "Dangr.Build";
 const string COMMAND = "Dangr.Command";
 const string CONFIGURATION = "Dangr.Configuration";
 const string DIAGNOSTICS = "Dangr.Diagnostics";
@@ -38,6 +39,12 @@ const string UTIL = "Dangr.Util";
 MajorVersion.Add(ASYNC, 1);
 MinorVersion.Add(ASYNC, 1);
 PatchVersion.Add(ASYNC, 0);
+#>
+<# 
+// Dangr.Build Version
+MajorVersion.Add(ASYNC, 2);
+MinorVersion.Add(ASYNC, 0);
+PatchVersion.Add(ASYNC, 2);
 #>
 <# 
 // Dangr.Command Version

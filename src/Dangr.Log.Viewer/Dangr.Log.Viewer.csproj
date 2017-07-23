@@ -1,11 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
   <PropertyGroup>
     <ProjectGuid>{56356371-DF6E-4F89-8D4C-D786834DD7F6}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AssemblyName>Dangr.Log.Viewer</AssemblyName>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
-  <Import Project="$(SolutionDir)\Tools\Build\Dangr.targets" />
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -22,6 +30,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Dangr.Configuration\Dangr.Configuration.csproj">
@@ -58,4 +67,12 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <Import Project="..\..\packages\Dangr.Build.2.0.1\build\Dangr.Build.targets" Condition="Exists('..\..\packages\Dangr.Build.2.0.1\build\Dangr.Build.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\Dangr.Build.2.0.1\build\Dangr.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Dangr.Build.2.0.1\build\Dangr.Build.targets'))" />
+  </Target>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
