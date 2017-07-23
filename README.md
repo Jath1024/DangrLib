@@ -11,9 +11,7 @@
 It started as separate personal projects and libraries, that I soon realized had a lot of common code. So I began merging and refactoring the code into
 a common code base.
 
-## Collecting feedbacks and proposals for DocFX
-
-Let's make DangrLib better together!
+## Feedback and proposals for DangrLib
 
 **Vote** for the proposals you like, and **add** yours:
 [![Feature Requests][FeatHubShield]][FeatHubPage]
