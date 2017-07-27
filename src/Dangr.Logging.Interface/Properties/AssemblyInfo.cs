@@ -6,16 +6,26 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
+/*
+ * This file Is generated using T4 Text Templates. Do Not Modify. 
+ * Make changes to T4 files directly.
+ */
+
+using System.Reflection;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+    
+[assembly: AssemblyTitle("Dangr.Logging.Interface")]
+[assembly: AssemblyProduct("Dangr.Logging.Interface")]
+[assembly: AssemblyDescription("Provides a generalized interface for interacting with a logging framework.")]
+[assembly: AssemblyCompany("DangerDan9631")]
+[assembly: AssemblyCopyright("Copyright (c) 2017 Dan Garvey. All rights reserved.")]
+[assembly: AssemblyVersion("1.1.0")]
+[assembly: AssemblyFileVersion("1.1.0")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
 
-[assembly: InternalsVisibleTo("Dangr.Logging.Test")]
+[assembly: ComVisible(false)]
 
-// ReSharper disable once CheckNamespace
-namespace Dangr
-{
-    internal static partial class AssemblyConstants
-    {
-        public const string AssemblyDescription =
-            "Provides a generalized interface for interacting with a logging framework.";
-    }
-}
+[assembly:InternalsVisibleTo("Dangr.Logging.Interface.Test")]

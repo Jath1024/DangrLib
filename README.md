@@ -64,6 +64,10 @@ Install-Package Dangr.Util
 
 The **DangrLib** libraries can be built out of the box using [Visual Studio].
 
+## API Reference
+
+[API Reference](https://dangerdan9631.github.io/DangrLib/)
+
 ## Running the tests
 
 Unit tests can be run using **MSTest** in the [Visual Studio] Test Explorer.

@@ -1,0 +1,37 @@
+<#
+// -----------------------------------------------------------------------
+//  <copyright file="AssemblyProperties.t4" company="DangerDan9631">
+//      Copyright (c) 2017 Dan Garvey. All rights reserved.
+//      Licensed under the MIT License. 
+//      See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
+//  </copyright>
+// -----------------------------------------------------------------------
+#>
+<#+
+    public const string COMPANY = "DangerDan9631";
+    public const string AUTHOR = "Dan Garvey";
+    public const string COPYRIGHT_YEAR = "2017";
+    public const string COPYRIGHT_TEXT = "Copyright (c) " + COPYRIGHT_YEAR + " " + AUTHOR + ". All rights reserved.";
+
+    // Assembly Names
+    public const string ASYNC = "Dangr.Async";
+    public const string BUILD = "Dangr.Build";
+    public const string COMMAND = "Dangr.Command";
+    public const string CONFIGURATION = "Dangr.Configuration";
+    public const string DIAGNOSTICS = "Dangr.Diagnostics";
+    public const string ENTITY = "Dangr.Entity";
+    public const string EVENT = "Dangr.Event";
+    public const string INJECT = "Dangr.Inject";
+    public const string LOG_VIEWER = "Dangr.Log.Viewer";
+    public const string LOGGING = "Dangr.Logging";
+    public const string LOGGING_INTERFACE = "Dangr.Logging.Interface";
+    public const string LOGGING_LOGGERS = "Dangr.Logging.Loggers";
+    public const string LOGGING_WCF = "Dangr.Logging.Wcf";
+    public const string MATH = "Dangr.Math";
+    public const string OBJECT_POOL = "Dangr.ObjectPool";
+    public const string REGISTRY = "Dangr.Registry";
+    public const string SIMULATION = "Dangr.Simulation";
+    public const string TEST = "Dangr.Test";
+    public const string UTIL = "Dangr.Util";
+    public const string TEST_SUFFIX= ".Test";
+#>

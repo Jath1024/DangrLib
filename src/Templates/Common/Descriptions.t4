@@ -1,0 +1,95 @@
+﻿<#
+// -----------------------------------------------------------------------
+//  <copyright file="Descriptions.t4" company="DangerDan9631">
+//      Copyright (c) 2017 Dan Garvey. All rights reserved.
+//      Licensed under the MIT License. 
+//      See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
+//  </copyright>
+// -----------------------------------------------------------------------
+#>
+<#@ assembly name="System.Collections.Immutable" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Runtime" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Collections.Immutable" #>
+<#@ include file="$(SolutionDir)\src\Templates\Common\AssemblyProperties.t4" once="true" #><##>
+<#+
+    public static readonly ImmutableDictionary<string, string> Description = new Dictionary<string, string> {
+        {
+            ASYNC,
+            "Asynchronous code execution utilities for use with DangrLib."
+        },
+        {
+            BUILD,
+            "Provides build tools to use in DangrLib packages."
+        },
+        {
+            COMMAND,
+            "Utilities for parsing and executing commands from a command line."
+        },
+        {
+            CONFIGURATION,
+            "Utilities for loading and accessing configuration data in a scoped manner."
+        },
+        {
+            DIAGNOSTICS,
+            "Diagnostic utilities for use with DangrLib."
+        },
+        {
+            ENTITY,
+            "Utilities for creating and tracking entities with unique ids."
+        },
+        {
+            EVENT,
+            "Utilities for publishing and subscribing to event channels."
+        },
+        {
+            INJECT,
+            "Dependency Injection utilities for use with DangrLib."
+        },
+        {
+            LOG_VIEWER,
+            "An application used to view logs generated using Dangr.Logging in real time."
+        },
+        {
+            LOGGING,
+            "Logging framework for use with DangrLib."
+        },
+        {
+            LOGGING_INTERFACE,
+            "Provides a generalized interface for interacting with a logging framework."
+        },
+        {
+            LOGGING_LOGGERS,
+            "Default loggers that can be used with DangrLib's logging framework."
+        },
+        {
+            LOGGING_WCF,
+            "WCF based logging utilities for use with DangrLib's logging framework."
+        },
+        {
+            MATH,
+            "Math utilities for use with DangrLib."
+        },
+        {
+            OBJECT_POOL,
+            "Provides generic object pool utilities."
+        },
+        {
+            REGISTRY,
+            "Utilities for accessing shared data in a scoped manner."
+        },
+        {
+            SIMULATION,
+            "A library used to simulate digital logic circuits."
+        },
+        {
+            TEST,
+            "Test utilities for use with DangrLib."
+        },
+        {
+            UTIL,
+            "Miscellaneous utilities for use with DangrLib."
+        }
+    }.ToImmutableDictionary();
+#>

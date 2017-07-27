@@ -1,0 +1,124 @@
+<#
+// -----------------------------------------------------------------------
+//  <copyright file="Versions.t4" company="DangerDan9631">
+//      Copyright (c) 2017 Dan Garvey. All rights reserved.
+//      Licensed under the MIT License. 
+//      See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
+//  </copyright>
+// -----------------------------------------------------------------------
+#>
+<#@ assembly name="System.Collections.Immutable" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Runtime" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Collections.Immutable" #>
+<#@ include file="$(SolutionDir)\src\Templates\Common\AssemblyProperties.t4" once="true" #><##>
+<#+
+    public class Version
+    {
+        public int Major { get; }
+        public int Minor { get; }
+        public int Patch { get; }
+
+        public string BuildVersion
+        {
+            get
+            {
+                return $"{this.Major}.{this.Minor}.{this.Patch}";
+            }
+        }
+        public string DependencyVersion
+        {
+            get
+            {
+                return $"[{this.Major}.0,{this.Major + 1}.0)";
+            }
+        }
+
+        public Version(int major, int minor, int patch)
+        {
+            this.Major = major;
+            this.Minor = minor;
+            this.Patch = patch;
+        }
+    }
+
+    public static readonly ImmutableDictionary<string, Version> AssemblyVersion = new Dictionary<string, Version> {
+        {
+            ASYNC,
+            new Version(1, 1, 0)
+        },
+        {
+            BUILD,
+            new Version(2, 0, 2)
+        },
+        {
+            COMMAND,
+            new Version(1, 1, 0)
+        },
+        {
+            CONFIGURATION,
+            new Version(1, 1, 0)
+        },
+        {
+            DIAGNOSTICS,
+            new Version(1, 1, 0)
+        },
+        {
+            ENTITY,
+            new Version(1, 1, 0)
+        },
+        {
+            EVENT,
+            new Version(1, 1, 0)
+        },
+        {
+            INJECT,
+            new Version(1, 1, 0)
+        },
+        {
+            LOG_VIEWER,
+            new Version(1, 1, 0)
+        },
+        {
+            LOGGING,
+            new Version(1, 1, 0)
+        },
+        {
+            LOGGING_INTERFACE,
+            new Version(1, 1, 0)
+        },
+        {
+            LOGGING_LOGGERS,
+            new Version(1, 1, 0)
+        },
+        {
+            LOGGING_WCF,
+            new Version(1, 1, 0)
+        },
+        {
+            MATH,
+            new Version(1, 1, 0)
+        },
+        {
+            OBJECT_POOL,
+            new Version(1, 1, 0)
+        },
+        {
+            REGISTRY,
+            new Version(1, 1, 0)
+        },
+        {
+            SIMULATION,
+            new Version(1, 1, 0)
+        },
+        {
+            TEST,
+            new Version(1, 1, 0)
+        },
+        {
+            UTIL,
+            new Version(1, 1, 0)
+        }
+    }.ToImmutableDictionary();
+#>

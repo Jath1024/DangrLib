@@ -42,12 +42,11 @@
     <Compile Include="Command\Exceptions\MissingCommandArgumentException.cs" />
     <Compile Include="Command\Exceptions\UnknownCommandArgumentException.cs" />
     <Compile Include="NamespaceDoc.cs" />
-    <Compile Include="Properties\AdditionalAssemblyInfo.cs">
+    <Compile Include="Properties\AssemblyInfo.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>AdditionalAssemblyInfo.tt</DependentUpon>
+      <DependentUpon>AssemblyInfo.tt</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="Dangr.Command.nuspec">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -66,9 +65,9 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Dangr.Command.nuspec</LastGenOutput>
     </None>
-    <None Include="Properties\AdditionalAssemblyInfo.tt">
+    <None Include="Properties\AssemblyInfo.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>AdditionalAssemblyInfo.cs</LastGenOutput>
+      <LastGenOutput>AssemblyInfo.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>

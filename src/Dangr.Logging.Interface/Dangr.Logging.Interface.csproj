@@ -21,8 +21,8 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AdditionalAssemblyInfo.cs">
-      <DependentUpon>AdditionalAssemblyInfo.tt</DependentUpon>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <DependentUpon>AssemblyInfo.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
@@ -30,7 +30,6 @@
     <Compile Include="Logging\ILogSource.cs" />
     <Compile Include="Logging\LogLevel.cs" />
     <Compile Include="Logging\LogSourceExtensions.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Dangr.Logging.Interface.tt">
@@ -38,9 +37,9 @@
       <LastGenOutput>Dangr.Logging.Interface.nuspec</LastGenOutput>
     </None>
     <None Include="packages.config" />
-    <None Include="Properties\AdditionalAssemblyInfo.tt">
+    <None Include="Properties\AssemblyInfo.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>AdditionalAssemblyInfo.cs</LastGenOutput>
+      <LastGenOutput>AssemblyInfo.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,41 @@
+<#
+// -----------------------------------------------------------------------
+//  <copyright file="AssemblyInfo.t4" company="DangerDan9631">
+//      Copyright (c) 2017 Dan Garvey. All rights reserved.
+//      Licensed under the MIT License. 
+//      See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
+//  </copyright>
+// -----------------------------------------------------------------------
+#>
+<#@ include file="$(SolutionDir)\src\Templates\Common\AssemblyProperties.t4" once="true" #><##>
+<#@ include file="$(SolutionDir)\src\Templates\Common\CopyrightHeader.t4" once="true" #><##>
+<#@ include file="$(SolutionDir)\src\Templates\Common\Descriptions.t4" once="true" #><##>
+<#@ include file="$(SolutionDir)\src\Templates\Common\GeneratedCodeBanner.t4" #><##>
+<#@ include file="$(SolutionDir)\src\Templates\Common\Versions.t4" once="true" #><##>
+<# string assemblyTitle = assemblyName + (isTestAssembly ? ".Test" : string.Empty); #>
+<# PrintCsCopyrightHeader("AssemblyInfo.cs"); #>
+
+<# PrintGeneratedCodeCsBanner(); #>
+
+using System.Reflection;
+<# if(!isTestAssembly) { #>
+using System.Runtime.CompilerServices;
+<# } #>
+using System.Runtime.InteropServices;
+    
+[assembly: AssemblyTitle("<#= assemblyTitle #>")]
+[assembly: AssemblyProduct("<#= assemblyTitle #>")]
+[assembly: AssemblyDescription("<#= Description[assemblyName] #>")]
+[assembly: AssemblyCompany("<#= COMPANY #>")]
+[assembly: AssemblyCopyright("<#= COPYRIGHT_TEXT #>")]
+[assembly: AssemblyVersion("<#= AssemblyVersion[assemblyName].BuildVersion #>")]
+[assembly: AssemblyFileVersion("<#= AssemblyVersion[assemblyName].BuildVersion #>")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+
+[assembly: ComVisible(false)]
+<# if(!isTestAssembly) { #>
+
+[assembly:InternalsVisibleTo("<#= assemblyName + TEST_SUFFIX #>")]
+<# } #>

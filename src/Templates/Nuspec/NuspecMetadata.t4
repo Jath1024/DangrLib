@@ -1,0 +1,23 @@
+<#
+// -----------------------------------------------------------------------
+//  <copyright file="NuspecMetadata.t4" company="DangerDan9631">
+//      Copyright (c) 2017 Dan Garvey. All rights reserved.
+//      Licensed under the MIT License.
+//      See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
+//  </copyright>
+// -----------------------------------------------------------------------
+#>
+<#@ include file="$(SolutionDir)\src\Templates\Common\AssemblyProperties.t4" once="true" #><##>
+<#@ include file="$(SolutionDir)\src\Templates\Common\Descriptions.t4" once="true" #><##>
+<#@ include file="$(SolutionDir)\src\Templates\Common\Tags.t4" once="true" #><##>
+<#@ include file="$(SolutionDir)\src\Templates\Common\Versions.t4" once="true" #><##>
+<id><#= assemblyName #></id>
+    <version><#= AssemblyVersion[assemblyName].BuildVersion #></version>
+    <title><#= assemblyName #></title>
+    <description><#= Description[assemblyName] #></description>
+    <authors><#= AUTHOR #></authors>
+    <copyright><#= COPYRIGHT_TEXT #></copyright>
+    <iconUrl><#= ICON_URL #></iconUrl>
+    <licenseUrl><#= LICENSE_URL #></licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <tags><#= GetTags(assemblyName) #></tags>

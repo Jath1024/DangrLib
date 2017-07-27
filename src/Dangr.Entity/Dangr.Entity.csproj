@@ -21,8 +21,8 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AdditionalAssemblyInfo.cs">
-      <DependentUpon>AdditionalAssemblyInfo.tt</DependentUpon>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <DependentUpon>AssemblyInfo.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
@@ -32,7 +32,6 @@
     <Compile Include="Entity\IdPartitionTable.cs" />
     <Compile Include="Entity\IEntity.cs" />
     <Compile Include="NamespaceDoc.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Dangr.Diagnostics\Dangr.Diagnostics.csproj">
@@ -54,9 +53,9 @@
       <LastGenOutput>Dangr.Entity.nuspec</LastGenOutput>
     </None>
     <None Include="packages.config" />
-    <None Include="Properties\AdditionalAssemblyInfo.tt">
+    <None Include="Properties\AssemblyInfo.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>AdditionalAssemblyInfo.cs</LastGenOutput>
+      <LastGenOutput>AssemblyInfo.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>

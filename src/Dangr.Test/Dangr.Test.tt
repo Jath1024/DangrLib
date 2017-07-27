@@ -8,37 +8,28 @@
 // -----------------------------------------------------------------------
 #>
 <#@ template debug="false" hostspecific="false" language="C#" #>
-<#@ assembly name="System.Core" #>
-<#@ import namespace="System.Collections.Generic" #>
 <#@ output extension=".nuspec" #>
-<#@ 
-    include file="$(SolutionDir)\Tools\CommonSource\Versions.t4" once="true" 
+<#@ include file="$(SolutionDir)\src\Templates\Common\AssemblyProperties.t4" once="true" #><##>
+<#@ include file="$(SolutionDir)\src\Templates\Common\CopyrightHeader.t4" once="true" #><##>
+<#@ include file="$(SolutionDir)\src\Templates\Common\Versions.t4" once="true" #><##>
+<#@ include file="$(SolutionDir)\src\Templates\Common\GeneratedCodeBanner.t4" #><##>
+<#@ include file="$(SolutionDir)\src\Templates\Nuspec\NuspecDependency.t4" #><##>
+<# 
+    string assemblyName = TEST;
 #>
 <?xml version="1.0"?>
+<# PrintXmlCopyrightHeader(assemblyName + ".nuspec"); #>
 
-<!--
-<copyright file="Dangr.Test.nuspec" company="DangerDan9631">
-    Copyright (c) 2017 Dan Garvey. All rights reserved.
-    Licensed under the MIT License. 
-    See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
-</copyright>
--->
+<# PrintGeneratedCodeXmlBanner(); #>
 
-<!--
-    This file Is generated using T4 Text Templates. Do Not Modify. 
-    Make changes to T4 files directly.
--->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <#@ include file="$(SolutionDir)\Tools\CommonSource\NuspecMetadata.t4" once="true" #>
-    <tags>test dangrlib</tags>
+    <#@ include file="$(SolutionDir)\src\Templates\Nuspec\NuspecMetadata.t4" #>
     <dependencies>
-      <dependency id="Dangr.Util" version="[<#= MajorVersion[UTIL] #>.0,<#= MajorVersion[UTIL] + 1 #>.0)" />
-      <dependency id="Dangr.Logging.Interface" version="[<#= MajorVersion[LOGGING_INTERFACE] #>.0,<#= MajorVersion[LOGGING_INTERFACE] + 1 #>.0)" />
-      <dependency id="Dangr.Diagnostics" version="[<#= MajorVersion[DIAGNOSTICS] #>.0,<#= MajorVersion[DIAGNOSTICS] + 1 #>.0)" />
+<# GetNuspecDependencies(assemblyName); #>
     </dependencies>
   </metadata>
   <files>
-    <#@ include file="$(SolutionDir)\Tools\CommonSource\NuspecCommonFiles.t4" once="true" #>
+    <#@ include file="$(SolutionDir)\src\Templates\Nuspec\NuspecCommonFiles.t4" once="true" #>
   </files>
 </package>

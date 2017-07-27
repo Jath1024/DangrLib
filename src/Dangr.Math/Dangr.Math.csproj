@@ -21,8 +21,8 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AdditionalAssemblyInfo.cs">
-      <DependentUpon>AdditionalAssemblyInfo.tt</DependentUpon>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <DependentUpon>AssemblyInfo.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
@@ -32,7 +32,6 @@
     <Compile Include="Math\LinearAnimator.cs" />
     <Compile Include="Math\MathHelper.cs" />
     <Compile Include="NamespaceDoc.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Math\QuadraticAnimator.cs" />
     <Compile Include="Math\SinAnimator.cs" />
     <Compile Include="Math\SmoothTrigAnimator.cs" />
@@ -43,9 +42,9 @@
       <LastGenOutput>Dangr.Math.nuspec</LastGenOutput>
     </None>
     <None Include="packages.config" />
-    <None Include="Properties\AdditionalAssemblyInfo.tt">
+    <None Include="Properties\AssemblyInfo.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>AdditionalAssemblyInfo.cs</LastGenOutput>
+      <LastGenOutput>AssemblyInfo.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>

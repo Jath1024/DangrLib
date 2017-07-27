@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0"?>
-
 <!--
 <copyright file="Dangr.Event.nuspec" company="DangerDan9631">
     Copyright (c) 2017 Dan Garvey. All rights reserved.
@@ -12,20 +11,23 @@
     This file Is generated using T4 Text Templates. Do Not Modify. 
     Make changes to T4 files directly.
 -->
+
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>$id$</id>
-    <version>$version$</version>
-    <title>$title$</title>
-    <description>$description$</description>
-    <authors>$author$</authors>
-    <copyright>$copyright$</copyright>
+    <id>Dangr.Event</id>
+    <version>1.1.0</version>
+    <title>Dangr.Event</title>
+    <description>Utilities for publishing and subscribing to event channels.</description>
+    <authors>Dan Garvey</authors>
+    <copyright>Copyright (c) 2017 Dan Garvey. All rights reserved.</copyright>
     <iconUrl>https://raw.githubusercontent.com/DangerDan9631/DangrLib/master/Images/Logo/skull%20logo.png</iconUrl>
     <licenseUrl>https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <tags>dangrlib event subscribe publish</tags>
+    <tags>dangrlib event subscribe publish </tags>
+    <dependencies>
+    </dependencies>
   </metadata>
   <files>
-    <file src="../../LICENSE" target="LICENSE" />
+    <file src="..\..\LICENSE" target="LICENSE" />
   </files>
 </package>

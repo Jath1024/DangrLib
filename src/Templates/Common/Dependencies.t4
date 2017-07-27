@@ -1,0 +1,124 @@
+﻿<#
+// -----------------------------------------------------------------------
+//  <copyright file="Tags.t4" company="DangerDan9631">
+//      Copyright (c) 2017 Dan Garvey. All rights reserved.
+//      Licensed under the MIT License. 
+//      See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
+//  </copyright>
+// -----------------------------------------------------------------------
+#>
+<#@ assembly name="System.Collections.Immutable" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Runtime" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Collections.Immutable" #>
+<#@ import namespace="System.Text" #>
+<#@ include file="$(SolutionDir)\src\Templates\Common\AssemblyProperties.t4" once="true" #><##>
+<#+
+    public static readonly ImmutableDictionary<string, ImmutableList<string>> InternalDependencies = new Dictionary<string, ImmutableList<string>> {
+        {
+            ASYNC,
+            new List<string> {
+            }.ToImmutableList()
+        },
+        {
+            BUILD,
+            new List<string> {
+            }.ToImmutableList()
+        },
+        {
+            COMMAND,
+            new List<string> {
+                UTIL
+            }.ToImmutableList()
+        },
+        {
+            CONFIGURATION,
+            new List<string> {
+                DIAGNOSTICS, LOGGING_INTERFACE, UTIL
+            }.ToImmutableList()
+        },
+        {
+            DIAGNOSTICS,
+            new List<string> {
+                LOGGING_INTERFACE, UTIL
+            }.ToImmutableList()
+        },
+        {
+            ENTITY,
+            new List<string> {
+                DIAGNOSTICS, LOGGING_INTERFACE, UTIL
+            }.ToImmutableList()
+        },
+        {
+            EVENT,
+            new List<string> {
+            }.ToImmutableList()
+        },
+        {
+            INJECT,
+            new List<string> {
+            }.ToImmutableList()
+        },
+        {
+            LOG_VIEWER,
+            new List<string> {
+            }.ToImmutableList()
+        },
+        {
+            LOGGING,
+            new List<string> {
+                LOGGING_INTERFACE, UTIL
+            }.ToImmutableList()
+        },
+        {
+            LOGGING_INTERFACE,
+            new List<string> {
+            }.ToImmutableList()
+        },
+        {
+            LOGGING_LOGGERS,
+            new List<string> {
+                DIAGNOSTICS, LOGGING, LOGGING_INTERFACE, UTIL
+            }.ToImmutableList()
+        },
+        {
+            LOGGING_WCF,
+            new List<string> {
+                CONFIGURATION, DIAGNOSTICS, LOGGING, LOGGING_INTERFACE, UTIL
+            }.ToImmutableList()
+        },
+        {
+            MATH,
+            new List<string> {
+            }.ToImmutableList()
+        },
+        {
+            OBJECT_POOL,
+            new List<string> {
+                UTIL
+            }.ToImmutableList()
+        },
+        {
+            REGISTRY,
+            new List<string> {
+            }.ToImmutableList()
+        },
+        {
+            SIMULATION,
+            new List<string> {
+            }.ToImmutableList()
+        },
+        {
+            TEST,
+            new List<string> {
+                DIAGNOSTICS, LOGGING_INTERFACE, UTIL
+            }.ToImmutableList()
+        },
+        {
+            UTIL,
+            new List<string> {
+            }.ToImmutableList()
+        }
+    }.ToImmutableDictionary();
+#>

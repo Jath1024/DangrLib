@@ -1,0 +1,15 @@
+﻿<#
+// -----------------------------------------------------------------------
+//  <copyright file="AssemblyInfo.tt" company="DangerDan9631">
+//      Copyright (c) 2017 Dan Garvey. All rights reserved.
+//      Licensed under the MIT License. 
+//      See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
+//  </copyright>
+// -----------------------------------------------------------------------
+#>
+<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ output extension=".cs" #>
+<#@ include file="$(SolutionDir)\src\Templates\Common\Versions.t4" once="true" #><##>
+<#  string assemblyName = UTIL; #>
+<#  bool isTestAssembly = true; #>
+<#@ include file="$(SolutionDir)\src\Templates\AssemblyInfo\AssemblyInfo.t4"  once="true" #>

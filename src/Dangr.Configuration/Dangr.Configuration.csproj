@@ -26,12 +26,11 @@
     <Compile Include="Configuration\ConfigurationSource.cs" />
     <Compile Include="Configuration\ConfigurationView.cs" />
     <Compile Include="NamespaceDoc.cs" />
-    <Compile Include="Properties\AdditionalAssemblyInfo.cs">
+    <Compile Include="Properties\AssemblyInfo.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>AdditionalAssemblyInfo.tt</DependentUpon>
+      <DependentUpon>AssemblyInfo.tt</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Configuration\SettingChangedEventArgs.cs" />
     <Compile Include="Configuration\Sources\AppSettingsConfigurationSource.cs" />
     <Compile Include="Configuration\Sources\DebugConfigurationSource.cs" />
@@ -57,9 +56,9 @@
       <LastGenOutput>Dangr.Configuration.nuspec</LastGenOutput>
     </None>
     <None Include="packages.config" />
-    <None Include="Properties\AdditionalAssemblyInfo.tt">
+    <None Include="Properties\AssemblyInfo.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>AdditionalAssemblyInfo.cs</LastGenOutput>
+      <LastGenOutput>AssemblyInfo.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>

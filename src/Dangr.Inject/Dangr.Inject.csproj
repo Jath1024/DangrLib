@@ -32,8 +32,8 @@
     <None Include="Inject\Core\IInjectionProvider.cs" />
     <None Include="Inject\Core\InjectionCoreFactory.cs" />
     <None Include="Inject\Internal\InjectionContext.cs" />
-    <Compile Include="Properties\AdditionalAssemblyInfo.cs">
-      <DependentUpon>AdditionalAssemblyInfo.tt</DependentUpon>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <DependentUpon>AssemblyInfo.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
@@ -49,7 +49,6 @@
     <None Include="Inject\Core\Attributes\SingletonAttribute.cs" />
     <None Include="Inject\Internal\SingletonInjectionProvider.cs" />
     <None Include="NamespaceDoc.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Dangr.Inject.tt">
@@ -57,9 +56,9 @@
       <LastGenOutput>Dangr.Inject.nuspec</LastGenOutput>
     </None>
     <None Include="packages.config" />
-    <None Include="Properties\AdditionalAssemblyInfo.tt">
+    <None Include="Properties\AssemblyInfo.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>AdditionalAssemblyInfo.cs</LastGenOutput>
+      <LastGenOutput>AssemblyInfo.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>

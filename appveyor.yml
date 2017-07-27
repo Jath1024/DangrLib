@@ -12,7 +12,7 @@ build:
   verbosity: minimal
 
 test_script:
-- ps: .\Tools\Build\CodeCoverage.ps1
+- ps: .\build\CodeCoverage.ps1
 
 after_test:
  - "SET PATH=C:\\Python34;C:\\Python34\\Scripts;%PATH%"

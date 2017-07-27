@@ -22,10 +22,10 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AdditionalAssemblyInfo.cs">
+    <Compile Include="Properties\AssemblyInfo.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>AdditionalAssemblyInfo.tt</DependentUpon>
+      <DependentUpon>AssemblyInfo.tt</DependentUpon>
     </Compile>
     <Compile Include="Diagnostics\Assert.cs" />
     <Compile Include="Diagnostics\AssertionFailedException.cs" />
@@ -35,7 +35,6 @@
     <Compile Include="Diagnostics\CompareOperationExtensions.cs" />
     <Compile Include="Diagnostics\DebugAssertResolver.cs" />
     <Compile Include="NamespaceDoc.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Diagnostics\ValidateResolver.cs" />
     <Compile Include="Diagnostics\ValidationFailedException.cs" />
     <Compile Include="Diagnostics\WarnResolver.cs" />
@@ -56,9 +55,9 @@
       <LastGenOutput>Dangr.Diagnostics.nuspec</LastGenOutput>
     </None>
     <None Include="packages.config" />
-    <None Include="Properties\AdditionalAssemblyInfo.tt">
+    <None Include="Properties\AssemblyInfo.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>AdditionalAssemblyInfo.cs</LastGenOutput>
+      <LastGenOutput>AssemblyInfo.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>

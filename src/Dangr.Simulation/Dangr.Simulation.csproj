@@ -27,8 +27,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AdditionalAssemblyInfo.cs">
-      <DependentUpon>AdditionalAssemblyInfo.tt</DependentUpon>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <DependentUpon>AssemblyInfo.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
@@ -68,7 +68,6 @@
     <None Include="Simulation\Connections\ReadConnection.cs" />
     <None Include="Simulation\Types\SimulationEntity.cs" />
     <None Include="Simulation\Connections\WriteConnection.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Simulation\Components\Arithmetic\" />
@@ -81,9 +80,9 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Dangr.Simulation.nuspec</LastGenOutput>
     </None>
-    <None Include="Properties\AdditionalAssemblyInfo.tt">
+    <None Include="Properties\AssemblyInfo.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>AdditionalAssemblyInfo.cs</LastGenOutput>
+      <LastGenOutput>AssemblyInfo.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,145 @@
+﻿<#
+// -----------------------------------------------------------------------
+//  <copyright file="Tags.t4" company="DangerDan9631">
+//      Copyright (c) 2017 Dan Garvey. All rights reserved.
+//      Licensed under the MIT License. 
+//      See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
+//  </copyright>
+// -----------------------------------------------------------------------
+#>
+<#@ assembly name="System.Collections.Immutable" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Runtime" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Collections.Immutable" #>
+<#@ import namespace="System.Text" #>
+<#@ include file="$(SolutionDir)\src\Templates\Common\AssemblyProperties.t4" once="true" #><##>
+<#+
+    public static readonly string TAG_DANGRLIB = "dangrlib";
+
+    public static readonly ImmutableDictionary<string, ImmutableList<string>> Tags = new Dictionary<string, ImmutableList<string>> {
+        {
+            ASYNC,
+            new List<string> {
+                TAG_DANGRLIB, "async"
+            }.ToImmutableList()
+        },
+        {
+            BUILD,
+            new List<string> {
+                TAG_DANGRLIB, "build", "nuget"
+            }.ToImmutableList()
+        },
+        {
+            COMMAND,
+            new List<string> {
+                TAG_DANGRLIB, "command", "commandline", "arguments", "execution"
+            }.ToImmutableList()
+        },
+        {
+            CONFIGURATION,
+            new List<string> {
+                TAG_DANGRLIB, "configuration"
+            }.ToImmutableList()
+        },
+        {
+            DIAGNOSTICS,
+            new List<string> {
+                TAG_DANGRLIB, "diagnostics", "validate", "warn", "assert"
+            }.ToImmutableList()
+        },
+        {
+            ENTITY,
+            new List<string> {
+                TAG_DANGRLIB, "entity", "id", "table"
+            }.ToImmutableList()
+        },
+        {
+            EVENT,
+            new List<string> {
+                TAG_DANGRLIB, "event", "subscribe", "publish"
+            }.ToImmutableList()
+        },
+        {
+            INJECT,
+            new List<string> {
+                TAG_DANGRLIB, "inject", "ioc", "dependency", "injection"
+            }.ToImmutableList()
+        },
+        {
+            LOG_VIEWER,
+            new List<string> {
+                TAG_DANGRLIB
+            }.ToImmutableList()
+        },
+        {
+            LOGGING,
+            new List<string> {
+                TAG_DANGRLIB, "logging"
+            }.ToImmutableList()
+        },
+        {
+            LOGGING_INTERFACE,
+            new List<string> {
+                TAG_DANGRLIB, "logging"
+            }.ToImmutableList()
+        },
+        {
+            LOGGING_LOGGERS,
+            new List<string> {
+                TAG_DANGRLIB, "logging"
+            }.ToImmutableList()
+        },
+        {
+            LOGGING_WCF,
+            new List<string> {
+                TAG_DANGRLIB, "logging", "wcf"
+            }.ToImmutableList()
+        },
+        {
+            MATH,
+            new List<string> {
+                TAG_DANGRLIB, "math"
+            }.ToImmutableList()
+        },
+        {
+            OBJECT_POOL,
+            new List<string> {
+                TAG_DANGRLIB, "object", "pool"
+            }.ToImmutableList()
+        },
+        {
+            REGISTRY,
+            new List<string> {
+                TAG_DANGRLIB, "registry"
+            }.ToImmutableList()
+        },
+        {
+            SIMULATION,
+            new List<string> {
+                TAG_DANGRLIB, "simulation", "logic", "gates"
+            }.ToImmutableList()
+        },
+        {
+            TEST,
+            new List<string> {
+                TAG_DANGRLIB, "test"
+            }.ToImmutableList()
+        },
+        {
+            UTIL,
+            new List<string> {
+                TAG_DANGRLIB, "utility"
+            }.ToImmutableList()
+        }
+    }.ToImmutableDictionary();
+    
+    public static string GetTags(string assemblyName) {
+        StringBuilder builder = new StringBuilder();
+        ImmutableList<string> libraryTags = Tags[assemblyName];
+        foreach(string tag in libraryTags) {
+            builder.Append($"{tag} ");
+        }
+        return builder.ToString();
+    }
+#>

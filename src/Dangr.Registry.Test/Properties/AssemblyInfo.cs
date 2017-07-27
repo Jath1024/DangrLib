@@ -6,11 +6,23 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-// ReSharper disable once CheckNamespace
-namespace Dangr.Test
-{
-    internal static partial class AssemblyConstants
-    {
-        public const string AssemblyDescription = "";
-    }
-}
+/*
+ * This file Is generated using T4 Text Templates. Do Not Modify. 
+ * Make changes to T4 files directly.
+ */
+
+using System.Reflection;
+using System.Runtime.InteropServices;
+    
+[assembly: AssemblyTitle("Dangr.Registry.Test")]
+[assembly: AssemblyProduct("Dangr.Registry.Test")]
+[assembly: AssemblyDescription("Utilities for accessing shared data in a scoped manner.")]
+[assembly: AssemblyCompany("DangerDan9631")]
+[assembly: AssemblyCopyright("Copyright (c) 2017 Dan Garvey. All rights reserved.")]
+[assembly: AssemblyVersion("1.1.0")]
+[assembly: AssemblyFileVersion("1.1.0")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+
+[assembly: ComVisible(false)]

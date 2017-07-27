@@ -11,10 +11,18 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="build\Dangr.Build.targets" />
+    <Content Include="Dangr.Build.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Dangr.Build.nuspec</LastGenOutput>
+    </Content>
     <Content Include="targets\Dangr.NugetPublish.targets">
       <SubType>Designer</SubType>
     </Content>
-    <None Include="Dangr.Build.nuspec" />
+    <None Include="Dangr.Build.nuspec">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dangr.Build.tt</DependentUpon>
+    </None>
     <Content Include="Dangr.Build.settings.targets" />
     <Content Include="rules\DangrLib.ruleset" />
     <Content Include="rules\DangrLib.DotSettings" />

@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0"?>
-
 <!--
 <copyright file="Dangr.Build.nuspec" company="DangerDan9631">
     Copyright (c) 2017 Dan Garvey. All rights reserved.
@@ -8,24 +7,29 @@
 </copyright>
 -->
 
+<!--
+    This file Is generated using T4 Text Templates. Do Not Modify. 
+    Make changes to T4 files directly.
+-->
+
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Dangr.Build</id>
     <version>2.0.2</version>
     <title>Dangr.Build</title>
     <description>Provides build tools to use in DangrLib packages.</description>
-    <authors>DangerDan9631</authors>
-    <copyright>Copyright � 2017 DangerDan9631</copyright>
+    <authors>Dan Garvey</authors>
+    <copyright>Copyright (c) 2017 Dan Garvey. All rights reserved.</copyright>
     <iconUrl>https://raw.githubusercontent.com/DangerDan9631/DangrLib/master/Images/Logo/skull%20logo.png</iconUrl>
     <licenseUrl>https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <tags>dangrlib build nuget</tags>
+    <tags>dangrlib build nuget </tags>
     <dependencies>
       <dependency id="NuGet.CommandLine" version="[4.0,5.0)" />
     </dependencies>
   </metadata>
   <files>
-    <file src="../../LICENSE" target="LICENSE" />
+    <file src="..\..\LICENSE" target="LICENSE" />
     <file src="Dangr.Build.settings.targets" target="Dangr.Build.settings.targets" />
     <file src="build\**" target="build" />
     <file src="targets\**" target="targets" />

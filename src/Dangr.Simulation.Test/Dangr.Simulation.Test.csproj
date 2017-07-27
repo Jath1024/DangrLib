@@ -30,12 +30,11 @@
     <None Include="Simulation\Components\Gates\AndGateTests.cs" />
     <None Include="Simulation\Connections\ReadConnectionTest.cs" />
     <None Include="Simulation\Types\BitValueTest.cs" />
-    <Compile Include="Properties\AdditionalAssemblyInfo.cs">
-      <DependentUpon>AdditionalAssemblyInfo.tt</DependentUpon>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <DependentUpon>AssemblyInfo.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="Simulation\Types\DataValueTest.cs" />
     <None Include="Simulation\Types\OutputTypeTest.cs" />
     <None Include="Simulation\Types\RadixTypeTest.cs" />
@@ -59,9 +58,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\AdditionalAssemblyInfo.tt">
+    <None Include="Properties\AssemblyInfo.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>AdditionalAssemblyInfo.cs</LastGenOutput>
+      <LastGenOutput>AssemblyInfo.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
