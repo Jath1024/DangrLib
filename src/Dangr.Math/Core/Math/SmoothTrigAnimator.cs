@@ -6,7 +6,7 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Math
+namespace Dangr.Core.Math
 {
     using System;
 

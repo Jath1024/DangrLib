@@ -1,27 +1,25 @@
 ﻿// -----------------------------------------------------------------------
-//  <copyright file="SinAnimator.cs" company="DangerDan9631">
+//  <copyright file="QuadraticAnimator.cs" company="DangerDan9631">
 //      Copyright (c) 2017 Dan Garvey. All rights reserved.
 //      Licensed under the MIT License. 
 //      See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Math
+namespace Dangr.Core.Math
 {
-    using System;
-
     /// <summary>
-    /// <see cref="Animator" /> that animates using the equation: V = Sin(Pi/2 *
-    /// T) Starts out fast, slows down at the end.
+    /// <see cref="Animator" /> that animates using the equation: V = T * T
+    /// Starts out slow, speeds up to the end.
     /// </summary>
-    public class SinAnimator : Animator
+    public class QuadraticAnimator : Animator
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SinAnimator" /> class.
+        /// Initializes a new instance of the <see cref="QuadraticAnimator" /> class.
         /// </summary>
         /// <param name="minValue">The minimum value.</param>
         /// <param name="maxValue">The maximum value.</param>
-        public SinAnimator(float minValue, float maxValue)
+        public QuadraticAnimator(float minValue, float maxValue)
             : base(minValue, maxValue)
         {
         }
@@ -33,7 +31,7 @@ namespace Dangr.Math
         /// <returns>The new value as a scale from 0 to 1.</returns>
         protected override float CalculateScale(float v)
         {
-            return (float) Math.Sin(MathHelper.PiOver2 * v);
+            return v * v;
         }
     }
 }

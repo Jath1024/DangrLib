@@ -6,11 +6,11 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Math
+namespace Dangr.Core.Math
 {
     /// <summary>
-    /// Animates a value from <see cref="Dangr.Math.Animator.StartValue" /> to 
-    /// <see cref="Dangr.Math.Animator.EndValue" /> based off of time T from 0
+    /// Animates a value from <see cref="Animator.StartValue" /> to 
+    /// <see cref="Animator.EndValue" /> based off of time T from 0
     /// to 1.
     /// </summary>
     public abstract class Animator
@@ -19,12 +19,12 @@ namespace Dangr.Math
         private float t;
 
         /// <summary>
-        /// Gets the animated value when <see cref="Dangr.Math.Animator.T" /> = 0.
+        /// Gets the animated value when <see cref="Animator.T" /> = 0.
         /// </summary>
         public float StartValue { get; }
 
         /// <summary>
-        /// Gets the animated value when <see cref="Dangr.Math.Animator.T" /> = 1.
+        /// Gets the animated value when <see cref="Animator.T" /> = 1.
         /// </summary>
         public float EndValue { get; }
 
@@ -34,7 +34,7 @@ namespace Dangr.Math
         public float Value { get; private set; }
 
         /// <summary>
-        /// Gets or sets the current <see cref="Dangr.Math.Animator.T" /> value for the animation. Clamped between 0 and 1.
+        /// Gets or sets the current <see cref="Animator.T" /> value for the animation. Clamped between 0 and 1.
         /// </summary>
         public float T
         {

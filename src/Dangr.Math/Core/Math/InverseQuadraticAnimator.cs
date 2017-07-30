@@ -1,25 +1,25 @@
 ﻿// -----------------------------------------------------------------------
-//  <copyright file="QuadraticAnimator.cs" company="DangerDan9631">
+//  <copyright file="InverseQuadraticAnimator.cs" company="DangerDan9631">
 //      Copyright (c) 2017 Dan Garvey. All rights reserved.
 //      Licensed under the MIT License. 
 //      See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Math
+namespace Dangr.Core.Math
 {
     /// <summary>
-    /// <see cref="Animator" /> that animates using the equation: V = T * T
-    /// Starts out slow, speeds up to the end.
+    /// <see cref="Animator" /> that animates using the equation: V = 1 - (T -
+    /// 1) ^ 2 Starts out fast, slows down to the end.
     /// </summary>
-    public class QuadraticAnimator : Animator
+    public class InverseQuadraticAnimator : Animator
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="QuadraticAnimator" /> class.
+        /// Initializes a new instance of the <see cref="InverseQuadraticAnimator" /> class.
         /// </summary>
         /// <param name="minValue">The minimum value.</param>
         /// <param name="maxValue">The maximum value.</param>
-        public QuadraticAnimator(float minValue, float maxValue)
+        public InverseQuadraticAnimator(float minValue, float maxValue)
             : base(minValue, maxValue)
         {
         }
@@ -31,7 +31,8 @@ namespace Dangr.Math
         /// <returns>The new value as a scale from 0 to 1.</returns>
         protected override float CalculateScale(float v)
         {
-            return v * v;
+            float vMinus1 = v - 1.0f;
+            return 1.0f - (vMinus1 * vMinus1);
         }
     }
 }

@@ -26,14 +26,14 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Math\Animator.cs" />
-    <Compile Include="Math\CosAnimator.cs" />
-    <Compile Include="Math\InverseQuadraticAnimator.cs" />
-    <Compile Include="Math\LinearAnimator.cs" />
-    <Compile Include="Math\MathHelper.cs" />
-    <Compile Include="Math\QuadraticAnimator.cs" />
-    <Compile Include="Math\SinAnimator.cs" />
-    <Compile Include="Math\SmoothTrigAnimator.cs" />
+    <Compile Include="Core\Math\Animator.cs" />
+    <Compile Include="Core\Math\CosAnimator.cs" />
+    <Compile Include="Core\Math\InverseQuadraticAnimator.cs" />
+    <Compile Include="Core\Math\LinearAnimator.cs" />
+    <Compile Include="Core\Math\MathHelper.cs" />
+    <Compile Include="Core\Math\QuadraticAnimator.cs" />
+    <Compile Include="Core\Math\SinAnimator.cs" />
+    <Compile Include="Core\Math\SmoothTrigAnimator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Dangr.Math.tt">
