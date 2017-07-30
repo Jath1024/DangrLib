@@ -13,8 +13,8 @@ namespace Dangr.Command
     using Dangr.Core;
     using Dangr.Core.Command;
     using Dangr.Core.Command.Exceptions;
+    using Dangr.Core.Test;
     using Dangr.Internal.Command;
-    using Dangr.Test;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Assert = Dangr.Core.Diagnostics.Assert;
 

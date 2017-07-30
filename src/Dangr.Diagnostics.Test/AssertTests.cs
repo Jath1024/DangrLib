@@ -11,9 +11,9 @@ namespace Dangr.Diagnostics
     using System;
     using System.Collections.Generic;
     using Dangr.Core.Diagnostics;
+    using Dangr.Core.Test;
     using Dangr.Core.Util;
     using Dangr.Internal.Diagnostics;
-    using Dangr.Test;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]

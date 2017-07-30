@@ -6,7 +6,7 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Test
+namespace Dangr.Core.Test
 {
     using System;
     using Dangr.Core.Diagnostics;
