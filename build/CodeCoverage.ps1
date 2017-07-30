@@ -31,6 +31,7 @@ $filter += " -[Dangr.*.Test]*";     # Exclude test modules
 $filter += " -[*]*Attribute";       # Exclude Attribute classes
 $filter += " -[*]*Exception";       # Exclude Exception classes
 $filter += " -[Dangr.Inject]*";     # Exclude Dangr.Inject module
+$filter += " -[Dangr.Log.Viewer]*"; # Exclude Dangr.Log.Viewer module
 $filter += " -[Dangr.Simulation]*"; # Exclude Dangr.Simulation module
 
 # Specify the coverage results output file.

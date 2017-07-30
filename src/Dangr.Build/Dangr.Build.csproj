@@ -8,6 +8,8 @@
     <FileAlignment>512</FileAlignment>
     <AssemblyName>Dangr.Build</AssemblyName>
     <NugetDeploy>true</NugetDeploy>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <ItemGroup>
     <Content Include="build\Dangr.Build.targets" />
@@ -18,12 +20,13 @@
     <Content Include="targets\Dangr.NugetPublish.targets">
       <SubType>Designer</SubType>
     </Content>
+    <None Include="build\Dangr.Build.props" />
     <None Include="Dangr.Build.nuspec">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Dangr.Build.tt</DependentUpon>
     </None>
-    <Content Include="Dangr.Build.settings.targets" />
+    <None Include="Dangr.Build.settings.props" />
     <Content Include="rules\DangrLib.ruleset" />
     <Content Include="rules\DangrLib.DotSettings" />
     <None Include="packages.config" />
@@ -31,6 +34,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <Import Project="$(SolutionDir)src\Dangr.Build\build\Dangr.Build.props" />
   <Import Project="$(SolutionDir)src\Dangr.Build\build\Dangr.Build.targets" />
   <Target Name="Build">
     <Copy SourceFiles="@(Content)" DestinationFiles="@(Content->'$(OutputPath)%(RelativeDir)%(Filename)%(Extension)')" />

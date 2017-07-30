@@ -15,7 +15,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Dangr.Build</id>
-    <version>2.0.2</version>
+    <version>2.0.4</version>
     <title>Dangr.Build</title>
     <description>Provides build tools to use in DangrLib packages.</description>
     <authors>Dan Garvey</authors>
@@ -30,7 +30,7 @@
   </metadata>
   <files>
     <file src="..\..\LICENSE" target="LICENSE" />
-    <file src="Dangr.Build.settings.targets" target="Dangr.Build.settings.targets" />
+    <file src="Dangr.Build.settings.props" target="Dangr.Build.settings.props" />
     <file src="build\**" target="build" />
     <file src="targets\**" target="targets" />
     <file src="rules\**" target="rules" />

@@ -1,0 +1,18 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <!--
+    Override NuGetPackage with local Dangr.Build files if present.
+  -->
+  <PropertyGroup Condition="Exists('$(SolutionDir)src\Dangr.Build\Dangr.Build.settings.props')" >
+    <DangrBuildSettingsProps>$(SolutionDir)src\Dangr.Build\Dangr.Build.settings.props</DangrBuildSettingsProps>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(DangrBuildSettingsProps)' == ''" >
+    <DangrBuildSettingsProps>$(MSBuildThisFileDirectory)..\Dangr.Build.settings.props</DangrBuildSettingsProps>
+  </PropertyGroup>
+  
+  <!-- 
+    Import Default Configuration.
+  -->
+  <Import Project="$(DangrBuildSettingsProps)"/>
+</Project>
+

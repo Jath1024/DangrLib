@@ -32,7 +32,7 @@
   </metadata>
   <files>
     <#@ include file="$(SolutionDir)\src\Templates\Nuspec\NuspecCommonFiles.t4" once="true" #>
-    <file src="Dangr.Build.settings.targets" target="Dangr.Build.settings.targets" />
+    <file src="Dangr.Build.settings.props" target="Dangr.Build.settings.props" />
     <file src="build\**" target="build" />
     <file src="targets\**" target="targets" />
     <file src="rules\**" target="rules" />
