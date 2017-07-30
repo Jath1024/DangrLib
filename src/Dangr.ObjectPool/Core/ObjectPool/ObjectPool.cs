@@ -6,7 +6,7 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.ObjectPool
+namespace Dangr.Core.ObjectPool
 {
     using System;
 

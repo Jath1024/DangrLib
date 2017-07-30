@@ -8,6 +8,7 @@
 
 namespace Dangr.Registry
 {
+    using Dangr.Core.Registry;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]

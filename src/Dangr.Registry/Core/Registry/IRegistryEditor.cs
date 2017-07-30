@@ -6,7 +6,7 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Registry
+namespace Dangr.Core.Registry
 {
     /// <summary>
     ///     Allows editing of a <see cref="IRegistry" /> object. Changes are all

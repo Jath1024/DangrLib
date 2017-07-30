@@ -26,10 +26,10 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="ObjectPool\GenericObjectPool.cs" />
-    <Compile Include="ObjectPool\IPooledObject.cs" />
-    <Compile Include="ObjectPool\ObjectPool.cs" />
-    <Compile Include="ObjectPool\WeakReferenceObjectPool.cs" />
+    <Compile Include="Core\ObjectPool\GenericObjectPool.cs" />
+    <Compile Include="Core\ObjectPool\IPooledObject.cs" />
+    <Compile Include="Core\ObjectPool\ObjectPool.cs" />
+    <Compile Include="Core\ObjectPool\WeakReferenceObjectPool.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Dangr.Util\Dangr.Util.csproj">

@@ -6,13 +6,13 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Registry
+namespace Dangr.Core.Registry
 {
     using System;
 
     /// <summary>
     /// <para>EventArgs for an 
-    /// <see cref="Dangr.Registry.IRegistry.ValueChanged" /></para>
+    /// <see cref="IRegistry.ValueChanged" /></para>
     /// <para>event.</para>
     /// </summary>
     /// <seealso cref="T:System.EventArgs" />

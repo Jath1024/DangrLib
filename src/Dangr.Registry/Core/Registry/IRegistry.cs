@@ -6,7 +6,7 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Registry
+namespace Dangr.Core.Registry
 {
     using System;
     using System.Collections.Generic;

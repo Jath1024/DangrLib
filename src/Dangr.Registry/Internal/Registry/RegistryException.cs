@@ -6,7 +6,7 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Registry
+namespace Dangr.Internal.Registry
 {
     using System;
 

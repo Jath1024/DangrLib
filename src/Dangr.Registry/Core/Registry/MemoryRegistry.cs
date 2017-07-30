@@ -6,7 +6,7 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Registry
+namespace Dangr.Core.Registry
 {
     using System;
     using System.Collections.Generic;
@@ -14,6 +14,7 @@ namespace Dangr.Registry
     using System.Runtime.Serialization;
     using System.Text;
     using System.Threading;
+    using Dangr.Internal.Registry;
 
     /// <summary>
     ///     Provides access to a shared set of data in memory.

@@ -6,7 +6,7 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.ObjectPool
+namespace Dangr.Core.ObjectPool
 {
     /// <summary>
     /// Provides methods for acquiring and resetting items that can be used in

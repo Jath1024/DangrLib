@@ -14,6 +14,7 @@ namespace Dangr.Registry
     using System.Runtime.Serialization.Json;
     using System.Threading;
     using System.Threading.Tasks;
+    using Dangr.Core.Registry;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     public abstract class RegistryTest

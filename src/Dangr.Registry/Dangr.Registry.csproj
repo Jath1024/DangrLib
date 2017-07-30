@@ -27,11 +27,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Registry\IRegistry.cs" />
-    <Compile Include="Registry\IRegistryEditor.cs" />
-    <Compile Include="Registry\MemoryRegistry.cs" />
-    <Compile Include="Registry\RegistryException.cs" />
-    <Compile Include="Registry\RegistryValueChangedEventArgs.cs" />
+    <Compile Include="Core\Registry\IRegistry.cs" />
+    <Compile Include="Core\Registry\IRegistryEditor.cs" />
+    <Compile Include="Core\Registry\MemoryRegistry.cs" />
+    <Compile Include="Internal\Registry\RegistryException.cs" />
+    <Compile Include="Core\Registry\RegistryValueChangedEventArgs.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Dangr.Registry.tt">
