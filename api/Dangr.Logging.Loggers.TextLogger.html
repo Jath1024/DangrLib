@@ -108,7 +108,7 @@
   <h6><strong>Assembly</strong>: Dangr.Logging.Loggers.dll</h6>
   <h5 id="Dangr_Logging_Loggers_TextLogger_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TextLogger : ILogEndpoint, ICancelable, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public class TextLogger : ILogEndpoint, ICheckedDisposable, IDisposable</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -117,7 +117,7 @@
     <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Logging_Loggers_TextLogger__ctor_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20Dangr.Logging.Loggers.TextLogger.%23ctor(System.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L102">View Source</a>
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L103">View Source</a>
   </span>
   <a id="Dangr_Logging_Loggers_TextLogger__ctor_" data-uid="Dangr.Logging.Loggers.TextLogger.#ctor*"></a>
   <h4 id="Dangr_Logging_Loggers_TextLogger__ctor_System_String_System_String_System_String_" data-uid="Dangr.Logging.Loggers.TextLogger.#ctor(System.String,System.String,System.String)">TextLogger(String, String, String)</h4>
@@ -165,7 +165,7 @@
     <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Logging_Loggers_TextLogger_DefaultLogFileDateFormat.md&amp;value=---%0Auid%3A%20Dangr.Logging.Loggers.TextLogger.DefaultLogFileDateFormat%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L25">View Source</a>
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L26">View Source</a>
   </span>
   <h4 id="Dangr_Logging_Loggers_TextLogger_DefaultLogFileDateFormat" data-uid="Dangr.Logging.Loggers.TextLogger.DefaultLogFileDateFormat">DefaultLogFileDateFormat</h4>
   <div class="markdown level1 summary"><p>The default log file date format.</p>
@@ -195,7 +195,7 @@
     <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Logging_Loggers_TextLogger_DefaultLogFileFlushSize.md&amp;value=---%0Auid%3A%20Dangr.Logging.Loggers.TextLogger.DefaultLogFileFlushSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L35">View Source</a>
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L36">View Source</a>
   </span>
   <h4 id="Dangr_Logging_Loggers_TextLogger_DefaultLogFileFlushSize" data-uid="Dangr.Logging.Loggers.TextLogger.DefaultLogFileFlushSize">DefaultLogFileFlushSize</h4>
   <div class="markdown level1 summary"><p>The default log file flush size in bytes.</p>
@@ -225,7 +225,7 @@
     <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Logging_Loggers_TextLogger_DefaultMaxLogFileEntries.md&amp;value=---%0Auid%3A%20Dangr.Logging.Loggers.TextLogger.DefaultMaxLogFileEntries%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L40">View Source</a>
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L41">View Source</a>
   </span>
   <h4 id="Dangr_Logging_Loggers_TextLogger_DefaultMaxLogFileEntries" data-uid="Dangr.Logging.Loggers.TextLogger.DefaultMaxLogFileEntries">DefaultMaxLogFileEntries</h4>
   <div class="markdown level1 summary"><p>The default maximum log file entries.</p>
@@ -255,7 +255,7 @@
     <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Logging_Loggers_TextLogger_DefaultMaxLogFileInterval.md&amp;value=---%0Auid%3A%20Dangr.Logging.Loggers.TextLogger.DefaultMaxLogFileInterval%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L45">View Source</a>
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L46">View Source</a>
   </span>
   <h4 id="Dangr_Logging_Loggers_TextLogger_DefaultMaxLogFileInterval" data-uid="Dangr.Logging.Loggers.TextLogger.DefaultMaxLogFileInterval">DefaultMaxLogFileInterval</h4>
   <div class="markdown level1 summary"><p>The default maximum log file interval.</p>
@@ -285,7 +285,7 @@
     <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Logging_Loggers_TextLogger_DefaultMaxLogFileSize.md&amp;value=---%0Auid%3A%20Dangr.Logging.Loggers.TextLogger.DefaultMaxLogFileSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L30">View Source</a>
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L31">View Source</a>
   </span>
   <h4 id="Dangr_Logging_Loggers_TextLogger_DefaultMaxLogFileSize" data-uid="Dangr.Logging.Loggers.TextLogger.DefaultMaxLogFileSize">DefaultMaxLogFileSize</h4>
   <div class="markdown level1 summary"><p>The default maximum log file size in bytes.</p>
@@ -317,7 +317,7 @@
     <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Logging_Loggers_TextLogger_IsDisposed.md&amp;value=---%0Auid%3A%20Dangr.Logging.Loggers.TextLogger.IsDisposed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L94">View Source</a>
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L95">View Source</a>
   </span>
   <a id="Dangr_Logging_Loggers_TextLogger_IsDisposed_" data-uid="Dangr.Logging.Loggers.TextLogger.IsDisposed*"></a>
   <h4 id="Dangr_Logging_Loggers_TextLogger_IsDisposed" data-uid="Dangr.Logging.Loggers.TextLogger.IsDisposed">IsDisposed</h4>
@@ -344,13 +344,13 @@
     </tbody>
   </table>
   <h5 class="implements">Implements</h5>
-      <div><a class="xref" href="Dangr.Util.ICancelable.html#Dangr_Util_ICancelable_IsDisposed">ICancelable.IsDisposed</a></div>
+      <div><a class="xref" href="Dangr.Core.Util.ICheckedDisposable.html#Dangr_Core_Util_ICheckedDisposable_IsDisposed">ICheckedDisposable.IsDisposed</a></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Logging_Loggers_TextLogger_LogFile.md&amp;value=---%0Auid%3A%20Dangr.Logging.Loggers.TextLogger.LogFile%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L54">View Source</a>
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L55">View Source</a>
   </span>
   <a id="Dangr_Logging_Loggers_TextLogger_LogFile_" data-uid="Dangr.Logging.Loggers.TextLogger.LogFile*"></a>
   <h4 id="Dangr_Logging_Loggers_TextLogger_LogFile" data-uid="Dangr.Logging.Loggers.TextLogger.LogFile">LogFile</h4>
@@ -381,7 +381,7 @@
     <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Logging_Loggers_TextLogger_LogFileDateFormat.md&amp;value=---%0Auid%3A%20Dangr.Logging.Loggers.TextLogger.LogFileDateFormat%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L69">View Source</a>
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L70">View Source</a>
   </span>
   <a id="Dangr_Logging_Loggers_TextLogger_LogFileDateFormat_" data-uid="Dangr.Logging.Loggers.TextLogger.LogFileDateFormat*"></a>
   <h4 id="Dangr_Logging_Loggers_TextLogger_LogFileDateFormat" data-uid="Dangr.Logging.Loggers.TextLogger.LogFileDateFormat">LogFileDateFormat</h4>
@@ -412,7 +412,7 @@
     <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Logging_Loggers_TextLogger_LogFileDirectory.md&amp;value=---%0Auid%3A%20Dangr.Logging.Loggers.TextLogger.LogFileDirectory%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L59">View Source</a>
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L60">View Source</a>
   </span>
   <a id="Dangr_Logging_Loggers_TextLogger_LogFileDirectory_" data-uid="Dangr.Logging.Loggers.TextLogger.LogFileDirectory*"></a>
   <h4 id="Dangr_Logging_Loggers_TextLogger_LogFileDirectory" data-uid="Dangr.Logging.Loggers.TextLogger.LogFileDirectory">LogFileDirectory</h4>
@@ -443,7 +443,7 @@
     <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Logging_Loggers_TextLogger_LogFilePrefix.md&amp;value=---%0Auid%3A%20Dangr.Logging.Loggers.TextLogger.LogFilePrefix%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L64">View Source</a>
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L65">View Source</a>
   </span>
   <a id="Dangr_Logging_Loggers_TextLogger_LogFilePrefix_" data-uid="Dangr.Logging.Loggers.TextLogger.LogFilePrefix*"></a>
   <h4 id="Dangr_Logging_Loggers_TextLogger_LogFilePrefix" data-uid="Dangr.Logging.Loggers.TextLogger.LogFilePrefix">LogFilePrefix</h4>
@@ -474,7 +474,7 @@
     <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Logging_Loggers_TextLogger_MaxLogFileEntries.md&amp;value=---%0Auid%3A%20Dangr.Logging.Loggers.TextLogger.MaxLogFileEntries%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L89">View Source</a>
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L90">View Source</a>
   </span>
   <a id="Dangr_Logging_Loggers_TextLogger_MaxLogFileEntries_" data-uid="Dangr.Logging.Loggers.TextLogger.MaxLogFileEntries*"></a>
   <h4 id="Dangr_Logging_Loggers_TextLogger_MaxLogFileEntries" data-uid="Dangr.Logging.Loggers.TextLogger.MaxLogFileEntries">MaxLogFileEntries</h4>
@@ -505,7 +505,7 @@
     <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Logging_Loggers_TextLogger_MaxLogFileFlushSize.md&amp;value=---%0Auid%3A%20Dangr.Logging.Loggers.TextLogger.MaxLogFileFlushSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L79">View Source</a>
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L80">View Source</a>
   </span>
   <a id="Dangr_Logging_Loggers_TextLogger_MaxLogFileFlushSize_" data-uid="Dangr.Logging.Loggers.TextLogger.MaxLogFileFlushSize*"></a>
   <h4 id="Dangr_Logging_Loggers_TextLogger_MaxLogFileFlushSize" data-uid="Dangr.Logging.Loggers.TextLogger.MaxLogFileFlushSize">MaxLogFileFlushSize</h4>
@@ -536,7 +536,7 @@
     <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Logging_Loggers_TextLogger_MaxLogFileInterval.md&amp;value=---%0Auid%3A%20Dangr.Logging.Loggers.TextLogger.MaxLogFileInterval%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L84">View Source</a>
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L85">View Source</a>
   </span>
   <a id="Dangr_Logging_Loggers_TextLogger_MaxLogFileInterval_" data-uid="Dangr.Logging.Loggers.TextLogger.MaxLogFileInterval*"></a>
   <h4 id="Dangr_Logging_Loggers_TextLogger_MaxLogFileInterval" data-uid="Dangr.Logging.Loggers.TextLogger.MaxLogFileInterval">MaxLogFileInterval</h4>
@@ -567,7 +567,7 @@
     <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Logging_Loggers_TextLogger_MaxLogFileSize.md&amp;value=---%0Auid%3A%20Dangr.Logging.Loggers.TextLogger.MaxLogFileSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L74">View Source</a>
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L75">View Source</a>
   </span>
   <a id="Dangr_Logging_Loggers_TextLogger_MaxLogFileSize_" data-uid="Dangr.Logging.Loggers.TextLogger.MaxLogFileSize*"></a>
   <h4 id="Dangr_Logging_Loggers_TextLogger_MaxLogFileSize" data-uid="Dangr.Logging.Loggers.TextLogger.MaxLogFileSize">MaxLogFileSize</h4>
@@ -600,7 +600,7 @@
     <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Logging_Loggers_TextLogger_Dispose.md&amp;value=---%0Auid%3A%20Dangr.Logging.Loggers.TextLogger.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L139">View Source</a>
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L140">View Source</a>
   </span>
   <a id="Dangr_Logging_Loggers_TextLogger_Dispose_" data-uid="Dangr.Logging.Loggers.TextLogger.Dispose*"></a>
   <h4 id="Dangr_Logging_Loggers_TextLogger_Dispose" data-uid="Dangr.Logging.Loggers.TextLogger.Dispose">Dispose()</h4>
@@ -618,7 +618,7 @@
     <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Logging_Loggers_TextLogger_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20Dangr.Logging.Loggers.TextLogger.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L151">View Source</a>
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L152">View Source</a>
   </span>
   <a id="Dangr_Logging_Loggers_TextLogger_Dispose_" data-uid="Dangr.Logging.Loggers.TextLogger.Dispose*"></a>
   <h4 id="Dangr_Logging_Loggers_TextLogger_Dispose_System_Boolean_" data-uid="Dangr.Logging.Loggers.TextLogger.Dispose(System.Boolean)">Dispose(Boolean)</h4>
@@ -653,7 +653,7 @@ unmanaged resources.</p>
     <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Logging_Loggers_TextLogger_Log_Dangr_Logging_LogEntry_.md&amp;value=---%0Auid%3A%20Dangr.Logging.Loggers.TextLogger.Log(Dangr.Logging.LogEntry)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L164">View Source</a>
+    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L165">View Source</a>
   </span>
   <a id="Dangr_Logging_Loggers_TextLogger_Log_" data-uid="Dangr.Logging.Loggers.TextLogger.Log*"></a>
   <h4 id="Dangr_Logging_Loggers_TextLogger_Log_Dangr_Logging_LogEntry_" data-uid="Dangr.Logging.Loggers.TextLogger.Log(Dangr.Logging.LogEntry)">Log(LogEntry)</h4>
@@ -695,7 +695,7 @@ unmanaged resources.</p>
                     <a href="https://github.com/Dangerdan9631/DangrLib/new/master/apiSpec/new?filename=Dangr_Logging_Loggers_TextLogger.md&amp;value=---%0Auid%3A%20Dangr.Logging.Loggers.TextLogger%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L20" class="contribution-link">View Source</a>
+                    <a href="https://github.com/Dangerdan9631/DangrLib/blob/master/src/Dangr.Logging.Loggers/Logging/Loggers/TextLogger.cs/#L21" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

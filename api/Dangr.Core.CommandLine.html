@@ -1,0 +1,418 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class CommandLine
+   | DangrLib </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class CommandLine
+   | DangrLib ">
+    <meta name="generator" content="docfx 2.21.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Dangr.Core.CommandLine">
+  
+  
+  <h1 id="Dangr_Core_CommandLine" data-uid="Dangr.Core.CommandLine" class="text-break">Class CommandLine
+  </h1>
+  <div class="markdown level0 summary"><p>Represents a command that can be executed, and the arguments to use
+when executing.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">CommandLine</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Dangr.Core.html">Dangr.Core</a></h6>
+  <h6><strong>Assembly</strong>: Dangr.Command.dll</h6>
+  <h5 id="Dangr_Core_CommandLine_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class CommandLine</code></pre>
+  </div>
+  <h5 id="Dangr_Core_CommandLine_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+<a class="xref" href="Dangr.Core.CommandLine.html">CommandLine</a> is an object that will parse a given command
+line string, and break it down into its components which can be
+accessed as needed.
+</p>
+<p>
+The Command Name is the first element of the command line string, and 
+represents the command that should be run.
+</p>
+<p>
+The arguments are parsed from the portion of the command line after 
+the name. Arguments are seperated by whitespace and can be specified 
+in one of three different ways.
+<ul><li>Flags
+      Arguments that begin with &apos;-&apos; and that are not followed by a 
+      value, are stored as flags. Flags are used to represent the 
+      boolean value <code>true</code> when present, and <code>false</code>
+      otherwise.</li><li>Named arguments
+      Arguments that begin with &apos;-&apos; and that are followed by a value,
+      are stored as named arguments. Named arguments can be accessed as
+      name/value pairs.
+</li><li>Positional arguments
+  Values that do not begin with &apos;-&apos; and that are not preceded by an 
+  argument that does, are positional arguments. Positional
+  arguments are stored as a list in the order they are specified.
+</li></ul>
+</p>
+<p>
+Command and argument names can be any string of characters that do not
+contain one of the following values: 
+<code>`~!@#$%^&amp;*()=+[]{}|\;:&quot;&apos;,&lt;&gt;/?</code>.
+They also cannot start with the &apos;-&apos; character. When reading flag or 
+argument names, the &apos;-&apos; prefix will be removed from the name.
+Command names will always be converted to lowercase. Argument names
+are case sensitive.
+</p>
+<p>
+Value arguments may be contained in single (&apos;) or double (&quot;) quotes, 
+which can be escaped using a backslash () character. They cannot start
+with the &apos;-&apos; character, and any whitespace must be contained in quotes.
+Otherwise there are no restrictions on the characters in a value 
+argument. When reading values, surrounding quote characters will be
+removed, and escaped quote characters will be replaced with their
+unescaped values.
+</p>
+</div>
+  <h5 id="Dangr_Core_CommandLine_examples"><strong>Examples</strong></h5>
+  <p><code>Example 1</code><br>
+The following example will create a <a class="xref" href="Dangr.Core.CommandLine.html">CommandLine</a> that 
+executes &apos;TestCommand&apos; using named arguments:</p>
+<pre><code>CommandLine commandLine = new CommandLine(
+    &quot;TestCommand -Named1 argument1 -Named2 \&quot;argument \\\&quot;2\\\&quot;\&quot;&quot;);
+Console.WriteLine($&quot;CommandName: {commandLine.CommandName}&quot;);
+Console.WriteLine($&quot;Named1: {commandLine.NamedArguments[&quot;Named1&quot;]}&quot;);
+Console.WriteLine($&quot;Named2: {commandLine.NamedArguments[&quot;Named2&quot;]}&quot;);</code></pre>
+<p>Will output:</p>
+<pre><code>CommandName: TestCommand
+Named1: argument1
+Named2: argument &quot;2&quot;</code></pre>
+
+  <p><code>Example 2</code><br>
+The following example will create a <a class="xref" href="Dangr.Core.CommandLine.html">CommandLine</a> that 
+executes &apos;TestCommand&apos; using flags:</p>
+<pre><code>CommandLine commandLine = new CommandLine(
+    &quot;TestCommand -Flag1 -Flag2 -Named1 arg&quot;);
+Console.WriteLine($&quot;CommandName: {commandLine.CommandName}&quot;);
+Console.WriteLine($&quot;Flag1: {commandLine.Flags.Contains(&quot;Flag1&quot;)}&quot;);
+Console.WriteLine($&quot;Flag2: {commandLine.Flags.Contains(&quot;Flag2&quot;)}&quot;);
+Console.WriteLine($&quot;Flag3: {commandLine.Flags.Contains(&quot;Flag3&quot;)}&quot;);
+Console.WriteLine($&quot;Named1: {commandLine.NamedArguments[&quot;Named1&quot;]}&quot;);</code></pre>
+<p>Will output:</p>
+<pre><code>CommandName: TestCommand
+Flag1: true
+Flag2: true
+Flag3: false
+Named1: arg</code></pre>
+
+  <p><code>Example 3</code><br>
+The following example will create a <a class="xref" href="Dangr.Core.CommandLine.html">CommandLine</a> that 
+executes &apos;TestCommand&apos; using positional arguments:</p>
+<pre><code>CommandLine commandLine = new CommandLine(
+    &quot;TestCommand positional0 \&quot;positional arg 1\&quot; -Named1 named positional2 -Flag1&quot;);
+Console.WriteLine($&quot;CommandName: {commandLine.CommandName}&quot;);
+Console.WriteLine($&quot;Named1: {commandLine.NamedArguments[&quot;Named1&quot;]}&quot;);
+Console.WriteLine($&quot;Flag1: {commandLine.Flags.Contains(&quot;Flag1&quot;)}&quot;);
+for(int i = 0; i &lt; this.PositionalArguments.Count; i++)
+{
+    Console.WriteLine($&quot;Positional {i}: {this.PositionalArguments[i]}&quot;);
+}</code></pre>
+<p>Will output:</p>
+<pre><code>CommandName: TestCommand
+Named1: named
+Flag1: true
+Positional 0: positional0
+Positional 1: positional arg 1
+Positional 2: positional2</code></pre>
+
+  <h3 id="constructors">Constructors
+  </h3>
+  <a id="Dangr_Core_CommandLine__ctor_" data-uid="Dangr.Core.CommandLine.#ctor*"></a>
+  <h4 id="Dangr_Core_CommandLine__ctor_System_String_" data-uid="Dangr.Core.CommandLine.#ctor(System.String)">CommandLine(String)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Dangr.Core.CommandLine.html">CommandLine</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CommandLine(string commandLine)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">commandLine</span></td>
+        <td><p>The command line to parse.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Dangr_Core_CommandLine_CommandName_" data-uid="Dangr.Core.CommandLine.CommandName*"></a>
+  <h4 id="Dangr_Core_CommandLine_CommandName" data-uid="Dangr.Core.CommandLine.CommandName">CommandName</h4>
+  <div class="markdown level1 summary"><p>Gets the name of the command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string CommandName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Dangr_Core_CommandLine_Flags_" data-uid="Dangr.Core.CommandLine.Flags*"></a>
+  <h4 id="Dangr_Core_CommandLine_Flags" data-uid="Dangr.Core.CommandLine.Flags">Flags</h4>
+  <div class="markdown level1 summary"><p>Gets the set of flags parsed from the command line.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ImmutableHashSet&lt;string&gt; Flags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Immutable.ImmutableHashSet</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Dangr_Core_CommandLine_NamedArguments_" data-uid="Dangr.Core.CommandLine.NamedArguments*"></a>
+  <h4 id="Dangr_Core_CommandLine_NamedArguments" data-uid="Dangr.Core.CommandLine.NamedArguments">NamedArguments</h4>
+  <div class="markdown level1 summary"><p>Gets a dictionary of named arguments and the values parsed from the command line.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ImmutableDictionary&lt;string, string&gt; NamedArguments { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Dangr_Core_CommandLine_PositionalArguments_" data-uid="Dangr.Core.CommandLine.PositionalArguments*"></a>
+  <h4 id="Dangr_Core_CommandLine_PositionalArguments" data-uid="Dangr.Core.CommandLine.PositionalArguments">PositionalArguments</h4>
+  <div class="markdown level1 summary"><p>Gets an ordered list of positional arguments parsed from the command line.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ImmutableList&lt;string&gt; PositionalArguments { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Immutable.ImmutableList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Dangr_Core_CommandLine_RawArguments_" data-uid="Dangr.Core.CommandLine.RawArguments*"></a>
+  <h4 id="Dangr_Core_CommandLine_RawArguments" data-uid="Dangr.Core.CommandLine.RawArguments">RawArguments</h4>
+  <div class="markdown level1 summary"><p>Gets the raw portion of the string used to parse the command arguments.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string RawArguments { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Dangr_Core_CommandLine_RawCommandLine_" data-uid="Dangr.Core.CommandLine.RawCommandLine*"></a>
+  <h4 id="Dangr_Core_CommandLine_RawCommandLine" data-uid="Dangr.Core.CommandLine.RawCommandLine">RawCommandLine</h4>
+  <div class="markdown level1 summary"><p>Gets the raw command line string that was parsed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string RawCommandLine { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright � 2017 Dan Garvey. All rights reserved.<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
