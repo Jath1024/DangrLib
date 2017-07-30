@@ -6,7 +6,7 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Configuration.Views
+namespace Dangr.Core.Configuration.Views
 {
     using System.Collections.Generic;
     using System.Text;

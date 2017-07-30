@@ -6,7 +6,7 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Configuration
+namespace Dangr.Core.Configuration
 {
     /// <summary>
     /// An object that populates settings in a <see cref="Configuration" /> .

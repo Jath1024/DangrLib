@@ -9,8 +9,9 @@
 namespace Dangr.Configuration
 {
     using System.Diagnostics.CodeAnalysis;
-    using Dangr.Configuration.Sources;
-    using Dangr.Configuration.Views;
+    using Dangr.Core.Configuration;
+    using Dangr.Core.Configuration.Sources;
+    using Dangr.Core.Configuration.Views;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [SuppressMessage(

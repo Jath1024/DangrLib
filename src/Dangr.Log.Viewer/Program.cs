@@ -12,8 +12,8 @@ namespace Dangr.Log.Viewer
     using System.Collections.Generic;
     using System.ServiceModel;
     using System.ServiceModel.Channels;
-    using Dangr.Configuration;
-    using Dangr.Configuration.Sources;
+    using Dangr.Core.Configuration;
+    using Dangr.Core.Configuration.Sources;
     using Dangr.Logging;
     using Dangr.Logging.Loggers;
     using Dangr.Logging.Wcf;

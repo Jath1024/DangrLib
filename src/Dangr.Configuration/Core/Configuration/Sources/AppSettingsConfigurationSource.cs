@@ -6,7 +6,7 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Configuration.Sources
+namespace Dangr.Core.Configuration.Sources
 {
     using System.Configuration;
 

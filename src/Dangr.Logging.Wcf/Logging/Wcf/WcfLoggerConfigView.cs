@@ -8,10 +8,10 @@
 
 namespace Dangr.Logging.Wcf
 {
-    using Dangr.Configuration;
+    using Dangr.Core.Configuration;
 
     /// <summary>
-    /// A <see cref="Dangr.Configuration.ConfigurationView" /> that exposes all
+    /// A <see cref="ConfigurationView" /> that exposes all
     /// of the settings in the <see cref="Dangr.Configuration" /> used in the
     /// wcf logger.
     /// </summary>
@@ -55,7 +55,7 @@ namespace Dangr.Logging.Wcf
         }
 
         /// <summary>
-        /// Updates the specified setting within the <see cref="Dangr.Configuration.ConfigurationView" /> .
+        /// Updates the specified setting within the <see cref="ConfigurationView" /> .
         /// </summary>
         /// <param name="settingName">The name of the setting to update.</param>
         /// <param name="settingValue">The new value of the setting.</param>

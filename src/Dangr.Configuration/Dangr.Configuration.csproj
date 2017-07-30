@@ -22,18 +22,18 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configuration\Configuration.cs" />
-    <Compile Include="Configuration\ConfigurationSource.cs" />
-    <Compile Include="Configuration\ConfigurationView.cs" />
+    <Compile Include="Core\Configuration\Configuration.cs" />
+    <Compile Include="Core\Configuration\ConfigurationSource.cs" />
+    <Compile Include="Core\Configuration\ConfigurationView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AssemblyInfo.tt</DependentUpon>
     </Compile>
-    <Compile Include="Configuration\SettingChangedEventArgs.cs" />
-    <Compile Include="Configuration\Sources\AppSettingsConfigurationSource.cs" />
-    <Compile Include="Configuration\Sources\DebugConfigurationSource.cs" />
-    <Compile Include="Configuration\Views\AllSettingsConfigurationView.cs" />
+    <Compile Include="Core\Configuration\SettingChangedEventArgs.cs" />
+    <Compile Include="Core\Configuration\Sources\AppSettingsConfigurationSource.cs" />
+    <Compile Include="Core\Configuration\Sources\DebugConfigurationSource.cs" />
+    <Compile Include="Core\Configuration\Views\AllSettingsConfigurationView.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Dangr.Diagnostics\Dangr.Diagnostics.csproj">

@@ -22,7 +22,7 @@ namespace Dangr.Internal.Command
     /// Object used to create new <see cref="IDangrCommand"/>s of type <see cref="T:T"/>.
     /// </summary>
     /// <typeparam name="T">The type of <see cref="IDangrCommand"/> to create.</typeparam>
-    public class DangrCommandFactory<T> : IDangrCommandFactory
+    internal class DangrCommandFactory<T> : IDangrCommandFactory
         where T : IDangrCommand, new()
     {
         private readonly Lazy<string> commandHelp;
