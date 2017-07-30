@@ -8,6 +8,8 @@
 
 namespace Dangr.Command.Commands
 {
+    using Dangr.Core.Command;
+
     public class NoDangrCommandAttribute : IDangrCommand
     {
         public void Execute(ICommandContext executionContext)

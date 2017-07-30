@@ -25,22 +25,22 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Command\Annotation\AliasAttribute.cs" />
-    <Compile Include="Command\Commands\DangrCommandHelp.cs" />
-    <Compile Include="Command\CommandExecutor.cs" />
-    <Compile Include="Command\Exceptions\CommandExecutionException.cs" />
-    <Compile Include="Command\CommandLine.cs" />
-    <Compile Include="Command\Exceptions\UnknownCommandException.cs" />
-    <Compile Include="Command\IDangrCommand.cs" />
-    <Compile Include="Command\Annotation\DangrCommandAttribute.cs" />
-    <Compile Include="Command\DangrCommandFactory.T.cs" />
-    <Compile Include="Command\ICommandContext.cs" />
-    <Compile Include="Command\IDangrCommandFactory.cs" />
-    <Compile Include="Command\Annotation\ParameterAttribute.cs" />
-    <Compile Include="Command\Exceptions\CommandLineParseException.cs" />
-    <Compile Include="Command\Exceptions\InvalidCommandArgumentException.cs" />
-    <Compile Include="Command\Exceptions\MissingCommandArgumentException.cs" />
-    <Compile Include="Command\Exceptions\UnknownCommandArgumentException.cs" />
+    <Compile Include="Core\Command\Annotation\AliasAttribute.cs" />
+    <Compile Include="Internal\Command\Commands\DangrCommandHelp.cs" />
+    <Compile Include="Core\CommandExecutor.cs" />
+    <Compile Include="Core\Command\Exceptions\CommandExecutionException.cs" />
+    <Compile Include="Core\CommandLine.cs" />
+    <Compile Include="Core\Command\Exceptions\UnknownCommandException.cs" />
+    <Compile Include="Core\Command\IDangrCommand.cs" />
+    <Compile Include="Core\Command\Annotation\DangrCommandAttribute.cs" />
+    <Compile Include="Internal\Command\DangrCommandFactory.T.cs" />
+    <Compile Include="Core\Command\ICommandContext.cs" />
+    <Compile Include="Core\Command\IDangrCommandFactory.cs" />
+    <Compile Include="Core\Command\Annotation\ParameterAttribute.cs" />
+    <Compile Include="Core\Command\Exceptions\CommandLineParseException.cs" />
+    <Compile Include="Core\Command\Exceptions\InvalidCommandArgumentException.cs" />
+    <Compile Include="Core\Command\Exceptions\MissingCommandArgumentException.cs" />
+    <Compile Include="Core\Command\Exceptions\UnknownCommandArgumentException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -72,6 +72,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="..\..\packages\Dangr.Build.2.0.1\build\Dangr.Build.targets" Condition="Exists('..\..\packages\Dangr.Build.2.0.1\build\Dangr.Build.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

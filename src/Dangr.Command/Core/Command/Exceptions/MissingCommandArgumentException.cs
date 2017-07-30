@@ -6,7 +6,7 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Command.Exceptions
+namespace Dangr.Core.Command.Exceptions
 {
     using System;
     using System.Runtime.Serialization;

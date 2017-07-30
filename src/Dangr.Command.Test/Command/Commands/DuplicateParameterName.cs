@@ -8,7 +8,8 @@
 
 namespace Dangr.Command.Commands
 {
-    using Dangr.Command.Annotation;
+    using Dangr.Core.Command;
+    using Dangr.Core.Command.Annotation;
 
     [DangrCommand("DuplicateParameter", "A dangr command that has two parameters with the same name.")]
     public class DuplicateParameterName : IDangrCommand

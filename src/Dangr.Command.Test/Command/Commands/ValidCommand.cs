@@ -8,7 +8,8 @@
 
 namespace Dangr.Command.Commands
 {
-    using Dangr.Command.Annotation;
+    using Dangr.Core.Command;
+    using Dangr.Core.Command.Annotation;
 
     [DangrCommand("ValidCommand", "A valid dangr command.")]
     public class ValidCommand : IDangrCommand

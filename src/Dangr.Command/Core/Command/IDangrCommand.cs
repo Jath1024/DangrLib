@@ -6,7 +6,7 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Command
+namespace Dangr.Core.Command
 {
     /// <summary>
     /// Defines a command that can be executed.

@@ -6,7 +6,7 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Command.Annotation
+namespace Dangr.Core.Command.Annotation
 {
     using System;
 

@@ -8,7 +8,8 @@
 
 namespace Dangr.Command.Commands
 {
-    using Dangr.Command.Annotation;
+    using Dangr.Core.Command;
+    using Dangr.Core.Command.Annotation;
 
     [DangrCommand("Output", "A dangr command that writes a value to output.")]
     public class OutputCommand : IDangrCommand

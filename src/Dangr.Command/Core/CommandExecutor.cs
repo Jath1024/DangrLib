@@ -6,15 +6,16 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Command
+namespace Dangr.Core
 {
     using System;
     using System.Collections.Generic;
     using System.IO;
     using System.Text;
-    using Dangr.Command.Commands;
-    using Dangr.Command.Exceptions;
-    using Dangr.Core.Util;
+    using Dangr.Core.Command;
+    using Dangr.Core.Command.Exceptions;
+    using Dangr.Internal.Command;
+    using Dangr.Internal.Command.Commands;
 
     /// <summary>
     /// The executor that defines what <see cref="IDangrCommand"/>s exist and can be executed.

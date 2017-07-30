@@ -9,7 +9,8 @@
 namespace Dangr.Command
 {
     using System.Collections.Generic;
-    using Dangr.Command.Exceptions;
+    using Dangr.Core;
+    using Dangr.Core.Command.Exceptions;
     using Dangr.Test;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Assert = Dangr.Diagnostics.Assert;

@@ -6,12 +6,12 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Command
+namespace Dangr.Core
 {
     using System.Collections.Generic;
     using System.Collections.Immutable;
     using System.Text.RegularExpressions;
-    using Dangr.Command.Exceptions;
+    using Dangr.Core.Command.Exceptions;
 
     /// <summary>
     /// Represents a command that can be executed, and the arguments to use

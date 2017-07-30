@@ -9,7 +9,8 @@
 namespace Dangr.Command.Commands
 {
     using System;
-    using Dangr.Command.Annotation;
+    using Dangr.Core.Command;
+    using Dangr.Core.Command.Annotation;
 
     [DangrCommand("Output", "A dangr command with a duplicate name.")]
     public class DuplicateOutputCommand : IDangrCommand

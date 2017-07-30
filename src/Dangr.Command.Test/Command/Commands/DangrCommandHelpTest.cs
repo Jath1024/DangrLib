@@ -10,6 +10,7 @@ namespace Dangr.Command.Commands
 {
     using System;
     using System.IO;
+    using Dangr.Core;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Assert = Dangr.Diagnostics.Assert;
 

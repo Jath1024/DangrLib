@@ -6,7 +6,7 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Command
+namespace Dangr.Core.Command
 {
     /// <summary>
     /// Provides an interface for creating new <see cref="IDangrCommand"/> instances.

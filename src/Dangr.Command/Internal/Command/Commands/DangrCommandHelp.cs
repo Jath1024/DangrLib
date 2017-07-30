@@ -6,16 +6,17 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Command.Commands
+namespace Dangr.Internal.Command.Commands
 {
-    using Dangr.Command.Annotation;
-    using Dangr.Command.Exceptions;
+    using Dangr.Core.Command;
+    using Dangr.Core.Command.Annotation;
+    using Dangr.Core.Command.Exceptions;
 
     /// <summary>
     /// <see cref="IDangrCommand"/> that provides help for DangrCommands defined within the current command context.
     /// </summary>
     [DangrCommand("help", "Provides help for DangrCommands defined within the current command context.")]
-    public class DangrCommandHelp : IDangrCommand
+    internal class DangrCommandHelp : IDangrCommand
     {
         /// <summary>
         /// Gets or sets the name of the command to display the help summary for.

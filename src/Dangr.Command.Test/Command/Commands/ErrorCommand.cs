@@ -8,7 +8,8 @@
 
 namespace Dangr.Command.Commands
 {
-    using Dangr.Command.Annotation;
+    using Dangr.Core.Command;
+    using Dangr.Core.Command.Annotation;
 
     [DangrCommand("Error", "A dangr command that writes a value to error.")]
     public class ErrorCommand : IDangrCommand

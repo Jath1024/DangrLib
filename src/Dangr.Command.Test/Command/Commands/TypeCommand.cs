@@ -8,7 +8,8 @@
 
 namespace Dangr.Command.Commands
 {
-    using Dangr.Command.Annotation;
+    using Dangr.Core.Command;
+    using Dangr.Core.Command.Annotation;
 
     [DangrCommand("Types", "A dangr command with many typed arguments.")]
     public class TypeCommand : IDangrCommand

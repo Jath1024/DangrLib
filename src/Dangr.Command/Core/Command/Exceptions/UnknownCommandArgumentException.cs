@@ -1,50 +1,49 @@
 ﻿// -----------------------------------------------------------------------
-//  <copyright file="UnknownCommandException.cs" company="DangerDan9631">
+//  <copyright file="UnknownCommandArgumentException.cs" company="DangerDan9631">
 //      Copyright (c) 2017 Dan Garvey. All rights reserved.
 //      Licensed under the MIT License. 
 //      See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Command.Exceptions
+namespace Dangr.Core.Command.Exceptions
 {
     using System;
     using System.Runtime.Serialization;
     using System.Security.Permissions;
 
     /// <summary>
-    /// The Exception that is thrown when attempting to execute an unknown command.
+    /// The Exception that is thrown when an unknown argument is passed to a command.
     /// </summary>
-    /// <seealso cref="System.Exception" />
+    /// <seealso cref="CommandExecutionException" />
     [Serializable]
-    public class UnknownCommandException : CommandExecutionException
+    public class UnknownCommandArgumentException : CommandExecutionException
     {
         /// <summary>
-        /// Gets the name of the unknown command.
+        /// Gets the name of the unknown argument.
         /// </summary>
-        public string CommandName { get; }
+        public string ArgumentName { get; }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="UnknownCommandException"/> class.
+        /// Initializes a new instance of the <see cref="UnknownCommandArgumentException"/> class.
         /// </summary>
-        /// <param name="commandName">The name of the unknown command. </param>
+        /// <param name="argumentName">The name of the unknown argument. </param>
         /// <param name="message">The message that describes the error.</param>
-        public UnknownCommandException(string commandName, string message)
-            : base(message)
+        public UnknownCommandArgumentException(string argumentName, string message) : base(message)
         {
-            this.CommandName = commandName;
+            this.ArgumentName = argumentName;
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="UnknownCommandException"/> class.
+        /// Initializes a new instance of the <see cref="UnknownCommandArgumentException"/> class.
         /// </summary>
         /// <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
         /// <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
-        protected UnknownCommandException(
+        protected UnknownCommandArgumentException(
             SerializationInfo info,
             StreamingContext context) : base(info, context)
         {
-            this.CommandName = (string) info.GetValue(nameof(this.CommandName), typeof(string));
+            this.ArgumentName = (string) info.GetValue(nameof(this.ArgumentName), typeof(string));
         }
 
         /// <summary>
@@ -61,7 +60,7 @@ namespace Dangr.Command.Exceptions
              Flags = SecurityPermissionFlag.SerializationFormatter)]
         public override void GetObjectData(SerializationInfo info, StreamingContext context)
         {
-            info.AddValue(nameof(this.CommandName), this.CommandName);
+            info.AddValue(nameof(this.ArgumentName), this.ArgumentName);
 
             base.GetObjectData(info, context);
         }

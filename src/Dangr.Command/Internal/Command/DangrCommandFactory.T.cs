@@ -6,15 +6,17 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Command
+namespace Dangr.Internal.Command
 {
     using System;
     using System.Collections.Generic;
     using System.Collections.Immutable;
     using System.Reflection;
     using System.Text;
-    using Dangr.Command.Annotation;
-    using Dangr.Command.Exceptions;
+    using Dangr.Core;
+    using Dangr.Core.Command;
+    using Dangr.Core.Command.Annotation;
+    using Dangr.Core.Command.Exceptions;
 
     /// <summary>
     /// Object used to create new <see cref="IDangrCommand"/>s of type <see cref="T:T"/>.

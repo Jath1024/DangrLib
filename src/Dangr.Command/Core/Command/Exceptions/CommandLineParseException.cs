@@ -1,49 +1,57 @@
 ﻿// -----------------------------------------------------------------------
-//  <copyright file="UnknownCommandArgumentException.cs" company="DangerDan9631">
+//  <copyright file="CommandLineParseException.cs" company="DangerDan9631">
 //      Copyright (c) 2017 Dan Garvey. All rights reserved.
 //      Licensed under the MIT License. 
 //      See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Command.Exceptions
+namespace Dangr.Core.Command.Exceptions
 {
     using System;
     using System.Runtime.Serialization;
     using System.Security.Permissions;
 
     /// <summary>
-    /// The Exception that is thrown when an unknown argument is passed to a command.
+    /// Exception that occurrs when there is an error parsing a <see cref="Core.CommandLine"/>.
     /// </summary>
-    /// <seealso cref="Dangr.Command.Exceptions.CommandExecutionException" />
+    /// <seealso cref="System.Exception" />
     [Serializable]
-    public class UnknownCommandArgumentException : CommandExecutionException
+    public class CommandLineParseException : CommandExecutionException
     {
         /// <summary>
-        /// Gets the name of the unknown argument.
+        /// Gets the position in the command line that the exception occurred.
         /// </summary>
-        public string ArgumentName { get; }
+        public int Position { get; }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="UnknownCommandArgumentException"/> class.
+        /// Gets the command line that was parsed when this exception was thrown.
         /// </summary>
-        /// <param name="argumentName">The name of the unknown argument. </param>
-        /// <param name="message">The message that describes the error.</param>
-        public UnknownCommandArgumentException(string argumentName, string message) : base(message)
+        public string CommandLine { get; }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CommandLineParseException"/> class.
+        /// </summary>
+        /// <param name="position">The position in the command line that the exception occurred.</param>
+        /// <param name="commandLine">The command line that was parsed when this exception was thrown.</param>
+        /// <param name="message">A message that describes the current exception.</param>
+        public CommandLineParseException(int position, string commandLine, string message)
+            : base(message)
         {
-            this.ArgumentName = argumentName;
+            this.Position = position;
+            this.CommandLine = commandLine;
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="UnknownCommandArgumentException"/> class.
+        /// Initializes a new instance of the <see cref="CommandLineParseException"/> class.
         /// </summary>
         /// <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
         /// <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
-        protected UnknownCommandArgumentException(
-            SerializationInfo info,
-            StreamingContext context) : base(info, context)
+        protected CommandLineParseException(SerializationInfo info, StreamingContext context)
+            : base(info, context)
         {
-            this.ArgumentName = (string) info.GetValue(nameof(this.ArgumentName), typeof(string));
+            this.Position = (int) info.GetValue(nameof(this.Position), typeof(int));
+            this.CommandLine = (string) info.GetValue(nameof(this.CommandLine), typeof(string));
         }
 
         /// <summary>
@@ -60,7 +68,8 @@ namespace Dangr.Command.Exceptions
              Flags = SecurityPermissionFlag.SerializationFormatter)]
         public override void GetObjectData(SerializationInfo info, StreamingContext context)
         {
-            info.AddValue(nameof(this.ArgumentName), this.ArgumentName);
+            info.AddValue(nameof(this.Position), this.Position);
+            info.AddValue(nameof(this.CommandLine), this.CommandLine);
 
             base.GetObjectData(info, context);
         }
