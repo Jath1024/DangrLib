@@ -15,7 +15,6 @@ namespace Dangr.Framework.Logging
     using Dangr.Core.Logging;
     using Dangr.Core.Logging.Loggers;
     using Dangr.Core.Logging.Wcf;
-    using Dangr.Logging;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]

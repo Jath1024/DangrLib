@@ -9,7 +9,6 @@
 namespace Dangr.Framework.Logging
 {
     using Dangr.Core.Logging;
-    using Dangr.Logging;
 
     public class TestEndpoint : ILogEndpoint
     {
