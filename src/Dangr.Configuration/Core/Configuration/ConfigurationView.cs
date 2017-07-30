@@ -9,8 +9,8 @@
 namespace Dangr.Core.Configuration
 {
     using System;
+    using Dangr.Core.Diagnostics;
     using Dangr.Core.Util;
-    using Dangr.Diagnostics;
 
     /// <summary>
     /// An object that exposes settings in a <see cref="Configuration" /> .

@@ -9,7 +9,7 @@
 namespace Dangr.Test
 {
     using System;
-    using Dangr.Diagnostics;
+    using Dangr.Core.Diagnostics;
 
     /// <summary>
     /// Static class that provides utilities for running tests.

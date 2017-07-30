@@ -27,16 +27,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AssemblyInfo.tt</DependentUpon>
     </Compile>
-    <Compile Include="Diagnostics\Assert.cs" />
-    <Compile Include="Diagnostics\AssertionFailedException.cs" />
-    <Compile Include="Diagnostics\AssertResolver.cs" />
-    <Compile Include="Diagnostics\AssertType.cs" />
-    <Compile Include="Diagnostics\CompareOperation.cs" />
-    <Compile Include="Diagnostics\CompareOperationExtensions.cs" />
-    <Compile Include="Diagnostics\DebugAssertResolver.cs" />
-    <Compile Include="Diagnostics\ValidateResolver.cs" />
-    <Compile Include="Diagnostics\ValidationFailedException.cs" />
-    <Compile Include="Diagnostics\WarnResolver.cs" />
+    <Compile Include="Core\Diagnostics\Assert.cs" />
+    <Compile Include="Core\Diagnostics\AssertionFailedException.cs" />
+    <Compile Include="Core\Diagnostics\AssertResolver.cs" />
+    <Compile Include="Core\Diagnostics\AssertType.cs" />
+    <Compile Include="Core\Diagnostics\CompareOperation.cs" />
+    <Compile Include="Internal\Diagnostics\CompareOperationExtensions.cs" />
+    <Compile Include="Internal\Diagnostics\DebugAssertResolver.cs" />
+    <Compile Include="Internal\Diagnostics\ValidateResolver.cs" />
+    <Compile Include="Core\Diagnostics\ValidationFailedException.cs" />
+    <Compile Include="Internal\Diagnostics\WarnResolver.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Dangr.Logging.Interface\Dangr.Logging.Interface.csproj">

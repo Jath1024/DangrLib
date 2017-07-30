@@ -6,15 +6,16 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Diagnostics
+namespace Dangr.Internal.Diagnostics
 {
     using System;
+    using Dangr.Core.Diagnostics;
     using Dangr.Logging;
 
     /// <summary>
     /// Throws an exception if specific conditions are not met.
     /// </summary>
-    public class ValidateResolver : AssertResolver
+    internal class ValidateResolver : AssertResolver
     {
         private static readonly string LogCategory = nameof(ValidateResolver);
 

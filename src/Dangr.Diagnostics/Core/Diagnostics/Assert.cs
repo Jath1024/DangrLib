@@ -6,8 +6,9 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Diagnostics
+namespace Dangr.Core.Diagnostics
 {
+    using Dangr.Internal.Diagnostics;
     using Dangr.Logging;
 
     /// <summary>
@@ -27,7 +28,7 @@ namespace Dangr.Diagnostics
         public static AssertResolver Validate { get; } = new ValidateResolver();
 
         /// <summary>
-        /// Shows a dialog if specific conditions are not met. Same as <see cref="Dangr.Diagnostics.Assert.Warn" /> in release builds.
+        /// Shows a dialog if specific conditions are not met. Same as <see cref="Assert.Warn" /> in release builds.
         /// </summary>
         public static AssertResolver Debug { get; } =
 #if DEBUG

@@ -16,7 +16,7 @@ namespace Dangr.Command
     using Dangr.Internal.Command;
     using Dangr.Test;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
-    using Assert = Dangr.Diagnostics.Assert;
+    using Assert = Dangr.Core.Diagnostics.Assert;
 
     [TestClass]
     public class DangrCommandFactoryTest

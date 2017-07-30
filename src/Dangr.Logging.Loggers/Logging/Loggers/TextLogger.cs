@@ -11,8 +11,8 @@ namespace Dangr.Logging.Loggers
     using System;
     using System.IO;
     using System.Reflection;
+    using Dangr.Core.Diagnostics;
     using Dangr.Core.Util;
-    using Dangr.Diagnostics;
 
     /// <summary>
     ///     A logger pipeline logger that will log entries to a text file.

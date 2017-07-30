@@ -6,7 +6,7 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Diagnostics
+namespace Dangr.Core.Diagnostics
 {
     /// <summary>
     /// The types of compare operations that can be used in 

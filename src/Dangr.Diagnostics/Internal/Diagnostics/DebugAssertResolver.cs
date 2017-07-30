@@ -6,11 +6,12 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Diagnostics
+namespace Dangr.Internal.Diagnostics
 {
     using System;
     using System.Diagnostics;
     using System.Windows.Forms;
+    using Dangr.Core.Diagnostics;
     using Dangr.Logging;
 
     /// <summary>

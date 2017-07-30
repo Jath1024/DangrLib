@@ -15,8 +15,8 @@ namespace Dangr.Logging.Loggers
     using System.ServiceModel.Channels;
     using System.Text;
     using System.Threading;
+    using Dangr.Core.Diagnostics;
     using Dangr.Core.Util;
-    using Dangr.Diagnostics;
     using Dangr.Logging.Wcf;
 
     /// <summary>

@@ -6,9 +6,10 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Diagnostics
+namespace Dangr.Internal.Diagnostics
 {
     using System;
+    using Dangr.Core.Diagnostics;
     using Dangr.Logging;
 
     /// <summary>

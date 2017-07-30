@@ -6,14 +6,16 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Diagnostics
+namespace Dangr.Internal.Diagnostics
 {
+    using Dangr.Core.Diagnostics;
+
     /// <summary>
     /// <para>Provides extended functionality to the 
     /// <see cref="CompareOperation" /></para>
     /// <para>enumeration.</para>
     /// </summary>
-    public static class CompareOperationExtensions
+    internal static class CompareOperationExtensions
     {
         /// <summary>
         /// Gets the <paramref name="operation" /> string for the specified <see cref="CompareOperation" /> .

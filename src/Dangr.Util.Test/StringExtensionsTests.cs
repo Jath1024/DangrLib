@@ -9,7 +9,7 @@
 namespace Dangr.Core.Util
 {
     using Microsoft.VisualStudio.TestTools.UnitTesting;
-    using Assert = Dangr.Diagnostics.Assert;
+    using Assert = Dangr.Core.Diagnostics.Assert;
 
     [TestClass]
     public class StringExtensionsTests

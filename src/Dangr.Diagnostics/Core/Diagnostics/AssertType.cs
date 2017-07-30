@@ -6,7 +6,7 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Diagnostics
+namespace Dangr.Core.Diagnostics
 {
     /// <summary>
     /// Defines the different assert conditions usable in 
@@ -15,32 +15,32 @@ namespace Dangr.Diagnostics
     public enum AssertType
     {
         /// <summary>
-        /// The <see cref="Dangr.Diagnostics.AssertType.IsTrue" /> assert type.
+        /// The <see cref="AssertType.IsTrue" /> assert type.
         /// </summary>
         IsTrue,
 
         /// <summary>
-        /// The <see cref="Dangr.Diagnostics.AssertType.IsFalse" /> assert type.
+        /// The <see cref="AssertType.IsFalse" /> assert type.
         /// </summary>
         IsFalse,
 
         /// <summary>
-        /// The <see cref="Dangr.Diagnostics.AssertType.AreEqual" /> assert type.
+        /// The <see cref="AssertType.AreEqual" /> assert type.
         /// </summary>
         AreEqual,
 
         /// <summary>
-        /// The <see cref="Dangr.Diagnostics.AssertType.AreNotEqual" /> assert type.
+        /// The <see cref="AssertType.AreNotEqual" /> assert type.
         /// </summary>
         AreNotEqual,
 
         /// <summary>
-        /// The <see cref="Dangr.Diagnostics.AssertType.IsNotNull" /> assert type.
+        /// The <see cref="AssertType.IsNotNull" /> assert type.
         /// </summary>
         IsNotNull,
 
         /// <summary>
-        /// The <see cref="Dangr.Diagnostics.AssertType.IsNull" /> assert type.
+        /// The <see cref="AssertType.IsNull" /> assert type.
         /// </summary>
         IsNull,
 
@@ -65,47 +65,47 @@ namespace Dangr.Diagnostics
         IsNotNullOrWhiteSpace,
 
         /// <summary>
-        /// The <see cref="Dangr.Diagnostics.AssertType.IsNotEmpty" /> assert type.
+        /// The <see cref="AssertType.IsNotEmpty" /> assert type.
         /// </summary>
         IsNotEmpty,
 
         /// <summary>
-        /// The <see cref="Dangr.Diagnostics.AssertType.IsEmpty" /> assert type.
+        /// The <see cref="AssertType.IsEmpty" /> assert type.
         /// </summary>
         IsEmpty,
 
         /// <summary>
-        /// The <see cref="Dangr.Diagnostics.AssertType.IsNotZero" /> assert type.
+        /// The <see cref="AssertType.IsNotZero" /> assert type.
         /// </summary>
         IsNotZero,
 
         /// <summary>
-        /// The <see cref="Dangr.Diagnostics.AssertType.IsInRange" /> assert type.
+        /// The <see cref="AssertType.IsInRange" /> assert type.
         /// </summary>
         IsInRange,
 
         /// <summary>
-        /// The <see cref="Dangr.Diagnostics.AssertType.Compare" /> assert type.
+        /// The <see cref="AssertType.Compare" /> assert type.
         /// </summary>
         Compare,
 
         /// <summary>
-        /// The <see cref="Dangr.Diagnostics.AssertType.NotDisposed" /> assert type.
+        /// The <see cref="AssertType.NotDisposed" /> assert type.
         /// </summary>
         NotDisposed,
 
         /// <summary>
-        /// The <see cref="Dangr.Diagnostics.AssertType.IsType" /> assert type.
+        /// The <see cref="AssertType.IsType" /> assert type.
         /// </summary>
         IsType,
 
         /// <summary>
-        /// The <see cref="Dangr.Diagnostics.AssertType.IsTypeOrNull" /> assert type.
+        /// The <see cref="AssertType.IsTypeOrNull" /> assert type.
         /// </summary>
         IsTypeOrNull,
 
         /// <summary>
-        /// The <see cref="Dangr.Diagnostics.AssertType.Fail" /> assert type.
+        /// The <see cref="AssertType.Fail" /> assert type.
         /// </summary>
         Fail
     }

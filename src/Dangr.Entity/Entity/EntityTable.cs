@@ -13,8 +13,8 @@ namespace Dangr.Entity
     using System.Linq;
     using System.Reflection;
     using Dangr.Core.Collections;
+    using Dangr.Core.Diagnostics;
     using Dangr.Core.Util;
-    using Dangr.Diagnostics;
 
     /// <summary>
     /// Table that contains references to all of the <see cref="IEntity" /> s

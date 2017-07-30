@@ -10,8 +10,8 @@ namespace Dangr.Logging.Loggers
 {
     using System;
     using System.Runtime.InteropServices;
+    using Dangr.Core.Diagnostics;
     using Dangr.Core.Util;
-    using Dangr.Diagnostics;
 
     /// <summary>
     /// Logger pipeline logger that will log a message to the console.

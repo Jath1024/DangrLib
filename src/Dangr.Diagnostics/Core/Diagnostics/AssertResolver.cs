@@ -6,7 +6,7 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Diagnostics
+namespace Dangr.Core.Diagnostics
 {
     using System;
     using System.Collections;
@@ -14,6 +14,7 @@ namespace Dangr.Diagnostics
     using System.Runtime.CompilerServices;
     using System.Text;
     using Dangr.Core.Util;
+    using Dangr.Internal.Diagnostics;
     using Dangr.Logging;
 
     /// <summary>

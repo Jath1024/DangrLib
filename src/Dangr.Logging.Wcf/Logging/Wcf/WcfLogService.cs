@@ -14,8 +14,8 @@ namespace Dangr.Logging.Wcf
     using System.ServiceModel.Channels;
     using System.Threading;
     using System.Threading.Tasks;
+    using Dangr.Core.Diagnostics;
     using Dangr.Core.Util;
-    using Dangr.Diagnostics;
 
     /// <summary>
     /// <para>A service that listens for connections from 

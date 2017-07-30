@@ -12,8 +12,8 @@ namespace Dangr.Logging.Wcf
     using System.Diagnostics.CodeAnalysis;
     using System.ServiceModel;
     using System.ServiceModel.Channels;
+    using Dangr.Core.Diagnostics;
     using Dangr.Core.Util;
-    using Dangr.Diagnostics;
 
     /// <summary>
     /// A WCF client for sending logs to a connected 
