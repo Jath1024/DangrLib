@@ -1,0 +1,37 @@
+﻿<#
+// -----------------------------------------------------------------------
+//  <copyright file="PublishedPackages.t4" company="DangerDan9631">
+//      Copyright (c) 2017 Dan Garvey. All rights reserved.
+//      Licensed under the MIT License. 
+//      See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
+//  </copyright>
+// -----------------------------------------------------------------------
+#>
+<#@ assembly name="System.Collections.Immutable" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Runtime" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Collections.Immutable" #>
+<#@ import namespace="System.Text" #>
+<#@ include file="$(SolutionDir)\src\Templates\Common\AssemblyProperties.t4" once="true" #><##>
+<#+
+    public static readonly ImmutableList<string> PublishedPackages = new List<string> 
+        {
+            ASYNC,
+            BUILD,
+            COMMAND,
+            CONFIGURATION,
+            DIAGNOSTICS,
+            ENTITY,
+            EVENT,
+            LOGGING,
+            LOGGING_INTERFACE,
+            LOGGING_LOGGERS,
+            LOGGING_WCF,
+            MATH,
+            OBJECT_POOL,
+            REGISTRY,
+            TEST,
+            UTIL
+        }.ToImmutableList();
+#>

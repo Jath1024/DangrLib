@@ -1,0 +1,12 @@
+﻿<#
+// -----------------------------------------------------------------------
+//  <copyright file="GitHub.t4" company="DangerDan9631">
+//      Copyright (c) 2017 Dan Garvey. All rights reserved.
+//      Licensed under the MIT License. 
+//      See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
+//  </copyright>
+// -----------------------------------------------------------------------
+#>
+<#+
+    public const string GitHubRepo = "Dangerdan9631/DangrLib";
+#>

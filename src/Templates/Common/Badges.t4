@@ -1,0 +1,66 @@
+﻿<#
+// -----------------------------------------------------------------------
+//  <copyright file="Badges.t4" company="DangerDan9631">
+//      Copyright (c) 2017 Dan Garvey. All rights reserved.
+//      Licensed under the MIT License. 
+//      See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
+//  </copyright>
+// -----------------------------------------------------------------------
+#>
+<#@ include file="$(SolutionDir)\src\Templates\Common\GitHub.t4" once="true" #><##>
+<#@ include file="$(SolutionDir)\src\Templates\Common\FileReferences.t4" once="true" #><##>
+<#+
+    public void PrintBuildStatusBadge()
+    {
+#>
+[![BuildStatus](https://img.shields.io/appveyor/ci/<#=GitHubRepo#>.svg)](<#=APPVEYOR_URL#>)
+<#+
+    }
+
+    public void PrintCodeAnalysisBadge()
+    {
+#>
+[![CodeAnalysis](<#=CODE_FACTOR_URL#>/badge)](<#=CODE_FACTOR_URL#>)
+<#+
+    }
+
+    public void PrintCodeCoverageBadge()
+    {
+#>
+[![CodeCoverage](https://img.shields.io/codecov/c/github/<#=GitHubRepo#>.svg)](<#=CODECOV_URL#>)
+<#+
+    }
+
+    public void PrintIssuesBadge()
+    {
+#>
+[![Issues](https://img.shields.io/github/issues-raw/<#=GitHubRepo#>.svg)](<#=ISSUES_URL#>)
+<#+
+    }    
+
+    public void PrintLicenseBadge()
+    {
+#>
+[![License](https://img.shields.io/github/license/<#=GitHubRepo#>.svg)](<#=LICENSE_URL#>)
+<#+
+    }    
+
+    public void PrintNugetVersionBadge(string packageName)
+    {
+#>
+[![nuget](https://img.shields.io/nuget/v/<#=packageName#>.svg)](https://www.nuget.org/packages/<#=packageName#>/)<#+
+    }
+
+    public void PrintNugetDownloadsBadge(string packageName)
+    {
+#>
+[![nuget](https://img.shields.io/nuget/dt/<#=packageName#>.svg)](https://www.nuget.org/packages/<#=packageName#>/)<#+
+    }
+
+    public void PrintReleaseBadge()
+    {
+#>
+[![Release](https://img.shields.io/github/release/<#=GitHubRepo#>.svg)](<#=RELEASE_URL#>)
+<#+
+    }
+#>

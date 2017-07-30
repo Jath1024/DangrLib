@@ -7,7 +7,25 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 #>
+<#@ include file="$(SolutionDir)\src\Templates\Common\GitHub.t4" once="true" #><##>
 <#+
-    public const string LICENSE_URL = "https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE";
-    public const string ICON_URL = "https://raw.githubusercontent.com/DangerDan9631/DangrLib/master/Images/Logo/skull%20logo.png";
+    // GitHub URLs
+    public const string GITHUB_URL = "https://github.com/" + GitHubRepo;
+    public const string CONTRIBUTORS_URL = GITHUB_URL + "/contributors";
+    public const string ISSUES_URL = GITHUB_URL + "/issues";
+    public const string RELEASE_URL = GITHUB_URL + "/releases";
+    public const string TAGS_URL = GITHUB_URL + "/tags";
+    public const string GITHUB_PAGES_URL = "https://dangerdan9631.github.io/DangrLib/";
+
+    // CI Services URLs
+    public const string APPVEYOR_URL = "https://ci.appveyor.com/project/" + GitHubRepo;
+    public const string CODECOV_URL = "https://codecov.io/gh/" + GitHubRepo;
+    public const string CODE_FACTOR_URL = "https://www.codefactor.io/repository/github/" + GitHubRepo;
+    public const string FEATHUB_URL = "http://feathub.com/" + GitHubRepo;
+
+    // File References
+    public const string CONTRIBUTION_MD_URL = GITHUB_URL + "/blob/master/.github/CONTRIBUTING.md";
+    public const string ICON_URL = "https://raw.githubusercontent.com/" + GitHubRepo + "/master/Images/Logo/skull%20logo.png";
+    public const string LICENSE_URL = GITHUB_URL + "/blob/master/LICENSE";
+    public const string LOGO_URL = "https://raw.githubusercontent.com/" + GitHubRepo + "/master/Images/Logo/skulllogo64.png";
 #>

@@ -13,11 +13,20 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\README.md">
+      <Link>Docs\README.md</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>README.tt</DependentUpon>
+    </None>
     <None Include="AssemblyInfo\AssemblyInfo.t4" />
+    <None Include="Common\Badges.t4" />
     <None Include="Common\Dependencies.t4" />
     <None Include="Common\GeneratedCodeBanner.t4">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Common\GitHub.t4" />
+    <None Include="Common\PublishedPackages.t4" />
     <None Include="Common\Tags.t4" />
     <None Include="Common\Descriptions.t4" />
     <None Include="Nuspec\NuspecDependency.t4" />
@@ -34,6 +43,13 @@
       <HintPath>..\..\packages\System.Collections.Immutable.1.3.1\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
       <Private>True</Private>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\README.tt">
+      <Link>Docs\README.tt</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>README.md</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Target Name="Build" />
   <Target Name="Clean" />
