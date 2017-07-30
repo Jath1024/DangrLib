@@ -8,6 +8,7 @@
 
 namespace Dangr.Entity
 {
+    using Dangr.Core.Entity;
     using Dangr.Core.Util;
 
     public class TestPartitionTable : IdPartitionTable

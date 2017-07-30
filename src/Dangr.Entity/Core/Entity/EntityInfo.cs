@@ -6,7 +6,7 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Entity
+namespace Dangr.Core.Entity
 {
     /// <summary>
     /// Stores information about an entity. Created by adding an entity to an 

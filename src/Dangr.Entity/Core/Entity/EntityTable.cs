@@ -6,7 +6,7 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Entity
+namespace Dangr.Core.Entity
 {
     using System;
     using System.Collections.Generic;
@@ -14,7 +14,6 @@ namespace Dangr.Entity
     using System.Reflection;
     using Dangr.Core.Collections;
     using Dangr.Core.Diagnostics;
-    using Dangr.Core.Util;
 
     /// <summary>
     /// Table that contains references to all of the <see cref="IEntity" /> s

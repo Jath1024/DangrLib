@@ -8,6 +8,8 @@
 
 namespace Dangr.Entity
 {
+    using Dangr.Core.Entity;
+
     [Entity(TestIds.TestEntity)]
     public class TestEntity : IEntity
     {

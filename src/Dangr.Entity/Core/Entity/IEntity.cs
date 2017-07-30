@@ -6,7 +6,7 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Entity
+namespace Dangr.Core.Entity
 {
     /// <summary>
     /// Interface that defines an entity that can be stored in an 
@@ -15,7 +15,7 @@ namespace Dangr.Entity
     public interface IEntity
     {
         /// <summary>
-        /// Gets the <see cref="Dangr.Entity.IEntity.EntityInfo" /> generated for this <see cref="IEntity" /> .
+        /// Gets the <see cref="IEntity.EntityInfo" /> generated for this <see cref="IEntity" /> .
         /// </summary>
         EntityInfo EntityInfo { get; }
     }

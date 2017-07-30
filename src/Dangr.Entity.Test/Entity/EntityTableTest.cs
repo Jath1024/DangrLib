@@ -8,6 +8,7 @@
 
 namespace Dangr.Entity
 {
+    using Dangr.Core.Entity;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]

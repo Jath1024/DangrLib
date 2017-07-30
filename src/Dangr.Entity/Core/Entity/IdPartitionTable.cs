@@ -6,7 +6,7 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Entity
+namespace Dangr.Core.Entity
 {
     using System;
     using System.Collections.Generic;
