@@ -14,6 +14,11 @@
 <#@ import namespace="System.Collections.Immutable" #>
 <#@ include file="$(SolutionDir)\src\Templates\Common\AssemblyProperties.t4" once="true" #><##>
 <#+
+public const string DangrLibDescription = 
+        "**DangrLib** is a collection of classes, interfaces, and values that provide useful utilities across various segments of application programming.<br/><br/>" +
+        "It started as separate personal projects and libraries, that I soon realized had a lot of common code. So I began merging and refactoring the code into " +
+        "a common code base.";
+
     public static readonly ImmutableDictionary<string, string> Description = new Dictionary<string, string> {
         {
             ASYNC,

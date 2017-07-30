@@ -1,0 +1,25 @@
+﻿<#
+// -----------------------------------------------------------------------
+//  <copyright file="PackageList.t4" company="DangerDan9631">
+//      Copyright (c) 2017 Dan Garvey. All rights reserved.
+//      Licensed under the MIT License. 
+//      See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
+//  </copyright>
+// -----------------------------------------------------------------------
+#>
+<#@ include file="$(SolutionDir)\src\Templates\Common\Badges.t4" once="true" #><##>
+<#@ include file="$(SolutionDir)\src\Templates\Common\Descriptions.t4" once="true" #><##>
+<#@ include file="$(SolutionDir)\src\Templates\Common\PublishedPackages.t4" once="true" #><##>
+
+## Packages
+
+| Package | Version | Description |
+| --- | :---: | --- | 
+<#
+foreach(string package in PublishedPackages)
+    {
+#>
+| **<#= package #>** | <# PrintNugetVersionBadge(package); #></br><# PrintNugetDownloadsBadge(package); #> | <#= Description[package]#> |
+<#
+    }
+#>

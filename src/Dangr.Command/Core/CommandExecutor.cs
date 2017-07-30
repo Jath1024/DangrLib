@@ -14,6 +14,7 @@ namespace Dangr.Core
     using System.Text;
     using Dangr.Core.Command;
     using Dangr.Core.Command.Exceptions;
+    using Dangr.Core.Util;
     using Dangr.Internal.Command;
     using Dangr.Internal.Command.Commands;
 

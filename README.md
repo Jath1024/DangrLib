@@ -4,26 +4,29 @@
     Make changes to T4 files directly.
 -->
 
-<div style="text-align:center">
 
-# DangrLib ![DangrLib](https://raw.githubusercontent.com/Dangerdan9631/DangrLib/master/Images/Logo/skulllogo64.png)
+
+# <div style="text-align:center"> DangrLib ![DangrLib](https://raw.githubusercontent.com/Dangerdan9631/DangrLib/master/Images/Logo/skulllogo64.png) </div>
+
+<div style="text-align:center">
+<p>
 
 [![Release](https://img.shields.io/github/release/Dangerdan9631/DangrLib.svg)](https://github.com/Dangerdan9631/DangrLib/releases)
 [![License](https://img.shields.io/github/license/Dangerdan9631/DangrLib.svg)](https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE)
 [![Issues](https://img.shields.io/github/issues-raw/Dangerdan9631/DangrLib.svg)](https://github.com/Dangerdan9631/DangrLib/issues)
 
+</p><p>
+
 [![BuildStatus](https://img.shields.io/appveyor/ci/Dangerdan9631/DangrLib.svg)](https://ci.appveyor.com/project/Dangerdan9631/DangrLib)
 [![CodeCoverage](https://img.shields.io/codecov/c/github/Dangerdan9631/DangrLib.svg)](https://codecov.io/gh/Dangerdan9631/DangrLib)
 [![CodeAnalysis](https://www.codefactor.io/repository/github/Dangerdan9631/DangrLib/badge)](https://www.codefactor.io/repository/github/Dangerdan9631/DangrLib)
 
+</p>
 </div>
 
 ---
+**DangrLib** is a collection of classes, interfaces, and values that provide useful utilities across various segments of application programming.<br/><br/>It started as separate personal projects and libraries, that I soon realized had a lot of common code. So I began merging and refactoring the code into a common code base.
 
-**DangrLib** is a collection of classes, interfaces, and values that provide useful utilities across various segments of application programming. 
-
-It started as separate personal projects and libraries, that I soon realized had a lot of common code. So I began merging and refactoring the code into
-a common code base.
 
 ## Feedback and proposals for DangrLib
 
@@ -31,9 +34,15 @@ a common code base.
 
 [![Feature Requests](http://feathub.com/Dangerdan9631/DangrLib?format=svg)](http://feathub.com/Dangerdan9631/DangrLib)
 
+<!--
+    Links
+-->
+[FeatHubPage]: http://feathub.com/Dangerdan9631/DangrLib
+
 ## API Reference
 
 For library details and code samples and see the [API Reference](https://dangerdan9631.github.io/DangrLib/).
+
 
 ## Getting Started
 
@@ -88,7 +97,17 @@ Each package has it's own MSTest project.
 
 Coding style should follow the guidelines in the [Visual Studio] and [Resharper] code analysis rules included in the Solution.
 
+<!--
+    Links
+-->
+[DocFx]: https://github.com/dotnet/docfx
+[GhostDoc]: http://submain.com/products/ghostdoc.aspx
+[Resharper]: https://www.jetbrains.com/resharper/
+[Visual Studio]: https://www.visualstudio.com/
+
+
 ## Packages
+
 | Package | Version | Description |
 | --- | :---: | --- | 
 | **Dangr.Async** | [![nuget](https://img.shields.io/nuget/v/Dangr.Async.svg)](https://www.nuget.org/packages/Dangr.Async/)</br>[![nuget](https://img.shields.io/nuget/dt/Dangr.Async.svg)](https://www.nuget.org/packages/Dangr.Async/) | Asynchronous code execution utilities for use with DangrLib. |

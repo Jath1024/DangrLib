@@ -363,7 +363,7 @@ namespace Dangr.Core.Diagnostics
         /// Show a <paramref name="message" /> if the specified string is not <c>null</c> or empty.
         /// </summary>
         /// <param name="logSource">
-        /// The <see cref="Dangr.Logging.ILogSource" /> used to log messages on failure.
+        /// The <see cref="Dangr.Core.Logging.ILogSource" /> used to log messages on failure.
         /// </param>
         /// <param name="value">The string to check.</param>
         /// <param name="message">The message to show.</param>

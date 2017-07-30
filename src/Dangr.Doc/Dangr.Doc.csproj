@@ -18,7 +18,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="api\index.md" />
+    <None Include="api\index.md">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>index.tt</DependentUpon>
+    </None>
     <None Include="articles\intro.md" />
     <None Include="articles\toc.md" />
     <None Include="docfx.json" />
@@ -32,6 +36,10 @@
     <None Include="toc.yml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="api\index.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>index.md</LastGenOutput>
+    </Content>
     <Content Include="index.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>index.md</LastGenOutput>

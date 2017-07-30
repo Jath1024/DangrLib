@@ -26,7 +26,7 @@ namespace Dangr.Core.Entity
         /// Initializes a new instance of the <see cref="EntityAttribute" /> class.
         /// </summary>
         /// <param name="entityName">
-        /// The entity name to use on an <see cref="Dangr.Entity" /> .
+        /// The entity name to use on an <see cref="Dangr.Core.Entity" /> .
         /// </param>
         public EntityAttribute(string entityName)
         {

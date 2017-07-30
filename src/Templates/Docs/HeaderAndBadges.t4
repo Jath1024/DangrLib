@@ -1,0 +1,33 @@
+﻿<#
+// -----------------------------------------------------------------------
+//  <copyright file="HeaderAndBadges.t4" company="DangerDan9631">
+//      Copyright (c) 2017 Dan Garvey. All rights reserved.
+//      Licensed under the MIT License. 
+//      See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
+//  </copyright>
+// -----------------------------------------------------------------------
+#>
+<#@ include file="$(SolutionDir)\src\Templates\Common\Badges.t4" once="true" #><##>
+<#@ include file="$(SolutionDir)\src\Templates\Common\FileReferences.t4" once="true" #><##>
+
+
+
+# <div style="text-align:center"> DangrLib ![DangrLib](<#= LOGO_URL #>) </div>
+
+<div style="text-align:center">
+<p>
+
+<# PrintReleaseBadge(); #>
+<# PrintLicenseBadge(); #>
+<# PrintIssuesBadge(); #>
+
+</p><p>
+
+<# PrintBuildStatusBadge(); #>
+<# PrintCodeCoverageBadge(); #>
+<# PrintCodeAnalysisBadge(); #>
+
+</p>
+</div>
+
+---

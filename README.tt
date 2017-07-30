@@ -11,101 +11,26 @@
 <#@ output extension=".md" #>
 <#@ include file="$(SolutionDir)\src\Templates\Common\Badges.t4" once="true" #><##>
 <#@ include file="$(SolutionDir)\src\Templates\Common\Descriptions.t4" once="true" #><##>
+<#@ include file="$(SolutionDir)\src\Templates\Common\FileReferences.t4" once="true" #><##>
 <#@ include file="$(SolutionDir)\src\Templates\Common\GeneratedCodeBanner.t4" once="true" #><##>
 <#@ include file="$(SolutionDir)\src\Templates\Common\GitHub.t4" once="true" #><##>
 <#@ include file="$(SolutionDir)\src\Templates\Common\PublishedPackages.t4" once="true" #><##>
 <#@ include file="$(SolutionDir)\src\Templates\Common\Versions.t4" once="true" #><##>
 
 <# PrintGeneratedCodeXmlBanner(); #>
+<#@ include file="$(SolutionDir)\src\Templates\Docs\HeaderAndBadges.t4" once="true" #><##>
 
-<div style="text-align:center">
+<#= DangrLibDescription #>
 
-# DangrLib ![DangrLib](<#= LOGO_URL #>)
-
-<# PrintReleaseBadge(); #>
-<# PrintLicenseBadge(); #>
-<# PrintIssuesBadge(); #>
-
-<# PrintBuildStatusBadge(); #>
-<# PrintCodeCoverageBadge(); #>
-<# PrintCodeAnalysisBadge(); #>
-
-</div>
-
----
-
-**DangrLib** is a collection of classes, interfaces, and values that provide useful utilities across various segments of application programming. 
-
-It started as separate personal projects and libraries, that I soon realized had a lot of common code. So I began merging and refactoring the code into
-a common code base.
-
-## Feedback and proposals for DangrLib
-
-**Vote** for the proposals you like, and **add** yours:
-
-[![Feature Requests](<#= FEATHUB_URL #>?format=svg)](<#= FEATHUB_URL #>)
+<#@ include file="$(SolutionDir)\src\Templates\Docs\FeatureRequests.t4" once="true" #><##>
 
 ## API Reference
 
 For library details and code samples and see the [API Reference](<#=GITHUB_PAGES_URL#>).
 
-## Getting Started
+<#@ include file="$(SolutionDir)\src\Templates\Docs\GettingStarted.t4" once="true" #><##>
 
-To install **DangrLib**, clone this repository and reference the packages from your _.csproj_
-
-```
-git clone <#=GITHUB_URL#>.git
-```
-
-*Or*
-
-Run the following command in the [Visual Studio] Package Manager Console for each of the packages you want.
-
-```
-<#
-foreach(string package in PublishedPackages)
-{
-#>
-Install-Package <#=package#>
-<#
-}
-#>
-```
-
-### Prerequisites
-
-[Visual Studio]
-
-### Optional tools used
-
-[Resharper] - Code analysis and refactoring.
-
-[GhostDoc] - Generating XML doc comments (Documentation files generated using [DocFx]).
-
-### Installing
-
-The **DangrLib** libraries can be built out of the box using [Visual Studio].
-
-## Running the tests
-
-Unit tests can be run using **MSTest** in the [Visual Studio] Test Explorer.
-
-Each package has it's own MSTest project.
-
-Coding style should follow the guidelines in the [Visual Studio] and [Resharper] code analysis rules included in the Solution.
-
-## Packages
-| Package | Version | Description |
-| --- | :---: | --- | 
-<#
-foreach(string package in PublishedPackages)
-    {
-        string nugetShield= $"https://img.shields.io/badge/nuget-v{AssemblyVersion[package].BuildVersion}-2D64F5.svg";
-#>
-| **<#= package #>** | <# PrintNugetVersionBadge(package); #></br><# PrintNugetDownloadsBadge(package); #> | <#= Description[package]#> |
-<#
-    }
-#>
+<#@ include file="$(SolutionDir)\src\Templates\Docs\PackageList.t4" once="true" #><##>
 
 ## Contributing
 

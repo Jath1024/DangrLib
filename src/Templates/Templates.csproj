@@ -29,6 +29,10 @@
     <None Include="Common\PublishedPackages.t4" />
     <None Include="Common\Tags.t4" />
     <None Include="Common\Descriptions.t4" />
+    <None Include="Docs\FeatureRequests.t4" />
+    <None Include="Docs\GettingStarted.t4" />
+    <None Include="Docs\HeaderAndBadges.t4" />
+    <None Include="Docs\PackageList.t4" />
     <None Include="Nuspec\NuspecDependency.t4" />
     <None Include="Nuspec\NuspecMetadata.t4" />
     <None Include="Nuspec\NuspecCommonFiles.t4" />
