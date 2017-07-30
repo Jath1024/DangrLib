@@ -11,9 +11,12 @@
 <#@ output extension=".md" #>
 <#@ include file="$(SolutionDir)\src\Templates\Common\Badges.t4" once="true" #><##>
 <#@ include file="$(SolutionDir)\src\Templates\Common\Descriptions.t4" once="true" #><##>
+<#@ include file="$(SolutionDir)\src\Templates\Common\GeneratedCodeBanner.t4" once="true" #><##>
 <#@ include file="$(SolutionDir)\src\Templates\Common\GitHub.t4" once="true" #><##>
 <#@ include file="$(SolutionDir)\src\Templates\Common\PublishedPackages.t4" once="true" #><##>
 <#@ include file="$(SolutionDir)\src\Templates\Common\Versions.t4" once="true" #><##>
+
+<# PrintGeneratedCodeXmlBanner(); #>
 
 <div style="text-align:center">
 

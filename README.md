@@ -1,4 +1,9 @@
 
+<!--
+    This file Is generated using T4 Text Templates. Do Not Modify. 
+    Make changes to T4 files directly.
+-->
+
 <div style="text-align:center">
 
 # DangrLib ![DangrLib](https://raw.githubusercontent.com/Dangerdan9631/DangrLib/master/Images/Logo/skulllogo64.png)
