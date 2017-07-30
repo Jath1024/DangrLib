@@ -8,6 +8,8 @@
 
 namespace Dangr.Event
 {
+    using Dangr.Core.Event;
+
     public class InvalidTestEventListenerTooManyParameters
     {
         [EventHandler]

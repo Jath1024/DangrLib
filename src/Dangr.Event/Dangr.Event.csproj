@@ -26,8 +26,8 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Event\EventBus.cs" />
-    <Compile Include="Event\EventHandlerAttribute.cs" />
+    <Compile Include="Core\Event\EventBus.cs" />
+    <Compile Include="Core\Event\EventHandlerAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Dangr.Event.tt">

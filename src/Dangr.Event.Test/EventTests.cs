@@ -9,6 +9,7 @@
 namespace Dangr.Event
 {
     using System;
+    using Dangr.Core.Event;
     using Dangr.Test;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 

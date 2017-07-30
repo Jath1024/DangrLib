@@ -6,7 +6,7 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Event
+namespace Dangr.Core.Event
 {
     using System;
 
