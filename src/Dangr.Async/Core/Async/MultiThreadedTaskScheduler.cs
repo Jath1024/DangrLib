@@ -6,7 +6,7 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Async
+namespace Dangr.Core.Async
 {
     using System;
     using System.Collections.Generic;
@@ -129,10 +129,10 @@ namespace Dangr.Async
         }
 
         /// <summary>
-        /// Gets an enumerable of the <see cref="Dangr.Async.MultiThreadedTaskScheduler.tasks" /> currently scheduled on this scheduler.
+        /// Gets an enumerable of the <see cref="MultiThreadedTaskScheduler.tasks" /> currently scheduled on this scheduler.
         /// </summary>
         /// <returns>
-        /// An enumerable of the <see cref="Dangr.Async.MultiThreadedTaskScheduler.tasks" /> currently scheduled on this scheduler.
+        /// An enumerable of the <see cref="MultiThreadedTaskScheduler.tasks" /> currently scheduled on this scheduler.
         /// </returns>
         protected sealed override IEnumerable<Task> GetScheduledTasks()
         {

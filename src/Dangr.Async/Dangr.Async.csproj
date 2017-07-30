@@ -21,7 +21,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Async\MultiThreadedTaskScheduler.cs" />
+    <Compile Include="Core\Async\MultiThreadedTaskScheduler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

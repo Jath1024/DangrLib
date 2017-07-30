@@ -151,6 +151,5 @@ namespace Dangr.Core.Collections
                 this.delayedQueue.Add(time.UtcTicks, value);
             }
         }
-
     }
 }
