@@ -6,7 +6,7 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Util
+namespace Dangr.Core.Util
 {
     /// <summary>
     /// <para>Provides extension methods to the <see cref="IInitializable" />

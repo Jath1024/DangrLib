@@ -10,13 +10,13 @@ namespace Dangr.Logging.Loggers
 {
     using System;
     using System.Runtime.InteropServices;
+    using Dangr.Core.Util;
     using Dangr.Diagnostics;
-    using Dangr.Util;
 
     /// <summary>
     /// Logger pipeline logger that will log a message to the console.
     /// </summary>
-    public class ConsoleLogger : ILogEndpoint, ICancelable
+    public class ConsoleLogger : ILogEndpoint, ICheckedDisposable
     {
         #region Interop
 

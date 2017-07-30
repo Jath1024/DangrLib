@@ -31,7 +31,6 @@
     <Compile Include="Math\InverseQuadraticAnimator.cs" />
     <Compile Include="Math\LinearAnimator.cs" />
     <Compile Include="Math\MathHelper.cs" />
-    <Compile Include="NamespaceDoc.cs" />
     <Compile Include="Math\QuadraticAnimator.cs" />
     <Compile Include="Math\SinAnimator.cs" />
     <Compile Include="Math\SmoothTrigAnimator.cs" />

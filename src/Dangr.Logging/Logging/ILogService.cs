@@ -8,15 +8,15 @@
 
 namespace Dangr.Logging
 {
-    using Dangr.Util;
+    using Dangr.Core.Util;
 
     /// <summary>
     /// 
     /// </summary>
     /// <seealso cref="T:Dangr.Logging.ILogger" />
     /// <seealso cref="T:Dangr.Logging.ILogSource" />
-    /// <seealso cref="T:Dangr.Util.ICancelable" />
-    public interface ILogService : ILogger, ILogSource, ICancelable
+    /// <seealso cref="T:Dangr.Util.ICheckedDisposable" />
+    public interface ILogService : ILogger, ILogSource, ICheckedDisposable
     {
     }
 }

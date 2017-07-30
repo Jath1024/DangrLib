@@ -48,7 +48,6 @@
     <None Include="Inject\Internal\SetInjectionProvider.cs" />
     <None Include="Inject\Core\Attributes\SingletonAttribute.cs" />
     <None Include="Inject\Internal\SingletonInjectionProvider.cs" />
-    <None Include="NamespaceDoc.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Dangr.Inject.tt">

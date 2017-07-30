@@ -8,7 +8,7 @@
 
 namespace Dangr.Simulation.Types
 {
-    using Dangr.Util;
+    using Dangr.Core.Util;
 
     /// <summary>
     /// Base class for an entity that is part of the simulation engine.

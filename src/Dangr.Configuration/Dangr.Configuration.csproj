@@ -25,7 +25,6 @@
     <Compile Include="Configuration\Configuration.cs" />
     <Compile Include="Configuration\ConfigurationSource.cs" />
     <Compile Include="Configuration\ConfigurationView.cs" />
-    <Compile Include="NamespaceDoc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

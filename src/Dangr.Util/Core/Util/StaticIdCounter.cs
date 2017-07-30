@@ -6,7 +6,7 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Util
+namespace Dangr.Core.Util
 {
     /// <summary>
     /// An <see cref="IIdCounter" /> that contains a single ID.

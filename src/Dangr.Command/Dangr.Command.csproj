@@ -41,7 +41,6 @@
     <Compile Include="Command\Exceptions\InvalidCommandArgumentException.cs" />
     <Compile Include="Command\Exceptions\MissingCommandArgumentException.cs" />
     <Compile Include="Command\Exceptions\UnknownCommandArgumentException.cs" />
-    <Compile Include="NamespaceDoc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

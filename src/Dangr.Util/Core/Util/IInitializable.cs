@@ -6,7 +6,7 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Util
+namespace Dangr.Core.Util
 {
     /// <summary>
     /// Provides a mechanism for performing instance initialization as a

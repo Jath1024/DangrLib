@@ -26,7 +26,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="NamespaceDoc.cs" />
     <Compile Include="ObjectPool\GenericObjectPool.cs" />
     <Compile Include="ObjectPool\IPooledObject.cs" />
     <Compile Include="ObjectPool\ObjectPool.cs" />

@@ -26,19 +26,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Collections\ConcurrentScheduledQueue.cs" />
-    <Compile Include="Collections\ListExtensions.cs" />
-    <Compile Include="NamespaceDoc.cs" />
-    <Compile Include="Util\ICancelable.cs" />
-    <Compile Include="Util\IdCounter.cs" />
-    <Compile Include="Util\IdCounterOutOfRangeException.cs" />
-    <Compile Include="Util\IIdCounter.cs" />
-    <Compile Include="Util\IInitializable.cs" />
-    <Compile Include="Util\INamedObject.cs" />
-    <Compile Include="Util\InitializableExtensions.cs" />
-    <Compile Include="Util\IUidObject.cs" />
-    <Compile Include="Util\StaticIdCounter.cs" />
-    <Compile Include="Util\StringExtensions.cs" />
+    <Compile Include="Core\Collections\ConcurrentScheduledQueue.cs" />
+    <Compile Include="Core\Collections\ListExtensions.cs" />
+    <Compile Include="Core\Util\ICheckedDisposable.cs" />
+    <Compile Include="Core\Util\IdCounter.cs" />
+    <Compile Include="Core\Util\IdCounterOutOfRangeException.cs" />
+    <Compile Include="Core\Util\IIdCounter.cs" />
+    <Compile Include="Core\Util\IInitializable.cs" />
+    <Compile Include="Core\Util\INamedObject.cs" />
+    <Compile Include="Core\Util\InitializableExtensions.cs" />
+    <Compile Include="Core\Util\IUidObject.cs" />
+    <Compile Include="Core\Util\StaticIdCounter.cs" />
+    <Compile Include="Core\Util\StringExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Dangr.Util.nuspec">

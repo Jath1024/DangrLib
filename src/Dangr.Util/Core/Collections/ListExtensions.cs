@@ -6,7 +6,7 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Collections
+namespace Dangr.Core.Collections
 {
     using System;
     using System.Collections;

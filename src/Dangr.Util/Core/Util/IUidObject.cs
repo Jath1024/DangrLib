@@ -1,18 +1,22 @@
 ﻿// -----------------------------------------------------------------------
-//  <copyright file="NamespaceDoc.cs" company="DangerDan9631">
+//  <copyright file="IUidObject.cs" company="DangerDan9631">
 //      Copyright (c) 2017 Dan Garvey. All rights reserved.
 //      Licensed under the MIT License. 
 //      See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Logging.Loggers
+namespace Dangr.Core.Util
 {
     /// <summary>
-    /// The Dangr.Logging.Loggers namespace provides loggers that can be used
-    /// with DangrLib's logging framework.
+    /// Defines a property to retrieve an identifier unique to this object
+    /// within a specific group.
     /// </summary>
-    internal static class NamespaceDoc
+    public interface IUidObject
     {
+        /// <summary>
+        /// Gets the UID of this <see cref="IUidObject" /> .
+        /// </summary>
+        ulong Uid { get; }
     }
 }

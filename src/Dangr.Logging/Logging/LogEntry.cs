@@ -10,7 +10,7 @@ namespace Dangr.Logging
 {
     using System;
     using System.Runtime.Serialization;
-    using Dangr.Util;
+    using Dangr.Core.Util;
 
     /// <summary>
     ///     An entry in a log.

@@ -30,7 +30,6 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Logging\Loggers\WcfLogger.cs" />
-    <Compile Include="NamespaceDoc.cs" />
     <Compile Include="Logging\Wcf\DefaultWcfEndpoints.cs" />
     <Compile Include="Logging\Wcf\IWcfLogService.cs" />
     <Compile Include="Logging\Wcf\WcfLogClient.cs" />

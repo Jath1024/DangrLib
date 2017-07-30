@@ -12,7 +12,8 @@ namespace Dangr.Entity
     using System.Collections.Generic;
     using System.Linq;
     using System.Reflection;
-    using Dangr.Collections;
+    using Dangr.Core.Collections;
+    using Dangr.Core.Util;
     using Dangr.Diagnostics;
 
     /// <summary>
@@ -156,7 +157,7 @@ namespace Dangr.Entity
         /// <exception cref="System.InvalidOperationException">
         /// If the specified <see cref="IEntity" /> does not have an <see cref="EntityAttribute" /> or its <paramref name="entity" /> name does not have an ID partition.
         /// </exception>
-        /// <exception cref="Dangr.Util.IdCounterOutOfRangeException">
+        /// <exception cref="IdCounterOutOfRangeException">
         /// If the <paramref name="entity" /> partition for the <typeparamref name="TEntity" /> 's <paramref name="entity" /> name runs out of bounds.
         /// </exception>
         /// <returns>

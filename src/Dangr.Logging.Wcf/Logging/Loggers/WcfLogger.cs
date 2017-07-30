@@ -15,15 +15,15 @@ namespace Dangr.Logging.Loggers
     using System.ServiceModel.Channels;
     using System.Text;
     using System.Threading;
+    using Dangr.Core.Util;
     using Dangr.Diagnostics;
     using Dangr.Logging.Wcf;
-    using Dangr.Util;
 
     /// <summary>
     ///     Logger pipeline logger that will use WCF to send logs to a 
     ///     <see cref="WcfLogService" /> that is listening for logs.
     /// </summary>
-    public class WcfLogger : ILogEndpoint, ICancelable
+    public class WcfLogger : ILogEndpoint, ICheckedDisposable
     {
         /// <summary>
         ///     The default maximum batch size.

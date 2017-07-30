@@ -14,7 +14,7 @@ namespace Dangr.Command
     using System.Text;
     using Dangr.Command.Commands;
     using Dangr.Command.Exceptions;
-    using Dangr.Util;
+    using Dangr.Core.Util;
 
     /// <summary>
     /// The executor that defines what <see cref="IDangrCommand"/>s exist and can be executed.

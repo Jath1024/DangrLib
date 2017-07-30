@@ -31,7 +31,6 @@
     <Compile Include="Logging\ILogService.cs" />
     <Compile Include="Logging\LogEntry.cs" />
     <Compile Include="Logging\LogService.cs" />
-    <Compile Include="NamespaceDoc.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Dangr.Logging.Interface\Dangr.Logging.Interface.csproj">

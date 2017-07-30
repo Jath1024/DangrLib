@@ -13,8 +13,8 @@ namespace Dangr.Diagnostics
     using System.Collections.Generic;
     using System.Runtime.CompilerServices;
     using System.Text;
+    using Dangr.Core.Util;
     using Dangr.Logging;
-    using Dangr.Util;
 
     /// <summary>
     /// Contains various checks that can be used to verify application behavior.
@@ -685,13 +685,13 @@ namespace Dangr.Diagnostics
         }
 
         /// <summary>
-        /// Show a message if the specified <see cref="Dangr.Util.ICancelable" /> is disposed.
+        /// Show a message if the specified <see cref="ICheckedDisposable" /> is disposed.
         /// </summary>
         /// <param name="disposable">
-        /// The <see cref="Dangr.Util.ICancelable" /> to check.
+        /// The <see cref="ICheckedDisposable" /> to check.
         /// </param>
         /// <param name="name">
-        /// The name of the <see cref="Dangr.Util.ICancelable" /> .
+        /// The name of the <see cref="ICheckedDisposable" /> .
         /// </param>
         /// <param name="logSource">
         /// The <see cref="Dangr.Logging.ILogSource" /> used to log messages on failure.
@@ -706,7 +706,7 @@ namespace Dangr.Diagnostics
         /// True only if the assert condition passed. Otherwise false.
         /// </returns>
         public bool NotDisposed(
-            ICancelable disposable,
+            ICheckedDisposable disposable,
             string name,
             ILogSource logSource = null,
             [CallerFilePath] string filePath = "",
@@ -724,10 +724,10 @@ namespace Dangr.Diagnostics
         }
 
         /// <summary>
-        /// Show a message if the specified <see cref="Dangr.Util.ICancelable" /> is disposed.
+        /// Show a message if the specified <see cref="ICheckedDisposable" /> is disposed.
         /// </summary>
         /// <param name="disposable">
-        /// The <see cref="Dangr.Util.ICancelable" /> and <see cref="Dangr.Util.INamedObject" /> to check.
+        /// The <see cref="ICheckedDisposable" /> and <see cref="INamedObject" /> to check.
         /// </param>
         /// <param name="logSource">
         /// The <see cref="Dangr.Logging.ILogSource" /> used to log messages on failure.
@@ -745,7 +745,7 @@ namespace Dangr.Diagnostics
             T disposable,
             ILogSource logSource = null,
             [CallerFilePath] string filePath = "",
-            [CallerLineNumber] int lineNumber = 0) where T : ICancelable, INamedObject
+            [CallerLineNumber] int lineNumber = 0) where T : ICheckedDisposable, INamedObject
         {
             return this.Check(
                 AssertType.NotDisposed,

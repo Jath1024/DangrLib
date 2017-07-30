@@ -10,18 +10,18 @@ namespace Dangr.Diagnostics
 {
     using System;
     using System.Collections.Generic;
+    using Dangr.Core.Util;
     using Dangr.Test;
-    using Dangr.Util;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]
     public class AssertTests
     {
-        private class TestDisposable : ICancelable
+        private class TestDisposable : ICheckedDisposable
         {
             /// <summary>
             /// Gets a value indicating whether this 
-            /// <see cref="Dangr.Util.ICancelable" /> has been disposed.
+            /// <see cref="ICheckedDisposable" /> has been disposed.
             /// </summary>
             public bool IsDisposed { get; private set; }
 
@@ -34,7 +34,7 @@ namespace Dangr.Diagnostics
             }
 
             /// <summary>
-            /// Disposes the resources managed by this <see cref="Dangr.Util.ICancelable" /> .
+            /// Disposes the resources managed by this <see cref="ICheckedDisposable" /> .
             /// </summary>
             public void Dispose()
             {
@@ -48,7 +48,7 @@ namespace Dangr.Diagnostics
             }
 
             /// <summary>
-            /// Disposes the resources managed by this <see cref="Dangr.Util.ICancelable" /> .
+            /// Disposes the resources managed by this <see cref="ICheckedDisposable" /> .
             /// </summary>
             /// <param name="isDisposing">
             /// <c> true </c> if the method call comes from a <see cref="Dispose"/> method, or <c> false </c> if it comes from the finalizer.

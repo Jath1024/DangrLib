@@ -6,7 +6,7 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Util
+namespace Dangr.Core.Util
 {
     using System;
 

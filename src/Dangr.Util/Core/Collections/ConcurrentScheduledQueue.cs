@@ -6,22 +6,22 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Collections
+namespace Dangr.Core.Collections
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
 
     /// <summary>
-    /// <para>Maintains a queue of items that can be scheduled to be retrieved
+    /// Maintains a queue of items that can be scheduled to be retrieved
     /// immediately, after a delay, or after a specific time. The 
-    /// <see cref="ConcurrentScheduledQueue{T}" /></para>
-    /// <para>can be safely accessed and enumerated from multiple threads
-    /// concurrently.</para>
+    /// <see cref="ConcurrentScheduledQueue{T}" />
+    /// can be safely accessed and enumerated from multiple threads
+    /// concurrently.
     /// </summary>
     /// <typeparam name="T">
     /// The type of value stored in this 
-    /// <see cref="ConcurrentScheduledQueue{T}" /> .
+    /// <see cref="ConcurrentScheduledQueue{T}" />.
     /// </typeparam>
     public class ConcurrentScheduledQueue<T>
     {
@@ -32,7 +32,7 @@ namespace Dangr.Collections
         private readonly object immediateQueueLock = new object();
 
         /// <summary>
-        /// Gets the number of items enqueued in this <see cref="ConcurrentScheduledQueue{T}" /> .
+        /// Gets the number of items enqueued in this <see cref="ConcurrentScheduledQueue{T}" />.
         /// </summary>
         public int Count
         {
@@ -47,8 +47,8 @@ namespace Dangr.Collections
         }
 
         /// <summary>
-        /// <para>Gets the number of items enqueued in this <see cref="ConcurrentScheduledQueue{T}" /></para>
-        /// <para>that are ready to be retrieved immediately.</para>
+        /// Gets the number of items enqueued in this <see cref="ConcurrentScheduledQueue{T}" />
+        /// that are ready to be retrieved immediately.
         /// </summary>
         public int ReadyCount
         {
@@ -103,22 +103,6 @@ namespace Dangr.Collections
             this.QueueDelayed(value, time);
         }
 
-        private void QueueImmediate(T value)
-        {
-            lock (this.immediateQueueLock)
-            {
-                this.immediateQueue.AddLast(value);
-            }
-        }
-
-        private void QueueDelayed(T value, DateTimeOffset time)
-        {
-            lock (this.delayedQueueLock)
-            {
-                this.delayedQueue.Add(time.UtcTicks, value);
-            }
-        }
-
         /// <summary>
         /// Returns an enumerator that iterates through the collection.
         /// </summary>
@@ -139,7 +123,8 @@ namespace Dangr.Collections
 
             lock (this.delayedQueueLock)
             {
-                if ((this.delayedQueue.Count > 0) && (this.delayedQueue.Keys[0] < DateTimeOffset.UtcNow.UtcTicks))
+                if (this.delayedQueue.Count > 0
+                    && this.delayedQueue.Keys[0] < DateTimeOffset.UtcNow.UtcTicks)
                 {
                     next = this.delayedQueue.Values[0];
                     this.delayedQueue.RemoveAt(0);
@@ -150,5 +135,22 @@ namespace Dangr.Collections
             next = default(T);
             return false;
         }
+
+        private void QueueImmediate(T value)
+        {
+            lock (this.immediateQueueLock)
+            {
+                this.immediateQueue.AddLast(value);
+            }
+        }
+
+        private void QueueDelayed(T value, DateTimeOffset time)
+        {
+            lock (this.delayedQueueLock)
+            {
+                this.delayedQueue.Add(time.UtcTicks, value);
+            }
+        }
+
     }
 }

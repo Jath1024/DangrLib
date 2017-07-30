@@ -11,13 +11,13 @@ namespace Dangr.Logging.Loggers
     using System;
     using System.IO;
     using System.Reflection;
+    using Dangr.Core.Util;
     using Dangr.Diagnostics;
-    using Dangr.Util;
 
     /// <summary>
     ///     A logger pipeline logger that will log entries to a text file.
     /// </summary>
-    public class TextLogger : ILogEndpoint, ICancelable
+    public class TextLogger : ILogEndpoint, ICheckedDisposable
     {
         /// <summary>
         ///     The default log file date format.

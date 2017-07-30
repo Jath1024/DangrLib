@@ -10,7 +10,7 @@ namespace Dangr.Entity
 {
     using System;
     using System.Collections.Generic;
-    using Dangr.Util;
+    using Dangr.Core.Util;
 
     /// <summary>
     /// A partition table used to generate IDs for <see cref="IEntity" /> s.

@@ -11,7 +11,7 @@ namespace Dangr.ObjectPool
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using Dangr.Collections;
+    using Dangr.Core.Collections;
 
     /// <summary>
     /// A generic implementation of an 

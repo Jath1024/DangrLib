@@ -28,7 +28,6 @@
     </Compile>
     <Compile Include="Event\EventBus.cs" />
     <Compile Include="Event\EventHandlerAttribute.cs" />
-    <Compile Include="NamespaceDoc.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Dangr.Event.tt">

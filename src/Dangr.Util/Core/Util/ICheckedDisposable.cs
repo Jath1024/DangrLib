@@ -1,18 +1,23 @@
 ﻿// -----------------------------------------------------------------------
-//  <copyright file="NamespaceDoc.cs" company="DangerDan9631">
+//  <copyright file="ICheckedDisposable.cs" company="DangerDan9631">
 //      Copyright (c) 2017 Dan Garvey. All rights reserved.
 //      Licensed under the MIT License. 
 //      See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Logging
+namespace Dangr.Core.Util
 {
+    using System;
+
     /// <summary>
-    /// The Dangr.Logging namespace provides classes used in a logging framework
-    /// for use with DangrLib.
+    /// Represents an IDisposable that can be checked for it's disposed state.
     /// </summary>
-    internal static class NamespaceDoc
+    public interface ICheckedDisposable : IDisposable
     {
+        /// <summary>
+        /// Gets a value that indicates whether the object is disposed.
+        /// </summary>
+        bool IsDisposed { get; }
     }
 }

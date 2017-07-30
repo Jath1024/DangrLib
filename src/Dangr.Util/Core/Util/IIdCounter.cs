@@ -6,7 +6,7 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Util
+namespace Dangr.Core.Util
 {
     /// <summary>
     /// Interface for a counter that keeps track of the next ID within a range

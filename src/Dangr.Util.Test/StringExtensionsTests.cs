@@ -8,7 +8,6 @@
 
 namespace Dangr.Core.Util
 {
-    using Dangr.Util;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Assert = Dangr.Diagnostics.Assert;
 

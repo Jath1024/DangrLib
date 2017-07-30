@@ -12,14 +12,14 @@ namespace Dangr.Logging.Wcf
     using System.Diagnostics.CodeAnalysis;
     using System.ServiceModel;
     using System.ServiceModel.Channels;
+    using Dangr.Core.Util;
     using Dangr.Diagnostics;
-    using Dangr.Util;
 
     /// <summary>
     /// A WCF client for sending logs to a connected 
     /// <see cref="WcfLogService" /> .
     /// </summary>
-    internal class WcfLogClient : ICancelable
+    internal class WcfLogClient : ICheckedDisposable
     {
         private ChannelFactory<IWcfLogService> proxyFactory;
         private IWcfLogService proxy;

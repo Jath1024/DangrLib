@@ -34,7 +34,6 @@
     <Compile Include="Diagnostics\CompareOperation.cs" />
     <Compile Include="Diagnostics\CompareOperationExtensions.cs" />
     <Compile Include="Diagnostics\DebugAssertResolver.cs" />
-    <Compile Include="NamespaceDoc.cs" />
     <Compile Include="Diagnostics\ValidateResolver.cs" />
     <Compile Include="Diagnostics\ValidationFailedException.cs" />
     <Compile Include="Diagnostics\WarnResolver.cs" />

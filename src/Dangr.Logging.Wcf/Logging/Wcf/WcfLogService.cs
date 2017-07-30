@@ -14,8 +14,8 @@ namespace Dangr.Logging.Wcf
     using System.ServiceModel.Channels;
     using System.Threading;
     using System.Threading.Tasks;
+    using Dangr.Core.Util;
     using Dangr.Diagnostics;
-    using Dangr.Util;
 
     /// <summary>
     /// <para>A service that listens for connections from 
@@ -31,7 +31,7 @@ namespace Dangr.Logging.Wcf
         /// <summary>
         /// Object used to hold a reference to the running <see cref="WcfLogService" /> .
         /// </summary>
-        public class ServiceHolder : ICancelable
+        public class ServiceHolder : ICheckedDisposable
         {
             private readonly Task serviceTask;
 

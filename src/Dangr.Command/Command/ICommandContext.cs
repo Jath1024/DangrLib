@@ -8,7 +8,7 @@
 
 namespace Dangr.Command
 {
-    using Dangr.Util;
+    using Dangr.Core.Util;
 
     /// <summary>
     /// Defines the methods that an <see cref="IDangrCommand"/> can invoke within the context that it is running.

@@ -9,23 +9,23 @@
 namespace Dangr.Configuration
 {
     using System;
+    using Dangr.Core.Util;
     using Dangr.Diagnostics;
-    using Dangr.Util;
 
     /// <summary>
     /// An object that exposes settings in a <see cref="Configuration" /> .
     /// </summary>
-    public abstract class ConfigurationView : ICancelable
+    public abstract class ConfigurationView : ICheckedDisposable
     {
         private Configuration config;
 
         /// <summary>
-        /// Gets a value indicating whether this <see cref="Dangr.Util.ICancelable" /> has been disposed.
+        /// Gets a value indicating whether this <see cref="ICheckedDisposable" /> has been disposed.
         /// </summary>
         public bool IsDisposed { get; private set; }
 
         /// <summary>
-        /// Disposes the resources managed by this <see cref="Dangr.Util.ICancelable" /> .
+        /// Disposes the resources managed by this <see cref="ICheckedDisposable" /> .
         /// </summary>
         public void Dispose()
         {
@@ -33,7 +33,7 @@ namespace Dangr.Configuration
         }
 
         /// <summary>
-        /// Disposes the resources managed by this <see cref="Dangr.Util.ICancelable" /> .
+        /// Disposes the resources managed by this <see cref="ICheckedDisposable" /> .
         /// </summary>
         /// <param name="isDisposing">
         /// Indicates whether the method call comes from a <see cref="Dispose()"/> method (true) or from a finalizer.

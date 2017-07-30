@@ -31,7 +31,6 @@
     <Compile Include="Entity\EntityTable.cs" />
     <Compile Include="Entity\IdPartitionTable.cs" />
     <Compile Include="Entity\IEntity.cs" />
-    <Compile Include="NamespaceDoc.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Dangr.Diagnostics\Dangr.Diagnostics.csproj">
