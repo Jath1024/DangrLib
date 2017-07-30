@@ -6,7 +6,7 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Logging
+namespace Dangr.Core.Logging
 {
     using System;
     using System.Collections.Concurrent;
@@ -201,7 +201,7 @@ namespace Dangr.Logging
         /// <summary>
         ///     Logs a message at the specified level.
         /// </summary>
-        /// <param name="level"> The <see cref="Dangr.Logging.LogLevel" />. </param>
+        /// <param name="level"> The <see cref="LogLevel" />. </param>
         /// <param name="message"> The message. </param>
         public void Log(LogLevel level, object message)
         {
@@ -212,7 +212,7 @@ namespace Dangr.Logging
         /// <summary>
         ///     Logs a message at the specified level.
         /// </summary>
-        /// <param name="level"> The <see cref="Dangr.Logging.LogLevel" />. </param>
+        /// <param name="level"> The <see cref="LogLevel" />. </param>
         /// <param name="category"> The category. </param>
         /// <param name="message"> The message. </param>
         public void Log(LogLevel level, string category, object message)
@@ -224,7 +224,7 @@ namespace Dangr.Logging
         /// <summary>
         ///     Logs a message at the specified level.
         /// </summary>
-        /// <param name="level"> The <see cref="Dangr.Logging.LogLevel" />. </param>
+        /// <param name="level"> The <see cref="LogLevel" />. </param>
         /// <param name="feature"> The feature gating this message logging. </param>
         /// <param name="category"> The category. </param>
         /// <param name="message"> The message. </param>
@@ -240,7 +240,7 @@ namespace Dangr.Logging
         /// <summary>
         ///     Logs a message internal to the <see cref="LogService" />.
         /// </summary>
-        /// <param name="level"> The <see cref="Dangr.Logging.LogLevel" />. </param>
+        /// <param name="level"> The <see cref="LogLevel" />. </param>
         /// <param name="message"> The message. </param>
         public void LogInternal(LogLevel level, object message)
         {

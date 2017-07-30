@@ -13,9 +13,9 @@ namespace Dangr.Core.Diagnostics
     using System.Collections.Generic;
     using System.Runtime.CompilerServices;
     using System.Text;
+    using Dangr.Core.Logging;
     using Dangr.Core.Util;
     using Dangr.Internal.Diagnostics;
-    using Dangr.Logging;
 
     /// <summary>
     /// Contains various checks that can be used to verify application behavior.
@@ -43,7 +43,7 @@ namespace Dangr.Core.Diagnostics
         /// <param name="condition">The condition to check.</param>
         /// <param name="message">The message to show.</param>
         /// <param name="logSource">
-        /// The <see cref="Dangr.Logging.ILogSource" /> used to log messages on failure.
+        /// The <see cref="ILogSource" /> used to log messages on failure.
         /// </param>
         /// <param name="filePath">
         /// The file path of the caller. (Do not use)
@@ -75,7 +75,7 @@ namespace Dangr.Core.Diagnostics
         /// Show a <paramref name="message" /> if the specified <paramref name="condition" /> is true.
         /// </summary>
         /// <param name="logSource">
-        /// The <see cref="Dangr.Logging.ILogSource" /> used to log messages on failure.
+        /// The <see cref="ILogSource" /> used to log messages on failure.
         /// </param>
         /// <param name="condition">The condition to check.</param>
         /// <param name="message">The message to show.</param>
@@ -109,7 +109,7 @@ namespace Dangr.Core.Diagnostics
         /// Show a <paramref name="message" /> if the specified values are not equal.
         /// </summary>
         /// <param name="logSource">
-        /// The <see cref="Dangr.Logging.ILogSource" /> used to log messages on failure.
+        /// The <see cref="ILogSource" /> used to log messages on failure.
         /// </param>
         /// <param name="a">The first value to compare.</param>
         /// <param name="b">The second value to compare.</param>
@@ -149,7 +149,7 @@ namespace Dangr.Core.Diagnostics
         /// Show a <paramref name="message" /> if the specified values are equal.
         /// </summary>
         /// <param name="logSource">
-        /// The <see cref="Dangr.Logging.ILogSource" /> used to log messages on failure.
+        /// The <see cref="ILogSource" /> used to log messages on failure.
         /// </param>
         /// <param name="a">The first value to compare.</param>
         /// <param name="b">The second value to compare.</param>
@@ -189,7 +189,7 @@ namespace Dangr.Core.Diagnostics
         /// Show a <paramref name="message" /> if the specified object is null.
         /// </summary>
         /// <param name="logSource">
-        /// The <see cref="Dangr.Logging.ILogSource" /> used to log messages on failure.
+        /// The <see cref="ILogSource" /> used to log messages on failure.
         /// </param>
         /// <param name="value">The object to check.</param>
         /// <param name="message">The message to show.</param>
@@ -223,7 +223,7 @@ namespace Dangr.Core.Diagnostics
         /// Show a <paramref name="message" /> if the specified object is not null.
         /// </summary>
         /// <param name="logSource">
-        /// The <see cref="Dangr.Logging.ILogSource" /> used to log messages on failure.
+        /// The <see cref="ILogSource" /> used to log messages on failure.
         /// </param>
         /// <param name="value">The object to check.</param>
         /// <param name="message">The message to show.</param>
@@ -258,7 +258,7 @@ namespace Dangr.Core.Diagnostics
         /// Show a <paramref name="message" /> if the specified string is <c>null</c> or empty.
         /// </summary>
         /// <param name="logSource">
-        /// The <see cref="Dangr.Logging.ILogSource" /> used to log messages on failure.
+        /// The <see cref="ILogSource" /> used to log messages on failure.
         /// </param>
         /// <param name="value">The string to check.</param>
         /// <param name="message">The message to show.</param>
@@ -293,7 +293,7 @@ namespace Dangr.Core.Diagnostics
         /// Show a <paramref name="message" /> if the specified string is not <c>null</c> or white space.
         /// </summary>
         /// <param name="logSource">
-        /// The <see cref="Dangr.Logging.ILogSource" /> used to log messages on failure.
+        /// The <see cref="ILogSource" /> used to log messages on failure.
         /// </param>
         /// <param name="value">The string to check.</param>
         /// <param name="message">The message to show.</param>
@@ -328,7 +328,7 @@ namespace Dangr.Core.Diagnostics
         /// Show a <paramref name="message" /> if the specified string is <c>null</c> or white space.
         /// </summary>
         /// <param name="logSource">
-        /// The <see cref="Dangr.Logging.ILogSource" /> used to log messages on failure.
+        /// The <see cref="ILogSource" /> used to log messages on failure.
         /// </param>
         /// <param name="value">The string to check.</param>
         /// <param name="message">The message to show.</param>
@@ -398,7 +398,7 @@ namespace Dangr.Core.Diagnostics
         /// Show a <paramref name="message" /> if the specified <paramref name="collection" /> is empty.
         /// </summary>
         /// <param name="logSource">
-        /// The <see cref="Dangr.Logging.ILogSource" /> used to log messages on failure.
+        /// The <see cref="ILogSource" /> used to log messages on failure.
         /// </param>
         /// <param name="collection">The collection to check.</param>
         /// <param name="message">The message to show.</param>
@@ -433,7 +433,7 @@ namespace Dangr.Core.Diagnostics
         /// Show a <paramref name="message" /> if the specified <paramref name="collection" /> is not empty.
         /// </summary>
         /// <param name="logSource">
-        /// The <see cref="Dangr.Logging.ILogSource" /> used to log messages on failure.
+        /// The <see cref="ILogSource" /> used to log messages on failure.
         /// </param>
         /// <param name="collection">The collection to check.</param>
         /// <param name="message">The message to show.</param>
@@ -469,7 +469,7 @@ namespace Dangr.Core.Diagnostics
         /// Show a <paramref name="message" /> if the specified <paramref name="value" /> is 0.
         /// </summary>
         /// <param name="logSource">
-        /// The <see cref="Dangr.Logging.ILogSource" /> used to log messages on failure.
+        /// The <see cref="ILogSource" /> used to log messages on failure.
         /// </param>
         /// <param name="value">The value to check.</param>
         /// <param name="message">The message to show.</param>
@@ -503,7 +503,7 @@ namespace Dangr.Core.Diagnostics
         /// Show a <paramref name="message" /> if the specified <paramref name="value" /> is 0.
         /// </summary>
         /// <param name="logSource">
-        /// The <see cref="Dangr.Logging.ILogSource" /> used to log messages on failure.
+        /// The <see cref="ILogSource" /> used to log messages on failure.
         /// </param>
         /// <param name="value">The value to check.</param>
         /// <param name="message">The message to show.</param>
@@ -537,7 +537,7 @@ namespace Dangr.Core.Diagnostics
         /// Show a <paramref name="message" /> if the specified <paramref name="value" /> is 0.
         /// </summary>
         /// <param name="logSource">
-        /// The <see cref="Dangr.Logging.ILogSource" /> used to log messages on failure.
+        /// The <see cref="ILogSource" /> used to log messages on failure.
         /// </param>
         /// <param name="value">The value to check.</param>
         /// <param name="message">The message to show.</param>
@@ -571,7 +571,7 @@ namespace Dangr.Core.Diagnostics
         /// Show a <paramref name="message" /> if the <paramref name="value" /> is outside of the specified range.
         /// </summary>
         /// <param name="logSource">
-        /// The <see cref="Dangr.Logging.ILogSource" /> used to log messages on failure.
+        /// The <see cref="ILogSource" /> used to log messages on failure.
         /// </param>
         /// <param name="value">The value to check.</param>
         /// <param name="min">
@@ -617,7 +617,7 @@ namespace Dangr.Core.Diagnostics
         /// Show a <paramref name="message" /> if the specified values do not compare in the specified way.
         /// </summary>
         /// <param name="logSource">
-        /// The <see cref="Dangr.Logging.ILogSource" /> used to log messages on failure.
+        /// The <see cref="ILogSource" /> used to log messages on failure.
         /// </param>
         /// <param name="a">The first value to compare.</param>
         /// <param name="operation">
@@ -695,7 +695,7 @@ namespace Dangr.Core.Diagnostics
         /// The name of the <see cref="ICheckedDisposable" /> .
         /// </param>
         /// <param name="logSource">
-        /// The <see cref="Dangr.Logging.ILogSource" /> used to log messages on failure.
+        /// The <see cref="ILogSource" /> used to log messages on failure.
         /// </param>
         /// <param name="filePath">
         /// The file path of the caller. (Do not use)
@@ -731,7 +731,7 @@ namespace Dangr.Core.Diagnostics
         /// The <see cref="ICheckedDisposable" /> and <see cref="INamedObject" /> to check.
         /// </param>
         /// <param name="logSource">
-        /// The <see cref="Dangr.Logging.ILogSource" /> used to log messages on failure.
+        /// The <see cref="ILogSource" /> used to log messages on failure.
         /// </param>
         /// <param name="filePath">
         /// The file path of the caller. (Do not use)
@@ -764,7 +764,7 @@ namespace Dangr.Core.Diagnostics
         /// </summary>
         /// <typeparam name="T">The type to check.</typeparam>
         /// <param name="logSource">
-        /// The <see cref="Dangr.Logging.ILogSource" /> used to log messages on failure.
+        /// The <see cref="ILogSource" /> used to log messages on failure.
         /// </param>
         /// <param name="obj">The object to check.</param>
         /// <param name="message">The message to show.</param>
@@ -801,7 +801,7 @@ namespace Dangr.Core.Diagnostics
         /// </summary>
         /// <typeparam name="T">The type to check.</typeparam>
         /// <param name="logSource">
-        /// The <see cref="Dangr.Logging.ILogSource" /> used to log messages on failure.
+        /// The <see cref="ILogSource" /> used to log messages on failure.
         /// </param>
         /// <param name="obj">The object to check.</param>
         /// <param name="message">The message to show.</param>
@@ -837,7 +837,7 @@ namespace Dangr.Core.Diagnostics
         /// Unconditionally Show a message.
         /// </summary>
         /// <param name="logSource">
-        /// The <see cref="Dangr.Logging.ILogSource" /> used to log messages on failure.
+        /// The <see cref="ILogSource" /> used to log messages on failure.
         /// </param>
         /// <param name="message">The message to show.</param>
         /// <param name="filePath">
@@ -866,7 +866,7 @@ namespace Dangr.Core.Diagnostics
         /// </param>
         /// <param name="message">The message that should be shown.</param>
         /// <param name="logSource">
-        /// The <see cref="Dangr.Logging.ILogSource" /> used to log messages on failure.
+        /// The <see cref="ILogSource" /> used to log messages on failure.
         /// </param>
         /// <param name="ex">
         /// Out param for an exception that should be thrown or null.

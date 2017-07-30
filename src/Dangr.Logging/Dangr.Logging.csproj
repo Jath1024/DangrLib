@@ -27,10 +27,10 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Logging\ILogEndpoint.cs" />
-    <Compile Include="Logging\ILogService.cs" />
-    <Compile Include="Logging\LogEntry.cs" />
-    <Compile Include="Logging\LogService.cs" />
+    <Compile Include="Core\Logging\ILogEndpoint.cs" />
+    <Compile Include="Core\Logging\ILogService.cs" />
+    <Compile Include="Core\Logging\LogEntry.cs" />
+    <Compile Include="Core\Logging\LogService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Dangr.Logging.Interface\Dangr.Logging.Interface.csproj">

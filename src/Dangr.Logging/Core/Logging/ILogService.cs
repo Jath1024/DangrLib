@@ -6,7 +6,7 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Logging
+namespace Dangr.Core.Logging
 {
     using Dangr.Core.Util;
 

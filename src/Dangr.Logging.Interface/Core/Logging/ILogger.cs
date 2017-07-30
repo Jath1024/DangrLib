@@ -6,7 +6,7 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Logging
+namespace Dangr.Core.Logging
 {
     /// <summary>
     /// Provides methods for logging categorized messages at varying 

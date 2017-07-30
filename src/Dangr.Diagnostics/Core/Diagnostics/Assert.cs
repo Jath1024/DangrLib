@@ -8,8 +8,8 @@
 
 namespace Dangr.Core.Diagnostics
 {
+    using Dangr.Core.Logging;
     using Dangr.Internal.Diagnostics;
-    using Dangr.Logging;
 
     /// <summary>
     /// Contains build dependent <see cref="AssertResolver" /> s for various
@@ -18,7 +18,7 @@ namespace Dangr.Core.Diagnostics
     public static class Assert
     {
         /// <summary>
-        /// <see cref="Dangr.Logging.ILogger" /> to use when no log source is passed in to an <see cref="AssertResolver" /> .
+        /// <see cref="ILogger" /> to use when no log source is passed in to an <see cref="AssertResolver" /> .
         /// </summary>
         public static ILogger DefaultLogger { get; set; }
 

@@ -6,11 +6,12 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Logging.Loggers
+namespace Dangr.Core.Logging.Loggers
 {
     using System;
     using System.Runtime.InteropServices;
     using Dangr.Core.Diagnostics;
+    using Dangr.Core.Logging;
     using Dangr.Core.Util;
 
     /// <summary>

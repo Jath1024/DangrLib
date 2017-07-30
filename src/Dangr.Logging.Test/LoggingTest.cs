@@ -12,6 +12,8 @@ namespace Dangr.Framework.Logging
     using System.IO;
     using System.ServiceModel;
     using System.Threading;
+    using Dangr.Core.Logging;
+    using Dangr.Core.Logging.Loggers;
     using Dangr.Logging;
     using Dangr.Logging.Loggers;
     using Dangr.Logging.Wcf;

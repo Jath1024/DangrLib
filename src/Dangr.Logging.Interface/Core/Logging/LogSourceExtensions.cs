@@ -6,7 +6,7 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Logging
+namespace Dangr.Core.Logging
 {
     /// <summary>
     /// Provides extended functionality for <see cref="ILogSource" /> objects.

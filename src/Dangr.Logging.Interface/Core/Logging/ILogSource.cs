@@ -6,7 +6,7 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Logging
+namespace Dangr.Core.Logging
 {
     /// <summary>
     /// Provides methods for logging messages that come from the object.

@@ -12,7 +12,7 @@ namespace Dangr.Internal.Diagnostics
     using System.Diagnostics;
     using System.Windows.Forms;
     using Dangr.Core.Diagnostics;
-    using Dangr.Logging;
+    using Dangr.Core.Logging;
 
     /// <summary>
     /// Shows a dialog if specific conditions are not met.
@@ -37,7 +37,7 @@ namespace Dangr.Internal.Diagnostics
         /// </param>
         /// <param name="message">The message that should be shown.</param>
         /// <param name="logSource">
-        /// The <see cref="Dangr.Logging.ILogSource" /> used to log messages on failure.
+        /// The <see cref="ILogSource" /> used to log messages on failure.
         /// </param>
         /// <param name="ex">
         /// Out param for an exception that should be thrown or null.

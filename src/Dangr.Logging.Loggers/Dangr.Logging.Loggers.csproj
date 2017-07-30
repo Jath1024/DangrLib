@@ -26,10 +26,10 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Logging\Loggers\ConsoleLogger.cs" />
-    <Compile Include="Logging\Loggers\DebugTraceLogger.cs" />
-    <Compile Include="Logging\Loggers\MemoryLogger.cs" />
-    <Compile Include="Logging\Loggers\TextLogger.cs" />
+    <Compile Include="Core\Logging\Loggers\ConsoleLogger.cs" />
+    <Compile Include="Core\Logging\Loggers\DebugTraceLogger.cs" />
+    <Compile Include="Core\Logging\Loggers\MemoryLogger.cs" />
+    <Compile Include="Core\Logging\Loggers\TextLogger.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Dangr.Diagnostics\Dangr.Diagnostics.csproj">

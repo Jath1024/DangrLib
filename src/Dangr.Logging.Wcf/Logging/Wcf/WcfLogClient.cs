@@ -13,6 +13,7 @@ namespace Dangr.Logging.Wcf
     using System.ServiceModel;
     using System.ServiceModel.Channels;
     using Dangr.Core.Diagnostics;
+    using Dangr.Core.Logging;
     using Dangr.Core.Util;
 
     /// <summary>

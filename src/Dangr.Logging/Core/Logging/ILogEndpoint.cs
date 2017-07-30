@@ -1,27 +1,22 @@
 ﻿// -----------------------------------------------------------------------
-//  <copyright file="DebugTraceLogger.cs" company="DangerDan9631">
+//  <copyright file="ILogEndpoint.cs" company="DangerDan9631">
 //      Copyright (c) 2017 Dan Garvey. All rights reserved.
 //      Licensed under the MIT License. 
 //      See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Logging.Loggers
+namespace Dangr.Core.Logging
 {
-    using System.Diagnostics;
-
     /// <summary>
-    /// Logger pipeline logger that will log a message to the debug trace
+    /// Interface for an object that will perform an action with a log entry.
     /// </summary>
-    public class DebugTraceLogger : ILogEndpoint
+    public interface ILogEndpoint
     {
         /// <summary>
         /// Logs the specified entry.
         /// </summary>
         /// <param name="entry">The entry.</param>
-        public void Log(LogEntry entry)
-        {
-            Debug.WriteLine(entry.ToString());
-        }
+        void Log(LogEntry entry);
     }
 }

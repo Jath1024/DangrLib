@@ -6,12 +6,13 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Logging.Loggers
+namespace Dangr.Core.Logging.Loggers
 {
     using System;
     using System.Collections.Generic;
     using System.ComponentModel;
     using System.Runtime.CompilerServices;
+    using Dangr.Core.Logging;
 
     /// <summary>
     ///     Logger pipeline logger that will log entries to memory.

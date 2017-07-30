@@ -16,6 +16,7 @@ namespace Dangr.Logging.Loggers
     using System.Text;
     using System.Threading;
     using Dangr.Core.Diagnostics;
+    using Dangr.Core.Logging;
     using Dangr.Core.Util;
     using Dangr.Logging.Wcf;
 

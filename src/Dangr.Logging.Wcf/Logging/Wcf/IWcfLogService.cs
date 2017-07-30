@@ -9,6 +9,7 @@
 namespace Dangr.Logging.Wcf
 {
     using System.ServiceModel;
+    using Dangr.Core.Logging;
 
     /// <summary>
     /// Interface for a service that listens for connections from 
