@@ -14,9 +14,9 @@
 using System.Reflection;
 using System.Runtime.InteropServices;
     
-[assembly: AssemblyTitle("Dangr.ObjectPool.Test")]
-[assembly: AssemblyProduct("Dangr.ObjectPool.Test")]
-[assembly: AssemblyDescription("Provides generic object pool utilities.")]
+[assembly: AssemblyTitle("Dangr.Async.Test")]
+[assembly: AssemblyProduct("Dangr.Async.Test")]
+[assembly: AssemblyDescription("Asynchronous code execution utilities for use with DangrLib.")]
 [assembly: AssemblyCompany("DangerDan9631")]
 [assembly: AssemblyCopyright("Copyright (c) 2017 Dan Garvey. All rights reserved.")]
 [assembly: AssemblyVersion("1.1.0")]

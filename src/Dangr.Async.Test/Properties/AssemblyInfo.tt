@@ -10,6 +10,6 @@
 <#@ template debug="false" hostspecific="true" language="C#" #>
 <#@ output extension=".cs" #>
 <#@ include file="$(SolutionDir)\src\Templates\Common\Versions.t4" once="true" #><##>
-<#  string assemblyName = OBJECT_POOL; #>
+<#  string assemblyName = ASYNC; #>
 <#  bool isTestAssembly = true; #>
 <#@ include file="$(SolutionDir)\src\Templates\AssemblyInfo\AssemblyInfo.t4"  once="true" #>
