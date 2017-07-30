@@ -6,13 +6,13 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Logging.Wcf
+namespace Dangr.Core.Logging.Wcf
 {
     using Dangr.Core.Configuration;
 
     /// <summary>
     /// A <see cref="ConfigurationView" /> that exposes all
-    /// of the settings in the <see cref="Dangr.Configuration" /> used in the
+    /// of the settings in the <see cref="Configuration" /> used in the
     /// wcf logger.
     /// </summary>
     public class WcfLoggerConfigView : ConfigurationView

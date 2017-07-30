@@ -6,7 +6,7 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Logging.Loggers
+namespace Dangr.Core.Logging.Loggers
 {
     using System;
     using System.Collections.Concurrent;
@@ -17,8 +17,9 @@ namespace Dangr.Logging.Loggers
     using System.Threading;
     using Dangr.Core.Diagnostics;
     using Dangr.Core.Logging;
+    using Dangr.Core.Logging.Wcf;
     using Dangr.Core.Util;
-    using Dangr.Logging.Wcf;
+    using Dangr.Internal.Logging.Wcf;
 
     /// <summary>
     ///     Logger pipeline logger that will use WCF to send logs to a 

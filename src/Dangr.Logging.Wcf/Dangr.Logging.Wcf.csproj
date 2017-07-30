@@ -29,12 +29,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Logging\Loggers\WcfLogger.cs" />
-    <Compile Include="Logging\Wcf\DefaultWcfEndpoints.cs" />
-    <Compile Include="Logging\Wcf\IWcfLogService.cs" />
-    <Compile Include="Logging\Wcf\WcfLogClient.cs" />
-    <Compile Include="Logging\Wcf\WcfLoggerConfigView.cs" />
-    <Compile Include="Logging\Wcf\WcfLogService.cs" />
+    <Compile Include="Core\Logging\Loggers\WcfLogger.cs" />
+    <Compile Include="Core\Logging\Wcf\DefaultWcfEndpoints.cs" />
+    <Compile Include="Core\Logging\Wcf\IWcfLogService.cs" />
+    <Compile Include="Internal\Logging\Wcf\WcfLogClient.cs" />
+    <Compile Include="Core\Logging\Wcf\WcfLoggerConfigView.cs" />
+    <Compile Include="Core\Logging\Wcf\WcfLogService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Dangr.Configuration\Dangr.Configuration.csproj">

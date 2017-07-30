@@ -6,10 +6,11 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Logging.Wcf
+namespace Dangr.Core.Logging.Wcf
 {
     using System.ServiceModel;
     using Dangr.Core.Logging;
+    using Dangr.Internal.Logging.Wcf;
 
     /// <summary>
     /// Interface for a service that listens for connections from 

@@ -6,7 +6,7 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Logging.Wcf
+namespace Dangr.Core.Logging.Wcf
 {
     using System;
     using System.Collections.Generic;
@@ -17,6 +17,7 @@ namespace Dangr.Logging.Wcf
     using Dangr.Core.Diagnostics;
     using Dangr.Core.Logging;
     using Dangr.Core.Util;
+    using Dangr.Internal.Logging.Wcf;
 
     /// <summary>
     /// <para>A service that listens for connections from 

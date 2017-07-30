@@ -16,9 +16,8 @@ namespace Dangr.Log.Viewer
     using Dangr.Core.Configuration.Sources;
     using Dangr.Core.Logging;
     using Dangr.Core.Logging.Loggers;
+    using Dangr.Core.Logging.Wcf;
     using Dangr.Logging;
-    using Dangr.Logging.Loggers;
-    using Dangr.Logging.Wcf;
 
     public class Program
     {

@@ -6,7 +6,7 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Logging.Wcf
+namespace Dangr.Internal.Logging.Wcf
 {
     using System;
     using System.Diagnostics.CodeAnalysis;
@@ -14,6 +14,7 @@ namespace Dangr.Logging.Wcf
     using System.ServiceModel.Channels;
     using Dangr.Core.Diagnostics;
     using Dangr.Core.Logging;
+    using Dangr.Core.Logging.Wcf;
     using Dangr.Core.Util;
 
     /// <summary>

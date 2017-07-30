@@ -6,7 +6,7 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Logging.Wcf
+namespace Dangr.Core.Logging.Wcf
 {
     using System;
     using System.ServiceModel;
