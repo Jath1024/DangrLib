@@ -17,7 +17,7 @@ namespace Dangr.Core.Async
     /// Provides a task scheduler that ensures a maximum concurrency level while
     /// running on top of the thread pool.
     /// </summary>
-    public class MultiThreadedTaskScheduler : TaskScheduler
+    public sealed class MultiThreadedTaskScheduler : TaskScheduler
     {
         [ThreadStatic]
         private static bool currentThreadIsProcessingItems;
@@ -34,7 +34,7 @@ namespace Dangr.Core.Async
         /// <summary>
         /// Gets the maximum concurrency level supported by this scheduler.
         /// </summary>
-        public sealed override int MaximumConcurrencyLevel { get; }
+        public override int MaximumConcurrencyLevel { get; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="MultiThreadedTaskScheduler" /> class.
@@ -43,7 +43,7 @@ namespace Dangr.Core.Async
         /// The maximum number of thread that can be run concurrently.
         /// </param>
         /// <exception cref="System.ArgumentOutOfRangeException">
-        /// Thrown if the maximum number of threads is %lt;= 0.
+        /// Thrown if the maximum number of threads is <= 0.
         /// </exception>
         public MultiThreadedTaskScheduler(int maxThreads)
         {
@@ -60,7 +60,7 @@ namespace Dangr.Core.Async
         /// Queues a <paramref name="task" /> to the scheduler.
         /// </summary>
         /// <param name="task">The task.</param>
-        protected sealed override void QueueTask(Task task)
+        protected override void QueueTask(Task task)
         {
             if (task == null)
             {
@@ -88,7 +88,7 @@ namespace Dangr.Core.Async
         /// <returns>
         /// True if the <paramref name="task" /> was executed.
         /// </returns>
-        protected sealed override bool TryExecuteTaskInline(Task task, bool taskWasPreviouslyQueued)
+        protected override bool TryExecuteTaskInline(Task task, bool taskWasPreviouslyQueued)
         {
             if (task == null)
             {
@@ -115,7 +115,7 @@ namespace Dangr.Core.Async
         /// <returns>
         /// <c>true</c> if the <paramref name="task" /> was removed.
         /// </returns>
-        protected sealed override bool TryDequeue(Task task)
+        protected override bool TryDequeue(Task task)
         {
             if (task == null)
             {
@@ -134,7 +134,7 @@ namespace Dangr.Core.Async
         /// <returns>
         /// An enumerable of the <see cref="MultiThreadedTaskScheduler.tasks" /> currently scheduled on this scheduler.
         /// </returns>
-        protected sealed override IEnumerable<Task> GetScheduledTasks()
+        protected override IEnumerable<Task> GetScheduledTasks()
         {
             bool lockTaken = false;
             try
@@ -145,17 +145,17 @@ namespace Dangr.Core.Async
                     return this.tasks;
                 }
 
-                throw new NotSupportedException();
+                throw new InvalidOperationException("Could not acquire lock on object.");
             }
             finally
             {
                 if (lockTaken)
                 {
-                    Monitor.Exit(this.tasks);
+                    Monitor.Exit(this.tasksLock);
                 }
             }
         }
-
+        
         private void NotifyThreadPoolOfPendingWork()
         {
             ThreadPool.UnsafeQueueUserWorkItem(

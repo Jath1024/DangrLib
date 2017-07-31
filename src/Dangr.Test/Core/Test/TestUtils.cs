@@ -9,6 +9,7 @@
 namespace Dangr.Core.Test
 {
     using System;
+    using System.Reflection;
     using Dangr.Core.Diagnostics;
 
     /// <summary>
@@ -16,6 +17,16 @@ namespace Dangr.Core.Test
     /// </summary>
     public static class TestUtils
     {
+        /// <summary>
+        /// Binding flags to use with <see cref="Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject"/> instances to bind to private or public instance members.
+        /// </summary>
+        public static readonly BindingFlags PrivateInstanceFlags = BindingFlags.FlattenHierarchy | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance;
+        
+        /// <summary>
+        /// Binding flags to use with <see cref="Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject"/> instances to bind to private or public static members.
+        /// </summary>
+        public static readonly BindingFlags PrivateStaticFlags = BindingFlags.FlattenHierarchy | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static;
+
         /// <summary>
         /// Runs a <paramref name="test" /> and validates that an error of the specified t ype was thrown.
         /// </summary>
