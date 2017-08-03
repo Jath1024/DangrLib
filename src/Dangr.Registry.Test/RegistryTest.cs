@@ -14,8 +14,10 @@ namespace Dangr.Registry
     using System.Runtime.Serialization.Json;
     using System.Threading;
     using System.Threading.Tasks;
+    using Dangr.Core.Diagnostics;
     using Dangr.Core.Registry;
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using Dangr.Core.Test;
+    using Assert = Core.Diagnostics.Assert;
 
     public abstract class RegistryTest
     {
@@ -46,13 +48,13 @@ namespace Dangr.Registry
 
             foreach (KeyValuePair<string, string> kvp in actualValues)
             {
-                Assert.IsTrue(expectedValues.ContainsKey(kvp.Key), "Unexpected key '{0}' found.", kvp.Key);
-                Assert.AreEqual(expectedValues[kvp.Key], kvp.Value, "Unexpected value found for key '{0}'", kvp.Key);
+                Assert.Validate.IsTrue(expectedValues.ContainsKey(kvp.Key), $"Unexpected key '{kvp.Key}' found.");
+                Assert.Validate.AreEqual(expectedValues[kvp.Key], kvp.Value, $"Unexpected value found for key '{kvp.Key}'");
             }
 
             foreach (KeyValuePair<string, string> kvp in expectedValues)
             {
-                Assert.IsTrue(actualValues.ContainsKey(kvp.Key), "Could not find expected key '{0}'.", kvp.Key);
+                Assert.Validate.IsTrue(actualValues.ContainsKey(kvp.Key), "Could not find expected key '{kvp.Key}'.");
             }
         }
 
@@ -66,7 +68,7 @@ namespace Dangr.Registry
             bool valueChangedEvent = false;
             this.testRegistry.ValueChanged += (o, str) =>
             {
-                Assert.AreEqual(str.Key, RegNames.ValBoolTrue, "Unexpected key changed");
+                Assert.Validate.AreEqual(str.Key, RegNames.ValBoolTrue, "Unexpected key changed");
                 valueChangedEvent = true;
             };
 
@@ -75,7 +77,8 @@ namespace Dangr.Registry
             this.expectedValues[RegNames.ValBoolTrue] = false.ToString();
 
             this.CheckValue(this.testRegistry, this.expectedValues);
-            Assert.IsTrue(valueChangedEvent, "ValueChangedEvent was not triggered.");
+            Assert.Validate.IsTrue(valueChangedEvent, "ValueChangedEvent was not triggered.");
+            Console.WriteLine(this.testRegistry.ToString());
         }
 
         protected void TestRemove()
@@ -83,15 +86,20 @@ namespace Dangr.Registry
             bool valueChangedEvent = false;
             this.testRegistry.ValueChanged += (o, str) =>
             {
-                Assert.AreEqual(str.Key, RegNames.ValBoolTrue, "Unexpected key changed");
+                Assert.Validate.AreEqual(str.Key, RegNames.ValBoolTrue, "Unexpected key changed");
                 valueChangedEvent = true;
             };
 
             int numEntries = this.testRegistry.Count;
             this.testRegistry.Edit().Remove(RegNames.ValBoolTrue).Apply();
-            Assert.IsFalse(this.testRegistry.GetBool(RegNames.ValBoolTrue, false), "Key was not removed");
-            Assert.AreEqual(this.testRegistry.Count, numEntries - 1, "Incorrect number of entries");
-            Assert.IsTrue(valueChangedEvent, "ValueChangedEvent was not triggered.");
+            Assert.Validate.IsFalse(this.testRegistry.GetBool(RegNames.ValBoolTrue, false), "Key was not removed");
+            Assert.Validate.AreEqual(this.testRegistry.Count, numEntries - 1, "Incorrect number of entries");
+            Assert.Validate.IsTrue(valueChangedEvent, "ValueChangedEvent was not triggered.");
+
+            // Remove invalid key
+            TestUtils.TestForError<ArgumentException>(
+                () => this.testRegistry.Edit().Remove(" "),
+                "Exception was not thrown when removing invalid key.");
         }
 
         protected void TestClear()
@@ -101,8 +109,8 @@ namespace Dangr.Registry
             this.testRegistry.ValueChanged += (o, str) => { valueChangedEventCount++; };
 
             this.testRegistry.Edit().Clear().Apply();
-            Assert.AreEqual(this.testRegistry.Count, 0, "Registry was not cleared.");
-            Assert.AreEqual(
+            Assert.Validate.AreEqual(this.testRegistry.Count, 0, "Registry was not cleared.");
+            Assert.Validate.AreEqual(
                 numKeys,
                 valueChangedEventCount,
                 "ValueChangedEvent was not triggered expected number of times.");
@@ -113,14 +121,14 @@ namespace Dangr.Registry
             int valueChangedEventCount = 0;
             this.testRegistry.ValueChanged += (o, str) =>
             {
-                Assert.AreEqual(str.Key, RegNames.ValBoolTrue, "Unexpected key changed");
+                Assert.Validate.AreEqual(str.Key, RegNames.ValBoolTrue, "Unexpected key changed");
                 valueChangedEventCount++;
             };
 
             this.testRegistry.Edit().SetBool(RegNames.ValBoolTrue, true).Remove(RegNames.ValBoolTrue).Apply();
 
-            Assert.IsTrue(this.testRegistry.GetBool(RegNames.ValBoolTrue, false), "Value was not added after remove");
-            Assert.AreEqual(1, valueChangedEventCount, "ValueChangedEvent was not triggered expected number of times.");
+            Assert.Validate.IsTrue(this.testRegistry.GetBool(RegNames.ValBoolTrue, false), "Value was not added after remove");
+            Assert.Validate.AreEqual(1, valueChangedEventCount, "ValueChangedEvent was not triggered expected number of times.");
         }
 
         protected void TestInvalidType()
@@ -134,7 +142,7 @@ namespace Dangr.Registry
                 return;
             }
 
-            Assert.Fail("Expected exception was not thrown");
+            Assert.Validate.Fail("Expected exception was not thrown");
         }
 
         protected void TestSerialize()
@@ -169,7 +177,7 @@ namespace Dangr.Registry
 
             // Make sure the modified value was read in parallel thread
             t.Wait();
-            Assert.IsTrue(t.Result, "Read was not locked in parallel thread");
+            Assert.Validate.IsTrue(t.Result, "Read was not locked in parallel thread");
         }
 
         protected void TestConcurrentWriteLock()
@@ -190,9 +198,188 @@ namespace Dangr.Registry
 
             // Make sure the parallel thread wrote the value second
             t.Wait();
-            Assert.IsTrue(
+            Assert.Validate.IsTrue(
                 this.testRegistry.GetBool(RegNames.ValAsyncTrue, false),
                 "Write was not locked in parallel thread");
+        }
+
+        protected void TestString()
+        {
+            // Null value
+            TestUtils.TestForError<ArgumentException>(
+                () => this.testRegistry.GetString(null, "Bye"),
+                "Exception was not thrown for null key.");
+
+            // Non existant value
+            Assert.Validate.AreEqual(
+                this.testRegistry.GetString("FakeEntry", "Bye"),
+                "Bye",
+                "Default value not returned for nonexistant key.");
+            
+            // Valid Value
+            Assert.Validate.AreEqual(
+                this.testRegistry.GetString(RegNames.ValStringHello, "Bye"),
+                "hello",
+                "Wrong value returned.");
+            
+            // Add with invalid key
+            TestUtils.TestForError<ArgumentException>(
+                () => this.testRegistry.Edit().SetString(" ", "Bye"),
+                "Exception was not thrown when adding with invalid key.");
+        }
+
+        protected void TestLong()
+        {
+            // Null value
+            TestUtils.TestForError<ArgumentException>(
+                () => this.testRegistry.GetLong(null, 10L),
+                "Exception was not thrown for null key.");
+
+            // Non existant value
+            Assert.Validate.AreEqual(
+                this.testRegistry.GetLong("FakeEntry", 10L),
+                10L,
+                "Default value not returned for nonexistant key.");
+
+            // Incorrect Type
+            TestUtils.TestForError<ArgumentException>(
+                () => this.testRegistry.GetLong(RegNames.ValStringHello, 10L),
+                "Exception was not thrown for key of wrong type.");
+
+            // Valid Value
+            Assert.Validate.AreEqual(
+                this.testRegistry.GetLong(RegNames.ValLong184, 10L),
+                184L,
+                "Wrong value returned.");
+
+            // Add with invalid key
+            TestUtils.TestForError<ArgumentException>(
+                () => this.testRegistry.Edit().SetLong(" ", 123L),
+                "Exception was not thrown when adding with invalid key.");
+        }
+
+        protected void TestFloat()
+        {
+            // Null value
+            TestUtils.TestForError<ArgumentException>(
+                () => this.testRegistry.GetFloat(null, 10f),
+                "Exception was not thrown for null key.");
+
+            // Non existant value
+            Assert.Validate.Compare(
+                this.testRegistry.GetFloat("FakeEntry", 10f),
+                CompareOperation.Equal,
+                10f,
+                "Default value not returned for nonexistant key.");
+
+            // Incorrect Type
+            TestUtils.TestForError<ArgumentException>(
+                () => this.testRegistry.GetFloat(RegNames.ValStringHello, 10f),
+                "Exception was not thrown for key of wrong type.");
+
+            // Valid Value
+            Assert.Validate.Compare(
+                this.testRegistry.GetFloat(RegNames.ValFloat1542, 10f),
+                CompareOperation.Equal,
+                154.2f,
+                "Wrong value returned.");
+
+            // Add with invalid key
+            TestUtils.TestForError<ArgumentException>(
+                () => this.testRegistry.Edit().SetFloat(" ", 12.3f),
+                "Exception was not thrown when adding with invalid key.");
+        }
+
+        protected void TestDouble()
+        {
+            // Null value
+            TestUtils.TestForError<ArgumentException>(
+                () => this.testRegistry.GetDouble(null, 10.0),
+                "Exception was not thrown for null key.");
+
+            // Non existant value
+            Assert.Validate.Compare(
+                this.testRegistry.GetDouble("FakeEntry", 10.0),
+                CompareOperation.Equal,
+                10.0,
+                "Default value not returned for nonexistant key.");
+
+            // Incorrect Type
+            TestUtils.TestForError<ArgumentException>(
+                () => this.testRegistry.GetDouble(RegNames.ValStringHello, 10.0),
+                "Exception was not thrown for key of wrong type.");
+
+            // Valid Value
+            Assert.Validate.Compare(
+                this.testRegistry.GetDouble(RegNames.ValDouble101, 10.0),
+                CompareOperation.Equal,
+                10.1,
+                "Wrong value returned.");
+
+            // Add with invalid key
+            TestUtils.TestForError<ArgumentException>(
+                () => this.testRegistry.Edit().SetDouble(" ", 123.4),
+                "Exception was not thrown when adding with invalid key.");
+        }
+
+        protected void TestInt()
+        {
+            // Null value
+            TestUtils.TestForError<ArgumentException>(
+                () => this.testRegistry.GetInt(null, 10),
+                "Exception was not thrown for null key.");
+
+            // Non existant value
+            Assert.Validate.AreEqual(
+                this.testRegistry.GetInt("FakeEntry", 10),
+                10,
+                "Default value not returned for nonexistant key.");
+
+            // Incorrect Type
+            TestUtils.TestForError<ArgumentException>(
+                () => this.testRegistry.GetInt(RegNames.ValStringHello, 10),
+                "Exception was not thrown for key of wrong type.");
+
+            // Valid Value
+            Assert.Validate.AreEqual(
+                this.testRegistry.GetInt(RegNames.ValInt19, 10),
+                19,
+                "Wrong value returned.");
+
+            // Add with invalid key
+            TestUtils.TestForError<ArgumentException>(
+                () => this.testRegistry.Edit().SetInt(" ", 345),
+                "Exception was not thrown when adding with invalid key.");
+        }
+
+        protected void TestBool()
+        {
+            // Null value
+            TestUtils.TestForError<ArgumentException>(
+                () => this.testRegistry.GetBool(null, false),
+                "Exception was not thrown for null key.");
+
+            // Non existant value
+            Assert.Validate.AreEqual(
+                this.testRegistry.GetBool("FakeEntry", false),
+                false,
+                "Default value not returned for nonexistant key.");
+
+            // Incorrect Type
+            TestUtils.TestForError<ArgumentException>(
+                () => this.testRegistry.GetBool(RegNames.ValStringHello, false),
+                "Exception was not thrown for key of wrong type.");
+
+            // Valid Value
+            Assert.Validate.AreEqual(
+                this.testRegistry.GetBool(RegNames.ValBoolTrue, false),
+                true,
+                "Wrong value returned.");
+
+            // Add with invalid key
+            TestUtils.TestForError<ArgumentException>(
+                () => this.testRegistry.Edit().SetBool(" ", false),
+                "Exception was not thrown when adding with invalid key.");
         }
     }
 }

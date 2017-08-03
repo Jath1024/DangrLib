@@ -8,7 +8,6 @@
 
 namespace Dangr.Core.Configuration
 {
-    using System;
     using Dangr.Core.Diagnostics;
     using Dangr.Core.Util;
 
@@ -50,25 +49,6 @@ namespace Dangr.Core.Configuration
 
                 this.IsDisposed = true;
             }
-        }
-
-        /// <summary>
-        /// Gets the setting with the specified name.
-        /// </summary>
-        /// <param name="name">The name of the setting to get.</param>
-        /// <exception cref="System.ArgumentException">
-        /// Thrown when there is no setting with the specified key.
-        /// </exception>
-        /// <returns>The value of the setting with the specified name.</returns>
-        public string GetSetting(string name)
-        {
-            Assert.Validate.NotDisposed(this, nameof(ConfigurationView));
-            if (this.config == null)
-            {
-                throw new InvalidOperationException($"No configuration set on {nameof(ConfigurationView)}");
-            }
-
-            return this.config.GetSetting(name);
         }
 
         /// <summary>

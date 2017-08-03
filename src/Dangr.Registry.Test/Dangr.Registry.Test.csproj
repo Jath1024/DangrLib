@@ -39,9 +39,21 @@
     <Compile Include="RegNames.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Dangr.Diagnostics\Dangr.Diagnostics.csproj">
+      <Project>{ec89ca12-e5a4-4738-b0ad-bbb39cbd886d}</Project>
+      <Name>Dangr.Diagnostics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dangr.Logging.Interface\Dangr.Logging.Interface.csproj">
+      <Project>{2CE9C4FD-3BA6-4D74-8918-226DB5EEF544}</Project>
+      <Name>Dangr.Logging.Interface</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Dangr.Registry\Dangr.Registry.csproj">
       <Project>{04dbe29e-0a3b-4007-ab69-031b8855e1d1}</Project>
       <Name>Dangr.Registry</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dangr.Test\Dangr.Test.csproj">
+      <Project>{c4312ee9-6917-4a6c-869e-9f8be26e8724}</Project>
+      <Name>Dangr.Test</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

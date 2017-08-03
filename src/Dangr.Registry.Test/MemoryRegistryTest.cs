@@ -78,5 +78,41 @@ namespace Dangr.Registry
         {
             this.TestConcurrentWriteLock();
         }
+
+        [TestMethod]
+        public void MemoryRegister_TestString()
+        {
+            this.TestString();
+        }
+
+        [TestMethod]
+        public void MemoryRegister_TestLong()
+        {
+            this.TestLong();
+        }
+
+        [TestMethod]
+        public void MemoryRegister_TestFloat()
+        {
+            this.TestFloat();
+        }
+
+        [TestMethod]
+        public void MemoryRegister_TestDouble()
+        {
+            this.TestDouble();
+        }
+
+        [TestMethod]
+        public void MemoryRegister_TestInt()
+        {
+            this.TestInt();
+        }
+
+        [TestMethod]
+        public void MemoryRegister_TestBool()
+        {
+            this.TestBool();
+        }
     }
 }

@@ -14,7 +14,6 @@ namespace Dangr.Core
     using System.Text;
     using Dangr.Core.Command;
     using Dangr.Core.Command.Exceptions;
-    using Dangr.Core.Util;
     using Dangr.Internal.Command;
     using Dangr.Internal.Command.Commands;
 
@@ -86,7 +85,7 @@ namespace Dangr.Core
         private readonly Dictionary<string, IDangrCommandFactory> commandMap;
 
         /// <summary>
-        /// Gets the name of this <see cref="INamedObject" />.
+        /// Gets the name of this <see cref="Dangr.Core.Util.INamedObject" />.
         /// </summary>
         public string Name { get; }
 

@@ -141,12 +141,7 @@ namespace Dangr.Core.Configuration
                 ConfigurationSource lockSource;
                 if (this.locks.TryGetValue(n, out lockSource))
                 {
-                    if (object.ReferenceEquals(lockSource, source))
-                    {
-                        return true;
-                    }
-
-                    return false;
+                    return object.ReferenceEquals(lockSource, source);
                 }
 
                 this.locks.Add(n, source);
@@ -166,19 +161,15 @@ namespace Dangr.Core.Configuration
             lock (this.locks)
             {
                 ConfigurationSource lockSource;
-                if (this.locks.TryGetValue(n, out lockSource))
+                bool isLocked = this.locks.TryGetValue(n, out lockSource);
+                if (isLocked && object.ReferenceEquals(lockSource, source))
                 {
-                    if (object.ReferenceEquals(lockSource, source))
-                    {
-                        this.locks.Remove(n);
-                        return true;
-                    }
-
-                    return false;
+                    this.locks.Remove(n);
+                    return true;
                 }
-            }
 
-            return true;
+                return !isLocked;
+            }
         }
 
         private void OnSettingChanged(string settingName, string settingValue)

@@ -79,13 +79,8 @@ namespace Dangr.Core.Registry
         /// <returns> The value stored in the registry with the specified key, or the given default value if not found. </returns>
         public bool GetBool(string key, bool defaultValue)
         {
-            if (string.IsNullOrWhiteSpace(key))
-            {
-                throw RegistryException.InvalidKeyException(key);
-            }
-
-            string valStr = this.GetValue(key);
-            if (valStr == null)
+            string valStr;
+            if(!this.TryGetValue(key, out valStr))
             {
                 return defaultValue;
             }
@@ -111,13 +106,8 @@ namespace Dangr.Core.Registry
         /// <returns> The value stored in the registry with the specified key, or the given default value if not found. </returns>
         public int GetInt(string key, int defaultValue)
         {
-            if (string.IsNullOrWhiteSpace(key))
-            {
-                throw RegistryException.InvalidKeyException(key);
-            }
-
-            string valStr = this.GetValue(key);
-            if (valStr == null)
+            string valStr;
+            if (!this.TryGetValue(key, out valStr))
             {
                 return defaultValue;
             }
@@ -143,13 +133,8 @@ namespace Dangr.Core.Registry
         /// <returns> The value stored in the registry with the specified key, or the given default value if not found. </returns>
         public long GetLong(string key, long defaultValue)
         {
-            if (string.IsNullOrWhiteSpace(key))
-            {
-                throw RegistryException.InvalidKeyException(key);
-            }
-
-            string valStr = this.GetValue(key);
-            if (valStr == null)
+            string valStr;
+            if (!this.TryGetValue(key, out valStr))
             {
                 return defaultValue;
             }
@@ -175,13 +160,8 @@ namespace Dangr.Core.Registry
         /// <returns> The value stored in the registry with the specified key, or the given default value if not found. </returns>
         public float GetFloat(string key, float defaultValue)
         {
-            if (string.IsNullOrWhiteSpace(key))
-            {
-                throw RegistryException.InvalidKeyException(key);
-            }
-
-            string valStr = this.GetValue(key);
-            if (valStr == null)
+            string valStr;
+            if (!this.TryGetValue(key, out valStr))
             {
                 return defaultValue;
             }
@@ -207,13 +187,8 @@ namespace Dangr.Core.Registry
         /// <returns> The value stored in the registry with the specified key, or the given default value if not found. </returns>
         public double GetDouble(string key, double defaultValue)
         {
-            if (string.IsNullOrWhiteSpace(key))
-            {
-                throw RegistryException.InvalidKeyException(key);
-            }
-
-            string valStr = this.GetValue(key);
-            if (valStr == null)
+            string valStr;
+            if (!this.TryGetValue(key, out valStr))
             {
                 return defaultValue;
             }
@@ -235,18 +210,8 @@ namespace Dangr.Core.Registry
         /// <returns> The value stored in the registry with the specified key, or the given default value if not found. </returns>
         public string GetString(string key, string defaultValue)
         {
-            if (string.IsNullOrWhiteSpace(key))
-            {
-                throw RegistryException.InvalidKeyException(key);
-            }
-
-            string valStr = this.GetValue(key);
-            if (valStr == null)
-            {
-                return defaultValue;
-            }
-
-            return valStr;
+            string valStr;
+            return !this.TryGetValue(key, out valStr) ? defaultValue : valStr;
         }
 
         /// <summary>
@@ -291,6 +256,18 @@ namespace Dangr.Core.Registry
             }
         }
 
+        private bool TryGetValue(string key, out string value)
+        {
+            if (string.IsNullOrWhiteSpace(key))
+            {
+                throw RegistryException.InvalidKeyException(key);
+            }
+
+            value = this.GetValue(key);
+
+            return value != null;
+        }
+        
         private void NotifyChanges(ISet<string> changes)
         {
             if (this.ValueChanged != null)

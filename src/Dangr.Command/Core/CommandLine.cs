@@ -360,7 +360,7 @@ namespace Dangr.Core
         }
 
         private static void AddNamedArgument(string argumentName, string argumentValue,
-            Dictionary<string, string> namedArguments, int index, string rawCommandLine)
+            IDictionary<string, string> namedArguments, int index, string rawCommandLine)
         {
             if (namedArguments.ContainsKey(argumentName))
             {

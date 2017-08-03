@@ -8,10 +8,12 @@
 
 namespace Dangr.Configuration
 {
+    using System;
     using System.Diagnostics.CodeAnalysis;
     using Dangr.Core.Configuration;
     using Dangr.Core.Configuration.Sources;
     using Dangr.Core.Configuration.Views;
+    using Dangr.Core.Test;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [SuppressMessage(
@@ -70,6 +72,8 @@ namespace Dangr.Configuration
                 "Goodbye",
                 this.allSettingsView.Settings[ConfigNames.Setting1],
                 "Setting has incorrect changed value.");
+
+            Console.WriteLine(this.allSettingsView.ToString());
         }
 
         [TestMethod]
@@ -131,6 +135,27 @@ namespace Dangr.Configuration
                 "Goodbye",
                 this.allSettingsView.Settings[ConfigNames.AppConfigSetting],
                 "Setting override was not persisted.");
+        }
+
+        [TestMethod]
+        public void Configuration_GetValue()
+        {
+            const string expectedValue = "Hello";
+            Assert.IsTrue(
+                this.testSource.TryAddOrUpdateSetting(ConfigNames.Setting1, expectedValue),
+                "Could not add setting.");
+
+            string setting = this.config.GetSetting(ConfigNames.Setting1);
+
+            Assert.AreEqual(setting, expectedValue);
+        }
+        
+        [TestMethod]
+        public void Configuration_GetValueDoesntExist()
+        {
+            TestUtils.TestForError<ArgumentException>(() =>
+                    this.config.GetSetting(ConfigNames.Setting1),
+                    "Did not throw exception when getting unknown setting.");
         }
     }
 }
