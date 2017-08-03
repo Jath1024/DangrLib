@@ -18,13 +18,6 @@ namespace Dangr.Core.Logging
         /// Logs a message at the specified <see cref="LogLevel" />.
         /// </summary>
         /// <param name="level">The <see cref="LogLevel" />.</param>
-        /// <param name="message">The message.</param>
-        void Log(LogLevel level, object message);
-
-        /// <summary>
-        /// Logs a message at the specified <see cref="LogLevel" />.
-        /// </summary>
-        /// <param name="level">The <see cref="LogLevel" />.</param>
         /// <param name="category">The category.</param>
         /// <param name="message">The message.</param>
         void Log(LogLevel level, string category, object message);

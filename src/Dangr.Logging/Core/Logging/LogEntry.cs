@@ -70,22 +70,7 @@ namespace Dangr.Core.Logging
         {
             this.Initialize(LogEntry.IdCounter.GetId(), DateTime.Now, logLevel, category, message);
         }
-
-        /// <summary>
-        ///     Initializes a new instance of the <see cref="LogEntry" /> class.
-        /// </summary>
-        /// <param name="other"> The other <see cref="LogEntry" /> to copy. </param>
-        /// <exception cref="System.ArgumentNullException"> </exception>
-        public LogEntry(LogEntry other)
-        {
-            if (other == null)
-            {
-                throw new ArgumentNullException(nameof(other));
-            }
-
-            this.Initialize(LogEntry.IdCounter.GetId(), other.TimeStamp, other.LogLevel, other.Category, other.Message);
-        }
-
+        
         private void Initialize(ulong id, DateTimeOffset timeStamp, LogLevel logLevel, string category, object message)
         {
             this.Id = id;

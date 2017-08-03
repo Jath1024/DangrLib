@@ -105,14 +105,12 @@ namespace Dangr.Core.Logging.Loggers
             this.LogFileDirectory = logFileDirectory;
             if (string.IsNullOrWhiteSpace(this.LogFileDirectory))
             {
-                string codeBase = Assembly.GetEntryAssembly().GetName().CodeBase;
-                string codeBasePath = Uri.UnescapeDataString(new Uri(codeBase).AbsolutePath);
-                this.LogFileDirectory = Path.GetDirectoryName(codeBasePath);
+                this.LogFileDirectory = Path.GetDirectoryName(Directory.GetCurrentDirectory());
             }
 
             if (this.LogFileDirectory == null)
             {
-                throw new Exception();
+                throw new ArgumentNullException();
             }
 
             if (!Directory.Exists(this.LogFileDirectory))

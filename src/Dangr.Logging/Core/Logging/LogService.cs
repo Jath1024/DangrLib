@@ -197,18 +197,7 @@ namespace Dangr.Core.Logging
         {
             this.LogInternalMessage -= endpoint.Log;
         }
-
-        /// <summary>
-        ///     Logs a message at the specified level.
-        /// </summary>
-        /// <param name="level"> The <see cref="LogLevel" />. </param>
-        /// <param name="message"> The message. </param>
-        public void Log(LogLevel level, object message)
-        {
-            LogEntry entry = new LogEntry(level, string.Empty, message);
-            this.LogEntry(entry);
-        }
-
+        
         /// <summary>
         ///     Logs a message at the specified level.
         /// </summary>
