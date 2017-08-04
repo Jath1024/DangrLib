@@ -9,7 +9,7 @@
 namespace Dangr.Command
 {
     using System.Collections.Generic;
-    using Dangr.Core;
+    using Dangr.Core.Command;
     using Dangr.Core.Command.Exceptions;
     using Dangr.Core.Test;
     using Microsoft.VisualStudio.TestTools.UnitTesting;

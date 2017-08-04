@@ -6,13 +6,12 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Core
+namespace Dangr.Core.Command
 {
     using System;
     using System.Collections.Generic;
     using System.IO;
     using System.Text;
-    using Dangr.Core.Command;
     using Dangr.Core.Command.Exceptions;
     using Dangr.Internal.Command;
     using Dangr.Internal.Command.Commands;

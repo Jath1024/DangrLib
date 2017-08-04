@@ -28,9 +28,9 @@
   <ItemGroup>
     <Compile Include="Core\Command\Annotation\AliasAttribute.cs" />
     <Compile Include="Internal\Command\Commands\DangrCommandHelp.cs" />
-    <Compile Include="Core\CommandExecutor.cs" />
+    <Compile Include="Core\Command\CommandExecutor.cs" />
     <Compile Include="Core\Command\Exceptions\CommandExecutionException.cs" />
-    <Compile Include="Core\CommandLine.cs" />
+    <Compile Include="Core\Command\CommandLine.cs" />
     <Compile Include="Core\Command\Exceptions\UnknownCommandException.cs" />
     <Compile Include="Core\Command\IDangrCommand.cs" />
     <Compile Include="Core\Command\Annotation\DangrCommandAttribute.cs" />

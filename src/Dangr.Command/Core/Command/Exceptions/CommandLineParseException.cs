@@ -13,7 +13,7 @@ namespace Dangr.Core.Command.Exceptions
     using System.Security.Permissions;
 
     /// <summary>
-    /// Exception that occurrs when there is an error parsing a <see cref="Core.CommandLine"/>.
+    /// Exception that occurrs when there is an error parsing a <see cref="Command.CommandLine"/>.
     /// </summary>
     /// <seealso cref="System.Exception" />
     [Serializable]

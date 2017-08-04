@@ -6,7 +6,7 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-namespace Dangr.Core
+namespace Dangr.Core.Command
 {
     using System.Collections.Generic;
     using System.Collections.Immutable;
