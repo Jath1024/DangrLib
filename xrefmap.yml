@@ -1229,18 +1229,6 @@ references:
   commentId: Overload:Dangr.Core.Configuration.ConfigurationView.Dispose
   fullName: Dangr.Core.Configuration.ConfigurationView.Dispose
   nameWithType: ConfigurationView.Dispose
-- uid: Dangr.Core.Configuration.ConfigurationView.GetSetting(System.String)
-  name: GetSetting(String)
-  href: api/Dangr.Core.Configuration.ConfigurationView.html#Dangr_Core_Configuration_ConfigurationView_GetSetting_System_String_
-  commentId: M:Dangr.Core.Configuration.ConfigurationView.GetSetting(System.String)
-  fullName: Dangr.Core.Configuration.ConfigurationView.GetSetting(System.String)
-  nameWithType: ConfigurationView.GetSetting(String)
-- uid: Dangr.Core.Configuration.ConfigurationView.GetSetting*
-  name: GetSetting
-  href: api/Dangr.Core.Configuration.ConfigurationView.html#Dangr_Core_Configuration_ConfigurationView_GetSetting_
-  commentId: Overload:Dangr.Core.Configuration.ConfigurationView.GetSetting
-  fullName: Dangr.Core.Configuration.ConfigurationView.GetSetting
-  nameWithType: ConfigurationView.GetSetting
 - uid: Dangr.Core.Configuration.ConfigurationView.IsDisposed
   name: IsDisposed
   href: api/Dangr.Core.Configuration.ConfigurationView.html#Dangr_Core_Configuration_ConfigurationView_IsDisposed
@@ -1814,15 +1802,6 @@ references:
   commentId: Overload:Dangr.Core.Diagnostics.AssertResolver.NotDisposed
   fullName: Dangr.Core.Diagnostics.AssertResolver.NotDisposed
   nameWithType: AssertResolver.NotDisposed
-- uid: Dangr.Core.Diagnostics.AssertResolver.NotDisposed``1(``0,Dangr.Core.Logging.ILogSource,System.String,System.Int32)
-  name: NotDisposed<T>(T, ILogSource, String, Int32)
-  href: api/Dangr.Core.Diagnostics.AssertResolver.html#Dangr_Core_Diagnostics_AssertResolver_NotDisposed__1___0_Dangr_Core_Logging_ILogSource_System_String_System_Int32_
-  commentId: M:Dangr.Core.Diagnostics.AssertResolver.NotDisposed``1(``0,Dangr.Core.Logging.ILogSource,System.String,System.Int32)
-  name.vb: NotDisposed(Of T)(T, ILogSource, String, Int32)
-  fullName: Dangr.Core.Diagnostics.AssertResolver.NotDisposed<T>(T, Dangr.Core.Logging.ILogSource, System.String, System.Int32)
-  fullName.vb: Dangr.Core.Diagnostics.AssertResolver.NotDisposed(Of T)(T, Dangr.Core.Logging.ILogSource, System.String, System.Int32)
-  nameWithType: AssertResolver.NotDisposed<T>(T, ILogSource, String, Int32)
-  nameWithType.vb: AssertResolver.NotDisposed(Of T)(T, ILogSource, String, Int32)
 - uid: Dangr.Core.Diagnostics.AssertType
   name: AssertType
   href: api/Dangr.Core.Diagnostics.AssertType.html
@@ -2373,12 +2352,6 @@ references:
   commentId: T:Dangr.Core.Logging.ILogger
   fullName: Dangr.Core.Logging.ILogger
   nameWithType: ILogger
-- uid: Dangr.Core.Logging.ILogger.Log(Dangr.Core.Logging.LogLevel,System.Object)
-  name: Log(LogLevel, Object)
-  href: api/Dangr.Core.Logging.ILogger.html#Dangr_Core_Logging_ILogger_Log_Dangr_Core_Logging_LogLevel_System_Object_
-  commentId: M:Dangr.Core.Logging.ILogger.Log(Dangr.Core.Logging.LogLevel,System.Object)
-  fullName: Dangr.Core.Logging.ILogger.Log(Dangr.Core.Logging.LogLevel, System.Object)
-  nameWithType: ILogger.Log(LogLevel, Object)
 - uid: Dangr.Core.Logging.ILogger.Log(Dangr.Core.Logging.LogLevel,System.String,System.Object)
   name: Log(LogLevel, String, Object)
   href: api/Dangr.Core.Logging.ILogger.html#Dangr_Core_Logging_ILogger_Log_Dangr_Core_Logging_LogLevel_System_String_System_Object_
@@ -2439,12 +2412,6 @@ references:
   commentId: T:Dangr.Core.Logging.LogEntry
   fullName: Dangr.Core.Logging.LogEntry
   nameWithType: LogEntry
-- uid: Dangr.Core.Logging.LogEntry.#ctor(Dangr.Core.Logging.LogEntry)
-  name: LogEntry(LogEntry)
-  href: api/Dangr.Core.Logging.LogEntry.html#Dangr_Core_Logging_LogEntry__ctor_Dangr_Core_Logging_LogEntry_
-  commentId: M:Dangr.Core.Logging.LogEntry.#ctor(Dangr.Core.Logging.LogEntry)
-  fullName: Dangr.Core.Logging.LogEntry.LogEntry(Dangr.Core.Logging.LogEntry)
-  nameWithType: LogEntry.LogEntry(LogEntry)
 - uid: Dangr.Core.Logging.LogEntry.#ctor(Dangr.Core.Logging.LogLevel,System.String,System.Object)
   name: LogEntry(LogLevel, String, Object)
   href: api/Dangr.Core.Logging.LogEntry.html#Dangr_Core_Logging_LogEntry__ctor_Dangr_Core_Logging_LogLevel_System_String_System_Object_
@@ -3153,12 +3120,6 @@ references:
   commentId: Overload:Dangr.Core.Logging.LogService.IsDisposed
   fullName: Dangr.Core.Logging.LogService.IsDisposed
   nameWithType: LogService.IsDisposed
-- uid: Dangr.Core.Logging.LogService.Log(Dangr.Core.Logging.LogLevel,System.Object)
-  name: Log(LogLevel, Object)
-  href: api/Dangr.Core.Logging.LogService.html#Dangr_Core_Logging_LogService_Log_Dangr_Core_Logging_LogLevel_System_Object_
-  commentId: M:Dangr.Core.Logging.LogService.Log(Dangr.Core.Logging.LogLevel,System.Object)
-  fullName: Dangr.Core.Logging.LogService.Log(Dangr.Core.Logging.LogLevel, System.Object)
-  nameWithType: LogService.Log(LogLevel, Object)
 - uid: Dangr.Core.Logging.LogService.Log(Dangr.Core.Logging.LogLevel,System.String,System.Object)
   name: Log(LogLevel, String, Object)
   href: api/Dangr.Core.Logging.LogService.html#Dangr_Core_Logging_LogService_Log_Dangr_Core_Logging_LogLevel_System_String_System_Object_
@@ -5061,6 +5022,18 @@ references:
   commentId: T:Dangr.Core.Test.TestUtils
   fullName: Dangr.Core.Test.TestUtils
   nameWithType: TestUtils
+- uid: Dangr.Core.Test.TestUtils.PrivateInstanceFlags
+  name: PrivateInstanceFlags
+  href: api/Dangr.Core.Test.TestUtils.html#Dangr_Core_Test_TestUtils_PrivateInstanceFlags
+  commentId: F:Dangr.Core.Test.TestUtils.PrivateInstanceFlags
+  fullName: Dangr.Core.Test.TestUtils.PrivateInstanceFlags
+  nameWithType: TestUtils.PrivateInstanceFlags
+- uid: Dangr.Core.Test.TestUtils.PrivateStaticFlags
+  name: PrivateStaticFlags
+  href: api/Dangr.Core.Test.TestUtils.html#Dangr_Core_Test_TestUtils_PrivateStaticFlags
+  commentId: F:Dangr.Core.Test.TestUtils.PrivateStaticFlags
+  fullName: Dangr.Core.Test.TestUtils.PrivateStaticFlags
+  nameWithType: TestUtils.PrivateStaticFlags
 - uid: Dangr.Core.Test.TestUtils.TestForError*
   name: TestForError
   href: api/Dangr.Core.Test.TestUtils.html#Dangr_Core_Test_TestUtils_TestForError_

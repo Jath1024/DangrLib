@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class MultiThreadedTaskScheduler
    | DangrLib ">
-    <meta name="generator" content="docfx 2.21.1.0">
+    <meta name="generator" content="docfx 2.21.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -128,14 +128,13 @@ running on top of the thread pool.</p>
   <h6><strong>Assembly</strong>: Dangr.Async.dll</h6>
   <h5 id="Dangr_Core_Async_MultiThreadedTaskScheduler_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class MultiThreadedTaskScheduler : TaskScheduler</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class MultiThreadedTaskScheduler : TaskScheduler</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   <a id="Dangr_Core_Async_MultiThreadedTaskScheduler__ctor_" data-uid="Dangr.Core.Async.MultiThreadedTaskScheduler.#ctor*"></a>
   <h4 id="Dangr_Core_Async_MultiThreadedTaskScheduler__ctor_System_Int32_" data-uid="Dangr.Core.Async.MultiThreadedTaskScheduler.#ctor(System.Int32)">MultiThreadedTaskScheduler(Int32)</h4>
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Dangr.Core.Async.MultiThreadedTaskScheduler.html">MultiThreadedTaskScheduler</a> class.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -154,24 +153,7 @@ running on top of the thread pool.</p>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">maxThreads</span></td>
-        <td><p>The maximum number of thread that can be run concurrently.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.ArgumentOutOfRangeException</span></td>
-        <td><p>Thrown if the maximum number of threads is %lt;= 0.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -184,7 +166,7 @@ running on top of the thread pool.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override sealed int MaximumConcurrencyLevel { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public override int MaximumConcurrencyLevel { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -236,7 +218,7 @@ running on top of the thread pool.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override sealed IEnumerable&lt;Task&gt; GetScheduledTasks()</code></pre>
+    <pre><code class="lang-csharp hljs">protected override IEnumerable&lt;Task&gt; GetScheduledTasks()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -263,7 +245,7 @@ running on top of the thread pool.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override sealed void QueueTask(Task task)</code></pre>
+    <pre><code class="lang-csharp hljs">protected override void QueueTask(Task task)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -292,7 +274,7 @@ running on top of the thread pool.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override sealed bool TryDequeue(Task task)</code></pre>
+    <pre><code class="lang-csharp hljs">protected override bool TryDequeue(Task task)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -337,7 +319,7 @@ running on top of the thread pool.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override sealed bool TryExecuteTaskInline(Task task, bool taskWasPreviouslyQueued)</code></pre>
+    <pre><code class="lang-csharp hljs">protected override bool TryExecuteTaskInline(Task task, bool taskWasPreviouslyQueued)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -401,7 +383,7 @@ running on top of the thread pool.</p>
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright � 2017 Dan Garvey. All rights reserved.<br>Generated by <strong>DocFX</strong></span>
+            <span>Copyright Ⓒ 2017 Dan Garvey. All rights reserved.<br>Generated by <strong>DocFX</strong></span>
             
           </div>
         </div>
