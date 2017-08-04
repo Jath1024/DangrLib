@@ -1,4 +1,0 @@
-﻿apiRules:
-- exclude:
-    hasAttribute:
-        uid: Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute

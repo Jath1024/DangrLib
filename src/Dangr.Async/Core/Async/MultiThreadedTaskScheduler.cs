@@ -43,7 +43,7 @@ namespace Dangr.Core.Async
         /// The maximum number of thread that can be run concurrently.
         /// </param>
         /// <exception cref="System.ArgumentOutOfRangeException">
-        /// Thrown if the maximum number of threads is <= 0.
+        /// Thrown if the maximum number of threads is &lt;= 0.
         /// </exception>
         public MultiThreadedTaskScheduler(int maxThreads)
         {

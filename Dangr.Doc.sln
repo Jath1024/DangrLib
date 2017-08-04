@@ -15,10 +15,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dangr.Entity", "src\Dangr.E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dangr.Event", "src\Dangr.Event\Dangr.Event.csproj", "{B4E2EBBC-35E4-418A-879E-15F333BA1C45}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dangr.Inject", "src\Dangr.Inject\Dangr.Inject.csproj", "{77BD8C58-58D5-491B-862A-67C6B09ACA54}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dangr.Log.Viewer", "src\Dangr.Log.Viewer\Dangr.Log.Viewer.csproj", "{56356371-DF6E-4F89-8D4C-D786834DD7F6}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dangr.Logging", "src\Dangr.Logging\Dangr.Logging.csproj", "{03B94D6D-8989-41AC-B90F-BEBD4129D65D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dangr.Logging.Loggers", "src\Dangr.Logging.Loggers\Dangr.Logging.Loggers.csproj", "{BC835590-135A-4D60-9E01-82538FDA6390}"
@@ -34,8 +30,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dangr.Test", "src\Dangr.Test\Dangr.Test.csproj", "{C4312EE9-6917-4A6C-869E-9F8BE26E8724}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dangr.Util", "src\Dangr.Util\Dangr.Util.csproj", "{272587F0-BD2B-48E5-A63F-252CA280B14F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dangr.Simulation", "src\Dangr.Simulation\Dangr.Simulation.csproj", "{4F441674-8D10-434A-B0C7-E302FAB8A00D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dangr.Logging.Interface", "src\Dangr.Logging.Interface\Dangr.Logging.Interface.csproj", "{2CE9C4FD-3BA6-4D74-8918-226DB5EEF544}"
 EndProject
@@ -82,14 +76,6 @@ Global
 		{B4E2EBBC-35E4-418A-879E-15F333BA1C45}.NugetDeploy|Any CPU.Build.0 = NugetDeploy|Any CPU
 		{B4E2EBBC-35E4-418A-879E-15F333BA1C45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4E2EBBC-35E4-418A-879E-15F333BA1C45}.Release|Any CPU.Build.0 = Release|Any CPU
-		{77BD8C58-58D5-491B-862A-67C6B09ACA54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{77BD8C58-58D5-491B-862A-67C6B09ACA54}.NugetDeploy|Any CPU.ActiveCfg = NugetDeploy|Any CPU
-		{77BD8C58-58D5-491B-862A-67C6B09ACA54}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{56356371-DF6E-4F89-8D4C-D786834DD7F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{56356371-DF6E-4F89-8D4C-D786834DD7F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{56356371-DF6E-4F89-8D4C-D786834DD7F6}.NugetDeploy|Any CPU.ActiveCfg = NugetDeploy|Any CPU
-		{56356371-DF6E-4F89-8D4C-D786834DD7F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{56356371-DF6E-4F89-8D4C-D786834DD7F6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{03B94D6D-8989-41AC-B90F-BEBD4129D65D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{03B94D6D-8989-41AC-B90F-BEBD4129D65D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03B94D6D-8989-41AC-B90F-BEBD4129D65D}.NugetDeploy|Any CPU.ActiveCfg = NugetDeploy|Any CPU
@@ -138,9 +124,6 @@ Global
 		{272587F0-BD2B-48E5-A63F-252CA280B14F}.NugetDeploy|Any CPU.Build.0 = NugetDeploy|Any CPU
 		{272587F0-BD2B-48E5-A63F-252CA280B14F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{272587F0-BD2B-48E5-A63F-252CA280B14F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4F441674-8D10-434A-B0C7-E302FAB8A00D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4F441674-8D10-434A-B0C7-E302FAB8A00D}.NugetDeploy|Any CPU.ActiveCfg = NugetDeploy|Any CPU
-		{4F441674-8D10-434A-B0C7-E302FAB8A00D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CE9C4FD-3BA6-4D74-8918-226DB5EEF544}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2CE9C4FD-3BA6-4D74-8918-226DB5EEF544}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CE9C4FD-3BA6-4D74-8918-226DB5EEF544}.NugetDeploy|Any CPU.ActiveCfg = Release|Any CPU
