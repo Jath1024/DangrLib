@@ -125,9 +125,7 @@ references:
   href: api/Dangr.Core.Collections.ConcurrentScheduledQueue-1.html#Dangr_Core_Collections_ConcurrentScheduledQueue_1__ctor_
   commentId: Overload:Dangr.Core.Collections.ConcurrentScheduledQueue`1.#ctor
   fullName: Dangr.Core.Collections.ConcurrentScheduledQueue<T>.ConcurrentScheduledQueue
-  fullName.vb: Dangr.Core.Collections.ConcurrentScheduledQueue(Of T).ConcurrentScheduledQueue
   nameWithType: ConcurrentScheduledQueue<T>.ConcurrentScheduledQueue
-  nameWithType.vb: ConcurrentScheduledQueue(Of T).ConcurrentScheduledQueue
 - uid: Dangr.Core.Collections.ConcurrentScheduledQueue`1.Count
   name: Count
   href: api/Dangr.Core.Collections.ConcurrentScheduledQueue-1.html#Dangr_Core_Collections_ConcurrentScheduledQueue_1_Count
@@ -141,9 +139,7 @@ references:
   href: api/Dangr.Core.Collections.ConcurrentScheduledQueue-1.html#Dangr_Core_Collections_ConcurrentScheduledQueue_1_Count_
   commentId: Overload:Dangr.Core.Collections.ConcurrentScheduledQueue`1.Count
   fullName: Dangr.Core.Collections.ConcurrentScheduledQueue<T>.Count
-  fullName.vb: Dangr.Core.Collections.ConcurrentScheduledQueue(Of T).Count
   nameWithType: ConcurrentScheduledQueue<T>.Count
-  nameWithType.vb: ConcurrentScheduledQueue(Of T).Count
 - uid: Dangr.Core.Collections.ConcurrentScheduledQueue`1.Post(`0)
   name: Post(T)
   href: api/Dangr.Core.Collections.ConcurrentScheduledQueue-1.html#Dangr_Core_Collections_ConcurrentScheduledQueue_1_Post__0_
@@ -157,9 +153,7 @@ references:
   href: api/Dangr.Core.Collections.ConcurrentScheduledQueue-1.html#Dangr_Core_Collections_ConcurrentScheduledQueue_1_Post_
   commentId: Overload:Dangr.Core.Collections.ConcurrentScheduledQueue`1.Post
   fullName: Dangr.Core.Collections.ConcurrentScheduledQueue<T>.Post
-  fullName.vb: Dangr.Core.Collections.ConcurrentScheduledQueue(Of T).Post
   nameWithType: ConcurrentScheduledQueue<T>.Post
-  nameWithType.vb: ConcurrentScheduledQueue(Of T).Post
 - uid: Dangr.Core.Collections.ConcurrentScheduledQueue`1.PostAt(`0,System.DateTimeOffset)
   name: PostAt(T, DateTimeOffset)
   href: api/Dangr.Core.Collections.ConcurrentScheduledQueue-1.html#Dangr_Core_Collections_ConcurrentScheduledQueue_1_PostAt__0_System_DateTimeOffset_
@@ -173,9 +167,7 @@ references:
   href: api/Dangr.Core.Collections.ConcurrentScheduledQueue-1.html#Dangr_Core_Collections_ConcurrentScheduledQueue_1_PostAt_
   commentId: Overload:Dangr.Core.Collections.ConcurrentScheduledQueue`1.PostAt
   fullName: Dangr.Core.Collections.ConcurrentScheduledQueue<T>.PostAt
-  fullName.vb: Dangr.Core.Collections.ConcurrentScheduledQueue(Of T).PostAt
   nameWithType: ConcurrentScheduledQueue<T>.PostAt
-  nameWithType.vb: ConcurrentScheduledQueue(Of T).PostAt
 - uid: Dangr.Core.Collections.ConcurrentScheduledQueue`1.PostDelayed(`0,System.TimeSpan)
   name: PostDelayed(T, TimeSpan)
   href: api/Dangr.Core.Collections.ConcurrentScheduledQueue-1.html#Dangr_Core_Collections_ConcurrentScheduledQueue_1_PostDelayed__0_System_TimeSpan_
@@ -189,9 +181,7 @@ references:
   href: api/Dangr.Core.Collections.ConcurrentScheduledQueue-1.html#Dangr_Core_Collections_ConcurrentScheduledQueue_1_PostDelayed_
   commentId: Overload:Dangr.Core.Collections.ConcurrentScheduledQueue`1.PostDelayed
   fullName: Dangr.Core.Collections.ConcurrentScheduledQueue<T>.PostDelayed
-  fullName.vb: Dangr.Core.Collections.ConcurrentScheduledQueue(Of T).PostDelayed
   nameWithType: ConcurrentScheduledQueue<T>.PostDelayed
-  nameWithType.vb: ConcurrentScheduledQueue(Of T).PostDelayed
 - uid: Dangr.Core.Collections.ConcurrentScheduledQueue`1.ReadyCount
   name: ReadyCount
   href: api/Dangr.Core.Collections.ConcurrentScheduledQueue-1.html#Dangr_Core_Collections_ConcurrentScheduledQueue_1_ReadyCount
@@ -205,9 +195,7 @@ references:
   href: api/Dangr.Core.Collections.ConcurrentScheduledQueue-1.html#Dangr_Core_Collections_ConcurrentScheduledQueue_1_ReadyCount_
   commentId: Overload:Dangr.Core.Collections.ConcurrentScheduledQueue`1.ReadyCount
   fullName: Dangr.Core.Collections.ConcurrentScheduledQueue<T>.ReadyCount
-  fullName.vb: Dangr.Core.Collections.ConcurrentScheduledQueue(Of T).ReadyCount
   nameWithType: ConcurrentScheduledQueue<T>.ReadyCount
-  nameWithType.vb: ConcurrentScheduledQueue(Of T).ReadyCount
 - uid: Dangr.Core.Collections.ConcurrentScheduledQueue`1.TryGetNext(`0@)
   name: TryGetNext(out T)
   href: api/Dangr.Core.Collections.ConcurrentScheduledQueue-1.html#Dangr_Core_Collections_ConcurrentScheduledQueue_1_TryGetNext__0__
@@ -222,9 +210,7 @@ references:
   href: api/Dangr.Core.Collections.ConcurrentScheduledQueue-1.html#Dangr_Core_Collections_ConcurrentScheduledQueue_1_TryGetNext_
   commentId: Overload:Dangr.Core.Collections.ConcurrentScheduledQueue`1.TryGetNext
   fullName: Dangr.Core.Collections.ConcurrentScheduledQueue<T>.TryGetNext
-  fullName.vb: Dangr.Core.Collections.ConcurrentScheduledQueue(Of T).TryGetNext
   nameWithType: ConcurrentScheduledQueue<T>.TryGetNext
-  nameWithType.vb: ConcurrentScheduledQueue(Of T).TryGetNext
 - uid: Dangr.Core.Collections.ListExtensions
   name: ListExtensions
   href: api/Dangr.Core.Collections.ListExtensions.html
@@ -5346,30 +5332,3 @@ references:
   commentId: Overload:Dangr.Core.Util.StringExtensions.IsCapsCase
   fullName: Dangr.Core.Util.StringExtensions.IsCapsCase
   nameWithType: StringExtensions.IsCapsCase
-- uid: Dangr.Log.Viewer
-  name: Dangr.Log.Viewer
-  href: api/Dangr.Log.Viewer.html
-  commentId: N:Dangr.Log.Viewer
-  fullName: Dangr.Log.Viewer
-  nameWithType: Dangr.Log.Viewer
-- uid: Dangr.Log.Viewer.Program
-  name: Program
-  href: api/Dangr.Log.Viewer.Program.html
-  commentId: T:Dangr.Log.Viewer.Program
-  fullName: Dangr.Log.Viewer.Program
-  nameWithType: Program
-- uid: Dangr.Log.Viewer.Program.Main(System.String[])
-  name: Main(String[])
-  href: api/Dangr.Log.Viewer.Program.html#Dangr_Log_Viewer_Program_Main_System_String___
-  commentId: M:Dangr.Log.Viewer.Program.Main(System.String[])
-  name.vb: Main(String())
-  fullName: Dangr.Log.Viewer.Program.Main(System.String[])
-  fullName.vb: Dangr.Log.Viewer.Program.Main(System.String())
-  nameWithType: Program.Main(String[])
-  nameWithType.vb: Program.Main(String())
-- uid: Dangr.Log.Viewer.Program.Main*
-  name: Main
-  href: api/Dangr.Log.Viewer.Program.html#Dangr_Log_Viewer_Program_Main_
-  commentId: Overload:Dangr.Log.Viewer.Program.Main
-  fullName: Dangr.Log.Viewer.Program.Main
-  nameWithType: Program.Main
