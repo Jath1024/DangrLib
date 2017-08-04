@@ -134,7 +134,8 @@ running on top of the thread pool.</p>
   </h3>
   <a id="Dangr_Core_Async_MultiThreadedTaskScheduler__ctor_" data-uid="Dangr.Core.Async.MultiThreadedTaskScheduler.#ctor*"></a>
   <h4 id="Dangr_Core_Async_MultiThreadedTaskScheduler__ctor_System_Int32_" data-uid="Dangr.Core.Async.MultiThreadedTaskScheduler.#ctor(System.Int32)">MultiThreadedTaskScheduler(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Dangr.Core.Async.MultiThreadedTaskScheduler.html">MultiThreadedTaskScheduler</a> class.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -153,7 +154,24 @@ running on top of the thread pool.</p>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">maxThreads</span></td>
-        <td></td>
+        <td><p>The maximum number of thread that can be run concurrently.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentOutOfRangeException</span></td>
+        <td><p>Thrown if the maximum number of threads is &lt;= 0.</p>
+</td>
       </tr>
     </tbody>
   </table>

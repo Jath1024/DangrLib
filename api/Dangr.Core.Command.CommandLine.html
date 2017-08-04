@@ -67,10 +67,10 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Dangr.Core.CommandLine">
+            <article class="content wrap" id="_content" data-uid="Dangr.Core.Command.CommandLine">
   
   
-  <h1 id="Dangr_Core_CommandLine" data-uid="Dangr.Core.CommandLine" class="text-break">Class CommandLine
+  <h1 id="Dangr_Core_Command_CommandLine" data-uid="Dangr.Core.Command.CommandLine" class="text-break">Class CommandLine
   </h1>
   <div class="markdown level0 summary"><p>Represents a command that can be executed, and the arguments to use
 when executing.</p>
@@ -105,15 +105,15 @@ when executing.</p>
       <span class="xref">System.Object.MemberwiseClone()</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Dangr.Core.html">Dangr.Core</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Dangr.Core.Command.html">Dangr.Core.Command</a></h6>
   <h6><strong>Assembly</strong>: Dangr.Command.dll</h6>
-  <h5 id="Dangr_Core_CommandLine_syntax">Syntax</h5>
+  <h5 id="Dangr_Core_Command_CommandLine_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class CommandLine</code></pre>
   </div>
-  <h5 id="Dangr_Core_CommandLine_remarks"><strong>Remarks</strong></h5>
+  <h5 id="Dangr_Core_Command_CommandLine_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>
-<a class="xref" href="Dangr.Core.CommandLine.html">CommandLine</a> is an object that will parse a given command
+<a class="xref" href="Dangr.Core.Command.CommandLine.html">CommandLine</a> is an object that will parse a given command
 line string, and break it down into its components which can be
 accessed as needed.
 </p>
@@ -158,9 +158,9 @@ removed, and escaped quote characters will be replaced with their
 unescaped values.
 </p>
 </div>
-  <h5 id="Dangr_Core_CommandLine_examples"><strong>Examples</strong></h5>
+  <h5 id="Dangr_Core_Command_CommandLine_examples"><strong>Examples</strong></h5>
   <p><code>Example 1</code><br>
-The following example will create a <a class="xref" href="Dangr.Core.CommandLine.html">CommandLine</a> that 
+The following example will create a <a class="xref" href="Dangr.Core.Command.CommandLine.html">CommandLine</a> that 
 executes &apos;TestCommand&apos; using named arguments:</p>
 <pre><code>CommandLine commandLine = new CommandLine(
     &quot;TestCommand -Named1 argument1 -Named2 \&quot;argument \\\&quot;2\\\&quot;\&quot;&quot;);
@@ -173,7 +173,7 @@ Named1: argument1
 Named2: argument &quot;2&quot;</code></pre>
 
   <p><code>Example 2</code><br>
-The following example will create a <a class="xref" href="Dangr.Core.CommandLine.html">CommandLine</a> that 
+The following example will create a <a class="xref" href="Dangr.Core.Command.CommandLine.html">CommandLine</a> that 
 executes &apos;TestCommand&apos; using flags:</p>
 <pre><code>CommandLine commandLine = new CommandLine(
     &quot;TestCommand -Flag1 -Flag2 -Named1 arg&quot;);
@@ -190,7 +190,7 @@ Flag3: false
 Named1: arg</code></pre>
 
   <p><code>Example 3</code><br>
-The following example will create a <a class="xref" href="Dangr.Core.CommandLine.html">CommandLine</a> that 
+The following example will create a <a class="xref" href="Dangr.Core.Command.CommandLine.html">CommandLine</a> that 
 executes &apos;TestCommand&apos; using positional arguments:</p>
 <pre><code>CommandLine commandLine = new CommandLine(
     &quot;TestCommand positional0 \&quot;positional arg 1\&quot; -Named1 named positional2 -Flag1&quot;);
@@ -211,9 +211,9 @@ Positional 2: positional2</code></pre>
 
   <h3 id="constructors">Constructors
   </h3>
-  <a id="Dangr_Core_CommandLine__ctor_" data-uid="Dangr.Core.CommandLine.#ctor*"></a>
-  <h4 id="Dangr_Core_CommandLine__ctor_System_String_" data-uid="Dangr.Core.CommandLine.#ctor(System.String)">CommandLine(String)</h4>
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Dangr.Core.CommandLine.html">CommandLine</a> class.</p>
+  <a id="Dangr_Core_Command_CommandLine__ctor_" data-uid="Dangr.Core.Command.CommandLine.#ctor*"></a>
+  <h4 id="Dangr_Core_Command_CommandLine__ctor_System_String_" data-uid="Dangr.Core.Command.CommandLine.#ctor(System.String)">CommandLine(String)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Dangr.Core.Command.CommandLine.html">CommandLine</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -240,8 +240,8 @@ Positional 2: positional2</code></pre>
   </table>
   <h3 id="properties">Properties
   </h3>
-  <a id="Dangr_Core_CommandLine_CommandName_" data-uid="Dangr.Core.CommandLine.CommandName*"></a>
-  <h4 id="Dangr_Core_CommandLine_CommandName" data-uid="Dangr.Core.CommandLine.CommandName">CommandName</h4>
+  <a id="Dangr_Core_Command_CommandLine_CommandName_" data-uid="Dangr.Core.Command.CommandLine.CommandName*"></a>
+  <h4 id="Dangr_Core_Command_CommandLine_CommandName" data-uid="Dangr.Core.Command.CommandLine.CommandName">CommandName</h4>
   <div class="markdown level1 summary"><p>Gets the name of the command.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -264,8 +264,8 @@ Positional 2: positional2</code></pre>
       </tr>
     </tbody>
   </table>
-  <a id="Dangr_Core_CommandLine_Flags_" data-uid="Dangr.Core.CommandLine.Flags*"></a>
-  <h4 id="Dangr_Core_CommandLine_Flags" data-uid="Dangr.Core.CommandLine.Flags">Flags</h4>
+  <a id="Dangr_Core_Command_CommandLine_Flags_" data-uid="Dangr.Core.Command.CommandLine.Flags*"></a>
+  <h4 id="Dangr_Core_Command_CommandLine_Flags" data-uid="Dangr.Core.Command.CommandLine.Flags">Flags</h4>
   <div class="markdown level1 summary"><p>Gets the set of flags parsed from the command line.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -288,8 +288,8 @@ Positional 2: positional2</code></pre>
       </tr>
     </tbody>
   </table>
-  <a id="Dangr_Core_CommandLine_NamedArguments_" data-uid="Dangr.Core.CommandLine.NamedArguments*"></a>
-  <h4 id="Dangr_Core_CommandLine_NamedArguments" data-uid="Dangr.Core.CommandLine.NamedArguments">NamedArguments</h4>
+  <a id="Dangr_Core_Command_CommandLine_NamedArguments_" data-uid="Dangr.Core.Command.CommandLine.NamedArguments*"></a>
+  <h4 id="Dangr_Core_Command_CommandLine_NamedArguments" data-uid="Dangr.Core.Command.CommandLine.NamedArguments">NamedArguments</h4>
   <div class="markdown level1 summary"><p>Gets a dictionary of named arguments and the values parsed from the command line.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -312,8 +312,8 @@ Positional 2: positional2</code></pre>
       </tr>
     </tbody>
   </table>
-  <a id="Dangr_Core_CommandLine_PositionalArguments_" data-uid="Dangr.Core.CommandLine.PositionalArguments*"></a>
-  <h4 id="Dangr_Core_CommandLine_PositionalArguments" data-uid="Dangr.Core.CommandLine.PositionalArguments">PositionalArguments</h4>
+  <a id="Dangr_Core_Command_CommandLine_PositionalArguments_" data-uid="Dangr.Core.Command.CommandLine.PositionalArguments*"></a>
+  <h4 id="Dangr_Core_Command_CommandLine_PositionalArguments" data-uid="Dangr.Core.Command.CommandLine.PositionalArguments">PositionalArguments</h4>
   <div class="markdown level1 summary"><p>Gets an ordered list of positional arguments parsed from the command line.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -336,8 +336,8 @@ Positional 2: positional2</code></pre>
       </tr>
     </tbody>
   </table>
-  <a id="Dangr_Core_CommandLine_RawArguments_" data-uid="Dangr.Core.CommandLine.RawArguments*"></a>
-  <h4 id="Dangr_Core_CommandLine_RawArguments" data-uid="Dangr.Core.CommandLine.RawArguments">RawArguments</h4>
+  <a id="Dangr_Core_Command_CommandLine_RawArguments_" data-uid="Dangr.Core.Command.CommandLine.RawArguments*"></a>
+  <h4 id="Dangr_Core_Command_CommandLine_RawArguments" data-uid="Dangr.Core.Command.CommandLine.RawArguments">RawArguments</h4>
   <div class="markdown level1 summary"><p>Gets the raw portion of the string used to parse the command arguments.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -360,8 +360,8 @@ Positional 2: positional2</code></pre>
       </tr>
     </tbody>
   </table>
-  <a id="Dangr_Core_CommandLine_RawCommandLine_" data-uid="Dangr.Core.CommandLine.RawCommandLine*"></a>
-  <h4 id="Dangr_Core_CommandLine_RawCommandLine" data-uid="Dangr.Core.CommandLine.RawCommandLine">RawCommandLine</h4>
+  <a id="Dangr_Core_Command_CommandLine_RawCommandLine_" data-uid="Dangr.Core.Command.CommandLine.RawCommandLine*"></a>
+  <h4 id="Dangr_Core_Command_CommandLine_RawCommandLine" data-uid="Dangr.Core.Command.CommandLine.RawCommandLine">RawCommandLine</h4>
   <div class="markdown level1 summary"><p>Gets the raw command line string that was parsed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>

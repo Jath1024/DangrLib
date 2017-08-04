@@ -67,10 +67,10 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Dangr.Core.CommandExecutor">
+            <article class="content wrap" id="_content" data-uid="Dangr.Core.Command.CommandExecutor">
   
   
-  <h1 id="Dangr_Core_CommandExecutor" data-uid="Dangr.Core.CommandExecutor" class="text-break">Class CommandExecutor
+  <h1 id="Dangr_Core_Command_CommandExecutor" data-uid="Dangr.Core.Command.CommandExecutor" class="text-break">Class CommandExecutor
   </h1>
   <div class="markdown level0 summary"><p>The executor that defines what <a class="xref" href="Dangr.Core.Command.IDangrCommand.html">IDangrCommand</a>s exist and can be executed.</p>
 </div>
@@ -104,32 +104,32 @@
       <span class="xref">System.Object.MemberwiseClone()</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Dangr.Core.html">Dangr.Core</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Dangr.Core.Command.html">Dangr.Core.Command</a></h6>
   <h6><strong>Assembly</strong>: Dangr.Command.dll</h6>
-  <h5 id="Dangr_Core_CommandExecutor_syntax">Syntax</h5>
+  <h5 id="Dangr_Core_Command_CommandExecutor_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public sealed class CommandExecutor : ICommandContext, INamedObject</code></pre>
   </div>
-  <h5 id="Dangr_Core_CommandExecutor_remarks"><strong>Remarks</strong></h5>
+  <h5 id="Dangr_Core_Command_CommandExecutor_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>
-The <a class="xref" href="Dangr.Core.CommandExecutor.html">CommandExecutor</a> is an object that will parse a given command line and execute
+The <a class="xref" href="Dangr.Core.Command.CommandExecutor.html">CommandExecutor</a> is an object that will parse a given command line and execute
 it as a command. Different <a class="xref" href="Dangr.Core.Command.IDangrCommand.html">IDangrCommand</a>s can be registered.
 </p>
 <p>
-<a class="xref" href="Dangr.Core.CommandExecutor.html">CommandExecutor</a>s can also be nested to create a scope for specific commands. Commands
+<a class="xref" href="Dangr.Core.Command.CommandExecutor.html">CommandExecutor</a>s can also be nested to create a scope for specific commands. Commands
 registered with the child executor can only be accessed when executed with the child executor,
 but commands registered with the parent executor can be executed from the child. Names are resolved
 starting with the child, so any commands registered with the same name will override commands in
 the parent executor.
 </p>
 <p>
-Command lines are parsed using a <a class="xref" href="Dangr.Core.CommandLine.html">CommandLine</a> instance and should follow those
+Command lines are parsed using a <a class="xref" href="Dangr.Core.Command.CommandLine.html">CommandLine</a> instance and should follow those
 conventions for command and argument names.
 </p>
 </div>
-  <h5 id="Dangr_Core_CommandExecutor_examples"><strong>Examples</strong></h5>
+  <h5 id="Dangr_Core_Command_CommandExecutor_examples"><strong>Examples</strong></h5>
   <p><code>Example 1</code><br>
-The following example will create a <a class="xref" href="Dangr.Core.CommandExecutor.html">CommandExecutor</a>, register a command called &quot;Output&quot;
+The following example will create a <a class="xref" href="Dangr.Core.Command.CommandExecutor.html">CommandExecutor</a>, register a command called &quot;Output&quot;
 and execute it.</p>
 <pre><code>TextWriter outputStream = new StringWriter();
 TextWriter errorStream = new StringWriter();
@@ -141,8 +141,8 @@ executor.Execute(&quot;Output &apos;hello world&apos;&quot;);</code></pre>
 <pre><code>hello world</code></pre>
 
   <p><code>Example 2</code><br>
-The following example will create a <a class="xref" href="Dangr.Core.CommandExecutor.html">CommandExecutor</a>, register a command called &quot;Output&quot;
-and execute the command from it&apos;s child <a class="xref" href="Dangr.Core.CommandExecutor.html">CommandExecutor</a>.</p>
+The following example will create a <a class="xref" href="Dangr.Core.Command.CommandExecutor.html">CommandExecutor</a>, register a command called &quot;Output&quot;
+and execute the command from it&apos;s child <a class="xref" href="Dangr.Core.Command.CommandExecutor.html">CommandExecutor</a>.</p>
 <pre><code>TextWriter outputStream = new StringWriter();
 TextWriter errorStream = new StringWriter();
 
@@ -155,9 +155,9 @@ childExecutor.Execute(&quot;Output &apos;hello world&apos;&quot;);</code></pre>
 
   <h3 id="constructors">Constructors
   </h3>
-  <a id="Dangr_Core_CommandExecutor__ctor_" data-uid="Dangr.Core.CommandExecutor.#ctor*"></a>
-  <h4 id="Dangr_Core_CommandExecutor__ctor_System_String_Dangr_Core_CommandExecutor_" data-uid="Dangr.Core.CommandExecutor.#ctor(System.String,Dangr.Core.CommandExecutor)">CommandExecutor(String, CommandExecutor)</h4>
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Dangr.Core.CommandExecutor.html">CommandExecutor</a> class.</p>
+  <a id="Dangr_Core_Command_CommandExecutor__ctor_" data-uid="Dangr.Core.Command.CommandExecutor.#ctor*"></a>
+  <h4 id="Dangr_Core_Command_CommandExecutor__ctor_System_String_Dangr_Core_Command_CommandExecutor_" data-uid="Dangr.Core.Command.CommandExecutor.#ctor(System.String,Dangr.Core.Command.CommandExecutor)">CommandExecutor(String, CommandExecutor)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Dangr.Core.Command.CommandExecutor.html">CommandExecutor</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -181,16 +181,16 @@ childExecutor.Execute(&quot;Output &apos;hello world&apos;&quot;);</code></pre>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Dangr.Core.CommandExecutor.html">CommandExecutor</a></td>
+        <td><a class="xref" href="Dangr.Core.Command.CommandExecutor.html">CommandExecutor</a></td>
         <td><span class="parametername">parentExecutor</span></td>
         <td><p>The parent executor.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <a id="Dangr_Core_CommandExecutor__ctor_" data-uid="Dangr.Core.CommandExecutor.#ctor*"></a>
-  <h4 id="Dangr_Core_CommandExecutor__ctor_System_String_System_IO_TextWriter_System_IO_TextWriter_" data-uid="Dangr.Core.CommandExecutor.#ctor(System.String,System.IO.TextWriter,System.IO.TextWriter)">CommandExecutor(String, TextWriter, TextWriter)</h4>
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Dangr.Core.CommandExecutor.html">CommandExecutor</a> class.</p>
+  <a id="Dangr_Core_Command_CommandExecutor__ctor_" data-uid="Dangr.Core.Command.CommandExecutor.#ctor*"></a>
+  <h4 id="Dangr_Core_Command_CommandExecutor__ctor_System_String_System_IO_TextWriter_System_IO_TextWriter_" data-uid="Dangr.Core.Command.CommandExecutor.#ctor(System.String,System.IO.TextWriter,System.IO.TextWriter)">CommandExecutor(String, TextWriter, TextWriter)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Dangr.Core.Command.CommandExecutor.html">CommandExecutor</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -229,8 +229,8 @@ childExecutor.Execute(&quot;Output &apos;hello world&apos;&quot;);</code></pre>
   </table>
   <h3 id="properties">Properties
   </h3>
-  <a id="Dangr_Core_CommandExecutor_Name_" data-uid="Dangr.Core.CommandExecutor.Name*"></a>
-  <h4 id="Dangr_Core_CommandExecutor_Name" data-uid="Dangr.Core.CommandExecutor.Name">Name</h4>
+  <a id="Dangr_Core_Command_CommandExecutor_Name_" data-uid="Dangr.Core.Command.CommandExecutor.Name*"></a>
+  <h4 id="Dangr_Core_Command_CommandExecutor_Name" data-uid="Dangr.Core.Command.CommandExecutor.Name">Name</h4>
   <div class="markdown level1 summary"><p>Gets the name of this <a class="xref" href="Dangr.Core.Util.INamedObject.html">INamedObject</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -257,9 +257,9 @@ childExecutor.Execute(&quot;Output &apos;hello world&apos;&quot;);</code></pre>
       <div><a class="xref" href="Dangr.Core.Util.INamedObject.html#Dangr_Core_Util_INamedObject_Name">INamedObject.Name</a></div>
   <h3 id="methods">Methods
   </h3>
-  <a id="Dangr_Core_CommandExecutor_AddCommand_" data-uid="Dangr.Core.CommandExecutor.AddCommand*"></a>
-  <h4 id="Dangr_Core_CommandExecutor_AddCommand__1" data-uid="Dangr.Core.CommandExecutor.AddCommand``1">AddCommand&lt;T&gt;()</h4>
-  <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Dangr.Core.Command.IDangrCommand.html">IDangrCommand</a> to this <a class="xref" href="Dangr.Core.CommandExecutor.html">CommandExecutor</a>.</p>
+  <a id="Dangr_Core_Command_CommandExecutor_AddCommand_" data-uid="Dangr.Core.Command.CommandExecutor.AddCommand*"></a>
+  <h4 id="Dangr_Core_Command_CommandExecutor_AddCommand__1" data-uid="Dangr.Core.Command.CommandExecutor.AddCommand``1">AddCommand&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Dangr.Core.Command.IDangrCommand.html">IDangrCommand</a> to this <a class="xref" href="Dangr.Core.Command.CommandExecutor.html">CommandExecutor</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -298,8 +298,8 @@ childExecutor.Execute(&quot;Output &apos;hello world&apos;&quot;);</code></pre>
       </tr>
     </tbody>
   </table>
-  <a id="Dangr_Core_CommandExecutor_Execute_" data-uid="Dangr.Core.CommandExecutor.Execute*"></a>
-  <h4 id="Dangr_Core_CommandExecutor_Execute_System_String_" data-uid="Dangr.Core.CommandExecutor.Execute(System.String)">Execute(String)</h4>
+  <a id="Dangr_Core_Command_CommandExecutor_Execute_" data-uid="Dangr.Core.Command.CommandExecutor.Execute*"></a>
+  <h4 id="Dangr_Core_Command_CommandExecutor_Execute_System_String_" data-uid="Dangr.Core.Command.CommandExecutor.Execute(System.String)">Execute(String)</h4>
   <div class="markdown level1 summary"><p>Executes the specified command line.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -329,8 +329,8 @@ childExecutor.Execute(&quot;Output &apos;hello world&apos;&quot;);</code></pre>
       <div><a class="xref" href="Dangr.Core.Command.ICommandContext.html#Dangr_Core_Command_ICommandContext_Execute_System_String_">ICommandContext.Execute(String)</a></div>
   <h3 id="eii">Explicit Interface Implementations
   </h3>
-  <a id="Dangr_Core_CommandExecutor_Dangr_Core_Command_ICommandContext_Error_" data-uid="Dangr.Core.CommandExecutor.Dangr#Core#Command#ICommandContext#Error*"></a>
-  <h4 id="Dangr_Core_CommandExecutor_Dangr_Core_Command_ICommandContext_Error_System_Object_" data-uid="Dangr.Core.CommandExecutor.Dangr#Core#Command#ICommandContext#Error(System.Object)">ICommandContext.Error(Object)</h4>
+  <a id="Dangr_Core_Command_CommandExecutor_Dangr_Core_Command_ICommandContext_Error_" data-uid="Dangr.Core.Command.CommandExecutor.Dangr#Core#Command#ICommandContext#Error*"></a>
+  <h4 id="Dangr_Core_Command_CommandExecutor_Dangr_Core_Command_ICommandContext_Error_System_Object_" data-uid="Dangr.Core.Command.CommandExecutor.Dangr#Core#Command#ICommandContext#Error(System.Object)">ICommandContext.Error(Object)</h4>
   <div class="markdown level1 summary"><p>Outputs the specified object to the <a class="xref" href="Dangr.Core.Command.ICommandContext.html">ICommandContext</a> error stream.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -358,8 +358,8 @@ childExecutor.Execute(&quot;Output &apos;hello world&apos;&quot;);</code></pre>
   </table>
   <h5 class="implements">Implements</h5>
       <div><a class="xref" href="Dangr.Core.Command.ICommandContext.html#Dangr_Core_Command_ICommandContext_Error_System_Object_">ICommandContext.Error(Object)</a></div>
-  <a id="Dangr_Core_CommandExecutor_Dangr_Core_Command_ICommandContext_GetHelpText_" data-uid="Dangr.Core.CommandExecutor.Dangr#Core#Command#ICommandContext#GetHelpText*"></a>
-  <h4 id="Dangr_Core_CommandExecutor_Dangr_Core_Command_ICommandContext_GetHelpText" data-uid="Dangr.Core.CommandExecutor.Dangr#Core#Command#ICommandContext#GetHelpText">ICommandContext.GetHelpText()</h4>
+  <a id="Dangr_Core_Command_CommandExecutor_Dangr_Core_Command_ICommandContext_GetHelpText_" data-uid="Dangr.Core.Command.CommandExecutor.Dangr#Core#Command#ICommandContext#GetHelpText*"></a>
+  <h4 id="Dangr_Core_Command_CommandExecutor_Dangr_Core_Command_ICommandContext_GetHelpText" data-uid="Dangr.Core.Command.CommandExecutor.Dangr#Core#Command#ICommandContext#GetHelpText">ICommandContext.GetHelpText()</h4>
   <div class="markdown level1 summary"><p>Gets the help text for all of the <a class="xref" href="Dangr.Core.Command.IDangrCommand.html">IDangrCommand</a>s defined in the <a class="xref" href="Dangr.Core.Command.ICommandContext.html">ICommandContext</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -385,8 +385,8 @@ childExecutor.Execute(&quot;Output &apos;hello world&apos;&quot;);</code></pre>
   </table>
   <h5 class="implements">Implements</h5>
       <div><a class="xref" href="Dangr.Core.Command.ICommandContext.html#Dangr_Core_Command_ICommandContext_GetHelpText">ICommandContext.GetHelpText()</a></div>
-  <a id="Dangr_Core_CommandExecutor_Dangr_Core_Command_ICommandContext_GetHelpText_" data-uid="Dangr.Core.CommandExecutor.Dangr#Core#Command#ICommandContext#GetHelpText*"></a>
-  <h4 id="Dangr_Core_CommandExecutor_Dangr_Core_Command_ICommandContext_GetHelpText_System_String_" data-uid="Dangr.Core.CommandExecutor.Dangr#Core#Command#ICommandContext#GetHelpText(System.String)">ICommandContext.GetHelpText(String)</h4>
+  <a id="Dangr_Core_Command_CommandExecutor_Dangr_Core_Command_ICommandContext_GetHelpText_" data-uid="Dangr.Core.Command.CommandExecutor.Dangr#Core#Command#ICommandContext#GetHelpText*"></a>
+  <h4 id="Dangr_Core_Command_CommandExecutor_Dangr_Core_Command_ICommandContext_GetHelpText_System_String_" data-uid="Dangr.Core.Command.CommandExecutor.Dangr#Core#Command#ICommandContext#GetHelpText(System.String)">ICommandContext.GetHelpText(String)</h4>
   <div class="markdown level1 summary"><p>Gets the help text for the specified <a class="xref" href="Dangr.Core.Command.IDangrCommand.html">IDangrCommand</a>s defined in the <a class="xref" href="Dangr.Core.Command.ICommandContext.html">ICommandContext</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -430,8 +430,8 @@ childExecutor.Execute(&quot;Output &apos;hello world&apos;&quot;);</code></pre>
   </table>
   <h5 class="implements">Implements</h5>
       <div><a class="xref" href="Dangr.Core.Command.ICommandContext.html#Dangr_Core_Command_ICommandContext_GetHelpText_System_String_">ICommandContext.GetHelpText(String)</a></div>
-  <a id="Dangr_Core_CommandExecutor_Dangr_Core_Command_ICommandContext_Output_" data-uid="Dangr.Core.CommandExecutor.Dangr#Core#Command#ICommandContext#Output*"></a>
-  <h4 id="Dangr_Core_CommandExecutor_Dangr_Core_Command_ICommandContext_Output_System_Object_" data-uid="Dangr.Core.CommandExecutor.Dangr#Core#Command#ICommandContext#Output(System.Object)">ICommandContext.Output(Object)</h4>
+  <a id="Dangr_Core_Command_CommandExecutor_Dangr_Core_Command_ICommandContext_Output_" data-uid="Dangr.Core.Command.CommandExecutor.Dangr#Core#Command#ICommandContext#Output*"></a>
+  <h4 id="Dangr_Core_Command_CommandExecutor_Dangr_Core_Command_ICommandContext_Output_System_Object_" data-uid="Dangr.Core.Command.CommandExecutor.Dangr#Core#Command#ICommandContext#Output(System.Object)">ICommandContext.Output(Object)</h4>
   <div class="markdown level1 summary"><p>Outputs the specified object to the <a class="xref" href="Dangr.Core.Command.ICommandContext.html">ICommandContext</a> output stream.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -461,7 +461,7 @@ childExecutor.Execute(&quot;Output &apos;hello world&apos;&quot;);</code></pre>
       <div><a class="xref" href="Dangr.Core.Command.ICommandContext.html#Dangr_Core_Command_ICommandContext_Output_System_Object_">ICommandContext.Output(Object)</a></div>
   <h3 id="seealso">See Also</h3>
   <div class="seealso">
-      <div><a class="xref" href="Dangr.Core.CommandLine.html">CommandLine</a></div>
+      <div><a class="xref" href="Dangr.Core.Command.CommandLine.html">CommandLine</a></div>
   </div>
 </article>
           </div>
