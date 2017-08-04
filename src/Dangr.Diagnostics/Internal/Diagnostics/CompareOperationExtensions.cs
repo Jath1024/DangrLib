@@ -8,6 +8,7 @@
 
 namespace Dangr.Internal.Diagnostics
 {
+    using System;
     using Dangr.Core.Diagnostics;
 
     /// <summary>
@@ -44,7 +45,7 @@ namespace Dangr.Internal.Diagnostics
                     return "<=";
 
                 default:
-                    return "??";
+                    throw new InvalidOperationException($"Unknown CompareOperation {operation}.");
             }
         }
     }

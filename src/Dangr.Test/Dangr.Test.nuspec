@@ -15,7 +15,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Dangr.Test</id>
-    <version>1.1.0</version>
+    <version>2.0.0</version>
     <title>Dangr.Test</title>
     <description>Test utilities for use with DangrLib.</description>
     <authors>Dan Garvey</authors>
@@ -25,9 +25,9 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <tags>dangrlib test </tags>
     <dependencies>
-      <dependency id="Dangr.Diagnostics" version="[1.0,2.0)" />
-      <dependency id="Dangr.Logging.Interface" version="[1.0,2.0)" />
-      <dependency id="Dangr.Util" version="[1.0,2.0)" />
+      <dependency id="Dangr.Diagnostics" version="[2.0,3.0)" />
+      <dependency id="Dangr.Logging.Interface" version="[2.0,3.0)" />
+      <dependency id="Dangr.Util" version="[2.0,3.0)" />
     </dependencies>
   </metadata>
   <files>

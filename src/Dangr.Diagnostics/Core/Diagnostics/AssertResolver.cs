@@ -644,7 +644,7 @@ namespace Dangr.Core.Diagnostics
             [CallerLineNumber] int lineNumber = 0)
             where T : IComparable
         {
-            bool check;
+            bool check = false;
             switch (operation)
             {
                 case CompareOperation.Equal:
@@ -665,10 +665,6 @@ namespace Dangr.Core.Diagnostics
 
                 case CompareOperation.LessEqual:
                     check = a.CompareTo(b) <= 0;
-                    break;
-
-                default:
-                    check = false;
                     break;
             }
 
@@ -717,41 +713,6 @@ namespace Dangr.Core.Diagnostics
                 AssertType.NotDisposed,
                 !disposable.IsDisposed,
                 name,
-                logSource,
-                filePath,
-                lineNumber,
-                "NotDisposed check failed. [{0}]",
-                disposable);
-        }
-
-        /// <summary>
-        /// Show a message if the specified <see cref="ICheckedDisposable" /> is disposed.
-        /// </summary>
-        /// <param name="disposable">
-        /// The <see cref="ICheckedDisposable" /> and <see cref="INamedObject" /> to check.
-        /// </param>
-        /// <param name="logSource">
-        /// The <see cref="ILogSource" /> used to log messages on failure.
-        /// </param>
-        /// <param name="filePath">
-        /// The file path of the caller. (Do not use)
-        /// </param>
-        /// <param name="lineNumber">
-        /// The line number of the caller. (Do not use)
-        /// </param>
-        /// <returns>
-        /// True only if the assert condition passed. Otherwise false.
-        /// </returns>
-        public bool NotDisposed<T>(
-            T disposable,
-            ILogSource logSource = null,
-            [CallerFilePath] string filePath = "",
-            [CallerLineNumber] int lineNumber = 0) where T : ICheckedDisposable, INamedObject
-        {
-            return this.Check(
-                AssertType.NotDisposed,
-                !disposable.IsDisposed,
-                disposable.Name,
                 logSource,
                 filePath,
                 lineNumber,
