@@ -7,6 +7,7 @@
     <DangrBuildPackageDir Condition="'$(DangrBuildPackageDir)' == ''">$(MSBuildThisFileDirectory)</DangrBuildPackageDir>
     <DangrRulesDir Condition="'$(DangrRulesDir)' == ''">$(DangrBuildPackageDir)\rules</DangrRulesDir>
     <DangrBuildTargetsDir Condition="'$(DangrBuildTargetsDir)' == ''">$(DangrBuildPackageDir)\targets</DangrBuildTargetsDir>
+    <SolutionDir Condition="$(SolutionDir) == ''">$(DangrBuildPackageDir)\..\..</SolutionDir>
   </PropertyGroup>
 
   <!-- 
