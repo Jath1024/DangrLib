@@ -125,7 +125,9 @@ references:
   href: api/Dangr.Core.Collections.ConcurrentScheduledQueue-1.html#Dangr_Core_Collections_ConcurrentScheduledQueue_1__ctor_
   commentId: Overload:Dangr.Core.Collections.ConcurrentScheduledQueue`1.#ctor
   fullName: Dangr.Core.Collections.ConcurrentScheduledQueue<T>.ConcurrentScheduledQueue
+  fullName.vb: Dangr.Core.Collections.ConcurrentScheduledQueue(Of T).ConcurrentScheduledQueue
   nameWithType: ConcurrentScheduledQueue<T>.ConcurrentScheduledQueue
+  nameWithType.vb: ConcurrentScheduledQueue(Of T).ConcurrentScheduledQueue
 - uid: Dangr.Core.Collections.ConcurrentScheduledQueue`1.Count
   name: Count
   href: api/Dangr.Core.Collections.ConcurrentScheduledQueue-1.html#Dangr_Core_Collections_ConcurrentScheduledQueue_1_Count
@@ -139,7 +141,9 @@ references:
   href: api/Dangr.Core.Collections.ConcurrentScheduledQueue-1.html#Dangr_Core_Collections_ConcurrentScheduledQueue_1_Count_
   commentId: Overload:Dangr.Core.Collections.ConcurrentScheduledQueue`1.Count
   fullName: Dangr.Core.Collections.ConcurrentScheduledQueue<T>.Count
+  fullName.vb: Dangr.Core.Collections.ConcurrentScheduledQueue(Of T).Count
   nameWithType: ConcurrentScheduledQueue<T>.Count
+  nameWithType.vb: ConcurrentScheduledQueue(Of T).Count
 - uid: Dangr.Core.Collections.ConcurrentScheduledQueue`1.Post(`0)
   name: Post(T)
   href: api/Dangr.Core.Collections.ConcurrentScheduledQueue-1.html#Dangr_Core_Collections_ConcurrentScheduledQueue_1_Post__0_
@@ -153,7 +157,9 @@ references:
   href: api/Dangr.Core.Collections.ConcurrentScheduledQueue-1.html#Dangr_Core_Collections_ConcurrentScheduledQueue_1_Post_
   commentId: Overload:Dangr.Core.Collections.ConcurrentScheduledQueue`1.Post
   fullName: Dangr.Core.Collections.ConcurrentScheduledQueue<T>.Post
+  fullName.vb: Dangr.Core.Collections.ConcurrentScheduledQueue(Of T).Post
   nameWithType: ConcurrentScheduledQueue<T>.Post
+  nameWithType.vb: ConcurrentScheduledQueue(Of T).Post
 - uid: Dangr.Core.Collections.ConcurrentScheduledQueue`1.PostAt(`0,System.DateTimeOffset)
   name: PostAt(T, DateTimeOffset)
   href: api/Dangr.Core.Collections.ConcurrentScheduledQueue-1.html#Dangr_Core_Collections_ConcurrentScheduledQueue_1_PostAt__0_System_DateTimeOffset_
@@ -167,7 +173,9 @@ references:
   href: api/Dangr.Core.Collections.ConcurrentScheduledQueue-1.html#Dangr_Core_Collections_ConcurrentScheduledQueue_1_PostAt_
   commentId: Overload:Dangr.Core.Collections.ConcurrentScheduledQueue`1.PostAt
   fullName: Dangr.Core.Collections.ConcurrentScheduledQueue<T>.PostAt
+  fullName.vb: Dangr.Core.Collections.ConcurrentScheduledQueue(Of T).PostAt
   nameWithType: ConcurrentScheduledQueue<T>.PostAt
+  nameWithType.vb: ConcurrentScheduledQueue(Of T).PostAt
 - uid: Dangr.Core.Collections.ConcurrentScheduledQueue`1.PostDelayed(`0,System.TimeSpan)
   name: PostDelayed(T, TimeSpan)
   href: api/Dangr.Core.Collections.ConcurrentScheduledQueue-1.html#Dangr_Core_Collections_ConcurrentScheduledQueue_1_PostDelayed__0_System_TimeSpan_
@@ -181,7 +189,9 @@ references:
   href: api/Dangr.Core.Collections.ConcurrentScheduledQueue-1.html#Dangr_Core_Collections_ConcurrentScheduledQueue_1_PostDelayed_
   commentId: Overload:Dangr.Core.Collections.ConcurrentScheduledQueue`1.PostDelayed
   fullName: Dangr.Core.Collections.ConcurrentScheduledQueue<T>.PostDelayed
+  fullName.vb: Dangr.Core.Collections.ConcurrentScheduledQueue(Of T).PostDelayed
   nameWithType: ConcurrentScheduledQueue<T>.PostDelayed
+  nameWithType.vb: ConcurrentScheduledQueue(Of T).PostDelayed
 - uid: Dangr.Core.Collections.ConcurrentScheduledQueue`1.ReadyCount
   name: ReadyCount
   href: api/Dangr.Core.Collections.ConcurrentScheduledQueue-1.html#Dangr_Core_Collections_ConcurrentScheduledQueue_1_ReadyCount
@@ -195,7 +205,9 @@ references:
   href: api/Dangr.Core.Collections.ConcurrentScheduledQueue-1.html#Dangr_Core_Collections_ConcurrentScheduledQueue_1_ReadyCount_
   commentId: Overload:Dangr.Core.Collections.ConcurrentScheduledQueue`1.ReadyCount
   fullName: Dangr.Core.Collections.ConcurrentScheduledQueue<T>.ReadyCount
+  fullName.vb: Dangr.Core.Collections.ConcurrentScheduledQueue(Of T).ReadyCount
   nameWithType: ConcurrentScheduledQueue<T>.ReadyCount
+  nameWithType.vb: ConcurrentScheduledQueue(Of T).ReadyCount
 - uid: Dangr.Core.Collections.ConcurrentScheduledQueue`1.TryGetNext(`0@)
   name: TryGetNext(out T)
   href: api/Dangr.Core.Collections.ConcurrentScheduledQueue-1.html#Dangr_Core_Collections_ConcurrentScheduledQueue_1_TryGetNext__0__
@@ -210,7 +222,9 @@ references:
   href: api/Dangr.Core.Collections.ConcurrentScheduledQueue-1.html#Dangr_Core_Collections_ConcurrentScheduledQueue_1_TryGetNext_
   commentId: Overload:Dangr.Core.Collections.ConcurrentScheduledQueue`1.TryGetNext
   fullName: Dangr.Core.Collections.ConcurrentScheduledQueue<T>.TryGetNext
+  fullName.vb: Dangr.Core.Collections.ConcurrentScheduledQueue(Of T).TryGetNext
   nameWithType: ConcurrentScheduledQueue<T>.TryGetNext
+  nameWithType.vb: ConcurrentScheduledQueue(Of T).TryGetNext
 - uid: Dangr.Core.Collections.ListExtensions
   name: ListExtensions
   href: api/Dangr.Core.Collections.ListExtensions.html
@@ -1419,6 +1433,330 @@ references:
   commentId: N:Dangr.Core.Diagnostics
   fullName: Dangr.Core.Diagnostics
   nameWithType: Dangr.Core.Diagnostics
+- uid: Dangr.Core.Diagnostics.ArgumentValidator
+  name: ArgumentValidator
+  href: api/Dangr.Core.Diagnostics.ArgumentValidator.html
+  commentId: T:Dangr.Core.Diagnostics.ArgumentValidator
+  fullName: Dangr.Core.Diagnostics.ArgumentValidator
+  nameWithType: ArgumentValidator
+- uid: Dangr.Core.Diagnostics.ArgumentValidator.AreEqual(System.Object,System.Object,System.String,System.Object[])
+  name: AreEqual(Object, Object, String, Object[])
+  href: api/Dangr.Core.Diagnostics.ArgumentValidator.html#Dangr_Core_Diagnostics_ArgumentValidator_AreEqual_System_Object_System_Object_System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.ArgumentValidator.AreEqual(System.Object,System.Object,System.String,System.Object[])
+  name.vb: AreEqual(Object, Object, String, Object())
+  fullName: Dangr.Core.Diagnostics.ArgumentValidator.AreEqual(System.Object, System.Object, System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.ArgumentValidator.AreEqual(System.Object, System.Object, System.String, System.Object())
+  nameWithType: ArgumentValidator.AreEqual(Object, Object, String, Object[])
+  nameWithType.vb: ArgumentValidator.AreEqual(Object, Object, String, Object())
+- uid: Dangr.Core.Diagnostics.ArgumentValidator.AreEqual*
+  name: AreEqual
+  href: api/Dangr.Core.Diagnostics.ArgumentValidator.html#Dangr_Core_Diagnostics_ArgumentValidator_AreEqual_
+  commentId: Overload:Dangr.Core.Diagnostics.ArgumentValidator.AreEqual
+  fullName: Dangr.Core.Diagnostics.ArgumentValidator.AreEqual
+  nameWithType: ArgumentValidator.AreEqual
+- uid: Dangr.Core.Diagnostics.ArgumentValidator.AreNotEqual(System.Object,System.Object,System.String,System.Object[])
+  name: AreNotEqual(Object, Object, String, Object[])
+  href: api/Dangr.Core.Diagnostics.ArgumentValidator.html#Dangr_Core_Diagnostics_ArgumentValidator_AreNotEqual_System_Object_System_Object_System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.ArgumentValidator.AreNotEqual(System.Object,System.Object,System.String,System.Object[])
+  name.vb: AreNotEqual(Object, Object, String, Object())
+  fullName: Dangr.Core.Diagnostics.ArgumentValidator.AreNotEqual(System.Object, System.Object, System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.ArgumentValidator.AreNotEqual(System.Object, System.Object, System.String, System.Object())
+  nameWithType: ArgumentValidator.AreNotEqual(Object, Object, String, Object[])
+  nameWithType.vb: ArgumentValidator.AreNotEqual(Object, Object, String, Object())
+- uid: Dangr.Core.Diagnostics.ArgumentValidator.AreNotEqual*
+  name: AreNotEqual
+  href: api/Dangr.Core.Diagnostics.ArgumentValidator.html#Dangr_Core_Diagnostics_ArgumentValidator_AreNotEqual_
+  commentId: Overload:Dangr.Core.Diagnostics.ArgumentValidator.AreNotEqual
+  fullName: Dangr.Core.Diagnostics.ArgumentValidator.AreNotEqual
+  nameWithType: ArgumentValidator.AreNotEqual
+- uid: Dangr.Core.Diagnostics.ArgumentValidator.Compare*
+  name: Compare
+  href: api/Dangr.Core.Diagnostics.ArgumentValidator.html#Dangr_Core_Diagnostics_ArgumentValidator_Compare_
+  commentId: Overload:Dangr.Core.Diagnostics.ArgumentValidator.Compare
+  fullName: Dangr.Core.Diagnostics.ArgumentValidator.Compare
+  nameWithType: ArgumentValidator.Compare
+- uid: Dangr.Core.Diagnostics.ArgumentValidator.Compare``1(``0,Dangr.Core.Diagnostics.CompareOperation,``0,System.String,System.Object[])
+  name: Compare<T>(T, CompareOperation, T, String, Object[])
+  href: api/Dangr.Core.Diagnostics.ArgumentValidator.html#Dangr_Core_Diagnostics_ArgumentValidator_Compare__1___0_Dangr_Core_Diagnostics_CompareOperation___0_System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.ArgumentValidator.Compare``1(``0,Dangr.Core.Diagnostics.CompareOperation,``0,System.String,System.Object[])
+  name.vb: Compare(Of T)(T, CompareOperation, T, String, Object())
+  fullName: Dangr.Core.Diagnostics.ArgumentValidator.Compare<T>(T, Dangr.Core.Diagnostics.CompareOperation, T, System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.ArgumentValidator.Compare(Of T)(T, Dangr.Core.Diagnostics.CompareOperation, T, System.String, System.Object())
+  nameWithType: ArgumentValidator.Compare<T>(T, CompareOperation, T, String, Object[])
+  nameWithType.vb: ArgumentValidator.Compare(Of T)(T, CompareOperation, T, String, Object())
+- uid: Dangr.Core.Diagnostics.ArgumentValidator.Fail(System.String,System.Object[])
+  name: Fail(String, Object[])
+  href: api/Dangr.Core.Diagnostics.ArgumentValidator.html#Dangr_Core_Diagnostics_ArgumentValidator_Fail_System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.ArgumentValidator.Fail(System.String,System.Object[])
+  name.vb: Fail(String, Object())
+  fullName: Dangr.Core.Diagnostics.ArgumentValidator.Fail(System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.ArgumentValidator.Fail(System.String, System.Object())
+  nameWithType: ArgumentValidator.Fail(String, Object[])
+  nameWithType.vb: ArgumentValidator.Fail(String, Object())
+- uid: Dangr.Core.Diagnostics.ArgumentValidator.Fail*
+  name: Fail
+  href: api/Dangr.Core.Diagnostics.ArgumentValidator.html#Dangr_Core_Diagnostics_ArgumentValidator_Fail_
+  commentId: Overload:Dangr.Core.Diagnostics.ArgumentValidator.Fail
+  fullName: Dangr.Core.Diagnostics.ArgumentValidator.Fail
+  nameWithType: ArgumentValidator.Fail
+- uid: Dangr.Core.Diagnostics.ArgumentValidator.IsEmpty*
+  name: IsEmpty
+  href: api/Dangr.Core.Diagnostics.ArgumentValidator.html#Dangr_Core_Diagnostics_ArgumentValidator_IsEmpty_
+  commentId: Overload:Dangr.Core.Diagnostics.ArgumentValidator.IsEmpty
+  fullName: Dangr.Core.Diagnostics.ArgumentValidator.IsEmpty
+  nameWithType: ArgumentValidator.IsEmpty
+- uid: Dangr.Core.Diagnostics.ArgumentValidator.IsEmpty``1(System.Collections.Generic.ICollection{``0},System.String,System.Object[])
+  name: IsEmpty<T>(ICollection<T>, String, Object[])
+  href: api/Dangr.Core.Diagnostics.ArgumentValidator.html#Dangr_Core_Diagnostics_ArgumentValidator_IsEmpty__1_System_Collections_Generic_ICollection___0__System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.ArgumentValidator.IsEmpty``1(System.Collections.Generic.ICollection{``0},System.String,System.Object[])
+  name.vb: IsEmpty(Of T)(ICollection(Of T), String, Object())
+  fullName: Dangr.Core.Diagnostics.ArgumentValidator.IsEmpty<T>(System.Collections.Generic.ICollection<T>, System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.ArgumentValidator.IsEmpty(Of T)(System.Collections.Generic.ICollection(Of T), System.String, System.Object())
+  nameWithType: ArgumentValidator.IsEmpty<T>(ICollection<T>, String, Object[])
+  nameWithType.vb: ArgumentValidator.IsEmpty(Of T)(ICollection(Of T), String, Object())
+- uid: Dangr.Core.Diagnostics.ArgumentValidator.IsEmpty``1(System.Collections.Generic.IEnumerable{``0},System.String,System.Object[])
+  name: IsEmpty<T>(IEnumerable<T>, String, Object[])
+  href: api/Dangr.Core.Diagnostics.ArgumentValidator.html#Dangr_Core_Diagnostics_ArgumentValidator_IsEmpty__1_System_Collections_Generic_IEnumerable___0__System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.ArgumentValidator.IsEmpty``1(System.Collections.Generic.IEnumerable{``0},System.String,System.Object[])
+  name.vb: IsEmpty(Of T)(IEnumerable(Of T), String, Object())
+  fullName: Dangr.Core.Diagnostics.ArgumentValidator.IsEmpty<T>(System.Collections.Generic.IEnumerable<T>, System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.ArgumentValidator.IsEmpty(Of T)(System.Collections.Generic.IEnumerable(Of T), System.String, System.Object())
+  nameWithType: ArgumentValidator.IsEmpty<T>(IEnumerable<T>, String, Object[])
+  nameWithType.vb: ArgumentValidator.IsEmpty(Of T)(IEnumerable(Of T), String, Object())
+- uid: Dangr.Core.Diagnostics.ArgumentValidator.IsFalse(System.Boolean,System.String,System.Object[])
+  name: IsFalse(Boolean, String, Object[])
+  href: api/Dangr.Core.Diagnostics.ArgumentValidator.html#Dangr_Core_Diagnostics_ArgumentValidator_IsFalse_System_Boolean_System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.ArgumentValidator.IsFalse(System.Boolean,System.String,System.Object[])
+  name.vb: IsFalse(Boolean, String, Object())
+  fullName: Dangr.Core.Diagnostics.ArgumentValidator.IsFalse(System.Boolean, System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.ArgumentValidator.IsFalse(System.Boolean, System.String, System.Object())
+  nameWithType: ArgumentValidator.IsFalse(Boolean, String, Object[])
+  nameWithType.vb: ArgumentValidator.IsFalse(Boolean, String, Object())
+- uid: Dangr.Core.Diagnostics.ArgumentValidator.IsFalse*
+  name: IsFalse
+  href: api/Dangr.Core.Diagnostics.ArgumentValidator.html#Dangr_Core_Diagnostics_ArgumentValidator_IsFalse_
+  commentId: Overload:Dangr.Core.Diagnostics.ArgumentValidator.IsFalse
+  fullName: Dangr.Core.Diagnostics.ArgumentValidator.IsFalse
+  nameWithType: ArgumentValidator.IsFalse
+- uid: Dangr.Core.Diagnostics.ArgumentValidator.IsInRange*
+  name: IsInRange
+  href: api/Dangr.Core.Diagnostics.ArgumentValidator.html#Dangr_Core_Diagnostics_ArgumentValidator_IsInRange_
+  commentId: Overload:Dangr.Core.Diagnostics.ArgumentValidator.IsInRange
+  fullName: Dangr.Core.Diagnostics.ArgumentValidator.IsInRange
+  nameWithType: ArgumentValidator.IsInRange
+- uid: Dangr.Core.Diagnostics.ArgumentValidator.IsInRange``1(``0,``0,``0,System.String,System.Object[])
+  name: IsInRange<T>(T, T, T, String, Object[])
+  href: api/Dangr.Core.Diagnostics.ArgumentValidator.html#Dangr_Core_Diagnostics_ArgumentValidator_IsInRange__1___0___0___0_System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.ArgumentValidator.IsInRange``1(``0,``0,``0,System.String,System.Object[])
+  name.vb: IsInRange(Of T)(T, T, T, String, Object())
+  fullName: Dangr.Core.Diagnostics.ArgumentValidator.IsInRange<T>(T, T, T, System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.ArgumentValidator.IsInRange(Of T)(T, T, T, System.String, System.Object())
+  nameWithType: ArgumentValidator.IsInRange<T>(T, T, T, String, Object[])
+  nameWithType.vb: ArgumentValidator.IsInRange(Of T)(T, T, T, String, Object())
+- uid: Dangr.Core.Diagnostics.ArgumentValidator.IsNotEmpty*
+  name: IsNotEmpty
+  href: api/Dangr.Core.Diagnostics.ArgumentValidator.html#Dangr_Core_Diagnostics_ArgumentValidator_IsNotEmpty_
+  commentId: Overload:Dangr.Core.Diagnostics.ArgumentValidator.IsNotEmpty
+  fullName: Dangr.Core.Diagnostics.ArgumentValidator.IsNotEmpty
+  nameWithType: ArgumentValidator.IsNotEmpty
+- uid: Dangr.Core.Diagnostics.ArgumentValidator.IsNotEmpty``1(System.Collections.Generic.ICollection{``0},System.String,System.Object[])
+  name: IsNotEmpty<T>(ICollection<T>, String, Object[])
+  href: api/Dangr.Core.Diagnostics.ArgumentValidator.html#Dangr_Core_Diagnostics_ArgumentValidator_IsNotEmpty__1_System_Collections_Generic_ICollection___0__System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.ArgumentValidator.IsNotEmpty``1(System.Collections.Generic.ICollection{``0},System.String,System.Object[])
+  name.vb: IsNotEmpty(Of T)(ICollection(Of T), String, Object())
+  fullName: Dangr.Core.Diagnostics.ArgumentValidator.IsNotEmpty<T>(System.Collections.Generic.ICollection<T>, System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.ArgumentValidator.IsNotEmpty(Of T)(System.Collections.Generic.ICollection(Of T), System.String, System.Object())
+  nameWithType: ArgumentValidator.IsNotEmpty<T>(ICollection<T>, String, Object[])
+  nameWithType.vb: ArgumentValidator.IsNotEmpty(Of T)(ICollection(Of T), String, Object())
+- uid: Dangr.Core.Diagnostics.ArgumentValidator.IsNotEmpty``1(System.Collections.Generic.IEnumerable{``0},System.String,System.Object[])
+  name: IsNotEmpty<T>(IEnumerable<T>, String, Object[])
+  href: api/Dangr.Core.Diagnostics.ArgumentValidator.html#Dangr_Core_Diagnostics_ArgumentValidator_IsNotEmpty__1_System_Collections_Generic_IEnumerable___0__System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.ArgumentValidator.IsNotEmpty``1(System.Collections.Generic.IEnumerable{``0},System.String,System.Object[])
+  name.vb: IsNotEmpty(Of T)(IEnumerable(Of T), String, Object())
+  fullName: Dangr.Core.Diagnostics.ArgumentValidator.IsNotEmpty<T>(System.Collections.Generic.IEnumerable<T>, System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.ArgumentValidator.IsNotEmpty(Of T)(System.Collections.Generic.IEnumerable(Of T), System.String, System.Object())
+  nameWithType: ArgumentValidator.IsNotEmpty<T>(IEnumerable<T>, String, Object[])
+  nameWithType.vb: ArgumentValidator.IsNotEmpty(Of T)(IEnumerable(Of T), String, Object())
+- uid: Dangr.Core.Diagnostics.ArgumentValidator.IsNotNull(System.Object,System.String,System.Object[])
+  name: IsNotNull(Object, String, Object[])
+  href: api/Dangr.Core.Diagnostics.ArgumentValidator.html#Dangr_Core_Diagnostics_ArgumentValidator_IsNotNull_System_Object_System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.ArgumentValidator.IsNotNull(System.Object,System.String,System.Object[])
+  name.vb: IsNotNull(Object, String, Object())
+  fullName: Dangr.Core.Diagnostics.ArgumentValidator.IsNotNull(System.Object, System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.ArgumentValidator.IsNotNull(System.Object, System.String, System.Object())
+  nameWithType: ArgumentValidator.IsNotNull(Object, String, Object[])
+  nameWithType.vb: ArgumentValidator.IsNotNull(Object, String, Object())
+- uid: Dangr.Core.Diagnostics.ArgumentValidator.IsNotNull*
+  name: IsNotNull
+  href: api/Dangr.Core.Diagnostics.ArgumentValidator.html#Dangr_Core_Diagnostics_ArgumentValidator_IsNotNull_
+  commentId: Overload:Dangr.Core.Diagnostics.ArgumentValidator.IsNotNull
+  fullName: Dangr.Core.Diagnostics.ArgumentValidator.IsNotNull
+  nameWithType: ArgumentValidator.IsNotNull
+- uid: Dangr.Core.Diagnostics.ArgumentValidator.IsNotNullOrEmpty(System.String,System.String,System.Object[])
+  name: IsNotNullOrEmpty(String, String, Object[])
+  href: api/Dangr.Core.Diagnostics.ArgumentValidator.html#Dangr_Core_Diagnostics_ArgumentValidator_IsNotNullOrEmpty_System_String_System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.ArgumentValidator.IsNotNullOrEmpty(System.String,System.String,System.Object[])
+  name.vb: IsNotNullOrEmpty(String, String, Object())
+  fullName: Dangr.Core.Diagnostics.ArgumentValidator.IsNotNullOrEmpty(System.String, System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.ArgumentValidator.IsNotNullOrEmpty(System.String, System.String, System.Object())
+  nameWithType: ArgumentValidator.IsNotNullOrEmpty(String, String, Object[])
+  nameWithType.vb: ArgumentValidator.IsNotNullOrEmpty(String, String, Object())
+- uid: Dangr.Core.Diagnostics.ArgumentValidator.IsNotNullOrEmpty*
+  name: IsNotNullOrEmpty
+  href: api/Dangr.Core.Diagnostics.ArgumentValidator.html#Dangr_Core_Diagnostics_ArgumentValidator_IsNotNullOrEmpty_
+  commentId: Overload:Dangr.Core.Diagnostics.ArgumentValidator.IsNotNullOrEmpty
+  fullName: Dangr.Core.Diagnostics.ArgumentValidator.IsNotNullOrEmpty
+  nameWithType: ArgumentValidator.IsNotNullOrEmpty
+- uid: Dangr.Core.Diagnostics.ArgumentValidator.IsNotNullOrWhiteSpace(System.String,System.String,System.Object[])
+  name: IsNotNullOrWhiteSpace(String, String, Object[])
+  href: api/Dangr.Core.Diagnostics.ArgumentValidator.html#Dangr_Core_Diagnostics_ArgumentValidator_IsNotNullOrWhiteSpace_System_String_System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.ArgumentValidator.IsNotNullOrWhiteSpace(System.String,System.String,System.Object[])
+  name.vb: IsNotNullOrWhiteSpace(String, String, Object())
+  fullName: Dangr.Core.Diagnostics.ArgumentValidator.IsNotNullOrWhiteSpace(System.String, System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.ArgumentValidator.IsNotNullOrWhiteSpace(System.String, System.String, System.Object())
+  nameWithType: ArgumentValidator.IsNotNullOrWhiteSpace(String, String, Object[])
+  nameWithType.vb: ArgumentValidator.IsNotNullOrWhiteSpace(String, String, Object())
+- uid: Dangr.Core.Diagnostics.ArgumentValidator.IsNotNullOrWhiteSpace*
+  name: IsNotNullOrWhiteSpace
+  href: api/Dangr.Core.Diagnostics.ArgumentValidator.html#Dangr_Core_Diagnostics_ArgumentValidator_IsNotNullOrWhiteSpace_
+  commentId: Overload:Dangr.Core.Diagnostics.ArgumentValidator.IsNotNullOrWhiteSpace
+  fullName: Dangr.Core.Diagnostics.ArgumentValidator.IsNotNullOrWhiteSpace
+  nameWithType: ArgumentValidator.IsNotNullOrWhiteSpace
+- uid: Dangr.Core.Diagnostics.ArgumentValidator.IsNotZero(System.Double,System.String,System.Object[])
+  name: IsNotZero(Double, String, Object[])
+  href: api/Dangr.Core.Diagnostics.ArgumentValidator.html#Dangr_Core_Diagnostics_ArgumentValidator_IsNotZero_System_Double_System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.ArgumentValidator.IsNotZero(System.Double,System.String,System.Object[])
+  name.vb: IsNotZero(Double, String, Object())
+  fullName: Dangr.Core.Diagnostics.ArgumentValidator.IsNotZero(System.Double, System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.ArgumentValidator.IsNotZero(System.Double, System.String, System.Object())
+  nameWithType: ArgumentValidator.IsNotZero(Double, String, Object[])
+  nameWithType.vb: ArgumentValidator.IsNotZero(Double, String, Object())
+- uid: Dangr.Core.Diagnostics.ArgumentValidator.IsNotZero(System.Int32,System.String,System.Object[])
+  name: IsNotZero(Int32, String, Object[])
+  href: api/Dangr.Core.Diagnostics.ArgumentValidator.html#Dangr_Core_Diagnostics_ArgumentValidator_IsNotZero_System_Int32_System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.ArgumentValidator.IsNotZero(System.Int32,System.String,System.Object[])
+  name.vb: IsNotZero(Int32, String, Object())
+  fullName: Dangr.Core.Diagnostics.ArgumentValidator.IsNotZero(System.Int32, System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.ArgumentValidator.IsNotZero(System.Int32, System.String, System.Object())
+  nameWithType: ArgumentValidator.IsNotZero(Int32, String, Object[])
+  nameWithType.vb: ArgumentValidator.IsNotZero(Int32, String, Object())
+- uid: Dangr.Core.Diagnostics.ArgumentValidator.IsNotZero(System.Single,System.String,System.Object[])
+  name: IsNotZero(Single, String, Object[])
+  href: api/Dangr.Core.Diagnostics.ArgumentValidator.html#Dangr_Core_Diagnostics_ArgumentValidator_IsNotZero_System_Single_System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.ArgumentValidator.IsNotZero(System.Single,System.String,System.Object[])
+  name.vb: IsNotZero(Single, String, Object())
+  fullName: Dangr.Core.Diagnostics.ArgumentValidator.IsNotZero(System.Single, System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.ArgumentValidator.IsNotZero(System.Single, System.String, System.Object())
+  nameWithType: ArgumentValidator.IsNotZero(Single, String, Object[])
+  nameWithType.vb: ArgumentValidator.IsNotZero(Single, String, Object())
+- uid: Dangr.Core.Diagnostics.ArgumentValidator.IsNotZero*
+  name: IsNotZero
+  href: api/Dangr.Core.Diagnostics.ArgumentValidator.html#Dangr_Core_Diagnostics_ArgumentValidator_IsNotZero_
+  commentId: Overload:Dangr.Core.Diagnostics.ArgumentValidator.IsNotZero
+  fullName: Dangr.Core.Diagnostics.ArgumentValidator.IsNotZero
+  nameWithType: ArgumentValidator.IsNotZero
+- uid: Dangr.Core.Diagnostics.ArgumentValidator.IsNull(System.Object,System.String,System.Object[])
+  name: IsNull(Object, String, Object[])
+  href: api/Dangr.Core.Diagnostics.ArgumentValidator.html#Dangr_Core_Diagnostics_ArgumentValidator_IsNull_System_Object_System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.ArgumentValidator.IsNull(System.Object,System.String,System.Object[])
+  name.vb: IsNull(Object, String, Object())
+  fullName: Dangr.Core.Diagnostics.ArgumentValidator.IsNull(System.Object, System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.ArgumentValidator.IsNull(System.Object, System.String, System.Object())
+  nameWithType: ArgumentValidator.IsNull(Object, String, Object[])
+  nameWithType.vb: ArgumentValidator.IsNull(Object, String, Object())
+- uid: Dangr.Core.Diagnostics.ArgumentValidator.IsNull*
+  name: IsNull
+  href: api/Dangr.Core.Diagnostics.ArgumentValidator.html#Dangr_Core_Diagnostics_ArgumentValidator_IsNull_
+  commentId: Overload:Dangr.Core.Diagnostics.ArgumentValidator.IsNull
+  fullName: Dangr.Core.Diagnostics.ArgumentValidator.IsNull
+  nameWithType: ArgumentValidator.IsNull
+- uid: Dangr.Core.Diagnostics.ArgumentValidator.IsNullOrEmpty(System.String,System.String,System.Object[])
+  name: IsNullOrEmpty(String, String, Object[])
+  href: api/Dangr.Core.Diagnostics.ArgumentValidator.html#Dangr_Core_Diagnostics_ArgumentValidator_IsNullOrEmpty_System_String_System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.ArgumentValidator.IsNullOrEmpty(System.String,System.String,System.Object[])
+  name.vb: IsNullOrEmpty(String, String, Object())
+  fullName: Dangr.Core.Diagnostics.ArgumentValidator.IsNullOrEmpty(System.String, System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.ArgumentValidator.IsNullOrEmpty(System.String, System.String, System.Object())
+  nameWithType: ArgumentValidator.IsNullOrEmpty(String, String, Object[])
+  nameWithType.vb: ArgumentValidator.IsNullOrEmpty(String, String, Object())
+- uid: Dangr.Core.Diagnostics.ArgumentValidator.IsNullOrEmpty*
+  name: IsNullOrEmpty
+  href: api/Dangr.Core.Diagnostics.ArgumentValidator.html#Dangr_Core_Diagnostics_ArgumentValidator_IsNullOrEmpty_
+  commentId: Overload:Dangr.Core.Diagnostics.ArgumentValidator.IsNullOrEmpty
+  fullName: Dangr.Core.Diagnostics.ArgumentValidator.IsNullOrEmpty
+  nameWithType: ArgumentValidator.IsNullOrEmpty
+- uid: Dangr.Core.Diagnostics.ArgumentValidator.IsNullOrWhiteSpace(System.String,System.String,System.Object[])
+  name: IsNullOrWhiteSpace(String, String, Object[])
+  href: api/Dangr.Core.Diagnostics.ArgumentValidator.html#Dangr_Core_Diagnostics_ArgumentValidator_IsNullOrWhiteSpace_System_String_System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.ArgumentValidator.IsNullOrWhiteSpace(System.String,System.String,System.Object[])
+  name.vb: IsNullOrWhiteSpace(String, String, Object())
+  fullName: Dangr.Core.Diagnostics.ArgumentValidator.IsNullOrWhiteSpace(System.String, System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.ArgumentValidator.IsNullOrWhiteSpace(System.String, System.String, System.Object())
+  nameWithType: ArgumentValidator.IsNullOrWhiteSpace(String, String, Object[])
+  nameWithType.vb: ArgumentValidator.IsNullOrWhiteSpace(String, String, Object())
+- uid: Dangr.Core.Diagnostics.ArgumentValidator.IsNullOrWhiteSpace*
+  name: IsNullOrWhiteSpace
+  href: api/Dangr.Core.Diagnostics.ArgumentValidator.html#Dangr_Core_Diagnostics_ArgumentValidator_IsNullOrWhiteSpace_
+  commentId: Overload:Dangr.Core.Diagnostics.ArgumentValidator.IsNullOrWhiteSpace
+  fullName: Dangr.Core.Diagnostics.ArgumentValidator.IsNullOrWhiteSpace
+  nameWithType: ArgumentValidator.IsNullOrWhiteSpace
+- uid: Dangr.Core.Diagnostics.ArgumentValidator.IsTrue(System.Boolean,System.String,System.Object[])
+  name: IsTrue(Boolean, String, Object[])
+  href: api/Dangr.Core.Diagnostics.ArgumentValidator.html#Dangr_Core_Diagnostics_ArgumentValidator_IsTrue_System_Boolean_System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.ArgumentValidator.IsTrue(System.Boolean,System.String,System.Object[])
+  name.vb: IsTrue(Boolean, String, Object())
+  fullName: Dangr.Core.Diagnostics.ArgumentValidator.IsTrue(System.Boolean, System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.ArgumentValidator.IsTrue(System.Boolean, System.String, System.Object())
+  nameWithType: ArgumentValidator.IsTrue(Boolean, String, Object[])
+  nameWithType.vb: ArgumentValidator.IsTrue(Boolean, String, Object())
+- uid: Dangr.Core.Diagnostics.ArgumentValidator.IsTrue*
+  name: IsTrue
+  href: api/Dangr.Core.Diagnostics.ArgumentValidator.html#Dangr_Core_Diagnostics_ArgumentValidator_IsTrue_
+  commentId: Overload:Dangr.Core.Diagnostics.ArgumentValidator.IsTrue
+  fullName: Dangr.Core.Diagnostics.ArgumentValidator.IsTrue
+  nameWithType: ArgumentValidator.IsTrue
+- uid: Dangr.Core.Diagnostics.ArgumentValidator.IsType*
+  name: IsType
+  href: api/Dangr.Core.Diagnostics.ArgumentValidator.html#Dangr_Core_Diagnostics_ArgumentValidator_IsType_
+  commentId: Overload:Dangr.Core.Diagnostics.ArgumentValidator.IsType
+  fullName: Dangr.Core.Diagnostics.ArgumentValidator.IsType
+  nameWithType: ArgumentValidator.IsType
+- uid: Dangr.Core.Diagnostics.ArgumentValidator.IsType``1(System.Object,System.String,System.Object[])
+  name: IsType<T>(Object, String, Object[])
+  href: api/Dangr.Core.Diagnostics.ArgumentValidator.html#Dangr_Core_Diagnostics_ArgumentValidator_IsType__1_System_Object_System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.ArgumentValidator.IsType``1(System.Object,System.String,System.Object[])
+  name.vb: IsType(Of T)(Object, String, Object())
+  fullName: Dangr.Core.Diagnostics.ArgumentValidator.IsType<T>(System.Object, System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.ArgumentValidator.IsType(Of T)(System.Object, System.String, System.Object())
+  nameWithType: ArgumentValidator.IsType<T>(Object, String, Object[])
+  nameWithType.vb: ArgumentValidator.IsType(Of T)(Object, String, Object())
+- uid: Dangr.Core.Diagnostics.ArgumentValidator.IsTypeOrNull*
+  name: IsTypeOrNull
+  href: api/Dangr.Core.Diagnostics.ArgumentValidator.html#Dangr_Core_Diagnostics_ArgumentValidator_IsTypeOrNull_
+  commentId: Overload:Dangr.Core.Diagnostics.ArgumentValidator.IsTypeOrNull
+  fullName: Dangr.Core.Diagnostics.ArgumentValidator.IsTypeOrNull
+  nameWithType: ArgumentValidator.IsTypeOrNull
+- uid: Dangr.Core.Diagnostics.ArgumentValidator.IsTypeOrNull``1(System.Object,System.String,System.Object[])
+  name: IsTypeOrNull<T>(Object, String, Object[])
+  href: api/Dangr.Core.Diagnostics.ArgumentValidator.html#Dangr_Core_Diagnostics_ArgumentValidator_IsTypeOrNull__1_System_Object_System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.ArgumentValidator.IsTypeOrNull``1(System.Object,System.String,System.Object[])
+  name.vb: IsTypeOrNull(Of T)(Object, String, Object())
+  fullName: Dangr.Core.Diagnostics.ArgumentValidator.IsTypeOrNull<T>(System.Object, System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.ArgumentValidator.IsTypeOrNull(Of T)(System.Object, System.String, System.Object())
+  nameWithType: ArgumentValidator.IsTypeOrNull<T>(Object, String, Object[])
+  nameWithType.vb: ArgumentValidator.IsTypeOrNull(Of T)(Object, String, Object())
+- uid: Dangr.Core.Diagnostics.ArgumentValidator.NotDisposed(Dangr.Core.Util.ICheckedDisposable,System.String)
+  name: NotDisposed(ICheckedDisposable, String)
+  href: api/Dangr.Core.Diagnostics.ArgumentValidator.html#Dangr_Core_Diagnostics_ArgumentValidator_NotDisposed_Dangr_Core_Util_ICheckedDisposable_System_String_
+  commentId: M:Dangr.Core.Diagnostics.ArgumentValidator.NotDisposed(Dangr.Core.Util.ICheckedDisposable,System.String)
+  fullName: Dangr.Core.Diagnostics.ArgumentValidator.NotDisposed(Dangr.Core.Util.ICheckedDisposable, System.String)
+  nameWithType: ArgumentValidator.NotDisposed(ICheckedDisposable, String)
+- uid: Dangr.Core.Diagnostics.ArgumentValidator.NotDisposed*
+  name: NotDisposed
+  href: api/Dangr.Core.Diagnostics.ArgumentValidator.html#Dangr_Core_Diagnostics_ArgumentValidator_NotDisposed_
+  commentId: Overload:Dangr.Core.Diagnostics.ArgumentValidator.NotDisposed
+  fullName: Dangr.Core.Diagnostics.ArgumentValidator.NotDisposed
+  nameWithType: ArgumentValidator.NotDisposed
 - uid: Dangr.Core.Diagnostics.Assert
   name: Assert
   href: api/Dangr.Core.Diagnostics.Assert.html
@@ -1938,6 +2276,381 @@ references:
   commentId: F:Dangr.Core.Diagnostics.CompareOperation.LessEqual
   fullName: Dangr.Core.Diagnostics.CompareOperation.LessEqual
   nameWithType: CompareOperation.LessEqual
+- uid: Dangr.Core.Diagnostics.CompareOperationExtensions
+  name: CompareOperationExtensions
+  href: api/Dangr.Core.Diagnostics.CompareOperationExtensions.html
+  commentId: T:Dangr.Core.Diagnostics.CompareOperationExtensions
+  fullName: Dangr.Core.Diagnostics.CompareOperationExtensions
+  nameWithType: CompareOperationExtensions
+- uid: Dangr.Core.Diagnostics.CompareOperationExtensions.Compare*
+  name: Compare
+  href: api/Dangr.Core.Diagnostics.CompareOperationExtensions.html#Dangr_Core_Diagnostics_CompareOperationExtensions_Compare_
+  commentId: Overload:Dangr.Core.Diagnostics.CompareOperationExtensions.Compare
+  fullName: Dangr.Core.Diagnostics.CompareOperationExtensions.Compare
+  nameWithType: CompareOperationExtensions.Compare
+- uid: Dangr.Core.Diagnostics.CompareOperationExtensions.Compare``1(Dangr.Core.Diagnostics.CompareOperation,``0,``0)
+  name: Compare<T>(CompareOperation, T, T)
+  href: api/Dangr.Core.Diagnostics.CompareOperationExtensions.html#Dangr_Core_Diagnostics_CompareOperationExtensions_Compare__1_Dangr_Core_Diagnostics_CompareOperation___0___0_
+  commentId: M:Dangr.Core.Diagnostics.CompareOperationExtensions.Compare``1(Dangr.Core.Diagnostics.CompareOperation,``0,``0)
+  name.vb: Compare(Of T)(CompareOperation, T, T)
+  fullName: Dangr.Core.Diagnostics.CompareOperationExtensions.Compare<T>(Dangr.Core.Diagnostics.CompareOperation, T, T)
+  fullName.vb: Dangr.Core.Diagnostics.CompareOperationExtensions.Compare(Of T)(Dangr.Core.Diagnostics.CompareOperation, T, T)
+  nameWithType: CompareOperationExtensions.Compare<T>(CompareOperation, T, T)
+  nameWithType.vb: CompareOperationExtensions.Compare(Of T)(CompareOperation, T, T)
+- uid: Dangr.Core.Diagnostics.IValidationResolver
+  name: IValidationResolver
+  href: api/Dangr.Core.Diagnostics.IValidationResolver.html
+  commentId: T:Dangr.Core.Diagnostics.IValidationResolver
+  fullName: Dangr.Core.Diagnostics.IValidationResolver
+  nameWithType: IValidationResolver
+- uid: Dangr.Core.Diagnostics.IValidationResolver.AreEqual(System.Object,System.Object,System.String,System.Object[])
+  name: AreEqual(Object, Object, String, Object[])
+  href: api/Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_AreEqual_System_Object_System_Object_System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.IValidationResolver.AreEqual(System.Object,System.Object,System.String,System.Object[])
+  name.vb: AreEqual(Object, Object, String, Object())
+  fullName: Dangr.Core.Diagnostics.IValidationResolver.AreEqual(System.Object, System.Object, System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.IValidationResolver.AreEqual(System.Object, System.Object, System.String, System.Object())
+  nameWithType: IValidationResolver.AreEqual(Object, Object, String, Object[])
+  nameWithType.vb: IValidationResolver.AreEqual(Object, Object, String, Object())
+- uid: Dangr.Core.Diagnostics.IValidationResolver.AreEqual*
+  name: AreEqual
+  href: api/Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_AreEqual_
+  commentId: Overload:Dangr.Core.Diagnostics.IValidationResolver.AreEqual
+  fullName: Dangr.Core.Diagnostics.IValidationResolver.AreEqual
+  nameWithType: IValidationResolver.AreEqual
+- uid: Dangr.Core.Diagnostics.IValidationResolver.AreNotEqual(System.Object,System.Object,System.String,System.Object[])
+  name: AreNotEqual(Object, Object, String, Object[])
+  href: api/Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_AreNotEqual_System_Object_System_Object_System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.IValidationResolver.AreNotEqual(System.Object,System.Object,System.String,System.Object[])
+  name.vb: AreNotEqual(Object, Object, String, Object())
+  fullName: Dangr.Core.Diagnostics.IValidationResolver.AreNotEqual(System.Object, System.Object, System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.IValidationResolver.AreNotEqual(System.Object, System.Object, System.String, System.Object())
+  nameWithType: IValidationResolver.AreNotEqual(Object, Object, String, Object[])
+  nameWithType.vb: IValidationResolver.AreNotEqual(Object, Object, String, Object())
+- uid: Dangr.Core.Diagnostics.IValidationResolver.AreNotEqual*
+  name: AreNotEqual
+  href: api/Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_AreNotEqual_
+  commentId: Overload:Dangr.Core.Diagnostics.IValidationResolver.AreNotEqual
+  fullName: Dangr.Core.Diagnostics.IValidationResolver.AreNotEqual
+  nameWithType: IValidationResolver.AreNotEqual
+- uid: Dangr.Core.Diagnostics.IValidationResolver.Compare*
+  name: Compare
+  href: api/Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_Compare_
+  commentId: Overload:Dangr.Core.Diagnostics.IValidationResolver.Compare
+  fullName: Dangr.Core.Diagnostics.IValidationResolver.Compare
+  nameWithType: IValidationResolver.Compare
+- uid: Dangr.Core.Diagnostics.IValidationResolver.Compare``1(``0,Dangr.Core.Diagnostics.CompareOperation,``0,System.String,System.Object[])
+  name: Compare<T>(T, CompareOperation, T, String, Object[])
+  href: api/Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_Compare__1___0_Dangr_Core_Diagnostics_CompareOperation___0_System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.IValidationResolver.Compare``1(``0,Dangr.Core.Diagnostics.CompareOperation,``0,System.String,System.Object[])
+  name.vb: Compare(Of T)(T, CompareOperation, T, String, Object())
+  fullName: Dangr.Core.Diagnostics.IValidationResolver.Compare<T>(T, Dangr.Core.Diagnostics.CompareOperation, T, System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.IValidationResolver.Compare(Of T)(T, Dangr.Core.Diagnostics.CompareOperation, T, System.String, System.Object())
+  nameWithType: IValidationResolver.Compare<T>(T, CompareOperation, T, String, Object[])
+  nameWithType.vb: IValidationResolver.Compare(Of T)(T, CompareOperation, T, String, Object())
+- uid: Dangr.Core.Diagnostics.IValidationResolver.Fail(System.String,System.Object[])
+  name: Fail(String, Object[])
+  href: api/Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_Fail_System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.IValidationResolver.Fail(System.String,System.Object[])
+  name.vb: Fail(String, Object())
+  fullName: Dangr.Core.Diagnostics.IValidationResolver.Fail(System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.IValidationResolver.Fail(System.String, System.Object())
+  nameWithType: IValidationResolver.Fail(String, Object[])
+  nameWithType.vb: IValidationResolver.Fail(String, Object())
+- uid: Dangr.Core.Diagnostics.IValidationResolver.Fail*
+  name: Fail
+  href: api/Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_Fail_
+  commentId: Overload:Dangr.Core.Diagnostics.IValidationResolver.Fail
+  fullName: Dangr.Core.Diagnostics.IValidationResolver.Fail
+  nameWithType: IValidationResolver.Fail
+- uid: Dangr.Core.Diagnostics.IValidationResolver.IsEmpty*
+  name: IsEmpty
+  href: api/Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsEmpty_
+  commentId: Overload:Dangr.Core.Diagnostics.IValidationResolver.IsEmpty
+  fullName: Dangr.Core.Diagnostics.IValidationResolver.IsEmpty
+  nameWithType: IValidationResolver.IsEmpty
+- uid: Dangr.Core.Diagnostics.IValidationResolver.IsEmpty``1(System.Collections.Generic.ICollection{``0},System.String,System.Object[])
+  name: IsEmpty<T>(ICollection<T>, String, Object[])
+  href: api/Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsEmpty__1_System_Collections_Generic_ICollection___0__System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.IValidationResolver.IsEmpty``1(System.Collections.Generic.ICollection{``0},System.String,System.Object[])
+  name.vb: IsEmpty(Of T)(ICollection(Of T), String, Object())
+  fullName: Dangr.Core.Diagnostics.IValidationResolver.IsEmpty<T>(System.Collections.Generic.ICollection<T>, System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.IValidationResolver.IsEmpty(Of T)(System.Collections.Generic.ICollection(Of T), System.String, System.Object())
+  nameWithType: IValidationResolver.IsEmpty<T>(ICollection<T>, String, Object[])
+  nameWithType.vb: IValidationResolver.IsEmpty(Of T)(ICollection(Of T), String, Object())
+- uid: Dangr.Core.Diagnostics.IValidationResolver.IsEmpty``1(System.Collections.Generic.IEnumerable{``0},System.String,System.Object[])
+  name: IsEmpty<T>(IEnumerable<T>, String, Object[])
+  href: api/Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsEmpty__1_System_Collections_Generic_IEnumerable___0__System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.IValidationResolver.IsEmpty``1(System.Collections.Generic.IEnumerable{``0},System.String,System.Object[])
+  name.vb: IsEmpty(Of T)(IEnumerable(Of T), String, Object())
+  fullName: Dangr.Core.Diagnostics.IValidationResolver.IsEmpty<T>(System.Collections.Generic.IEnumerable<T>, System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.IValidationResolver.IsEmpty(Of T)(System.Collections.Generic.IEnumerable(Of T), System.String, System.Object())
+  nameWithType: IValidationResolver.IsEmpty<T>(IEnumerable<T>, String, Object[])
+  nameWithType.vb: IValidationResolver.IsEmpty(Of T)(IEnumerable(Of T), String, Object())
+- uid: Dangr.Core.Diagnostics.IValidationResolver.IsFalse(System.Boolean,System.String,System.Object[])
+  name: IsFalse(Boolean, String, Object[])
+  href: api/Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsFalse_System_Boolean_System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.IValidationResolver.IsFalse(System.Boolean,System.String,System.Object[])
+  name.vb: IsFalse(Boolean, String, Object())
+  fullName: Dangr.Core.Diagnostics.IValidationResolver.IsFalse(System.Boolean, System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.IValidationResolver.IsFalse(System.Boolean, System.String, System.Object())
+  nameWithType: IValidationResolver.IsFalse(Boolean, String, Object[])
+  nameWithType.vb: IValidationResolver.IsFalse(Boolean, String, Object())
+- uid: Dangr.Core.Diagnostics.IValidationResolver.IsFalse*
+  name: IsFalse
+  href: api/Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsFalse_
+  commentId: Overload:Dangr.Core.Diagnostics.IValidationResolver.IsFalse
+  fullName: Dangr.Core.Diagnostics.IValidationResolver.IsFalse
+  nameWithType: IValidationResolver.IsFalse
+- uid: Dangr.Core.Diagnostics.IValidationResolver.IsInRange*
+  name: IsInRange
+  href: api/Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsInRange_
+  commentId: Overload:Dangr.Core.Diagnostics.IValidationResolver.IsInRange
+  fullName: Dangr.Core.Diagnostics.IValidationResolver.IsInRange
+  nameWithType: IValidationResolver.IsInRange
+- uid: Dangr.Core.Diagnostics.IValidationResolver.IsInRange``1(``0,``0,``0,System.String,System.Object[])
+  name: IsInRange<T>(T, T, T, String, Object[])
+  href: api/Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsInRange__1___0___0___0_System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.IValidationResolver.IsInRange``1(``0,``0,``0,System.String,System.Object[])
+  name.vb: IsInRange(Of T)(T, T, T, String, Object())
+  fullName: Dangr.Core.Diagnostics.IValidationResolver.IsInRange<T>(T, T, T, System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.IValidationResolver.IsInRange(Of T)(T, T, T, System.String, System.Object())
+  nameWithType: IValidationResolver.IsInRange<T>(T, T, T, String, Object[])
+  nameWithType.vb: IValidationResolver.IsInRange(Of T)(T, T, T, String, Object())
+- uid: Dangr.Core.Diagnostics.IValidationResolver.IsNotEmpty*
+  name: IsNotEmpty
+  href: api/Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsNotEmpty_
+  commentId: Overload:Dangr.Core.Diagnostics.IValidationResolver.IsNotEmpty
+  fullName: Dangr.Core.Diagnostics.IValidationResolver.IsNotEmpty
+  nameWithType: IValidationResolver.IsNotEmpty
+- uid: Dangr.Core.Diagnostics.IValidationResolver.IsNotEmpty``1(System.Collections.Generic.ICollection{``0},System.String,System.Object[])
+  name: IsNotEmpty<T>(ICollection<T>, String, Object[])
+  href: api/Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsNotEmpty__1_System_Collections_Generic_ICollection___0__System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.IValidationResolver.IsNotEmpty``1(System.Collections.Generic.ICollection{``0},System.String,System.Object[])
+  name.vb: IsNotEmpty(Of T)(ICollection(Of T), String, Object())
+  fullName: Dangr.Core.Diagnostics.IValidationResolver.IsNotEmpty<T>(System.Collections.Generic.ICollection<T>, System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.IValidationResolver.IsNotEmpty(Of T)(System.Collections.Generic.ICollection(Of T), System.String, System.Object())
+  nameWithType: IValidationResolver.IsNotEmpty<T>(ICollection<T>, String, Object[])
+  nameWithType.vb: IValidationResolver.IsNotEmpty(Of T)(ICollection(Of T), String, Object())
+- uid: Dangr.Core.Diagnostics.IValidationResolver.IsNotEmpty``1(System.Collections.Generic.IEnumerable{``0},System.String,System.Object[])
+  name: IsNotEmpty<T>(IEnumerable<T>, String, Object[])
+  href: api/Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsNotEmpty__1_System_Collections_Generic_IEnumerable___0__System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.IValidationResolver.IsNotEmpty``1(System.Collections.Generic.IEnumerable{``0},System.String,System.Object[])
+  name.vb: IsNotEmpty(Of T)(IEnumerable(Of T), String, Object())
+  fullName: Dangr.Core.Diagnostics.IValidationResolver.IsNotEmpty<T>(System.Collections.Generic.IEnumerable<T>, System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.IValidationResolver.IsNotEmpty(Of T)(System.Collections.Generic.IEnumerable(Of T), System.String, System.Object())
+  nameWithType: IValidationResolver.IsNotEmpty<T>(IEnumerable<T>, String, Object[])
+  nameWithType.vb: IValidationResolver.IsNotEmpty(Of T)(IEnumerable(Of T), String, Object())
+- uid: Dangr.Core.Diagnostics.IValidationResolver.IsNotNull(System.Object,System.String,System.Object[])
+  name: IsNotNull(Object, String, Object[])
+  href: api/Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsNotNull_System_Object_System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.IValidationResolver.IsNotNull(System.Object,System.String,System.Object[])
+  name.vb: IsNotNull(Object, String, Object())
+  fullName: Dangr.Core.Diagnostics.IValidationResolver.IsNotNull(System.Object, System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.IValidationResolver.IsNotNull(System.Object, System.String, System.Object())
+  nameWithType: IValidationResolver.IsNotNull(Object, String, Object[])
+  nameWithType.vb: IValidationResolver.IsNotNull(Object, String, Object())
+- uid: Dangr.Core.Diagnostics.IValidationResolver.IsNotNull*
+  name: IsNotNull
+  href: api/Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsNotNull_
+  commentId: Overload:Dangr.Core.Diagnostics.IValidationResolver.IsNotNull
+  fullName: Dangr.Core.Diagnostics.IValidationResolver.IsNotNull
+  nameWithType: IValidationResolver.IsNotNull
+- uid: Dangr.Core.Diagnostics.IValidationResolver.IsNotNullOrEmpty(System.String,System.String,System.Object[])
+  name: IsNotNullOrEmpty(String, String, Object[])
+  href: api/Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsNotNullOrEmpty_System_String_System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.IValidationResolver.IsNotNullOrEmpty(System.String,System.String,System.Object[])
+  name.vb: IsNotNullOrEmpty(String, String, Object())
+  fullName: Dangr.Core.Diagnostics.IValidationResolver.IsNotNullOrEmpty(System.String, System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.IValidationResolver.IsNotNullOrEmpty(System.String, System.String, System.Object())
+  nameWithType: IValidationResolver.IsNotNullOrEmpty(String, String, Object[])
+  nameWithType.vb: IValidationResolver.IsNotNullOrEmpty(String, String, Object())
+- uid: Dangr.Core.Diagnostics.IValidationResolver.IsNotNullOrEmpty*
+  name: IsNotNullOrEmpty
+  href: api/Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsNotNullOrEmpty_
+  commentId: Overload:Dangr.Core.Diagnostics.IValidationResolver.IsNotNullOrEmpty
+  fullName: Dangr.Core.Diagnostics.IValidationResolver.IsNotNullOrEmpty
+  nameWithType: IValidationResolver.IsNotNullOrEmpty
+- uid: Dangr.Core.Diagnostics.IValidationResolver.IsNotNullOrWhiteSpace(System.String,System.String,System.Object[])
+  name: IsNotNullOrWhiteSpace(String, String, Object[])
+  href: api/Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsNotNullOrWhiteSpace_System_String_System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.IValidationResolver.IsNotNullOrWhiteSpace(System.String,System.String,System.Object[])
+  name.vb: IsNotNullOrWhiteSpace(String, String, Object())
+  fullName: Dangr.Core.Diagnostics.IValidationResolver.IsNotNullOrWhiteSpace(System.String, System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.IValidationResolver.IsNotNullOrWhiteSpace(System.String, System.String, System.Object())
+  nameWithType: IValidationResolver.IsNotNullOrWhiteSpace(String, String, Object[])
+  nameWithType.vb: IValidationResolver.IsNotNullOrWhiteSpace(String, String, Object())
+- uid: Dangr.Core.Diagnostics.IValidationResolver.IsNotNullOrWhiteSpace*
+  name: IsNotNullOrWhiteSpace
+  href: api/Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsNotNullOrWhiteSpace_
+  commentId: Overload:Dangr.Core.Diagnostics.IValidationResolver.IsNotNullOrWhiteSpace
+  fullName: Dangr.Core.Diagnostics.IValidationResolver.IsNotNullOrWhiteSpace
+  nameWithType: IValidationResolver.IsNotNullOrWhiteSpace
+- uid: Dangr.Core.Diagnostics.IValidationResolver.IsNotZero(System.Double,System.String,System.Object[])
+  name: IsNotZero(Double, String, Object[])
+  href: api/Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsNotZero_System_Double_System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.IValidationResolver.IsNotZero(System.Double,System.String,System.Object[])
+  name.vb: IsNotZero(Double, String, Object())
+  fullName: Dangr.Core.Diagnostics.IValidationResolver.IsNotZero(System.Double, System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.IValidationResolver.IsNotZero(System.Double, System.String, System.Object())
+  nameWithType: IValidationResolver.IsNotZero(Double, String, Object[])
+  nameWithType.vb: IValidationResolver.IsNotZero(Double, String, Object())
+- uid: Dangr.Core.Diagnostics.IValidationResolver.IsNotZero(System.Int32,System.String,System.Object[])
+  name: IsNotZero(Int32, String, Object[])
+  href: api/Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsNotZero_System_Int32_System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.IValidationResolver.IsNotZero(System.Int32,System.String,System.Object[])
+  name.vb: IsNotZero(Int32, String, Object())
+  fullName: Dangr.Core.Diagnostics.IValidationResolver.IsNotZero(System.Int32, System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.IValidationResolver.IsNotZero(System.Int32, System.String, System.Object())
+  nameWithType: IValidationResolver.IsNotZero(Int32, String, Object[])
+  nameWithType.vb: IValidationResolver.IsNotZero(Int32, String, Object())
+- uid: Dangr.Core.Diagnostics.IValidationResolver.IsNotZero(System.Single,System.String,System.Object[])
+  name: IsNotZero(Single, String, Object[])
+  href: api/Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsNotZero_System_Single_System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.IValidationResolver.IsNotZero(System.Single,System.String,System.Object[])
+  name.vb: IsNotZero(Single, String, Object())
+  fullName: Dangr.Core.Diagnostics.IValidationResolver.IsNotZero(System.Single, System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.IValidationResolver.IsNotZero(System.Single, System.String, System.Object())
+  nameWithType: IValidationResolver.IsNotZero(Single, String, Object[])
+  nameWithType.vb: IValidationResolver.IsNotZero(Single, String, Object())
+- uid: Dangr.Core.Diagnostics.IValidationResolver.IsNotZero*
+  name: IsNotZero
+  href: api/Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsNotZero_
+  commentId: Overload:Dangr.Core.Diagnostics.IValidationResolver.IsNotZero
+  fullName: Dangr.Core.Diagnostics.IValidationResolver.IsNotZero
+  nameWithType: IValidationResolver.IsNotZero
+- uid: Dangr.Core.Diagnostics.IValidationResolver.IsNull(System.Object,System.String,System.Object[])
+  name: IsNull(Object, String, Object[])
+  href: api/Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsNull_System_Object_System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.IValidationResolver.IsNull(System.Object,System.String,System.Object[])
+  name.vb: IsNull(Object, String, Object())
+  fullName: Dangr.Core.Diagnostics.IValidationResolver.IsNull(System.Object, System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.IValidationResolver.IsNull(System.Object, System.String, System.Object())
+  nameWithType: IValidationResolver.IsNull(Object, String, Object[])
+  nameWithType.vb: IValidationResolver.IsNull(Object, String, Object())
+- uid: Dangr.Core.Diagnostics.IValidationResolver.IsNull*
+  name: IsNull
+  href: api/Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsNull_
+  commentId: Overload:Dangr.Core.Diagnostics.IValidationResolver.IsNull
+  fullName: Dangr.Core.Diagnostics.IValidationResolver.IsNull
+  nameWithType: IValidationResolver.IsNull
+- uid: Dangr.Core.Diagnostics.IValidationResolver.IsNullOrEmpty(System.String,System.String,System.Object[])
+  name: IsNullOrEmpty(String, String, Object[])
+  href: api/Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsNullOrEmpty_System_String_System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.IValidationResolver.IsNullOrEmpty(System.String,System.String,System.Object[])
+  name.vb: IsNullOrEmpty(String, String, Object())
+  fullName: Dangr.Core.Diagnostics.IValidationResolver.IsNullOrEmpty(System.String, System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.IValidationResolver.IsNullOrEmpty(System.String, System.String, System.Object())
+  nameWithType: IValidationResolver.IsNullOrEmpty(String, String, Object[])
+  nameWithType.vb: IValidationResolver.IsNullOrEmpty(String, String, Object())
+- uid: Dangr.Core.Diagnostics.IValidationResolver.IsNullOrEmpty*
+  name: IsNullOrEmpty
+  href: api/Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsNullOrEmpty_
+  commentId: Overload:Dangr.Core.Diagnostics.IValidationResolver.IsNullOrEmpty
+  fullName: Dangr.Core.Diagnostics.IValidationResolver.IsNullOrEmpty
+  nameWithType: IValidationResolver.IsNullOrEmpty
+- uid: Dangr.Core.Diagnostics.IValidationResolver.IsNullOrWhiteSpace(System.String,System.String,System.Object[])
+  name: IsNullOrWhiteSpace(String, String, Object[])
+  href: api/Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsNullOrWhiteSpace_System_String_System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.IValidationResolver.IsNullOrWhiteSpace(System.String,System.String,System.Object[])
+  name.vb: IsNullOrWhiteSpace(String, String, Object())
+  fullName: Dangr.Core.Diagnostics.IValidationResolver.IsNullOrWhiteSpace(System.String, System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.IValidationResolver.IsNullOrWhiteSpace(System.String, System.String, System.Object())
+  nameWithType: IValidationResolver.IsNullOrWhiteSpace(String, String, Object[])
+  nameWithType.vb: IValidationResolver.IsNullOrWhiteSpace(String, String, Object())
+- uid: Dangr.Core.Diagnostics.IValidationResolver.IsNullOrWhiteSpace*
+  name: IsNullOrWhiteSpace
+  href: api/Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsNullOrWhiteSpace_
+  commentId: Overload:Dangr.Core.Diagnostics.IValidationResolver.IsNullOrWhiteSpace
+  fullName: Dangr.Core.Diagnostics.IValidationResolver.IsNullOrWhiteSpace
+  nameWithType: IValidationResolver.IsNullOrWhiteSpace
+- uid: Dangr.Core.Diagnostics.IValidationResolver.IsTrue(System.Boolean,System.String,System.Object[])
+  name: IsTrue(Boolean, String, Object[])
+  href: api/Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsTrue_System_Boolean_System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.IValidationResolver.IsTrue(System.Boolean,System.String,System.Object[])
+  name.vb: IsTrue(Boolean, String, Object())
+  fullName: Dangr.Core.Diagnostics.IValidationResolver.IsTrue(System.Boolean, System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.IValidationResolver.IsTrue(System.Boolean, System.String, System.Object())
+  nameWithType: IValidationResolver.IsTrue(Boolean, String, Object[])
+  nameWithType.vb: IValidationResolver.IsTrue(Boolean, String, Object())
+- uid: Dangr.Core.Diagnostics.IValidationResolver.IsTrue*
+  name: IsTrue
+  href: api/Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsTrue_
+  commentId: Overload:Dangr.Core.Diagnostics.IValidationResolver.IsTrue
+  fullName: Dangr.Core.Diagnostics.IValidationResolver.IsTrue
+  nameWithType: IValidationResolver.IsTrue
+- uid: Dangr.Core.Diagnostics.IValidationResolver.IsType*
+  name: IsType
+  href: api/Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsType_
+  commentId: Overload:Dangr.Core.Diagnostics.IValidationResolver.IsType
+  fullName: Dangr.Core.Diagnostics.IValidationResolver.IsType
+  nameWithType: IValidationResolver.IsType
+- uid: Dangr.Core.Diagnostics.IValidationResolver.IsType``1(System.Object,System.String,System.Object[])
+  name: IsType<T>(Object, String, Object[])
+  href: api/Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsType__1_System_Object_System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.IValidationResolver.IsType``1(System.Object,System.String,System.Object[])
+  name.vb: IsType(Of T)(Object, String, Object())
+  fullName: Dangr.Core.Diagnostics.IValidationResolver.IsType<T>(System.Object, System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.IValidationResolver.IsType(Of T)(System.Object, System.String, System.Object())
+  nameWithType: IValidationResolver.IsType<T>(Object, String, Object[])
+  nameWithType.vb: IValidationResolver.IsType(Of T)(Object, String, Object())
+- uid: Dangr.Core.Diagnostics.IValidationResolver.IsTypeOrNull*
+  name: IsTypeOrNull
+  href: api/Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsTypeOrNull_
+  commentId: Overload:Dangr.Core.Diagnostics.IValidationResolver.IsTypeOrNull
+  fullName: Dangr.Core.Diagnostics.IValidationResolver.IsTypeOrNull
+  nameWithType: IValidationResolver.IsTypeOrNull
+- uid: Dangr.Core.Diagnostics.IValidationResolver.IsTypeOrNull``1(System.Object,System.String,System.Object[])
+  name: IsTypeOrNull<T>(Object, String, Object[])
+  href: api/Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsTypeOrNull__1_System_Object_System_String_System_Object___
+  commentId: M:Dangr.Core.Diagnostics.IValidationResolver.IsTypeOrNull``1(System.Object,System.String,System.Object[])
+  name.vb: IsTypeOrNull(Of T)(Object, String, Object())
+  fullName: Dangr.Core.Diagnostics.IValidationResolver.IsTypeOrNull<T>(System.Object, System.String, System.Object[])
+  fullName.vb: Dangr.Core.Diagnostics.IValidationResolver.IsTypeOrNull(Of T)(System.Object, System.String, System.Object())
+  nameWithType: IValidationResolver.IsTypeOrNull<T>(Object, String, Object[])
+  nameWithType.vb: IValidationResolver.IsTypeOrNull(Of T)(Object, String, Object())
+- uid: Dangr.Core.Diagnostics.IValidationResolver.NotDisposed(Dangr.Core.Util.ICheckedDisposable,System.String)
+  name: NotDisposed(ICheckedDisposable, String)
+  href: api/Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_NotDisposed_Dangr_Core_Util_ICheckedDisposable_System_String_
+  commentId: M:Dangr.Core.Diagnostics.IValidationResolver.NotDisposed(Dangr.Core.Util.ICheckedDisposable,System.String)
+  fullName: Dangr.Core.Diagnostics.IValidationResolver.NotDisposed(Dangr.Core.Util.ICheckedDisposable, System.String)
+  nameWithType: IValidationResolver.NotDisposed(ICheckedDisposable, String)
+- uid: Dangr.Core.Diagnostics.IValidationResolver.NotDisposed*
+  name: NotDisposed
+  href: api/Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_NotDisposed_
+  commentId: Overload:Dangr.Core.Diagnostics.IValidationResolver.NotDisposed
+  fullName: Dangr.Core.Diagnostics.IValidationResolver.NotDisposed
+  nameWithType: IValidationResolver.NotDisposed
+- uid: Dangr.Core.Diagnostics.Validate
+  name: Validate
+  href: api/Dangr.Core.Diagnostics.Validate.html
+  commentId: T:Dangr.Core.Diagnostics.Validate
+  fullName: Dangr.Core.Diagnostics.Validate
+  nameWithType: Validate
+- uid: Dangr.Core.Diagnostics.Validate.Argument
+  name: Argument
+  href: api/Dangr.Core.Diagnostics.Validate.html#Dangr_Core_Diagnostics_Validate_Argument
+  commentId: P:Dangr.Core.Diagnostics.Validate.Argument
+  fullName: Dangr.Core.Diagnostics.Validate.Argument
+  nameWithType: Validate.Argument
+- uid: Dangr.Core.Diagnostics.Validate.Argument*
+  name: Argument
+  href: api/Dangr.Core.Diagnostics.Validate.html#Dangr_Core_Diagnostics_Validate_Argument_
+  commentId: Overload:Dangr.Core.Diagnostics.Validate.Argument
+  fullName: Dangr.Core.Diagnostics.Validate.Argument
+  nameWithType: Validate.Argument
+- uid: Dangr.Core.Diagnostics.Validate.Result
+  name: Result
+  href: api/Dangr.Core.Diagnostics.Validate.html#Dangr_Core_Diagnostics_Validate_Result
+  commentId: P:Dangr.Core.Diagnostics.Validate.Result
+  fullName: Dangr.Core.Diagnostics.Validate.Result
+  nameWithType: Validate.Result
+- uid: Dangr.Core.Diagnostics.Validate.Result*
+  name: Result
+  href: api/Dangr.Core.Diagnostics.Validate.html#Dangr_Core_Diagnostics_Validate_Result_
+  commentId: Overload:Dangr.Core.Diagnostics.Validate.Result
+  fullName: Dangr.Core.Diagnostics.Validate.Result
+  nameWithType: Validate.Result
 - uid: Dangr.Core.Diagnostics.ValidationFailedException
   name: ValidationFailedException
   href: api/Dangr.Core.Diagnostics.ValidationFailedException.html
@@ -5248,6 +5961,24 @@ references:
   commentId: Overload:Dangr.Core.Util.IUidObject.Uid
   fullName: Dangr.Core.Util.IUidObject.Uid
   nameWithType: IUidObject.Uid
+- uid: Dangr.Core.Util.ObjectExtensions
+  name: ObjectExtensions
+  href: api/Dangr.Core.Util.ObjectExtensions.html
+  commentId: T:Dangr.Core.Util.ObjectExtensions
+  fullName: Dangr.Core.Util.ObjectExtensions
+  nameWithType: ObjectExtensions
+- uid: Dangr.Core.Util.ObjectExtensions.ToNullSafeString(System.Object)
+  name: ToNullSafeString(Object)
+  href: api/Dangr.Core.Util.ObjectExtensions.html#Dangr_Core_Util_ObjectExtensions_ToNullSafeString_System_Object_
+  commentId: M:Dangr.Core.Util.ObjectExtensions.ToNullSafeString(System.Object)
+  fullName: Dangr.Core.Util.ObjectExtensions.ToNullSafeString(System.Object)
+  nameWithType: ObjectExtensions.ToNullSafeString(Object)
+- uid: Dangr.Core.Util.ObjectExtensions.ToNullSafeString*
+  name: ToNullSafeString
+  href: api/Dangr.Core.Util.ObjectExtensions.html#Dangr_Core_Util_ObjectExtensions_ToNullSafeString_
+  commentId: Overload:Dangr.Core.Util.ObjectExtensions.ToNullSafeString
+  fullName: Dangr.Core.Util.ObjectExtensions.ToNullSafeString
+  nameWithType: ObjectExtensions.ToNullSafeString
 - uid: Dangr.Core.Util.StaticIdCounter
   name: StaticIdCounter
   href: api/Dangr.Core.Util.StaticIdCounter.html

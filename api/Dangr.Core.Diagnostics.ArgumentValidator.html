@@ -1,0 +1,1485 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ArgumentValidator
+   | DangrLib </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ArgumentValidator
+   | DangrLib ">
+    <meta name="generator" content="docfx 2.22.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Dangr.Core.Diagnostics.ArgumentValidator">
+  
+  
+  <h1 id="Dangr_Core_Diagnostics_ArgumentValidator" data-uid="Dangr.Core.Diagnostics.ArgumentValidator" class="text-break">Class ArgumentValidator
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ArgumentValidator</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Dangr.Core.Diagnostics.html">Dangr.Core.Diagnostics</a></h6>
+  <h6><strong>Assembly</strong>: Dangr.Diagnostics.dll</h6>
+  <h5 id="Dangr_Core_Diagnostics_ArgumentValidator_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ArgumentValidator : IValidationResolver</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Dangr_Core_Diagnostics_ArgumentValidator_AreEqual_" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.AreEqual*"></a>
+  <h4 id="Dangr_Core_Diagnostics_ArgumentValidator_AreEqual_System_Object_System_Object_System_String_System_Object___" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.AreEqual(System.Object,System.Object,System.String,System.Object[])">AreEqual(Object, Object, String, Object[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AreEqual(object a, object b, string message, params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">a</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">b</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_AreEqual_System_Object_System_Object_System_String_System_Object___">IValidationResolver.AreEqual(Object, Object, String, Object[])</a></div>
+  <a id="Dangr_Core_Diagnostics_ArgumentValidator_AreNotEqual_" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.AreNotEqual*"></a>
+  <h4 id="Dangr_Core_Diagnostics_ArgumentValidator_AreNotEqual_System_Object_System_Object_System_String_System_Object___" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.AreNotEqual(System.Object,System.Object,System.String,System.Object[])">AreNotEqual(Object, Object, String, Object[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AreNotEqual(object a, object b, string message, params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">a</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">b</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_AreNotEqual_System_Object_System_Object_System_String_System_Object___">IValidationResolver.AreNotEqual(Object, Object, String, Object[])</a></div>
+  <a id="Dangr_Core_Diagnostics_ArgumentValidator_Compare_" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.Compare*"></a>
+  <h4 id="Dangr_Core_Diagnostics_ArgumentValidator_Compare__1___0_Dangr_Core_Diagnostics_CompareOperation___0_System_String_System_Object___" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.Compare``1(``0,Dangr.Core.Diagnostics.CompareOperation,``0,System.String,System.Object[])">Compare&lt;T&gt;(T, CompareOperation, T, String, Object[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Compare&lt;T&gt;(T a, CompareOperation operation, T b, string message, params object[] args)where T : IComparable</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">a</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Dangr.Core.Diagnostics.CompareOperation.html">CompareOperation</a></td>
+        <td><span class="parametername">operation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">b</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_Compare__1___0_Dangr_Core_Diagnostics_CompareOperation___0_System_String_System_Object___">IValidationResolver.Compare&lt;T&gt;(T, CompareOperation, T, String, Object[])</a></div>
+  <a id="Dangr_Core_Diagnostics_ArgumentValidator_Fail_" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.Fail*"></a>
+  <h4 id="Dangr_Core_Diagnostics_ArgumentValidator_Fail_System_String_System_Object___" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.Fail(System.String,System.Object[])">Fail(String, Object[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Fail(string message, params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_Fail_System_String_System_Object___">IValidationResolver.Fail(String, Object[])</a></div>
+  <a id="Dangr_Core_Diagnostics_ArgumentValidator_IsEmpty_" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.IsEmpty*"></a>
+  <h4 id="Dangr_Core_Diagnostics_ArgumentValidator_IsEmpty__1_System_Collections_Generic_ICollection___0__System_String_System_Object___" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.IsEmpty``1(System.Collections.Generic.ICollection{``0},System.String,System.Object[])">IsEmpty&lt;T&gt;(ICollection&lt;T&gt;, String, Object[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsEmpty&lt;T&gt;(ICollection&lt;T&gt; collection, string message, params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;T&gt;</td>
+        <td><span class="parametername">collection</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsEmpty__1_System_Collections_Generic_ICollection___0__System_String_System_Object___">IValidationResolver.IsEmpty&lt;T&gt;(ICollection&lt;T&gt;, String, Object[])</a></div>
+  <a id="Dangr_Core_Diagnostics_ArgumentValidator_IsEmpty_" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.IsEmpty*"></a>
+  <h4 id="Dangr_Core_Diagnostics_ArgumentValidator_IsEmpty__1_System_Collections_Generic_IEnumerable___0__System_String_System_Object___" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.IsEmpty``1(System.Collections.Generic.IEnumerable{``0},System.String,System.Object[])">IsEmpty&lt;T&gt;(IEnumerable&lt;T&gt;, String, Object[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsEmpty&lt;T&gt;(IEnumerable&lt;T&gt; collection, string message, params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td><span class="parametername">collection</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsEmpty__1_System_Collections_Generic_IEnumerable___0__System_String_System_Object___">IValidationResolver.IsEmpty&lt;T&gt;(IEnumerable&lt;T&gt;, String, Object[])</a></div>
+  <a id="Dangr_Core_Diagnostics_ArgumentValidator_IsFalse_" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.IsFalse*"></a>
+  <h4 id="Dangr_Core_Diagnostics_ArgumentValidator_IsFalse_System_Boolean_System_String_System_Object___" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.IsFalse(System.Boolean,System.String,System.Object[])">IsFalse(Boolean, String, Object[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsFalse(bool condition, string message, params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">condition</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsFalse_System_Boolean_System_String_System_Object___">IValidationResolver.IsFalse(Boolean, String, Object[])</a></div>
+  <a id="Dangr_Core_Diagnostics_ArgumentValidator_IsInRange_" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.IsInRange*"></a>
+  <h4 id="Dangr_Core_Diagnostics_ArgumentValidator_IsInRange__1___0___0___0_System_String_System_Object___" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.IsInRange``1(``0,``0,``0,System.String,System.Object[])">IsInRange&lt;T&gt;(T, T, T, String, Object[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInRange&lt;T&gt;(T value, T min, T max, string message, params object[] args)where T : IComparable</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">min</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">max</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsInRange__1___0___0___0_System_String_System_Object___">IValidationResolver.IsInRange&lt;T&gt;(T, T, T, String, Object[])</a></div>
+  <a id="Dangr_Core_Diagnostics_ArgumentValidator_IsNotEmpty_" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.IsNotEmpty*"></a>
+  <h4 id="Dangr_Core_Diagnostics_ArgumentValidator_IsNotEmpty__1_System_Collections_Generic_ICollection___0__System_String_System_Object___" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.IsNotEmpty``1(System.Collections.Generic.ICollection{``0},System.String,System.Object[])">IsNotEmpty&lt;T&gt;(ICollection&lt;T&gt;, String, Object[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsNotEmpty&lt;T&gt;(ICollection&lt;T&gt; collection, string message, params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;T&gt;</td>
+        <td><span class="parametername">collection</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsNotEmpty__1_System_Collections_Generic_ICollection___0__System_String_System_Object___">IValidationResolver.IsNotEmpty&lt;T&gt;(ICollection&lt;T&gt;, String, Object[])</a></div>
+  <a id="Dangr_Core_Diagnostics_ArgumentValidator_IsNotEmpty_" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.IsNotEmpty*"></a>
+  <h4 id="Dangr_Core_Diagnostics_ArgumentValidator_IsNotEmpty__1_System_Collections_Generic_IEnumerable___0__System_String_System_Object___" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.IsNotEmpty``1(System.Collections.Generic.IEnumerable{``0},System.String,System.Object[])">IsNotEmpty&lt;T&gt;(IEnumerable&lt;T&gt;, String, Object[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsNotEmpty&lt;T&gt;(IEnumerable&lt;T&gt; collection, string message, params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td><span class="parametername">collection</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsNotEmpty__1_System_Collections_Generic_IEnumerable___0__System_String_System_Object___">IValidationResolver.IsNotEmpty&lt;T&gt;(IEnumerable&lt;T&gt;, String, Object[])</a></div>
+  <a id="Dangr_Core_Diagnostics_ArgumentValidator_IsNotNull_" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.IsNotNull*"></a>
+  <h4 id="Dangr_Core_Diagnostics_ArgumentValidator_IsNotNull_System_Object_System_String_System_Object___" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.IsNotNull(System.Object,System.String,System.Object[])">IsNotNull(Object, String, Object[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsNotNull(object value, string message, params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsNotNull_System_Object_System_String_System_Object___">IValidationResolver.IsNotNull(Object, String, Object[])</a></div>
+  <a id="Dangr_Core_Diagnostics_ArgumentValidator_IsNotNullOrEmpty_" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.IsNotNullOrEmpty*"></a>
+  <h4 id="Dangr_Core_Diagnostics_ArgumentValidator_IsNotNullOrEmpty_System_String_System_String_System_Object___" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.IsNotNullOrEmpty(System.String,System.String,System.Object[])">IsNotNullOrEmpty(String, String, Object[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsNotNullOrEmpty(string value, string message, params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsNotNullOrEmpty_System_String_System_String_System_Object___">IValidationResolver.IsNotNullOrEmpty(String, String, Object[])</a></div>
+  <a id="Dangr_Core_Diagnostics_ArgumentValidator_IsNotNullOrWhiteSpace_" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.IsNotNullOrWhiteSpace*"></a>
+  <h4 id="Dangr_Core_Diagnostics_ArgumentValidator_IsNotNullOrWhiteSpace_System_String_System_String_System_Object___" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.IsNotNullOrWhiteSpace(System.String,System.String,System.Object[])">IsNotNullOrWhiteSpace(String, String, Object[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsNotNullOrWhiteSpace(string value, string message, params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsNotNullOrWhiteSpace_System_String_System_String_System_Object___">IValidationResolver.IsNotNullOrWhiteSpace(String, String, Object[])</a></div>
+  <a id="Dangr_Core_Diagnostics_ArgumentValidator_IsNotZero_" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.IsNotZero*"></a>
+  <h4 id="Dangr_Core_Diagnostics_ArgumentValidator_IsNotZero_System_Double_System_String_System_Object___" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.IsNotZero(System.Double,System.String,System.Object[])">IsNotZero(Double, String, Object[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsNotZero(double value, string message, params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsNotZero_System_Double_System_String_System_Object___">IValidationResolver.IsNotZero(Double, String, Object[])</a></div>
+  <a id="Dangr_Core_Diagnostics_ArgumentValidator_IsNotZero_" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.IsNotZero*"></a>
+  <h4 id="Dangr_Core_Diagnostics_ArgumentValidator_IsNotZero_System_Int32_System_String_System_Object___" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.IsNotZero(System.Int32,System.String,System.Object[])">IsNotZero(Int32, String, Object[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsNotZero(int value, string message, params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsNotZero_System_Int32_System_String_System_Object___">IValidationResolver.IsNotZero(Int32, String, Object[])</a></div>
+  <a id="Dangr_Core_Diagnostics_ArgumentValidator_IsNotZero_" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.IsNotZero*"></a>
+  <h4 id="Dangr_Core_Diagnostics_ArgumentValidator_IsNotZero_System_Single_System_String_System_Object___" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.IsNotZero(System.Single,System.String,System.Object[])">IsNotZero(Single, String, Object[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsNotZero(float value, string message, params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsNotZero_System_Single_System_String_System_Object___">IValidationResolver.IsNotZero(Single, String, Object[])</a></div>
+  <a id="Dangr_Core_Diagnostics_ArgumentValidator_IsNull_" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.IsNull*"></a>
+  <h4 id="Dangr_Core_Diagnostics_ArgumentValidator_IsNull_System_Object_System_String_System_Object___" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.IsNull(System.Object,System.String,System.Object[])">IsNull(Object, String, Object[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsNull(object value, string message, params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsNull_System_Object_System_String_System_Object___">IValidationResolver.IsNull(Object, String, Object[])</a></div>
+  <a id="Dangr_Core_Diagnostics_ArgumentValidator_IsNullOrEmpty_" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.IsNullOrEmpty*"></a>
+  <h4 id="Dangr_Core_Diagnostics_ArgumentValidator_IsNullOrEmpty_System_String_System_String_System_Object___" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.IsNullOrEmpty(System.String,System.String,System.Object[])">IsNullOrEmpty(String, String, Object[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsNullOrEmpty(string value, string message, params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsNullOrEmpty_System_String_System_String_System_Object___">IValidationResolver.IsNullOrEmpty(String, String, Object[])</a></div>
+  <a id="Dangr_Core_Diagnostics_ArgumentValidator_IsNullOrWhiteSpace_" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.IsNullOrWhiteSpace*"></a>
+  <h4 id="Dangr_Core_Diagnostics_ArgumentValidator_IsNullOrWhiteSpace_System_String_System_String_System_Object___" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.IsNullOrWhiteSpace(System.String,System.String,System.Object[])">IsNullOrWhiteSpace(String, String, Object[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsNullOrWhiteSpace(string value, string message, params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsNullOrWhiteSpace_System_String_System_String_System_Object___">IValidationResolver.IsNullOrWhiteSpace(String, String, Object[])</a></div>
+  <a id="Dangr_Core_Diagnostics_ArgumentValidator_IsTrue_" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.IsTrue*"></a>
+  <h4 id="Dangr_Core_Diagnostics_ArgumentValidator_IsTrue_System_Boolean_System_String_System_Object___" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.IsTrue(System.Boolean,System.String,System.Object[])">IsTrue(Boolean, String, Object[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsTrue(bool condition, string message, params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">condition</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsTrue_System_Boolean_System_String_System_Object___">IValidationResolver.IsTrue(Boolean, String, Object[])</a></div>
+  <a id="Dangr_Core_Diagnostics_ArgumentValidator_IsType_" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.IsType*"></a>
+  <h4 id="Dangr_Core_Diagnostics_ArgumentValidator_IsType__1_System_Object_System_String_System_Object___" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.IsType``1(System.Object,System.String,System.Object[])">IsType&lt;T&gt;(Object, String, Object[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsType&lt;T&gt;(object obj, string message, params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsType__1_System_Object_System_String_System_Object___">IValidationResolver.IsType&lt;T&gt;(Object, String, Object[])</a></div>
+  <a id="Dangr_Core_Diagnostics_ArgumentValidator_IsTypeOrNull_" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.IsTypeOrNull*"></a>
+  <h4 id="Dangr_Core_Diagnostics_ArgumentValidator_IsTypeOrNull__1_System_Object_System_String_System_Object___" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.IsTypeOrNull``1(System.Object,System.String,System.Object[])">IsTypeOrNull&lt;T&gt;(Object, String, Object[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsTypeOrNull&lt;T&gt;(object obj, string message, params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_IsTypeOrNull__1_System_Object_System_String_System_Object___">IValidationResolver.IsTypeOrNull&lt;T&gt;(Object, String, Object[])</a></div>
+  <a id="Dangr_Core_Diagnostics_ArgumentValidator_NotDisposed_" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.NotDisposed*"></a>
+  <h4 id="Dangr_Core_Diagnostics_ArgumentValidator_NotDisposed_Dangr_Core_Util_ICheckedDisposable_System_String_" data-uid="Dangr.Core.Diagnostics.ArgumentValidator.NotDisposed(Dangr.Core.Util.ICheckedDisposable,System.String)">NotDisposed(ICheckedDisposable, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool NotDisposed(ICheckedDisposable disposable, string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dangr.Core.Util.ICheckedDisposable.html">ICheckedDisposable</a></td>
+        <td><span class="parametername">disposable</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Dangr.Core.Diagnostics.IValidationResolver.html#Dangr_Core_Diagnostics_IValidationResolver_NotDisposed_Dangr_Core_Util_ICheckedDisposable_System_String_">IValidationResolver.NotDisposed(ICheckedDisposable, String)</a></div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Dangr.Core.Util.ObjectExtensions.html#Dangr_Core_Util_ObjectExtensions_ToNullSafeString_System_Object_">ObjectExtensions.ToNullSafeString(Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright Ⓒ 2017 Phoenix Game Studios, LLC. All rights reserved.<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

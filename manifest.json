@@ -1,1 +1,1418 @@
-{"homepages":[],"source_base_path":"D:/Source/git/DangrLib/src/Dangr.Doc","xrefmap":"xrefmap.yml","files":[{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Logging.Wcf.WcfLogService.ServiceHolder.yml","output":{".html":{"relative_path":"api/Dangr.Core.Logging.Wcf.WcfLogService.ServiceHolder.html","hash":"v9d0SnEAUWANeh9zdNpyZg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Logging.Wcf.WcfLogService.yml","output":{".html":{"relative_path":"api/Dangr.Core.Logging.Wcf.WcfLogService.html","hash":"4aaj2Zj091n5xilVfnECAg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Registry.MemoryRegistry.MemoryRegistryEditor.yml","output":{".html":{"relative_path":"api/Dangr.Core.Registry.MemoryRegistry.MemoryRegistryEditor.html","hash":"KmWMQdjZm+Vs1qyY/0IyHg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Util.StaticIdCounter.yml","output":{".html":{"relative_path":"api/Dangr.Core.Util.StaticIdCounter.html","hash":"LL8jEbCPkShxeuxcxUZ13A=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.ObjectPool.yml","output":{".html":{"relative_path":"api/Dangr.Core.ObjectPool.html","hash":"SqJz19oVRHw2GmWPIuJKbw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Command.IDangrCommand.yml","output":{".html":{"relative_path":"api/Dangr.Core.Command.IDangrCommand.html","hash":"vd8GZYTU4LoXQmyZctZ8ZQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Diagnostics.AssertResolver.yml","output":{".html":{"relative_path":"api/Dangr.Core.Diagnostics.AssertResolver.html","hash":"iiuXX34jA4qQDTxIx38mkQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Math.LinearAnimator.yml","output":{".html":{"relative_path":"api/Dangr.Core.Math.LinearAnimator.html","hash":"xBUBUw8RhxHQTYuj27lYSw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.ObjectPool.ObjectPool-1.yml","output":{".html":{"relative_path":"api/Dangr.Core.ObjectPool.ObjectPool-1.html","hash":"l474tUiYpFIqIs1YdEQzfQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.ObjectPool.WeakReferenceObjectPool-1.yml","output":{".html":{"relative_path":"api/Dangr.Core.ObjectPool.WeakReferenceObjectPool-1.html","hash":"C/U9OOqp9SyhLFjR0fap4A=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Util.IdCounter.yml","output":{".html":{"relative_path":"api/Dangr.Core.Util.IdCounter.html","hash":"bMk6nFB3y1BaX38kiUwjjg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Command.Annotation.AliasAttribute.yml","output":{".html":{"relative_path":"api/Dangr.Core.Command.Annotation.AliasAttribute.html","hash":"aJ9cRom8kMCQinN7SXkoPw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Command.Exceptions.MissingCommandArgumentException.yml","output":{".html":{"relative_path":"api/Dangr.Core.Command.Exceptions.MissingCommandArgumentException.html","hash":"ajTc7e9ktcCQb+cEnyaQKQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Logging.Loggers.DebugTraceLogger.yml","output":{".html":{"relative_path":"api/Dangr.Core.Logging.Loggers.DebugTraceLogger.html","hash":"3OXQxqR+CPDmFsOQQf8TpQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.ObjectPool.GenericObjectPool-1.yml","output":{".html":{"relative_path":"api/Dangr.Core.ObjectPool.GenericObjectPool-1.html","hash":"fQR7Uc7wvZM41EojRuAkMQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Command.Exceptions.CommandLineParseException.yml","output":{".html":{"relative_path":"api/Dangr.Core.Command.Exceptions.CommandLineParseException.html","hash":"/6e9PUmTEWJxCFyfW6wCdw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Configuration.Views.AllSettingsConfigurationView.yml","output":{".html":{"relative_path":"api/Dangr.Core.Configuration.Views.AllSettingsConfigurationView.html","hash":"hOr795zvRADp68uKBY8hXw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Configuration.SettingChangedEventArgs.yml","output":{".html":{"relative_path":"api/Dangr.Core.Configuration.SettingChangedEventArgs.html","hash":"nJwR/KXZ/2rtlKJnx233cA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Entity.EntityTable-1.yml","output":{".html":{"relative_path":"api/Dangr.Core.Entity.EntityTable-1.html","hash":"ndoMgdf5UeYx3akbA3S73A=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Logging.Loggers.TextLogger.yml","output":{".html":{"relative_path":"api/Dangr.Core.Logging.Loggers.TextLogger.html","hash":"F+XWF/HCWKlYfi98axqlSg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Configuration.ConfigurationSource.yml","output":{".html":{"relative_path":"api/Dangr.Core.Configuration.ConfigurationSource.html","hash":"vNy++t4Li2LZ5/Z8AgttVQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Entity.yml","output":{".html":{"relative_path":"api/Dangr.Core.Entity.html","hash":"/+iFATUvPPwa7SK5pkI+DA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Registry.yml","output":{".html":{"relative_path":"api/Dangr.Core.Registry.html","hash":"5hROCgvcQroTS6Ezx2AchA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Util.yml","output":{".html":{"relative_path":"api/Dangr.Core.Util.html","hash":"dAJcZNGpOdXHDR8bjx1H/g=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Entity.IEntity.yml","output":{".html":{"relative_path":"api/Dangr.Core.Entity.IEntity.html","hash":"jslY19HcpZTUODR1pAYcqg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Logging.Wcf.yml","output":{".html":{"relative_path":"api/Dangr.Core.Logging.Wcf.html","hash":"5ss1puuSEXIW5ycRJCphoQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Logging.yml","output":{".html":{"relative_path":"api/Dangr.Core.Logging.html","hash":"+Hq5qs/eQ6sa7GiHJDo+3g=="}},"is_incremental":false,"version":""},{"type":"Toc","source_relative_path":"toc.yml","output":{".html":{"relative_path":"toc.html","hash":"uOJ8LFagZ0ySr2xdfZKBEQ=="}},"is_incremental":false,"version":""},{"type":"Toc","source_relative_path":"articles/toc.md","output":{".html":{"relative_path":"articles/toc.html","hash":"P9GAqZkT6mZuWFb9hyI8/Q=="}},"is_incremental":false,"version":""},{"type":"Toc","source_relative_path":"obj/api/toc.yml","output":{".html":{"relative_path":"api/toc.html","hash":"FG1lzIKv98BMgDTM68bgiA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Command.Exceptions.InvalidCommandArgumentException.yml","output":{".html":{"relative_path":"api/Dangr.Core.Command.Exceptions.InvalidCommandArgumentException.html","hash":"2kquCQ8KJ6KP9RIAAR0c/Q=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Entity.EntityAttribute.yml","output":{".html":{"relative_path":"api/Dangr.Core.Entity.EntityAttribute.html","hash":"duw3lci/0CKPk56ZqXlh/g=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Event.EventHandlerAttribute.yml","output":{".html":{"relative_path":"api/Dangr.Core.Event.EventHandlerAttribute.html","hash":"1AkKAAmu+kFc3F7r6yfJxA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Diagnostics.ValidationFailedException.yml","output":{".html":{"relative_path":"api/Dangr.Core.Diagnostics.ValidationFailedException.html","hash":"yIPfwTisgPZZ2t38xJ5bNQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Math.QuadraticAnimator.yml","output":{".html":{"relative_path":"api/Dangr.Core.Math.QuadraticAnimator.html","hash":"+MX4q/Heh4YSCyW6uijp2g=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Command.Exceptions.UnknownCommandArgumentException.yml","output":{".html":{"relative_path":"api/Dangr.Core.Command.Exceptions.UnknownCommandArgumentException.html","hash":"TqycNwhlwUMn+0NCuCMaQQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Configuration.Sources.DebugConfigurationSource.yml","output":{".html":{"relative_path":"api/Dangr.Core.Configuration.Sources.DebugConfigurationSource.html","hash":"Y8vi4Rfcp9aRp52aeo1EOQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Logging.ILogService.yml","output":{".html":{"relative_path":"api/Dangr.Core.Logging.ILogService.html","hash":"gIpamlg3kEbjSwt6l4jrXw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Logging.Loggers.WcfLogger.yml","output":{".html":{"relative_path":"api/Dangr.Core.Logging.Loggers.WcfLogger.html","hash":"fkkLUzKywHZ2KvT8eVMmrw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Registry.MemoryRegistry.yml","output":{".html":{"relative_path":"api/Dangr.Core.Registry.MemoryRegistry.html","hash":"eIg/zPiypn/b9FRQF65p3g=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Command.Exceptions.CommandExecutionException.yml","output":{".html":{"relative_path":"api/Dangr.Core.Command.Exceptions.CommandExecutionException.html","hash":"9firR90dvlTXdAXXVHvtgQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Command.ICommandContext.yml","output":{".html":{"relative_path":"api/Dangr.Core.Command.ICommandContext.html","hash":"itiyI0V1TsCJLaZxyvEAvg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Configuration.Sources.AppSettingsConfigurationSource.yml","output":{".html":{"relative_path":"api/Dangr.Core.Configuration.Sources.AppSettingsConfigurationSource.html","hash":"w7dh5IZOp0Ff4yCu/ZsZmQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Diagnostics.AssertionFailedException.yml","output":{".html":{"relative_path":"api/Dangr.Core.Diagnostics.AssertionFailedException.html","hash":"FLI68WV7QppF8bjGC4pYfg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Math.CosAnimator.yml","output":{".html":{"relative_path":"api/Dangr.Core.Math.CosAnimator.html","hash":"glREDGd6AN5kuMBpXQBO9g=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Util.IdCounterOutOfRangeException.yml","output":{".html":{"relative_path":"api/Dangr.Core.Util.IdCounterOutOfRangeException.html","hash":"Ue+yBqJ50TTUikID278XgQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Async.MultiThreadedTaskScheduler.yml","output":{".html":{"relative_path":"api/Dangr.Core.Async.MultiThreadedTaskScheduler.html","hash":"34e50fASaOEor0UO2Zzigw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Command.Exceptions.UnknownCommandException.yml","output":{".html":{"relative_path":"api/Dangr.Core.Command.Exceptions.UnknownCommandException.html","hash":"EubbKM5AyghA4ST84AVO4Q=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Logging.LogService.yml","output":{".html":{"relative_path":"api/Dangr.Core.Logging.LogService.html","hash":"bGkLFYK62J/kE6vZqY0riQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Math.InverseQuadraticAnimator.yml","output":{".html":{"relative_path":"api/Dangr.Core.Math.InverseQuadraticAnimator.html","hash":"YFXI31exf2CcN02zMqEjnw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Logging.Loggers.ConsoleLogger.yml","output":{".html":{"relative_path":"api/Dangr.Core.Logging.Loggers.ConsoleLogger.html","hash":"ncKiCalOPJ/Hod9awfXGgw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Math.SinAnimator.yml","output":{".html":{"relative_path":"api/Dangr.Core.Math.SinAnimator.html","hash":"25Z8Ea9jDddOUVn0/lEyaw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Math.SmoothTrigAnimator.yml","output":{".html":{"relative_path":"api/Dangr.Core.Math.SmoothTrigAnimator.html","hash":"6TSyH/dkhvRjToil/7UlVg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Util.ICheckedDisposable.yml","output":{".html":{"relative_path":"api/Dangr.Core.Util.ICheckedDisposable.html","hash":"Dnzf30FEjS23IDpbXrHBFQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Command.Annotation.ParameterAttribute.yml","output":{".html":{"relative_path":"api/Dangr.Core.Command.Annotation.ParameterAttribute.html","hash":"xa45wA0zvPW2Qyy2O16Rhg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Command.CommandExecutor.yml","output":{".html":{"relative_path":"api/Dangr.Core.Command.CommandExecutor.html","hash":"V1E1UHskIKfrNw4s74s+Dg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Configuration.ConfigurationView.yml","output":{".html":{"relative_path":"api/Dangr.Core.Configuration.ConfigurationView.html","hash":"hhU1Ii5PtkY7FkQNLke1Ag=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Registry.RegistryValueChangedEventArgs.yml","output":{".html":{"relative_path":"api/Dangr.Core.Registry.RegistryValueChangedEventArgs.html","hash":"88EzjX+1nznffLZ6koRTNQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Logging.Loggers.yml","output":{".html":{"relative_path":"api/Dangr.Core.Logging.Loggers.html","hash":"zE3LGI6lZqpay03TfZd/Fg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Math.Animator.yml","output":{".html":{"relative_path":"api/Dangr.Core.Math.Animator.html","hash":"iS7Oibwe2+5W2+wVactyag=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Async.yml","output":{".html":{"relative_path":"api/Dangr.Core.Async.html","hash":"f3jUaKI2DxbOiKWrgk+6bw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Command.Annotation.yml","output":{".html":{"relative_path":"api/Dangr.Core.Command.Annotation.html","hash":"5p5MdW/PAWsG8Gj4XaT+Mw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Configuration.yml","output":{".html":{"relative_path":"api/Dangr.Core.Configuration.html","hash":"6DVNx7IGPwPtg0o4OFvzYA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Diagnostics.yml","output":{".html":{"relative_path":"api/Dangr.Core.Diagnostics.html","hash":"xthmXV4SDtQFVovCxTRakA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Event.EventBus.yml","output":{".html":{"relative_path":"api/Dangr.Core.Event.EventBus.html","hash":"aTzSVwarAjIBKAW5z13E1g=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Configuration.Configuration.yml","output":{".html":{"relative_path":"api/Dangr.Core.Configuration.Configuration.html","hash":"PtyvbesKizrcgqToIsjGCg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Configuration.Sources.yml","output":{".html":{"relative_path":"api/Dangr.Core.Configuration.Sources.html","hash":"xxHqmkvsTvf1bMgS/H/O2g=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Logging.Wcf.DefaultWcfEndpoints.yml","output":{".html":{"relative_path":"api/Dangr.Core.Logging.Wcf.DefaultWcfEndpoints.html","hash":"BnoGlj/WZIkGp3TRc113Og=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Math.yml","output":{".html":{"relative_path":"api/Dangr.Core.Math.html","hash":"icH7virI5tiC86SdwCdJPA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.ObjectPool.IPooledObject.yml","output":{".html":{"relative_path":"api/Dangr.Core.ObjectPool.IPooledObject.html","hash":"e807+Lc/Xm2Y1I3VUiWNkQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Logging.Loggers.MemoryLogger.yml","output":{".html":{"relative_path":"api/Dangr.Core.Logging.Loggers.MemoryLogger.html","hash":"WoiHnrdW5l1f+KpH9VgLwg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Logging.Wcf.WcfLoggerConfigView.yml","output":{".html":{"relative_path":"api/Dangr.Core.Logging.Wcf.WcfLoggerConfigView.html","hash":"XPRIp9QXm4Di3ng8Ad9OdA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Command.Annotation.DangrCommandAttribute.yml","output":{".html":{"relative_path":"api/Dangr.Core.Command.Annotation.DangrCommandAttribute.html","hash":"QUjKnoGlNqUpcQtNJqWaLQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Util.IIdCounter.yml","output":{".html":{"relative_path":"api/Dangr.Core.Util.IIdCounter.html","hash":"jQzis6A5TttOTgUIjuxqjQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Command.yml","output":{".html":{"relative_path":"api/Dangr.Core.Command.html","hash":"ilH7LdDuTPmchAsqPblNSg=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Configuration.Views.yml","output":{".html":{"relative_path":"api/Dangr.Core.Configuration.Views.html","hash":"n/WJzO9lxebrMiO+4on6FQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Command.Exceptions.yml","output":{".html":{"relative_path":"api/Dangr.Core.Command.Exceptions.html","hash":"uIx8Xik+adbu9ms68zJLqA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Entity.EntityInfo.yml","output":{".html":{"relative_path":"api/Dangr.Core.Entity.EntityInfo.html","hash":"4BwwV1DoRXJ2GzyST9y8Og=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Event.yml","output":{".html":{"relative_path":"api/Dangr.Core.Event.html","hash":"sPdXZhrYbClBzBaOX2dQQQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Logging.Wcf.IWcfLogService.yml","output":{".html":{"relative_path":"api/Dangr.Core.Logging.Wcf.IWcfLogService.html","hash":"PVjvgr1KfsQRURrI4xTCIA=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Command.CommandLine.yml","output":{".html":{"relative_path":"api/Dangr.Core.Command.CommandLine.html","hash":"WeuiQL813ne2V81g7i+VlQ=="}},"is_incremental":true,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Math.MathHelper.yml","output":{".html":{"relative_path":"api/Dangr.Core.Math.MathHelper.html","hash":"w/FcqwemO1Z79KDUqb+caA=="}},"is_incremental":true,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Logging.LogLevel.yml","output":{".html":{"relative_path":"api/Dangr.Core.Logging.LogLevel.html","hash":"ItGAwZQIfc6nxVm99Rxf2A=="}},"is_incremental":true,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Logging.ILogEndpoint.yml","output":{".html":{"relative_path":"api/Dangr.Core.Logging.ILogEndpoint.html","hash":"epydyZgraHeunnaceZqlIw=="}},"is_incremental":true,"version":""},{"type":"Conceptual","source_relative_path":"api/index.md","output":{".html":{"relative_path":"api/index.html","hash":"MMahGQHbYnnWeo095eHY8Q=="}},"is_incremental":true,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Diagnostics.Assert.yml","output":{".html":{"relative_path":"api/Dangr.Core.Diagnostics.Assert.html","hash":"NG3OWKQVurwhK+QAzndO7A=="}},"is_incremental":true,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Collections.ListExtensions.yml","output":{".html":{"relative_path":"api/Dangr.Core.Collections.ListExtensions.html","hash":"YErvqf93hHXcWws8BwfZoQ=="}},"is_incremental":true,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Util.IdCounter.Range.yml","output":{".html":{"relative_path":"api/Dangr.Core.Util.IdCounter.Range.html","hash":"kOqo5vEpKbt46bUL76/68w=="}},"is_incremental":true,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Logging.ILogSource.yml","output":{".html":{"relative_path":"api/Dangr.Core.Logging.ILogSource.html","hash":"dRfPtvQMHPr+iEMrkVVb+Q=="}},"is_incremental":true,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Collections.yml","output":{".html":{"relative_path":"api/Dangr.Core.Collections.html","hash":"buLfDnRe9W0TDrFTXfoxBg=="}},"is_incremental":true,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Util.IUidObject.yml","output":{".html":{"relative_path":"api/Dangr.Core.Util.IUidObject.html","hash":"lrJiHsIqBNKdnQz+g4ERhg=="}},"is_incremental":true,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Util.InitializableExtensions.yml","output":{".html":{"relative_path":"api/Dangr.Core.Util.InitializableExtensions.html","hash":"E91wAHIdoniRxRo8HKi8tQ=="}},"is_incremental":true,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Test.yml","output":{".html":{"relative_path":"api/Dangr.Core.Test.html","hash":"//pQKr6Zb5Kfc5aoYZZjwg=="}},"is_incremental":true,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Test.TestUtils.yml","output":{".html":{"relative_path":"api/Dangr.Core.Test.TestUtils.html","hash":"PB73Cu7p7V/lvG8LqwqtTw=="}},"is_incremental":true,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Util.StringExtensions.yml","output":{".html":{"relative_path":"api/Dangr.Core.Util.StringExtensions.html","hash":"v46jo68iuXCCT/bwhH3bBw=="}},"is_incremental":true,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Command.IDangrCommandFactory.yml","output":{".html":{"relative_path":"api/Dangr.Core.Command.IDangrCommandFactory.html","hash":"JsiVokBi2fGwaDfYRrp6Rw=="}},"is_incremental":true,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Logging.LogSourceExtensions.yml","output":{".html":{"relative_path":"api/Dangr.Core.Logging.LogSourceExtensions.html","hash":"nZHB/Kn+Z+BtxOv0pzXXaQ=="}},"is_incremental":true,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Logging.LogEntry.yml","output":{".html":{"relative_path":"api/Dangr.Core.Logging.LogEntry.html","hash":"ZcD+mRQEvdfR1nyppopOZw=="}},"is_incremental":true,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Registry.IRegistryEditor.yml","output":{".html":{"relative_path":"api/Dangr.Core.Registry.IRegistryEditor.html","hash":"IxJnh91zgivsCbWC6jwHYw=="}},"is_incremental":true,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Registry.IRegistry.yml","output":{".html":{"relative_path":"api/Dangr.Core.Registry.IRegistry.html","hash":"Y52tfVPoAUq1KvcA5WYpLQ=="}},"is_incremental":true,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Diagnostics.CompareOperation.yml","output":{".html":{"relative_path":"api/Dangr.Core.Diagnostics.CompareOperation.html","hash":"3IL+3Yksa26Q4J/7EPk89g=="}},"is_incremental":true,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Entity.IdPartitionTable.yml","output":{".html":{"relative_path":"api/Dangr.Core.Entity.IdPartitionTable.html","hash":"w+ys+XqB59gKijzOsGXsSg=="}},"is_incremental":true,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Diagnostics.AssertType.yml","output":{".html":{"relative_path":"api/Dangr.Core.Diagnostics.AssertType.html","hash":"304UPt50h3sabUeONdmvZg=="}},"is_incremental":true,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Collections.ConcurrentScheduledQueue-1.yml","output":{".html":{"relative_path":"api/Dangr.Core.Collections.ConcurrentScheduledQueue-1.html","hash":"9Y53sfSk5s0MwMJ+kzc1tQ=="}},"is_incremental":true,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Util.INamedObject.yml","output":{".html":{"relative_path":"api/Dangr.Core.Util.INamedObject.html","hash":"0orsbaNgwPiEnUoNV6fxYQ=="}},"is_incremental":true,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Util.IInitializable.yml","output":{".html":{"relative_path":"api/Dangr.Core.Util.IInitializable.html","hash":"uzWJfSEbj8Y4h2kwP4Nqww=="}},"is_incremental":true,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Dangr.Core.Logging.ILogger.yml","output":{".html":{"relative_path":"api/Dangr.Core.Logging.ILogger.html","hash":"x/5ByjXKFpg/tT8kNRsGVw=="}},"is_incremental":true,"version":""},{"type":"Conceptual","source_relative_path":"articles/intro.md","output":{".html":{"relative_path":"articles/intro.html","hash":"AKPnDqhuESRWWoAvXQP0eg=="}},"is_incremental":true,"version":""},{"type":"Conceptual","source_relative_path":"index.md","output":{".html":{"relative_path":"index.html","hash":"3VazVdngcb/9MN4fHhiwoQ=="}},"is_incremental":true,"version":""}],"incremental_info":[{"status":{"can_incremental":true,"incrementalPhase":"build"},"processors":{"TocDocumentProcessor":{"can_incremental":false,"details":"Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.","incrementalPhase":"build"},"ResourceDocumentProcessor":{"can_incremental":false,"details":"Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.","incrementalPhase":"build"},"RestApiDocumentProcessor":{"can_incremental":false,"details":"Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.","incrementalPhase":"build"},"ConceptualDocumentProcessor":{"can_incremental":true,"incrementalPhase":"build"},"ManagedReferenceDocumentProcessor":{"can_incremental":true,"incrementalPhase":"build"}}},{"status":{"can_incremental":true,"details":"Can support incremental post processing.","incrementalPhase":"postProcessing"},"processors":{}}],"version_info":{}}
+{
+  "homepages": [],
+  "source_base_path": "D:/Source/git/PhoenixGameStudios/DangrLib/src/Dangr.Doc",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "4LVr/hE8Et1CyZHnYgqFAw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "zMn0WSJVM+Ow4ykHqZCB6g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "P9GAqZkT6mZuWFb9hyI8/Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "LkVKVHQzwQMvQQ9RYZbntg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Async.MultiThreadedTaskScheduler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Async.MultiThreadedTaskScheduler.html",
+          "hash": "0WcGQ01P5kc4AXNL8aK4ng=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Async.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Async.html",
+          "hash": "v/romBrOjpB+3vlT+Zls9g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Collections.ConcurrentScheduledQueue-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Collections.ConcurrentScheduledQueue-1.html",
+          "hash": "cWunNSCwXgReKsOMURXMeg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Collections.ListExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Collections.ListExtensions.html",
+          "hash": "QPRLflnvenBOLzQe24pW+A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Collections.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Collections.html",
+          "hash": "TAs8XdERwXbbTxyjXQ25Hg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Command.Annotation.AliasAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Command.Annotation.AliasAttribute.html",
+          "hash": "6K/K0w3MEM6ykZ+9n7l3Rw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Command.Annotation.DangrCommandAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Command.Annotation.DangrCommandAttribute.html",
+          "hash": "nBl/RNJP9Z2xbZ/45llfmA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Command.Annotation.ParameterAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Command.Annotation.ParameterAttribute.html",
+          "hash": "CNYDkIIvagr9L3H8i6lDig=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Command.Annotation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Command.Annotation.html",
+          "hash": "vjVD1+eY2DZSH/9IQ0huSQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Command.CommandExecutor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Command.CommandExecutor.html",
+          "hash": "JLoy4yWYFP/QPWgRKYJ3ZA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Command.CommandLine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Command.CommandLine.html",
+          "hash": "G3Q9Psh4mtkMF64nlk+ocA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Command.Exceptions.CommandExecutionException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Command.Exceptions.CommandExecutionException.html",
+          "hash": "jGENSoxUVRbIN8ou/fRlWA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Command.Exceptions.CommandLineParseException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Command.Exceptions.CommandLineParseException.html",
+          "hash": "wfrf+iAkXLKQdhGDuQq5CQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Command.Exceptions.InvalidCommandArgumentException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Command.Exceptions.InvalidCommandArgumentException.html",
+          "hash": "MJXIMH8Hg4la6uoOyQsmmQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Command.Exceptions.MissingCommandArgumentException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Command.Exceptions.MissingCommandArgumentException.html",
+          "hash": "fzkfisKj/YH96bEsUoZeDA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Command.Exceptions.UnknownCommandArgumentException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Command.Exceptions.UnknownCommandArgumentException.html",
+          "hash": "9wghhTsgAeV99hClbFjszQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Command.Exceptions.UnknownCommandException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Command.Exceptions.UnknownCommandException.html",
+          "hash": "aeDk2wkEwEk2MA1jE9Vkcg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Command.Exceptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Command.Exceptions.html",
+          "hash": "1WM8SXuSbl14FkMf1GHvNA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Command.ICommandContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Command.ICommandContext.html",
+          "hash": "YmEip2ZDtsjrymz6OZkDOg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Command.IDangrCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Command.IDangrCommand.html",
+          "hash": "+dLQHZMQaGVjvfUVz8l/bA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Command.IDangrCommandFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Command.IDangrCommandFactory.html",
+          "hash": "k0FwzNHd7u/YAm7dSuB5SQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Command.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Command.html",
+          "hash": "yc7Sv4F7TjiFPlbY5zFjoA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Configuration.Configuration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Configuration.Configuration.html",
+          "hash": "TD2hd7/RlpfykzyCGpDufQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Configuration.ConfigurationSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Configuration.ConfigurationSource.html",
+          "hash": "4ZJgbWBhudIRs7urVQATYg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Configuration.ConfigurationView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Configuration.ConfigurationView.html",
+          "hash": "7jVtiywS60jq3aEqbsbxIQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Configuration.SettingChangedEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Configuration.SettingChangedEventArgs.html",
+          "hash": "MZtyFdPSRvKLLhNKVqLp1g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Configuration.Sources.AppSettingsConfigurationSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Configuration.Sources.AppSettingsConfigurationSource.html",
+          "hash": "wqlCv4kAYUSkzwld3nBO/w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Configuration.Sources.DebugConfigurationSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Configuration.Sources.DebugConfigurationSource.html",
+          "hash": "kaZMWJy2Xrpw+Wc/P4x2nQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Configuration.Sources.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Configuration.Sources.html",
+          "hash": "EUIn+obsFhmO8hszadYKLw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Configuration.Views.AllSettingsConfigurationView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Configuration.Views.AllSettingsConfigurationView.html",
+          "hash": "JNN407j5QzYVHnHbPP42Aw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Configuration.Views.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Configuration.Views.html",
+          "hash": "yuNecqVUtLjSTuHb+0SvrQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Configuration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Configuration.html",
+          "hash": "o1pwxGcHlenQforGc5GswQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Diagnostics.ArgumentValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Diagnostics.ArgumentValidator.html",
+          "hash": "44H8u9xP3RvcbXu1RU5dsA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Diagnostics.Assert.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Diagnostics.Assert.html",
+          "hash": "5YJrYeumOlUIqgb5m+6yYg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Diagnostics.AssertResolver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Diagnostics.AssertResolver.html",
+          "hash": "XVL88n9k7upUiYdv09Owtg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Diagnostics.AssertType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Diagnostics.AssertType.html",
+          "hash": "8WZJyrmX406ewGCpqG1PUQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Diagnostics.AssertionFailedException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Diagnostics.AssertionFailedException.html",
+          "hash": "eGL/qfeAIEJutYciTJlefw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Diagnostics.CompareOperation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Diagnostics.CompareOperation.html",
+          "hash": "2XvIE7ECaBr3q1hj/ClBSA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Diagnostics.CompareOperationExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Diagnostics.CompareOperationExtensions.html",
+          "hash": "pHIAhewO6NWVOqRL66wdIQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Diagnostics.IValidationResolver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Diagnostics.IValidationResolver.html",
+          "hash": "J83yJy4U+bN/gPqESqSZHA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Diagnostics.Validate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Diagnostics.Validate.html",
+          "hash": "g/nz/3WHnWQCXaMgO0FUfQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Diagnostics.ValidationFailedException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Diagnostics.ValidationFailedException.html",
+          "hash": "KhZjarF8ZhqO/sQYCUOGnQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Diagnostics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Diagnostics.html",
+          "hash": "uvrgRjcywAX8W5VxqzjLtg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Entity.EntityAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Entity.EntityAttribute.html",
+          "hash": "YOJEpd2RBmNduAzeH1Gklw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Entity.EntityInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Entity.EntityInfo.html",
+          "hash": "mK+IXt62tFfQX5PIRZIGDA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Entity.EntityTable-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Entity.EntityTable-1.html",
+          "hash": "muexvT3p8I4iPXmTLb6ZAw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Entity.IEntity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Entity.IEntity.html",
+          "hash": "D+PdYf4VPPlDac4LSqhODg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Entity.IdPartitionTable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Entity.IdPartitionTable.html",
+          "hash": "ov3cynGaFYQG+iVwtJnaTw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Entity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Entity.html",
+          "hash": "ftP4iHXXpqxu77sAtzIoRQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Event.EventBus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Event.EventBus.html",
+          "hash": "MmXGrmxQyZuC93cWP6J3Nw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Event.EventHandlerAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Event.EventHandlerAttribute.html",
+          "hash": "V36/80X5d+R5GewjPsQsGA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Event.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Event.html",
+          "hash": "yiHdJmfb7Rx8iHm53R4QeA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Logging.ILogEndpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Logging.ILogEndpoint.html",
+          "hash": "5i7z+Lu6b7aaSUU/xm9ATw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Logging.ILogService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Logging.ILogService.html",
+          "hash": "NeDfc/t1HtJBiz8QFUchHA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Logging.ILogSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Logging.ILogSource.html",
+          "hash": "fMgJuntNmN2X+p9VM14g4Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Logging.ILogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Logging.ILogger.html",
+          "hash": "IXIMJ4SVnx2deCrmxv7y3w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Logging.LogEntry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Logging.LogEntry.html",
+          "hash": "l7U71FiBUQ0L1Vg9rB3QwA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Logging.LogLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Logging.LogLevel.html",
+          "hash": "cAxIiV4/Yy1+DAXFDCQZiQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Logging.LogService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Logging.LogService.html",
+          "hash": "KvLcS5dLVofaaieD8wZl/w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Logging.LogSourceExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Logging.LogSourceExtensions.html",
+          "hash": "7WbxLAfSeRB+y0azOl/9lA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Logging.Loggers.ConsoleLogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Logging.Loggers.ConsoleLogger.html",
+          "hash": "IaquRjfw+ivvk85WJ8Z9nw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Logging.Loggers.DebugTraceLogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Logging.Loggers.DebugTraceLogger.html",
+          "hash": "GCtj0Sk2uBsFTCQYH9DQXw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Logging.Loggers.MemoryLogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Logging.Loggers.MemoryLogger.html",
+          "hash": "utIDgr5ONfbdofmdOiw31g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Logging.Loggers.TextLogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Logging.Loggers.TextLogger.html",
+          "hash": "QI49rMSKAUGzDhJMjAfi8Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Logging.Loggers.WcfLogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Logging.Loggers.WcfLogger.html",
+          "hash": "PxV6i/dnGyAwIShb7Jr1BA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Logging.Loggers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Logging.Loggers.html",
+          "hash": "/x8TI/VOa/ztiaXbr/Oezg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Logging.Wcf.DefaultWcfEndpoints.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Logging.Wcf.DefaultWcfEndpoints.html",
+          "hash": "fjTMUOHxkguZTfAcBGPaEw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Logging.Wcf.IWcfLogService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Logging.Wcf.IWcfLogService.html",
+          "hash": "6ixIl5f5qViaHZSoz8PYkw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Logging.Wcf.WcfLogService.ServiceHolder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Logging.Wcf.WcfLogService.ServiceHolder.html",
+          "hash": "3x+bOf/4G/Dd9d8wL1HYiQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Logging.Wcf.WcfLogService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Logging.Wcf.WcfLogService.html",
+          "hash": "9/XXfSUzJpAx1iVUuYVPwg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Logging.Wcf.WcfLoggerConfigView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Logging.Wcf.WcfLoggerConfigView.html",
+          "hash": "lkb5R+yPRlTm13b8xQ96Mg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Logging.Wcf.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Logging.Wcf.html",
+          "hash": "s+U0gtJcdm1AFgSCVm474A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Logging.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Logging.html",
+          "hash": "nG9tuJ/CaO4kB08hB5Etpw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Math.Animator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Math.Animator.html",
+          "hash": "7MRCLaLnKrPzXT6l7KoYUA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Math.CosAnimator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Math.CosAnimator.html",
+          "hash": "pbvsCqVsb2728BYaGfnmNA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Math.InverseQuadraticAnimator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Math.InverseQuadraticAnimator.html",
+          "hash": "CYghv403498IVlM4CyW9Kw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Math.LinearAnimator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Math.LinearAnimator.html",
+          "hash": "44ReamUAgNAts51CJXSQkQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Math.MathHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Math.MathHelper.html",
+          "hash": "RLbOfQlhfK9aC+qfOVXd8A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Math.QuadraticAnimator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Math.QuadraticAnimator.html",
+          "hash": "TcGxnNkefqBIaP5hdE7Tew=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Math.SinAnimator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Math.SinAnimator.html",
+          "hash": "9vsXdDBiUO0q1L/yg4sbnA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Math.SmoothTrigAnimator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Math.SmoothTrigAnimator.html",
+          "hash": "3cNcZOcW5Bd4Uy70+EZmtw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Math.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Math.html",
+          "hash": "iSv7pNP62fwrlqef+I9A4w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.ObjectPool.GenericObjectPool-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.ObjectPool.GenericObjectPool-1.html",
+          "hash": "Suq8yI1s5gshIKbBLwfQYg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.ObjectPool.IPooledObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.ObjectPool.IPooledObject.html",
+          "hash": "WcxN7OW60NI7d6B5WjFN+A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.ObjectPool.ObjectPool-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.ObjectPool.ObjectPool-1.html",
+          "hash": "S2UXsKYyeMyQjIqgWrj2IA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.ObjectPool.WeakReferenceObjectPool-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.ObjectPool.WeakReferenceObjectPool-1.html",
+          "hash": "3FkSIh1Aq4VSGm2NJp4HiA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.ObjectPool.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.ObjectPool.html",
+          "hash": "Q8w5fV1Dsm+mn5u5ci83eg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Registry.IRegistry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Registry.IRegistry.html",
+          "hash": "vb2/gU+sY1VarwcwMMqJAw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Registry.IRegistryEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Registry.IRegistryEditor.html",
+          "hash": "yhY36fuVLlBRZZM1Ai7n/g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Registry.MemoryRegistry.MemoryRegistryEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Registry.MemoryRegistry.MemoryRegistryEditor.html",
+          "hash": "wPSvqzCV90iHyYc1qgwaug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Registry.MemoryRegistry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Registry.MemoryRegistry.html",
+          "hash": "vKdceFOfqXqj9U70BA59zg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Registry.RegistryValueChangedEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Registry.RegistryValueChangedEventArgs.html",
+          "hash": "9jqDz/YKaLdg8+FwpzLQYw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Registry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Registry.html",
+          "hash": "tM6Djc6dLJYdrSxJLYodkA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Test.TestUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Test.TestUtils.html",
+          "hash": "CisShLkJZwvdfM3YsMxNyQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Test.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Test.html",
+          "hash": "un2rnr+17A66Ed1gToFZmw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Util.ICheckedDisposable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Util.ICheckedDisposable.html",
+          "hash": "ozIZKZSDM1ualFYUC20kCA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Util.IIdCounter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Util.IIdCounter.html",
+          "hash": "wodD+TqRSHilVdX+CEfOdw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Util.IInitializable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Util.IInitializable.html",
+          "hash": "qIHuYiuYz1c7/i4REKz9hg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Util.INamedObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Util.INamedObject.html",
+          "hash": "M7KgzddOQoya/UZXT5/alA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Util.IUidObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Util.IUidObject.html",
+          "hash": "A8NDO3jEXVcVPH3X86t7Tw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Util.IdCounter.Range.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Util.IdCounter.Range.html",
+          "hash": "HSLQdUWw4FKRDCKVDwPGWw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Util.IdCounter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Util.IdCounter.html",
+          "hash": "8hXe/0RQItsnD6JhletTDw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Util.IdCounterOutOfRangeException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Util.IdCounterOutOfRangeException.html",
+          "hash": "HUwftry/ANfLxAxCuAk54A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Util.InitializableExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Util.InitializableExtensions.html",
+          "hash": "GfAhVGiNV1gw2o/HIHHn/g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Util.ObjectExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Util.ObjectExtensions.html",
+          "hash": "G0h85GP742awDiimfa5JDQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Util.StaticIdCounter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Util.StaticIdCounter.html",
+          "hash": "a6hHzXAKnQBl5eCaUmZv6g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Util.StringExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Util.StringExtensions.html",
+          "hash": "AWGKKC5rqQ6MavbnJz6y9w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Dangr.Core.Util.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dangr.Core.Util.html",
+          "hash": "8UyPEwxphqcIFW1AA+e9WQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "obj/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "AJkDFrW7IG8eR/cubGPn1A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "uOJ8LFagZ0ySr2xdfZKBEQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because docfx version changed from 2.21.2.0 to 2.22.1.0.",
+        "incrementalPhase": "build"
+      },
+      "processors": {
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "RestApiDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build"
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build"
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: it's disabled.",
+        "incrementalPhase": "postProcessing"
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {}
+}

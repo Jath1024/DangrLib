@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface ILogger
+    <title>Class CompareOperationExtensions
    | DangrLib </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface ILogger
+    <meta name="title" content="Class CompareOperationExtensions
    | DangrLib ">
     <meta name="generator" content="docfx 2.22.1.0">
     
@@ -67,31 +67,57 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Dangr.Core.Logging.ILogger">
+            <article class="content wrap" id="_content" data-uid="Dangr.Core.Diagnostics.CompareOperationExtensions">
   
   
-  <h1 id="Dangr_Core_Logging_ILogger" data-uid="Dangr.Core.Logging.ILogger" class="text-break">Interface ILogger
+  <h1 id="Dangr_Core_Diagnostics_CompareOperationExtensions" data-uid="Dangr.Core.Diagnostics.CompareOperationExtensions" class="text-break">Class CompareOperationExtensions
   </h1>
-  <div class="markdown level0 summary"><p>Provides methods for logging categorized messages at varying 
-<a class="xref" href="Dangr.Core.Logging.LogLevel.html">LogLevel</a>s.</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Dangr.Core.Logging.html">Dangr.Core.Logging</a></h6>
-  <h6><strong>Assembly</strong>: Dangr.Logging.Interface.dll</h6>
-  <h5 id="Dangr_Core_Logging_ILogger_syntax">Syntax</h5>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">CompareOperationExtensions</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Dangr.Core.Diagnostics.html">Dangr.Core.Diagnostics</a></h6>
+  <h6><strong>Assembly</strong>: Dangr.Diagnostics.dll</h6>
+  <h5 id="Dangr_Core_Diagnostics_CompareOperationExtensions_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface ILogger</code></pre>
+    <pre><code class="lang-csharp hljs">public static class CompareOperationExtensions</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
-  <a id="Dangr_Core_Logging_ILogger_Log_" data-uid="Dangr.Core.Logging.ILogger.Log*"></a>
-  <h4 id="Dangr_Core_Logging_ILogger_Log_Dangr_Core_Logging_LogLevel_System_String_System_Object_" data-uid="Dangr.Core.Logging.ILogger.Log(Dangr.Core.Logging.LogLevel,System.String,System.Object)">Log(LogLevel, String, Object)</h4>
-  <div class="markdown level1 summary"><p>Logs a message at the specified <a class="xref" href="Dangr.Core.Logging.LogLevel.html">LogLevel</a>.</p>
-</div>
+  <a id="Dangr_Core_Diagnostics_CompareOperationExtensions_Compare_" data-uid="Dangr.Core.Diagnostics.CompareOperationExtensions.Compare*"></a>
+  <h4 id="Dangr_Core_Diagnostics_CompareOperationExtensions_Compare__1_Dangr_Core_Diagnostics_CompareOperation___0___0_" data-uid="Dangr.Core.Diagnostics.CompareOperationExtensions.Compare``1(Dangr.Core.Diagnostics.CompareOperation,``0,``0)">Compare&lt;T&gt;(CompareOperation, T, T)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Log(LogLevel level, string category, object message)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool Compare&lt;T&gt;(this CompareOperation operation, T a, T b)where T : IComparable</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -104,74 +130,52 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Dangr.Core.Logging.LogLevel.html">LogLevel</a></td>
-        <td><span class="parametername">level</span></td>
-        <td><p>The <a class="xref" href="Dangr.Core.Logging.LogLevel.html">LogLevel</a>.</p>
-</td>
+        <td><a class="xref" href="Dangr.Core.Diagnostics.CompareOperation.html">CompareOperation</a></td>
+        <td><span class="parametername">operation</span></td>
+        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">category</span></td>
-        <td><p>The category.</p>
-</td>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">a</span></td>
+        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Object</span></td>
-        <td><span class="parametername">message</span></td>
-        <td><p>The message.</p>
-</td>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">b</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="Dangr_Core_Logging_ILogger_Log_" data-uid="Dangr.Core.Logging.ILogger.Log*"></a>
-  <h4 id="Dangr_Core_Logging_ILogger_Log_Dangr_Core_Logging_LogLevel_System_String_System_String_System_Object_" data-uid="Dangr.Core.Logging.ILogger.Log(Dangr.Core.Logging.LogLevel,System.String,System.String,System.Object)">Log(LogLevel, String, String, Object)</h4>
-  <div class="markdown level1 summary"><p>Logs a message at the specified <a class="xref" href="Dangr.Core.Logging.LogLevel.html">LogLevel</a>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Log(LogLevel level, string feature, string category, object message)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
         <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Dangr.Core.Logging.LogLevel.html">LogLevel</a></td>
-        <td><span class="parametername">level</span></td>
-        <td><p>The <a class="xref" href="Dangr.Core.Logging.LogLevel.html">LogLevel</a>.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">feature</span></td>
-        <td><p>The feature gating this message logging.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">category</span></td>
-        <td><p>The category.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Object</span></td>
-        <td><span class="parametername">message</span></td>
-        <td><p>The message.</p>
-</td>
+        <td><span class="parametername">T</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="extensionmethods">Extension Methods</h3>
-  <div>
-      <a class="xref" href="Dangr.Core.Util.ObjectExtensions.html#Dangr_Core_Util_ObjectExtensions_ToNullSafeString_System_Object_">ObjectExtensions.ToNullSafeString(Object)</a>
-  </div>
 </article>
           </div>
           
