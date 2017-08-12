@@ -30,8 +30,6 @@ For library details and code samples and see the [API Reference](<#=GITHUB_PAGES
 
 <#@ include file="$(SolutionDir)\src\Templates\Docs\GettingStarted.t4" once="true" #><##>
 
-<#@ include file="$(SolutionDir)\src\Templates\Docs\PackageList.t4" once="true" #><##>
-
 ## Contributing
 
 Please read [CONTRIBUTING.md](<#= CONTRIBUTION_MD_URL #>) for details on the code of conduct, and the process for submitting pull requests.

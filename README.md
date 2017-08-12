@@ -105,28 +105,6 @@ Coding style should follow the guidelines in the [Visual Studio] and [Resharper]
 [Resharper]: https://www.jetbrains.com/resharper/
 [Visual Studio]: https://www.visualstudio.com/
 
-
-## Packages
-
-| Package | Version | Description |
-| --- | :---: | --- | 
-| **Dangr.Async** | [![nuget](https://img.shields.io/nuget/v/Dangr.Async.svg)](https://www.nuget.org/packages/Dangr.Async/)</br>[![nuget](https://img.shields.io/nuget/dt/Dangr.Async.svg)](https://www.nuget.org/packages/Dangr.Async/) | Asynchronous code execution utilities for use with DangrLib. |
-| **Dangr.Build** | [![nuget](https://img.shields.io/nuget/v/Dangr.Build.svg)](https://www.nuget.org/packages/Dangr.Build/)</br>[![nuget](https://img.shields.io/nuget/dt/Dangr.Build.svg)](https://www.nuget.org/packages/Dangr.Build/) | Provides build tools to use in DangrLib packages. |
-| **Dangr.Command** | [![nuget](https://img.shields.io/nuget/v/Dangr.Command.svg)](https://www.nuget.org/packages/Dangr.Command/)</br>[![nuget](https://img.shields.io/nuget/dt/Dangr.Command.svg)](https://www.nuget.org/packages/Dangr.Command/) | Utilities for parsing and executing commands from a command line. |
-| **Dangr.Configuration** | [![nuget](https://img.shields.io/nuget/v/Dangr.Configuration.svg)](https://www.nuget.org/packages/Dangr.Configuration/)</br>[![nuget](https://img.shields.io/nuget/dt/Dangr.Configuration.svg)](https://www.nuget.org/packages/Dangr.Configuration/) | Utilities for loading and accessing configuration data in a scoped manner. |
-| **Dangr.Diagnostics** | [![nuget](https://img.shields.io/nuget/v/Dangr.Diagnostics.svg)](https://www.nuget.org/packages/Dangr.Diagnostics/)</br>[![nuget](https://img.shields.io/nuget/dt/Dangr.Diagnostics.svg)](https://www.nuget.org/packages/Dangr.Diagnostics/) | Diagnostic utilities for use with DangrLib. |
-| **Dangr.Entity** | [![nuget](https://img.shields.io/nuget/v/Dangr.Entity.svg)](https://www.nuget.org/packages/Dangr.Entity/)</br>[![nuget](https://img.shields.io/nuget/dt/Dangr.Entity.svg)](https://www.nuget.org/packages/Dangr.Entity/) | Utilities for creating and tracking entities with unique ids. |
-| **Dangr.Event** | [![nuget](https://img.shields.io/nuget/v/Dangr.Event.svg)](https://www.nuget.org/packages/Dangr.Event/)</br>[![nuget](https://img.shields.io/nuget/dt/Dangr.Event.svg)](https://www.nuget.org/packages/Dangr.Event/) | Utilities for publishing and subscribing to event channels. |
-| **Dangr.Logging** | [![nuget](https://img.shields.io/nuget/v/Dangr.Logging.svg)](https://www.nuget.org/packages/Dangr.Logging/)</br>[![nuget](https://img.shields.io/nuget/dt/Dangr.Logging.svg)](https://www.nuget.org/packages/Dangr.Logging/) | Logging framework for use with DangrLib. |
-| **Dangr.Logging.Interface** | [![nuget](https://img.shields.io/nuget/v/Dangr.Logging.Interface.svg)](https://www.nuget.org/packages/Dangr.Logging.Interface/)</br>[![nuget](https://img.shields.io/nuget/dt/Dangr.Logging.Interface.svg)](https://www.nuget.org/packages/Dangr.Logging.Interface/) | Provides a generalized interface for interacting with a logging framework. |
-| **Dangr.Logging.Loggers** | [![nuget](https://img.shields.io/nuget/v/Dangr.Logging.Loggers.svg)](https://www.nuget.org/packages/Dangr.Logging.Loggers/)</br>[![nuget](https://img.shields.io/nuget/dt/Dangr.Logging.Loggers.svg)](https://www.nuget.org/packages/Dangr.Logging.Loggers/) | Default loggers that can be used with DangrLib's logging framework. |
-| **Dangr.Logging.Wcf** | [![nuget](https://img.shields.io/nuget/v/Dangr.Logging.Wcf.svg)](https://www.nuget.org/packages/Dangr.Logging.Wcf/)</br>[![nuget](https://img.shields.io/nuget/dt/Dangr.Logging.Wcf.svg)](https://www.nuget.org/packages/Dangr.Logging.Wcf/) | WCF based logging utilities for use with DangrLib's logging framework. |
-| **Dangr.Math** | [![nuget](https://img.shields.io/nuget/v/Dangr.Math.svg)](https://www.nuget.org/packages/Dangr.Math/)</br>[![nuget](https://img.shields.io/nuget/dt/Dangr.Math.svg)](https://www.nuget.org/packages/Dangr.Math/) | Math utilities for use with DangrLib. |
-| **Dangr.ObjectPool** | [![nuget](https://img.shields.io/nuget/v/Dangr.ObjectPool.svg)](https://www.nuget.org/packages/Dangr.ObjectPool/)</br>[![nuget](https://img.shields.io/nuget/dt/Dangr.ObjectPool.svg)](https://www.nuget.org/packages/Dangr.ObjectPool/) | Provides generic object pool utilities. |
-| **Dangr.Registry** | [![nuget](https://img.shields.io/nuget/v/Dangr.Registry.svg)](https://www.nuget.org/packages/Dangr.Registry/)</br>[![nuget](https://img.shields.io/nuget/dt/Dangr.Registry.svg)](https://www.nuget.org/packages/Dangr.Registry/) | Utilities for accessing shared data in a scoped manner. |
-| **Dangr.Test** | [![nuget](https://img.shields.io/nuget/v/Dangr.Test.svg)](https://www.nuget.org/packages/Dangr.Test/)</br>[![nuget](https://img.shields.io/nuget/dt/Dangr.Test.svg)](https://www.nuget.org/packages/Dangr.Test/) | Test utilities for use with DangrLib. |
-| **Dangr.Util** | [![nuget](https://img.shields.io/nuget/v/Dangr.Util.svg)](https://www.nuget.org/packages/Dangr.Util/)</br>[![nuget](https://img.shields.io/nuget/dt/Dangr.Util.svg)](https://www.nuget.org/packages/Dangr.Util/) | Miscellaneous utilities for use with DangrLib. |
-
 ## Contributing
 
 Please read [CONTRIBUTING.md](https://github.com/PhoenixGameStudios/DangrLib/blob/master/.github/CONTRIBUTING.md) for details on the code of conduct, and the process for submitting pull requests.
