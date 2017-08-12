@@ -22,7 +22,7 @@ after_test:
 notifications:
 - provider: Email
   to:
-  - dangerdan9631@live.com
+  - PhoenixGameStudios@outlook.com
   on_build_success: false
   on_build_failure: true
   on_build_status_changed: true

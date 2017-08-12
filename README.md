@@ -6,20 +6,20 @@
 
 
 
-# <div style="text-align:center"> DangrLib ![DangrLib](https://raw.githubusercontent.com/Dangerdan9631/DangrLib/master/Images/Logo/skulllogo64.png) </div>
+# <div style="text-align:center"> DangrLib ![DangrLib](https://raw.githubusercontent.com/PhoenixGameStudios/DangrLib/master/Images/Logo/skulllogo64.png) </div>
 
 <div style="text-align:center">
 <p>
 
-[![Release](https://img.shields.io/github/release/Dangerdan9631/DangrLib.svg)](https://github.com/Dangerdan9631/DangrLib/releases)
-[![License](https://img.shields.io/github/license/Dangerdan9631/DangrLib.svg)](https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE)
-[![Issues](https://img.shields.io/github/issues-raw/Dangerdan9631/DangrLib.svg)](https://github.com/Dangerdan9631/DangrLib/issues)
+[![Release](https://img.shields.io/github/release/PhoenixGameStudios/DangrLib.svg)](https://github.com/PhoenixGameStudios/DangrLib/releases)
+[![License](https://img.shields.io/github/license/PhoenixGameStudios/DangrLib.svg)](https://github.com/PhoenixGameStudios/DangrLib/blob/master/LICENSE)
+[![Issues](https://img.shields.io/github/issues-raw/PhoenixGameStudios/DangrLib.svg)](https://github.com/PhoenixGameStudios/DangrLib/issues)
 
 </p><p>
 
-[![BuildStatus](https://img.shields.io/appveyor/ci/Dangerdan9631/DangrLib.svg)](https://ci.appveyor.com/project/Dangerdan9631/DangrLib)
-[![CodeCoverage](https://img.shields.io/codecov/c/github/Dangerdan9631/DangrLib.svg)](https://codecov.io/gh/Dangerdan9631/DangrLib)
-[![CodeAnalysis](https://www.codefactor.io/repository/github/Dangerdan9631/DangrLib/badge)](https://www.codefactor.io/repository/github/Dangerdan9631/DangrLib)
+[![BuildStatus](https://img.shields.io/appveyor/ci/PhoenixGameStudios/DangrLib.svg)](https://ci.appveyor.com/project/PhoenixGameStudios/DangrLib)
+[![CodeCoverage](https://img.shields.io/codecov/c/github/PhoenixGameStudios/DangrLib.svg)](https://codecov.io/gh/PhoenixGameStudios/DangrLib)
+[![CodeAnalysis](https://www.codefactor.io/repository/github/PhoenixGameStudios/DangrLib/badge)](https://www.codefactor.io/repository/github/PhoenixGameStudios/DangrLib)
 
 </p>
 </div>
@@ -32,16 +32,16 @@
 
 **Vote** for the proposals you like, and **add** yours:
 
-[![Feature Requests](http://feathub.com/Dangerdan9631/DangrLib?format=svg)](http://feathub.com/Dangerdan9631/DangrLib)
+[![Feature Requests](http://feathub.com/PhoenixGameStudios/DangrLib?format=svg)](http://feathub.com/PhoenixGameStudios/DangrLib)
 
 <!--
     Links
 -->
-[FeatHubPage]: http://feathub.com/Dangerdan9631/DangrLib
+[FeatHubPage]: http://feathub.com/PhoenixGameStudios/DangrLib
 
 ## API Reference
 
-For library details and code samples and see the [API Reference](https://dangerdan9631.github.io/DangrLib/).
+For library details and code samples and see the [API Reference](https://phoenixgamestudios.github.io/DangrLib/).
 
 
 ## Getting Started
@@ -49,7 +49,7 @@ For library details and code samples and see the [API Reference](https://dangerd
 To install **DangrLib**, clone this repository and reference the packages from your _.csproj_
 
 ```
-git clone https://github.com/Dangerdan9631/DangrLib.git
+git clone https://github.com/PhoenixGameStudios/DangrLib.git
 ```
 
 *Or*
@@ -129,33 +129,24 @@ Coding style should follow the guidelines in the [Visual Studio] and [Resharper]
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://github.com/Dangerdan9631/DangrLib/blob/master/.github/CONTRIBUTING.md) for details on the code of conduct, and the process for submitting pull requests.
+Please read [CONTRIBUTING.md](https://github.com/PhoenixGameStudios/DangrLib/blob/master/.github/CONTRIBUTING.md) for details on the code of conduct, and the process for submitting pull requests.
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/Dangerdan9631/DangrLib/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/PhoenixGameStudios/DangrLib/tags). 
 
 ## Authors
 
 * **Dan Garvey** - [DangerDan9631](https://github.com/Dangerdan9631) - *Initial work*
 
-See also the list of [contributors](https://github.com/Dangerdan9631/DangrLib/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/PhoenixGameStudios/DangrLib/contributors) who participated in this project.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/PhoenixGameStudios/DangrLib/blob/master/LICENSE) file for details
 
 ## Acknowledgments
 
 * **Shields.io** - http://shields.io/ - Badges
 * **Docfx** - https://github.com/dotnet/docfx - API Documentation and GH Pages generator.
 * **Billie Thompson** - [PurpleBooth](https://github.com/PurpleBooth) - *[README.md](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2) and [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) templates*
-
-<!--
-    Links
--->
-[DocFx]: https://github.com/dotnet/docfx
-[FeatHubPage]: http://feathub.com/Dangerdan9631/DangrLib
-[GhostDoc]: http://submain.com/products/ghostdoc.aspx
-[Resharper]: https://www.jetbrains.com/resharper/
-[Visual Studio]: https://www.visualstudio.com/

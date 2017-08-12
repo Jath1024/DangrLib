@@ -1,11 +1,10 @@
 ﻿// -----------------------------------------------------------------------
-//  <copyright file="CommandLine.cs" company="DangerDan9631">
-//      Copyright (c) 2017 Dan Garvey. All rights reserved.
+//  <copyright file="CommandLine.cs" company="Phoenix Game Studios, LLC">
+//      Copyright (c) 2017 Phoenix Game Studios, LLC. All rights reserved.
 //      Licensed under the MIT License. 
-//      See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
+//      See https://github.com/PhoenixGameStudios/DangrLib/blob/master/LICENSE for full license information.
 //  </copyright>
 // -----------------------------------------------------------------------
-
 namespace Dangr.Core.Command
 {
     using System.Collections.Generic;
@@ -154,7 +153,7 @@ namespace Dangr.Core.Command
         private const string ArgumentToken = "-";
 
         // Task: [5] Create a Regex Builder Library.
-        // https://github.com/Dangerdan9631/DangrLib/issues/5
+        // https://github.com/PhoenixGameStudios/DangrLib/issues/5
         private const string DoubleQuotedRegexString = "\" ((?: \\\\\" | [^\"] )*) \"";
 
         private const string SingleQuotedRegexString = "' ((?: \\\\' | [^'] )*) '";

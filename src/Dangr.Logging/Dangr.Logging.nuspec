@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0"?>
 <!--
-<copyright file="Dangr.Logging.nuspec" company="DangerDan9631">
-    Copyright (c) 2017 Dan Garvey. All rights reserved.
+<copyright file="Dangr.Logging.nuspec" company="Phoenix Game Studios, LLC">
+    Copyright (c) 2017 Phoenix Game Studios, LLC. All rights reserved.
     Licensed under the MIT License. 
-    See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
+    See https://github.com/PhoenixGameStudios/DangrLib/blob/master/LICENSE for full license information.
 </copyright>
 -->
 
@@ -18,10 +18,10 @@
     <version>2.0.0</version>
     <title>Dangr.Logging</title>
     <description>Logging framework for use with DangrLib.</description>
-    <authors>Dan Garvey</authors>
-    <copyright>Copyright (c) 2017 Dan Garvey. All rights reserved.</copyright>
-    <iconUrl>https://raw.githubusercontent.com/Dangerdan9631/DangrLib/master/Images/Logo/skull%20logo.png</iconUrl>
-    <licenseUrl>https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE</licenseUrl>
+    <authors>Phoenix Game Studios, LLC</authors>
+    <copyright>Copyright (c) 2017 Phoenix Game Studios, LLC. All rights reserved.</copyright>
+    <iconUrl>https://raw.githubusercontent.com/PhoenixGameStudios/DangrLib/master/Images/Logo/skull%20logo.png</iconUrl>
+    <licenseUrl>https://github.com/PhoenixGameStudios/DangrLib/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <tags>dangrlib logging </tags>
     <dependencies>

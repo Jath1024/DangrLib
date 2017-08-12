@@ -1,8 +1,8 @@
 ﻿// -----------------------------------------------------------------------
-//  <copyright file="AssemblyInfo.cs" company="DangerDan9631">
-//      Copyright (c) 2017 Dan Garvey. All rights reserved.
+//  <copyright file="AssemblyInfo.cs" company="Phoenix Game Studios, LLC">
+//      Copyright (c) 2017 Phoenix Game Studios, LLC. All rights reserved.
 //      Licensed under the MIT License. 
-//      See https://github.com/Dangerdan9631/DangrLib/blob/master/LICENSE for full license information.
+//      See https://github.com/PhoenixGameStudios/DangrLib/blob/master/LICENSE for full license information.
 //  </copyright>
 // -----------------------------------------------------------------------
 
@@ -17,8 +17,8 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Dangr.Async.Test")]
 [assembly: AssemblyProduct("Dangr.Async.Test")]
 [assembly: AssemblyDescription("Asynchronous code execution utilities for use with DangrLib.")]
-[assembly: AssemblyCompany("DangerDan9631")]
-[assembly: AssemblyCopyright("Copyright (c) 2017 Dan Garvey. All rights reserved.")]
+[assembly: AssemblyCompany("Phoenix Game Studios, LLC")]
+[assembly: AssemblyCopyright("Copyright (c) 2017 Phoenix Game Studios, LLC. All rights reserved.")]
 [assembly: AssemblyVersion("2.0.0")]
 [assembly: AssemblyFileVersion("2.0.0")]
 [assembly: AssemblyConfiguration("")]
