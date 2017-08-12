@@ -21,7 +21,7 @@
     public const string APPVEYOR_URL = "https://ci.appveyor.com/project/" + GitHubRepo;
     public const string CODECOV_URL = "https://codecov.io/gh/" + GitHubRepo;
     public const string CODE_FACTOR_URL = "https://www.codefactor.io/repository/github/" + GitHubRepo;
-    public const string FEATHUB_URL = "http://feathub.com/" + GitHubRepo;
+    public const string FEATHUB_URL = "http://feathub.com/DangerDan9631/DangrLib";
 
     // File References
     public const string CONTRIBUTION_MD_URL = GITHUB_URL + "/blob/master/.github/CONTRIBUTING.md";
