@@ -32,12 +32,7 @@
 
 **Vote** for the proposals you like, and **add** yours:
 
-[![Feature Requests](http://feathub.com/PhoenixGameStudios/DangrLib?format=svg)](http://feathub.com/PhoenixGameStudios/DangrLib)
-
-<!--
-    Links
--->
-[FeatHubPage]: http://feathub.com/PhoenixGameStudios/DangrLib
+[![Feature Requests](http://feathub.com/DangerDan9631/DangrLib?format=svg)](http://feathub.com/DangerDan9631/DangrLib)
 
 
 ## Getting Started

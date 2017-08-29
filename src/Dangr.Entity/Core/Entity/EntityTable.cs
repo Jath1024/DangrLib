@@ -34,7 +34,7 @@ namespace Dangr.Core.Entity
         /// </param>
         public EntityTable(IdPartitionTable idPartitionTable)
         {
-            Assert.Validate.IsNotNull(idPartitionTable, nameof(idPartitionTable));
+            Validate.Value.IsNotNull(idPartitionTable, nameof(idPartitionTable));
             this.idPartitionTable = idPartitionTable;
         }
 
@@ -103,7 +103,7 @@ namespace Dangr.Core.Entity
         }
 
         /// <summary>
-        /// Gets all of the <typeparamref name="TEntity" /> s with the specified <paramref name="name" /> from the <see cref="EntityTable{TEntity}" /> .
+        /// Gets all of the <typeparamref name="TEntity" /> s with the specified name from the <see cref="EntityTable{TEntity}" /> .
         /// </summary>
         /// <param name="name">
         /// The name of the <typeparamref name="TEntity" /> s to get.
@@ -120,7 +120,7 @@ namespace Dangr.Core.Entity
         }
 
         /// <summary>
-        /// Gets all of the <typeparamref name="TEntity" /> s with the specified <paramref name="name" /> from the <see cref="EntityTable{TEntity}" /> .
+        /// Gets all of the <typeparamref name="TEntity" /> s with the specified name from the <see cref="EntityTable{TEntity}" /> .
         /// </summary>
         /// <typeparam name="T">
         /// The type of the <typeparamref name="TEntity" /> s to get.
@@ -153,10 +153,10 @@ namespace Dangr.Core.Entity
         /// If the <typeparamref name="TEntity" /> was already added to this <see cref="EntityTable{TEntity}" /> .
         /// </exception>
         /// <exception cref="System.InvalidOperationException">
-        /// If the specified <see cref="IEntity" /> does not have an <see cref="EntityAttribute" /> or its <paramref name="entity" /> name does not have an ID partition.
+        /// If the specified <see cref="IEntity" /> does not have an <see cref="EntityAttribute" /> or its entity name does not have an ID partition.
         /// </exception>
         /// <exception cref="IdCounterOutOfRangeException">
-        /// If the <paramref name="entity" /> partition for the <typeparamref name="TEntity" /> 's <paramref name="entity" /> name runs out of bounds.
+        /// If the entity partition for the <typeparamref name="TEntity" /> 's entity name runs out of bounds.
         /// </exception>
         /// <returns>
         /// The <see cref="EntityInfo" /> describing the added <typeparamref name="TEntity" /> .

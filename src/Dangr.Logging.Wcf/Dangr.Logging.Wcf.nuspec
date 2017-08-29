@@ -26,7 +26,7 @@
     <tags>dangrlib logging wcf </tags>
     <dependencies>
       <dependency id="Dangr.Configuration" version="[2.0,3.0)" />
-      <dependency id="Dangr.Diagnostics" version="[2.0,3.0)" />
+      <dependency id="Dangr.Diagnostics" version="[3.0,4.0)" />
       <dependency id="Dangr.Logging" version="[2.0,3.0)" />
       <dependency id="Dangr.Logging.Interface" version="[2.0,3.0)" />
       <dependency id="Dangr.Util" version="[2.0,3.0)" />

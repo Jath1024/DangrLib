@@ -5,6 +5,7 @@
 //      See https://github.com/PhoenixGameStudios/DangrLib/blob/master/LICENSE for full license information.
 //  </copyright>
 // -----------------------------------------------------------------------
+
 namespace Dangr.Core.Diagnostics
 {
     using System;

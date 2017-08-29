@@ -6,15 +6,15 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+    
 /*
  * This file Is generated using T4 Text Templates. Do Not Modify. 
  * Make changes to T4 files directly.
  */
 
-using System.Reflection;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
-    
 [assembly: AssemblyTitle("Dangr.Command")]
 [assembly: AssemblyProduct("Dangr.Command")]
 [assembly: AssemblyDescription("Utilities for parsing and executing commands from a command line.")]
@@ -28,4 +28,4 @@ using System.Runtime.InteropServices;
 
 [assembly: ComVisible(false)]
 
-[assembly:InternalsVisibleTo("Dangr.Command.Test")]
+[assembly: InternalsVisibleTo("Dangr.Command.Test")]

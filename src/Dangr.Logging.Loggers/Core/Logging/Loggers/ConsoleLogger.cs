@@ -113,7 +113,7 @@ namespace Dangr.Core.Logging.Loggers
         /// <param name="entry">The entry.</param>
         public void Log(LogEntry entry)
         {
-            Assert.Validate.NotDisposed(this, nameof(ConsoleLogger));
+            Validate.Value.IsNotDisposed(this, nameof(ConsoleLogger));
 
             ConsoleColor fg = Console.ForegroundColor;
             ConsoleColor bg = Console.BackgroundColor;

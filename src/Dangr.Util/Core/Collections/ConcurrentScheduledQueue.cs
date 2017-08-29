@@ -72,7 +72,7 @@ namespace Dangr.Core.Collections
         }
 
         /// <summary>
-        /// Queues a <paramref name="value" /> to be retrieved immediately.
+        /// Queues a value to be retrieved immediately.
         /// </summary>
         /// <param name="value">The value to enqueue.</param>
         public void Post(T value)
@@ -81,7 +81,7 @@ namespace Dangr.Core.Collections
         }
 
         /// <summary>
-        /// Queues a <paramref name="value" /> to be retrieved after a delay.
+        /// Queues a value to be retrieved after a delay.
         /// </summary>
         /// <param name="value">The value to enqueue.</param>
         /// <param name="delay">
@@ -93,7 +93,7 @@ namespace Dangr.Core.Collections
         }
 
         /// <summary>
-        /// Queues a <paramref name="value" /> to be retrieved at a specified time.
+        /// Queues a value to be retrieved at a specified time.
         /// </summary>
         /// <param name="value">The value to enqueue.</param>
         /// <param name="time">The time to retrieve the value.</param>

@@ -62,7 +62,7 @@
         },
         {
             DIAGNOSTICS,
-            new Version(2, 0, 0)
+            new Version(3, 0, 0)
         },
         {       
             ENTITY,
@@ -114,7 +114,7 @@
         },
         {
             TEST,
-            new Version(2, 0, 0)
+            new Version(2, 0, 1)
         },
         {
             UTIL,

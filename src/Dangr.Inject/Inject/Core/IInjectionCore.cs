@@ -26,7 +26,7 @@ namespace Dangr.Inject.Core
         /// </summary>
         /// <param name="name">The dependency name.</param>
         /// <exception cref="System.InvalidOperationException">
-        /// If no dependency with the specified <paramref name="name" /> is defined.
+        /// If no dependency with the specified name is defined.
         /// </exception>
         T Get<T>(string name);
     }

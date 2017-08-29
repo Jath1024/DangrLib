@@ -6,15 +6,15 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+    
 /*
  * This file Is generated using T4 Text Templates. Do Not Modify. 
  * Make changes to T4 files directly.
  */
 
-using System.Reflection;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
-    
 [assembly: AssemblyTitle("Dangr.Logging.Wcf")]
 [assembly: AssemblyProduct("Dangr.Logging.Wcf")]
 [assembly: AssemblyDescription("WCF based logging utilities for use with DangrLib's logging framework.")]
@@ -28,4 +28,4 @@ using System.Runtime.InteropServices;
 
 [assembly: ComVisible(false)]
 
-[assembly:InternalsVisibleTo("Dangr.Logging.Wcf.Test")]
+[assembly: InternalsVisibleTo("Dangr.Logging.Wcf.Test")]

@@ -48,7 +48,7 @@ namespace Dangr.Core.Logging.Wcf
 
             internal ServiceHolder(Task serviceTask)
             {
-                Assert.Validate.IsNotNull(serviceTask, nameof(serviceTask));
+                Validate.Value.IsNotNull(serviceTask, nameof(serviceTask));
                 this.serviceTask = serviceTask;
             }
 
@@ -126,11 +126,11 @@ namespace Dangr.Core.Logging.Wcf
             string endpointAddress,
             Binding binding)
         {
-            Assert.Validate.IsNotNull(logService, nameof(logService));
-            Assert.Validate.IsNotNull(baseAddresses, nameof(baseAddresses));
-            Assert.Validate.IsNotEmpty(baseAddresses, nameof(baseAddresses));
-            Assert.Validate.IsNotNull(endpointAddress, nameof(endpointAddress));
-            Assert.Validate.IsNotNull(binding, nameof(binding));
+            Validate.Value.IsNotNull(logService, nameof(logService));
+            Validate.Value.IsNotNull(baseAddresses, nameof(baseAddresses));
+            Validate.Value.IsNotEmpty(baseAddresses, nameof(baseAddresses));
+            Validate.Value.IsNotNull(endpointAddress, nameof(endpointAddress));
+            Validate.Value.IsNotNull(binding, nameof(binding));
 
             var dict = new Dictionary<string, Binding>
             {
@@ -161,11 +161,11 @@ namespace Dangr.Core.Logging.Wcf
             Uri[] baseAddresses,
             Dictionary<string, Binding> endpoints)
         {
-            Assert.Validate.IsNotNull(logService, nameof(logService));
-            Assert.Validate.IsNotNull(baseAddresses, nameof(baseAddresses));
-            Assert.Validate.IsNotEmpty(baseAddresses, nameof(baseAddresses));
-            Assert.Validate.IsNotNull(endpoints, nameof(endpoints));
-            Assert.Validate.IsNotEmpty(endpoints, nameof(endpoints));
+            Validate.Value.IsNotNull(logService, nameof(logService));
+            Validate.Value.IsNotNull(baseAddresses, nameof(baseAddresses));
+            Validate.Value.IsNotEmpty(baseAddresses, nameof(baseAddresses));
+            Validate.Value.IsNotNull(endpoints, nameof(endpoints));
+            Validate.Value.IsNotEmpty(endpoints, nameof(endpoints));
 
             lock (WcfLogService.RunLock)
             {
@@ -236,7 +236,7 @@ namespace Dangr.Core.Logging.Wcf
         /// <param name="message">The message.</param>
         public void Log(LogEntry message)
         {
-            Assert.Validate.IsNotNull(message, nameof(message));
+            Validate.Value.IsNotNull(message, nameof(message));
             WcfLogService.logService?.LogEntry(message);
         }
 
@@ -246,7 +246,7 @@ namespace Dangr.Core.Logging.Wcf
         /// <param name="messages">The messages.</param>
         public void LogBatch(LogEntry[] messages)
         {
-            Assert.Validate.IsNotNull(messages, nameof(messages));
+            Validate.Value.IsNotNull(messages, nameof(messages));
 
             if (WcfLogService.logService != null)
             {

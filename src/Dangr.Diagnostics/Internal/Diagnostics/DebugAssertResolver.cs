@@ -5,102 +5,74 @@
 //      See https://github.com/PhoenixGameStudios/DangrLib/blob/master/LICENSE for full license information.
 //  </copyright>
 // -----------------------------------------------------------------------
+
 namespace Dangr.Internal.Diagnostics
 {
     using System;
+    using System.Collections.Generic;
     using System.Diagnostics;
     using System.Windows.Forms;
     using Dangr.Core.Diagnostics;
-    using Dangr.Core.Logging;
 
     /// <summary>
     /// Shows a dialog if specific conditions are not met.
     /// </summary>
     internal class DebugAssertResolver : AssertResolver
     {
-        private static readonly string LogCategory = nameof(DebugAssertResolver);
+        private readonly HashSet<string> ignoredAssertions = new HashSet<string>();
+
+        // Visible for testing.
+        internal bool ShouldForceDialogResult { get; set; }
+
+        // Visible for testing.
+        internal DialogResult ForcedDialogResult { get; set; } = DialogResult.Ignore;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="DebugAssertResolver" /> class.
+        /// Shows a message and gets an exception that should be thrown.
         /// </summary>
-        internal DebugAssertResolver()
-            : base(true)
-        {
-        }
-
-        /// <summary>
-        /// Shows a <paramref name="message" /> and gets an exception that should be thrown.
-        /// </summary>
-        /// <param name="type">
-        /// The type of assert condition that was evaluated.
-        /// </param>
+        /// <param name="type">The type of assert condition that was evaluated.</param>
         /// <param name="message">The message that should be shown.</param>
-        /// <param name="logSource">
-        /// The <see cref="ILogSource" /> used to log messages on failure.
-        /// </param>
-        /// <param name="ex">
-        /// Out param for an exception that should be thrown or null.
-        /// </param>
-        /// <returns>True if the assert should be remembered.</returns>
-        protected override bool Failed(AssertType type, string message, ILogSource logSource, out Exception ex)
+        /// <returns>
+        /// The exception that should be thrown, or null.
+        /// </returns>
+        protected override Exception Failed(AssertType type, string message)
         {
-            DialogResult result = MessageBox.Show(
-                message,
-                "Assertion Failed",
-                MessageBoxButtons.AbortRetryIgnore,
-                MessageBoxIcon.Exclamation);
+            StackFrame frame = new StackFrame(3, true);
+            string frameKey = frame.ToString();
+
+            DialogResult result = DialogResult.Ignore;
+            if (!this.ignoredAssertions.Contains(frameKey))
+            {
+                result = this.ShouldForceDialogResult
+                    ? this.ForcedDialogResult
+                    : MessageBox.Show(
+                        message,
+                        "Assertion Failed",
+                        MessageBoxButtons.AbortRetryIgnore,
+                        MessageBoxIcon.Exclamation);
+            }
 
             switch (result)
             {
                 case DialogResult.Abort:
-                    this.LogFatal(logSource, message);
                     switch (type)
                     {
                         case AssertType.NotDisposed:
-                            ex = new ObjectDisposedException(message);
-                            break;
+                            return new ObjectDisposedException(message);
                         default:
-                            ex = new AssertionFailedException(message);
-                            break;
+                            return new AssertionFailedException(message);
                     }
 
-                    return false;
-
                 case DialogResult.Retry:
-                    this.LogWarning(logSource, message);
-                    ex = null;
                     Debugger.Break();
-                    return false;
+                    return null;
 
                 case DialogResult.Ignore:
+                    this.ignoredAssertions.Add(frameKey);
+                    return null;
+
                 default:
-                    this.LogWarning(logSource, message);
-                    ex = null;
-                    return true;
-            }
-        }
-
-        private void LogFatal(ILogSource logSource, string message)
-        {
-            if (logSource != null)
-            {
-                logSource.LogFatal(message);
-            }
-            else
-            {
-                Assert.DefaultLogger?.Log(LogLevel.Fatal, DebugAssertResolver.LogCategory, message);
-            }
-        }
-
-        private void LogWarning(ILogSource logSource, string message)
-        {
-            if (logSource != null)
-            {
-                logSource.LogWarning(message);
-            }
-            else
-            {
-                Assert.DefaultLogger?.Log(LogLevel.Warning, DebugAssertResolver.LogCategory, message);
+                    return null;
             }
         }
     }

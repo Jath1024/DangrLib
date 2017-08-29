@@ -29,7 +29,7 @@ namespace Dangr.Simulation.Types
     public static class BitValueExtensions
     {
         /// <summary>
-        /// Inverts the specified <paramref name="value" /> if it is binary. The <paramref name="value" /> is the same for non binary values.
+        /// Inverts the specified value if it is binary. The value is the same for non binary values.
         /// </summary>
         /// <param name="value">The value.</param>
         /// <returns>The inverted value.</returns>
@@ -47,7 +47,7 @@ namespace Dangr.Simulation.Types
         }
 
         /// <summary>
-        /// Logical Ands the specified values if they ar binary. Returns <see cref="Dangr.Simulation.Types.BitValue.Error" /> if either value is <see cref="Dangr.Simulation.Types.BitValue.Error" /> . If either value is <see cref="Dangr.Simulation.Types.BitValue.Floating" /> , then the <paramref name="ignoreFloating" /> parameter determines if the result should be <see cref="Dangr.Simulation.Types.BitValue.Error" /> ( <c> false </c> ) or pass through the other value ( <c> true </c> ).
+        /// Logical Ands the specified values if they ar binary. Returns <see cref="Dangr.Simulation.Types.BitValue.Error" /> if either value is <see cref="Dangr.Simulation.Types.BitValue.Error" /> . If either value is <see cref="Dangr.Simulation.Types.BitValue.Floating" /> , then the ignoreFloating parameter determines if the result should be <see cref="Dangr.Simulation.Types.BitValue.Error" /> ( <c> false </c> ) or pass through the other value ( <c> true </c> ).
         /// </summary>
         /// <param name="a">The value.</param>
         /// <param name="b">The other value.</param>
@@ -84,7 +84,7 @@ namespace Dangr.Simulation.Types
         }
 
         /// <summary>
-        /// Logical Ors the specified values if they ar binary. Returns <see cref="Dangr.Simulation.Types.BitValue.Error" /> if either value is <see cref="Dangr.Simulation.Types.BitValue.Error" /> . If either value is <see cref="Dangr.Simulation.Types.BitValue.Floating" /> , then the <paramref name="ignoreFloating" /> parameter determines if the result should be <see cref="Dangr.Simulation.Types.BitValue.Error" /> ( <c> false </c> ) or pass through the other value ( <c> true </c> ).
+        /// Logical Ors the specified values if they ar binary. Returns <see cref="Dangr.Simulation.Types.BitValue.Error" /> if either value is <see cref="Dangr.Simulation.Types.BitValue.Error" /> . If either value is <see cref="Dangr.Simulation.Types.BitValue.Floating" /> , then the ignoreFloating parameter determines if the result should be <see cref="Dangr.Simulation.Types.BitValue.Error" /> ( <c> false </c> ) or pass through the other value ( <c> true </c> ).
         /// </summary>
         /// <param name="a">The value.</param>
         /// <param name="b">The other value.</param>
@@ -121,7 +121,7 @@ namespace Dangr.Simulation.Types
         }
 
         /// <summary>
-        /// Logical Xors the specified values if they ar binary. Returns <see cref="Dangr.Simulation.Types.BitValue.Error" /> if either value is <see cref="Dangr.Simulation.Types.BitValue.Error" /> . If either value is <see cref="Dangr.Simulation.Types.BitValue.Floating" /> , then the <paramref name="ignoreFloating" /> parameter determines if the result should be <see cref="Dangr.Simulation.Types.BitValue.Error" /> ( <c> false </c> ) or pass through the other value ( <c> true </c> ).
+        /// Logical Xors the specified values if they ar binary. Returns <see cref="Dangr.Simulation.Types.BitValue.Error" /> if either value is <see cref="Dangr.Simulation.Types.BitValue.Error" /> . If either value is <see cref="Dangr.Simulation.Types.BitValue.Floating" /> , then the ignoreFloating parameter determines if the result should be <see cref="Dangr.Simulation.Types.BitValue.Error" /> ( <c> false </c> ) or pass through the other value ( <c> true </c> ).
         /// </summary>
         /// <param name="a">The value.</param>
         /// <param name="b">The other value.</param>
@@ -160,7 +160,7 @@ namespace Dangr.Simulation.Types
         }
 
         /// <summary>
-        /// Inverts the specified <paramref name="value" /> and stores the result in the array specified by output. Output can be equal to value.
+        /// Inverts the specified value and stores the result in the array specified by output. Output can be equal to value.
         /// </summary>
         /// <param name="value">The value to invert.</param>
         /// <param name="output">The output array.</param>
@@ -254,7 +254,7 @@ namespace Dangr.Simulation.Types
         }
 
         /// <summary>
-        /// Increments the specified <paramref name="value" /> and stores the result in the array specified by output. Overflows will wrap. Output can be equal to value.
+        /// Increments the specified value and stores the result in the array specified by output. Overflows will wrap. Output can be equal to value.
         /// </summary>
         /// <param name="value">The value to increment.</param>
         /// <param name="output">The output array.</param>
@@ -315,7 +315,7 @@ namespace Dangr.Simulation.Types
         }
 
         /// <summary>
-        /// Negates the specified <paramref name="value" /> and stores the result in the array specified by output. Output can be equal to value.
+        /// Negates the specified value and stores the result in the array specified by output. Output can be equal to value.
         /// </summary>
         /// <param name="value">The value to negate.</param>
         /// <param name="output">The output array.</param>
@@ -361,7 +361,7 @@ namespace Dangr.Simulation.Types
         }
 
         /// <summary>
-        /// Pulls the specified <paramref name="value" /> using the given <see cref="PullBehavior" /> and stores the result in the array specified by output. Output can be equal to value.
+        /// Pulls the specified value using the given <see cref="PullBehavior" /> and stores the result in the array specified by output. Output can be equal to value.
         /// </summary>
         /// <param name="value">The value to pull.</param>
         /// <param name="pullBehavior">The pull behavior.</param>

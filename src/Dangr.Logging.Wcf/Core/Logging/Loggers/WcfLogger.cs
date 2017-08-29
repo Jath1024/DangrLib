@@ -156,14 +156,14 @@ namespace Dangr.Core.Logging.Loggers
         /// <param name="entry"> The entry. </param>
         public void Log(LogEntry entry)
         {
-            Assert.Validate.NotDisposed(this, nameof(WcfLogger));
-            Assert.Validate.IsNotNull(entry, nameof(entry));
+            Validate.Value.IsNotDisposed(this, nameof(WcfLogger));
+            Validate.Value.IsNotNull(entry, nameof(entry));
             this.entriesQueue.Enqueue(entry);
         }
 
         private void ProcessMessages(object state)
         {
-            Assert.Validate.NotDisposed(this, nameof(WcfLogger));
+            Validate.Value.IsNotDisposed(this, nameof(WcfLogger));
 
             var batch = new List<LogEntry>();
 

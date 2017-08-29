@@ -5,6 +5,7 @@
 //      See https://github.com/PhoenixGameStudios/DangrLib/blob/master/LICENSE for full license information.
 //  </copyright>
 // -----------------------------------------------------------------------
+
 namespace Dangr.Core.Diagnostics
 {
     using System;
@@ -17,7 +18,7 @@ namespace Dangr.Core.Diagnostics
     public class AssertionFailedException : Exception
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="AssertionFailedException" /> .
+        /// Initializes a new instance of the <see cref="AssertionFailedException"/> class.
         /// </summary>
         /// <param name="message">The message that describes the error.</param>
         public AssertionFailedException(string message)
@@ -26,14 +27,10 @@ namespace Dangr.Core.Diagnostics
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="AssertionFailedException" /> .
+        /// Initializes a new instance of the <see cref="AssertionFailedException"/> class.
         /// </summary>
-        /// <param name="info">
-        /// The System.Runtime.Serialization.SerializationInfo that holds the serialized object data about the exception being thrown.
-        /// </param>
-        /// <param name="context">
-        /// The System.Runtime.Serialization.StreamingContext that contains contextual information about the source or destination.
-        /// </param>
+        /// <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+        /// <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
         protected AssertionFailedException(SerializationInfo info, StreamingContext context)
             : base(info, context)
         {

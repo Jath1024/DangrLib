@@ -47,7 +47,7 @@ namespace Dangr.Core.Collections
         }
 
         /// <summary>
-        /// Returns the value from the end of the <paramref name="list" /> without removing it.
+        /// Returns the value from the end of the list without removing it.
         /// </summary>
         /// <typeparam name="T">The type stored in the list.</typeparam>
         /// <param name="list">The list to peek an object from.</param>
@@ -93,7 +93,7 @@ namespace Dangr.Core.Collections
         }
 
         /// <summary>
-        /// Gets whether the <paramref name="list" /> is empty.
+        /// Gets whether the list is empty.
         /// </summary>
         /// <param name="list">The list to check.</param>
         /// <returns>True if there are no elements left in the list.</returns>

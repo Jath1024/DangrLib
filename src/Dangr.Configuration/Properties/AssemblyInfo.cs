@@ -6,15 +6,15 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+    
 /*
  * This file Is generated using T4 Text Templates. Do Not Modify. 
  * Make changes to T4 files directly.
  */
 
-using System.Reflection;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
-    
 [assembly: AssemblyTitle("Dangr.Configuration")]
 [assembly: AssemblyProduct("Dangr.Configuration")]
 [assembly: AssemblyDescription("Utilities for loading and accessing configuration data in a scoped manner.")]
@@ -28,4 +28,4 @@ using System.Runtime.InteropServices;
 
 [assembly: ComVisible(false)]
 
-[assembly:InternalsVisibleTo("Dangr.Configuration.Test")]
+[assembly: InternalsVisibleTo("Dangr.Configuration.Test")]

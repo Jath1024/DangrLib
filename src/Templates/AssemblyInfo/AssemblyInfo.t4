@@ -15,14 +15,14 @@
 <# string assemblyTitle = assemblyName + (isTestAssembly ? ".Test" : string.Empty); #>
 <# PrintCsCopyrightHeader("AssemblyInfo.cs"); #>
 
-<# PrintGeneratedCodeCsBanner(); #>
-
 using System.Reflection;
 <# if(!isTestAssembly) { #>
 using System.Runtime.CompilerServices;
 <# } #>
 using System.Runtime.InteropServices;
     
+<# PrintGeneratedCodeCsBanner(); #>
+
 [assembly: AssemblyTitle("<#= assemblyTitle #>")]
 [assembly: AssemblyProduct("<#= assemblyTitle #>")]
 [assembly: AssemblyDescription("<#= Description[assemblyName] #>")]
@@ -37,5 +37,5 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 <# if(!isTestAssembly) { #>
 
-[assembly:InternalsVisibleTo("<#= assemblyName + TEST_SUFFIX #>")]
+[assembly: InternalsVisibleTo("<#= assemblyName + TEST_SUFFIX #>")]
 <# } #>

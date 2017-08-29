@@ -5,6 +5,7 @@
 //      See https://github.com/PhoenixGameStudios/DangrLib/blob/master/LICENSE for full license information.
 //  </copyright>
 // -----------------------------------------------------------------------
+
 namespace Dangr.Core.Diagnostics
 {
     /// <summary>
@@ -92,6 +93,11 @@ namespace Dangr.Core.Diagnostics
         /// The <see cref="AssertType.NotDisposed" /> assert type.
         /// </summary>
         NotDisposed,
+
+        /// <summary>
+        /// The is <see cref="AssertType.IsDisposed"/> assert type.
+        /// </summary>
+        IsDisposed,
 
         /// <summary>
         /// The <see cref="AssertType.IsType" /> assert type.

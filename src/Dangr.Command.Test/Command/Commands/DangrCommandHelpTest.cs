@@ -10,8 +10,8 @@ namespace Dangr.Command.Commands
     using System;
     using System.IO;
     using Dangr.Core.Command;
+    using Dangr.Core.Diagnostics;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
-    using Assert = Dangr.Core.Diagnostics.Assert;
 
     [TestClass]
     public class DangrCommandHelpTest
@@ -26,9 +26,9 @@ namespace Dangr.Command.Commands
             executor.AddCommand<OutputCommand>();
             executor.Execute("help help");
 
-            Assert.Validate.IsNotNullOrWhiteSpace(outputStream.ToString(),
+            Validate.Value.IsNotNullOrWhiteSpace(outputStream.ToString(),
                 "Did not find the expected output.");
-            Assert.Validate.IsNullOrWhiteSpace(errorStream.ToString(),
+            Validate.Value.IsNullOrWhiteSpace(errorStream.ToString(),
                 "Should not have written value to error.");
             Console.WriteLine(outputStream.ToString());
         }
@@ -43,9 +43,9 @@ namespace Dangr.Command.Commands
             executor.AddCommand<OutputCommand>();
             executor.Execute("help");
 
-            Assert.Validate.IsNotNullOrWhiteSpace(outputStream.ToString(),
+            Validate.Value.IsNotNullOrWhiteSpace(outputStream.ToString(),
                 "Did not find the expected output.");
-            Assert.Validate.IsNullOrWhiteSpace(errorStream.ToString(),
+            Validate.Value.IsNullOrWhiteSpace(errorStream.ToString(),
                 "Should not have written value to error.");
             Console.WriteLine(outputStream.ToString());
         }
@@ -60,9 +60,9 @@ namespace Dangr.Command.Commands
             executor.AddCommand<OutputCommand>();
             executor.Execute("help invalid");
 
-            Assert.Validate.IsNullOrWhiteSpace(outputStream.ToString(),
+            Validate.Value.IsNullOrWhiteSpace(outputStream.ToString(),
                 "Should not have written value to output.");
-            Assert.Validate.IsNotNullOrWhiteSpace(errorStream.ToString(),
+            Validate.Value.IsNotNullOrWhiteSpace(errorStream.ToString(),
                 "Did not find the expected error output.");
             Console.WriteLine(errorStream.ToString());
         }

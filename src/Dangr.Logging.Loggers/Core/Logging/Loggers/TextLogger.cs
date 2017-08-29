@@ -161,7 +161,7 @@ namespace Dangr.Core.Logging.Loggers
         /// <param name="entry"> The entry. </param>
         public void Log(LogEntry entry)
         {
-            Assert.Validate.NotDisposed(this, nameof(TextLogger));
+            Validate.Value.IsNotDisposed(this, nameof(TextLogger));
 
             this.writer.WriteLine(entry.ToString());
 

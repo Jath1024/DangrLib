@@ -56,7 +56,7 @@ namespace Dangr.Core.Async
         }
 
         /// <summary>
-        /// Queues a <paramref name="task" /> to the scheduler.
+        /// Queues a task to the scheduler.
         /// </summary>
         /// <param name="task">The task.</param>
         protected override void QueueTask(Task task)
@@ -78,14 +78,14 @@ namespace Dangr.Core.Async
         }
 
         /// <summary>
-        /// Attempts to execute the specified <paramref name="task" /> on the current thread.
+        /// Attempts to execute the specified task on the current thread.
         /// </summary>
         /// <param name="task">The task to execute.</param>
         /// <param name="taskWasPreviouslyQueued">
-        /// Indicates whether this <paramref name="task" /> was previously queued.
+        /// Indicates whether this task was previously queued.
         /// </param>
         /// <returns>
-        /// True if the <paramref name="task" /> was executed.
+        /// True if the task was executed.
         /// </returns>
         protected override bool TryExecuteTaskInline(Task task, bool taskWasPreviouslyQueued)
         {
@@ -108,11 +108,11 @@ namespace Dangr.Core.Async
         }
 
         /// <summary>
-        /// Attempt to remove a previously scheduled <paramref name="task" /> from the scheduler.
+        /// Attempt to remove a previously scheduled task from the scheduler.
         /// </summary>
         /// <param name="task">The task to remove.</param>
         /// <returns>
-        /// <c>true</c> if the <paramref name="task" /> was removed.
+        /// <c>true</c> if the task was removed.
         /// </returns>
         protected override bool TryDequeue(Task task)
         {

@@ -78,7 +78,7 @@ namespace Dangr.Core.Entity
         /// </param>
         /// <param name="id">The id to give to the partition</param>
         /// <exception cref="System.InvalidOperationException">
-        /// If the <paramref name="id" /> specified is not larger than the last specified partition.
+        /// If the id specified is not larger than the last specified partition.
         /// </exception>
         /// <exception cref="System.ArgumentOutOfRangeException">
         /// If the Id overflows uint.MaxValue.

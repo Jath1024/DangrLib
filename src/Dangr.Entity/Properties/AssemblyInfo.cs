@@ -6,15 +6,15 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+    
 /*
  * This file Is generated using T4 Text Templates. Do Not Modify. 
  * Make changes to T4 files directly.
  */
 
-using System.Reflection;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
-    
 [assembly: AssemblyTitle("Dangr.Entity")]
 [assembly: AssemblyProduct("Dangr.Entity")]
 [assembly: AssemblyDescription("Utilities for creating and tracking entities with unique ids.")]
@@ -28,4 +28,4 @@ using System.Runtime.InteropServices;
 
 [assembly: ComVisible(false)]
 
-[assembly:InternalsVisibleTo("Dangr.Entity.Test")]
+[assembly: InternalsVisibleTo("Dangr.Entity.Test")]

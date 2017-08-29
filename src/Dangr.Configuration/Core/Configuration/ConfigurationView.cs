@@ -65,7 +65,7 @@ namespace Dangr.Core.Configuration
         /// </param>
         internal void SetConfiguration(Configuration configuration)
         {
-            Assert.Validate.NotDisposed(this, nameof(ConfigurationView));
+            Validate.Value.IsNotDisposed(this, nameof(ConfigurationView));
             this.config = configuration;
             this.config.SettingChanged += this.Configuration_SettingChanged;
         }

@@ -5,130 +5,93 @@
 //      See https://github.com/PhoenixGameStudios/DangrLib/blob/master/LICENSE for full license information.
 //  </copyright>
 // -----------------------------------------------------------------------
+
 namespace Dangr.Core.Diagnostics
 {
     using System;
     using System.Collections;
-    using System.Collections.Generic;
-    using System.Runtime.CompilerServices;
     using System.Text;
-    using Dangr.Core.Logging;
     using Dangr.Core.Util;
     using Dangr.Internal.Diagnostics;
 
     /// <summary>
     /// Contains various checks that can be used to verify application behavior.
     /// </summary>
-    public abstract class AssertResolver
+    public abstract class AssertResolver : IConditionChecker
     {
-        private readonly HashSet<string> assertPaths;
-        private readonly bool rememberAsserts;
-
         /// <summary>
-        /// Initializes a new instance of the <see cref="AssertResolver" /> class.
-        /// </summary>
-        /// <param name="rememberAsserts">
-        /// Indicates if specific asserts should be remembered and only shown once.
-        /// </param>
-        protected AssertResolver(bool rememberAsserts)
-        {
-            this.rememberAsserts = rememberAsserts;
-            this.assertPaths = rememberAsserts ? new HashSet<string>() : null;
-        }
-
-        /// <summary>
-        /// Show a <paramref name="message" /> if the specified <paramref name="condition" /> is false.
+        /// Show a message if the specified condition is false.
         /// </summary>
         /// <param name="condition">The condition to check.</param>
         /// <param name="message">The message to show.</param>
-        /// <param name="logSource">
-        /// The <see cref="ILogSource" /> used to log messages on failure.
-        /// </param>
-        /// <param name="filePath">
-        /// The file path of the caller. (Do not use)
-        /// </param>
-        /// <param name="lineNumber">
-        /// The line number of the caller. (Do not use)
-        /// </param>
+        /// <param name="args">The arguments to the message to display.</param>
         /// <returns>
-        /// True only if the assert <paramref name="condition" /> passed. Otherwise false.
+        /// True only if the assert condition passed. Otherwise false.
         /// </returns>
-        public bool IsTrue(
-            bool condition,
-            string message,
-            ILogSource logSource = null,
-            [CallerFilePath] string filePath = "",
-            [CallerLineNumber] int lineNumber = 0)
+        public bool IsTrue(bool condition, string message, params object[] args)
         {
             return this.Check(
                 AssertType.IsTrue,
                 condition,
                 message,
-                logSource,
-                filePath,
-                lineNumber,
+                args,
                 "IsTrue check failed.");
         }
 
         /// <summary>
-        /// Show a <paramref name="message" /> if the specified <paramref name="condition" /> is true.
+        /// Show a message if the specified condition is false.
         /// </summary>
-        /// <param name="logSource">
-        /// The <see cref="ILogSource" /> used to log messages on failure.
-        /// </param>
+        /// <param name="condition">The condition to check.</param>
+        /// <returns>
+        /// True only if the assert condition passed. Otherwise false.
+        /// </returns>
+        public bool IsTrue(bool condition)
+        {
+            return this.IsTrue(condition, null);
+        }
+
+        /// <summary>
+        /// Show a message if the specified condition is true.
+        /// </summary>
         /// <param name="condition">The condition to check.</param>
         /// <param name="message">The message to show.</param>
-        /// <param name="filePath">
-        /// The file path of the caller. (Do not use)
-        /// </param>
-        /// <param name="lineNumber">
-        /// The line number of the caller. (Do not use)
-        /// </param>
+        /// <param name="args">The arguments to the message to display.</param>
         /// <returns>
-        /// True only if the assert <paramref name="condition" /> passed. Otherwise false.
+        /// True only if the assert condition passed. Otherwise false.
         /// </returns>
-        public bool IsFalse(
-            bool condition,
-            string message,
-            ILogSource logSource = null,
-            [CallerFilePath] string filePath = "",
-            [CallerLineNumber] int lineNumber = 0)
+        public bool IsFalse(bool condition, string message, params object[] args)
         {
             return this.Check(
                 AssertType.IsFalse,
                 !condition,
                 message,
-                logSource,
-                filePath,
-                lineNumber,
+                args,
                 "IsFalse check failed.");
         }
 
         /// <summary>
-        /// Show a <paramref name="message" /> if the specified values are not equal.
+        /// Show a message if the specified condition is true.
         /// </summary>
-        /// <param name="logSource">
-        /// The <see cref="ILogSource" /> used to log messages on failure.
-        /// </param>
-        /// <param name="a">The first value to compare.</param>
-        /// <param name="b">The second value to compare.</param>
-        /// <param name="message">The message to show.</param>
-        /// <param name="filePath">
-        /// The file path of the caller. (Do not use)
-        /// </param>
-        /// <param name="lineNumber">
-        /// The line number of the caller. (Do not use)
-        /// </param>
+        /// <param name="condition">The condition to check.</param>
         /// <returns>
         /// True only if the assert condition passed. Otherwise false.
         /// </returns>
-        public bool AreEqual(
-            object a,
-            object b,
-            string message,
-            ILogSource logSource = null,
-            [CallerFilePath] string filePath = "",
-            [CallerLineNumber] int lineNumber = 0)
+        public bool IsFalse(bool condition)
+        {
+            return this.IsFalse(condition, null);
+        }
+
+        /// <summary>
+        /// Show a message if the specified values are not equal.
+        /// </summary>
+        /// <param name="a">The first value to compare.</param>
+        /// <param name="b">The second value to compare.</param>
+        /// <param name="message">The message to show.</param>
+        /// <param name="args">The arguments to the message to display.</param>
+        /// <returns>
+        /// True only if the assert condition passed. Otherwise false.
+        /// </returns>
+        public bool AreEqual(object a, object b, string message, params object[] args)
         {
             bool bothNull = (a == null) && (b == null);
 
@@ -136,39 +99,110 @@ namespace Dangr.Core.Diagnostics
                 AssertType.AreEqual,
                 bothNull || ((a != null) && a.Equals(b)),
                 message,
-                logSource,
-                filePath,
-                lineNumber,
+                args,
                 "AreEqual check failed. [{0}, {1}]",
                 a,
                 b);
         }
 
         /// <summary>
-        /// Show a <paramref name="message" /> if the specified values are equal.
+        /// Show a message if the specified values are not equal.
         /// </summary>
-        /// <param name="logSource">
-        /// The <see cref="ILogSource" /> used to log messages on failure.
-        /// </param>
         /// <param name="a">The first value to compare.</param>
         /// <param name="b">The second value to compare.</param>
+        /// <param name="precision">The acceptable difference when comparing the floating point value.</param>
         /// <param name="message">The message to show.</param>
-        /// <param name="filePath">
-        /// The file path of the caller. (Do not use)
-        /// </param>
-        /// <param name="lineNumber">
-        /// The line number of the caller. (Do not use)
-        /// </param>
+        /// <param name="args">The arguments to the message to display.</param>
         /// <returns>
         /// True only if the assert condition passed. Otherwise false.
         /// </returns>
-        public bool AreNotEqual(
-            object a,
-            object b,
-            string message,
-            ILogSource logSource = null,
-            [CallerFilePath] string filePath = "",
-            [CallerLineNumber] int lineNumber = 0)
+        public bool AreEqual(float a, float b, float precision, string message, params object[] args)
+        {
+            return this.Check(
+                AssertType.AreEqual,
+                a == b || Math.Abs(a - b) <= precision,
+                message,
+                args,
+                "AreEqual check failed. [{0}, {1}]",
+                a,
+                b);
+        }
+
+        /// <summary>
+        /// Show a message if the specified values are not equal.
+        /// </summary>
+        /// <param name="a">The first value to compare.</param>
+        /// <param name="b">The second value to compare.</param>
+        /// <param name="precision">The acceptable difference when comparing the floating point value.</param>
+        /// <param name="message">The message to show.</param>
+        /// <param name="args">The arguments to the message to display.</param>
+        /// <returns>
+        /// True only if the assert condition passed. Otherwise false.
+        /// </returns>
+        public bool AreEqual(double a, double b, double precision, string message, params object[] args)
+        {
+            return this.Check(
+                AssertType.AreEqual,
+                a == b || Math.Abs(a - b) <= precision,
+                message,
+                args,
+                "AreEqual check failed. [{0}, {1}]",
+                a,
+                b);
+        }
+
+        /// <summary>
+        /// Show a message if the specified values are not equal.
+        /// </summary>
+        /// <param name="a">The first value to compare.</param>
+        /// <param name="b">The second value to compare.</param>
+        /// <returns>
+        /// True only if the assert condition passed. Otherwise false.
+        /// </returns>
+        public bool AreEqual(object a, object b)
+        {
+            return this.AreEqual(a, b, null);
+        }
+
+        /// <summary>
+        /// Show a message if the specified values are not equal.
+        /// </summary>
+        /// <param name="a">The first value to compare.</param>
+        /// <param name="b">The second value to compare.</param>
+        /// <param name="precision">The acceptable difference when comparing the floating point value.</param>
+        /// <returns>
+        /// True only if the assert condition passed. Otherwise false.
+        /// </returns>
+        public bool AreEqual(float a, float b, float precision)
+        {
+            return this.AreEqual(a, b, precision, null);
+        }
+
+        /// <summary>
+        /// Show a message if the specified values are not equal.
+        /// </summary>
+        /// <param name="a">The first value to compare.</param>
+        /// <param name="b">The second value to compare.</param>
+        /// <param name="precision">The acceptable difference when comparing the floating point value.</param>
+        /// <returns>
+        /// True only if the assert condition passed. Otherwise false.
+        /// </returns>
+        public bool AreEqual(double a, double b, double precision)
+        {
+            return this.AreEqual(a, b, precision, null);
+        }
+
+        /// <summary>
+        /// Show a message if the specified values are equal.
+        /// </summary>
+        /// <param name="a">The first value to compare.</param>
+        /// <param name="b">The second value to compare.</param>
+        /// <param name="message">The message to show.</param>
+        /// <param name="args">The arguments to the message to display.</param>
+        /// <returns>
+        /// True only if the assert condition passed. Otherwise false.
+        /// </returns>
+        public bool AreNotEqual(object a, object b, string message, params object[] args)
         {
             bool bothNull = (a == null) && (b == null);
 
@@ -176,436 +210,490 @@ namespace Dangr.Core.Diagnostics
                 AssertType.AreNotEqual,
                 !bothNull && !((a != null) && a.Equals(b)),
                 message,
-                logSource,
-                filePath,
-                lineNumber,
+                args,
                 "AreNotEqual check failed. [{0}, {1}]",
                 a,
                 b);
         }
 
         /// <summary>
-        /// Show a <paramref name="message" /> if the specified object is null.
+        /// Show a message if the specified values are equal.
         /// </summary>
-        /// <param name="logSource">
-        /// The <see cref="ILogSource" /> used to log messages on failure.
-        /// </param>
-        /// <param name="value">The object to check.</param>
+        /// <param name="a">The first value to compare.</param>
+        /// <param name="b">The second value to compare.</param>
+        /// <param name="precision">The acceptable difference when comparing the floating point value.</param>
         /// <param name="message">The message to show.</param>
-        /// <param name="filePath">
-        /// The file path of the caller. (Do not use)
-        /// </param>
-        /// <param name="lineNumber">
-        /// The line number of the caller. (Do not use)
-        /// </param>
+        /// <param name="args">The arguments to the message to display.</param>
         /// <returns>
         /// True only if the assert condition passed. Otherwise false.
         /// </returns>
-        public bool IsNotNull(
-            object value,
-            string message,
-            ILogSource logSource = null,
-            [CallerFilePath] string filePath = "",
-            [CallerLineNumber] int lineNumber = 0)
+        public bool AreNotEqual(float a, float b, float precision, string message, params object[] args)
+        {
+            return this.Check(
+                AssertType.AreNotEqual,
+                Math.Abs(a - b) > precision,
+                message,
+                args,
+                "AreNotEqual check failed. [{0}, {1}]",
+                a,
+                b);
+        }
+
+        /// <summary>
+        /// Show a message if the specified values are equal.
+        /// </summary>
+        /// <param name="a">The first value to compare.</param>
+        /// <param name="b">The second value to compare.</param>
+        /// <param name="precision">The acceptable difference when comparing the floating point value.</param>
+        /// <param name="message">The message to show.</param>
+        /// <param name="args">The arguments to the message to display.</param>
+        /// <returns>
+        /// True only if the assert condition passed. Otherwise false.
+        /// </returns>
+        public bool AreNotEqual(double a, double b, double precision, string message, params object[] args)
+        {
+            return this.Check(
+                AssertType.AreNotEqual,
+                Math.Abs(a - b) > precision,
+                message,
+                args,
+                "AreNotEqual check failed. [{0}, {1}]",
+                a,
+                b);
+        }
+
+        /// <summary>
+        /// Show a message if the specified values are equal.
+        /// </summary>
+        /// <param name="a">The first value to compare.</param>
+        /// <param name="b">The second value to compare.</param>
+        /// <returns>
+        /// True only if the assert condition passed. Otherwise false.
+        /// </returns>
+        public bool AreNotEqual(object a, object b)
+        {
+            return this.AreNotEqual(a, b, null);
+        }
+
+        /// <summary>
+        /// Show a message if the specified values are equal.
+        /// </summary>
+        /// <param name="a">The first value to compare.</param>
+        /// <param name="b">The second value to compare.</param>
+        /// <param name="precision">The acceptable difference when comparing the floating point value.</param>
+        /// <returns>
+        /// True only if the assert condition passed. Otherwise false.
+        /// </returns>
+        public bool AreNotEqual(float a, float b, float precision)
+        {
+            return this.AreNotEqual(a, b, precision, null);
+        }
+
+        /// <summary>
+        /// Show a message if the specified values are equal.
+        /// </summary>
+        /// <param name="a">The first value to compare.</param>
+        /// <param name="b">The second value to compare.</param>
+        /// <param name="precision">The acceptable difference when comparing the floating point value.</param>
+        /// <returns>
+        /// True only if the assert condition passed. Otherwise false.
+        /// </returns>
+        public bool AreNotEqual(double a, double b, double precision)
+        {
+            return this.AreNotEqual(a, b, precision, null);
+        }
+
+        /// <summary>
+        /// Show a message if the specified object is null.
+        /// </summary>
+        /// <param name="value">The object to check.</param>
+        /// <param name="message">The message to show.</param>
+        /// <param name="args">The arguments to the message to display.</param>
+        /// <returns>
+        /// True only if the assert condition passed. Otherwise false.
+        /// </returns>
+        public bool IsNotNull(object value, string message, params object[] args)
         {
             return this.Check(
                 AssertType.IsNotNull,
                 value != null,
                 message,
-                logSource,
-                filePath,
-                lineNumber,
+                args,
                 "IsNotNull check failed.");
         }
 
         /// <summary>
-        /// Show a <paramref name="message" /> if the specified object is not null.
+        /// Show a message if the specified object is null.
         /// </summary>
-        /// <param name="logSource">
-        /// The <see cref="ILogSource" /> used to log messages on failure.
-        /// </param>
         /// <param name="value">The object to check.</param>
-        /// <param name="message">The message to show.</param>
-        /// <param name="filePath">
-        /// The file path of the caller. (Do not use)
-        /// </param>
-        /// <param name="lineNumber">
-        /// The line number of the caller. (Do not use)
-        /// </param>
         /// <returns>
         /// True only if the assert condition passed. Otherwise false.
         /// </returns>
-        public bool IsNull(
-            object value,
-            string message,
-            ILogSource logSource = null,
-            [CallerFilePath] string filePath = "",
-            [CallerLineNumber] int lineNumber = 0)
+        public bool IsNotNull(object value)
+        {
+            return this.IsNotNull(value, null);
+        }
+
+        /// <summary>
+        /// Show a message if the specified object is not null.
+        /// </summary>
+        /// <param name="value">The object to check.</param>
+        /// <param name="message">The message to show.</param>
+        /// <param name="args">The arguments to the message to display.</param>
+        /// <returns>
+        /// True only if the assert condition passed. Otherwise false.
+        /// </returns>
+        public bool IsNull(object value, string message, params object[] args)
         {
             return this.Check(
                 AssertType.IsNull,
                 value == null,
                 message,
-                logSource,
-                filePath,
-                lineNumber,
+                args,
                 "IsNull check failed. [{0}]",
                 value);
         }
 
         /// <summary>
-        /// Show a <paramref name="message" /> if the specified string is <c>null</c> or empty.
+        /// Show a message if the specified object is not null.
         /// </summary>
-        /// <param name="logSource">
-        /// The <see cref="ILogSource" /> used to log messages on failure.
-        /// </param>
-        /// <param name="value">The string to check.</param>
-        /// <param name="message">The message to show.</param>
-        /// <param name="filePath">
-        /// The file path of the caller. (Do not use)
-        /// </param>
-        /// <param name="lineNumber">
-        /// The line number of the caller. (Do not use)
-        /// </param>
+        /// <param name="value">The object to check.</param>
         /// <returns>
         /// True only if the assert condition passed. Otherwise false.
         /// </returns>
-        public bool IsNotNullOrEmpty(
-            string value,
-            string message,
-            ILogSource logSource = null,
-            [CallerFilePath] string filePath = "",
-            [CallerLineNumber] int lineNumber = 0)
+        public bool IsNull(object value)
+        {
+            return this.IsNull(value, null);
+        }
+
+        /// <summary>
+        /// Show a message if the specified string is <c>null</c> or empty.
+        /// </summary>
+        /// <param name="value">The string to check.</param>
+        /// <param name="message">The message to show.</param>
+        /// <param name="args">The arguments to the message to display.</param>
+        /// <returns>
+        /// True only if the assert condition passed. Otherwise false.
+        /// </returns>
+        public bool IsNotNullOrEmpty(string value, string message, params object[] args)
         {
             return this.Check(
                 AssertType.IsNotNullOrEmpty,
                 !string.IsNullOrEmpty(value),
                 message,
-                logSource,
-                filePath,
-                lineNumber,
+                args,
                 "IsNotNullOrEmpty check failed. [{0}]",
                 value);
         }
 
         /// <summary>
-        /// Show a <paramref name="message" /> if the specified string is not <c>null</c> or white space.
+        /// Show a message if the specified string is <c>null</c> or empty.
         /// </summary>
-        /// <param name="logSource">
-        /// The <see cref="ILogSource" /> used to log messages on failure.
-        /// </param>
         /// <param name="value">The string to check.</param>
-        /// <param name="message">The message to show.</param>
-        /// <param name="filePath">
-        /// The file path of the caller. (Do not use)
-        /// </param>
-        /// <param name="lineNumber">
-        /// The line number of the caller. (Do not use)
-        /// </param>
         /// <returns>
         /// True only if the assert condition passed. Otherwise false.
         /// </returns>
-        public bool IsNullOrWhiteSpace(
-            string value,
-            string message,
-            ILogSource logSource = null,
-            [CallerFilePath] string filePath = "",
-            [CallerLineNumber] int lineNumber = 0)
+        public bool IsNotNullOrEmpty(string value)
+        {
+            return this.IsNotNullOrEmpty(value, null);
+        }
+
+        /// <summary>
+        /// Show a message if the specified string is not <c>null</c> or white space.
+        /// </summary>
+        /// <param name="value">The string to check.</param>
+        /// <param name="message">The message to show.</param>
+        /// <param name="args">The arguments to the message to display.</param>
+        /// <returns>
+        /// True only if the assert condition passed. Otherwise false.
+        /// </returns>
+        public bool IsNullOrWhiteSpace(string value, string message, params object[] args)
         {
             return this.Check(
                 AssertType.IsNullOrWhiteSpace,
                 string.IsNullOrWhiteSpace(value),
                 message,
-                logSource,
-                filePath,
-                lineNumber,
+                args,
                 "IsNullOrWhiteSpace check failed. [{0}]",
                 value);
         }
 
         /// <summary>
-        /// Show a <paramref name="message" /> if the specified string is <c>null</c> or white space.
+        /// Show a message if the specified string is not <c>null</c> or white space.
         /// </summary>
-        /// <param name="logSource">
-        /// The <see cref="ILogSource" /> used to log messages on failure.
-        /// </param>
         /// <param name="value">The string to check.</param>
-        /// <param name="message">The message to show.</param>
-        /// <param name="filePath">
-        /// The file path of the caller. (Do not use)
-        /// </param>
-        /// <param name="lineNumber">
-        /// The line number of the caller. (Do not use)
-        /// </param>
         /// <returns>
         /// True only if the assert condition passed. Otherwise false.
         /// </returns>
-        public bool IsNotNullOrWhiteSpace(
-            string value,
-            string message,
-            ILogSource logSource = null,
-            [CallerFilePath] string filePath = "",
-            [CallerLineNumber] int lineNumber = 0)
+        public bool IsNullOrWhiteSpace(string value)
+        {
+            return this.IsNullOrWhiteSpace(value, null);
+        }
+
+        /// <summary>
+        /// Show a message if the specified string is <c>null</c> or white space.
+        /// </summary>
+        /// <param name="value">The string to check.</param>
+        /// <param name="message">The message to show.</param>
+        /// <param name="args">The arguments to the message to display.</param>
+        /// <returns>
+        /// True only if the assert condition passed. Otherwise false.
+        /// </returns>
+        public bool IsNotNullOrWhiteSpace(string value, string message, params object[] args)
         {
             return this.Check(
                 AssertType.IsNotNullOrWhiteSpace,
                 !string.IsNullOrWhiteSpace(value),
                 message,
-                logSource,
-                filePath,
-                lineNumber,
+                args,
                 "IsNotNullOrWhiteSpace check failed. [{0}]",
                 value);
         }
 
         /// <summary>
-        /// Show a <paramref name="message" /> if the specified string is not <c>null</c> or empty.
+        /// Show a message if the specified string is <c>null</c> or white space.
         /// </summary>
-        /// <param name="logSource">
-        /// The <see cref="Dangr.Core.Logging.ILogSource" /> used to log messages on failure.
-        /// </param>
         /// <param name="value">The string to check.</param>
-        /// <param name="message">The message to show.</param>
-        /// <param name="filePath">
-        /// The file path of the caller. (Do not use)
-        /// </param>
-        /// <param name="lineNumber">
-        /// The line number of the caller. (Do not use)
-        /// </param>
         /// <returns>
         /// True only if the assert condition passed. Otherwise false.
         /// </returns>
-        public bool IsNullOrEmpty(
-            string value,
-            string message,
-            ILogSource logSource = null,
-            [CallerFilePath] string filePath = "",
-            [CallerLineNumber] int lineNumber = 0)
+        public bool IsNotNullOrWhiteSpace(string value)
+        {
+            return this.IsNotNullOrWhiteSpace(value, null);
+        }
+
+        /// <summary>
+        /// Show a message if the specified string is not <c>null</c> or empty.
+        /// </summary>
+        /// <param name="value">The string to check.</param>
+        /// <param name="message">The message to show.</param>
+        /// <param name="args">The arguments to the message to display.</param>
+        /// <returns>
+        /// True only if the assert condition passed. Otherwise false.
+        /// </returns>
+        public bool IsNullOrEmpty(string value, string message, params object[] args)
         {
             return this.Check(
                 AssertType.IsNullOrEmpty,
                 string.IsNullOrEmpty(value),
                 message,
-                logSource,
-                filePath,
-                lineNumber,
+                args,
                 "IsNullOrEmpty check failed. [{0}]",
                 value);
         }
 
         /// <summary>
-        /// Show a <paramref name="message" /> if the specified <paramref name="collection" /> is empty.
+        /// Show a message if the specified string is not <c>null</c> or empty.
         /// </summary>
-        /// <param name="logSource">
-        /// The <see cref="ILogSource" /> used to log messages on failure.
-        /// </param>
-        /// <param name="collection">The collection to check.</param>
-        /// <param name="message">The message to show.</param>
-        /// <param name="filePath">
-        /// The file path of the caller. (Do not use)
-        /// </param>
-        /// <param name="lineNumber">
-        /// The line number of the caller. (Do not use)
-        /// </param>
+        /// <param name="value">The string to check.</param>
         /// <returns>
         /// True only if the assert condition passed. Otherwise false.
         /// </returns>
-        public bool IsNotEmpty(
-            ICollection collection,
-            string message,
-            ILogSource logSource = null,
-            [CallerFilePath] string filePath = "",
-            [CallerLineNumber] int lineNumber = 0)
+        public bool IsNullOrEmpty(string value)
         {
+            return this.IsNullOrEmpty(value, null);
+        }
+
+        /// <summary>
+        /// Show a message if the specified collection is empty.
+        /// </summary>
+        /// <param name="collection">The collection to check.</param>
+        /// <param name="message">The message to show.</param>
+        /// <param name="args">The arguments to the message to display.</param>
+        /// <returns>
+        /// True only if the assert condition passed. Otherwise false.
+        /// </returns>
+        /// <exception cref="System.NullReferenceException"></exception>
+        public bool IsNotEmpty(ICollection collection, string message, params object[] args)
+        {
+            if (collection == null)
+            {
+                throw new NullReferenceException();
+            }
+
             return this.Check(
                 AssertType.IsNotEmpty,
                 collection.Count > 0,
                 message,
-                logSource,
-                filePath,
-                lineNumber,
+                args,
                 "IsNotEmpty check failed. [{0}]",
                 collection);
         }
 
         /// <summary>
-        /// Show a <paramref name="message" /> if the specified <paramref name="collection" /> is not empty.
+        /// Show a message if the specified collection is empty.
         /// </summary>
-        /// <param name="logSource">
-        /// The <see cref="ILogSource" /> used to log messages on failure.
-        /// </param>
         /// <param name="collection">The collection to check.</param>
-        /// <param name="message">The message to show.</param>
-        /// <param name="filePath">
-        /// The file path of the caller. (Do not use)
-        /// </param>
-        /// <param name="lineNumber">
-        /// The line number of the caller. (Do not use)
-        /// </param>
         /// <returns>
         /// True only if the assert condition passed. Otherwise false.
         /// </returns>
-        public bool IsEmpty(
-            ICollection collection,
-            string message,
-            ILogSource logSource = null,
-            [CallerFilePath] string filePath = "",
-            [CallerLineNumber] int lineNumber = 0)
+        public bool IsNotEmpty(ICollection collection)
         {
+            return this.IsNotEmpty(collection, null);
+        }
+
+        /// <summary>
+        /// Show a message if the specified collection is not empty.
+        /// </summary>
+        /// <param name="collection">The collection to check.</param>
+        /// <param name="message">The message to show.</param>
+        /// <param name="args">The arguments to the message to display.</param>
+        /// <returns>
+        /// True only if the assert condition passed. Otherwise false.
+        /// </returns>
+        /// <exception cref="System.NullReferenceException"></exception>
+        public bool IsEmpty(ICollection collection, string message, params object[] args)
+        {
+            if (collection == null)
+            {
+                throw new NullReferenceException();
+            }
+
             return this.Check(
                 AssertType.IsEmpty,
                 collection.Count == 0,
                 message,
-                logSource,
-                filePath,
-                lineNumber,
+                args,
                 "IsEmpty check failed. [{0}: size {1}]",
                 collection,
                 collection.Count);
         }
 
         /// <summary>
-        /// Show a <paramref name="message" /> if the specified <paramref name="value" /> is 0.
+        /// Show a message if the specified collection is not empty.
         /// </summary>
-        /// <param name="logSource">
-        /// The <see cref="ILogSource" /> used to log messages on failure.
-        /// </param>
-        /// <param name="value">The value to check.</param>
-        /// <param name="message">The message to show.</param>
-        /// <param name="filePath">
-        /// The file path of the caller. (Do not use)
-        /// </param>
-        /// <param name="lineNumber">
-        /// The line number of the caller. (Do not use)
-        /// </param>
+        /// <param name="collection">The collection to check.</param>
         /// <returns>
         /// True only if the assert condition passed. Otherwise false.
         /// </returns>
-        public bool IsNotZero(
-            int value,
-            string message,
-            ILogSource logSource = null,
-            [CallerFilePath] string filePath = "",
-            [CallerLineNumber] int lineNumber = 0)
+        public bool IsEmpty(ICollection collection)
+        {
+            return this.IsEmpty(collection, null);
+        }
+
+        /// <summary>
+        /// Show a message if the specified value is 0.
+        /// </summary>
+        /// <param name="value">The value to check.</param>
+        /// <param name="message">The message to show.</param>
+        /// <param name="args">The arguments to the message to display.</param>
+        /// <returns>
+        /// True only if the assert condition passed. Otherwise false.
+        /// </returns>
+        public bool IsNotZero(int value, string message, params object[] args)
         {
             return this.Check(
                 AssertType.IsNotZero,
                 value != 0,
                 message,
-                logSource,
-                filePath,
-                lineNumber,
+                args,
                 "IsNotZero check failed.");
         }
 
         /// <summary>
-        /// Show a <paramref name="message" /> if the specified <paramref name="value" /> is 0.
+        /// Show a message if the specified value is 0.
         /// </summary>
-        /// <param name="logSource">
-        /// The <see cref="ILogSource" /> used to log messages on failure.
-        /// </param>
         /// <param name="value">The value to check.</param>
+        /// <param name="precision">The acceptable difference when comparing the floating point value.</param>
         /// <param name="message">The message to show.</param>
-        /// <param name="filePath">
-        /// The file path of the caller. (Do not use)
-        /// </param>
-        /// <param name="lineNumber">
-        /// The line number of the caller. (Do not use)
-        /// </param>
+        /// <param name="args">The arguments to the message to display.</param>
         /// <returns>
         /// True only if the assert condition passed. Otherwise false.
         /// </returns>
-        public bool IsNotZero(
-            float value,
-            string message,
-            ILogSource logSource = null,
-            [CallerFilePath] string filePath = "",
-            [CallerLineNumber] int lineNumber = 0)
+        public bool IsNotZero(float value, float precision, string message, params object[] args)
         {
             return this.Check(
                 AssertType.IsNotZero,
-                Math.Abs(value) >= float.Epsilon,
+                Math.Abs(value) >= precision,
                 message,
-                logSource,
-                filePath,
-                lineNumber,
+                args,
                 "IsNotZero check failed.");
         }
 
         /// <summary>
-        /// Show a <paramref name="message" /> if the specified <paramref name="value" /> is 0.
+        /// Show a message if the specified value is 0.
         /// </summary>
-        /// <param name="logSource">
-        /// The <see cref="ILogSource" /> used to log messages on failure.
-        /// </param>
         /// <param name="value">The value to check.</param>
+        /// <param name="precision">The acceptable difference when comparing the floating point value.</param>
         /// <param name="message">The message to show.</param>
-        /// <param name="filePath">
-        /// The file path of the caller. (Do not use)
-        /// </param>
-        /// <param name="lineNumber">
-        /// The line number of the caller. (Do not use)
-        /// </param>
+        /// <param name="args">The arguments to the message to display.</param>
         /// <returns>
         /// True only if the assert condition passed. Otherwise false.
         /// </returns>
-        public bool IsNotZero(
-            double value,
-            string message,
-            ILogSource logSource = null,
-            [CallerFilePath] string filePath = "",
-            [CallerLineNumber] int lineNumber = 0)
+        public bool IsNotZero(double value, double precision, string message, params object[] args)
         {
             return this.Check(
                 AssertType.IsNotZero,
-                Math.Abs(value) >= double.Epsilon,
+                Math.Abs(value) >= precision,
                 message,
-                logSource,
-                filePath,
-                lineNumber,
+                args,
                 "IsNotZero check failed.");
         }
 
         /// <summary>
-        /// Show a <paramref name="message" /> if the <paramref name="value" /> is outside of the specified range.
+        /// Show a message if the specified value is 0.
         /// </summary>
-        /// <param name="logSource">
-        /// The <see cref="ILogSource" /> used to log messages on failure.
-        /// </param>
         /// <param name="value">The value to check.</param>
-        /// <param name="min">
-        /// The minimum <paramref name="value" /> of the range inclusive.
-        /// </param>
-        /// <param name="max">
-        /// The maximum <paramref name="value" /> of the range inclusive.
-        /// </param>
-        /// <param name="message">The message to show.</param>
-        /// <param name="filePath">
-        /// The file path of the caller. (Do not use)
-        /// </param>
-        /// <param name="lineNumber">
-        /// The line number of the caller. (Do not use)
-        /// </param>
         /// <returns>
         /// True only if the assert condition passed. Otherwise false.
         /// </returns>
-        public bool IsInRange<T>(
-            T value,
-            T min,
-            T max,
-            string message,
-            ILogSource logSource = null,
-            [CallerFilePath] string filePath = "",
-            [CallerLineNumber] int lineNumber = 0)
+        public bool IsNotZero(int value)
+        {
+            return this.IsNotZero(value, null);
+        }
+
+        /// <summary>
+        /// Show a message if the specified value is 0.
+        /// </summary>
+        /// <param name="value">The value to check.</param>
+        /// <param name="precision">The acceptable difference when comparing the floating point value.</param>
+        /// <returns>
+        /// True only if the assert condition passed. Otherwise false.
+        /// </returns>
+        public bool IsNotZero(float value, float precision)
+        {
+            return this.IsNotZero(value, precision, null);
+        }
+
+        /// <summary>
+        /// Show a message if the specified value is 0.
+        /// </summary>
+        /// <param name="value">The value to check.</param>
+        /// <param name="precision">The acceptable difference when comparing the floating point value.</param>
+        /// <returns>
+        /// True only if the assert condition passed. Otherwise false.
+        /// </returns>
+        public bool IsNotZero(double value, double precision)
+        {
+            return this.IsNotZero(value, precision, null);
+        }
+
+        /// <summary>
+        /// Show a message if the value is outside of the specified range.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="value">The value to check.</param>
+        /// <param name="min">The minimum value of the range inclusive.</param>
+        /// <param name="max">The maximum value of the range inclusive.</param>
+        /// <param name="message">The message to show.</param>
+        /// <param name="args">The arguments to the message to display.</param>
+        /// <returns>
+        /// True only if the assert condition passed. Otherwise false.
+        /// </returns>
+        /// <exception cref="System.IndexOutOfRangeException"></exception>
+        public bool IsInRange<T>(T value, T min, T max, string message, params object[] args)
             where T : IComparable
         {
+            if (CompareOperation.Less.Compare(max, min))
+            {
+                throw new IndexOutOfRangeException($"Max value '{max}' must be less than Min value '{min}'.");
+            }
+
             return this.Check(
                 AssertType.IsInRange,
-                min.CompareTo(value) <= 0 && value.CompareTo(max) <= 0,
+                CompareOperation.LessEqual.Compare(min, value) && CompareOperation.LessEqual.Compare(value, max),
                 message,
-                logSource,
-                filePath,
-                lineNumber,
+                args,
                 "IsInRange check failed.[{0} ({1}:{2})]",
                 value,
                 min,
@@ -613,67 +701,140 @@ namespace Dangr.Core.Diagnostics
         }
 
         /// <summary>
-        /// Show a <paramref name="message" /> if the specified values do not compare in the specified way.
+        /// Show a message if the value is outside of the specified range.
         /// </summary>
-        /// <param name="logSource">
-        /// The <see cref="ILogSource" /> used to log messages on failure.
-        /// </param>
-        /// <param name="a">The first value to compare.</param>
-        /// <param name="operation">
-        /// The <see cref="CompareOperation" /> to perform.
-        /// </param>
-        /// <param name="b">The second value to compare.</param>
+        /// <param name="value">The value to check.</param>
+        /// <param name="min">The minimum value of the range inclusive.</param>
+        /// <param name="max">The maximum value of the range inclusive.</param>
+        /// <param name="precision">The acceptable difference when comparing the floating point value.</param>
         /// <param name="message">The message to show.</param>
-        /// <param name="filePath">
-        /// The file path of the caller. (Do not use)
-        /// </param>
-        /// <param name="lineNumber">
-        /// The line number of the caller. (Do not use)
-        /// </param>
+        /// <param name="args">The arguments to the message to display.</param>
         /// <returns>
         /// True only if the assert condition passed. Otherwise false.
         /// </returns>
-        public bool Compare<T>(
-            T a,
-            CompareOperation operation,
-            T b,
-            string message,
-            ILogSource logSource = null,
-            [CallerFilePath] string filePath = "",
-            [CallerLineNumber] int lineNumber = 0)
-            where T : IComparable
+        /// <exception cref="System.IndexOutOfRangeException"></exception>
+        public bool IsInRange(float value, float min, float max, float precision, string message, params object[] args)
         {
-            bool check = false;
-            switch (operation)
+            if (CompareOperation.Less.Compare(max, min, precision))
             {
-                case CompareOperation.Equal:
-                    check = a.CompareTo(b) == 0;
-                    break;
-
-                case CompareOperation.Greater:
-                    check = a.CompareTo(b) > 0;
-                    break;
-
-                case CompareOperation.GreaterEqual:
-                    check = a.CompareTo(b) >= 0;
-                    break;
-
-                case CompareOperation.Less:
-                    check = a.CompareTo(b) < 0;
-                    break;
-
-                case CompareOperation.LessEqual:
-                    check = a.CompareTo(b) <= 0;
-                    break;
+                throw new IndexOutOfRangeException($"Max value '{max}' must be less than Min value '{min}'.");
             }
 
             return this.Check(
-                AssertType.Compare,
-                check,
+                AssertType.IsInRange,
+                CompareOperation.LessEqual.Compare(min, value, precision)
+                && CompareOperation.LessEqual.Compare(value, max, precision),
                 message,
-                logSource,
-                filePath,
-                lineNumber,
+                args,
+                "IsInRange check failed.[{0} ({1}:{2})]",
+                value,
+                min,
+                max);
+        }
+
+        /// <summary>
+        /// Show a message if the value is outside of the specified range.
+        /// </summary>
+        /// <param name="value">The value to check.</param>
+        /// <param name="min">The minimum value of the range inclusive.</param>
+        /// <param name="max">The maximum value of the range inclusive.</param>
+        /// <param name="precision">The acceptable difference when comparing the floating point value.</param>
+        /// <param name="message">The message to show.</param>
+        /// <param name="args">The arguments to the message to display.</param>
+        /// <returns>
+        /// True only if the assert condition passed. Otherwise false.
+        /// </returns>
+        /// <exception cref="System.IndexOutOfRangeException"></exception>
+        public bool IsInRange(
+            double value,
+            double min,
+            double max,
+            double precision,
+            string message,
+            params object[] args)
+        {
+            if (CompareOperation.Less.Compare(max, min, precision))
+            {
+                throw new IndexOutOfRangeException($"Max value '{max}' must be less than Min value '{min}'.");
+            }
+
+            return this.Check(
+                AssertType.IsInRange,
+                CompareOperation.LessEqual.Compare(min, value, precision)
+                && CompareOperation.LessEqual.Compare(value, max, precision),
+                message,
+                args,
+                "IsInRange check failed.[{0} ({1}:{2})]",
+                value,
+                min,
+                max);
+        }
+
+        /// <summary>
+        /// Show a message if the value is outside of the specified range.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="value">The value to check.</param>
+        /// <param name="min">The minimum value of the range inclusive.</param>
+        /// <param name="max">The maximum value of the range inclusive.</param>
+        /// <returns>
+        /// True only if the assert condition passed. Otherwise false.
+        /// </returns>
+        public bool IsInRange<T>(T value, T min, T max) where T : IComparable
+        {
+            return this.IsInRange(value, min, max, null);
+        }
+
+        /// <summary>
+        /// Show a message if the value is outside of the specified range.
+        /// </summary>
+        /// <param name="value">The value to check.</param>
+        /// <param name="min">The minimum value of the range inclusive.</param>
+        /// <param name="max">The maximum value of the range inclusive.</param>
+        /// <param name="precision">The acceptable difference when comparing the floating point value.</param>
+        /// <returns>
+        /// True only if the assert condition passed. Otherwise false.
+        /// </returns>
+        public bool IsInRange(float value, float min, float max, float precision)
+        {
+            return this.IsInRange(value, min, max, precision, null);
+        }
+
+        /// <summary>
+        /// Show a message if the value is outside of the specified range.
+        /// </summary>
+        /// <param name="value">The value to check.</param>
+        /// <param name="min">The minimum value of the range inclusive.</param>
+        /// <param name="max">The maximum value of the range inclusive.</param>
+        /// <param name="precision">The acceptable difference when comparing the floating point value.</param>
+        /// <returns>
+        /// True only if the assert condition passed. Otherwise false.
+        /// </returns>
+        public bool IsInRange(double value, double min, double max, double precision)
+        {
+            return this.IsInRange(value, min, max, precision, null);
+        }
+
+        /// <summary>
+        /// Show a message if the specified values do not compare in the specified way.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="a">The first value to compare.</param>
+        /// <param name="operation">The <see cref="CompareOperation" /> to perform.</param>
+        /// <param name="b">The second value to compare.</param>
+        /// <param name="message">The message to show.</param>
+        /// <param name="args">The arguments to the message to display.</param>
+        /// <returns>
+        /// True only if the assert condition passed. Otherwise false.
+        /// </returns>
+        public bool Comparison<T>(T a, CompareOperation operation, T b, string message, params object[] args)
+            where T : IComparable
+        {
+            return this.Check(
+                AssertType.Compare,
+                operation.Compare(a, b),
+                message,
+                args,
                 "Compare check failed. [{0} {1} {2}]",
                 a,
                 operation.GetOperation(),
@@ -681,189 +842,285 @@ namespace Dangr.Core.Diagnostics
         }
 
         /// <summary>
-        /// Show a message if the specified <see cref="ICheckedDisposable" /> is disposed.
+        /// Show a message if the specified values do not compare in the specified way.
         /// </summary>
-        /// <param name="disposable">
-        /// The <see cref="ICheckedDisposable" /> to check.
-        /// </param>
-        /// <param name="name">
-        /// The name of the <see cref="ICheckedDisposable" /> .
-        /// </param>
-        /// <param name="logSource">
-        /// The <see cref="ILogSource" /> used to log messages on failure.
-        /// </param>
-        /// <param name="filePath">
-        /// The file path of the caller. (Do not use)
-        /// </param>
-        /// <param name="lineNumber">
-        /// The line number of the caller. (Do not use)
-        /// </param>
+        /// <param name="a">The first value to compare.</param>
+        /// <param name="operation">The <see cref="CompareOperation" /> to perform.</param>
+        /// <param name="b">The second value to compare.</param>
+        /// <param name="precision">The acceptable difference when comparing the floating point value.</param>
+        /// <param name="message">The message to show.</param>
+        /// <param name="args">The arguments to the message to display.</param>
         /// <returns>
         /// True only if the assert condition passed. Otherwise false.
         /// </returns>
-        public bool NotDisposed(
-            ICheckedDisposable disposable,
-            string name,
-            ILogSource logSource = null,
-            [CallerFilePath] string filePath = "",
-            [CallerLineNumber] int lineNumber = 0)
+        public bool Comparison(
+            float a,
+            CompareOperation operation,
+            float b,
+            float precision,
+            string message,
+            params object[] args)
         {
+            return this.Check(
+                AssertType.Compare,
+                operation.Compare(a, b, precision),
+                message,
+                args,
+                "Compare check failed. [{0} {1} {2}]",
+                a,
+                operation.GetOperation(),
+                b);
+        }
+
+        /// <summary>
+        /// Show a message if the specified values do not compare in the specified way.
+        /// </summary>
+        /// <param name="a">The first value to compare.</param>
+        /// <param name="operation">The <see cref="CompareOperation" /> to perform.</param>
+        /// <param name="b">The second value to compare.</param>
+        /// <param name="precision">The acceptable difference when comparing the floating point value.</param>
+        /// <param name="message">The message to show.</param>
+        /// <param name="args">The arguments to the message to display.</param>
+        /// <returns>
+        /// True only if the assert condition passed. Otherwise false.
+        /// </returns>
+        public bool Comparison(
+            double a,
+            CompareOperation operation,
+            double b,
+            double precision,
+            string message,
+            params object[] args)
+        {
+            return this.Check(
+                AssertType.Compare,
+                operation.Compare(a, b, precision),
+                message,
+                args,
+                "Compare check failed. [{0} {1} {2}]",
+                a,
+                operation.GetOperation(),
+                b);
+        }
+
+        /// <summary>
+        /// Show a message if the specified values do not compare in the specified way.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="a">The first value to compare.</param>
+        /// <param name="operation">The <see cref="CompareOperation" /> to perform.</param>
+        /// <param name="b">The second value to compare.</param>
+        /// <returns>
+        /// True only if the assert condition passed. Otherwise false.
+        /// </returns>
+        public bool Comparison<T>(T a, CompareOperation operation, T b) where T : IComparable
+        {
+            return this.Comparison(a, operation, b, null);
+        }
+
+        /// <summary>
+        /// Show a message if the specified values do not compare in the specified way.
+        /// </summary>
+        /// <param name="a">The first value to compare.</param>
+        /// <param name="operation">The <see cref="CompareOperation" /> to perform.</param>
+        /// <param name="b">The second value to compare.</param>
+        /// <param name="precision">The acceptable difference when comparing the floating point value.</param>
+        /// <returns>
+        /// True only if the assert condition passed. Otherwise false.
+        /// </returns>
+        public bool Comparison(float a, CompareOperation operation, float b, float precision)
+        {
+            return this.Comparison(a, operation, b, precision, null);
+        }
+
+        /// <summary>
+        /// Show a message if the specified values do not compare in the specified way.
+        /// </summary>
+        /// <param name="a">The first value to compare.</param>
+        /// <param name="operation">The <see cref="CompareOperation" /> to perform.</param>
+        /// <param name="b">The second value to compare.</param>
+        /// <param name="precision">The acceptable difference when comparing the floating point value.</param>
+        /// <returns>
+        /// True only if the assert condition passed. Otherwise false.
+        /// </returns>
+        public bool Comparison(double a, CompareOperation operation, double b, double precision)
+        {
+            return this.Comparison(a, operation, b, precision, null);
+        }
+
+        /// <summary>
+        /// Show a message if the specified <see cref="ICheckedDisposable" /> is disposed.
+        /// </summary>
+        /// <param name="disposable">The <see cref="ICheckedDisposable" /> to check.</param>
+        /// <param name="name">The name of the <see cref="ICheckedDisposable" /> .</param>
+        /// <returns>
+        /// True only if the assert condition passed. Otherwise false.
+        /// </returns>
+        /// <exception cref="System.NullReferenceException"></exception>
+        public bool IsNotDisposed(ICheckedDisposable disposable, string name)
+        {
+            if (disposable == null)
+            {
+                throw new NullReferenceException();
+            }
+
             return this.Check(
                 AssertType.NotDisposed,
                 !disposable.IsDisposed,
                 name,
-                logSource,
-                filePath,
-                lineNumber,
+                null,
                 "NotDisposed check failed. [{0}]",
                 disposable);
         }
 
         /// <summary>
-        /// Show a <paramref name="message" /> if the specified object is not of the specified type.
+        /// Show a message if the specified <see cref="ICheckedDisposable" /> is not disposed.
         /// </summary>
-        /// <typeparam name="T">The type to check.</typeparam>
-        /// <param name="logSource">
-        /// The <see cref="ILogSource" /> used to log messages on failure.
-        /// </param>
-        /// <param name="obj">The object to check.</param>
-        /// <param name="message">The message to show.</param>
-        /// <param name="filePath">
-        /// The file path of the caller. (Do not use)
-        /// </param>
-        /// <param name="lineNumber">
-        /// The line number of the caller. (Do not use)
-        /// </param>
+        /// <param name="disposable">The <see cref="ICheckedDisposable" /> to check.</param>
+        /// <param name="name">The name of the <see cref="ICheckedDisposable" /> .</param>
         /// <returns>
         /// True only if the assert condition passed. Otherwise false.
         /// </returns>
-        public bool IsType<T>(
-            object obj,
-            string message,
-            ILogSource logSource = null,
-            [CallerFilePath] string filePath = "",
-            [CallerLineNumber] int lineNumber = 0)
+        /// <exception cref="System.NullReferenceException"></exception>
+        public bool IsDisposed(ICheckedDisposable disposable, string name)
+        {
+            if (disposable == null)
+            {
+                throw new NullReferenceException();
+            }
+
+            return this.Check(
+                AssertType.IsDisposed,
+                disposable.IsDisposed,
+                name,
+                null,
+                "IsDisposed check failed. [{0}]",
+                disposable);
+        }
+
+        /// <summary>
+        /// Show a message if the specified object is not of the specified type.
+        /// </summary>
+        /// <typeparam name="T">The type to check.</typeparam>
+        /// <param name="obj">The object to check.</param>
+        /// <param name="message">The message to show.</param>
+        /// <param name="args">The arguments to the message to display.</param>
+        /// <returns>
+        /// True only if the assert condition passed. Otherwise false.
+        /// </returns>
+        public bool IsType<T>(object obj, string message, params object[] args)
         {
             return this.Check(
                 AssertType.IsType,
                 obj is T,
                 message,
-                logSource,
-                filePath,
-                lineNumber,
+                args,
                 "IsType check failed. [{0} expecting:{1}]",
                 obj?.GetType().Name ?? "null",
                 typeof(T).Name);
         }
 
         /// <summary>
-        /// Show a <paramref name="message" /> if the specified object is not of the specified type or null.
+        /// Show a message if the specified object is not of the specified type.
         /// </summary>
         /// <typeparam name="T">The type to check.</typeparam>
-        /// <param name="logSource">
-        /// The <see cref="ILogSource" /> used to log messages on failure.
-        /// </param>
         /// <param name="obj">The object to check.</param>
-        /// <param name="message">The message to show.</param>
-        /// <param name="filePath">
-        /// The file path of the caller. (Do not use)
-        /// </param>
-        /// <param name="lineNumber">
-        /// The line number of the caller. (Do not use)
-        /// </param>
         /// <returns>
         /// True only if the assert condition passed. Otherwise false.
         /// </returns>
-        public bool IsTypeOrNull<T>(
-            object obj,
-            string message,
-            ILogSource logSource = null,
-            [CallerFilePath] string filePath = "",
-            [CallerLineNumber] int lineNumber = 0)
+        public bool IsType<T>(object obj)
+        {
+            return this.IsType<T>(obj, null);
+        }
+
+        /// <summary>
+        /// Show a message if the specified object is not of the specified type or null.
+        /// </summary>
+        /// <typeparam name="T">The type to check.</typeparam>
+        /// <param name="obj">The object to check.</param>
+        /// <param name="message">The message to show.</param>
+        /// <param name="args">The arguments to the message to display.</param>
+        /// <returns>
+        /// True only if the assert condition passed. Otherwise false.
+        /// </returns>
+        public bool IsTypeOrNull<T>(object obj, string message, params object[] args)
         {
             return this.Check(
                 AssertType.IsTypeOrNull,
                 (obj == null) || obj is T,
                 message,
-                logSource,
-                filePath,
-                lineNumber,
+                args,
                 "IsTypeOrNull check failed. [{0} expecting:{1}]",
                 obj?.GetType().Name ?? "null",
                 typeof(T).Name);
         }
 
         /// <summary>
-        /// Unconditionally Show a message.
+        /// Show a message if the specified object is not of the specified type or null.
         /// </summary>
-        /// <param name="logSource">
-        /// The <see cref="ILogSource" /> used to log messages on failure.
-        /// </param>
-        /// <param name="message">The message to show.</param>
-        /// <param name="filePath">
-        /// The file path of the caller. (Do not use)
-        /// </param>
-        /// <param name="lineNumber">
-        /// The line number of the caller. (Do not use)
-        /// </param>
+        /// <typeparam name="T">The type to check.</typeparam>
+        /// <param name="obj">The object to check.</param>
         /// <returns>
         /// True only if the assert condition passed. Otherwise false.
         /// </returns>
-        public bool Fail(
-            string message,
-            ILogSource logSource = null,
-            [CallerFilePath] string filePath = "",
-            [CallerLineNumber] int lineNumber = 0)
+        public bool IsTypeOrNull<T>(object obj)
         {
-            return this.Check(AssertType.Fail, false, message, logSource, filePath, lineNumber, "Fail");
+            return this.IsTypeOrNull<T>(obj, null);
         }
 
         /// <summary>
-        /// Shows a <paramref name="message" /> and gets an exception that should be thrown.
+        /// Unconditionally Show a message.
         /// </summary>
-        /// <param name="type">
-        /// The type of assert condition that was evaluated.
-        /// </param>
-        /// <param name="message">The message that should be shown.</param>
-        /// <param name="logSource">
-        /// The <see cref="ILogSource" /> used to log messages on failure.
-        /// </param>
-        /// <param name="ex">
-        /// Out param for an exception that should be thrown or null.
-        /// </param>
-        /// <returns>True if the assert should be remembered.</returns>
-        protected abstract bool Failed(AssertType type, string message, ILogSource logSource, out Exception ex);
+        /// <param name="message">The message to show.</param>
+        /// <param name="args">The arguments to the message to display.</param>
+        /// <returns>
+        /// True only if the assert condition passed. Otherwise false.
+        /// </returns>
+        public bool Fail(string message, params object[] args)
+        {
+            return this.Check(AssertType.Fail, false, message, args, "Fail");
+        }
 
+        /// <summary>
+        /// Checks the specified type.
+        /// </summary>
+        /// <param name="type">The type.</param>
+        /// <param name="condition">if set to <c>true</c> [condition].</param>
+        /// <param name="message">The message.</param>
+        /// <param name="messageArgs">The message arguments.</param>
+        /// <param name="assertMessageFormat">The assert message format.</param>
+        /// <param name="args">The arguments.</param>
+        /// <returns></returns>
         private bool Check(
             AssertType type,
             bool condition,
             string message,
-            ILogSource logSource,
-            string filePath,
-            int lineNumber,
+            object[] messageArgs,
             string assertMessageFormat,
             params object[] args)
         {
-            if (this.rememberAsserts && this.assertPaths.Contains($"{filePath}?{lineNumber}"))
-            {
-                return condition;
-            }
-
             if (!condition)
             {
-                StringBuilder builder = new StringBuilder();
-                builder.AppendFormat(assertMessageFormat, args);
-                builder.AppendLine();
-                builder.Append("\t");
-                builder.AppendLine(message);
-                builder.AppendFormat("\tat {0}({1}) : ", filePath, lineNumber);
+                StringBuilder builder = new StringBuilder()
+                    .AppendFormat(assertMessageFormat, args)
+                    .AppendLine();
 
-                Exception ex;
-                if (this.Failed(type, builder.ToString(), logSource, out ex) && this.rememberAsserts)
+                if (message != null)
                 {
-                    this.assertPaths.Add($"{filePath}?{lineNumber}");
+                    builder.Append("\t");
+                    if (messageArgs == null)
+                    {
+                        builder.Append(message);
+                    }
+                    else
+                    {
+                        builder.AppendFormat(message, messageArgs);
+                    }
+
+                    builder.AppendLine();
                 }
 
+                Exception ex = this.Failed(type, builder.ToString());
                 if (ex != null)
                 {
                     throw ex;
@@ -872,5 +1129,15 @@ namespace Dangr.Core.Diagnostics
 
             return condition;
         }
+
+        /// <summary>
+        /// Shows a message and gets an exception that should be thrown.
+        /// </summary>
+        /// <param name="type">
+        /// The type of assert condition that was evaluated.
+        /// </param>
+        /// <param name="message">The message that should be shown.</param>
+        /// <returns>The exception that should be thrown, or null.</returns>
+        protected abstract Exception Failed(AssertType type, string message);
     }
 }

@@ -6,14 +6,14 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
+using System.Reflection;
+using System.Runtime.InteropServices;
+    
 /*
  * This file Is generated using T4 Text Templates. Do Not Modify. 
  * Make changes to T4 files directly.
  */
 
-using System.Reflection;
-using System.Runtime.InteropServices;
-    
 [assembly: AssemblyTitle("Dangr.Command.Test")]
 [assembly: AssemblyProduct("Dangr.Command.Test")]
 [assembly: AssemblyDescription("Utilities for parsing and executing commands from a command line.")]

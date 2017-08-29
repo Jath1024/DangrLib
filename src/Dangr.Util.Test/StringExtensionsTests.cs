@@ -7,8 +7,8 @@
 // -----------------------------------------------------------------------
 namespace Dangr.Core.Util
 {
+    using Dangr.Core.Diagnostics;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
-    using Assert = Dangr.Core.Diagnostics.Assert;
 
     [TestClass]
     public class StringExtensionsTests
@@ -18,7 +18,7 @@ namespace Dangr.Core.Util
         {
             string testStringAllCaps = "";
             string testStringPascal = "";
-            Assert.Validate.AreEqual(
+            Validate.Value.AreEqual(
                 testStringAllCaps.CapsToPascalCase(),
                 testStringPascal,
                 "Did not correctly convert string to PascalCase.");
@@ -29,7 +29,7 @@ namespace Dangr.Core.Util
         {
             string testStringAllCaps = "HELLO";
             string testStringPascal = "Hello";
-            Assert.Validate.AreEqual(
+            Validate.Value.AreEqual(
                 testStringAllCaps.CapsToPascalCase(),
                 testStringPascal,
                 "Did not correctly convert string to PascalCase.");
@@ -40,7 +40,7 @@ namespace Dangr.Core.Util
         {
             string testStringAllCaps = "HELLO_THERE";
             string testStringPascal = "HelloThere";
-            Assert.Validate.AreEqual(
+            Validate.Value.AreEqual(
                 testStringAllCaps.CapsToPascalCase(),
                 testStringPascal,
                 "Did not correctly convert string to PascalCase.");
@@ -51,7 +51,7 @@ namespace Dangr.Core.Util
         {
             string testStringAllCaps = "HELLO_THERE_YOU";
             string testStringPascal = "HelloThereYou";
-            Assert.Validate.AreEqual(
+            Validate.Value.AreEqual(
                 testStringAllCaps.CapsToPascalCase(),
                 testStringPascal,
                 "Did not correctly convert string to PascalCase.");
@@ -62,7 +62,7 @@ namespace Dangr.Core.Util
         {
             string testStringAllCaps = "HELLO__THERE";
             string testStringPascal = "HelloThere";
-            Assert.Validate.AreEqual(
+            Validate.Value.AreEqual(
                 testStringAllCaps.CapsToPascalCase(),
                 testStringPascal,
                 "Did not correctly convert string to PascalCase.");
@@ -73,7 +73,7 @@ namespace Dangr.Core.Util
         {
             string testStringAllCaps = "_HELLO";
             string testStringPascal = "Hello";
-            Assert.Validate.AreEqual(
+            Validate.Value.AreEqual(
                 testStringAllCaps.CapsToPascalCase(),
                 testStringPascal,
                 "Did not correctly convert string to PascalCase.");
@@ -84,7 +84,7 @@ namespace Dangr.Core.Util
         {
             string testStringAllCaps = "__HELLO";
             string testStringPascal = "Hello";
-            Assert.Validate.AreEqual(
+            Validate.Value.AreEqual(
                 testStringAllCaps.CapsToPascalCase(),
                 testStringPascal,
                 "Did not correctly convert string to PascalCase.");
@@ -95,7 +95,7 @@ namespace Dangr.Core.Util
         {
             string testStringAllCaps = "HELLO_";
             string testStringPascal = "Hello";
-            Assert.Validate.AreEqual(
+            Validate.Value.AreEqual(
                 testStringAllCaps.CapsToPascalCase(),
                 testStringPascal,
                 "Did not correctly convert string to PascalCase.");
@@ -106,7 +106,7 @@ namespace Dangr.Core.Util
         {
             string testStringAllCaps = "HELLO__";
             string testStringPascal = "Hello";
-            Assert.Validate.AreEqual(
+            Validate.Value.AreEqual(
                 testStringAllCaps.CapsToPascalCase(),
                 testStringPascal,
                 "Did not correctly convert string to PascalCase.");
@@ -118,7 +118,7 @@ namespace Dangr.Core.Util
             string testStringUnescaped = "\"";
             string testStringEscaped = "\"\"";
 
-            Assert.Validate.AreEqual(
+            Validate.Value.AreEqual(
                 testStringUnescaped.EscapeVerbatimString(),
                 testStringEscaped,
                 "Did not correctly escape verbatim string.");
@@ -130,7 +130,7 @@ namespace Dangr.Core.Util
             string testStringUnescaped = "\"";
             string testStringEscaped = "\\\"";
 
-            Assert.Validate.AreEqual(
+            Validate.Value.AreEqual(
                 testStringUnescaped.EscapeStringQuotes(),
                 testStringEscaped,
                 "Did not correctly escape quoted string.");

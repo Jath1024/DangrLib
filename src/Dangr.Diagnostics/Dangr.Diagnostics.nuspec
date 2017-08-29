@@ -15,7 +15,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Dangr.Diagnostics</id>
-    <version>2.0.0</version>
+    <version>3.0.0</version>
     <title>Dangr.Diagnostics</title>
     <description>Diagnostic utilities for use with DangrLib.</description>
     <authors>Phoenix Game Studios, LLC</authors>
@@ -25,7 +25,6 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <tags>dangrlib diagnostics validate warn assert </tags>
     <dependencies>
-      <dependency id="Dangr.Logging.Interface" version="[2.0,3.0)" />
       <dependency id="Dangr.Util" version="[2.0,3.0)" />
     </dependencies>
   </metadata>

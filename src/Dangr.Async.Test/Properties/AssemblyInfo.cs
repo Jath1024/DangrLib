@@ -6,14 +6,14 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
+using System.Reflection;
+using System.Runtime.InteropServices;
+    
 /*
  * This file Is generated using T4 Text Templates. Do Not Modify. 
  * Make changes to T4 files directly.
  */
 
-using System.Reflection;
-using System.Runtime.InteropServices;
-    
 [assembly: AssemblyTitle("Dangr.Async.Test")]
 [assembly: AssemblyProduct("Dangr.Async.Test")]
 [assembly: AssemblyDescription("Asynchronous code execution utilities for use with DangrLib.")]

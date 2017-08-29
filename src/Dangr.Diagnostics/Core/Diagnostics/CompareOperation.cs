@@ -5,11 +5,12 @@
 //      See https://github.com/PhoenixGameStudios/DangrLib/blob/master/LICENSE for full license information.
 //  </copyright>
 // -----------------------------------------------------------------------
+
 namespace Dangr.Core.Diagnostics
 {
     /// <summary>
     /// The types of compare operations that can be used in 
-    /// <see cref="AssertResolver" /> compare operations.
+    /// <see cref="IConditionChecker" /> compare operations.
     /// </summary>
     public enum CompareOperation
     {

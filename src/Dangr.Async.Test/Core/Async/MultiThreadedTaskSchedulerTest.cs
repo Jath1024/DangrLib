@@ -10,9 +10,9 @@ namespace Dangr.Core.Async
     using System;
     using System.Threading;
     using System.Threading.Tasks;
+    using Dangr.Core.Diagnostics;
     using Dangr.Core.Test;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
-    using Assert = Dangr.Core.Diagnostics.Assert;
 
     /// <summary>
     /// Summary description for MultiThreadedTaskSchedulerTest
@@ -35,7 +35,7 @@ namespace Dangr.Core.Async
                 factory.StartNew(MultiThreadedTaskSchedulerTest.TestTask);
             }
 
-            Assert.Validate.AreEqual(scheduler.NumThreadsRunning, 2, "Incorrent number of threads running");
+            Validate.Value.AreEqual(scheduler.NumThreadsRunning, 2, "Incorrent number of threads running");
         }
 
         [TestMethod]
@@ -49,7 +49,7 @@ namespace Dangr.Core.Async
                 factory.StartNew(MultiThreadedTaskSchedulerTest.TestTask);
             }
 
-            Assert.Validate.AreEqual(scheduler.NumThreadsRunning, MultiThreadedTaskSchedulerTest.DefaultNumThreads, "Incorrent number of threads running");
+            Validate.Value.AreEqual(scheduler.NumThreadsRunning, MultiThreadedTaskSchedulerTest.DefaultNumThreads, "Incorrent number of threads running");
         }
 
         [TestMethod]
@@ -102,7 +102,7 @@ namespace Dangr.Core.Async
                 TestUtils.PrivateInstanceFlags,
                 new Task(MultiThreadedTaskSchedulerTest.TestTask),
                 false);
-            Assert.Validate.IsFalse(executedTask, "Should not be able to inline execute tasks from non running thread.");
+            Validate.Value.IsFalse(executedTask, "Should not be able to inline execute tasks from non running thread.");
         }
 
         [TestMethod]
@@ -118,7 +118,7 @@ namespace Dangr.Core.Async
                 TestUtils.PrivateInstanceFlags,
                 new Task(MultiThreadedTaskSchedulerTest.TestTask),
                 true);
-            Assert.Validate.IsFalse(executedTask, "Should not be able to inline execute previously scheduled tasks.");
+            Validate.Value.IsFalse(executedTask, "Should not be able to inline execute previously scheduled tasks.");
         }
         
         [TestMethod]
@@ -139,7 +139,7 @@ namespace Dangr.Core.Async
             MultiThreadedTaskScheduler scheduler = new MultiThreadedTaskScheduler(MultiThreadedTaskSchedulerTest.DefaultNumThreads);
             PrivateObject privateScheduler = new PrivateObject(scheduler, new PrivateType(typeof(MultiThreadedTaskScheduler)));
             object tasks = privateScheduler.Invoke("GetScheduledTasks", TestUtils.PrivateInstanceFlags);
-            Assert.Validate.IsNotNull(tasks, "Could not get scheduled tasks.");
+            Validate.Value.IsNotNull(tasks, "Could not get scheduled tasks.");
         }
         
         private static void TestTask()

@@ -10,9 +10,9 @@ namespace Dangr.Command
     using System.Collections.Generic;
     using Dangr.Core.Command;
     using Dangr.Core.Command.Exceptions;
+    using Dangr.Core.Diagnostics;
     using Dangr.Core.Test;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
-    using Assert = Dangr.Core.Diagnostics.Assert;
 
     [TestClass]
     public class CommandLineTest
@@ -73,7 +73,7 @@ namespace Dangr.Command
                 () => new CommandLineTester().TestCommandLine(rawCommandLine),
                 "Did not catch expected error.");
 
-            Assert.Validate.AreEqual(exception.Position, 22, "Error not found at correct index.");
+            Validate.Value.AreEqual(exception.Position, 22, "Error not found at correct index.");
         }
 
         [TestMethod]
@@ -149,7 +149,7 @@ namespace Dangr.Command
                 () => new CommandLineTester().TestCommandLine(rawCommandLine),
                 "Did not catch expected error.");
 
-            Assert.Validate.AreEqual(exception.Position, 14, "Error not found at correct index.");
+            Validate.Value.AreEqual(exception.Position, 14, "Error not found at correct index.");
         }
 
         [TestMethod]
@@ -198,7 +198,7 @@ namespace Dangr.Command
                 () => new CommandLineTester().TestCommandLine(rawCommandLine),
                 "Did not catch expected error.");
 
-            Assert.Validate.AreEqual(exception.Position, 7, "Error not found at correct index.");
+            Validate.Value.AreEqual(exception.Position, 7, "Error not found at correct index.");
         }
 
         [TestMethod]
@@ -210,7 +210,7 @@ namespace Dangr.Command
                 () => new CommandLineTester().TestCommandLine(rawCommandLine),
                 "Did not catch expected error.");
 
-            Assert.Validate.AreEqual(exception.Position, 15, "Error not found at correct index.");
+            Validate.Value.AreEqual(exception.Position, 15, "Error not found at correct index.");
         }
 
         [TestMethod]
@@ -222,7 +222,7 @@ namespace Dangr.Command
                 () => new CommandLineTester().TestCommandLine(rawCommandLine),
                 "Did not catch expected error.");
 
-            Assert.Validate.AreEqual(exception.Position, 7, "Error not found at correct index.");
+            Validate.Value.AreEqual(exception.Position, 7, "Error not found at correct index.");
         }
 
         [TestMethod]
@@ -231,7 +231,7 @@ namespace Dangr.Command
             CommandLineParseException exception = TestUtils.TestForError<CommandLineParseException>(
                 () => new CommandLineTester().TestCommandLine(string.Empty),
                 "Did not catch expected error.");
-            Assert.Validate.AreEqual(exception.Position, 0, "Error not found at correct index.");
+            Validate.Value.AreEqual(exception.Position, 0, "Error not found at correct index.");
         }
 
         [TestMethod]
@@ -242,7 +242,7 @@ namespace Dangr.Command
             CommandLineParseException exception = TestUtils.TestForError<CommandLineParseException>(
                 () => new CommandLineTester().TestCommandLine(rawCommandLine),
                 "Did not catch expected error.");
-            Assert.Validate.AreEqual(exception.Position, 0, "Error not found at correct index.");
+            Validate.Value.AreEqual(exception.Position, 0, "Error not found at correct index.");
         }
 
         [TestMethod]
@@ -254,7 +254,7 @@ namespace Dangr.Command
                 () => new CommandLineTester().TestCommandLine(rawCommandLine),
                 "Did not catch expected error.");
 
-            Assert.Validate.AreEqual(exception.Position, 5, "Error not found at correct index.");
+            Validate.Value.AreEqual(exception.Position, 5, "Error not found at correct index.");
         }
 
         [TestMethod]
@@ -266,7 +266,7 @@ namespace Dangr.Command
                 () => new CommandLineTester().TestCommandLine(rawCommandLine),
                 "Did not catch expected error.");
 
-            Assert.Validate.AreEqual(exception.Position, 0, "Error not found at correct index.");
+            Validate.Value.AreEqual(exception.Position, 0, "Error not found at correct index.");
         }
 
         [TestMethod]
@@ -420,7 +420,7 @@ namespace Dangr.Command
 
                 if (this.RawCommandLine != null)
                 {
-                    Assert.Validate.AreEqual(
+                    Validate.Value.AreEqual(
                         this.RawCommandLine,
                         result.RawCommandLine,
                         "Expected raw command line not found.");
@@ -428,7 +428,7 @@ namespace Dangr.Command
 
                 if (this.CommandName != null)
                 {
-                    Assert.Validate.AreEqual(
+                    Validate.Value.AreEqual(
                         this.CommandName,
                         result.CommandName,
                         "Expected command name not found.");
@@ -436,7 +436,7 @@ namespace Dangr.Command
 
                 if (this.RawArguments != null)
                 {
-                    Assert.Validate.AreEqual(
+                    Validate.Value.AreEqual(
                         this.RawArguments,
                         result.RawArguments,
                         "Expected raw arguments not found.");
@@ -444,16 +444,16 @@ namespace Dangr.Command
 
                 if (this.NamedArguments != null)
                 {
-                    Assert.Validate.AreEqual(
+                    Validate.Value.AreEqual(
                         this.NamedArguments.Count,
                         result.NamedArguments.Count,
                         "Found incorrect number of named arguments.");
                     foreach (KeyValuePair<string, string> entry in this.NamedArguments)
                     {
-                        Assert.Validate.IsTrue(
+                        Validate.Value.IsTrue(
                             result.NamedArguments.ContainsKey(entry.Key),
                             $"Expected named argument '{entry.Key}' not found.");
-                        Assert.Validate.AreEqual(
+                        Validate.Value.AreEqual(
                             entry.Value,
                             result.NamedArguments[entry.Key],
                             $"Found incorrect value for named argument '{entry.Key}'.");
@@ -462,13 +462,13 @@ namespace Dangr.Command
 
                 if (this.PositionalArguments != null)
                 {
-                    Assert.Validate.AreEqual(
+                    Validate.Value.AreEqual(
                         this.PositionalArguments.Count,
                         result.PositionalArguments.Count,
                         "Found incorrect number of positional arguments.");
                     for (int i = 0; i < this.PositionalArguments.Count; i++)
                     {
-                        Assert.Validate.AreEqual(
+                        Validate.Value.AreEqual(
                             this.PositionalArguments[i],
                             result.PositionalArguments[i],
                             $"Found incorrect value for positional argument ({i}).");
@@ -477,13 +477,13 @@ namespace Dangr.Command
 
                 if (this.Flags != null)
                 {
-                    Assert.Validate.AreEqual(
+                    Validate.Value.AreEqual(
                         this.Flags.Count,
                         result.Flags.Count,
                         "Found incorrect number of flags.");
                     foreach (string flag in this.Flags)
                     {
-                        Assert.Validate.IsTrue(
+                        Validate.Value.IsTrue(
                             result.Flags.Contains(flag),
                             $"Expected flag '{flag}' not found.");
                     }

@@ -91,7 +91,7 @@ namespace Dangr.Internal.Logging.Wcf
         /// <param name="binding">The WCF binding.</param>
         /// <param name="endpointAddress">The endpoint address.</param>
         /// <exception cref="System.ArgumentNullException">
-        /// Binding or <paramref name="endpointAddress" /> is null.
+        /// Binding or endpointAddress is null.
         /// </exception>
         /// <returns>A newly created <see cref="WcfLogClient" /></returns>
         [SuppressMessage(
@@ -100,8 +100,8 @@ namespace Dangr.Internal.Logging.Wcf
             Justification = "The method constructs a new client. Disposing of it does not make sense here.")]
         public static WcfLogClient CreateClient(Binding binding, EndpointAddress endpointAddress)
         {
-            Assert.Validate.IsNotNull(binding, nameof(binding));
-            Assert.Validate.IsNotNull(endpointAddress, nameof(endpointAddress));
+            Validate.Value.IsNotNull(binding, nameof(binding));
+            Validate.Value.IsNotNull(endpointAddress, nameof(endpointAddress));
 
             WcfLogClient client = new WcfLogClient
             {
@@ -113,7 +113,7 @@ namespace Dangr.Internal.Logging.Wcf
         }
 
         /// <summary>
-        /// Sends the specified <paramref name="message" /> to the connected <see cref="WcfLogService" /> .
+        /// Sends the specified message to the connected <see cref="WcfLogService" /> .
         /// </summary>
         /// <param name="message">The message.</param>
         /// <exception cref="System.InvalidOperationException">
@@ -121,8 +121,8 @@ namespace Dangr.Internal.Logging.Wcf
         /// </exception>
         public void Log(LogEntry message)
         {
-            Assert.Validate.NotDisposed(this, nameof(WcfLogClient));
-            Assert.Validate.IsNotNull(message, nameof(message));
+            Validate.Value.IsNotDisposed(this, nameof(WcfLogClient));
+            Validate.Value.IsNotNull(message, nameof(message));
 
             if ((this.channel.State == CommunicationState.Closed) || (this.channel.State == CommunicationState.Faulted))
             {
@@ -142,14 +142,14 @@ namespace Dangr.Internal.Logging.Wcf
         }
 
         /// <summary>
-        /// Sends a batch of <paramref name="messages" /> to the connected <see cref="WcfLogService" /> .
+        /// Sends a batch of messages to the connected <see cref="WcfLogService" /> .
         /// </summary>
         /// <param name="messages">The messages.</param>
         public void LogBatch(LogEntry[] messages)
         {
-            Assert.Validate.NotDisposed(this, nameof(WcfLogClient));
-            Assert.Validate.IsNotNull(messages, nameof(messages));
-            Assert.Validate.Compare(messages.Length, CompareOperation.Greater, 0, "Attempting to log empty batch.");
+            Validate.Value.IsNotDisposed(this, nameof(WcfLogClient));
+            Validate.Value.IsNotNull(messages, nameof(messages));
+            Validate.Value.Comparison(messages.Length, CompareOperation.Greater, 0, "Attempting to log empty batch.");
 
             if ((this.channel.State == CommunicationState.Closed) || (this.channel.State == CommunicationState.Faulted))
             {
@@ -170,7 +170,7 @@ namespace Dangr.Internal.Logging.Wcf
 
         private void CreateProxy()
         {
-            Assert.Validate.NotDisposed(this, nameof(WcfLogClient));
+            Validate.Value.IsNotDisposed(this, nameof(WcfLogClient));
 
             this.proxy = this.proxyFactory.CreateChannel(this.proxyFactory.Endpoint.Address);
 

@@ -54,7 +54,6 @@ Run the following command in the [Visual Studio] Package Manager Console for eac
 ```
 Install-Package Dangr.Async
 Install-Package Dangr.Build
-Install-Package Dangr.Collections
 Install-Package Dangr.Command
 Install-Package Dangr.Configuration
 Install-Package Dangr.Diagnostics

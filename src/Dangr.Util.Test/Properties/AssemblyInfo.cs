@@ -6,14 +6,14 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
+using System.Reflection;
+using System.Runtime.InteropServices;
+    
 /*
  * This file Is generated using T4 Text Templates. Do Not Modify. 
  * Make changes to T4 files directly.
  */
 
-using System.Reflection;
-using System.Runtime.InteropServices;
-    
 [assembly: AssemblyTitle("Dangr.Util.Test")]
 [assembly: AssemblyProduct("Dangr.Util.Test")]
 [assembly: AssemblyDescription("Miscellaneous utilities for use with DangrLib.")]

@@ -12,9 +12,9 @@ namespace Dangr.Command
     using Dangr.Command.Commands;
     using Dangr.Core.Command;
     using Dangr.Core.Command.Exceptions;
+    using Dangr.Core.Diagnostics;
     using Dangr.Core.Test;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
-    using Assert = Dangr.Core.Diagnostics.Assert;
 
     [TestClass]
     public class CommandContextTest
@@ -29,7 +29,7 @@ namespace Dangr.Command
             executor.AddCommand<OutputCommand>();
             executor.Execute("Output hello");
 
-            Assert.Validate.AreEqual("hello" + Environment.NewLine, outputStream.ToString(),
+            Validate.Value.AreEqual("hello" + Environment.NewLine, outputStream.ToString(),
                 "Did not find the expected output.");
         }
 
@@ -43,7 +43,7 @@ namespace Dangr.Command
             executor.AddCommand<ErrorCommand>();
             executor.Execute("Error hello");
 
-            Assert.Validate.AreEqual("hello" + Environment.NewLine, errorStream.ToString(),
+            Validate.Value.AreEqual("hello" + Environment.NewLine, errorStream.ToString(),
                 "Did not find the expected error.");
         }
 
@@ -60,7 +60,7 @@ namespace Dangr.Command
                 () => executor.Execute("Error hello"),
                 "Did not catch expected exception");
 
-            Assert.Validate.AreEqual("Error", exception.CommandName,
+            Validate.Value.AreEqual("Error", exception.CommandName,
                 "Error did not occur with the correct command.");
         }
 
@@ -75,7 +75,7 @@ namespace Dangr.Command
             parentExecutor.AddCommand<OutputCommand>();
             childExecutor.Execute("Output hello");
 
-            Assert.Validate.AreEqual("hello" + Environment.NewLine, outputStream.ToString(),
+            Validate.Value.AreEqual("hello" + Environment.NewLine, outputStream.ToString(),
                 "Did not find the expected output.");
         }
 
@@ -93,7 +93,7 @@ namespace Dangr.Command
                 () => childExecutor.Execute("Error hello"),
                 "Did not catch expected exception");
 
-            Assert.Validate.AreEqual("Error", exception.CommandName,
+            Validate.Value.AreEqual("Error", exception.CommandName,
                 "Error did not occur with the correct command.");
         }
 
@@ -110,7 +110,7 @@ namespace Dangr.Command
 
             childExecutor.Execute("Output hello");
 
-            Assert.Validate.AreEqual("hello" + Environment.NewLine, outputStream.ToString(),
+            Validate.Value.AreEqual("hello" + Environment.NewLine, outputStream.ToString(),
                 "Did not find the expected output.");
         }
 
@@ -125,7 +125,7 @@ namespace Dangr.Command
             ArgumentException exception = TestUtils.TestForError<ArgumentException>(
                 () => executor.AddCommand<DuplicateOutputCommand>(),
                 "Did not catch expected exception.");
-            Assert.Validate.AreEqual("DuplicateOutputCommand", exception.ParamName,
+            Validate.Value.AreEqual("DuplicateOutputCommand", exception.ParamName,
                 "Exception occurred for wrong argument.");
         }
 
@@ -139,7 +139,7 @@ namespace Dangr.Command
             executor.AddCommand<OutputCommand>();
             executor.Execute("Output 'hello world'");
 
-            Assert.Validate.AreEqual("hello world" + Environment.NewLine, outputStream.ToString(),
+            Validate.Value.AreEqual("hello world" + Environment.NewLine, outputStream.ToString(),
                 "Did not find the expected output.");
         }
 
@@ -154,7 +154,7 @@ namespace Dangr.Command
             parentExecutor.AddCommand<OutputCommand>();
             childExecutor.Execute("Output 'hello world'");
 
-            Assert.Validate.AreEqual("hello world" + Environment.NewLine, outputStream.ToString(),
+            Validate.Value.AreEqual("hello world" + Environment.NewLine, outputStream.ToString(),
                 "Did not find the expected output.");
         }
     }
