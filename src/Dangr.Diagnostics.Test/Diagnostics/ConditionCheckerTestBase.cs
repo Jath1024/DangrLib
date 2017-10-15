@@ -96,7 +96,7 @@ namespace Dangr.Diagnostics
         [DataRow(
             TestValues.DOUBLE_PRECISION_CHECK,
             TestValues.DOUBLE_PRECISION_CHECK_ERROR,
-            TestValues.FLOAT_PRECISION,
+            TestValues.DOUBLE_PRECISION,
             TestExceptionType.ValidationPassed)]
         public void AreEqual_Doubles(double a, double b, double precision, TestExceptionType eType)
         {
@@ -151,7 +151,7 @@ namespace Dangr.Diagnostics
         [DataRow(
             TestValues.DOUBLE_PRECISION_CHECK,
             TestValues.DOUBLE_PRECISION_CHECK_ERROR,
-            TestValues.FLOAT_PRECISION,
+            TestValues.DOUBLE_PRECISION,
             TestExceptionType.ValidationFailed)]
         public void AreNotEqual_Doubles(double a, double b, double precision, TestExceptionType eType)
         {

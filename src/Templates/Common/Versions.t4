@@ -19,6 +19,7 @@
         public int Major { get; }
         public int Minor { get; }
         public int Patch { get; }
+		public int DependencyOverride { get; }
 
         public string BuildVersion
         {
@@ -31,94 +32,100 @@
         {
             get
             {
-                return $"[{this.Major}.0,{this.Major + 1}.0)";
+                return $"[{this.Major}.{this.DependencyOverride},{this.Major + 1}.0)";
             }
         }
-
+		
         public Version(int major, int minor, int patch)
+			: this(major, minor, patch, 0)
+        {
+        }
+
+        public Version(int major, int minor, int patch, int dependencyOverride)
         {
             this.Major = major;
             this.Minor = minor;
             this.Patch = patch;
+			this.DependencyOverride = dependencyOverride;
         }
     }
 
     public static readonly ImmutableDictionary<string, Version> AssemblyVersion = new Dictionary<string, Version> {
         {
             ASYNC,
-            new Version(2, 1, 1)
+            new Version(2, 1, 1, 1)
         },
         {
             BUILD,
-            new Version(2, 1, 1)
+            new Version(2, 1, 1, 1)
         },
         {
             COMMAND,
-            new Version(2, 1, 1)
+            new Version(2, 1, 1, 1)
         },
         {
             CONFIGURATION,
-            new Version(2, 1, 1)
+            new Version(2, 1, 1, 1)
         },
         {
             DIAGNOSTICS,
-            new Version(3, 1, 1)
+            new Version(3, 1, 2, 1)
         },
         {       
             ENTITY,
-            new Version(2, 1, 1)
+            new Version(2, 1, 1, 1)
         },
         {
             EVENT,
-            new Version(2, 1, 1)
+            new Version(2, 1, 1, 1)
         },
         {
             INJECT,
-            new Version(2, 1, 1)
+            new Version(2, 1, 1, 1)
         },
         {
             LOG_VIEWER,
-            new Version(2, 1, 1)
+            new Version(2, 1, 1, 1)
         },
         {
             LOGGING,
-            new Version(2, 1, 1)
+            new Version(2, 1, 1, 1)
         },
         {
             LOGGING_INTERFACE,
-            new Version(2, 1, 1)
+            new Version(2, 1, 1, 1)
         },
         {
             LOGGING_LOGGERS,
-            new Version(2, 1, 1)
+            new Version(2, 1, 1, 1)
         },
         {
             LOGGING_WCF,
-            new Version(2, 1, 1)
+            new Version(2, 1, 1, 1)
         },
         {
             MATH,
-            new Version(2, 1, 1)
+            new Version(2, 2, 1, 2)
         },
         {
             OBJECT_POOL,
-            new Version(2, 1, 1)
+            new Version(2, 1, 1, 1)
         },
         {
             REGISTRY,
-            new Version(2, 1, 1)
+            new Version(2, 1, 1, 1)
         },
         {
             SIMULATION,
-            new Version(2, 1, 1)
+            new Version(2, 1, 1, 1)
         },
         {
             TEST,
-            new Version(2, 1, 1)
+            new Version(2, 1, 1, 1)
         },
         {
             UTIL,
-            new Version(2, 1, 1)
+            new Version(2, 1, 1, 1)
         }
     }.ToImmutableDictionary();
 #>

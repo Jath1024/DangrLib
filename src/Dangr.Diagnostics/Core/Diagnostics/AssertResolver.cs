@@ -11,6 +11,7 @@ namespace Dangr.Core.Diagnostics
     using System;
     using System.Collections;
     using System.Text;
+    using Dangr.Core.Math;
     using Dangr.Core.Util;
     using Dangr.Internal.Diagnostics;
 
@@ -120,7 +121,7 @@ namespace Dangr.Core.Diagnostics
         {
             return this.Check(
                 AssertType.AreEqual,
-                a == b || Math.Abs(a - b) <= precision,
+                Precision.Equals(a, b, precision),
                 message,
                 args,
                 "AreEqual check failed. [{0}, {1}]",
@@ -143,7 +144,7 @@ namespace Dangr.Core.Diagnostics
         {
             return this.Check(
                 AssertType.AreEqual,
-                a == b || Math.Abs(a - b) <= precision,
+                Precision.Equals(a, b, precision),
                 message,
                 args,
                 "AreEqual check failed. [{0}, {1}]",
@@ -231,7 +232,7 @@ namespace Dangr.Core.Diagnostics
         {
             return this.Check(
                 AssertType.AreNotEqual,
-                Math.Abs(a - b) > precision,
+                !Precision.Equals(a, b, precision),
                 message,
                 args,
                 "AreNotEqual check failed. [{0}, {1}]",
@@ -254,7 +255,7 @@ namespace Dangr.Core.Diagnostics
         {
             return this.Check(
                 AssertType.AreNotEqual,
-                Math.Abs(a - b) > precision,
+                !Precision.Equals(a, b, precision),
                 message,
                 args,
                 "AreNotEqual check failed. [{0}, {1}]",
@@ -604,7 +605,7 @@ namespace Dangr.Core.Diagnostics
         {
             return this.Check(
                 AssertType.IsNotZero,
-                Math.Abs(value) >= precision,
+                !Precision.Equals(value, 0, precision),
                 message,
                 args,
                 "IsNotZero check failed.");
@@ -624,7 +625,7 @@ namespace Dangr.Core.Diagnostics
         {
             return this.Check(
                 AssertType.IsNotZero,
-                Math.Abs(value) >= precision,
+                !Precision.Equals(value, 0, precision),
                 message,
                 args,
                 "IsNotZero check failed.");
@@ -691,7 +692,8 @@ namespace Dangr.Core.Diagnostics
 
             return this.Check(
                 AssertType.IsInRange,
-                CompareOperation.LessEqual.Compare(min, value) && CompareOperation.LessEqual.Compare(value, max),
+                CompareOperation.LessEqual.Compare(min, value)
+                    && CompareOperation.LessEqual.Compare(value, max),
                 message,
                 args,
                 "IsInRange check failed.[{0} ({1}:{2})]",
@@ -723,7 +725,7 @@ namespace Dangr.Core.Diagnostics
             return this.Check(
                 AssertType.IsInRange,
                 CompareOperation.LessEqual.Compare(min, value, precision)
-                && CompareOperation.LessEqual.Compare(value, max, precision),
+                    && CompareOperation.LessEqual.Compare(value, max, precision),
                 message,
                 args,
                 "IsInRange check failed.[{0} ({1}:{2})]",
@@ -761,7 +763,7 @@ namespace Dangr.Core.Diagnostics
             return this.Check(
                 AssertType.IsInRange,
                 CompareOperation.LessEqual.Compare(min, value, precision)
-                && CompareOperation.LessEqual.Compare(value, max, precision),
+                    && CompareOperation.LessEqual.Compare(value, max, precision),
                 message,
                 args,
                 "IsInRange check failed.[{0} ({1}:{2})]",

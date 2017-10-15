@@ -42,6 +42,10 @@
     <Compile Include="Core\Diagnostics\ValidationFailedException.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Dangr.Math\Dangr.Math.csproj">
+      <Project>{5cb06ab2-0287-47af-be50-155a6a351347}</Project>
+      <Name>Dangr.Math</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Dangr.Util\Dangr.Util.csproj">
       <Project>{272587f0-bd2b-48e5-a63f-252ca280b14f}</Project>
       <Name>Dangr.Util</Name>

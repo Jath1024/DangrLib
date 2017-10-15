@@ -10,6 +10,7 @@ namespace Dangr.Internal.Diagnostics
 {
     using System;
     using Dangr.Core.Diagnostics;
+    using Dangr.Core.Math;
 
     /// <summary>
     /// <para>Provides extended functionality to the 
@@ -79,19 +80,20 @@ namespace Dangr.Internal.Diagnostics
             switch (operation)
             {
                 case CompareOperation.Equal:
-                    return Math.Abs(a - b) <= precision;
+                    return Precision.Equals(a, b, precision);
 
                 case CompareOperation.Greater:
-                    return a.CompareTo(b) > 0 && Math.Abs(a - b) > precision;
+                    return Precision.CompareTo(a, b, precision) > 0;
 
                 case CompareOperation.GreaterEqual:
-                    return a.CompareTo(b) >= 0 || Math.Abs(a - b) <= precision;
+                    return Precision.CompareTo(a, b, precision) >= 0;
 
                 case CompareOperation.Less:
-                    return a.CompareTo(b) < 0 && Math.Abs(a - b) > precision;
+                    return Precision.CompareTo(a, b, precision) < 0;
 
                 case CompareOperation.LessEqual:
-                    return a.CompareTo(b) <= 0 || Math.Abs(a - b) <= precision;
+                    return Precision.CompareTo(a, b, precision) <= 0;
+
                 default:
                     throw new ArgumentOutOfRangeException(nameof(operation), operation, null);
             }
@@ -102,19 +104,20 @@ namespace Dangr.Internal.Diagnostics
             switch (operation)
             {
                 case CompareOperation.Equal:
-                    return Math.Abs(a - b) <= precision;
+                    return Precision.Equals(a, b, precision);
 
                 case CompareOperation.Greater:
-                    return a.CompareTo(b) > 0 && Math.Abs(a - b) > precision;
+                    return Precision.CompareTo(a, b, precision) > 0;
 
                 case CompareOperation.GreaterEqual:
-                    return a.CompareTo(b) >= 0 || Math.Abs(a - b) <= precision;
+                    return Precision.CompareTo(a, b, precision) >= 0;
 
                 case CompareOperation.Less:
-                    return a.CompareTo(b) < 0 && Math.Abs(a - b) > precision;
+                    return Precision.CompareTo(a, b, precision) < 0;
 
                 case CompareOperation.LessEqual:
-                    return a.CompareTo(b) <= 0 || Math.Abs(a - b) <= precision;
+                    return Precision.CompareTo(a, b, precision) <= 0;
+
                 default:
                     throw new ArgumentOutOfRangeException(nameof(operation), operation, null);
             }

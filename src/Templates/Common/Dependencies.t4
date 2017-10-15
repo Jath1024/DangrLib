@@ -41,7 +41,7 @@
         {
             DIAGNOSTICS,
             new List<string> {
-                UTIL
+                MATH, UTIL
             }.ToImmutableList()
         },
         {
