@@ -46,79 +46,79 @@
     public static readonly ImmutableDictionary<string, Version> AssemblyVersion = new Dictionary<string, Version> {
         {
             ASYNC,
-            new Version(2, 0, 0)
+            new Version(2, 1, 1)
         },
         {
             BUILD,
-            new Version(2, 0, 5)
+            new Version(2, 1, 1)
         },
         {
             COMMAND,
-            new Version(2, 0, 1)
+            new Version(2, 1, 1)
         },
         {
             CONFIGURATION,
-            new Version(2, 0, 0)
+            new Version(2, 1, 1)
         },
         {
             DIAGNOSTICS,
-            new Version(3, 0, 0)
+            new Version(3, 1, 1)
         },
         {       
             ENTITY,
-            new Version(2, 0, 0)
+            new Version(2, 1, 1)
         },
         {
             EVENT,
-            new Version(2, 0, 0)
+            new Version(2, 1, 1)
         },
         {
             INJECT,
-            new Version(2, 0, 0)
+            new Version(2, 1, 1)
         },
         {
             LOG_VIEWER,
-            new Version(2, 0, 0)
+            new Version(2, 1, 1)
         },
         {
             LOGGING,
-            new Version(2, 0, 0)
+            new Version(2, 1, 1)
         },
         {
             LOGGING_INTERFACE,
-            new Version(2, 0, 0)
+            new Version(2, 1, 1)
         },
         {
             LOGGING_LOGGERS,
-            new Version(2, 0, 0)
+            new Version(2, 1, 1)
         },
         {
             LOGGING_WCF,
-            new Version(2, 0, 0)
+            new Version(2, 1, 1)
         },
         {
             MATH,
-            new Version(2, 0, 0)
+            new Version(2, 1, 1)
         },
         {
             OBJECT_POOL,
-            new Version(2, 0, 0)
+            new Version(2, 1, 1)
         },
         {
             REGISTRY,
-            new Version(2, 0, 0)
+            new Version(2, 1, 1)
         },
         {
             SIMULATION,
-            new Version(2, 0, 0)
+            new Version(2, 1, 1)
         },
         {
             TEST,
-            new Version(2, 0, 1)
+            new Version(2, 1, 1)
         },
         {
             UTIL,
-            new Version(2, 0, 0)
+            new Version(2, 1, 1)
         }
     }.ToImmutableDictionary();
 #>

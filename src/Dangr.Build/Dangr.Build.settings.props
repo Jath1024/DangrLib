@@ -15,7 +15,7 @@
   -->
   <PropertyGroup>
     <DangrRootNamespace Condition="'$(DangrRootNamespace)' == ''">Dangr</DangrRootNamespace>
-    <DangrTargetFramework Condition="'$(DangrTargetFramework)' == ''">v4.5.2</DangrTargetFramework>
+    <DangrTargetFramework Condition="'$(DangrTargetFramework)' == ''">v4.5</DangrTargetFramework>
     <DangrGenerateDocumentation Condition="'$(DangrGenerateDocumentation)' == ''">false</DangrGenerateDocumentation>
     <NugetDeploy Condition="'$(NugetDeploy)' == ''">false</NugetDeploy>
   </PropertyGroup>

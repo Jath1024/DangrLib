@@ -7,4 +7,5 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 #>
-<file src="..\..\LICENSE" target="LICENSE" />
+<file src="bin\Release\*.dll" target="lib\net45" />
+    <file src="..\..\LICENSE" target="LICENSE" />
