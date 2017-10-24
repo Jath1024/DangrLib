@@ -19,6 +19,7 @@
         {
             ASYNC,
             BUILD,
+            COLLECTIONS,
             COMMAND,
             CONFIGURATION,
             DIAGNOSTICS,

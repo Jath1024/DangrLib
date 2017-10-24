@@ -60,6 +60,10 @@
             new Version(2, 1, 1, 1)
         },
         {
+            COLLECTIONS,
+            new Version(0, 0, 1)
+        },
+        {
             COMMAND,
             new Version(2, 1, 1, 1)
         },
@@ -69,7 +73,7 @@
         },
         {
             DIAGNOSTICS,
-            new Version(3, 1, 2, 1)
+            new Version(3, 1, 3, 1)
         },
         {       
             ENTITY,

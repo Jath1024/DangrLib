@@ -29,6 +29,10 @@ public const string DangrLibDescription =
             "Provides build tools to use in DangrLib packages."
         },
         {
+            COLLECTIONS,
+            "Provides generic collections to use in DangrLib packages."
+        },
+        {
             COMMAND,
             "Utilities for parsing and executing commands from a command line."
         },

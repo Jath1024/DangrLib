@@ -685,11 +685,6 @@ namespace Dangr.Core.Diagnostics
         public bool IsInRange<T>(T value, T min, T max, string message, params object[] args)
             where T : IComparable
         {
-            if (CompareOperation.Less.Compare(max, min))
-            {
-                throw new IndexOutOfRangeException($"Max value '{max}' must be less than Min value '{min}'.");
-            }
-
             return this.Check(
                 AssertType.IsInRange,
                 CompareOperation.LessEqual.Compare(min, value)
@@ -717,11 +712,6 @@ namespace Dangr.Core.Diagnostics
         /// <exception cref="System.IndexOutOfRangeException"></exception>
         public bool IsInRange(float value, float min, float max, float precision, string message, params object[] args)
         {
-            if (CompareOperation.Less.Compare(max, min, precision))
-            {
-                throw new IndexOutOfRangeException($"Max value '{max}' must be less than Min value '{min}'.");
-            }
-
             return this.Check(
                 AssertType.IsInRange,
                 CompareOperation.LessEqual.Compare(min, value, precision)
@@ -755,11 +745,6 @@ namespace Dangr.Core.Diagnostics
             string message,
             params object[] args)
         {
-            if (CompareOperation.Less.Compare(max, min, precision))
-            {
-                throw new IndexOutOfRangeException($"Max value '{max}' must be less than Min value '{min}'.");
-            }
-
             return this.Check(
                 AssertType.IsInRange,
                 CompareOperation.LessEqual.Compare(min, value, precision)

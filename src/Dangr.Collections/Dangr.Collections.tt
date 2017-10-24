@@ -1,0 +1,35 @@
+﻿<#
+// -----------------------------------------------------------------------
+//  <copyright file="Dangr.Async.tt" company="Phoenix Game Studios, LLC">
+//      Copyright (c) 2017 Phoenix Game Studios, LLC. All rights reserved.
+//      Licensed under the MIT License. 
+//      See https://github.com/PhoenixGameStudios/DangrLib/blob/master/LICENSE for full license information.
+//  </copyright>
+// -----------------------------------------------------------------------
+#>
+<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ output extension=".nuspec" #>
+<#@ include file="$(SolutionDir)\src\Templates\Common\AssemblyProperties.t4" once="true" #><##>
+<#@ include file="$(SolutionDir)\src\Templates\Common\CopyrightHeader.t4" once="true" #><##>
+<#@ include file="$(SolutionDir)\src\Templates\Common\Versions.t4" once="true" #><##>
+<#@ include file="$(SolutionDir)\src\Templates\Common\GeneratedCodeBanner.t4" #><##>
+<#@ include file="$(SolutionDir)\src\Templates\Nuspec\NuspecDependency.t4" #><##>
+<# 
+    string assemblyName = COLLECTIONS;
+#>
+<?xml version="1.0"?>
+<# PrintXmlCopyrightHeader(assemblyName + ".nuspec"); #>
+
+<# PrintGeneratedCodeXmlBanner(); #>
+
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <#@ include file="$(SolutionDir)\src\Templates\Nuspec\NuspecMetadata.t4" #>
+    <dependencies>
+<# GetNuspecDependencies(assemblyName); #>
+    </dependencies>
+  </metadata>
+  <files>
+    <#@ include file="$(SolutionDir)\src\Templates\Nuspec\NuspecCommonFiles.t4" once="true" #>
+  </files>
+</package>

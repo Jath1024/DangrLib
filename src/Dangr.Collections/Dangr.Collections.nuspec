@@ -1,0 +1,34 @@
+﻿<?xml version="1.0"?>
+<!--
+<copyright file="Dangr.Collections.nuspec" company="Phoenix Game Studios, LLC">
+    Copyright (c) 2017 Phoenix Game Studios, LLC. All rights reserved.
+    Licensed under the MIT License. 
+    See https://github.com/PhoenixGameStudios/DangrLib/blob/master/LICENSE for full license information.
+</copyright>
+-->
+
+<!--
+    This file Is generated using T4 Text Templates. Do Not Modify. 
+    Make changes to T4 files directly.
+-->
+
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Dangr.Collections</id>
+    <version>0.0.1</version>
+    <title>Dangr.Collections</title>
+    <description>Provides generic collections to use in DangrLib packages.</description>
+    <authors>Phoenix Game Studios, LLC</authors>
+    <copyright>Copyright (c) 2017 Phoenix Game Studios, LLC. All rights reserved.</copyright>
+    <iconUrl>https://raw.githubusercontent.com/PhoenixGameStudios/DangrLib/master/Images/Logo/skull%20logo.png</iconUrl>
+    <licenseUrl>https://github.com/PhoenixGameStudios/DangrLib/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <tags>dangrlib collections list set map queue stack multiset multimap table tree </tags>
+    <dependencies>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\*.dll" target="lib\net45" />
+    <file src="..\..\LICENSE" target="LICENSE" />
+  </files>
+</package>

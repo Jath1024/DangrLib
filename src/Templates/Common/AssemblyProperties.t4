@@ -16,6 +16,7 @@
     // Assembly Names
     public const string ASYNC = "Dangr.Async";
     public const string BUILD = "Dangr.Build";
+    public const string COLLECTIONS = "Dangr.Collections";
     public const string COMMAND = "Dangr.Command";
     public const string CONFIGURATION = "Dangr.Configuration";
     public const string DIAGNOSTICS = "Dangr.Diagnostics";

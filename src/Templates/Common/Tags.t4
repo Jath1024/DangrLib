@@ -31,6 +31,12 @@
             }.ToImmutableList()
         },
         {
+            COLLECTIONS,
+            new List<string> {
+                TAG_DANGRLIB, "collections", "list", "set", "map", "queue", "stack", "multiset", "multimap", "table", "tree"
+            }.ToImmutableList()
+        },
+        {
             COMMAND,
             new List<string> {
                 TAG_DANGRLIB, "command", "commandline", "arguments", "execution"

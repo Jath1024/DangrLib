@@ -27,6 +27,12 @@
             }.ToImmutableList()
         },
         {
+            COLLECTIONS,
+            new List<string> {
+				DIAGNOSTICS
+            }.ToImmutableList()
+        },
+        {
             COMMAND,
             new List<string> {
                 UTIL

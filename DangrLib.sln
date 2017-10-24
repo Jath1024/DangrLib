@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dangr.Async", "src\Dangr.Async\Dangr.Async.csproj", "{372D1F3E-E890-4FAE-981B-75E8C671DC58}"
 EndProject
@@ -117,6 +117,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "resources", "resources", "{2CD0C361-0697-4067-AEC3-1A3D617BC467}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{CF7FFD66-FC01-4D16-A785-889DC4AF2531}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dangr.Collections", "src\Dangr.Collections\Dangr.Collections.csproj", "{6D40DBF7-A3AC-45CB-882E-5757509A4307}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dangr.Collections.Test", "src\Dangr.Collections.Test\Dangr.Collections.Test.csproj", "{14DD5C41-A321-439D-954A-CCCF4B74CBB3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -305,6 +309,18 @@ Global
 		{15E5538D-599C-45C3-8AC6-EF42641B3A34}.NugetDeploy|Any CPU.ActiveCfg = NugetDeploy|Any CPU
 		{15E5538D-599C-45C3-8AC6-EF42641B3A34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15E5538D-599C-45C3-8AC6-EF42641B3A34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D40DBF7-A3AC-45CB-882E-5757509A4307}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D40DBF7-A3AC-45CB-882E-5757509A4307}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D40DBF7-A3AC-45CB-882E-5757509A4307}.NugetDeploy|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D40DBF7-A3AC-45CB-882E-5757509A4307}.NugetDeploy|Any CPU.Build.0 = Debug|Any CPU
+		{6D40DBF7-A3AC-45CB-882E-5757509A4307}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D40DBF7-A3AC-45CB-882E-5757509A4307}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{14DD5C41-A321-439D-954A-CCCF4B74CBB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14DD5C41-A321-439D-954A-CCCF4B74CBB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14DD5C41-A321-439D-954A-CCCF4B74CBB3}.NugetDeploy|Any CPU.ActiveCfg = Release|Any CPU
+		{14DD5C41-A321-439D-954A-CCCF4B74CBB3}.NugetDeploy|Any CPU.Build.0 = Release|Any CPU
+		{14DD5C41-A321-439D-954A-CCCF4B74CBB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14DD5C41-A321-439D-954A-CCCF4B74CBB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -353,5 +369,10 @@ Global
 		{033735C1-1089-429E-BFA7-D2C5AAE3086D} = {A00E30DB-654B-4013-A5F8-041C5E2B4B87}
 		{2CD0C361-0697-4067-AEC3-1A3D617BC467} = {A00E30DB-654B-4013-A5F8-041C5E2B4B87}
 		{CF7FFD66-FC01-4D16-A785-889DC4AF2531} = {A00E30DB-654B-4013-A5F8-041C5E2B4B87}
+		{6D40DBF7-A3AC-45CB-882E-5757509A4307} = {B23BF454-A6ED-4C38-84C5-33BA14E97DBF}
+		{14DD5C41-A321-439D-954A-CCCF4B74CBB3} = {CF7FFD66-FC01-4D16-A785-889DC4AF2531}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7AB2955D-270E-444C-99BC-1802188E4CB0}
 	EndGlobalSection
 EndGlobal
