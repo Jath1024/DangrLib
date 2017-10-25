@@ -33,6 +33,8 @@
     <Compile Include="Core\FlexCollections\Deque\FlexArrayDeque.cs" />
     <Compile Include="Core\FlexCollections\List\FlexArrayList.cs" />
     <Compile Include="Core\FlexCollections\List\FlexArrayList.T.cs" />
+    <Compile Include="Core\FlexCollections\List\FlexDoublyLinkedList.T.cs" />
+    <Compile Include="Core\FlexCollections\List\FlexLinkedList.T.cs" />
     <Compile Include="Core\FlexCollections\List\FlexList.cs" />
     <Compile Include="Core\FlexCollections\Map\ICovarianttKeyValuePair.cs" />
     <Compile Include="Core\FlexCollections\MultiMap\FlexArrayListMultiMap.cs" />

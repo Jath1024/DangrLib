@@ -208,6 +208,28 @@ namespace Dangr.FlexCollections.List
             var collection = this.CreateContainer<FlexList.IGeneric<string>>(items);
             TestUtils.TestForError<ArgumentOutOfRangeException>(() => collection.Set(index, "abc"));
         }
+        
+        [DataTestMethod]
+        [DataRow(new[] { "1"}, 0)]
+        public void Set_null(string[] items, int index)
+        {
+            this.SetIndex_null(items, index);
+            this.SetMethod_null(items, index);
+        }
+
+        private void SetIndex_null(string[] items, int index)
+        {
+            var collection = this.CreateContainer<FlexList.IGeneric<string>>(items);
+            TestUtils.TestForError<ArgumentNullException>(() => collection[index] = null);
+            this.ValidateCollection(collection, items);
+        }
+
+        private void SetMethod_null(string[] items, int index)
+        {
+            var collection = this.CreateContainer<FlexList.IGeneric<string>>(items);
+            TestUtils.TestForError<ArgumentNullException>(() => collection.Set(index, null));
+            this.ValidateCollection(collection, items);
+        }
 
         [DataTestMethod]
         [DataRow(new[] { "1", "2", "3" }, "1", 0)]

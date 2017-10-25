@@ -14,7 +14,7 @@ namespace Dangr.Core.FlexCollections.Collection
     using Dangr.Core.FlexCollections.Container;
 
     /// <summary>
-    /// Defines interfaces for a FlexCollection object.
+    /// Defines interfaces for a <see cref="FlexContainer"/> that objects can be added to or removed from.
     /// </summary>
     public static class FlexCollection
     {

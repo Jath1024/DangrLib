@@ -58,23 +58,21 @@ namespace Dangr.FlexCollections.Collection
         [DataRow(new[] { "1" }, "1", true, new string[0])]
         [DataRow(new string[0], "1", false, new string[0])]
         [DataRow(new[] { "1" }, null, false, new[] { "1" })]
-        public void Remove_object(string[] items, string removeItem, bool expected, string[] result)
+        public void Remove(string[] items, string removeItem, bool expected, string[] result)
+        {
+            this.Remove_object(items, removeItem, expected, result);
+            this.Remove_T(items, removeItem, expected, result);
+        }
+
+        private void Remove_object(string[] items, string removeItem, bool expected, string[] result)
         {
             var collection = this.CreateContainer<FlexCollection.ICovariant<string>>(items);
             Validate.Value.AreEqual(collection.Remove(removeItem), expected);
 
             this.ValidateCollection(collection, result);
         }
-
-        [DataTestMethod]
-        [DataRow(new[] { "1", "2", "3" }, "1", true, new[] { "2", "3" })]
-        [DataRow(new[] { "1", "2", "3" }, "2", true, new[] { "1", "3" })]
-        [DataRow(new[] { "1", "2", "3" }, "3", true, new[] { "1", "2" })]
-        [DataRow(new[] { "1", "2", "3" }, "4", false, new[] { "1", "2", "3" })]
-        [DataRow(new[] { "1" }, "1", true, new string[0])]
-        [DataRow(new string[0], "1", false, new string[0])]
-        [DataRow(new[] { "1" }, null, false, new[] { "1" })]
-        public void Remove_T(string[] items, string removeItem, bool expected, string[] result)
+        
+        private void Remove_T(string[] items, string removeItem, bool expected, string[] result)
         {
             var collection = this.CreateContainer<FlexCollection.IGeneric<string>>(items);
             Validate.Value.AreEqual(collection.Remove(removeItem), expected);
@@ -91,7 +89,13 @@ namespace Dangr.FlexCollections.Collection
         [DataRow(new[] { "1", "2", "3" }, new[] { "1", "4" }, 1, new[] { "2", "3" })]
         [DataRow(new[] { "1" }, new[] { "1" }, 1, new string[0])]
         [DataRow(new string[0], new[] { "1" }, 0, new string[0])]
-        public void RemoveAll_object(string[] items, string[] removeItems, int expected, string[] result)
+        public void RemoveAll(string[] items, string[] removeItems, int expected, string[] result)
+        {
+            this.RemoveAll_object(items, removeItems, expected, result);
+            this.RemoveAll_T(items, removeItems, expected, result);
+        }
+
+        private void RemoveAll_object(string[] items, string[] removeItems, int expected, string[] result)
         {
             var collection = this.CreateContainer<FlexCollection.ICovariant<string>>(items);
             Validate.Value.AreEqual(collection.RemoveAll(removeItems), expected);
@@ -99,16 +103,7 @@ namespace Dangr.FlexCollections.Collection
             this.ValidateCollection(collection, result);
         }
 
-        [DataTestMethod]
-        [DataRow(new[] { "1", "2", "3" }, new[] { "1" }, 1, new[] { "2", "3" })]
-        [DataRow(new[] { "1", "2", "3" }, new[] { "2" }, 1, new[] { "1", "3" })]
-        [DataRow(new[] { "1", "2", "3" }, new[] { "3" }, 1, new[] { "1", "2" })]
-        [DataRow(new[] { "1", "2", "3" }, new[] { "4" }, 0, new[] { "1", "2", "3" })]
-        [DataRow(new[] { "1", "2", "3" }, new[] { "1", "3" }, 2, new[] { "2" })]
-        [DataRow(new[] { "1", "2", "3" }, new[] { "1", "4" }, 1, new[] { "2", "3" })]
-        [DataRow(new[] { "1" }, new[] { "1" }, 1, new string[0])]
-        [DataRow(new string[0], new[] { "1" }, 0, new string[0])]
-        public void RemoveAll_T(string[] items, string[] removeItems, int expected, string[] result)
+        private void RemoveAll_T(string[] items, string[] removeItems, int expected, string[] result)
         {
             var collection = this.CreateContainer<FlexCollection.IGeneric<string>>(items);
             Validate.Value.AreEqual(collection.RemoveAll(removeItems), expected);
@@ -122,7 +117,13 @@ namespace Dangr.FlexCollections.Collection
         [DataRow(new[] { "3", "4" }, 2, new string[0])]
         [DataRow(new[] { "3" }, 1, new string[0])]
         [DataRow(new string[0], 0, new string[0])]
-        public void RemoveWhere_object(string[] items, int expected, string[] result)
+        public void RemoveWhere(string[] items, int expected, string[] result)
+        {
+            this.RemoveWhere_object(items, expected, result);
+            this.RemoveWhere_T(items, expected, result);
+        }
+
+        private void RemoveWhere_object(string[] items, int expected, string[] result)
         {
             var collection = this.CreateContainer<FlexCollection.ICovariant<string>>(items);
             Validate.Value.AreEqual(collection.RemoveWhere(o => (o as string).CompareTo("2") > 0), expected);
@@ -130,13 +131,7 @@ namespace Dangr.FlexCollections.Collection
             this.ValidateCollection(collection, result);
         }
 
-        [DataTestMethod]
-        [DataRow(new[] { "1", "2", "3" }, 1, new[] { "1", "2" })]
-        [DataRow(new[] { "1", "3", "4" }, 2, new[] { "1" })]
-        [DataRow(new[] { "3", "4" }, 2, new string[0])]
-        [DataRow(new[] { "3" }, 1, new string[0])]
-        [DataRow(new string[0], 0, new string[0])]
-        public void RemoveWhere_T(string[] items, int expected, string[] result)
+        private void RemoveWhere_T(string[] items, int expected, string[] result)
         {
             var collection = this.CreateContainer<FlexCollection.IGeneric<string>>(items);
             Validate.Value.AreEqual(collection.RemoveWhere(o => o.CompareTo("2") > 0), expected);

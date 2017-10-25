@@ -8,6 +8,9 @@
 
 namespace Dangr.Core.FlexCollections.List
 {
+    /// <summary>
+    /// Defines interfaces for a <see cref="FlexList"/> that uses an array as its internal data store.
+    /// </summary>
     public static class FlexArrayList
     {
         /// <summary>

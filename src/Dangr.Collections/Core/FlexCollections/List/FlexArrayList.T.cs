@@ -15,7 +15,7 @@ namespace Dangr.Core.FlexCollections.List
     using Dangr.Core.Diagnostics;
 
     /// <summary>
-    /// A FlexList that uses an array as its internal data store.
+    /// A generic implementation of a <see cref="FlexArrayList"/>.
     /// </summary>
     /// <typeparam name="T">The type of objects contained in the FlexList.</typeparam>
     /// <seealso cref="Dangr.Core.FlexCollections.List.FlexArrayList.IGeneric{T}" />
@@ -82,6 +82,7 @@ namespace Dangr.Core.FlexCollections.List
         /// <inheritdoc />
         public void Set(int index, T value)
         {
+            Validate.Argument.IsNotNull(value);
             Validate.Argument.IsInRange(index, 0, this.Count - 1);
             this.items[index] = value;
         }

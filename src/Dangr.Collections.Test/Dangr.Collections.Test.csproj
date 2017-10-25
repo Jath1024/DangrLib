@@ -44,6 +44,10 @@
     <Compile Include="FlexCollections\Collection\FlexCollectionTestBase.cs" />
     <Compile Include="FlexCollections\Container\FlexContainerTestBase.cs" />
     <Compile Include="FlexCollections\List\FlexArrayListTest.cs" />
+    <Compile Include="FlexCollections\List\FlexDoublyLinkedListTest.cs" />
+    <Compile Include="FlexCollections\List\FlexDoublyLinkedListTestBase.cs" />
+    <Compile Include="FlexCollections\List\FlexLinkedListTest.cs" />
+    <Compile Include="FlexCollections\List\FLexLinkedListTestBase.cs" />
     <Compile Include="FlexCollections\List\FLexArrayListTestBase.cs" />
     <Compile Include="FlexCollections\List\FlexListTestBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">

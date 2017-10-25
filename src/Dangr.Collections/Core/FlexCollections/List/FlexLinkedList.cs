@@ -8,6 +8,9 @@
 
 namespace Dangr.Core.FlexCollections.List
 {
+    /// <summary>
+    /// Defines interfaces for a <see cref="FlexList"/> that uses a singly linked list of nodes as its internal data store.
+    /// </summary>
     public static class FlexLinkedList
     {
         /// <summary>

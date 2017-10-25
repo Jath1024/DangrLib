@@ -12,7 +12,7 @@ namespace Dangr.Core.FlexCollections.List
     using Dangr.Core.FlexCollections.Collection;
 
     /// <summary>
-    /// Provides interfaces for a FlexList object.
+    /// Defines interfaces for an ordered <see cref="FlexCollection"/> where objects can be retrieved, inserted, or removed by index.
     /// </summary>
     public static class FlexList
     {
