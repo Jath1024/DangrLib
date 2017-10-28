@@ -64,6 +64,39 @@ namespace Dangr.FlexCollections.List
         }
 
         [DataTestMethod]
+        [DataRow(new[] { "1", "2", "3" }, "1", true, new[] { "2", "3" })]
+        [DataRow(new[] { "1", "2", "3" }, "2", true, new[] { "1", "3" })]
+        [DataRow(new[] { "1", "2", "3" }, "3", true, new[] { "1", "2" })]
+        [DataRow(new[] { "1", "2", "3" }, "4", false, new[] { "1", "2", "3" })]
+        [DataRow(new[] { "1" }, "1", true, new string[0])]
+        [DataRow(new string[0], "1", false, new string[0])]
+        [DataRow(new[] { "1" }, null, false, new[] { "1" })]
+        [DataRow(new[] { "1", "2", "1" }, "1", true, new[] { "1", "2" })]
+        [DataRow(new[] { "1", "2", "1", "3" }, "1", true, new[] { "1", "2", "3" })]
+        [DataRow(new[] { "2", "2", "2" }, "2", true, new[] { "2", "2" })]
+        public void RemoveLast(string[] items, string removeItem, bool expected, string[] result)
+        {
+            this.RemoveLast_object(items, removeItem, expected, result);
+            this.RemoveLast_T(items, removeItem, expected, result);
+        }
+
+        private void RemoveLast_object(string[] items, string removeItem, bool expected, string[] result)
+        {
+            var collection = this.CreateContainer<FlexList.ICovariant<string>>(items);
+            Validate.Value.AreEqual(collection.RemoveLast(removeItem), expected);
+
+            this.ValidateCollection(collection, result);
+        }
+
+        private void RemoveLast_T(string[] items, string removeItem, bool expected, string[] result)
+        {
+            var collection = this.CreateContainer<FlexList.IGeneric<string>>(items);
+            Validate.Value.AreEqual(collection.RemoveLast(removeItem), expected);
+
+            this.ValidateCollection(collection, result);
+        }
+
+        [DataTestMethod]
         [DataRow(new[] { "1", "2", "1" }, new[] { "1" }, 1, new[] { "2", "1" })]
         [DataRow(new[] { "2", "2", "2" }, new[] { "2" }, 1, new[] { "2", "2" })]
         [DataRow(new[] { "2", "2", "2" }, new[] { "2", "2" }, 2, new[] { "2" })]
@@ -116,6 +149,30 @@ namespace Dangr.FlexCollections.List
         }
 
         [DataTestMethod]
+        [DataRow(new[] { "1", "2", "3" }, true, new[] { "1", "2" })]
+        [DataRow(new[] { "1" }, true, new string[0])]
+        [DataRow(new string[0], false, new string[0])]
+        public void RemoveLastElement(string[] items, bool expected, string[] result)
+        {
+            var collection = this.CreateContainer<FlexList.ICovariant<string>>(items);
+            Validate.Value.AreEqual(collection.RemoveLastElement(), expected);
+
+            this.ValidateCollection(collection, result);
+        }
+
+        [DataTestMethod]
+        [DataRow(new[] { "1", "2", "3" }, true, new[] { "2", "3" })]
+        [DataRow(new[] { "1" }, true, new string[0])]
+        [DataRow(new string[0], false, new string[0])]
+        public void RemoveFirstElement(string[] items, bool expected, string[] result)
+        {
+            var collection = this.CreateContainer<FlexList.ICovariant<string>>(items);
+            Validate.Value.AreEqual(collection.RemoveFirstElement(), expected);
+
+            this.ValidateCollection(collection, result);
+        }
+
+        [DataTestMethod]
         [DataRow(new[] { "1", "2", "3" }, 0, "1")]
         [DataRow(new[] { "1", "2", "3" }, 1, "2")]
         [DataRow(new[] { "1", "2", "3" }, 2, "3")]
@@ -161,6 +218,38 @@ namespace Dangr.FlexCollections.List
         {
             var collection = this.CreateContainer<FlexList.IReadOnlyCovariant<string>>(items);
             TestUtils.TestForError<ArgumentOutOfRangeException>(() => collection.Get(index));
+        }
+
+        [DataTestMethod]
+        [DataRow(new[] { "1", "2", "3" }, "1")]
+        [DataRow(new[] { "1" }, "1")]
+        public void GetFirst(string[] items, string expected)
+        { 
+            var collection = this.CreateContainer<FlexList.IReadOnlyCovariant<string>>(items);
+            Validate.Value.AreEqual(collection.GetFirst(), expected);
+        }
+
+        [TestMethod]
+        public void GetFirst_Empty()
+        {
+            var collection = this.CreateContainer<FlexList.IReadOnlyCovariant<string>>(new string[0]);
+            TestUtils.TestForError<InvalidOperationException>(() => collection.GetFirst());
+        }
+
+        [DataTestMethod]
+        [DataRow(new[] { "1", "2", "3" }, "3")]
+        [DataRow(new[] { "1" }, "1")]
+        public void GetLast(string[] items, string expected)
+        {
+            var collection = this.CreateContainer<FlexList.IReadOnlyCovariant<string>>(items);
+            Validate.Value.AreEqual(collection.GetLast(), expected);
+        }
+
+        [TestMethod]
+        public void GetLast_Empty()
+        {
+            var collection = this.CreateContainer<FlexList.IReadOnlyCovariant<string>>(new string[0]);
+            TestUtils.TestForError<InvalidOperationException>(() => collection.GetLast());
         }
 
         [DataTestMethod]
@@ -337,6 +426,114 @@ namespace Dangr.FlexCollections.List
         {
             var collection = this.CreateContainer<FlexList.IReadOnlyCovariant<string>>(items);
             Validate.Value.AreEqual(collection.IndexOf(item, start, count), expected);
+        }
+
+        [DataTestMethod]
+        [DataRow(new[] { "1", "2", "3" }, "1", 0)]
+        [DataRow(new[] { "1", "2", "3" }, "2", 1)]
+        [DataRow(new[] { "1", "2", "3" }, "3", 2)]
+        [DataRow(new[] { "1", "2", "3" }, "4", FlexList.INDEX_NOT_FOUND)]
+        [DataRow(new[] { "1", "2", "2" }, "2", 2)]
+        [DataRow(new string[0], "3", FlexList.INDEX_NOT_FOUND)]
+        public void LastIndexOf(string[] items, string item, int expected)
+        {
+            this.LastIndexOf_object(items, item, expected);
+            this.LastIndexOf_T(items, item, expected);
+        }
+
+        private void LastIndexOf_object(string[] items, string item, int expected)
+        {
+            var collection = this.CreateContainer<FlexList.IReadOnlyCovariant<string>>(items);
+            Validate.Value.AreEqual(collection.LastIndexOf(item), expected);
+        }
+
+        private void LastIndexOf_T(string[] items, string item, int expected)
+        {
+            var collection = this.CreateContainer<FlexList.IReadOnly<string>>(items);
+            Validate.Value.AreEqual(collection.LastIndexOf(item), expected);
+        }
+
+        [DataTestMethod]
+        [DataRow(new[] { "1", "2", "3" }, null, FlexList.INDEX_NOT_FOUND)]
+        [DataRow(new[] { "1", "2", "3" }, typeof(object), FlexList.INDEX_NOT_FOUND)]
+        public void LastIndexOf_WrongType(string[] items, object item, int expected)
+        {
+            var collection = this.CreateContainer<FlexList.IReadOnlyCovariant<string>>(items);
+            Validate.Value.AreEqual(collection.LastIndexOf(item), expected);
+        }
+
+        [DataTestMethod]
+        [DataRow(new[] { "1", "2", "3" }, "1", 0, 0)]
+        [DataRow(new[] { "1", "2", "3" }, "3", 1, FlexList.INDEX_NOT_FOUND)]
+        [DataRow(new[] { "1", "2", "3" }, "4", 2, FlexList.INDEX_NOT_FOUND)]
+        [DataRow(new[] { "1", "2", "2" }, "2", 1, 1)]
+        [DataRow(new[] { "1", "2", "2" }, "2", 2, 2)]
+        [DataRow(new[] { "1", "2", "2" }, "2", 15, 2)]
+        [DataRow(new string[0], "3", 0, FlexList.INDEX_NOT_FOUND)]
+        public void LastIndexOf_End(string[] items, string item, int start, int expected)
+        {
+            this.LastIndexOf_object_End(items, item, start, expected);
+            this.LastIndexOf_T_End(items, item, start, expected);
+        }
+
+        private void LastIndexOf_object_End(string[] items, string item, int start, int expected)
+        {
+            var collection = this.CreateContainer<FlexList.IReadOnlyCovariant<string>>(items);
+            Validate.Value.AreEqual(collection.LastIndexOf(item, start), expected);
+        }
+
+        private void LastIndexOf_T_End(string[] items, string item, int start, int expected)
+        {
+            var collection = this.CreateContainer<FlexList.IReadOnly<string>>(items);
+            Validate.Value.AreEqual(collection.LastIndexOf(item, start), expected);
+        }
+
+        [DataTestMethod]
+        [DataRow(new[] { "1", "2", "3" }, null, 0, FlexList.INDEX_NOT_FOUND)]
+        [DataRow(new[] { "1", "2", "3" }, typeof(object), 0, FlexList.INDEX_NOT_FOUND)]
+        public void LastIndexOf_End_WrongType(string[] items, object item, int start, int expected)
+        {
+            var collection = this.CreateContainer<FlexList.IReadOnlyCovariant<string>>(items);
+            Validate.Value.AreEqual(collection.LastIndexOf(item, start), expected);
+        }
+
+        [DataTestMethod]
+        [DataRow(new[] { "1", "2", "3" }, "1", 0, 1, 0)]
+        [DataRow(new[] { "1", "2", "3" }, "1", 1, 1, FlexList.INDEX_NOT_FOUND)]
+        [DataRow(new[] { "1", "2", "3" }, "4", 0, 1, FlexList.INDEX_NOT_FOUND)]
+        [DataRow(new[] { "1", "2", "2" }, "2", 1, 1, 1)]
+        [DataRow(new[] { "1", "2", "2" }, "2", 2, 1, 2)]
+        [DataRow(new[] { "1", "2", "3" }, "1", 2, 2, FlexList.INDEX_NOT_FOUND)]
+        [DataRow(new[] { "1", "2", "2" }, "2", 15, 0, FlexList.INDEX_NOT_FOUND)]
+        [DataRow(new[] { "1", "2", "3" }, "1", 0, -10, FlexList.INDEX_NOT_FOUND)]
+        [DataRow(new[] { "1", "2", "3" }, "1", 0, 0, FlexList.INDEX_NOT_FOUND)]
+        [DataRow(new[] { "1", "2", "3" }, "1", 0, 10, 0)]
+        [DataRow(new string[0], "3", 0, 1, FlexList.INDEX_NOT_FOUND)]
+        public void LastIndexOf_EndCount(string[] items, string item, int start, int count, int expected)
+        {
+            this.LastIndexOf_object_EndCount(items, item, start, count, expected);
+            this.LastIndexOf_T_EndCount(items, item, start, count, expected);
+        }
+
+        public void LastIndexOf_object_EndCount(string[] items, string item, int start, int count, int expected)
+        {
+            var collection = this.CreateContainer<FlexList.IReadOnlyCovariant<string>>(items);
+            Validate.Value.AreEqual(collection.LastIndexOf(item, start, count), expected);
+        }
+
+        public void LastIndexOf_T_EndCount(string[] items, string item, int start, int count, int expected)
+        {
+            var collection = this.CreateContainer<FlexList.IReadOnly<string>>(items);
+            Validate.Value.AreEqual(collection.LastIndexOf(item, start, count), expected);
+        }
+
+        [DataTestMethod]
+        [DataRow(new[] { "1", "2", "3" }, null, 0, 10, FlexList.INDEX_NOT_FOUND)]
+        [DataRow(new[] { "1", "2", "3" }, typeof(object), 0, 10, FlexList.INDEX_NOT_FOUND)]
+        public void LastIndexOf_EndCount_WrongType(string[] items, object item, int start, int count, int expected)
+        {
+            var collection = this.CreateContainer<FlexList.IReadOnlyCovariant<string>>(items);
+            Validate.Value.AreEqual(collection.LastIndexOf(item, start, count), expected);
         }
 
         [DataTestMethod]

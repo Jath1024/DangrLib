@@ -8,6 +8,9 @@
 
 namespace Dangr.Core.FlexCollections.List
 {
+    using System.Collections;
+    using System.Collections.Generic;
+
     /// <summary>
     /// Defines interfaces for a <see cref="FlexList"/> that uses a doubly linked list of nodes as its internal data store.
     /// </summary>
@@ -19,6 +22,11 @@ namespace Dangr.Core.FlexCollections.List
         /// <typeparam name="T">The type of object contained in the collection.</typeparam>
         public interface IReadOnlyCovariant<out T> : FlexLinkedList.IReadOnlyCovariant<T>
         {
+            /// <summary>
+            /// Returns an enumerator that iterates through the collection in reverse.
+            /// </summary>
+            /// <returns>An enumerator that can be used to iterate through the collection in reverse.</returns>
+            IEnumerator<T> GetReverseEnumerator();
         }
 
         /// <summary>

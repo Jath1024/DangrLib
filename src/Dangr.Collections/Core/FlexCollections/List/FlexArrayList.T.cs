@@ -80,6 +80,28 @@ namespace Dangr.Core.FlexCollections.List
         }
 
         /// <inheritdoc />
+        public T GetFirst()
+        {
+            if(this.Count == 0)
+            {
+                throw new InvalidOperationException("Cannot get first element of empty list.");
+            }
+
+            return this.items[0];
+        }
+
+        /// <inheritdoc />
+        public T GetLast()
+        {
+            if (this.Count == 0)
+            {
+                throw new InvalidOperationException("Cannot get last element of empty list.");
+            }
+
+            return this.items[this.Count - 1];
+        }
+
+        /// <inheritdoc />
         public void Set(int index, T value)
         {
             Validate.Argument.IsNotNull(value);
@@ -155,6 +177,35 @@ namespace Dangr.Core.FlexCollections.List
         }
 
         /// <inheritdoc />
+        public bool RemoveLast(object item)
+        {
+            if (!(item is T))
+            {
+                return false;
+            }
+
+            return this.RemoveLast((T)item);
+        }
+
+        /// <inheritdoc />
+        public bool RemoveLast(T item)
+        {
+            if (item == null)
+            {
+                return false;
+            }
+
+            int index = this.FindLastIndex(item);
+            if (index < 0)
+            {
+                return false;
+            }
+
+            this.RemoveAtIndex(index);
+            return true;
+        }
+
+        /// <inheritdoc />
         public void RemoveAt(int index)
         {
             Validate.Argument.IsInRange(index, 0, this.Count - 1);
@@ -212,6 +263,30 @@ namespace Dangr.Core.FlexCollections.List
             }
 
             return count;
+        }
+
+        /// <inheritdoc />
+        public bool RemoveFirstElement()
+        {
+            if(this.Count == 0)
+            {
+                return false;
+            }
+                
+            this.RemoveAtIndex(0);
+            return true;
+        }
+
+        /// <inheritdoc />
+        public bool RemoveLastElement()
+        {
+            if (this.Count == 0)
+            {
+                return false;
+            }
+
+            this.RemoveAtIndex(this.Count - 1);
+            return true;
         }
 
         /// <inheritdoc />
@@ -338,6 +413,70 @@ namespace Dangr.Core.FlexCollections.List
         }
 
         /// <inheritdoc />
+        public int LastIndexOf(object item)
+        {
+            if (!(item is T))
+            {
+                return FlexList.INDEX_NOT_FOUND;
+            }
+
+            return this.LastIndexOf((T)item);
+        }
+
+        /// <inheritdoc />
+        public int LastIndexOf(T item)
+        {
+            return this.LastIndexOf(item, this.Count - 1, this.Count);
+        }
+
+        /// <inheritdoc />
+        public int LastIndexOf(object item, int end)
+        {
+            if (!(item is T))
+            {
+                return FlexList.INDEX_NOT_FOUND;
+            }
+
+            return this.LastIndexOf((T)item, end);
+        }
+
+        /// <inheritdoc />
+        public int LastIndexOf(T item, int end)
+        {
+            return this.LastIndexOf(item, end, Math.Max(this.Count - 1, this.Count - end));
+        }
+
+        /// <inheritdoc />
+        public int LastIndexOf(object item, int end, int count)
+        {
+            if (!(item is T))
+            {
+                return FlexList.INDEX_NOT_FOUND;
+            }
+
+            return this.LastIndexOf((T)item, end, count);
+        }
+
+        /// <inheritdoc />
+        public int LastIndexOf(T item, int end, int count)
+        {
+            if (item == null)
+            {
+                return FlexList.INDEX_NOT_FOUND;
+            }
+
+            for (int i = end; i > end - count && i >= 0; i--)
+            {
+                if (i < this.Count && this.items[i].Equals(item))
+                {
+                    return i;
+                }
+            }
+
+            return FlexList.INDEX_NOT_FOUND;
+        }
+
+        /// <inheritdoc />
         public IEnumerator<T> GetEnumerator()
         {
             return new ListEnumerator(this);
@@ -357,6 +496,24 @@ namespace Dangr.Core.FlexCollections.List
         private int FindIndex(T item)
         {
             for (int i = 0; i < this.Count; i++)
+            {
+                if (this.items[i].Equals(item))
+                {
+                    return i;
+                }
+            }
+
+            return FlexList.INDEX_NOT_FOUND;
+        }
+
+        /// <summary>
+        /// Finds the last index of the specified item.
+        /// </summary>
+        /// <param name="item">The item.</param>
+        /// <returns>The index of the specified item, or -1 if it isn't found.</returns>
+        private int FindLastIndex(T item)
+        {
+            for (int i = this.Count - 1; i >= 0; i--)
             {
                 if (this.items[i].Equals(item))
                 {
